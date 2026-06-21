@@ -1,0 +1,62 @@
+paper:
+  title: "高比例风电系统连锁故障分析与抑制措施研究"
+  author: "许佑欣"
+  year: 2024
+  source_pdf_local: "C:/Users/24186/Desktop/论文模板/高比例风电系统连锁故障分析与抑制措施研究_许佑欣.pdf"
+system_base:
+  network: {value: "IEEE 39-bus system", source_type: directly_reported_in_paper}
+  voltage_level_kv: {value: 220, source_type: directly_reported_in_paper}
+  generators: {value: 10, source_type: directly_reported_in_paper}
+  buses: {value: 39, source_type: directly_reported_in_paper}
+  branches_or_lines: {value: 46, source_type: directly_reported_in_paper}
+  wind_replacement_buses: {value: [33, 35, 38], source_type: directly_reported_in_paper}
+  simulation_duration_s: {value: 20, source_type: directly_reported_in_paper}
+wind:
+  model: {value: "WECC second-generation Type-3 DFIG generic dynamic model", source_type: directly_reported_in_paper}
+  penetration_percent: {value: 30, source_type: directly_reported_in_paper}
+  scenario_outputs_mw:
+    bus_33: {value: 632, source_type: directly_reported_in_paper}
+    bus_35: {value: 650, source_type: directly_reported_in_paper}
+    bus_38: {value: 850, source_type: directly_reported_in_paper}
+  wind_speed_mps_single_machine_case: {value: 11, source_type: directly_reported_in_paper}
+  exact_lvrt_curve: {value: null, source_type: not_available}
+conventional_generation_protection:
+  under_frequency_hz: {value: 47.5, source_type: directly_reported_in_paper}
+  over_frequency_hz: {value: 51.5, source_type: directly_reported_in_paper}
+  frequency_delay_s: {value: 10, source_type: directly_reported_in_paper}
+  under_voltage_pu: {value: 0.8, source_type: directly_reported_in_paper}
+  over_voltage_pu: {value: 1.3, source_type: directly_reported_in_paper}
+  voltage_delay_s: {value: 2, source_type: directly_reported_in_paper}
+line_overload:
+  anchor_loading_pu: {value: 1.1, source_type: directly_reported_in_paper}
+  anchor_delay_s: {value: 5, source_type: directly_reported_in_paper}
+  exact_inverse_time_equation: {value: null, source_type: not_available}
+load_shedding:
+  ufls_stages_count: {value: 3, source_type: directly_reported_in_paper}
+  ufls_stage_delays_s: {value: [0.2, 0.2, 0.2], source_type: directly_reported_in_paper}
+  ufls_shed_percent: {value: [25, 40, 55], source_type: directly_reported_in_paper}
+  ufls_frequency_thresholds_hz: {value: null, source_type: not_available}
+  uvls_voltage_pu: {value: 0.8, source_type: directly_reported_in_paper}
+  uvls_delay_s: {value: 1.0, source_type: directly_reported_in_paper}
+  uvls_shed_percent: {value: 25, source_type: directly_reported_in_paper}
+transient_overvoltage:
+  threshold_pu: {value: 1.3, source_type: directly_reported_in_paper}
+  delay_s: {value: 0, source_type: directly_reported_in_paper}
+baseline_case:
+  fault_location: {value: "near bus 29", source_type: directly_reported_in_paper}
+  fault_type: {value: "three-phase short circuit", source_type: directly_reported_in_paper}
+  fault_duration_s: {value: 2.0, source_type: directly_reported_in_paper}
+  fault_start_s: {value: null, source_type: not_available}
+  reported_event_sequence:
+    - {value: "bus 38 wind farm LVRT failure; 850 MW wind loss", source_type: directly_reported_in_paper}
+    - {value: "near bus 29 frequency drops to 48.0 Hz; UFLS sheds 155.9 MW", source_type: directly_reported_in_paper}
+    - {value: "7 lines trip in sequence; first reported 16-19 at 5.78 s", source_type: directly_reported_in_paper}
+    - {value: "system wide UFLS sheds 898.35 MW", source_type: directly_reported_in_paper}
+    - {value: "bus 35 wind farm LVRT failure; line 23-36 opens", source_type: directly_reported_in_paper}
+    - {value: "generator 34 over-frequency trip", source_type: directly_reported_in_paper}
+compensation:
+  devices: {value: ["SVC", "STATCOM"], source_type: directly_reported_in_paper}
+  connection_bus: {value: 28, source_type: directly_reported_in_paper}
+  capacity_mvar: {value: 300, source_type: directly_reported_in_paper}
+  comparison_case_fault: {value: "three-phase short circuit near bus 4, 0.5 s start, 2.0 s duration", source_type: directly_reported_in_paper}
+

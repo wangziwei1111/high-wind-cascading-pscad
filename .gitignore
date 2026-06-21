@@ -1,0 +1,25 @@
+# External third-party PSCAD/model downloads are audited locally only.
+external/*
+!external/README.md
+!external/source_manifest.csv
+!external/.gitkeep
+
+results/*
+!results/.gitkeep
+
+*.asv
+*.slxc
+*.mex*
+*.log
+*.tmp
+*.snp
+*.out
+*.inf
+*.emt
+*.pscx
+*.pslx
+*.psl
+*.lib
+*.bakx
+*.psmx
+

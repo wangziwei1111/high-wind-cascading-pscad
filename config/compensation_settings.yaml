@@ -1,0 +1,12 @@
+dynamic_reactive_compensation:
+  - device: SVC
+    connection_bus: 28
+    rated_capacity_mvar: 300
+    source_type: directly_reported_in_paper
+    status: "candidate for later manual PSCAD assembly"
+  - device: STATCOM
+    connection_bus: 28
+    rated_capacity_mvar: 300
+    source_type: directly_reported_in_paper
+    status: "candidate for later manual PSCAD assembly"
+

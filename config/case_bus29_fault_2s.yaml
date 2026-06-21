@@ -1,0 +1,11 @@
+case_id: bus29_three_phase_fault_2s
+fault:
+  location: "near bus 29"
+  type: "three-phase short circuit"
+  duration_s: 2.0
+  start_s: null
+  start_s_source_type: not_available
+simulation:
+  stop_time_s: 20
+status: "paper benchmark case; PSCAD execution pending GUI validation"
+

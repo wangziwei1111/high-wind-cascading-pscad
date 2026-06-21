@@ -1,0 +1,5 @@
+source_name,source_url,local_audit_path,commit_or_version,download_date,license_status,redistribution_status,notes
+PNNL Enhanced IEEE-39 three IBR,https://github.com/pnnltestsystem/Enhanced-IEEE-39-Bus-System-with-Inverter-based-Resources-on-Multi-Time-Scale-Platforms,external/pnnl-enhanced-ieee39,f187cc4980bff013f2582a2c1caaa4ab1bec6abc,2026-06-21,no LICENSE file found in repository,do not commit copied model files,"Contains PSCAD/PSSE/PSLF files; local clone ignored by Git"
+PSCAD IEEE 39 Bus System,https://www.pscad.com/knowledge-base/article/28,manual download only,official knowledge-base article,2026-06-21,PSCAD/MHI terms apply,do not redistribute,"Fallback benchmark; use only through official access"
+PSCAD Type 3 WTG v4.6,https://www.pscad.com/knowledge-base/article/496,manual download only,official knowledge-base article,2026-06-21,PSCAD/MHI terms apply,do not redistribute,"Candidate manual DFIG replacement model"
+

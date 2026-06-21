@@ -1,0 +1,17 @@
+wind_farms:
+  - id: WF33
+    target_bus: 33
+    target_active_power_mw: 632
+    replacement_type: "manual PSCAD Type-3 DFIG aggregate candidate"
+    status: "pending PSCAD GUI validation"
+  - id: WF35
+    target_bus: 35
+    target_active_power_mw: 650
+    replacement_type: "manual PSCAD Type-3 DFIG aggregate candidate"
+    status: "pending PSCAD GUI validation"
+  - id: WF38
+    target_bus: 38
+    target_active_power_mw: 850
+    replacement_type: "manual PSCAD Type-3 DFIG aggregate candidate"
+    status: "pending PSCAD GUI validation"
+
