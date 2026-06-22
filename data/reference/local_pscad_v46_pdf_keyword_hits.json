@@ -1,0 +1,146 @@
+[
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 8,
+    "term": "Importing/Exporting Definitions",
+    "snippet": "................................................... 161 Compiling an Individual Module Definition ............................................................................................. 162 Blackbox a Module ................................................................................................................................ 163 Importing/Exporting Definitions ..............................................................................................................163 Import a Definition .............................................................................................................................. 163 Export a Definition .............................................................................................................................. 164 Export a Definition with Dependents...................................................................................................164 Copy as Meta-File or Bitmap ................................................................................................................. 164 Printing a Module Page ......................................................................................................................... 165"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 8,
+    "term": "Import a Definition",
+    "snippet": "............................................ 162 Blackbox a Module ................................................................................................................................ 163 Importing/Exporting Definitions ..............................................................................................................163 Import a Definition .............................................................................................................................. 163 Export a Definition .............................................................................................................................. 164 Export a Definition with Dependents...................................................................................................164 Copy as Meta-File or Bitmap ................................................................................................................. 164 Printing a Module Page ......................................................................................................................... 165"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 8,
+    "term": "Export a Definition",
+    "snippet": "............................................ 163 Importing/Exporting Definitions ..............................................................................................................163 Import a Definition .............................................................................................................................. 163 Export a Definition .............................................................................................................................. 164 Export a Definition with Dependents...................................................................................................164 Copy as Meta-File or Bitmap ................................................................................................................. 164 Printing a Module Page ......................................................................................................................... 165"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 8,
+    "term": "Export a Definition with Dependents",
+    "snippet": "........................................163 Import a Definition .............................................................................................................................. 163 Export a Definition .............................................................................................................................. 164 Export a Definition with Dependents...................................................................................................164 Copy as Meta-File or Bitmap ................................................................................................................. 164 Printing a Module Page ......................................................................................................................... 165"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 8,
+    "term": "Copy as Meta-File or Bitmap",
+    "snippet": ".................................................... 163 Export a Definition .............................................................................................................................. 164 Export a Definition with Dependents...................................................................................................164 Copy as Meta-File or Bitmap ................................................................................................................. 164 Printing a Module Page ......................................................................................................................... 165"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 9,
+    "term": "Copying Module Definitions with Dependents",
+    "snippet": "................................................................... 191 Runtime Configuration in EMTDC .........................................................................................................192 COPYING AND TRANSFERRING MODULE HIERARCHIES ..................................................................................... 192 Copying Module Definitions with Dependents ....................................................................................... 192 Inter-Project ...........................................................................................................................................192 Intra-Project ...........................................................................................................................................193 Copy Transfer ........................................................................................................................................193 PARALLEL AND HIGH PERFORMANCE COMPUTING ........................................................................................... 195 Transmission Lines and Cables .............................................................................................................195 Simulation Sets ............................................................................................"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 9,
+    "term": "Copy Transfer",
+    "snippet": ".......................... 192 Inter-Project ...........................................................................................................................................192 Intra-Project ...........................................................................................................................................193 Copy Transfer ........................................................................................................................................193 PARALLEL AND HIGH PERFORMANCE COMPUTING ........................................................................................... 195 Transmission Lines and Cables .............................................................................................................195 Simulation Sets ......................................................................................................................................195 Simulation Set Options ....................................................................................................................... 197 Simulation Options ................................................................................................................................ 197 Volley Launch (SPMD) ...................................................................................."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 12,
+    "term": "Copy as Meta-File or Bitmap",
+    "snippet": "..................................................298 DISPLAYING PLOTS AND CONTROL IN REPORTS .............................................................................................. 298 Setting Panel Style ................................................................................................................................ 298 Copy as Meta-File or Bitmap ................................................................................................................. 298 CHAPTER 7: TRANSMISSION LINES AND CABLES .............................................................. 299 CONSTRUCTING OVERHEAD LINES ................................................................................................................299 Building an Overhead Line (/w Remote Ends) ....................................................................................... 300 Building an Overhead Line (Direct Connection Style) ............................................................................302 Editing the Transmission Line Parameters ............................................................................................ 302 CONSTRUCTING UNDERGROUND CABLE SYSTEMS .......................................................................................... 302 Building an Underground Cable System ................."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 91,
+    "term": "Importing/Exporting Definitions",
+    "snippet": "73  Paste Definition: This function may be used to paste a definition that has been copied from this project or from another project loaded in the workspace primary window (see the Copy menu function described below).  Import Definition(s)...: This function is used to import stored definition files (*.psdx or the older *.cmp format). See Importing/Exporting Definitions in the next chapter for more details.  Sort by Name: Select this option to sort the definitions list by name (see below). Continually selecting this option will toggle the alphabetical order from A to Z or Z to A.  Sort by Description: Select this option to sort the definitions list by description (see below). Continually selecting this option will toggle the alphabetical order from A to Z or Z to A. If you right-click with the mouse pointer over a specific component definition in the list, the following menu will appear: The following list describes the functions of this pop-up menu:  Properties...: This brings up the Definition Settings dialog window for editing the definition Name, Description and Lable(s). See Editing Definition Properties for more details.  Edit...: Select this option to edit the definition of the component (opens the Graphic window for components, or the Schematic window for modules, transmission lin"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 91,
+    "term": "Import Definition",
+    "snippet": "PSCAD Manual 73  Paste Definition: This function may be used to paste a definition that has been copied from this project or from another project loaded in the workspace primary window (see the Copy menu function described below).  Import Definition(s)...: This function is used to import stored definition files (*.psdx or the older *.cmp format). See Importing/Exporting Definitions in the next chapter for more details.  Sort by Name: Select this option to sort the definitions list by name (see below). Continually selecting this option will toggle the alphabetical order from A to Z or Z to A.  Sort by Description: Select this option to sort the definitions list by description (see below). Continually selecting this option will toggle the alphabetical order from A to Z or Z to A. If you right-click with the mouse pointer over a specific component definition in the list, the following menu will appear: The following list describes the functions of this pop-up menu:  Properties...: This brings up the Definition Settings dialog window for editing the definition Name, Description and Lable(s). See Editing Definition Properties for more details.  Edit...: Select this option to edit the d"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 92,
+    "term": "Importing/Exporting Definitions",
+    "snippet": "page. Once the first instance has been created, subsequent copies may be made by directly copying the original instance. Holding down the Ctrl key and using Drag and Drop will also perform this feature.  Export As...: This option brings up the Save Definition As dialog so that you can save the definition to a Definition File (*.psdx). See Importing/Exporting Definitions in the next chapter for more details.  Help: If the definition is a regular component, selecting this option will open the associated help file. Module Components Only:  Compile: Selecting this option will compile only the module selected. All module instances linked to this definition will of course be affected. A double-click on a module definition will bring you directly to its definition canvas in the Schematic canvas, whereas double-clicking on a regular component definition will bring you directly to its definition in the Graphic view. Double- clicking on a transmission line or cable will bring you to the definition Editor canvas. Runtime Objects in the Definitions Branch Runtime related objects, such as Output Channels, Controls, Graphs, etc., are themselves specialized components, which are placed on the canvas of a module. As such, they help define the definition of the module, and are therefore organized under the definitions"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 181,
+    "term": "Importing/Exporting Definitions",
+    "snippet": "PSCAD Manual 163 Blackbox a Module While on the schematic canvas, right-click on the module component and select Blackbox Module. For more information on blackboxing, see Blackboxing Modules. Importing/Exporting Definitions Definitions may be imported or exported to and from projects, or exchanged between users, by saving the definition as a Definition (*.psdx) file. A definition file contains the XML data elements defining the component or module as it would appear in a case or library project (*.pscx or *.pslx) file. For more on the definitions branch and definition files, see The Secondary Window in Chapter 4. Import a Definition In the workspace primary window, left-click on the [+] box beside the definitions branch to expand the definitions list. Right-click on the definitions branch itself and select Import Definition(s).... When prompted, browse to and select the definition to be imported, then press Open."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 181,
+    "term": "Import a Definition",
+    "snippet": "rojects, or exchanged between users, by saving the definition as a Definition (*.psdx) file. A definition file contains the XML data elements defining the component or module as it would appear in a case or library project (*.pscx or *.pslx) file. For more on the definitions branch and definition files, see The Secondary Window in Chapter 4. Import a Definition In the workspace primary window, left-click on the [+] box beside the definitions branch to expand the definitions list. Right-click on the definitions branch itself and select Import Definition(s).... When prompted, browse to and select the definition to be imported, then press Open."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 181,
+    "term": "Definition (*.psdx)",
+    "snippet": "ual 163 Blackbox a Module While on the schematic canvas, right-click on the module component and select Blackbox Module. For more information on blackboxing, see Blackboxing Modules. Importing/Exporting Definitions Definitions may be imported or exported to and from projects, or exchanged between users, by saving the definition as a Definition (*.psdx) file. A definition file contains the XML data elements defining the component or module as it would appear in a case or library project (*.pscx or *.pslx) file. For more on the definitions branch and definition files, see The Secondary Window in Chapter 4. Import a Definition In the workspace primary window, left-click on the [+] box beside the definitions branch to expand the definitions list. Right-click on the definitions branch itself and select Import Definition(s).... When prompted, browse to and select the definition to be imported, then press Open."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 181,
+    "term": "Import Definition",
+    "snippet": "a case or library project (*.pscx or *.pslx) file. For more on the definitions branch and definition files, see The Secondary Window in Chapter 4. Import a Definition In the workspace primary window, left-click on the [+] box beside the definitions branch to expand the definitions list. Right-click on the definitions branch itself and select Import Definition(s).... When prompted, browse to and select the definition to be imported, then press Open."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 182,
+    "term": "Export a Definition",
+    "snippet": "Chapter 5: Operations and Feature Overview 164 Export a Definition To export a single definition (i.e. save the definition to a Definition (*.psdx) file), left-click on the [+] box beside the definitions branch. Right-click on the desired definition from the list and select Export As.... Export a Definition with Dependents To export a module definition hierarchy (i.e. save all the dependent definitions to a Definition (*.psdx) file), left-click on the [+] box beside the definitions branch. Right-click on the desired definition from the list and select Export with Dependents. NOTE: If the definition you are exporting is a module, and the module contains dependent (child) modules, then the dependent module definitions will also be included in the export file. When later imported, all definitions will be included. Copy as Meta-File or Bitmap Bring up the desired area to be copied in the Schematic canvas. Select the objects to be printed (see Selecting Objects in this chapter), right-click and select Copy as Meta-Fi"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 182,
+    "term": "Export a Definition with Dependents",
+    "snippet": "Chapter 5: Operations and Feature Overview 164 Export a Definition To export a single definition (i.e. save the definition to a Definition (*.psdx) file), left-click on the [+] box beside the definitions branch. Right-click on the desired definition from the list and select Export As.... Export a Definition with Dependents To export a module definition hierarchy (i.e. save all the dependent definitions to a Definition (*.psdx) file), left-click on the [+] box beside the definitions branch. Right-click on the desired definition from the list and select Export with Dependents. NOTE: If the definition you are exporting is a module, and the module contains dependent (child) modules, then the dependent module definitions will also be included in the export file. When later imported, all definitions will be included. Copy as Meta-File or Bitmap Bring up the desired area to be copied in the Schematic canvas. Select the objects to be printed (see Selecting Objects in this chapter), right-click and select Copy as Meta-File or Copy as Bitmap."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 182,
+    "term": "Copy as Meta-File or Bitmap",
+    "snippet": "nitions branch. Right-click on the desired definition from the list and select Export with Dependents. NOTE: If the definition you are exporting is a module, and the module contains dependent (child) modules, then the dependent module definitions will also be included in the export file. When later imported, all definitions will be included. Copy as Meta-File or Bitmap Bring up the desired area to be copied in the Schematic canvas. Select the objects to be printed (see Selecting Objects in this chapter), right-click and select Copy as Meta-File or Copy as Bitmap."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 182,
+    "term": "Definition (*.psdx)",
+    "snippet": "Chapter 5: Operations and Feature Overview 164 Export a Definition To export a single definition (i.e. save the definition to a Definition (*.psdx) file), left-click on the [+] box beside the definitions branch. Right-click on the desired definition from the list and select Export As.... Export a Definition with Dependents To export a module definition hierarchy (i.e. save all the dependent definitions to a Definition (*.psdx) file), left-click on the [+] box beside the definitions branch. Right-click on the desired definition from the list and select Export with Dependents. NOTE: If the definition you are exporting is a module, and the module contains dependent (child) modules, then the dependent module definitions will also be included in the export file. When later imported, all definitions will be included. Copy as Meta-File or Bitmap Bring up the desired area to be copied in the Schematic canvas. Select the objects to be printed (see Selecting Objects in this chapter), right-click and select Copy as Meta-File or Copy as Bitmap."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 210,
+    "term": "Copying Module Definitions with Dependents",
+    "snippet": "Input Field Data Types.  The #BEGIN Directive: PSCAD Manual | Definition Script | Script Directives | #BEGIN/#ENDBEGIN. Copying and Transferring Module Hierarchies There are two somewhat related methods available for copying and transferring entire module hierarchies. Of the two, Copy Transfer is the recommended and most convenient method. Copying Module Definitions with Dependents Copy with Dependents enables a module definition to be copied, including all of its dependent definitions. In other words, if a module contains other modules as part of its definition, and perhaps these modules have other modules inside, and so on, all module definitions will be included in the definition copy. When the definition is pasted, either in the same project or another project, copies of all the dependent definitions will also be included, along with all of the hierarchal linking information. When any of these pasted definitions are instantiated on the canvas, all child modules (i.e. modules defining its definition) will be instantiated as well, in the proper order. This feature is provided mainly for inter-project transfer of modules, alleviating the need to manually reconstruct the module and its hierarchy. Copy with Dependents may also be used for copying and pasting within the same project, provided that no definiti"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 210,
+    "term": "Copy Transfer",
+    "snippet": "nual | Component Design | Parameters Section | Input Fields | Input Field Data Types.  The #BEGIN Directive: PSCAD Manual | Definition Script | Script Directives | #BEGIN/#ENDBEGIN. Copying and Transferring Module Hierarchies There are two somewhat related methods available for copying and transferring entire module hierarchies. Of the two, Copy Transfer is the recommended and most convenient method. Copying Module Definitions with Dependents Copy with Dependents enables a module definition to be copied, including all of its dependent definitions. In other words, if a module contains other modules as part of its definition, and perhaps these modules have other modules inside, and so on, all module definitions will be included in the definition copy. When the definition is pasted, either in the same project or another project, copies of all the dependent definitions will also be included, along with all of the hierarchal linking information. When any of these pasted definitions are instantiated on the canvas, all child modules (i.e. modules defining its definition) will be instantiated as well, in the proper order. This feature is provided mainly for inter-project transfer of modules, alleviating the need to manually reconstruct the module and its hierarchy. Copy with Dependents may also be used for copying a"
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 211,
+    "term": "Copy Transfer",
+    "snippet": "elect Paste. Lastly, instantiate the definition and paste it on the canvas (see Creating the First Instance of a Definition in this chapter). Intra-Project The same process as described above can also be used for copying and pasting a module definition within the same project, except the source and destination projects are the same. Copy Transfer This feature builds on the foundation provided by the Copy with Dependents feature. Copy with Dependents is a simple definition copy of an entire module hierarchy, including all dependent module definitions. Copy Transfer addresses the two major shortcomings of its predecessor: Instance information (i.e. parameter values) of the top-most module is included in the copy; and the module hierarchy is automatically re-linked together on paste, even if some or all of the definition need to be renamed. In addition to these, Copy Transfer also provides the convenience of copying directly from the component instance, as opposed to having to use the definition tree. To copy transfer a module definition with its dependents, simply right-click on the top-level module instance and select Copy Transfer."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 316,
+    "term": "Copy as Meta-File or Bitmap",
+    "snippet": ".bmp), or Windows meta-file format (*.wmf). Note that meta-file format is limited to the current screen size. Use bitmaps for larger graphs. Setting Panel Style You can change the panel style of all graph frames, xy plots and control panels in the Workspace Options dialog, before including them in reports. See Environment for more details. Copy as Meta-File or Bitmap Right-click over the plotting or control object and select Copy <object> as Meta-File or Copy <object> as Bitmap from the pop-up menu. Depending on the object selected, the <object> part of the command will be replaced by the object type. You may then go directly to a report document and paste the image, while it is still in the Windows clipboard."
+  },
+  {
+    "source": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+    "page": 507,
+    "term": "Import Definition",
+    "snippet": "PSCAD Manual 489 2. Expand the new library project tree by clicking on the '+' symbol beside its name. Right-click on the Definitions branch, and select Import Definition(s).... 3. In the Import Definition(s) dialog window, change the Files of Type drop list to 'All Files'. 4. Navigate to the directory where you have stored your PSCAD V2 component definition files ('~/PSCAD/xdraft_lib' for example). If you do not have a direct network connection from your PC to your UNIX system, then you must first copy (or ftp) the files to your PC from UNIX."
+  }
+]

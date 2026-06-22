@@ -1,0 +1,3228 @@
+{
+  "generated_by": "scripts/inspect_type3_component_definition_dependencies.py",
+  "mode": "read_only",
+  "source_model": {
+    "path": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3_Ave_Nov_2018.pscx",
+    "sha256": "5428dd2682732f104c835d43533bd9cc44507c6640660b49fd67188d0107e62c",
+    "project_name": "Type3_Ave_Nov_2018",
+    "project_version": "4.6.2"
+  },
+  "core_definition": "Type3_WTG_Avg",
+  "core_transitive_definition_count": 15,
+  "core_transitive_definitions": [
+    {
+      "name": "Type3_WTG_Avg",
+      "classid": "UserCmpDefn",
+      "id": "405001763",
+      "instances": "0",
+      "direct_local_dependencies": [
+        "DFIG_Converters_Avg",
+        "LLTX_SCALER_Xpu",
+        "Synchronization",
+        "WindTurbine_MechModel"
+      ],
+      "ports": [
+        {
+          "name": "AC_sys",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Dblk",
+          "desc": "Enable/Disable the wind turbine",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "freq",
+          "desc": "Nominal system frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "VLL_Gr",
+          "desc": "AC voltage magnitude",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "No_WTG",
+          "desc": "Total number of wind turbine generator",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Pbase",
+          "desc": "DFIG rated active power at HV terminals [MW]",
+          "unit": "MW",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "VRot_nom",
+          "desc": "Turbine RPM at machine nom speed",
+          "unit": "rpm",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vwind",
+          "desc": "Input wind speed",
+          "unit": "m/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Mrating",
+          "desc": "Machine MVA rating",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "OMEG",
+          "desc": "Machine base angular frequency [rad/s]",
+          "unit": "rad/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vw_nom",
+          "desc": "Nominal wind speed",
+          "unit": "m/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Slip_max",
+          "desc": "Maximum operating slip of induction machine",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "vWcutin",
+          "desc": "Cut-in wind speed",
+          "unit": "m/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "vWcutout",
+          "desc": "Cut-out wind speed",
+          "unit": "m/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 1,
+        "graphs": 1,
+        "frames": 2,
+        "wires": 81,
+        "users": 139
+      }
+    },
+    {
+      "name": "DFIG_Converters_Avg",
+      "classid": "UserCmpDefn",
+      "id": "1082555679",
+      "instances": "1",
+      "direct_local_dependencies": [
+        "Chopper",
+        "ConvBridge_Avg",
+        "Crowbar_prot",
+        "Filter",
+        "Grid_side_Controls",
+        "Rotor_side_Controls"
+      ],
+      "ports": [
+        {
+          "name": "RABC",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "Ctrl",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "7",
+          "internal": "false"
+        },
+        {
+          "name": "SABC",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "VI_m",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "15",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Pbase",
+          "desc": "System MW at PCC",
+          "unit": "MW",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Mrating",
+          "desc": "Machine rating",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Filter_Calc",
+          "desc": "Filter Calculation (0-table, 1-calc)",
+          "unit": "",
+          "intent": "Input",
+          "type": "Integer",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "freq_cutoff",
+          "desc": "Cutoff frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "freq",
+          "desc": "AC system frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vhv",
+          "desc": "Voltage on high side of TRF (rated value)",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Cfilter_in",
+          "desc": "Cfilter",
+          "unit": "uF",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Cdamp_in",
+          "desc": "Cdamp",
+          "unit": "uF",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Ldamp_in",
+          "desc": "Ldamp",
+          "unit": "H",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Rdamp_in",
+          "desc": "Rdamp",
+          "unit": "ohm",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "M_kv",
+          "desc": "Machine terminal voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Rst_pu",
+          "desc": "Stator Resistance",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Slip_max",
+          "desc": "Slip_max",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "TRN",
+          "desc": "Stator/Rotor Turns Ratio",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "DBlk_Gr",
+          "desc": "Stator Converter De-block ",
+          "unit": "",
+          "intent": "Input",
+          "type": "Integer",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Sbase_Gsc",
+          "desc": "Grid converter rated MVA",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vac_Gsc",
+          "desc": "Rated AC voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_base",
+          "desc": "Vdc_base",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Imax_Gsc_pu",
+          "desc": "Current controller upper limit order",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Lconv_Gsc",
+          "desc": "Converter reactor - Rotor side conv.",
+          "unit": "H",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Cfreq_Gsc",
+          "desc": "Carrier frequency as multiple of fundamental",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "DBlk_Rtr",
+          "desc": "Rotor Converter De-block ",
+          "unit": "",
+          "intent": "Input",
+          "type": "Integer",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Sbase_Rtr",
+          "desc": "Rotor converter rated MVA",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vac_Rsc",
+          "desc": "Rated AC voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Pref_pu",
+          "desc": "Active power order ",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Imax_Rsc_pu",
+          "desc": "Current controller upper limit order",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Cfreq_Rsc",
+          "desc": "Carrier frequency as multiple of fundamental Rotor",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 1,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 3,
+        "graphs": 0,
+        "frames": 2,
+        "wires": 109,
+        "users": 192
+      }
+    },
+    {
+      "name": "LLTX_SCALER_Xpu",
+      "classid": "UserCmpDefn",
+      "id": "821483686",
+      "instances": "0",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "nm",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "nk",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "SCL",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Xpu",
+          "desc": "Xpu",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vbase",
+          "desc": "Vbase",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Sbase",
+          "desc": "Sbase",
+          "unit": "MVAr",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Freq",
+          "desc": "Freq",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 1,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 0,
+        "users": 0
+      }
+    },
+    {
+      "name": "Synchronization",
+      "classid": "UserCmpDefn",
+      "id": "1929417257",
+      "instances": "58",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "SynchCom",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "V_Mach",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "V_Trf",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Magn_tlr",
+          "desc": "Magnitude tolerance",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Dblk_Rsc",
+          "desc": "Rotor Converter De-block ",
+          "unit": "",
+          "intent": "Input",
+          "type": "Integer",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "M_kv",
+          "desc": "Machine terminal voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 2,
+        "frames": 1,
+        "wires": 40,
+        "users": 60
+      }
+    },
+    {
+      "name": "WindTurbine_MechModel",
+      "classid": "UserCmpDefn",
+      "id": "2077977182",
+      "instances": "0",
+      "direct_local_dependencies": [
+        "CP_curve_T7",
+        "PI_AntiWindUp_2"
+      ],
+      "ports": [
+        {
+          "name": "Wpu",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Vw",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "W0",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "x_Tm",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "x_Pref_pu",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Ppu",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "StartCmd",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Rad_turb",
+          "desc": "Turbine radius",
+          "unit": "m",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Wref_sp",
+          "desc": "Reference machine speed set point",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "VRot_nom",
+          "desc": "Turbine RPM at machine nom speed",
+          "unit": "rpm",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "rho",
+          "desc": "Air density kg/m3",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Pbase",
+          "desc": "Base Active power",
+          "unit": "MW",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "vWcutin",
+          "desc": "Cut-in wind speed",
+          "unit": "m/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "vWcutout",
+          "desc": "Cut-out wind speed",
+          "unit": "m/s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 2,
+        "graphs": 4,
+        "frames": 2,
+        "wires": 53,
+        "users": 100
+      }
+    },
+    {
+      "name": "Chopper",
+      "classid": "UserCmpDefn",
+      "id": "304263312",
+      "instances": "58",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "uvw",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "uvw_out",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Ecap",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Name",
+          "desc": "Name",
+          "unit": "",
+          "intent": "",
+          "type": "Text",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_chop_on",
+          "desc": "DC chopper activation voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_chop_off",
+          "desc": "DC chopper off voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "R_chopper",
+          "desc": "Shunt resistor",
+          "unit": "ohm",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 1,
+        "frames": 1,
+        "wires": 8,
+        "users": 14
+      }
+    },
+    {
+      "name": "ConvBridge_Avg",
+      "classid": "UserCmpDefn",
+      "id": "993667984",
+      "instances": "126",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "Vref",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "6",
+          "internal": "false"
+        },
+        {
+          "name": "xyz",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "DCN",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "DCP",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Rconv",
+          "desc": "Convertor resistance",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_base",
+          "desc": "Vdc_base",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 1,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 52,
+        "users": 90
+      }
+    },
+    {
+      "name": "Crowbar_prot",
+      "classid": "UserCmpDefn",
+      "id": "1165090164",
+      "instances": "58",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "uvw",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "S1o",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Blk",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Ecap",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Irotor",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Name",
+          "desc": "Name",
+          "unit": "",
+          "intent": "",
+          "type": "Text",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Crow_Enab",
+          "desc": "Crow bar enable (1), disable (0)",
+          "unit": "",
+          "intent": "Input",
+          "type": "Integer",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_crowbar_on",
+          "desc": "DC crowbar activation voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Time_crowbar",
+          "desc": "Activation time",
+          "unit": "s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Ir_limit",
+          "desc": "Maximum Irotor",
+          "unit": "kA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Rcrow",
+          "desc": "Crowbar resistance",
+          "unit": "ohm",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Lcrow",
+          "desc": "Crowbar inductance",
+          "unit": "H",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 4,
+        "frames": 1,
+        "wires": 48,
+        "users": 58
+      }
+    },
+    {
+      "name": "Filter",
+      "classid": "UserCmpDefn",
+      "id": "19871087",
+      "instances": "58",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "uvw",
+          "model": "Natural",
+          "mode": "Electrical",
+          "type": "NonRemovable",
+          "dim": "3",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Filter_Calc",
+          "desc": "Filter Calculation (0-table, 1-calc)",
+          "unit": "",
+          "intent": "Input",
+          "type": "Integer",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Ldamp_in",
+          "desc": "Ldamp",
+          "unit": "H",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Cfilter_in",
+          "desc": "Cfilter",
+          "unit": "uF",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Cdamp_in",
+          "desc": "Cdamp",
+          "unit": "uF",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Rdamp_in",
+          "desc": "Rdamp",
+          "unit": "ohm",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "freq_cutoff",
+          "desc": "Cutoff frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Lconv",
+          "desc": "Converter reactor",
+          "unit": "H",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 32,
+        "users": 56
+      }
+    },
+    {
+      "name": "Grid_side_Controls",
+      "classid": "UserCmpDefn",
+      "id": "210132071",
+      "instances": "0",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "V_GSC",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "DBlk_Gr",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "GS_VREF",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "Edc",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "I_GSC",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "Q_GSC",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Sbase_Gsc",
+          "desc": "Grid side converter MVA",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vac_Gsc",
+          "desc": "Rated AC voltage Grid Side Converter",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "freq",
+          "desc": "AC system frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "freq_cutoff",
+          "desc": "Cutoff frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_base",
+          "desc": "Vdc_base",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Lconv",
+          "desc": "VSC inductance",
+          "unit": "H",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Imax_pu",
+          "desc": "Current controller upper limit order",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 12,
+        "graphs": 4,
+        "frames": 8,
+        "wires": 130,
+        "users": 229
+      }
+    },
+    {
+      "name": "Rotor_side_Controls",
+      "classid": "UserCmpDefn",
+      "id": "1866422019",
+      "instances": "0",
+      "direct_local_dependencies": [
+        "PI_AntiWindUp",
+        "V_dip_sig"
+      ],
+      "ports": [
+        {
+          "name": "DBlk_Rtr",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "VI_m",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "15",
+          "internal": "false"
+        },
+        {
+          "name": "Ctrl",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "7",
+          "internal": "false"
+        },
+        {
+          "name": "V_RSC",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "RS_VREF",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        },
+        {
+          "name": "Edc",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "I_RSC",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "3",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "freq",
+          "desc": "System frequency",
+          "unit": "Hz",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdc_base",
+          "desc": "DC nominal voltage [kV]",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Sbase_Rtr",
+          "desc": "Rotor-side converter rated MVA",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Rst_pu",
+          "desc": "Stator Resistance",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "lvpnt1",
+          "desc": "LVACM breakpoint high [pu]",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "lvpnt0",
+          "desc": "Low voltage active current management (LVACM)breakpoint low [pu]",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vdip",
+          "desc": "Low voltage condition trigger voltage (pu)",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Vup",
+          "desc": "High voltage condition trigger voltage (pu)",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Trv",
+          "desc": "Terminal bus voltage filter time constant (s)",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Imax_pu",
+          "desc": "Current controller upper limit order",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Pref_pu",
+          "desc": "Active power order",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "M_kv",
+          "desc": "Machine terminal voltage",
+          "unit": "kV",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Slip_max",
+          "desc": "Slip_max",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "TRN",
+          "desc": "Stator/Rotor Turns Ratio",
+          "unit": "MVA",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 26,
+        "graphs": 9,
+        "frames": 16,
+        "wires": 211,
+        "users": 353
+      }
+    },
+    {
+      "name": "CP_curve_T7",
+      "classid": "UserCmpDefn",
+      "id": "510073711",
+      "instances": "0",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "Cp",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "lambda",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "theta",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Data1",
+          "desc": "Data1",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data2",
+          "desc": "Data2",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data3",
+          "desc": "Data3",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data4",
+          "desc": "Data4",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data5",
+          "desc": "Data5",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data6",
+          "desc": "Data6",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data7",
+          "desc": "Data7",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data8",
+          "desc": "Data8",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data9",
+          "desc": "Data9",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data10",
+          "desc": "Data10",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data11",
+          "desc": "Data11",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data12",
+          "desc": "Data12",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data13",
+          "desc": "Data13",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data14",
+          "desc": "Data14",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data15",
+          "desc": "Data15",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data16",
+          "desc": "Data16",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data17",
+          "desc": "Data17",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data18",
+          "desc": "Data18",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data19",
+          "desc": "Data19",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data20",
+          "desc": "Data20",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data21",
+          "desc": "Data21",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data22",
+          "desc": "Data22",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data23",
+          "desc": "Data23",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data24",
+          "desc": "Data24",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Data25",
+          "desc": "Data25",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 1,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 0,
+        "users": 0
+      }
+    },
+    {
+      "name": "PI_AntiWindUp_2",
+      "classid": "UserCmpDefn",
+      "id": "700355230",
+      "instances": "10",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "In",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Out",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "frz",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Rst",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Name",
+          "desc": "Name",
+          "unit": "",
+          "intent": "",
+          "type": "Text",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Kp",
+          "desc": "Proportional gain Kp",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Ti",
+          "desc": "Integrator time constant",
+          "unit": "s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Kaw",
+          "desc": "Anti wind-up gain",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "MaxOut",
+          "desc": "Maximum output limit",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "MinOut",
+          "desc": "Minimum output limit",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 15,
+        "users": 24
+      }
+    },
+    {
+      "name": "PI_AntiWindUp",
+      "classid": "UserCmpDefn",
+      "id": "448139899",
+      "instances": "10",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "In",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Out",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "frz",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Rst",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Integer",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Name",
+          "desc": "Name",
+          "unit": "",
+          "intent": "",
+          "type": "Text",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Kp",
+          "desc": "Proportional gain Kp",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Ti",
+          "desc": "Integrator time constant",
+          "unit": "s",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "Kaw",
+          "desc": "Anti wind-up gain",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "MaxOut",
+          "desc": "Maximum output limit",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "MinOut",
+          "desc": "Minimum output limit",
+          "unit": "",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 15,
+        "users": 24
+      }
+    },
+    {
+      "name": "V_dip_sig",
+      "classid": "UserCmpDefn",
+      "id": "1716468876",
+      "instances": "",
+      "direct_local_dependencies": [],
+      "ports": [
+        {
+          "name": "Vdip",
+          "model": "Transfer",
+          "mode": "Output",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        },
+        {
+          "name": "Vt",
+          "model": "Transfer",
+          "mode": "Input",
+          "type": "Real",
+          "dim": "1",
+          "internal": "false"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "V_dip",
+          "desc": "Low voltage condition trigger voltage (pu)",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        },
+        {
+          "name": "V_up",
+          "desc": "High voltage condition trigger voltage (pu)",
+          "unit": "pu",
+          "intent": "Input",
+          "type": "Real",
+          "value_recorded": "omitted_restricted_model_detail"
+        }
+      ],
+      "script_summary": {
+        "script": {
+          "count": 1,
+          "nonempty_count": 0
+        },
+        "fortran": {
+          "count": 0,
+          "nonempty_count": 0
+        },
+        "data": {
+          "count": 0,
+          "nonempty_count": 0
+        }
+      },
+      "runtime_object_counts": {
+        "controls": 0,
+        "graphs": 0,
+        "frames": 0,
+        "wires": 0,
+        "users": 0
+      }
+    }
+  ],
+  "definition_dependency_edges": [
+    {
+      "source": "Cable_1",
+      "target": "Cable_3",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "DFIG_Converters_Avg",
+      "target": "Chopper",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "DFIG_Converters_Avg",
+      "target": "ConvBridge_Avg",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "DFIG_Converters_Avg",
+      "target": "Crowbar_prot",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "DFIG_Converters_Avg",
+      "target": "Filter",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "DFIG_Converters_Avg",
+      "target": "Grid_side_Controls",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "DFIG_Converters_Avg",
+      "target": "Rotor_side_Controls",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Main",
+      "target": "Cable_1",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Main",
+      "target": "TLine",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Main",
+      "target": "Type3_WTG_Avg",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Rotor_side_Controls",
+      "target": "PI_AntiWindUp",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Rotor_side_Controls",
+      "target": "V_dip_sig",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Station",
+      "target": "Main",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Type3_WTG_Avg",
+      "target": "DFIG_Converters_Avg",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Type3_WTG_Avg",
+      "target": "LLTX_SCALER_Xpu",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Type3_WTG_Avg",
+      "target": "Synchronization",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "Type3_WTG_Avg",
+      "target": "WindTurbine_MechModel",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "WindTurbine_MechModel",
+      "target": "CP_curve_T7",
+      "relation": "uses_project_local_definition"
+    },
+    {
+      "source": "WindTurbine_MechModel",
+      "target": "PI_AntiWindUp_2",
+      "relation": "uses_project_local_definition"
+    }
+  ],
+  "top_level_main_instances": [
+    {
+      "id": "646814772",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "522",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "723594463",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "522",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1671642460",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "666",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1312695317",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "630",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "845358424",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "630",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "978002432",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "594",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1649351250",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "594",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "86786453",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "558",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "864019068",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "558",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1408725072",
+      "name": "Type3_Ave_Nov_2018:Type3_WTG_Avg",
+      "defn": "Type3_Ave_Nov_2018:Type3_WTG_Avg",
+      "local_defn": "Type3_WTG_Avg",
+      "x": "1278",
+      "y": "234",
+      "is_core_instance": true,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name",
+        "VLL_Gr",
+        "Vm",
+        "freq"
+      ]
+    },
+    {
+      "id": "1801910196",
+      "name": "Type3_Ave_Nov_2018:TLine",
+      "defn": "Type3_Ave_Nov_2018:TLine",
+      "local_defn": "TLine",
+      "x": "0",
+      "y": "0",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Length",
+        "Name"
+      ]
+    },
+    {
+      "id": "1823768413",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "270",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1287765043",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "108",
+      "y": "396",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "334376631",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "108",
+      "y": "360",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "382904513",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "180",
+      "y": "360",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "573145888",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "108",
+      "y": "324",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "757536739",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "180",
+      "y": "324",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "149680892",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "180",
+      "y": "396",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "438808351",
+      "name": "master:ground",
+      "defn": "master:ground",
+      "local_defn": "ground",
+      "x": "882",
+      "y": "324",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "305577936",
+      "name": "master:ground",
+      "defn": "master:ground",
+      "local_defn": "ground",
+      "x": "900",
+      "y": "324",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1353398704",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "108",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1691901178",
+      "name": "",
+      "defn": "master:xfmr-3p2w",
+      "local_defn": "xfmr-3p2w",
+      "x": "900",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource",
+        "xfmr-3p2w"
+      ],
+      "selected_param_names": [
+        "Name",
+        "Tmva",
+        "V1",
+        "V2"
+      ]
+    },
+    {
+      "id": "382441279",
+      "name": "",
+      "defn": "master:time-sig",
+      "local_defn": "time-sig",
+      "x": "1728",
+      "y": "180",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "121433192",
+      "name": "",
+      "defn": "master:compare",
+      "local_defn": "compare",
+      "x": "1656",
+      "y": "180",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "568107340",
+      "name": "",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "1584",
+      "y": "180",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "622137641",
+      "name": "",
+      "defn": "master:ratelimit",
+      "local_defn": "ratelimit",
+      "x": "1656",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "875973993",
+      "name": "master:var",
+      "defn": "master:var",
+      "local_defn": "var",
+      "x": "1764",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "924157362",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "1584",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1972511169",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "1476",
+      "y": "306",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1890323174",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "1404",
+      "y": "306",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1115587978",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "1476",
+      "y": "270",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "192279736",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "1404",
+      "y": "270",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "217587440",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "1404",
+      "y": "234",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1164890686",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "1476",
+      "y": "234",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1903262663",
+      "name": "master:var",
+      "defn": "master:var",
+      "local_defn": "var",
+      "x": "198",
+      "y": "216",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "V_source"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "861605438",
+      "name": "",
+      "defn": "master:mult",
+      "local_defn": "mult",
+      "x": "270",
+      "y": "216",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "329359269",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "180",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "438365158",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "378",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "200029863",
+      "name": "master:monostable",
+      "defn": "master:monostable",
+      "local_defn": "monostable",
+      "x": "900",
+      "y": "414",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1204222344",
+      "name": "master:var_pot",
+      "defn": "master:var_pot",
+      "local_defn": "var_pot",
+      "x": "1008",
+      "y": "378",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1357658967",
+      "name": "master:var_switch",
+      "defn": "master:var_switch",
+      "local_defn": "var_switch",
+      "x": "1008",
+      "y": "414",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1730345023",
+      "name": "master:tpflt",
+      "defn": "master:tpflt",
+      "local_defn": "tpflt",
+      "x": "828",
+      "y": "360",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "799055529",
+      "name": "master:multimeter",
+      "defn": "master:multimeter",
+      "local_defn": "multimeter",
+      "x": "648",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q"
+      ]
+    },
+    {
+      "id": "505106072",
+      "name": "master:source3",
+      "defn": "master:source3",
+      "local_defn": "source3",
+      "x": "378",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "source3"
+      ],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q",
+        "Vbase",
+        "Vm"
+      ]
+    },
+    {
+      "id": "1102908581",
+      "name": "master:ground",
+      "defn": "master:ground",
+      "local_defn": "ground",
+      "x": "342",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "691229232",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "414",
+      "y": "216",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "578057097",
+      "name": "",
+      "defn": "master:unity",
+      "local_defn": "unity",
+      "x": "936",
+      "y": "414",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "309361643",
+      "name": "",
+      "defn": "master:unity",
+      "local_defn": "unity",
+      "x": "936",
+      "y": "378",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1416243960",
+      "name": "master:multimeter",
+      "defn": "master:multimeter",
+      "local_defn": "multimeter",
+      "x": "1188",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q"
+      ]
+    },
+    {
+      "id": "1915794924",
+      "name": "",
+      "defn": "master:unity",
+      "local_defn": "unity",
+      "x": "1152",
+      "y": "378",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1475747424",
+      "name": "",
+      "defn": "master:unity",
+      "local_defn": "unity",
+      "x": "1152",
+      "y": "414",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1237689905",
+      "name": "master:tpflt",
+      "defn": "master:tpflt",
+      "local_defn": "tpflt",
+      "x": "1044",
+      "y": "360",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "412037280",
+      "name": "master:var_switch",
+      "defn": "master:var_switch",
+      "local_defn": "var_switch",
+      "x": "1224",
+      "y": "414",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "119363881",
+      "name": "master:var_pot",
+      "defn": "master:var_pot",
+      "local_defn": "var_pot",
+      "x": "1224",
+      "y": "378",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "161502222",
+      "name": "master:monostable",
+      "defn": "master:monostable",
+      "local_defn": "monostable",
+      "x": "1116",
+      "y": "414",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1925710979",
+      "name": "Type3_Ave_Nov_2018:Cable_1",
+      "defn": "Type3_Ave_Nov_2018:Cable_1",
+      "local_defn": "Cable_1",
+      "x": "1008",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Cable_1"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "655260042",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "702",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1547078249",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "702",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "2066439782",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "738",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1486017402",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "738",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "760808059",
+      "name": "master:datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "792",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1238540351",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "792",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1836223611",
+      "name": "master:multimeter",
+      "defn": "master:multimeter",
+      "local_defn": "multimeter",
+      "x": "468",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q"
+      ]
+    },
+    {
+      "id": "663730850",
+      "name": "",
+      "defn": "master:time-sig",
+      "local_defn": "time-sig",
+      "x": "1998",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "639872644",
+      "name": "",
+      "defn": "master:sumjct",
+      "local_defn": "sumjct",
+      "x": "1854",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "803518078",
+      "name": "",
+      "defn": "master:range",
+      "local_defn": "range",
+      "x": "1926",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": []
+    },
+    {
+      "id": "1994714507",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "666",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1267741120",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "72",
+      "y": "828",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "211240325",
+      "name": "master:pgb",
+      "defn": "master:pgb",
+      "local_defn": "pgb",
+      "x": "108",
+      "y": "828",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1341241132",
+      "name": "master:const",
+      "defn": "master:const",
+      "local_defn": "const",
+      "x": "1890",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [],
+      "selected_param_names": [
+        "Name"
+      ]
+    }
+  ],
+  "standalone_candidates_to_exclude": [
+    {
+      "id": "1823768413",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "270",
+      "y": "252",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1691901178",
+      "name": "",
+      "defn": "master:xfmr-3p2w",
+      "local_defn": "xfmr-3p2w",
+      "x": "900",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource",
+        "xfmr-3p2w"
+      ],
+      "selected_param_names": [
+        "Name",
+        "Tmva",
+        "V1",
+        "V2"
+      ]
+    },
+    {
+      "id": "1903262663",
+      "name": "master:var",
+      "defn": "master:var",
+      "local_defn": "var",
+      "x": "198",
+      "y": "216",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "V_source"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "329359269",
+      "name": "datalabel",
+      "defn": "master:datalabel",
+      "local_defn": "datalabel",
+      "x": "180",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "799055529",
+      "name": "master:multimeter",
+      "defn": "master:multimeter",
+      "local_defn": "multimeter",
+      "x": "648",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q"
+      ]
+    },
+    {
+      "id": "505106072",
+      "name": "master:source3",
+      "defn": "master:source3",
+      "local_defn": "source3",
+      "x": "378",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "source3"
+      ],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q",
+        "Vbase",
+        "Vm"
+      ]
+    },
+    {
+      "id": "1925710979",
+      "name": "Type3_Ave_Nov_2018:Cable_1",
+      "defn": "Type3_Ave_Nov_2018:Cable_1",
+      "local_defn": "Cable_1",
+      "x": "1008",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Cable_1"
+      ],
+      "selected_param_names": [
+        "Name"
+      ]
+    },
+    {
+      "id": "1836223611",
+      "name": "master:multimeter",
+      "defn": "master:multimeter",
+      "local_defn": "multimeter",
+      "x": "468",
+      "y": "288",
+      "is_core_instance": false,
+      "standalone_term_hits": [
+        "Vsource"
+      ],
+      "selected_param_names": [
+        "Name",
+        "P",
+        "Q"
+      ]
+    }
+  ],
+  "library_migration_interpretation": {
+    "copy_core_definition_only_excludes_main_page_test_network": true,
+    "export_with_dependents_should_cover_project_local_module_hierarchy": true,
+    "manual_gui_confirmation_required": [
+      "Confirm the Definitions tree shows Type3_WTG_Avg as a Module Definition.",
+      "Confirm Export with Dependents is available on that definition.",
+      "Confirm imported Type3WTG_Lib definitions include every transitive child definition listed here."
+    ]
+  },
+  "official_documentation_evidence": {
+    "local_pscad_v46_manual": {
+      "path": "C:\\Program Files (x86)\\PSCAD46\\help\\UserGuides\\PSCAD Users Guide (V4.6).pdf",
+      "extracted_hits": "data/reference/local_pscad_v46_pdf_keyword_hits.json",
+      "findings": [
+        "Definitions may be exchanged by saving PSCAD Definition (*.psdx) files.",
+        "Definitions are imported from the workspace primary window Definitions branch using Import Definition(s)....",
+        "A single definition can be exported using Export As....",
+        "A module hierarchy can be exported using Export with Dependents.",
+        "Copy as Meta-File or Bitmap is documented as a visual/image export path, not a definition migration path."
+      ]
+    },
+    "official_web_help": [
+      {
+        "url": "https://www.pscad.com/webhelp/PSCAD/The_Application_Environment/The_Workspace/The_Projects_Section.htm",
+        "finding": "Definitions branch supports Import Definition(s)..., Paste, Export As..., Copy with Dependents, and Export with Dependents; user definitions should reside in library projects."
+      },
+      {
+        "url": "https://www.pscad.com/webhelp/PSCAD/Features_and_Operations/Components_and_Modules/Importing_Exporting_Definitions.htm",
+        "finding": "Definitions are imported/exported as PSCAD Definition (*.psdx) files; Export with Dependents includes dependent module definitions."
+      },
+      {
+        "url": "https://www.pscad.com/webhelp/PSCAD/Features_and_Operations/Copying_and_Transferring_Module_Hierarchies.htm",
+        "finding": "Copy with Dependents and Copy Transfer are supported module hierarchy transfer mechanisms."
+      },
+      {
+        "url": "https://www.pscad.com/webhelp/PSCAD/Features_and_Operations/Components_and_Modules/Linking_and_Re-linking_Definitions.htm",
+        "finding": "Switch Reference... and Edit Reference... are supported for re-linking an instance to loaded definitions."
+      }
+    ],
+    "decision": "Copy as Meta-File is not suitable for Type-3 case-to-library definition migration; use Export with Dependents to *.psdx and Import Definition(s)... into Type3WTG_Lib."
+  }
+}
