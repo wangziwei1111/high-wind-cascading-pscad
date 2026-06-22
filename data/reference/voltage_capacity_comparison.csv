@@ -1,0 +1,13 @@
+item,pnnl_ibr_avm_2_1_1,type3_average,conclusion,evidence_class
+high_voltage_grid_bus,GBUS30/N30 via E_2_30_1 345 kV side,Standalone V_source/BusPOC test grid,Use PNNL grid not Type-3 source,verified_from_model_file
+medium_voltage_bus,22 kV after PNNL 345/22 transformer,Type3 VLL_Gr/Vbase example about 33 kV,Adapt 22 kV to Type-3 AC_sys,verified_from_model_file
+low_voltage_converter_terminal,0.6 kV behind PNNL 22/0.6 transformer,Internal Type-3 converter/machine voltage around 0.69 kV,Do not direct-connect Type-3 to 0.6 kV terminal,verified_from_model_file
+pnnl_upstream_transformer,E_2_30_1 100 MVA 345/22 kV,Not applicable,Keep for preferred option,verified_from_model_file
+pnnl_stepdown_transformer,E_2_30_1 110.4 MVA 22/0.6 kV,Type-3 has internal transformer,Remove or bypass in trial copy,verified_from_model_file
+pnnl_series_reactor,3.50133 uH,Standalone Type-3 has cable/transformer,Keep only if preserving 22 kV branch impedance is intended,verified_from_model_file
+type3_external_ac_terminal,Not applicable,AC_sys 3-phase natural port,Connect at wind-farm collector boundary,verified_from_model_file
+type3_standalone_transformer,Not applicable,Main page xfmr-3p2w plus internal Type3 transformer,Do not blindly copy standalone transformer,verified_from_model_file
+rated_mw,unresolved from static bus trace,Rated_MW maps to Pbase; GUI example observed 2 MW per unit,Scale before first run,verified_from_model_file
+rated_mva,Candidate branch transformer 110.4 MVA; upstream 100 MVA,Machine_MVA maps to Mrating; GUI example observed 2.5 MVA per unit,Choose aggregate near replaced IBR branch,verified_from_model_file
+frequency,60 Hz in PNNL components,freq top-level parameter,Use PNNL system frequency 60 Hz,verified_from_model_file
+enable_block,IBR Inputs/Flags no verified simple Dblk,Dblk top-level plus internal DBlk_Rsc/Gsc,Use Type-3 Dblk plus external breaker,verified_from_model_file

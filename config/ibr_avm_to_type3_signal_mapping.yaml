@@ -1,0 +1,51 @@
+metadata:
+  task: pnnl_single_ibr_to_official_type3_average_static_mapping
+  generated_at: 2026-06-22
+  evidence_policy:
+    - verified_from_model_file
+    - verified_from_project_structure
+    - inferred
+    - unresolved
+
+mappings:
+  - pnnl: Sbase
+    type3: [Machine_MVA, UN, Rated_MW]
+    type3_internal_parameters: [Mrating, No_WTG, Pbase]
+    status: convertible_with_verified_scaling
+    direct_connection: false
+    evidence: verified_from_model_file
+  - pnnl: Pini
+    type3: [Vwind, Rated_MW, internal_initialization]
+    status: requires_manual_controller_adaptation
+    direct_connection: false
+    evidence: inferred
+  - pnnl: Pord
+    type3: [Pref_pu]
+    status: requires_manual_controller_adaptation
+    direct_connection: false
+    evidence: verified_from_model_file
+  - pnnl: Qord
+    type3: [Q_ord, Qref_pu, qmode]
+    status: requires_manual_controller_adaptation
+    direct_connection: false
+    evidence: verified_from_model_file
+  - pnnl: Pfcmd
+    type3: []
+    status: no_direct_equivalent
+    direct_connection: false
+    evidence: unresolved
+  - pnnl: DB_or_DBLK
+    type3: [Dblk, DBlk_Rsc, DBlk_Gsc, DBlk_Rtr]
+    status: requires_manual_controller_adaptation
+    direct_connection: false
+    evidence: verified_from_model_file
+  - pnnl: INV_Vbase
+    type3: [Vbase, VLL_Gr]
+    status: convertible_with_verified_scaling
+    direct_connection: false
+    evidence: verified_from_model_file
+  - pnnl: fPLL
+    type3: [internal_pll_variables]
+    status: no_direct_equivalent
+    direct_connection: false
+    evidence: inferred
