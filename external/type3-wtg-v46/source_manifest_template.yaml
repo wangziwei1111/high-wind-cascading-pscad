@@ -1,0 +1,32 @@
+asset_name: "Type 3 Wind Turbine Model - V46"
+official_page: "https://www.pscad.com/knowledge-base/article/496"
+download_url_observed_in_browser: ""
+access_method:
+  requires_mycentre_login: null
+  account_or_license_notes: ""
+download:
+  file_name: ""
+  size_bytes: null
+  sha256: ""
+  downloaded_at_local: ""
+  stored_original_path: "external/type3-wtg-v46/ORIGINAL_DOWNLOAD_DO_NOT_EDIT/"
+  working_copy_path: "external/type3-wtg-v46/WORKING_COPY/"
+version_evidence:
+  pscad_version_claim: "PSCAD v4.6 / V46"
+  compatible_with_pscad_4_6_2: null
+  evidence_notes: ""
+contents_observed:
+  has_pscx: null
+  has_pslx_or_library: null
+  has_average_model: null
+  has_detailed_model: null
+  has_dfig: null
+  has_rsc: null
+  has_gsc: null
+  has_dc_link: null
+  has_chopper: null
+  has_crowbar: null
+  has_scaling_or_aggregation: null
+license_and_redistribution:
+  redistribution_allowed_confirmed_by_user: false
+  notes: "Do not commit official PSCAD files unless redistribution rights are confirmed."

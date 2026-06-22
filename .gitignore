@@ -3,6 +3,18 @@ external/*
 !external/README.md
 !external/source_manifest.csv
 !external/.gitkeep
+!external/type3-wtg-v46/
+!external/type3-wtg-v46/README.md
+!external/type3-wtg-v46/.gitkeep
+!external/type3-wtg-v46/source_manifest_template.yaml
+!external/type3-wtg-v46/ORIGINAL_DOWNLOAD_DO_NOT_EDIT/
+!external/type3-wtg-v46/ORIGINAL_DOWNLOAD_DO_NOT_EDIT/.gitkeep
+!external/type3-wtg-v46/WORKING_COPY/
+!external/type3-wtg-v46/WORKING_COPY/.gitkeep
+external/type3-wtg-v46/ORIGINAL_DOWNLOAD_DO_NOT_EDIT/*
+external/type3-wtg-v46/WORKING_COPY/*
+!external/type3-wtg-v46/ORIGINAL_DOWNLOAD_DO_NOT_EDIT/.gitkeep
+!external/type3-wtg-v46/WORKING_COPY/.gitkeep
 
 results/*
 !results/.gitkeep
@@ -22,4 +34,3 @@ results/*
 *.lib
 *.bakx
 *.psmx
-

@@ -7,4 +7,4 @@ Place manually downloaded or cloned third-party model sources here for local aud
 Current local audit target:
 
 - `pnnl-enhanced-ieee39`: cloned from `https://github.com/pnnltestsystem/Enhanced-IEEE-39-Bus-System-with-Inverter-based-Resources-on-Multi-Time-Scale-Platforms.git`
-
+- `type3-wtg-v46`: placeholder and manual-acquisition notes for the official PSCAD `Type 3 Wind Turbine Model - V46`; do not commit downloaded official model files.

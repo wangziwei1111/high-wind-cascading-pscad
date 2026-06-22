@@ -1,0 +1,49 @@
+{
+  "inventory_name": "Type-3 WTG local discovery inventory",
+  "generated_at_local": "2026-06-22",
+  "scope": {
+    "searched_roots": [
+      "C:\\Users\\24186\\Documents",
+      "C:\\Users\\24186\\Downloads",
+      "C:\\Users\\24186\\Desktop",
+      "C:\\Program Files",
+      "C:\\Program Files (x86)"
+    ],
+    "file_extensions": [
+      ".pscx",
+      ".pslx",
+      ".psl",
+      ".pswx",
+      ".lib",
+      ".zip",
+      ".rar",
+      ".7z",
+      ".pdf"
+    ],
+    "keywords": [
+      "Type 3",
+      "Type-3",
+      "Type3",
+      "Type_3",
+      "WTG",
+      "Wind Turbine",
+      "WindTurbine",
+      "DFIG",
+      "V46",
+      "Crowbar",
+      "WindFarm",
+      "Wind Farm",
+      "Wind Park",
+      "WindPark"
+    ],
+    "method": "Read-only filename and path search over allowed roots; SHA-256 would be recorded for matches."
+  },
+  "results": [],
+  "conclusion": {
+    "found_local_type3_wtg_example": false,
+    "notes": [
+      "No local file path or filename matched the requested Type-3 WTG / DFIG / V46 search terms in the audited roots.",
+      "No PSCAD Type-3 WTG example was opened, copied, modified, or imported into the 3IBR project."
+    ]
+  }
+}
