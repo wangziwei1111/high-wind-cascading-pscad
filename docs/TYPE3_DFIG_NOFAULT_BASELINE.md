@@ -22,9 +22,9 @@ Current case:
 | `DFIG_Q_MVAr` | `QIBR1_2` | same multimeter ID `1263266056`, Q output | `3IBR.gf46\3IBR_01.out`, column 7 | MVAr-scale PSCAD output | Observed negative Q means current meter convention imports/absorbs reactive under this wiring | GUI/static confirmed enough for baseline |
 | `DFIG_V_PU_OR_KV` | `VIBR1_2` | same multimeter ID `1263266056`, Vrms output | `3IBR.gf46\3IBR_01.out`, column 3 | pu-like RMS around 1.0 on 22 kV base | Not directional | GUI/static confirmed enough for baseline |
 | `DFIG_F_HZ` | `SPD30` and `Freq_PLL` | P3 system candidate and Type-3 internal PLL candidate | `3IBR_01.out` col 2; `3IBR_30.out` col 9 | Hz | Not directional | Usable candidates; exact POC frequency output still should be confirmed |
-| `DFIG_DBLK` | No direct `Dblk_DFIG` output. Internal `Dblk_VdcCtrl` and `Dblk_Rotor` used as evidence only | Type-3 internal PGBs, not the external `Dblk_DFIG` label | `3IBR_23.out` cols 9 and 10 | logic | Not directional | Not fully exported |
-| `DFIG_VWIND_MS` | No direct output channel | External `Vwind` label exists at P3 x=360 y=1134 but has no same-name PGB in `3IBR.inf` | none | m/s | Not directional | Not exported |
-| `DFIG_BRK_STATE` | No direct `BRK_DFIG` output. Internal `BRK ord` exists but is not the external breaker state | `BRK_DFIG` constant/label and breaker are visible in PSCAD, but no same-name PGB | external none; internal `3IBR_23.out` col 6 | logic | 0 command corresponds to the present closed no-fault branch in this run | Not fully exported |
+| `DFIG_DBLK_CMD` | `DFIG_DBLK_CMD` | External `Dblk_DFIG` command sampled from the existing `compare -> Dblk_DFIG` control wire | `3IBR.gf46\3IBR.inf` PGB desc present; generated `P3.f` assigns `PGB(IPGB+19)=Dblk_DFIG` | logic | 0 before enable, 1 after enable | Exported and short-run verified |
+| `DFIG_VWIND_MS` | `DFIG_VWIND_MS` | External `Vwind` sampled from the existing `Rate_Limiter -> Vwind` control wire | `3IBR.gf46\3IBR.inf` PGB desc present; generated `P3.f` assigns `PGB(IPGB+17)=Vwind` | m/s | Not directional | Exported and short-run verified |
+| `DFIG_BRK_STATE` | `DFIG_BRK_STATE` | `BRK_DFIG` breaker internal A-phase status output, used as representative because single-pole operation is disabled | `3IBR.gf46\3IBR.inf` PGB desc present; generated `P3.f` assigns `PGB(IPGB+18)=REAL(DFIG_BRK_STATE)` | logic | In this breaker model/state convention, 0 corresponds to the observed closed state during no-fault operation | Exported and short-run verified |
 
 ## PSCAD Page Evidence
 
@@ -39,6 +39,7 @@ Key objects:
 - Dblk support: `time-sig` ID `146328259` -> `compare` ID `1776838349`, `X=0.2`, `OL=0`, `OH=1` -> `Dblk_DFIG` data label ID `1031105444`.
 - Vwind support: `windSpeed` variable ID `887206944`, `Value=11.0`, -> `Rate_Limiter` ID `808965454`, `IR=10 [1/s]`, `DR=5 [1/s]` -> `Vwind` data label ID `697683388`.
 - DFIG breaker and transformer: `BRK_DFIG` breaker ID `521858026`, `XFMR_DFIG_22_33` transformer ID `113665858`.
+- Added external output channels after the original baseline pass: `DFIG_DBLK_CMD`, `DFIG_VWIND_MS`, and `DFIG_BRK_STATE`. These were added by GUI only as branch/output measurements; main electrical topology and Type-3 parameters were not changed.
 
 Screenshot filenames: no new binary screenshots were committed in this pass. The GUI inspection screenshots remain in the Codex/PSCAD session only.
 
@@ -67,6 +68,55 @@ The exported data range in `3IBR_01.out` is 0.0 s to 19.99885 s with 4820 numeri
 | `Vwind` | Not exported | External source is static GUI/XML-confirmed as `windSpeed=11.0 -> Rate Limiter(IR=10, DR=5) -> Vwind`, but no output column exists. | No |
 | `BRK_DFIG` | Not exported | Branch remained closed visually and power flowed, but there is no direct external breaker-state output. | No |
 
+## External Output Channel Completion Addendum
+
+Date: 2026-06-23, after the original 20 s baseline run.
+
+Three external signal output channels were manually added in PSCAD GUI:
+
+- `DFIG_DBLK_CMD`: output channel branched from the existing `compare(X=0.2, OL=0, OH=1) -> Dblk_DFIG` control wire. The original Dblk wire remains intact.
+- `DFIG_VWIND_MS`: output channel branched from the existing `Rate_Limiter(IR=10, DR=5) -> Vwind` control wire. The original Vwind wire remains intact.
+- `DFIG_BRK_STATE`: `BRK_DFIG` breaker internal A-phase status output was named `DFIG_BRK_STATE`, then exported through a same-name Data Label and output channel. Single-pole operation is disabled, so A-phase status is used as the three-phase breaker status representative.
+
+Build/run evidence from the user's PSCAD screenshot after these output-only edits:
+
+- `0 Errors`
+- `0 Warnings`
+- `EMTDC run completed`
+- `Solve Time = 47ms`
+
+Generated-file evidence from `C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46`:
+
+```text
+3IBR.inf:
+PGB(1) Output Desc="DFIG_BRK_STATE" Group="P3" Units="logic"
+PGB(3) Output Desc="DFIG_DBLK_CMD"  Group="P3" Units="logic"
+PGB(4) Output Desc="DFIG_VWIND_MS"  Group="P3" Units="m/s"
+
+P3.f:
+PGB(IPGB+17) = Vwind
+PGB(IPGB+18) = REAL(DFIG_BRK_STATE)
+PGB(IPGB+19) = Dblk_DFIG
+```
+
+Short-run output evidence:
+
+The post-edit `.out` files available during this audit extend to `t=0.24485 s`, not the full requested 5 s. This is sufficient to verify the Dblk command edge and the existence/value of the added channels, but it is not used as a new steady-state statistics run.
+
+| Time (s) | `DFIG_VWIND_MS` | `DFIG_BRK_STATE` | `DFIG_DBLK_CMD` |
+|---:|---:|---:|---:|
+| 0.00000 | 11 | 0 | 0 |
+| 0.19920 | 11 | 0 | 0 |
+| 0.20335 | 11 | 0 | 1 |
+| 0.24485 | 11 | 0 | 1 |
+
+Interpretation:
+
+- `DFIG_DBLK_CMD` changes from 0 to 1 immediately after 0.2 s, as intended.
+- `DFIG_VWIND_MS` is 11 m/s during the checked interval.
+- `DFIG_BRK_STATE` remains 0; based on the breaker Animation States showing all phases closed and the DFIG branch carrying power, 0 is the current closed-state convention for this output.
+- Full 19-20 s P/Q/V/f steady-state evidence still comes from the earlier completed 20 s no-fault baseline, because the post-edit files only cover the short startup interval.
+
 ## 19-20 s Statistics
 
 | Signal | File column | Min | Mean | Max | Range | Assessment |
@@ -82,20 +132,14 @@ The exported data range in `3IBR_01.out` is 0.0 s to 19.99885 s with 4820 numeri
 
 ## Baseline Decision
 
-No-fault electrical run: passed.
+No-fault electrical run: passed based on the earlier full 20 s run.
 
-Measurement hardening: not fully passed.
+External measurement-channel hardening: passed for `DFIG_DBLK_CMD`, `DFIG_VWIND_MS`, and `DFIG_BRK_STATE` after manual GUI output-channel completion.
 
-Reason: P/Q/V/f are available and stable, but the requested external channels `Dblk_DFIG`, `Vwind`, and `BRK_DFIG` were not successfully exported as explicit `.out` channels in this pass. Internal Type-3 channels provide partial evidence for Dblk and breaker order, but they are not equivalent to the external P3 labels requested for the baseline.
-
-Do not proceed to controlled fault tests until one of the following is done in PSCAD GUI:
-
-1. Add explicit PGB/output channels wired to `Dblk_DFIG`, `Vwind`, and `BRK_DFIG`, then rerun 20 s.
-2. Or document an accepted alternative measurement convention that uses internal Type-3 channels and a constant breaker command, with the limitation clearly acknowledged.
+Important limitation: the post-edit output files inspected here only run to `0.24485 s`, so they validate channel existence and the Dblk startup edge, but do not replace the earlier full 20 s no-fault steady-state statistics.
 
 ## Unresolved Risks
 
-- `DFIG_BRK_STATE` still lacks a direct external breaker-state channel.
-- `DFIG_VWIND_MS` still lacks a direct `Vwind` output channel.
-- `DFIG_DBLK` still lacks a direct `Dblk_DFIG` output channel; internal Dblk channels have additional model delays and are not substitutes for the external enable command.
 - `DFIG_F_HZ` is currently represented by candidates (`SPD30`, `Freq_PLL`) rather than a newly named POC frequency channel.
+- The post-output-channel validation files only extend to `0.24485 s`; use the earlier full 20 s run for steady-state P/Q/V/f evidence.
+- `DFIG_BRK_STATE=0` corresponds to the observed closed-state convention in this PSCAD breaker setup; document this convention when plotting or comparing status logic.

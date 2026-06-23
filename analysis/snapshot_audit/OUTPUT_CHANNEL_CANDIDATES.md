@@ -59,3 +59,28 @@ This addendum reflects the current PSCAD GUI state and 20 s no-fault run artifac
 | `DFIG_BRK_STATE` / external `BRK_DFIG` | none | internal `BRK ord`, PGB 225, `3IBR_23.out` column 6 | This is not the external `BRK_DFIG` three-phase breaker state. The branch was visually closed and carried power, but no direct breaker-state output was exported. |
 
 Baseline conclusion: the 20 s no-fault electrical run is stable and passes, but the measurement baseline is not fully hardened until explicit GUI output channels are added for `Dblk_DFIG`, `Vwind`, and `BRK_DFIG`, or their substitutes are formally accepted with limitations.
+
+## Manual Output Channel Completion Addendum - 2026-06-23
+
+The three missing external channels were added manually in PSCAD GUI on the current local `3IBR` case, without changing the main electrical topology, Type-3 parameters, Dblk/Vwind support logic, `BRK_DFIG`, `XFMR_DFIG_22_33`, or remaining IBR branches.
+
+### Added Channels
+
+| Added channel | Source signal | GUI/source-code evidence | Units | Status |
+|---|---|---|---|---|
+| `DFIG_DBLK_CMD` | External command on the existing `compare(X=0.2, OL=0, OH=1) -> Dblk_DFIG` wire | `3IBR.inf` has `PGB(3) Output Desc="DFIG_DBLK_CMD"`; generated `P3.f` assigns `PGB(IPGB+19)=Dblk_DFIG` | logic | Added and short-run verified |
+| `DFIG_VWIND_MS` | External wind speed on the existing `Rate_Limiter -> Vwind` wire | `3IBR.inf` has `PGB(4) Output Desc="DFIG_VWIND_MS"`; generated `P3.f` assigns `PGB(IPGB+17)=Vwind` | m/s | Added and short-run verified |
+| `DFIG_BRK_STATE` | `BRK_DFIG` breaker internal A-phase status output; A phase represents the three-phase breaker because `Single Pole operation = No` | `3IBR.inf` has `PGB(1) Output Desc="DFIG_BRK_STATE"`; generated `P3.f` assigns `PGB(IPGB+18)=REAL(DFIG_BRK_STATE)` | logic | Added and short-run verified |
+
+### Short-Run Evidence
+
+The current post-edit `.out` files extend to `t=0.24485 s`. They are sufficient to verify channel wiring and the 0.2 s Dblk edge, but not a new full no-fault steady-state run.
+
+| Time (s) | `DFIG_VWIND_MS` | `DFIG_BRK_STATE` | `DFIG_DBLK_CMD` |
+|---:|---:|---:|---:|
+| 0.00000 | 11 | 0 | 0 |
+| 0.19920 | 11 | 0 | 0 |
+| 0.20335 | 11 | 0 | 1 |
+| 0.24485 | 11 | 0 | 1 |
+
+Use the earlier 20 s baseline artifacts for steady-state `PIBR1_2`, `QIBR1_2`, `VIBR1_2`, and frequency statistics. Do not use the post-edit `0.24485 s` files as a 5 s or 20 s steady-state evidence set.

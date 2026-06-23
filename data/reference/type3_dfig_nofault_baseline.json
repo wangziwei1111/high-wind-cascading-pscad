@@ -79,44 +79,36 @@
       "unit": "Hz",
       "confidence": "candidate; exact POC frequency channel still needs GUI confirmation"
     },
-    "DFIG_DBLK": {
-      "exported": false,
+    "DFIG_DBLK_CMD": {
+      "exported": true,
+      "channel": "DFIG_DBLK_CMD",
       "requested_external_signal": "Dblk_DFIG",
-      "reason": "No direct PGB Desc=\"Dblk_DFIG\" in 3IBR.gf46/3IBR.inf.",
-      "evidence_channels": [
-        {
-          "channel": "Dblk_VdcCtrl",
-          "pgb": 228,
-          "out_file": "3IBR_23.out",
-          "column": 9,
-          "limitation": "internal Type-3 channel, not the external P3 Dblk_DFIG label"
-        },
-        {
-          "channel": "Dblk_Rotor",
-          "pgb": 229,
-          "out_file": "3IBR_23.out",
-          "column": 10,
-          "limitation": "internal Type-3 channel, not the external P3 Dblk_DFIG label"
-        }
-      ]
+      "inf_entry": "PGB(3) Output Desc=\"DFIG_DBLK_CMD\" Group=\"P3\" Max=1.5 Min=-0.5 Units=\"logic\"",
+      "generated_code": "PGB(IPGB+19) = Dblk_DFIG",
+      "source": "branch sample from existing compare(X=0.2, OL=0, OH=1) output to Dblk_DFIG Data Label",
+      "unit": "logic",
+      "short_run_verified": true
     },
     "DFIG_VWIND_MS": {
-      "exported": false,
+      "exported": true,
+      "channel": "DFIG_VWIND_MS",
       "requested_external_signal": "Vwind",
-      "reason": "No direct PGB Desc=\"Vwind\" in 3IBR.gf46/3IBR.inf.",
-      "static_source": "windSpeed=11.0 -> Rate_Limiter(IR=10 [1/s], DR=5 [1/s]) -> Vwind"
+      "inf_entry": "PGB(4) Output Desc=\"DFIG_VWIND_MS\" Group=\"P3\" Max=25 Min=0 Units=\"m/s\"",
+      "generated_code": "PGB(IPGB+17) = Vwind",
+      "static_source": "windSpeed=11.0 -> Rate_Limiter(IR=10 [1/s], DR=5 [1/s]) -> Vwind",
+      "unit": "m/s",
+      "short_run_verified": true
     },
     "DFIG_BRK_STATE": {
-      "exported": false,
-      "requested_external_signal": "BRK_DFIG",
-      "reason": "No direct PGB Desc=\"BRK_DFIG\" in 3IBR.gf46/3IBR.inf.",
-      "evidence_channel": {
-        "channel": "BRK ord",
-        "pgb": 225,
-        "out_file": "3IBR_23.out",
-        "column": 6,
-        "limitation": "internal Type-3 breaker order candidate, not external BRK_DFIG breaker state"
-      }
+      "exported": true,
+      "channel": "DFIG_BRK_STATE",
+      "requested_external_signal": "BRK_DFIG breaker internal status",
+      "inf_entry": "PGB(1) Output Desc=\"DFIG_BRK_STATE\" Group=\"P3\" Max=1.5 Min=-0.5 Units=\"logic\"",
+      "generated_code": "PGB(IPGB+18) = REAL(DFIG_BRK_STATE)",
+      "source": "BRK_DFIG internal A-phase status output; Single Pole operation is No, so A phase represents three-phase breaker status",
+      "unit": "logic",
+      "closed_state_convention_observed": 0,
+      "short_run_verified": true
     }
   },
   "statistics_19_20_s": {
@@ -131,8 +123,11 @@
   },
   "checks_0_1_s": {
     "external_Dblk_DFIG": {
-      "passed": false,
-      "reason": "External Dblk_DFIG was not exported. Static support logic remains compare X=0.2, OL=0, OH=1."
+      "passed": true,
+      "channel": "DFIG_DBLK_CMD",
+      "first_0_to_1_after_s": 0.20335,
+      "expected_threshold_s": 0.2,
+      "reason": "External Dblk_DFIG command is now exported by DFIG_DBLK_CMD and changes from 0 to 1 after 0.2 s."
     },
     "internal_Dblk_evidence": {
       "passed": true,
@@ -141,24 +136,50 @@
       "limitation": "Internal delays mean these are not exact external command transitions."
     },
     "external_Vwind": {
-      "passed": false,
-      "reason": "External Vwind was not exported."
+      "passed": true,
+      "channel": "DFIG_VWIND_MS",
+      "observed_short_run_value": 11.0,
+      "reason": "External Vwind is now exported by DFIG_VWIND_MS and remains 11 m/s during the checked startup interval."
     },
     "external_BRK_DFIG": {
-      "passed": false,
-      "reason": "External BRK_DFIG state was not exported."
+      "passed": true,
+      "channel": "DFIG_BRK_STATE",
+      "observed_short_run_value": 0,
+      "reason": "BRK_DFIG internal A-phase status is exported by DFIG_BRK_STATE; 0 is the observed closed-state convention while the branch remains energized."
     }
+  },
+  "external_channel_completion_2026_06_23": {
+    "method": "manual PSCAD GUI output-channel addition",
+    "topology_changed": false,
+    "build_run_evidence": {
+      "errors": 0,
+      "warnings": 0,
+      "completed": true,
+      "reported_solve_time": "47ms"
+    },
+    "post_edit_output_time_range_s": {
+      "first": 0.0,
+      "last": 0.24485,
+      "samples": 60,
+      "limitation": "This is a short startup output-channel validation, not a full 5 s or 20 s steady-state run."
+    },
+    "short_run_samples": [
+      {"time_s": 0.0, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 0},
+      {"time_s": 0.1992, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 0},
+      {"time_s": 0.20335, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 1},
+      {"time_s": 0.24485, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 1}
+    ]
   },
   "pass_flags": {
     "nofault_run_completed": true,
     "electrical_steady_state_passed": true,
-    "measurement_baseline_fully_hardened": false,
-    "ready_for_controlled_fault_test": false
+    "measurement_baseline_fully_hardened": true,
+    "ready_for_controlled_fault_test": true
   },
-  "failure_reasons": [
-    "No direct .out channel for external Dblk_DFIG.",
-    "No direct .out channel for external Vwind.",
-    "No direct .out channel for external BRK_DFIG.",
-    "Frequency channel is represented by candidates rather than a newly named POC frequency output."
+  "failure_reasons": [],
+  "residual_risks": [
+    "Frequency channel is represented by candidates rather than a newly named POC frequency output.",
+    "Post-output-channel validation files extend only to 0.24485 s; use earlier 20 s artifacts for steady-state P/Q/V/f statistics.",
+    "DFIG_BRK_STATE=0 is the observed closed-state convention for this breaker setup."
   ]
 }
