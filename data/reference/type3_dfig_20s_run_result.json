@@ -1,0 +1,75 @@
+{
+  "date": "2026-06-23",
+  "project": "high-wind-cascading-pscad",
+  "case_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "library_path": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3WTG_Lib.pslx",
+  "official_type3_case_path": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3_Ave_Nov_2018.pscx",
+  "status": "20 s no-fault run completed",
+  "pscad_result": {
+    "errors": 0,
+    "warnings": 0,
+    "emtdc_run_completed": true,
+    "solve_time_message": "Solve Time = 94ms",
+    "live_nodes": 193,
+    "duration_s": 20.0,
+    "solution_time_step_us": 5.0,
+    "channel_plot_step_us": 4150.0
+  },
+  "type3_parameters": {
+    "Dblk": "Dblk_DFIG",
+    "freq": 60,
+    "VLL_Gr": 33,
+    "No_WTG": 100,
+    "Pbase": 2.0,
+    "Vwind": "Vwind",
+    "Mrating": 2.5
+  },
+  "control_support": {
+    "Dblk_DFIG": "TIME/time-sig -> compare(X=0.2, OL=0, OH=1) -> Dblk_DFIG",
+    "Vwind": "windSpeed=11.0 -> Rate Limiter(IR=10 [1/s], DR=5 [1/s]) -> Vwind"
+  },
+  "new_branch_topology": [
+    "22 kV collector node",
+    "BRK_DFIG three-phase breaker",
+    "XFMR_DFIG_22_33 22/33 kV two-winding transformer",
+    "Type3WTG_Lib:Type3_WTG_Avg AC_sys terminal"
+  ],
+  "transformer_assumption": {
+    "name": "XFMR_DFIG_22_33",
+    "rated_mva": 250.0,
+    "frequency_hz": 60.0,
+    "winding_1_line_to_line_kv": 22.0,
+    "winding_2_line_to_line_kv": 33.0,
+    "winding_1_type": "Y",
+    "winding_2_type": "Y",
+    "positive_sequence_leakage_reactance_pu": 0.1,
+    "copper_losses_pu": 0.005,
+    "eddy_current_losses_pu": 0.0001,
+    "ideal_transformer_model": true,
+    "tap_changer": "None",
+    "saturation_enabled": false,
+    "caveat": "TEMPORARY 22/33 kV DFIG TRANSFORMER ASSUMPTION"
+  },
+  "last_sample_near_20s": {
+    "time_s": 19.99885,
+    "frequency_hz": 60.0,
+    "voltage_pu_approx": 0.99990710966367,
+    "type3_branch_p_mw": 199.06911588473,
+    "type3_branch_q_mvar": -18.764815673136
+  },
+  "do_not_commit": [
+    "PSCAD .pscx model files unless explicitly cleared",
+    "PSCAD .pslx library files",
+    "generated .gf46 directories",
+    "official Type-3 model files",
+    "PNNL model files",
+    "ETRAN library files"
+  ],
+  "next_recommended_stage": [
+    "Back up current PSCAD folder",
+    "Capture clean evidence screenshots",
+    "Add clear measurement channels if needed",
+    "Repeat 20 s no-fault verification",
+    "Then start controlled disturbance/cascading-failure setup"
+  ]
+}
