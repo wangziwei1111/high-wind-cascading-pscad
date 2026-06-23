@@ -1,0 +1,29 @@
+Line Summary:
+   {
+   Line Name = E_5_8_1
+   Line Length = 0.001
+   Steady State Frequency = 60.0
+   Number of Conductors = 3
+   }
+! This should be in a section called TLINE-INPUT-DATA
+Bergeron Line Model Options:
+   {
+   Interpolate Travel Times = 1
+   Infinite Line Length = 0
+   High Frequency Approximation = 0
+   }
+! This should be in a section called TLINE-INPUT-DATA
+Manual Data Entry:
+   {
+   Data Entry Format = RXB p.u./m
+   Long Line Corrected = 1
+   Voltage Rating (kV L-L RMS) = 345.0
+   Total MVA Rating = 100.0
+   +ve Sequence Resistance = 0.0008
+   +ve Sequence Inductive Reactance = 0.0112
+   +ve Sequence Capacitive Susceptance = 0.1476
+   Estimate Zero Sequence = 1
+   Estimation Ratio for 0-Seq.-R/+ve-Seq.-R = 10.15
+   Estimation Ratio for 0-Seq.-Z/+ve-Seq.-Z = 1.915
+   Estimation Ratio for 0-Seq.-T/+ve-Seq.-T = 1.36
+   }

@@ -1,0 +1,14 @@
+<Meta name="Type3WTG_Lib">
+  <messagelist>
+    <message status="normal" label="information" scope="Type3WTG_Lib" groupid="400000"><![CDATA[Post-link user instances: 0ms]]></message>
+  </messagelist>
+  <List classid="Settings" />
+  <ViewContext>
+    <Window defn="Type3WTG_Lib:Main" call="0" />
+  </ViewContext>
+  <Catalog count="0" />
+  <List classid="View">
+    <View name="Main" zoomlevel="6" scrollx="0" scrolly="0" />
+    <View name="Type3_WTG_Avg" zoomlevel="6" scrollx="704" scrolly="180" />
+  </List>
+</Meta>

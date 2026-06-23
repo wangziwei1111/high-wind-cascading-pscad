@@ -1,0 +1,15 @@
+﻿{
+    "pnnl_source":  "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD",
+    "purpose":  "Current PSCAD reproduction snapshot after Type-3 DFIG 20 s no-fault run",
+    "type3_source":  "C:\\pscad_work\\type3_wtg_v46_trial",
+    "included":  [
+                     "3IBR.pscx current working case",
+                     "ETRAN libraries in PSCAD folder",
+                     "Type3WTG_Lib.pslx",
+                     "official Type3_Ave_Nov_2018.pscx local copy",
+                     "3IBR.gf46 generated outputs and build artifacts",
+                     "local PSCAD/GFortran helper scripts at repository root"
+                 ],
+    "created":  "2026-06-23",
+    "caveat":  "User explicitly requested uploading high-risk PSCAD/model files for ChatGPT context. Do not treat third-party model redistribution as license-cleared beyond the user instruction."
+}
