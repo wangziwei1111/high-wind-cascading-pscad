@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "created_local_time": "2026-06-23",
+  "case": {
+    "pscad_version": "PSCAD 4.6.2 Professional",
+    "project": "3IBR",
+    "case_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "backup_path": "C:\\pscad_work\\backups\\PSCAD_before_type3_nofault_baseline_20260623_201625",
+    "page": "3IBR:Main(0):P1(0):P3(0)"
+  },
+  "run_configuration": {
+    "duration_s": 20,
+    "solution_time_step_us": 5,
+    "channel_plot_step_us": 4150,
+    "artifact_root": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46",
+    "output_last_write_local": "2026-06-23 18:44:38",
+    "build_messages": {
+      "errors": 0,
+      "warnings": 0,
+      "completed": true,
+      "reported_solve_time": "94ms"
+    },
+    "numeric_time_range_s": {
+      "first": 0.0,
+      "last": 19.99885,
+      "samples": 4820
+    }
+  },
+  "channel_mapping": {
+    "DFIG_P_MW": {
+      "exported": true,
+      "channel": "PIBR1_2",
+      "pgb": 4,
+      "group": "P3",
+      "out_file": "3IBR_01.out",
+      "column": 5,
+      "source_component": "master:multimeter",
+      "source_id": "1263266056",
+      "source_page_xy": [774, 990],
+      "unit": "MW-scale PSCAD P output",
+      "sign_convention": "positive in current meter orientation; observed positive power from Type-3 branch"
+    },
+    "DFIG_Q_MVAr": {
+      "exported": true,
+      "channel": "QIBR1_2",
+      "pgb": 6,
+      "group": "P3",
+      "out_file": "3IBR_01.out",
+      "column": 7,
+      "source_component": "master:multimeter",
+      "source_id": "1263266056",
+      "source_page_xy": [774, 990],
+      "unit": "MVAr-scale PSCAD Q output",
+      "sign_convention": "current meter orientation gives negative Q at no-fault steady state"
+    },
+    "DFIG_V_PU_OR_KV": {
+      "exported": true,
+      "channel": "VIBR1_2",
+      "pgb": 2,
+      "group": "P3",
+      "out_file": "3IBR_01.out",
+      "column": 3,
+      "source_component": "master:multimeter",
+      "source_id": "1263266056",
+      "source_page_xy": [774, 990],
+      "unit": "pu-like RMS, BaseV=22 kV",
+      "sign_convention": "not directional"
+    },
+    "DFIG_F_HZ": {
+      "exported": true,
+      "primary_channel": "SPD30",
+      "primary_pgb": 1,
+      "primary_out_file": "3IBR_01.out",
+      "primary_column": 2,
+      "secondary_channel": "Freq_PLL",
+      "secondary_pgb": 298,
+      "secondary_out_file": "3IBR_30.out",
+      "secondary_column": 9,
+      "unit": "Hz",
+      "confidence": "candidate; exact POC frequency channel still needs GUI confirmation"
+    },
+    "DFIG_DBLK": {
+      "exported": false,
+      "requested_external_signal": "Dblk_DFIG",
+      "reason": "No direct PGB Desc=\"Dblk_DFIG\" in 3IBR.gf46/3IBR.inf.",
+      "evidence_channels": [
+        {
+          "channel": "Dblk_VdcCtrl",
+          "pgb": 228,
+          "out_file": "3IBR_23.out",
+          "column": 9,
+          "limitation": "internal Type-3 channel, not the external P3 Dblk_DFIG label"
+        },
+        {
+          "channel": "Dblk_Rotor",
+          "pgb": 229,
+          "out_file": "3IBR_23.out",
+          "column": 10,
+          "limitation": "internal Type-3 channel, not the external P3 Dblk_DFIG label"
+        }
+      ]
+    },
+    "DFIG_VWIND_MS": {
+      "exported": false,
+      "requested_external_signal": "Vwind",
+      "reason": "No direct PGB Desc=\"Vwind\" in 3IBR.gf46/3IBR.inf.",
+      "static_source": "windSpeed=11.0 -> Rate_Limiter(IR=10 [1/s], DR=5 [1/s]) -> Vwind"
+    },
+    "DFIG_BRK_STATE": {
+      "exported": false,
+      "requested_external_signal": "BRK_DFIG",
+      "reason": "No direct PGB Desc=\"BRK_DFIG\" in 3IBR.gf46/3IBR.inf.",
+      "evidence_channel": {
+        "channel": "BRK ord",
+        "pgb": 225,
+        "out_file": "3IBR_23.out",
+        "column": 6,
+        "limitation": "internal Type-3 breaker order candidate, not external BRK_DFIG breaker state"
+      }
+    }
+  },
+  "statistics_19_20_s": {
+    "SPD30": {"min": 60.0, "mean": 60.0, "max": 60.0, "range": 0.0, "samples": 241},
+    "VIBR1_2": {"min": 0.99980920909508, "mean": 0.9998763645216878, "max": 0.99996533797708, "range": 0.00015612888200000619, "samples": 241},
+    "PIBR1_2": {"min": 199.05258531235, "mean": 199.08437034102337, "max": 199.11600422704, "range": 0.06341891469000416, "samples": 241},
+    "QIBR1_2": {"min": -18.822086117348, "mean": -18.788476799174205, "max": -18.752377556776, "range": 0.06970856057199981, "samples": 241},
+    "Freq_PLL": {"min": 60.042692580288, "mean": 60.050236044584366, "max": 60.057536882369, "range": 0.01484430208100207, "samples": 241},
+    "Dblk_VdcCtrl": {"min": 1.0, "mean": 1.0, "max": 1.0, "range": 0.0, "samples": 241},
+    "Dblk_Rotor": {"min": 1.0, "mean": 1.0, "max": 1.0, "range": 0.0, "samples": 241},
+    "BRK ord": {"min": 0.0, "mean": 0.0, "max": 0.0, "range": 0.0, "samples": 241}
+  },
+  "checks_0_1_s": {
+    "external_Dblk_DFIG": {
+      "passed": false,
+      "reason": "External Dblk_DFIG was not exported. Static support logic remains compare X=0.2, OL=0, OH=1."
+    },
+    "internal_Dblk_evidence": {
+      "passed": true,
+      "Dblk_VdcCtrl_first_ge_0_5_s": 0.40255,
+      "Dblk_Rotor_first_ge_0_5_s": 0.60175,
+      "limitation": "Internal delays mean these are not exact external command transitions."
+    },
+    "external_Vwind": {
+      "passed": false,
+      "reason": "External Vwind was not exported."
+    },
+    "external_BRK_DFIG": {
+      "passed": false,
+      "reason": "External BRK_DFIG state was not exported."
+    }
+  },
+  "pass_flags": {
+    "nofault_run_completed": true,
+    "electrical_steady_state_passed": true,
+    "measurement_baseline_fully_hardened": false,
+    "ready_for_controlled_fault_test": false
+  },
+  "failure_reasons": [
+    "No direct .out channel for external Dblk_DFIG.",
+    "No direct .out channel for external Vwind.",
+    "No direct .out channel for external BRK_DFIG.",
+    "Frequency channel is represented by candidates rather than a newly named POC frequency output."
+  ]
+}
