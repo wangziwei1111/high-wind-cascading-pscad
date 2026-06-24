@@ -1,185 +1,324 @@
 {
-  "schema_version": 1,
-  "created_local_time": "2026-06-23",
+  "schema_version": 2,
+  "updated_local_date": "2026-06-24",
   "case": {
     "pscad_version": "PSCAD 4.6.2 Professional",
     "project": "3IBR",
     "case_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
-    "backup_path": "C:\\pscad_work\\backups\\PSCAD_before_type3_nofault_baseline_20260623_201625",
+    "artifact_root": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46",
     "page": "3IBR:Main(0):P1(0):P3(0)"
   },
   "run_configuration": {
     "duration_s": 20,
     "solution_time_step_us": 5,
     "channel_plot_step_us": 4150,
-    "artifact_root": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46",
-    "output_last_write_local": "2026-06-23 18:44:38",
     "build_messages": {
       "errors": 0,
       "warnings": 0,
       "completed": true,
-      "reported_solve_time": "94ms"
+      "reported_solve_time": "110ms",
+      "evidence": "user PSCAD screenshot codex-clipboard-39c3da16-2bb2-4fda-866b-8073539547a6.png"
     },
     "numeric_time_range_s": {
       "first": 0.0,
       "last": 19.99885,
       "samples": 4820
-    }
+    },
+    "mapping_method": "3IBR.inf PGB descriptors cross-checked with generated P3.f assignments; 10 PGB channels per 3IBR_NN.out file after time column"
   },
   "channel_mapping": {
     "DFIG_P_MW": {
-      "exported": true,
-      "channel": "PIBR1_2",
+      "exported_channel": "PIBR1_2",
       "pgb": 4,
       "group": "P3",
       "out_file": "3IBR_01.out",
       "column": 5,
-      "source_component": "master:multimeter",
-      "source_id": "1263266056",
-      "source_page_xy": [774, 990],
       "unit": "MW-scale PSCAD P output",
-      "sign_convention": "positive in current meter orientation; observed positive power from Type-3 branch"
+      "sign_or_logic_convention": "positive under current meter orientation",
+      "p3_assignment": {
+        "local_pgb": 4,
+        "expr": "PIBR1_2",
+        "source_line": 2944
+      },
+      "confirmed_by_gui_and_full_20s_run": true
     },
     "DFIG_Q_MVAr": {
-      "exported": true,
-      "channel": "QIBR1_2",
+      "exported_channel": "QIBR1_2",
       "pgb": 6,
       "group": "P3",
       "out_file": "3IBR_01.out",
       "column": 7,
-      "source_component": "master:multimeter",
-      "source_id": "1263266056",
-      "source_page_xy": [774, 990],
       "unit": "MVAr-scale PSCAD Q output",
-      "sign_convention": "current meter orientation gives negative Q at no-fault steady state"
+      "sign_or_logic_convention": "negative Q in current meter orientation at no-fault steady state",
+      "p3_assignment": {
+        "local_pgb": 6,
+        "expr": "QIBR1_2",
+        "source_line": 2952
+      },
+      "confirmed_by_gui_and_full_20s_run": true
     },
     "DFIG_V_PU_OR_KV": {
-      "exported": true,
-      "channel": "VIBR1_2",
+      "exported_channel": "VIBR1_2",
       "pgb": 2,
       "group": "P3",
       "out_file": "3IBR_01.out",
       "column": 3,
-      "source_component": "master:multimeter",
-      "source_id": "1263266056",
-      "source_page_xy": [774, 990],
-      "unit": "pu-like RMS, BaseV=22 kV",
-      "sign_convention": "not directional"
+      "unit": "pu-like RMS on 22 kV meter base",
+      "sign_or_logic_convention": "not directional",
+      "p3_assignment": {
+        "local_pgb": 2,
+        "expr": "VIBR1_2",
+        "source_line": 2936
+      },
+      "confirmed_by_gui_and_full_20s_run": true
     },
     "DFIG_F_HZ": {
-      "exported": true,
-      "primary_channel": "SPD30",
-      "primary_pgb": 1,
-      "primary_out_file": "3IBR_01.out",
-      "primary_column": 2,
-      "secondary_channel": "Freq_PLL",
-      "secondary_pgb": 298,
-      "secondary_out_file": "3IBR_30.out",
-      "secondary_column": 9,
-      "unit": "Hz",
-      "confidence": "candidate; exact POC frequency channel still needs GUI confirmation"
+      "exported_channel": "SPD30",
+      "pgb": 1,
+      "group": "P3",
+      "out_file": "3IBR_01.out",
+      "column": 2,
+      "unit": "Hz candidate",
+      "sign_or_logic_convention": "system-frequency candidate; distinct from Type-3 internal Freq_PLL",
+      "p3_assignment": {
+        "local_pgb": 1,
+        "expr": "SPD30",
+        "source_line": 1017
+      },
+      "confirmed_by_gui_and_full_20s_run": true
     },
     "DFIG_DBLK_CMD": {
-      "exported": true,
-      "channel": "DFIG_DBLK_CMD",
-      "requested_external_signal": "Dblk_DFIG",
-      "inf_entry": "PGB(3) Output Desc=\"DFIG_DBLK_CMD\" Group=\"P3\" Max=1.5 Min=-0.5 Units=\"logic\"",
-      "generated_code": "PGB(IPGB+19) = Dblk_DFIG",
-      "source": "branch sample from existing compare(X=0.2, OL=0, OH=1) output to Dblk_DFIG Data Label",
+      "exported_channel": "DFIG_DBLK_CMD",
+      "pgb": 19,
+      "group": "P3",
+      "out_file": "3IBR_02.out",
+      "column": 10,
       "unit": "logic",
-      "short_run_verified": true
+      "sign_or_logic_convention": "0 before enable, 1 after enable",
+      "p3_assignment": {
+        "local_pgb": 19,
+        "expr": "Dblk_DFIG",
+        "source_line": 1881
+      },
+      "confirmed_by_gui_and_full_20s_run": true
     },
     "DFIG_VWIND_MS": {
-      "exported": true,
-      "channel": "DFIG_VWIND_MS",
-      "requested_external_signal": "Vwind",
-      "inf_entry": "PGB(4) Output Desc=\"DFIG_VWIND_MS\" Group=\"P3\" Max=25 Min=0 Units=\"m/s\"",
-      "generated_code": "PGB(IPGB+17) = Vwind",
-      "static_source": "windSpeed=11.0 -> Rate_Limiter(IR=10 [1/s], DR=5 [1/s]) -> Vwind",
+      "exported_channel": "DFIG_VWIND_MS",
+      "pgb": 17,
+      "group": "P3",
+      "out_file": "3IBR_02.out",
+      "column": 8,
       "unit": "m/s",
-      "short_run_verified": true
+      "sign_or_logic_convention": "not directional",
+      "p3_assignment": {
+        "local_pgb": 17,
+        "expr": "Vwind",
+        "source_line": 1863
+      },
+      "confirmed_by_gui_and_full_20s_run": true
     },
     "DFIG_BRK_STATE": {
-      "exported": true,
-      "channel": "DFIG_BRK_STATE",
-      "requested_external_signal": "BRK_DFIG breaker internal status",
-      "inf_entry": "PGB(1) Output Desc=\"DFIG_BRK_STATE\" Group=\"P3\" Max=1.5 Min=-0.5 Units=\"logic\"",
-      "generated_code": "PGB(IPGB+18) = REAL(DFIG_BRK_STATE)",
-      "source": "BRK_DFIG internal A-phase status output; Single Pole operation is No, so A phase represents three-phase breaker status",
+      "exported_channel": "DFIG_BRK_STATE",
+      "pgb": 18,
+      "group": "P3",
+      "out_file": "3IBR_02.out",
+      "column": 9,
       "unit": "logic",
-      "closed_state_convention_observed": 0,
-      "short_run_verified": true
+      "sign_or_logic_convention": "0 = closed in current PSCAD breaker convention",
+      "p3_assignment": {
+        "local_pgb": 18,
+        "expr": "REAL(DFIG_BRK_STATE)",
+        "source_line": 1877
+      },
+      "confirmed_by_gui_and_full_20s_run": true
+    }
+  },
+  "checks_0_1_s": {
+    "DFIG_DBLK_CMD": {
+      "passed": true,
+      "edge": {
+        "time": 0.20335,
+        "value": 1.0,
+        "previous_time": 0.1992,
+        "previous_value": 0.0
+      },
+      "samples": {
+        "t0": [
+          0.0,
+          0.0
+        ],
+        "t_0_199": [
+          0.1992,
+          0.0
+        ],
+        "t_0_203": [
+          0.20335,
+          1.0
+        ],
+        "last": [
+          19.99885,
+          1.0
+        ]
+      }
+    },
+    "DFIG_VWIND_MS": {
+      "passed": true,
+      "samples": {
+        "t0": [
+          0.0,
+          11.0
+        ],
+        "t_0_199": [
+          0.1992,
+          11.0
+        ],
+        "t_0_203": [
+          0.20335,
+          11.0
+        ],
+        "last": [
+          19.99885,
+          11.0
+        ]
+      }
+    },
+    "DFIG_BRK_STATE": {
+      "passed": true,
+      "closed_state_convention": 0,
+      "samples": {
+        "t0": [
+          0.0,
+          0.0
+        ],
+        "t_0_199": [
+          0.1992,
+          0.0
+        ],
+        "t_0_203": [
+          0.20335,
+          0.0
+        ],
+        "last": [
+          19.99885,
+          0.0
+        ]
+      }
+    },
+    "SPD30": {
+      "passed": true,
+      "samples": {
+        "t0": [
+          0.0,
+          60.0
+        ],
+        "t_0_199": [
+          0.1992,
+          60.0
+        ],
+        "t_0_203": [
+          0.20335,
+          60.0
+        ],
+        "last": [
+          19.99885,
+          60.0
+        ]
+      }
     }
   },
   "statistics_19_20_s": {
-    "SPD30": {"min": 60.0, "mean": 60.0, "max": 60.0, "range": 0.0, "samples": 241},
-    "VIBR1_2": {"min": 0.99980920909508, "mean": 0.9998763645216878, "max": 0.99996533797708, "range": 0.00015612888200000619, "samples": 241},
-    "PIBR1_2": {"min": 199.05258531235, "mean": 199.08437034102337, "max": 199.11600422704, "range": 0.06341891469000416, "samples": 241},
-    "QIBR1_2": {"min": -18.822086117348, "mean": -18.788476799174205, "max": -18.752377556776, "range": 0.06970856057199981, "samples": 241},
-    "Freq_PLL": {"min": 60.042692580288, "mean": 60.050236044584366, "max": 60.057536882369, "range": 0.01484430208100207, "samples": 241},
-    "Dblk_VdcCtrl": {"min": 1.0, "mean": 1.0, "max": 1.0, "range": 0.0, "samples": 241},
-    "Dblk_Rotor": {"min": 1.0, "mean": 1.0, "max": 1.0, "range": 0.0, "samples": 241},
-    "BRK ord": {"min": 0.0, "mean": 0.0, "max": 0.0, "range": 0.0, "samples": 241}
-  },
-  "checks_0_1_s": {
-    "external_Dblk_DFIG": {
-      "passed": true,
-      "channel": "DFIG_DBLK_CMD",
-      "first_0_to_1_after_s": 0.20335,
-      "expected_threshold_s": 0.2,
-      "reason": "External Dblk_DFIG command is now exported by DFIG_DBLK_CMD and changes from 0 to 1 after 0.2 s."
+    "DFIG_P_MW": {
+      "n": 241,
+      "min": 199.05258531235,
+      "mean": 199.08437034102337,
+      "max": 199.11600422704,
+      "range": 0.06341891469000416,
+      "source_channel": "PIBR1_2",
+      "out_file": "3IBR_01.out",
+      "column": 5
     },
-    "internal_Dblk_evidence": {
-      "passed": true,
-      "Dblk_VdcCtrl_first_ge_0_5_s": 0.40255,
-      "Dblk_Rotor_first_ge_0_5_s": 0.60175,
-      "limitation": "Internal delays mean these are not exact external command transitions."
+    "DFIG_Q_MVAr": {
+      "n": 241,
+      "min": -18.822086117348,
+      "mean": -18.788476799174205,
+      "max": -18.752377556776,
+      "range": 0.06970856057199981,
+      "source_channel": "QIBR1_2",
+      "out_file": "3IBR_01.out",
+      "column": 7
     },
-    "external_Vwind": {
-      "passed": true,
-      "channel": "DFIG_VWIND_MS",
-      "observed_short_run_value": 11.0,
-      "reason": "External Vwind is now exported by DFIG_VWIND_MS and remains 11 m/s during the checked startup interval."
+    "DFIG_V_PU_OR_KV": {
+      "n": 241,
+      "min": 0.99980920909508,
+      "mean": 0.9998763645216878,
+      "max": 0.99996533797708,
+      "range": 0.00015612888200000619,
+      "source_channel": "VIBR1_2",
+      "out_file": "3IBR_01.out",
+      "column": 3
     },
-    "external_BRK_DFIG": {
-      "passed": true,
-      "channel": "DFIG_BRK_STATE",
-      "observed_short_run_value": 0,
-      "reason": "BRK_DFIG internal A-phase status is exported by DFIG_BRK_STATE; 0 is the observed closed-state convention while the branch remains energized."
+    "DFIG_F_HZ": {
+      "n": 241,
+      "min": 60.0,
+      "mean": 60.0,
+      "max": 60.0,
+      "range": 0.0,
+      "source_channel": "SPD30",
+      "out_file": "3IBR_01.out",
+      "column": 2
+    },
+    "DFIG_DBLK_CMD": {
+      "n": 241,
+      "min": 1.0,
+      "mean": 1.0,
+      "max": 1.0,
+      "range": 0.0,
+      "source_channel": "DFIG_DBLK_CMD",
+      "out_file": "3IBR_02.out",
+      "column": 10
+    },
+    "DFIG_VWIND_MS": {
+      "n": 241,
+      "min": 11.0,
+      "mean": 11.0,
+      "max": 11.0,
+      "range": 0.0,
+      "source_channel": "DFIG_VWIND_MS",
+      "out_file": "3IBR_02.out",
+      "column": 8
+    },
+    "DFIG_BRK_STATE": {
+      "n": 241,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0,
+      "range": 0.0,
+      "source_channel": "DFIG_BRK_STATE",
+      "out_file": "3IBR_02.out",
+      "column": 9
     }
   },
-  "external_channel_completion_2026_06_23": {
-    "method": "manual PSCAD GUI output-channel addition",
-    "topology_changed": false,
-    "build_run_evidence": {
-      "errors": 0,
-      "warnings": 0,
-      "completed": true,
-      "reported_solve_time": "47ms"
-    },
-    "post_edit_output_time_range_s": {
-      "first": 0.0,
-      "last": 0.24485,
-      "samples": 60,
-      "limitation": "This is a short startup output-channel validation, not a full 5 s or 20 s steady-state run."
-    },
-    "short_run_samples": [
-      {"time_s": 0.0, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 0},
-      {"time_s": 0.1992, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 0},
-      {"time_s": 0.20335, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 1},
-      {"time_s": 0.24485, "DFIG_VWIND_MS": 11.0, "DFIG_BRK_STATE": 0, "DFIG_DBLK_CMD": 1}
-    ]
+  "pass_checks": {
+    "out_end_near_20s": true,
+    "dblk_edge_near_0p2s": true,
+    "vwind_stable_11": true,
+    "brk_state_closed_zero": true,
+    "p_approx_199_200_mw": true,
+    "v_near_1pu": true,
+    "spd30_60hz": true
   },
   "pass_flags": {
     "nofault_run_completed": true,
+    "strict_zero_errors_zero_warnings": true,
+    "all_latest_out_files_end_near_20s": true,
     "electrical_steady_state_passed": true,
-    "measurement_baseline_fully_hardened": true,
+    "external_output_channels_confirmed_by_full_20s_run": true,
     "ready_for_controlled_fault_test": true
   },
   "failure_reasons": [],
   "residual_risks": [
-    "Frequency channel is represented by candidates rather than a newly named POC frequency output.",
-    "Post-output-channel validation files extend only to 0.24485 s; use earlier 20 s artifacts for steady-state P/Q/V/f statistics.",
-    "DFIG_BRK_STATE=0 is the observed closed-state convention for this breaker setup."
+    "SPD30 is a system-frequency candidate and is distinct from Type-3 internal Freq_PLL.",
+    "DFIG_BRK_STATE=0 is the observed closed-state convention in this PSCAD breaker setup.",
+    "P/Q sign convention follows the existing PSCAD meter orientation."
   ]
 }

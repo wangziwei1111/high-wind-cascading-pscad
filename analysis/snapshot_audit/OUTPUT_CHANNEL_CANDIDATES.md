@@ -84,3 +84,27 @@ The current post-edit `.out` files extend to `t=0.24485 s`. They are sufficient 
 | 0.24485 | 11 | 0 | 1 |
 
 Use the earlier 20 s baseline artifacts for steady-state `PIBR1_2`, `QIBR1_2`, `VIBR1_2`, and frequency statistics. Do not use the post-edit `0.24485 s` files as a 5 s or 20 s steady-state evidence set.
+## Final Output-Channel-Complete 20 s Confirmation - 2026-06-24
+
+This section supersedes the earlier `Still Not Directly Exported` and short-run-only notes for `Dblk_DFIG`, `Vwind`, and `BRK_DFIG`. The current local PSCAD run completed a full 20 s no-fault verification after the GUI output-channel additions.
+
+Run evidence from the user's PSCAD screenshot:
+
+- `0 Errors`
+- `0 Warnings`
+- `EMTDC run completed`
+- `Solve Time = 110ms`
+
+Latest artifact root:
+
+`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46`
+
+All latest `3IBR_*.out` files end at `19.99885 s`.
+
+| Requested signal | Confirmed exported channel | PGB | File | Column | Units | Generated-code evidence | 20 s status |
+|---|---|---:|---|---:|---|---|---|
+| external `Dblk_DFIG` command | `DFIG_DBLK_CMD` | 19 | `3IBR_02.out` | 10 | logic | `P3.f` line 1881: `PGB(IPGB+19) = Dblk_DFIG` | GUI and full 20 s run confirmed; edge at 0.20335 s |
+| external `Vwind` | `DFIG_VWIND_MS` | 17 | `3IBR_02.out` | 8 | m/s | `P3.f` line 1863: `PGB(IPGB+17) = Vwind` | GUI and full 20 s run confirmed; 19-20 s mean 11.0 m/s |
+| `BRK_DFIG` breaker status | `DFIG_BRK_STATE` | 18 | `3IBR_02.out` | 9 | logic | `P3.f` line 1877: `PGB(IPGB+18) = REAL(DFIG_BRK_STATE)` | GUI and full 20 s run confirmed; 0 means closed in this setup |
+
+The original P/Q/V baseline channels remain accepted for this no-fault baseline: `PIBR1_2`, `QIBR1_2`, and `VIBR1_2`. The system frequency candidate remains `SPD30`; Type-3 internal `Freq_PLL` must not be substituted for POC/system frequency without an explicit note.
