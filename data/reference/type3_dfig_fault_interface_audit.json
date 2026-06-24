@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-06-24",
+  "scope": {
+    "objective": "Type-3 DFIG controlled fault/LVRT pre-interface audit",
+    "actions_performed": [
+      "static_read_only_parse",
+      "repository_document_review",
+      "generated_artifact_mapping_review"
+    ],
+    "actions_not_performed": [
+      "no_pscad_model_edit",
+      "no_wiring",
+      "no_fault_component_added",
+      "no_build",
+      "no_run",
+      "no_computer_use_gui_operation"
+    ]
+  },
+  "sources": {
+    "current_3ibr_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "current_3ibr_gf46": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46",
+    "type3_library": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3WTG_Lib.pslx",
+    "official_type3_example": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3_Ave_Nov_2018.pscx",
+    "repo_baseline_doc": "docs/TYPE3_DFIG_NOFAULT_BASELINE.md",
+    "repo_baseline_json": "data/reference/type3_dfig_nofault_baseline.json",
+    "repo_topology_audit": "analysis/snapshot_audit/PSCAD_STATIC_TOPOLOGY_AUDIT.md",
+    "snapshot_note": "external/pscad_snapshot_20260623 was requested but was not present in the current repository checkout."
+  },
+  "current_type3_status": {
+    "page": "3IBR:Main(0):P1(0):P3(0)",
+    "type3_instance": {
+      "label": "Type3WTG_Lib:Type3_WTG_Avg",
+      "id": 2147003001,
+      "coordinates": {"x": 1080, "y": 936},
+      "source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx:25406"
+    },
+    "branch_topology": [
+      "22 kV collector",
+      "BRK_DFIG",
+      "XFMR_DFIG_22_33",
+      "Type3WTG_Lib:Type3_WTG_Avg AC_sys"
+    ],
+    "branch_objects": [
+      {
+        "name": "BRK_DFIG",
+        "definition": "master:breaker3",
+        "id": 521858026,
+        "coordinates": {"x": 864, "y": 990},
+        "source": "3IBR.pscx:25606"
+      },
+      {
+        "name": "XFMR_DFIG_22_33",
+        "definition": "master:xfmr-3p2w",
+        "id": 113665858,
+        "coordinates": {"x": 990, "y": 990},
+        "source": "3IBR.pscx:25647"
+      },
+      {
+        "name": "PIBR1_2/QIBR1_2/VIBR1_2 multimeter",
+        "definition": "master:multimeter",
+        "id": 1263266056,
+        "coordinates": {"x": 774, "y": 990},
+        "source": "3IBR.pscx:24198"
+      }
+    ]
+  },
+  "existing_fault_or_event_interfaces": [
+    {
+      "classification": "confirmed_fact",
+      "name": "E_16_24_1",
+      "definition": "3IBR:E_16_24_1",
+      "id": 1298064804,
+      "page": "3IBR:Main(0):P1(0):P3(0)",
+      "coordinates": {"wrapper_x": 2430, "wrapper_y": 1026, "user_x": 0, "user_y": 0},
+      "parameters": {
+        "sfault": "0",
+        "ManEnab": "0",
+        "VR": "230.0 [kV]",
+        "MVA": "100.0 [MVA]",
+        "linc": "10.0 [km]",
+        "steps": "3"
+      },
+      "enabled_now": false,
+      "reuse_for_first_lvrt": false,
+      "reason": "Built-in line fault parameters are disabled and the line is not the Type-3/N30 22 kV POC branch.",
+      "source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx:18918-18944"
+    },
+    {
+      "classification": "confirmed_fact",
+      "name": "Trip",
+      "definition": "master:breaker3",
+      "id": 1700980851,
+      "page": "3IBR:Main(0):P1(0):P3(0)",
+      "coordinates": {"x": 1944, "y": 792},
+      "parameters": {
+        "NAME": "Trip",
+        "BOpen1": "0",
+        "BOpen2": "0",
+        "BOpen3": "0",
+        "InitStatus": "0"
+      },
+      "associated_event": {
+        "definition": "master:tbreakn",
+        "id": 1750255191,
+        "TO1": "100 [s]",
+        "TO2": "100.1 [s]",
+        "label": "Trip",
+        "label_id": 1129460063
+      },
+      "enabled_now": "breaker_present_but_event_after_20s_baseline",
+      "reuse_for_first_lvrt": false,
+      "reason": "Located near the N32/G32 trip branch, not the Type-3 22 kV POC. It is a switching event, not a shunt fault.",
+      "source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx:24741-24799"
+    },
+    {
+      "classification": "confirmed_fact",
+      "name": "BRK",
+      "definition": "master:breaker3",
+      "id": 202853855,
+      "page": "3IBR:Main(0):P1(0):P3(0)",
+      "coordinates": {"x": 2358, "y": 288},
+      "parameters": {
+        "NAME": "BRK",
+        "BOpen1": "2",
+        "BOpen2": "2",
+        "BOpen3": "2",
+        "InitStatus": "0"
+      },
+      "enabled_now": "existing_switch_object",
+      "reuse_for_first_lvrt": false,
+      "reason": "Existing breaker/switch object, not a three-phase fault shunt, and not located at the Type-3 POC.",
+      "source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx:21080-21118"
+    },
+    {
+      "classification": "confirmed_fact",
+      "name": "BRK_DFIG",
+      "definition": "master:breaker3",
+      "id": 521858026,
+      "page": "3IBR:Main(0):P1(0):P3(0)",
+      "coordinates": {"x": 864, "y": 990},
+      "parameters": {
+        "NAME": "BRK_DFIG",
+        "SBRA": "DFIG_BRK_STATE"
+      },
+      "enabled_now": true,
+      "reuse_for_first_lvrt": false,
+      "reason": "Type-3 branch isolation breaker. It must remain closed during the first LVRT response check.",
+      "source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx:25606-25634"
+    }
+  ],
+  "official_type3_reference_interfaces": [
+    {
+      "classification": "confirmed_fact",
+      "name": "POC Fault",
+      "definition": "master:tpflt",
+      "id": 1730345023,
+      "coordinates": {"x": 828, "y": 360},
+      "parameters": {
+        "RON": "0.01 [ohm]",
+        "ROFF": "1.0E6 [ohm]",
+        "A": "1",
+        "B": "0",
+        "C": "0",
+        "G": "1"
+      },
+      "control_concept_to_borrow": "Fault switch + Flt type selector + monostable pulse, T=0.150 s.",
+      "objects_not_to_copy": [
+        "V_source standalone grid source",
+        "BusPOC standalone bus",
+        "source3",
+        "official external transformer",
+        "official cable",
+        "standalone graphs and control panels"
+      ],
+      "source": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3_Ave_Nov_2018.pscx:28857-29196"
+    },
+    {
+      "classification": "confirmed_fact",
+      "name": "Terminal Fault",
+      "definition": "master:tpflt",
+      "id": 1237689905,
+      "coordinates": {"x": 1044, "y": 360},
+      "parameters": {
+        "RON": "0.2 [ohm]",
+        "ROFF": "1.0E6 [ohm]",
+        "A": "1",
+        "B": "0",
+        "C": "0",
+        "G": "1"
+      },
+      "control_concept_to_borrow": "Fault switch + Flt type selector + monostable pulse, T=0.150 s.",
+      "objects_not_to_copy": [
+        "Type3_Ave_Nov_2018:Cable_1",
+        "Terminal standalone graph panel",
+        "standalone test environment"
+      ],
+      "source": "C:\\pscad_work\\type3_wtg_v46_trial\\Type3_Ave_Nov_2018.pscx:29371-29683"
+    }
+  ],
+  "measurement_mapping_current": [
+    {
+      "name": "SPD30",
+      "classification": "confirmed_fact",
+      "pgb": 1,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_01.out",
+      "column": 2,
+      "unit": "Hz candidate",
+      "convention": "system frequency candidate; not Type-3 internal Freq_PLL",
+      "source": "3IBR.gf46\\3IBR.inf:1; P3.f:1015-1017"
+    },
+    {
+      "name": "VIBR1_2",
+      "classification": "confirmed_fact",
+      "pgb": 2,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_01.out",
+      "column": 3,
+      "unit": "pu-like RMS on 22 kV base",
+      "convention": "Type-3 22 kV POC/collector-side voltage candidate",
+      "source": "3IBR.gf46\\3IBR.inf:2; P3.f:2934-2936"
+    },
+    {
+      "name": "PIBR1_2",
+      "classification": "confirmed_fact",
+      "pgb": 4,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_01.out",
+      "column": 5,
+      "unit": "MW",
+      "convention": "positive in current meter orientation; no-fault Type-3 output is about +199 MW",
+      "source": "3IBR.gf46\\3IBR.inf:4; P3.f:2942-2944"
+    },
+    {
+      "name": "QIBR1_2",
+      "classification": "confirmed_fact",
+      "pgb": 6,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_01.out",
+      "column": 7,
+      "unit": "MVAr",
+      "convention": "current meter orientation; no-fault Q is negative",
+      "source": "3IBR.gf46\\3IBR.inf:6; P3.f:2950-2952"
+    },
+    {
+      "name": "DFIG_VWIND_MS",
+      "classification": "confirmed_fact",
+      "pgb": 17,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_02.out",
+      "column": 8,
+      "unit": "m/s",
+      "convention": "Rate Limiter output sent to Type3 Vwind",
+      "source": "3IBR.gf46\\3IBR.inf:17; P3.f:1861-1863"
+    },
+    {
+      "name": "DFIG_BRK_STATE",
+      "classification": "confirmed_fact",
+      "pgb": 18,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_02.out",
+      "column": 9,
+      "unit": "logic",
+      "convention": "current convention: 0 means BRK_DFIG closed",
+      "source": "3IBR.gf46\\3IBR.inf:18; P3.f:1875-1877"
+    },
+    {
+      "name": "DFIG_DBLK_CMD",
+      "classification": "confirmed_fact",
+      "pgb": 19,
+      "out_file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR_02.out",
+      "column": 10,
+      "unit": "logic",
+      "convention": "external Dblk command; transitions to 1 after about 0.2 s",
+      "source": "3IBR.gf46\\3IBR.inf:19; P3.f:1879-1881"
+    }
+  ],
+  "candidate_fault_interfaces": [
+    {
+      "rank": 1,
+      "name": "Candidate A: Type-3 22 kV POC / collector-side node",
+      "classification": "static_inference",
+      "recommended": true,
+      "approximate_location": {
+        "page": "3IBR:Main(0):P1(0):P3(0)",
+        "x_range": [774, 864],
+        "y": 990
+      },
+      "anchoring_objects": [
+        {"name": "PIBR1_2/QIBR1_2/VIBR1_2 multimeter", "id": 1263266056, "source": "3IBR.pscx:24198"},
+        {"name": "BRK_DFIG", "id": 521858026, "source": "3IBR.pscx:25606"},
+        {"name": "XFMR_DFIG_22_33", "id": 113665858, "source": "3IBR.pscx:25647"}
+      ],
+      "why": "Directly stresses the Type-3 branch POC voltage measured by existing channels, while keeping upstream network and standalone Type-3 test environment out of the model.",
+      "risks": [
+        "Static XML cannot prove the exact three-phase node terminal selection.",
+        "GUI must confirm the fault is a shunt branch and not a series insertion.",
+        "GUI must confirm it is not placed on the old IBR branch."
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Candidate B: 33 kV Type-3 terminal-side",
+      "classification": "static_inference",
+      "recommended": false,
+      "approximate_location": {
+        "page": "3IBR:Main(0):P1(0):P3(0)",
+        "x_range": [990, 1080],
+        "y": 990
+      },
+      "why": "Closer to the Type-3 terminal but existing P/Q/V measurements are on the 22 kV side, so this is less suitable for the first minimal-risk test.",
+      "risks": [
+        "May require new 33 kV measurement channels.",
+        "Harder to compare directly with current PIBR1_2/QIBR1_2/VIBR1_2 baseline."
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Candidate C: N30/GBUS30 upstream 22 kV bus",
+      "classification": "static_inference",
+      "recommended": false,
+      "approximate_location": {
+        "page": "3IBR:Main(0):P1(0):P3(0)",
+        "around": "GBUS30/N30 upstream 22 kV area"
+      },
+      "why": "More system-level disturbance but higher risk of affecting remaining IBRs and wider IEEE-39 dynamics.",
+      "risks": [
+        "May disturb more of the system than intended for the first Type-3 LVRT smoke test.",
+        "Could interact with existing Trip/BRK/line events."
+      ]
+    }
+  ],
+  "draft_first_fault_plan_not_implemented": {
+    "classification": "static_inference_with_unconfirmed_assumptions",
+    "fault_type": "temporary three-phase-to-ground shunt fault; no line trip",
+    "preferred_location": "Candidate A: Type-3 22 kV POC / collector-side node",
+    "start_time_s": {
+      "value": 2.0,
+      "status": "unconfirmed_assumption",
+      "reason": "After DFIG_DBLK_CMD has been high since about 0.2 s and after no-fault settling."
+    },
+    "duration_s": {
+      "value": 0.150,
+      "status": "unconfirmed_assumption",
+      "reason": "Borrowed as a control concept from official Type-3 monostable timing; not a paper parameter."
+    },
+    "fault_impedance": {
+      "value": "to_be_confirmed",
+      "status": "unconfirmed_assumption",
+      "guidance": "Do not copy official RON=0.01/0.2 ohm for the first light test. Tune for a mild voltage dip, initially targeting VIBR1_2 not below about 0.8 pu."
+    },
+    "simulation_length": {
+      "smoke_test_s": 5,
+      "archive_run_s": 20,
+      "status": "unconfirmed_assumption"
+    },
+    "must_observe": [
+      "PIBR1_2",
+      "QIBR1_2",
+      "VIBR1_2",
+      "SPD30",
+      "DFIG_DBLK_CMD",
+      "DFIG_VWIND_MS",
+      "DFIG_BRK_STATE"
+    ],
+    "stop_criteria": [
+      "nonzero PSCAD errors or warnings",
+      "numerical divergence",
+      "DFIG_BRK_STATE changes from the closed convention",
+      "DFIG_DBLK_CMD drops unexpectedly",
+      "DFIG_VWIND_MS changes unexpectedly",
+      "P/Q/V/f sustained drift or growing oscillation",
+      "fault node or measurement semantics cannot be confirmed"
+    ]
+  },
+  "prohibited_logic_for_first_test": [
+    "wind turbine disconnection",
+    "BRK_DFIG automatic opening",
+    "overload protection",
+    "UFLS",
+    "UVLS",
+    "line trip",
+    "MATLAB co-simulation or linkage",
+    "cascading-failure logic",
+    "official standalone V_source/BusPOC/Cable/Fault environment"
+  ],
+  "manual_gui_confirmations_required_next": [
+    "Confirm Candidate A is the BRK_DFIG left-side 22 kV POC node near PIBR1_2/QIBR1_2/VIBR1_2, not an old IBR branch.",
+    "Confirm the future fault block will be a shunt branch to the node, not a series insertion or rewiring of the Type-3 branch.",
+    "Confirm BRK_DFIG remains closed during the planned fault and DFIG_BRK_STATE=0 still means closed."
+  ],
+  "overall_conclusion": {
+    "confirmed_facts": [
+      "No reusable master:tpflt three-phase fault component was found in the current 3IBR model.",
+      "E_16_24_1 contains disabled built-in line fault parameters but is not the Type-3 POC branch.",
+      "Existing Trip/BRK/BRK_DFIG objects are switching devices, not the first LVRT shunt fault interface.",
+      "External DFIG measurement channels are available for the first fault response check."
+    ],
+    "static_inference": "The lowest-risk first LVRT interface is a new, disabled-by-default, temporary three-phase shunt fault at the Type-3 22 kV POC/collector-side node near the existing P/Q/V multimeter and BRK_DFIG.",
+    "do_not_implement_until": "The three manual GUI confirmations are completed."
+  }
+}
