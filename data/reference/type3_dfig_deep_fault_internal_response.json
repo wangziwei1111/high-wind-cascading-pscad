@@ -77,7 +77,8 @@
         }
       },
       "confidence": "medium",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Do not mix with Type-3 internal Freq_PLL; exact measurement source remains to be confirmed.",
+      "meaning": "System-frequency candidate used as external comparison signal."
     },
     {
       "name": "VIBR1_2",
@@ -669,7 +670,7 @@
       "pgb": 256,
       "out_file": "3IBR_26.out",
       "column": 7,
-      "unit": "kV candidate",
+      "unit": "kV",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -707,14 +708,16 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Sampling/filtering can cause a small difference from Edc_pu * Vdc_base; chopper energy is not measured.",
+      "meaning": "GUI-confirmed DC-link physical voltage.",
+      "confirmed_semantics": "DFIG_VDC_KV: DC-link voltage Ecap_Det in kV."
     },
     {
       "name": "I_RS:1",
       "pgb": 257,
       "out_file": "3IBR_26.out",
       "column": 8,
-      "unit": "kA candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -752,14 +755,16 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so.",
+      "meaning": "GUI-confirmed RSC / rotor-side converter terminal three-phase current.",
+      "confirmed_semantics": "RSC terminal current; arrow points toward RABC terminal."
     },
     {
       "name": "I_RS:2",
       "pgb": 258,
       "out_file": "3IBR_26.out",
       "column": 9,
-      "unit": "kA candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -797,14 +802,16 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so.",
+      "meaning": "GUI-confirmed RSC / rotor-side converter terminal three-phase current.",
+      "confirmed_semantics": "RSC terminal current; arrow points toward RABC terminal."
     },
     {
       "name": "I_RS:3",
       "pgb": 259,
       "out_file": "3IBR_26.out",
       "column": 10,
-      "unit": "kA candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -842,14 +849,16 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so.",
+      "meaning": "GUI-confirmed RSC / rotor-side converter terminal three-phase current.",
+      "confirmed_semantics": "RSC terminal current; arrow points toward RABC terminal."
     },
     {
       "name": "Iconv:1",
       "pgb": 263,
       "out_file": "3IBR_27.out",
       "column": 4,
-      "unit": "kA candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -887,14 +896,16 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so.",
+      "meaning": "GUI-confirmed GSC / grid-side converter terminal three-phase current.",
+      "confirmed_semantics": "GSC terminal current; positive direction from AC filter/grid-side node toward grid-side converter."
     },
     {
       "name": "Iconv:2",
       "pgb": 264,
       "out_file": "3IBR_27.out",
       "column": 5,
-      "unit": "kA candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -932,14 +943,16 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so.",
+      "meaning": "GUI-confirmed GSC / grid-side converter terminal three-phase current.",
+      "confirmed_semantics": "GSC terminal current; positive direction from AC filter/grid-side node toward grid-side converter."
     },
     {
       "name": "Iconv:3",
       "pgb": 265,
       "out_file": "3IBR_27.out",
       "column": 6,
-      "unit": "kA candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -977,7 +990,9 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so.",
+      "meaning": "GUI-confirmed GSC / grid-side converter terminal three-phase current.",
+      "confirmed_semantics": "GSC terminal current; positive direction from AC filter/grid-side node toward grid-side converter."
     },
     {
       "name": "Iq_pu_Gsc",
@@ -1164,7 +1179,7 @@
       "pgb": 284,
       "out_file": "3IBR_29.out",
       "column": 5,
-      "unit": "pu candidate",
+      "unit": "pu",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1202,7 +1217,9 @@
         }
       },
       "confidence": "high",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "limitations": "Use with Vdc_base=1.45 kV from GUI confirmation; not a grid-voltage pu quantity.",
+      "meaning": "GUI-confirmed DC-link per-unit voltage based on Vdc_base=1.45 kV.",
+      "confirmed_semantics": "DFIG_VDC_PU: Edc_pu = Edc / Vdc_base."
     },
     {
       "name": "Voltage_dip",
@@ -1382,7 +1399,8 @@
         }
       },
       "confidence": "medium",
-      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+      "limitations": "Confirmed only as internal PLL candidate from signal context; do not use as replacement for SPD30/system frequency.",
+      "meaning": "Type-3 internal PLL frequency candidate."
     },
     {
       "name": "ImaxN_d_pu",
@@ -1614,7 +1632,7 @@
       "pgb": 318,
       "out_file": "3IBR_32.out",
       "column": 9,
-      "unit": "internal current candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1651,15 +1669,17 @@
           "min_time_s": 4.7144
         }
       },
-      "confidence": "medium",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "confidence": "high",
+      "limitations": "Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero.",
+      "meaning": "GUI-confirmed crowbar branch current.",
+      "confirmed_semantics": "Crowbar branch current channel."
     },
     {
       "name": "Crowbar current:2",
       "pgb": 319,
       "out_file": "3IBR_32.out",
       "column": 10,
-      "unit": "internal current candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1696,15 +1716,17 @@
           "min_time_s": 4.69365
         }
       },
-      "confidence": "medium",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "confidence": "high",
+      "limitations": "Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero.",
+      "meaning": "GUI-confirmed crowbar branch current.",
+      "confirmed_semantics": "Crowbar branch current channel."
     },
     {
       "name": "Crowbar current:3",
       "pgb": 320,
       "out_file": "3IBR_32.out",
       "column": 11,
-      "unit": "internal current candidate",
+      "unit": "kA",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1741,15 +1763,17 @@
           "min_time_s": 4.5816
         }
       },
-      "confidence": "medium",
-      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+      "confidence": "high",
+      "limitations": "Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero.",
+      "meaning": "GUI-confirmed crowbar branch current.",
+      "confirmed_semantics": "Crowbar branch current channel."
     },
     {
       "name": "Iovercur",
       "pgb": 321,
       "out_file": "3IBR_33.out",
       "column": 2,
-      "unit": "logic candidate",
+      "unit": "logic",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1786,15 +1810,17 @@
           "min_time_s": 4.0006
         }
       },
-      "confidence": "medium",
-      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+      "confidence": "high",
+      "limitations": "Do not interpret as crowbar inserted/conducting.",
+      "meaning": "Rotor overcurrent comparator output inside Crowbar_prot; intermediate logic only.",
+      "confirmed_semantics": "Intermediate crowbar protection logic, not actual crowbar state."
     },
     {
       "name": "Reset",
       "pgb": 322,
       "out_file": "3IBR_33.out",
       "column": 3,
-      "unit": "logic candidate",
+      "unit": "logic",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1831,15 +1857,17 @@
           "min_time_s": 4.0006
         }
       },
-      "confidence": "medium",
-      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+      "confidence": "high",
+      "limitations": "Do not interpret Reset changes as crowbar insertion.",
+      "meaning": "Reset/control signal in Crowbar_prot latch/monostable chain; intermediate logic only.",
+      "confirmed_semantics": "Intermediate reset logic, not actual crowbar state."
     },
     {
       "name": "S1",
       "pgb": 323,
       "out_file": "3IBR_33.out",
       "column": 4,
-      "unit": "logic candidate",
+      "unit": "logic",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1876,15 +1904,18 @@
           "min_time_s": 4.0006
         }
       },
-      "confidence": "medium",
-      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+      "confidence": "high",
+      "limitations": "In this run S1 stayed 0, so no confirmed crowbar insertion was observed.",
+      "display_name": "DFIG_CROWBAR_STATE",
+      "meaning": "GUI-confirmed formal crowbar switch command/state signal.",
+      "confirmed_semantics": "1=crowbar switch commanded active/on; 0=inactive/off."
     },
     {
       "name": "Mono_out",
       "pgb": 324,
       "out_file": "3IBR_33.out",
       "column": 5,
-      "unit": "logic candidate",
+      "unit": "logic",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -1921,8 +1952,10 @@
           "min_time_s": 4.0006
         }
       },
-      "confidence": "medium",
-      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+      "confidence": "high",
+      "limitations": "Do not interpret Mono_out changes as crowbar insertion unless S1/current confirm it.",
+      "meaning": "Monostable output inside Crowbar_prot; intermediate logic only.",
+      "confirmed_semantics": "Intermediate pulse/hold logic, not actual crowbar state."
     },
     {
       "name": "Ecap",
@@ -2019,7 +2052,7 @@
       "pgb": 328,
       "out_file": "3IBR_33.out",
       "column": 9,
-      "unit": "logic candidate",
+      "unit": "logic",
       "end_time_s": 4.9966,
       "windows": {
         "pre_1p8_2p0": {
@@ -2056,8 +2089,10 @@
           "min_time_s": 4.0006
         }
       },
-      "confidence": "medium",
-      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+      "confidence": "high",
+      "limitations": "Chopper branch current/resistor power was not exported, so actual dissipated energy is not quantified.",
+      "meaning": "GUI-confirmed active-high chopper switch command/state.",
+      "confirmed_semantics": "1=chopper command/state active; 0=inactive."
     },
     {
       "name": "TM",
@@ -2171,19 +2206,128 @@
     "crowbar_current_fault_max_abs": 1.018813154312e-05,
     "brk_chop_fault_max": 1.0,
     "freq_pll_fault_min": 51.0,
-    "freq_pll_fault_max": 69.0
+    "freq_pll_fault_max": 69.0,
+    "ecap_det_fault_max_kv": 2.0701263781745,
+    "rsc_max_abs_fault_kA": 1.7153289194924,
+    "gsc_max_abs_fault_kA": 1.5328069930015,
+    "vdc_base_kv_gui_confirmed": 1.45,
+    "edc_pu_times_vdc_base_fault_peak_kv": 2.07028086199248,
+    "edc_crosscheck_abs_difference_kv": 0.00015448381798011113,
+    "crowbar_confirmed_inserted": false,
+    "chopper_command_active_during_fault": true
   },
-  "conclusions": {
-    "dc_link_overvoltage_candidate": "Edc_pu peaks at 1.427780 near 2.00860 s during the 2.0-2.15 s fault, with Ecap_Det peaking at 2.070126 kV candidate. Base/unit requires GUI confirmation.",
-    "rsc_gsc_current_increase": "RSC I_RS three-phase max abs reaches 1.715329 kA candidate; GSC Iconv reaches 1.532807 kA candidate during the fault.",
-    "mechanical_speed_recovery": "Wpu mean changes from 1.205632 pre-fault to max 1.218622 during fault and 1.200021 post-fault, indicating recovery close to pre-fault value.",
-    "crowbar_interpretation": "Only Crowbar candidate response can be stated: Reset and Mono_out change, BRK_CHOP pulses, but Iovercur and S1 remain zero and Crowbar current is near zero. GUI confirmation is required before claiming Crowbar action.",
-    "gui_confirmation_needed": true
-  },
+  "conclusions": [
+    "The 5 s deep three-phase ground fault shows a coherent response chain: severe POC voltage depression, DC-link voltage rise, active chopper command pulse, significant RSC/GSC terminal-current increase, and post-fault recovery of P/V/rotor-speed indicators.",
+    "GUI confirmation upgrades Ecap_Det to DC-link voltage in kV and Edc_pu to DC-link pu voltage on Vdc_base=1.45 kV; Edc_pu peak 1.427780 corresponds to about 2.070281 kV, consistent with Ecap_Det peak 2.070126 kV.",
+    "BRK_CHOP is active-high chopper switch command/state; the run contains a chopper command pulse, but chopper branch current/resistor power was not exported.",
+    "S1 is the formal crowbar switch command/state. Because S1 remained 0 and Crowbar current:1..3 stayed near zero, no confirmed crowbar switch insertion or crowbar branch conduction was observed in this run.",
+    "I_RS:1..3 and Iconv:1..3 are confirmed RSC and GSC terminal currents respectively, with peak absolute values 1.715329 kA and 1.532807 kA during the fault window.",
+    "DFIG_IFLT_A/B/C_KA remain external fault element currents and must not be interpreted as RSC, GSC, rotor, or crowbar internal currents.",
+    "Freq_PLL remains a Type-3 internal PLL candidate and must not replace SPD30/system-frequency interpretation."
+  ],
   "manual_gui_confirmation_required": [
-    "Meaning and active direction of Crowbar_prot S1, Mono_out, Reset, and Iovercur.",
-    "Physical unit/base of Ecap_Det and Edc_pu.",
-    "Phase order/sign convention of I_RS, Iconv, and Crowbar current.",
-    "Which duplicated Iqr_pu/Pg_pu/Qg_pu channels should be used as formal interpretation channels."
-  ]
+    "Exact A/B/C vector-index mapping for I_RS:1..3, Iconv:1..3, and Crowbar current:1..3.",
+    "Crowbar current positive direction.",
+    "Chopper branch current/resistor power or energy if quantitative chopper energy dissipation is required.",
+    "Exact physical source of SPD30 and duplicated internal P/Q/Iq candidates if they are used in future formal figures."
+  ],
+  "schema_version": 1,
+  "semantic_confirmation": {
+    "source_document": "docs/TYPE3_DFIG_LVRT_GUI_SEMANTIC_CONFIRMATION.md",
+    "source_json": "data/reference/type3_dfig_lvrt_gui_semantic_confirmation.json",
+    "integrated_at": "2026-06-24T19:50:42",
+    "model_or_result_files_modified": false,
+    "statistics_modified": false,
+    "status": "integrated_into_deep_fault_internal_response",
+    "confirmed": {
+      "crowbar_state": {
+        "formal_signal": "S1",
+        "recommended_display_name": "DFIG_CROWBAR_STATE",
+        "logic": {
+          "1": "crowbar power electronic switch command/state active/on",
+          "0": "inactive/off"
+        },
+        "intermediate_not_state": [
+          "Mono_out",
+          "Reset",
+          "Iovercur"
+        ],
+        "current_signal": "Crowbar current:1..3",
+        "current_meaning": "crowbar branch current; sign direction and exact phase-index mapping still not confirmed",
+        "current_5s_result": "S1 remained 0 and Crowbar current:1..3 stayed near zero; no confirmed crowbar switch insertion or crowbar branch conduction was observed."
+      },
+      "dc_link": {
+        "vdc_kv_signal": "Ecap_Det",
+        "vdc_pu_signal": "Edc_pu",
+        "vdc_base_kv": 1.45,
+        "formula": "Edc_pu = Edc / Vdc_base",
+        "fault_peak_edc_pu": 1.4277799048224,
+        "fault_peak_ecap_det_kv": 2.0701263781745,
+        "edc_pu_times_vdc_base_kv": 2.07028086199248,
+        "absolute_difference_kv": 0.00015448381798011113
+      },
+      "chopper": {
+        "signal": "BRK_CHOP",
+        "logic": {
+          "1": "active chopper switch command/state",
+          "0": "inactive/off"
+        },
+        "current_5s_result": "BRK_CHOP changed during the fault window, indicating an active chopper switch-command pulse.",
+        "limitation": "chopper branch current/resistor power was not separately measured, so energy dissipation is not quantified."
+      },
+      "converter_currents": {
+        "rsc": {
+          "signals": [
+            "I_RS:1",
+            "I_RS:2",
+            "I_RS:3"
+          ],
+          "meaning": "RSC / rotor-side converter terminal three-phase current",
+          "positive_direction": "arrow points toward RABC terminal",
+          "fault_max_abs_kA": 1.7153289194924
+        },
+        "gsc": {
+          "signals": [
+            "Iconv:1",
+            "Iconv:2",
+            "Iconv:3"
+          ],
+          "meaning": "GSC / grid-side converter terminal three-phase current",
+          "positive_direction": "from AC filter / grid-side node toward grid-side converter",
+          "fault_max_abs_kA": 1.5328069930015
+        },
+        "limitations": [
+          "exact A/B/C mapping of vector indices 1..3 is not phase-by-phase confirmed",
+          "Crowbar current positive direction is still not confirmed",
+          "DFIG_IFLT_A/B/C_KA are external fault element currents, not RSC/GSC/Crowbar internal currents"
+        ]
+      }
+    },
+    "remaining_limitations": [
+      "A/B/C vector-index mapping of I_RS:1..3, Iconv:1..3, and Crowbar current:1..3 still needs phase-by-phase GUI confirmation.",
+      "Crowbar current positive direction remains unconfirmed.",
+      "Chopper branch current and resistor energy/power are not measured in the current output set.",
+      "SPD30 remains a system-frequency candidate; its exact physical measurement source still needs confirmation.",
+      "Duplicated internal P/Q/Iq candidates still need sampling-location distinction before formal use."
+    ]
+  },
+  "interpretation_upgrade": {
+    "upgraded_from_candidate_to_confirmed": [
+      "Ecap_Det is DC-link voltage in kV.",
+      "Edc_pu is DC-link voltage in pu based on Vdc_base=1.45 kV.",
+      "BRK_CHOP is active-high chopper switch command/state.",
+      "S1 is the formal crowbar switch command/state signal and can be reported as DFIG_CROWBAR_STATE.",
+      "I_RS:1..3 are RSC/rotor-side converter terminal currents.",
+      "Iconv:1..3 are GSC/grid-side converter terminal currents.",
+      "Crowbar current:1..3 are crowbar branch currents."
+    ],
+    "kept_limited_or_unresolved": [
+      "Reset, Mono_out, and Iovercur are intermediate crowbar logic signals, not actual crowbar state.",
+      "Crowbar did not show confirmed insertion/conduction in this 5 s deep-fault run because S1=0 and Crowbar current stayed near zero.",
+      "SPD30 is not upgraded beyond system-frequency candidate.",
+      "Freq_PLL remains a Type-3 internal PLL candidate and cannot replace SPD30.",
+      "Dblk_VdcCtrl and Dblk_Rotor remain internal blocking logic quantities with exact converter blocking scope not fully confirmed.",
+      "Chopper energy dissipation is not confirmed because branch current/resistor power was not measured."
+    ]
+  }
 }

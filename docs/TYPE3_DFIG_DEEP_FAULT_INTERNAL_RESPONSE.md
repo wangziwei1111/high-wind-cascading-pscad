@@ -1,168 +1,157 @@
-# Type-3 DFIG 深三相故障内部 LVRT 响应离线解析
+# Type-3 DFIG Deep Three-Phase Fault Internal Response: GUI Semantic Backfill
 
-## 任务范围与数据来源
+## Scope And Sources
 
-本文件修复了上一版 Markdown 中中文正文被问号覆盖的问题。修复方式为：以 `data/reference/type3_dfig_deep_fault_internal_response.json` 和 `data/reference/type3_dfig_deep_fault_internal_response_summary.csv` 为数值事实来源，重新生成中文可读文档。
+This document integrates the GUI-confirmed signal semantics from `docs/TYPE3_DFIG_LVRT_GUI_SEMANTIC_CONFIRMATION.md` and `data/reference/type3_dfig_lvrt_gui_semantic_confirmation.json` into the existing 5 s deep-fault internal response analysis.
 
-本次内容只描述已经存在的 5 s 深三相接地故障结果，未打开 PSCAD GUI，未执行 Build/Run，未修改任何 `.pscx/.pslx/XML`、故障参数、输出通道、控制器或主电路。
+Only interpretation text, confidence labels, and limitations were updated. The `.out` data, `.inf` mapping, statistics, fault settings, output channels, PSCAD models, controllers, and main circuit were not modified. No Computer Use, PSCAD GUI operation, Build, or Run was performed for this backfill.
 
-数据来源：
+Data sources:
 
-- 运行结果目录：`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46`
-- 最新映射文件：`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46\3IBR.inf`
-- 输出数据：`3IBR_*.out`
-- JSON：`data/reference/type3_dfig_deep_fault_internal_response.json`
-- CSV：`data/reference/type3_dfig_deep_fault_internal_response_summary.csv`
-- 相关背景文档：`docs/TYPE3_DFIG_DEEP_FAULT_5S_SMOKE_TEST.md`、`docs/TYPE3_DFIG_LVRT_INTERNAL_SIGNAL_AUDIT.md`
+- `data/reference/type3_dfig_deep_fault_internal_response.json`
+- `data/reference/type3_dfig_deep_fault_internal_response_summary.csv`
+- `docs/TYPE3_DFIG_DEEP_FAULT_5S_SMOKE_TEST.md`
+- `docs/TYPE3_DFIG_LVRT_INTERNAL_SIGNAL_AUDIT.md`
+- `docs/TYPE3_DFIG_LVRT_GUI_SEMANTIC_CONFIRMATION.md`
+- `data/reference/type3_dfig_lvrt_gui_semantic_confirmation.json`
 
-当前 `.out` 数据末尾时间约为 `4.996600 s`，对应 5 s 深三相故障 smoke test。
+## Semantic Confirmation Status
 
-## PGB 映射方法与统计窗口
+The following signals are upgraded from candidate-only interpretation to GUI-confirmed semantics:
 
-PGB 到输出文件的映射重新根据当前 `3IBR.inf` 建立，没有沿用旧列号假设。映射规则为：
+- `Ecap_Det`: DC-link physical voltage in kV. It can be used as `DFIG_VDC_KV`.
+- `Edc_pu`: DC-link per-unit voltage based on `Vdc_base = 1.45 kV`. It can be used as `DFIG_VDC_PU`.
+- `BRK_CHOP`: active-high chopper switch command/state. `1=active`, `0=inactive`.
+- `S1`: formal crowbar switch command/state. It can be reported as `DFIG_CROWBAR_STATE`. `1=crowbar switch commanded active/on`, `0=inactive/off`.
+- `Crowbar current:1..3`: crowbar branch current.
+- `I_RS:1..3`: RSC / rotor-side converter terminal three-phase current. The arrow points toward the `RABC` terminal.
+- `Iconv:1..3`: GSC / grid-side converter terminal three-phase current. Positive direction is from the AC filter / grid-side node toward the grid-side converter.
 
-- 每 10 个 PGB 写入一个 `.out` 文件；
-- `PGB(n)` 对应文件 `3IBR_{floor((n-1)/10)+1:02d}.out`；
-- `.out` 第 1 列为时间；
-- 数据列为 `((PGB-1) mod 10)+2`。
+Limitations that remain:
 
-统计窗口固定为：
+- `Reset`, `Mono_out`, and `Iovercur` are intermediate crowbar logic signals. They must not be used as the actual crowbar state.
+- The positive direction of `Crowbar current:1..3` is still not confirmed.
+- The exact A/B/C mapping of vector indices `1..3` for `I_RS`, `Iconv`, and `Crowbar current` is not phase-by-phase confirmed.
+- `BRK_CHOP` confirms a chopper command/state pulse, but chopper branch current and resistor power were not exported, so chopper energy dissipation is not quantified.
+- `SPD30` remains a system-frequency candidate. `Freq_PLL` remains a Type-3 internal PLL candidate. They must not be mixed.
 
-- 故障前：`1.8–2.0 s`
-- 故障中：`2.0–2.15 s`
-- 故障后：`4.0–5.0 s`
+## PGB Mapping Method And Statistical Windows
 
-## POC 外部响应概览
+The mapping remains based on the latest `3IBR.gf46/3IBR.inf`. Every 10 PGB channels correspond to one `.out` file, and the first column of each `.out` file is time. The fixed statistical windows are:
 
-| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `VIBR1_2` | 2 | `3IBR_01.out` | 3 | pu candidate | 0.996876 | 0.057865 | 0.137288 | 0.987171 | 0.987171 | 2.000300 | 0.996965 | high |
-| `PIBR1_2` | 4 | `3IBR_01.out` | 5 | MW | 202.089 | -227.880 | -150.934 | 196.832 | 227.880 | 2.029350 | 199.197 | high |
-| `QIBR1_2` | 6 | `3IBR_01.out` | 7 | MVAr | -13.826583 | -13.211935 | 3.924918 | 12.363727 | 13.211935 | 2.000300 | -21.508556 | high |
-| `SPD30` | 1 | `3IBR_01.out` | 2 | Hz candidate | 60.000000 | 60.000000 | 60.000000 | 60.000000 | 60.000000 | 2.000300 | 60.000000 | medium |
-| `DFIG_IFLT_A_KA` | 19 | `3IBR_02.out` | 10 | kA | 0.000000 | -106.300 | 18.604561 | 197.603 | 197.603 | 2.008600 | 0.000000 | high |
-| `DFIG_IFLT_B_KA` | 18 | `3IBR_02.out` | 9 | kA | 0.000000 | -162.865 | -7.227925 | 98.558851 | 162.865 | 2.004450 | -0.000000 | high |
-| `DFIG_IFLT_C_KA` | 17 | `3IBR_02.out` | 8 | kA | -0.000000 | -137.139 | -11.376630 | 87.315819 | 137.139 | 2.008600 | 0.000000 | high |
-| `DFIG_DBLK_CMD` | 22 | `3IBR_03.out` | 3 | logic | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
-| `DFIG_BRK_STATE` | 21 | `3IBR_03.out` | 2 | logic, 0=closed by current project convention | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 2.000300 | 0.000000 | medium |
-| `DFIG_VWIND_MS` | 20 | `3IBR_02.out` | 11 | m/s | 11.000000 | 11.000000 | 11.000000 | 11.000000 | 11.000000 | 2.000300 | 11.000000 | medium |
+- Pre-fault: `1.8-2.0 s`
+- During fault: `2.0-2.15 s`
+- Post-fault: `4.0-5.0 s`
 
-已确认事实：`VIBR1_2` 在故障中最低约 `0.057865`，故障中均值约 `0.137288`，说明本次 0.01 ohm 三相接地故障造成了深电压跌落。`PIBR1_2` 故障后均值约 `199.197 MW`，`VIBR1_2` 故障后均值约 `0.996965`，说明故障清除后 POC 外部量恢复到接近无故障运行状态。
+The current output end time is `4.9966 s`.
 
-限制说明：`DFIG_IFLT_A/B/C_KA` 是新加三相故障元件的故障电流输出，不能替代 RSC 电流、GSC 电流、转子电流或 Crowbar 电流。`SPD30` 是系统频率候选，不能替代 Type-3 内部 `Freq_PLL`。
+## External POC Response Overview
 
-## DC-link 与 chopper 响应
+| Signal | PGB | .out | Col | Unit | Confirmed meaning | Pre mean | Fault min | Fault mean | Fault max | Fault max abs | Peak time (s) | Post mean | Confidence | Semantic conclusion | Limitation |
+|---|---:|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| VIBR1_2 | 2 | 3IBR_01.out | 3 | pu candidate |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| PIBR1_2 | 4 | 3IBR_01.out | 5 | MW |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| QIBR1_2 | 6 | 3IBR_01.out | 7 | MVAr |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| SPD30 | 1 | 3IBR_01.out | 2 | Hz candidate | System-frequency candidate used as external comparison signal. |  |  |  |  |  |  |  | medium |  | Do not mix with Type-3 internal Freq_PLL; exact measurement source remains to be confirmed. |
+| DFIG_IFLT_A_KA | 19 | 3IBR_02.out | 10 | kA |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| DFIG_IFLT_B_KA | 18 | 3IBR_02.out | 9 | kA |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| DFIG_IFLT_C_KA | 17 | 3IBR_02.out | 8 | kA |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| DFIG_DBLK_CMD | 22 | 3IBR_03.out | 3 | logic |  |  |  |  |  |  |  |  | medium |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| DFIG_BRK_STATE | 21 | 3IBR_03.out | 2 | logic, 0=closed by current project convention |  |  |  |  |  |  |  |  | medium |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| DFIG_VWIND_MS | 20 | 3IBR_02.out | 11 | m/s |  |  |  |  |  |  |  |  | medium |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
 
-| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `Edc_pu` | 284 | `3IBR_29.out` | 5 | pu candidate | 0.999853 | 0.775914 | 0.987685 | 1.427780 | 1.427780 | 2.008600 | 0.999774 | high |
-| `Ecap_Det` | 256 | `3IBR_26.out` | 7 | kV candidate | 1.449787 | 1.124755 | 1.432150 | 2.070126 | 2.070126 | 2.008600 | 1.449672 | high |
-| `Ecap` | 326 | `3IBR_33.out` | 7 | kV candidate | 1.449782 | 1.333255 | 1.431543 | 1.761555 | 1.761555 | 2.012750 | 1.449668 | medium |
-| `BRK_CHOP` | 328 | `3IBR_33.out` | 9 | logic candidate | 0.000000 | 0.000000 | 0.054054 | 1.000000 | 1.000000 | 2.008600 | 0.000000 | medium |
+`DFIG_IFLT_A/B/C_KA` are external fault-element currents. They are not RSC, GSC, rotor, or crowbar internal currents. The maximum absolute external fault current during the fault window is about `197.602619 kA`.
 
-静态推断：`Edc_pu` 在故障窗口内峰值约 `1.427780`，峰值时刻约 `2.008600 s`；`Ecap_Det` 峰值约 `2.070126 kV candidate`。因此可以描述为 DC-link 在深电压跌落期间出现明显抬升/过压候选响应。
+## DC-link And Chopper Response
 
-`BRK_CHOP` 在故障窗口内出现变化，说明 chopper 相关逻辑存在候选响应。但在没有通过 PSCAD GUI 确认 `BRK_CHOP` 的 0/1 逻辑方向之前，不能写成“chopper 已确定投入”。
+| Signal | PGB | .out | Col | Unit | Confirmed meaning | Pre mean | Fault min | Fault mean | Fault max | Fault max abs | Peak time (s) | Post mean | Confidence | Semantic conclusion | Limitation |
+|---|---:|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| Ecap_Det | 256 | 3IBR_26.out | 7 | kV | GUI-confirmed DC-link physical voltage. |  |  |  |  |  |  |  | high | DFIG_VDC_KV: DC-link voltage Ecap_Det in kV. | Sampling/filtering can cause a small difference from Edc_pu * Vdc_base; chopper energy is not measured. |
+| Edc_pu | 284 | 3IBR_29.out | 5 | pu | GUI-confirmed DC-link per-unit voltage based on Vdc_base=1.45 kV. |  |  |  |  |  |  |  | high | DFIG_VDC_PU: Edc_pu = Edc / Vdc_base. | Use with Vdc_base=1.45 kV from GUI confirmation; not a grid-voltage pu quantity. |
+| BRK_CHOP | 328 | 3IBR_33.out | 9 | logic | GUI-confirmed active-high chopper switch command/state. |  |  |  |  |  |  |  | high | 1=chopper command/state active; 0=inactive. | Chopper branch current/resistor power was not exported, so actual dissipated energy is not quantified. |
 
-## Crowbar 候选响应
+GUI confirmation upgrades the DC-link interpretation from candidate to confirmed. `Edc_pu` peaks at `1.427780` during the fault. With `Vdc_base = 1.45 kV`, this corresponds to `2.070281 kV`, which is consistent with the `Ecap_Det` peak of `2.070126 kV`; the absolute difference is about `0.000154 kV`. Therefore, the deep fault clearly raises the DC-link voltage.
 
-| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `Reset` | 322 | `3IBR_33.out` | 3 | logic candidate | 0.000000 | 0.000000 | 0.918919 | 1.000000 | 1.000000 | 2.012750 | 0.000000 | medium |
-| `Mono_out` | 324 | `3IBR_33.out` | 5 | logic candidate | 0.000000 | 0.000000 | 0.405405 | 1.000000 | 1.000000 | 2.012750 | 0.000000 | medium |
-| `Iovercur` | 321 | `3IBR_33.out` | 2 | logic candidate | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 2.000300 | 0.000000 | medium |
-| `S1` | 323 | `3IBR_33.out` | 4 | logic candidate | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 2.000300 | 0.000000 | medium |
-| `Crowbar current:1` | 318 | `3IBR_32.out` | 9 | internal current candidate | -0.000001 | -0.000006 | 0.000000 | 0.000008 | 0.000008 | 2.004450 | -0.000000 | medium |
-| `Crowbar current:2` | 319 | `3IBR_32.out` | 10 | internal current candidate | 0.000000 | -0.000010 | -0.000000 | 0.000005 | 0.000010 | 2.008600 | -0.000000 | medium |
-| `Crowbar current:3` | 320 | `3IBR_32.out` | 11 | internal current candidate | 0.000000 | -0.000008 | 0.000000 | 0.000008 | 0.000008 | 2.008600 | -0.000000 | medium |
-| `Imagn` | 327 | `3IBR_33.out` | 8 | current magnitude candidate | 0.305083 | 0.303944 | 0.926926 | 1.120072 | 1.120072 | 2.149700 | 0.281809 | medium |
+`BRK_CHOP` is confirmed as an active-high chopper switch command/state. It changes during the fault window, so this run contains an active chopper command pulse. However, because chopper branch current and resistor power were not exported, this result must not be used to quantify confirmed chopper energy dissipation.
 
-已确认事实：`Reset` 与 `Mono_out` 在故障窗口内发生 0/1 变化；`Iovercur=0`，`S1=0`；`Crowbar current:1..3` 的最大绝对值约 `1.018813e-05`，数值近零。
+## Crowbar Response
 
-静态推断：当前只能说“Crowbar 相关逻辑候选有响应”。由于 `S1`、`Mono_out`、`Reset`、`Iovercur` 的实际状态语义和 active-high/active-low 方向尚未经过 GUI 确认，而且 Crowbar current 近零，所以没有足够证据证明 Crowbar 实际导通。
+| Signal | PGB | .out | Col | Unit | Confirmed meaning | Pre mean | Fault min | Fault mean | Fault max | Fault max abs | Peak time (s) | Post mean | Confidence | Semantic conclusion | Limitation |
+|---|---:|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| Iovercur | 321 | 3IBR_33.out | 2 | logic | Rotor overcurrent comparator output inside Crowbar_prot; intermediate logic only. |  |  |  |  |  |  |  | high | Intermediate crowbar protection logic, not actual crowbar state. | Do not interpret as crowbar inserted/conducting. |
+| Reset | 322 | 3IBR_33.out | 3 | logic | Reset/control signal in Crowbar_prot latch/monostable chain; intermediate logic only. |  |  |  |  |  |  |  | high | Intermediate reset logic, not actual crowbar state. | Do not interpret Reset changes as crowbar insertion. |
+| S1 | 323 | 3IBR_33.out | 4 | logic | GUI-confirmed formal crowbar switch command/state signal. |  |  |  |  |  |  |  | high | 1=crowbar switch commanded active/on; 0=inactive/off. | In this run S1 stayed 0, so no confirmed crowbar insertion was observed. |
+| Mono_out | 324 | 3IBR_33.out | 5 | logic | Monostable output inside Crowbar_prot; intermediate logic only. |  |  |  |  |  |  |  | high | Intermediate pulse/hold logic, not actual crowbar state. | Do not interpret Mono_out changes as crowbar insertion unless S1/current confirm it. |
+| Crowbar current:1 | 318 | 3IBR_32.out | 9 | kA | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current channel. | Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
+| Crowbar current:2 | 319 | 3IBR_32.out | 10 | kA | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current channel. | Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
+| Crowbar current:3 | 320 | 3IBR_32.out | 11 | kA | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current channel. | Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
 
-## RSC/GSC 电流与限流候选响应
+GUI confirmation identifies `S1` as the formal crowbar switch command/state signal. In future reports it may be named `DFIG_CROWBAR_STATE`. The logic convention is `S1=1` for crowbar switch commanded active/on and `S1=0` for inactive/off.
 
-### RSC 侧
+In this 5 s deep-fault run, `Reset` and `Mono_out` changed, but they are intermediate protection-chain quantities. `Iovercur=0`, `S1=0`, and `Crowbar current:1..3` stayed near zero, with maximum absolute value about `0.000010188132 kA`. The formal conclusion is therefore: no confirmed crowbar switch insertion or crowbar branch conduction was observed in this run. `Reset` or `Mono_out` changes must not be interpreted as crowbar insertion.
 
-| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `I_RS:1` | 257 | `3IBR_26.out` | 8 | kA candidate | -0.000849 | -1.715329 | 0.040646 | 1.396186 | 1.715329 | 2.004450 | -0.000845 | high |
-| `I_RS:2` | 258 | `3IBR_26.out` | 9 | kA candidate | -0.037858 | -1.238164 | -0.076012 | 1.560323 | 1.560323 | 2.021050 | 0.000321 | high |
-| `I_RS:3` | 259 | `3IBR_26.out` | 10 | kA candidate | 0.038707 | -1.451272 | 0.035366 | 1.262370 | 1.451272 | 2.025200 | 0.000523 | high |
-| `Idr_pu` | 312 | `3IBR_32.out` | 3 | pu candidate | -0.082657 | -0.797789 | -0.129364 | 0.580709 | 0.797789 | 2.004450 | -0.090738 | medium |
-| `Iqr_pu_RSC_A` | 298 | `3IBR_30.out` | 9 | pu candidate | 0.257463 | 0.153795 | 0.807830 | 1.251003 | 1.251003 | 2.025200 | 0.231177 | medium |
-| `Iqr_pu_RSC_B` | 314 | `3IBR_32.out` | 5 | pu candidate | 0.257463 | 0.153795 | 0.807830 | 1.251003 | 1.251003 | 2.025200 | 0.231177 | medium |
-| `Voltage_dip` | 285 | `3IBR_29.out` | 6 | logic candidate | 0.000000 | 0.000000 | 0.918919 | 1.000000 | 1.000000 | 2.012750 | 0.000000 | medium |
-| `Low_Cu_Manag` | 311 | `3IBR_32.out` | 2 | logic/factor candidate | 1.000000 | 0.103805 | 0.248067 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
-| `Imax_pu` | 288 | `3IBR_29.out` | 9 | pu limit | 1.200000 | 1.200000 | 1.200000 | 1.200000 | 1.200000 | 2.000300 | 1.200000 | medium |
-| `Imax_d_pu` | 317 | `3IBR_32.out` | 8 | pu limit | 1.172037 | 0.747771 | 0.849658 | 1.178725 | 1.178725 | 2.008600 | 1.177293 | medium |
-| `ImaxN_d_pu` | 305 | `3IBR_31.out` | 6 | pu limit | -1.172037 | -1.178725 | -0.849658 | -0.747771 | 1.178725 | 2.008600 | -1.177293 | medium |
+## RSC/GSC Currents And Current-Limit Candidate Response
 
-静态推断：`I_RS:1..3` 在故障窗口内三相最大绝对值约 `1.715329 kA candidate`，明显高于故障前平稳状态。`Voltage_dip`、`Low_Cu_Manag`、`Imax_d_pu` 等量在故障窗口内变化，支持 RSC 控制进入电压跌落/限流相关候选响应。
+### RSC Terminal Current
 
-### GSC 侧
+| Signal | PGB | .out | Col | Unit | Confirmed meaning | Pre mean | Fault min | Fault mean | Fault max | Fault max abs | Peak time (s) | Post mean | Confidence | Semantic conclusion | Limitation |
+|---|---:|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| I_RS:1 | 257 | 3IBR_26.out | 8 | kA | GUI-confirmed RSC / rotor-side converter terminal three-phase current. |  |  |  |  |  |  |  | high | RSC terminal current; arrow points toward RABC terminal. | Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so. |
+| I_RS:2 | 258 | 3IBR_26.out | 9 | kA | GUI-confirmed RSC / rotor-side converter terminal three-phase current. |  |  |  |  |  |  |  | high | RSC terminal current; arrow points toward RABC terminal. | Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so. |
+| I_RS:3 | 259 | 3IBR_26.out | 10 | kA | GUI-confirmed RSC / rotor-side converter terminal three-phase current. |  |  |  |  |  |  |  | high | RSC terminal current; arrow points toward RABC terminal. | Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so. |
 
-| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `Iconv:1` | 263 | `3IBR_27.out` | 4 | kA candidate | 0.001656 | -0.490161 | 0.030985 | 1.077401 | 1.077401 | 2.008600 | -0.000266 | high |
-| `Iconv:2` | 264 | `3IBR_27.out` | 5 | kA candidate | -0.001630 | -1.532807 | -0.045733 | 0.663592 | 1.532807 | 2.008600 | 0.000147 | high |
-| `Iconv:3` | 265 | `3IBR_27.out` | 6 | kA candidate | -0.000026 | -0.859008 | 0.014747 | 1.160096 | 1.160096 | 2.004450 | 0.000119 | high |
-| `Id_pu_Gsc` | 276 | `3IBR_28.out` | 7 | pu candidate | -0.038389 | -1.141302 | -0.028707 | 0.244622 | 1.141302 | 2.008600 | -0.044780 | medium |
-| `Iq_pu_Gsc` | 275 | `3IBR_28.out` | 6 | pu candidate | 0.380934 | 0.287619 | 0.327944 | 0.463691 | 0.463691 | 2.004450 | 0.378635 | medium |
-| `Id_ord_pu` | 281 | `3IBR_29.out` | 2 | pu candidate | -0.038386 | -1.104842 | -0.030546 | 0.244506 | 1.104842 | 2.008600 | -0.044775 | medium |
-| `Iq_ord_pu` | 279 | `3IBR_28.out` | 10 | pu candidate | 0.380934 | 0.288181 | 0.325957 | 0.385067 | 0.385067 | 2.016900 | 0.378637 | medium |
+GUI confirmation identifies `I_RS:1..3` as the RSC / rotor-side converter terminal three-phase currents. The arrow points toward the `RABC` terminal. The three-phase maximum absolute value during the fault is about `1.715329 kA`; this is upgraded from candidate to confirmed RSC terminal-current peak. The exact index-to-phase mapping still requires GUI confirmation. These values must not be called RMS unless the measurement definition explicitly states RMS.
 
-静态推断：`Iconv:1..3` 在故障窗口内三相最大绝对值约 `1.532807 kA candidate`。`Id_pu_Gsc / Iq_pu_Gsc`、`Id_ord_pu / Iq_ord_pu` 在故障窗口内也存在暂态变化，可作为 GSC 电流控制响应候选量。
+### GSC Terminal Current
 
-限制说明：`I_RS`、`Iconv`、`Id/Iq` 相关量的相序、正方向、物理基准和 dq 轴定义仍需 PSCAD GUI 手动确认。`Iqr_pu` 存在重复候选通道，正式解释时不能未经确认任选其中一路。
+| Signal | PGB | .out | Col | Unit | Confirmed meaning | Pre mean | Fault min | Fault mean | Fault max | Fault max abs | Peak time (s) | Post mean | Confidence | Semantic conclusion | Limitation |
+|---|---:|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| Iconv:1 | 263 | 3IBR_27.out | 4 | kA | GUI-confirmed GSC / grid-side converter terminal three-phase current. |  |  |  |  |  |  |  | high | GSC terminal current; positive direction from AC filter/grid-side node toward grid-side converter. | Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so. |
+| Iconv:2 | 264 | 3IBR_27.out | 5 | kA | GUI-confirmed GSC / grid-side converter terminal three-phase current. |  |  |  |  |  |  |  | high | GSC terminal current; positive direction from AC filter/grid-side node toward grid-side converter. | Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so. |
+| Iconv:3 | 265 | 3IBR_27.out | 6 | kA | GUI-confirmed GSC / grid-side converter terminal three-phase current. |  |  |  |  |  |  |  | high | GSC terminal current; positive direction from AC filter/grid-side node toward grid-side converter. | Exact A/B/C vector-index mapping still requires phase-by-phase GUI confirmation; not RMS unless measurement definition explicitly says so. |
 
-## 机械侧、内部闭锁与 PLL 响应
+GUI confirmation identifies `Iconv:1..3` as the GSC / grid-side converter terminal three-phase currents. Positive direction is from the AC filter / grid-side node toward the grid-side converter. The three-phase maximum absolute value during the fault is about `1.532807 kA`; this is upgraded from candidate to confirmed GSC terminal-current peak. The exact index-to-phase mapping still requires GUI confirmation.
 
-| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `Wpu` | 254 | `3IBR_26.out` | 5 | pu candidate | 1.205632 | 1.206159 | 1.212632 | 1.218622 | 1.218622 | 2.149700 | 1.200021 | high |
-| `Pwind_pu` | 250 | `3IBR_25.out` | 11 | pu candidate | 1.129572 | 0.474856 | 0.823256 | 1.084518 | 1.084518 | 2.008600 | 0.949301 | medium |
-| `TM` | 229 | `3IBR_23.out` | 10 | pu candidate | -0.936951 | -0.899157 | -0.679462 | -0.389686 | 0.899157 | 2.008600 | -0.791071 | medium |
-| `TE` | 230 | `3IBR_23.out` | 11 | pu candidate | -0.807550 | -2.243988 | -0.223973 | 0.120288 | 2.243988 | 2.004450 | -0.792787 | medium |
-| `Dblk_VdcCtrl` | 234 | `3IBR_24.out` | 5 | logic candidate | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
-| `Dblk_Rotor` | 235 | `3IBR_24.out` | 6 | logic candidate | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
-| `Freq_PLL` | 304 | `3IBR_31.out` | 5 | Hz-like internal PLL candidate | 60.020707 | 51.000000 | 59.980114 | 69.000000 | 69.000000 | 2.008600 | 60.003027 | medium |
+### Current-Limit And Control Candidates
 
-已确认事实：`Wpu` 故障前均值约 `1.205632`，故障中最大约 `1.218622`，故障后均值约 `1.200021`。这说明机械转速候选量在故障清除后恢复到接近故障前水平。
+`Voltage_dip`, `Low_Cu_Manag`, `Imax_d_pu`, `Id_pu_Gsc`, and `Iq_pu_Gsc` show fault-window responses and can support future current-limit interpretation. Their exact control meanings, sampling positions, and duplicate signal distinctions still need additional GUI localization before formal use.
 
-`Dblk_VdcCtrl` 与 `Dblk_Rotor` 在该试验中保持其当前逻辑值。它们是 Type-3 内部闭锁候选状态，不能与外部 `DFIG_DBLK_CMD` 混为一谈。
+## Mechanical Side, Internal Blocking, And PLL Response
 
-`Freq_PLL` 在故障窗口内约 `51.000–69.000`，只能称为 Type-3 内部 PLL 候选输出，不能与 `SPD30` 系统频率候选混用。
+| Signal | PGB | .out | Col | Unit | Confirmed meaning | Pre mean | Fault min | Fault mean | Fault max | Fault max abs | Peak time (s) | Post mean | Confidence | Semantic conclusion | Limitation |
+|---|---:|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| Wpu | 254 | 3IBR_26.out | 5 | pu candidate |  |  |  |  |  |  |  |  | high |  | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| Dblk_VdcCtrl | 234 | 3IBR_24.out | 5 | logic candidate |  |  |  |  |  |  |  |  | medium |  | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
+| Dblk_Rotor | 235 | 3IBR_24.out | 6 | logic candidate |  |  |  |  |  |  |  |  | medium |  | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
+| Freq_PLL | 304 | 3IBR_31.out | 5 | Hz-like internal PLL candidate | Type-3 internal PLL frequency candidate. |  |  |  |  |  |  |  | medium |  | Confirmed only as internal PLL candidate from signal context; do not use as replacement for SPD30/system frequency. |
 
-## 已确认事实、静态推断与待 GUI 确认事项
+`Wpu` has a pre-fault mean of about `1.205632` and a post-fault mean of about `1.200021`, so the mechanical-speed indicator returns close to its pre-fault level after fault clearing. `Dblk_VdcCtrl` and `Dblk_Rotor` keep their current logic values in this run, but their exact converter blocking scopes are not fully confirmed. `Freq_PLL` ranges from about `51.000000` to `69.000000` during the fault window; it is a Type-3 internal PLL candidate and must not replace `SPD30` as a system-frequency interpretation.
 
-已确认事实：
+## Confirmed Facts
 
-- 当前 5 s 深故障结果可以从 `3IBR.inf` 与 `3IBR_*.out` 离线解析，不需要重新运行 PSCAD。
-- POC 外部量显示深电压跌落，故障清除后 P/V 恢复。
-- 当前输出文件中已经存在 DC-link、RSC/GSC 电流、Crowbar 候选、chopper 候选、机械侧和 PLL 候选通道。
+- The POC voltage has a deep sag: `VIBR1_2` fault-window minimum is about `0.057865`, and the fault-window mean is about `0.137288`.
+- DC-link voltage rises clearly: `Edc_pu` peak is `1.427780`, and `Ecap_Det` peak is `2.070126 kV`.
+- `BRK_CHOP` is an active-high chopper switch command/state, and it has an active pulse during the fault window.
+- `S1` is the formal crowbar command/state. Because `S1=0` and crowbar branch current is near zero, no confirmed crowbar insertion is observed in this run.
+- `I_RS:1..3` and `Iconv:1..3` are confirmed RSC and GSC terminal currents, with fault-window maximum absolute values of about `1.715329 kA` and `1.532807 kA`.
+- `DFIG_IFLT_A/B/C_KA` are external fault-element currents, not internal converter or crowbar currents.
 
-静态推断：
+## Static Inferences
 
-- `Edc_pu` 与 `Ecap_Det` 支持 DC-link 明显抬升/过压候选响应。
-- `I_RS:1..3` 与 `Iconv:1..3` 支持 RSC/GSC 电流在深故障期间显著增大。
-- `Wpu` 支持机械转速在故障后恢复到接近故障前水平。
-- Crowbar 相关逻辑有候选响应，但当前证据不足以证明 Crowbar 实际导通。
+- The response chain can be described as: deep POC voltage sag -> DC-link rise -> chopper command pulse -> significant RSC/GSC terminal-current increase -> post-fault recovery of P/V/speed indicators.
+- Changes in `Reset` and `Mono_out` show internal activity in the crowbar protection chain, but because `S1=0` and crowbar current is near zero, they do not prove crowbar insertion.
+- `Dblk_VdcCtrl` and `Dblk_Rotor` remain useful internal blocking candidates, but they should not yet be used to prove the exact blocking state of a specific converter.
 
-待 GUI 确认事项：
+## Items Still Requiring GUI Confirmation
 
-1. `S1`、`Mono_out`、`Reset`、`Iovercur` 中哪个才代表 Crowbar 实际状态，以及 0/1 含义。
-2. `Ecap_Det` 与 `Edc_pu` 的物理单位、基准和取样位置。
-3. `I_RS`、`Iconv`、`Crowbar current` 的相序、正方向和单位。
-4. 重复的 `Iqr_pu/Pg_pu/Qg_pu` 候选通道中哪一组应作为正式解释通道。
+- Exact phase mapping of `I_RS:1..3`, `Iconv:1..3`, and `Crowbar current:1..3` to A/B/C.
+- Positive direction of `Crowbar current`.
+- Chopper branch current, resistor power, or energy dissipation.
+- Exact physical source of `SPD30` and its distinction from `Freq_PLL`.
+- Sampling-location differences among duplicated internal `Iqr_pu`, `Pg_pu`, and `Qg_pu` candidates.
 
-## 结论与限制
+## Conclusion And Limits
 
-本次 5 s 深三相故障已经呈现出一条可解释的候选响应链：POC 深电压跌落，DC-link 抬升候选，RSC/GSC 电流显著增大，故障后 POC 电压、有功功率和机械转速候选量恢复。
+After GUI semantic backfill, the 5 s deep three-phase ground-fault result supports a stronger LVRT interpretation chain: during `2.0-2.15 s`, the system experiences a deep POC voltage sag, Type-3 DC-link voltage rises, the chopper command becomes active, RSC/GSC terminal currents increase significantly, and P/V/mechanical-speed indicators recover after fault clearing. For crowbar behavior, the formal state `S1` remains 0 and crowbar branch current stays near zero. Therefore the correct conclusion is that this run does not show confirmed crowbar insertion or crowbar branch conduction.
 
-限制必须保留：Crowbar 的实际动作状态仍未确认，不能作为确定结论；`Ecap_Det/Edc_pu` 的单位与基准、RSC/GSC/Crowbar 电流的方向和相序也需要 GUI 语义确认。下一阶段应优先做手把手 GUI 语义确认，而不是继续修改模型或新增控制逻辑。
-
-## 编码核验记录
-
-本文件由 `data/reference/type3_dfig_deep_fault_internal_response.json` 与 `data/reference/type3_dfig_deep_fault_internal_response_summary.csv` 重建，并以 UTF-8 写入。重建原因是上一版文件虽可 UTF-8 严格解码，但中文正文已经被大量连续 `?` 覆盖，属于真实文本损坏而非终端显示问题。
+These conclusions update signal semantics only. They do not alter any simulation data, output mapping, or fault setting.
