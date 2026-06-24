@@ -1,0 +1,2189 @@
+{
+  "task": "Type-3 DFIG deep three-phase fault internal LVRT offline response analysis",
+  "generated_at": "2026-06-24",
+  "constraints": [
+    "read-only parsing only",
+    "no Computer Use",
+    "no PSCAD GUI",
+    "no Build/Run",
+    "no PSCAD model/XML modification"
+  ],
+  "source_files": {
+    "inf": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\3IBR.inf",
+    "out_directory": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46",
+    "reference_docs": [
+      "docs/TYPE3_DFIG_DEEP_FAULT_5S_SMOKE_TEST.md",
+      "data/reference/type3_dfig_deep_fault_5s_smoke_test.json",
+      "docs/TYPE3_DFIG_LVRT_INTERNAL_SIGNAL_AUDIT.md",
+      "data/reference/type3_dfig_lvrt_internal_signal_audit.json"
+    ]
+  },
+  "mapping_method": "Latest 3IBR.inf PGB index mapped to 3IBR_NN.out using 10 channels per file; column 1 is time, data column=((PGB-1) mod 10)+2.",
+  "windows_s": {
+    "pre_1p8_2p0": [
+      1.8,
+      2.0
+    ],
+    "fault_2p0_2p15": [
+      2.0,
+      2.15
+    ],
+    "post_4p0_5p0": [
+      4.0,
+      5.0
+    ]
+  },
+  "signals": [
+    {
+      "name": "SPD30",
+      "pgb": 1,
+      "out_file": "3IBR_01.out",
+      "column": 2,
+      "unit": "Hz candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 60.0,
+          "mean": 60.0,
+          "max": 60.0,
+          "range": 0.0,
+          "max_abs": 60.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 60.0,
+          "mean": 60.0,
+          "max": 60.0,
+          "range": 0.0,
+          "max_abs": 60.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 60.0,
+          "mean": 60.0,
+          "max": 60.0,
+          "range": 0.0,
+          "max_abs": 60.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "VIBR1_2",
+      "pgb": 2,
+      "out_file": "3IBR_01.out",
+      "column": 3,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.99672383643441,
+          "mean": 0.9968763745649599,
+          "max": 0.99699571928263,
+          "range": 0.0002718828482199953,
+          "max_abs": 0.99699571928263,
+          "max_abs_time_s": 1.97125,
+          "max_time_s": 1.97125,
+          "min_time_s": 1.8094
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.057864762987737,
+          "mean": 0.13728805500581684,
+          "max": 0.98717140481857,
+          "range": 0.929306641830833,
+          "max_abs": 0.98717140481857,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.07915
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.98145341045348,
+          "mean": 0.9969654539520147,
+          "max": 1.0119882741761,
+          "range": 0.03053486372261993,
+          "max_abs": 1.0119882741761,
+          "max_abs_time_s": 4.90115,
+          "max_time_s": 4.90115,
+          "min_time_s": 4.19565
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "PIBR1_2",
+      "pgb": 4,
+      "out_file": "3IBR_01.out",
+      "column": 5,
+      "unit": "MW",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 200.91917097543,
+          "mean": 202.08894331701626,
+          "max": 202.94899244631,
+          "range": 2.0298214708799946,
+          "max_abs": 202.94899244631,
+          "max_abs_time_s": 1.99615,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -227.87984993755,
+          "mean": -150.93404762808007,
+          "max": 196.83188335967,
+          "range": 424.71173329722,
+          "max_abs": 227.87984993755,
+          "max_abs_time_s": 2.02935,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.02935
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 198.89665635073,
+          "mean": 199.19742146935292,
+          "max": 199.46932274421,
+          "range": 0.5726663934799774,
+          "max_abs": 199.46932274421,
+          "max_abs_time_s": 4.3243,
+          "max_time_s": 4.3243,
+          "min_time_s": 4.9468
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "QIBR1_2",
+      "pgb": 6,
+      "out_file": "3IBR_01.out",
+      "column": 7,
+      "unit": "MVAr",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -13.992370223711,
+          "mean": -13.82658333106196,
+          "max": -13.640614135723,
+          "range": 0.35175608798799907,
+          "max_abs": 13.992370223711,
+          "max_abs_time_s": 1.8094,
+          "max_time_s": 1.9837,
+          "min_time_s": 1.8094
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -13.211934819186,
+          "mean": 3.9249178556142787,
+          "max": 12.363727279717,
+          "range": 25.575662098903003,
+          "max_abs": 13.211934819186,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.07085,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -43.591469882909,
+          "mean": -21.508556235580492,
+          "max": -12.369630667742,
+          "range": 31.221839215167,
+          "max_abs": 43.591469882909,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.51105,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "DFIG_IFLT_C_KA",
+      "pgb": 17,
+      "out_file": "3IBR_02.out",
+      "column": 8,
+      "unit": "kA",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -5.8532317451252e-05,
+          "mean": -2.8488296270570856e-07,
+          "max": 5.818095991821e-05,
+          "range": 0.000116713277369462,
+          "max_abs": 5.8532317451252e-05,
+          "max_abs_time_s": 1.80525,
+          "max_time_s": 1.81355,
+          "min_time_s": 1.80525
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -137.13945518689,
+          "mean": -11.376629812087728,
+          "max": 87.315818625958,
+          "range": 224.455273812848,
+          "max_abs": 137.13945518689,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.12065,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -7.0515179304303e-05,
+          "mean": 1.8218414975235144e-08,
+          "max": 7.0592564877555e-05,
+          "range": 0.000141107744181858,
+          "max_abs": 7.0592564877555e-05,
+          "max_abs_time_s": 4.19565,
+          "max_time_s": 4.19565,
+          "min_time_s": 4.15415
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "DFIG_IFLT_B_KA",
+      "pgb": 18,
+      "out_file": "3IBR_02.out",
+      "column": 9,
+      "unit": "kA",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -7.1383336182839e-05,
+          "mean": 1.5763342965430462e-07,
+          "max": 7.1370584865336e-05,
+          "range": 0.000142753921048175,
+          "max_abs": 7.1383336182839e-05,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8094,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -162.86496755032,
+          "mean": -7.2279248862404515,
+          "max": 98.558851189623,
+          "range": 261.423818739943,
+          "max_abs": 162.86496755032,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.14555,
+          "min_time_s": 2.00445
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -7.1787207655612e-05,
+          "mean": -1.9873326143180686e-08,
+          "max": 7.1863662821569e-05,
+          "range": 0.000143650870477181,
+          "max_abs": 7.1863662821569e-05,
+          "max_abs_time_s": 4.5235,
+          "max_time_s": 4.5235,
+          "min_time_s": 4.5152
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "DFIG_IFLT_A_KA",
+      "pgb": 19,
+      "out_file": "3IBR_02.out",
+      "column": 10,
+      "unit": "kA",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -7.0694760317078e-05,
+          "mean": 1.2725067356137557e-07,
+          "max": 7.0434193087111e-05,
+          "range": 0.000141128953404189,
+          "max_abs": 7.0694760317078e-05,
+          "max_abs_time_s": 1.99615,
+          "max_time_s": 1.98785,
+          "min_time_s": 1.99615
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -106.30020194497,
+          "mean": 18.60456080626494,
+          "max": 197.60261891799,
+          "range": 303.90282086295997,
+          "max_abs": 197.60261891799,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.1331
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -7.2754213750602e-05,
+          "mean": 1.7768592934583461e-09,
+          "max": 7.2711461988493e-05,
+          "range": 0.000145465675739095,
+          "max_abs": 7.2754213750602e-05,
+          "max_abs_time_s": 4.85965,
+          "max_time_s": 4.83475,
+          "min_time_s": 4.85965
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "DFIG_VWIND_MS",
+      "pgb": 20,
+      "out_file": "3IBR_02.out",
+      "column": 11,
+      "unit": "m/s",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 11.0,
+          "mean": 11.0,
+          "max": 11.0,
+          "range": 0.0,
+          "max_abs": 11.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 11.0,
+          "mean": 11.0,
+          "max": 11.0,
+          "range": 0.0,
+          "max_abs": 11.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 11.0,
+          "mean": 11.0,
+          "max": 11.0,
+          "range": 0.0,
+          "max_abs": 11.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "DFIG_BRK_STATE",
+      "pgb": 21,
+      "out_file": "3IBR_03.out",
+      "column": 2,
+      "unit": "logic, 0=closed by current project convention",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "DFIG_DBLK_CMD",
+      "pgb": 22,
+      "out_file": "3IBR_03.out",
+      "column": 3,
+      "unit": "logic",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Dblk_VdcCtrl",
+      "pgb": 234,
+      "out_file": "3IBR_24.out",
+      "column": 5,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Dblk_Rotor",
+      "pgb": 235,
+      "out_file": "3IBR_24.out",
+      "column": 6,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Pwind_pu",
+      "pgb": 250,
+      "out_file": "3IBR_25.out",
+      "column": 11,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.0608601055151,
+          "mean": 1.129571976099277,
+          "max": 1.1940698992614,
+          "range": 0.13320979374630015,
+          "max_abs": 1.1940698992614,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.99615
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.47485602657032,
+          "mean": 0.8232560668747319,
+          "max": 1.0845178567758,
+          "range": 0.60966183020548,
+          "max_abs": 1.0845178567758,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.1497
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.94323475392649,
+          "mean": 0.9493013958555854,
+          "max": 0.95527920854599,
+          "range": 0.012044454619499989,
+          "max_abs": 0.95527920854599,
+          "max_abs_time_s": 4.8804,
+          "max_time_s": 4.8804,
+          "min_time_s": 4.20395
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Wpu",
+      "pgb": 254,
+      "out_file": "3IBR_26.out",
+      "column": 5,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.2032022293245,
+          "mean": 1.2056315828916249,
+          "max": 1.207405864266,
+          "range": 0.004203634941500001,
+          "max_abs": 1.207405864266,
+          "max_abs_time_s": 1.99615,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.2061590343597,
+          "mean": 1.2126319425717864,
+          "max": 1.2186223137238,
+          "range": 0.012463279364099966,
+          "max_abs": 1.2186223137238,
+          "max_abs_time_s": 2.1497,
+          "max_time_s": 2.1497,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.1998449938995,
+          "mean": 1.2000213428765283,
+          "max": 1.2002632929967,
+          "range": 0.0004182990972001477,
+          "max_abs": 1.2002632929967,
+          "max_abs_time_s": 4.10435,
+          "max_time_s": 4.10435,
+          "min_time_s": 4.7642
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Ecap_Det",
+      "pgb": 256,
+      "out_file": "3IBR_26.out",
+      "column": 7,
+      "unit": "kV candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.4496580226619,
+          "mean": 1.4497871515561043,
+          "max": 1.4499238399641,
+          "range": 0.00026581730219987776,
+          "max_abs": 1.4499238399641,
+          "max_abs_time_s": 1.98785,
+          "max_time_s": 1.98785,
+          "min_time_s": 1.83015
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.1247547686477,
+          "mean": 1.4321497587254135,
+          "max": 2.0701263781745,
+          "range": 0.9453716095267999,
+          "max_abs": 2.0701263781745,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.0169
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.4489666528205,
+          "mean": 1.4496719469466826,
+          "max": 1.4504500197009,
+          "range": 0.0014833668803999611,
+          "max_abs": 1.4504500197009,
+          "max_abs_time_s": 4.9966,
+          "max_time_s": 4.9966,
+          "min_time_s": 4.3243
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "I_RS:1",
+      "pgb": 257,
+      "out_file": "3IBR_26.out",
+      "column": 8,
+      "unit": "kA candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.34167835724804,
+          "mean": -0.0008493811855967982,
+          "max": 0.34329504450186,
+          "range": 0.6849734017499001,
+          "max_abs": 0.34329504450186,
+          "max_abs_time_s": 1.9588,
+          "max_time_s": 1.9588,
+          "min_time_s": 1.83845
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.7153289194924,
+          "mean": 0.040645747068750404,
+          "max": 1.396185915313,
+          "range": 3.1115148348054,
+          "max_abs": 1.7153289194924,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.0252,
+          "min_time_s": 2.00445
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.34242228247904,
+          "mean": -0.0008450844289153132,
+          "max": 0.34336324236835,
+          "range": 0.68578552484739,
+          "max_abs": 0.34336324236835,
+          "max_abs_time_s": 4.4488,
+          "max_time_s": 4.4488,
+          "min_time_s": 4.4903
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "I_RS:2",
+      "pgb": 258,
+      "out_file": "3IBR_26.out",
+      "column": 9,
+      "unit": "kA candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.34254598130203,
+          "mean": -0.0378578839481293,
+          "max": 0.34137727027151,
+          "range": 0.6839232515735401,
+          "max_abs": 0.34254598130203,
+          "max_abs_time_s": 1.8924,
+          "max_time_s": 1.8509,
+          "min_time_s": 1.8924
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.2381639880124,
+          "mean": -0.0760117876101607,
+          "max": 1.5603229224131,
+          "range": 2.7984869104255,
+          "max_abs": 1.5603229224131,
+          "max_abs_time_s": 2.02105,
+          "max_time_s": 2.02105,
+          "min_time_s": 2.0418
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.34047384539146,
+          "mean": 0.00032143515668490714,
+          "max": 0.33973056027393,
+          "range": 0.68020440566539,
+          "max_abs": 0.34047384539146,
+          "max_abs_time_s": 4.46125,
+          "max_time_s": 4.50275,
+          "min_time_s": 4.46125
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "I_RS:3",
+      "pgb": 259,
+      "out_file": "3IBR_26.out",
+      "column": 10,
+      "unit": "kA candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.34295234770036,
+          "mean": 0.038706928603421904,
+          "max": 0.34256914128854,
+          "range": 0.6855214889889,
+          "max_abs": 0.34295234770036,
+          "max_abs_time_s": 1.94635,
+          "max_time_s": 1.90485,
+          "min_time_s": 1.94635
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.4512724432253,
+          "mean": 0.035365798509997375,
+          "max": 1.262370182537,
+          "range": 2.7136426257623,
+          "max_abs": 1.4512724432253,
+          "max_abs_time_s": 2.0252,
+          "max_time_s": 2.04595,
+          "min_time_s": 2.0252
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.34146536876064,
+          "mean": 0.0005233224563508813,
+          "max": 0.34220475161924,
+          "range": 0.6836701203798801,
+          "max_abs": 0.34220475161924,
+          "max_abs_time_s": 4.47785,
+          "max_time_s": 4.47785,
+          "min_time_s": 4.43635
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iconv:1",
+      "pgb": 263,
+      "out_file": "3IBR_27.out",
+      "column": 4,
+      "unit": "kA candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.47541946102482,
+          "mean": 0.0016562633976582048,
+          "max": 0.47655923901943,
+          "range": 0.95197870004425,
+          "max_abs": 0.47655923901943,
+          "max_abs_time_s": 1.992,
+          "max_time_s": 1.992,
+          "min_time_s": 1.9837
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -0.4901608337314,
+          "mean": 0.03098534142054854,
+          "max": 1.0774013161612,
+          "range": 1.5675621498926,
+          "max_abs": 1.0774013161612,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.00445
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.48929889812696,
+          "mean": -0.00026590491476410433,
+          "max": 0.48924055797112,
+          "range": 0.97853945609808,
+          "max_abs": 0.48929889812696,
+          "max_abs_time_s": 4.8638,
+          "max_time_s": 4.8721,
+          "min_time_s": 4.8638
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iconv:2",
+      "pgb": 264,
+      "out_file": "3IBR_27.out",
+      "column": 5,
+      "unit": "kA candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.48385675420739,
+          "mean": -0.0016303903927694155,
+          "max": 0.48337752816551,
+          "range": 0.9672342823729,
+          "max_abs": 0.48385675420739,
+          "max_abs_time_s": 1.80525,
+          "max_time_s": 1.81355,
+          "min_time_s": 1.80525
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.5328069930015,
+          "mean": -0.045732692444780516,
+          "max": 0.66359191796591,
+          "range": 2.1963989109674102,
+          "max_abs": 1.5328069930015,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0335,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.48401180691582,
+          "mean": 0.00014703418731541217,
+          "max": 0.48401049598551,
+          "range": 0.96802230290133,
+          "max_abs": 0.48401180691582,
+          "max_abs_time_s": 4.55255,
+          "max_time_s": 4.54425,
+          "min_time_s": 4.55255
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iconv:3",
+      "pgb": 265,
+      "out_file": "3IBR_27.out",
+      "column": 6,
+      "unit": "kA candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.39824034124889,
+          "mean": -2.5868623844999456e-05,
+          "max": 0.40135335604051,
+          "range": 0.7995936972894,
+          "max_abs": 0.40135335604051,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8094
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -0.85900754937675,
+          "mean": 0.014747356285251232,
+          "max": 1.1600959101745,
+          "range": 2.01910345955125,
+          "max_abs": 1.1600959101745,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.00445,
+          "min_time_s": 2.01275
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.47831965260126,
+          "mean": 0.00011887328865356692,
+          "max": 0.4784068708273,
+          "range": 0.95672652342856,
+          "max_abs": 0.4784068708273,
+          "max_abs_time_s": 4.1334,
+          "max_time_s": 4.1334,
+          "min_time_s": 4.1417
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iq_pu_Gsc",
+      "pgb": 275,
+      "out_file": "3IBR_28.out",
+      "column": 6,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.38074508710927,
+          "mean": 0.3809341775123298,
+          "max": 0.38109865663683,
+          "range": 0.0003535695275599937,
+          "max_abs": 0.38109865663683,
+          "max_abs_time_s": 1.99615,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.28761885742289,
+          "mean": 0.32794362145273487,
+          "max": 0.46369058164703,
+          "range": 0.17607172422413997,
+          "max_abs": 0.46369058164703,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.00445,
+          "min_time_s": 2.1497
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.37270030074459,
+          "mean": 0.3786353173857713,
+          "max": 0.38408568118601,
+          "range": 0.011385380441420012,
+          "max_abs": 0.38408568118601,
+          "max_abs_time_s": 4.88455,
+          "max_time_s": 4.88455,
+          "min_time_s": 4.1417
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Id_pu_Gsc",
+      "pgb": 276,
+      "out_file": "3IBR_28.out",
+      "column": 7,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.039950149566986,
+          "mean": -0.038388898384196166,
+          "max": -0.037060078563967,
+          "range": 0.0028900710030189958,
+          "max_abs": 0.039950149566986,
+          "max_abs_time_s": 1.80525,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.80525
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.1413017177323,
+          "mean": -0.028706763048460104,
+          "max": 0.24462210741875,
+          "range": 1.38592382515105,
+          "max_abs": 1.1413017177323,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.11235,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.063044529380368,
+          "mean": -0.04478018017044869,
+          "max": -0.035323709068276,
+          "range": 0.027720820312092005,
+          "max_abs": 0.063044529380368,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.6895,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iq_ord_pu",
+      "pgb": 279,
+      "out_file": "3IBR_28.out",
+      "column": 10,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.3807452255561,
+          "mean": 0.3809339292636413,
+          "max": 0.38109701029557,
+          "range": 0.0003517847394700069,
+          "max_abs": 0.38109701029557,
+          "max_abs_time_s": 1.99615,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.28818078147967,
+          "mean": 0.32595652535263214,
+          "max": 0.38506704877018,
+          "range": 0.09688626729050998,
+          "max_abs": 0.38506704877018,
+          "max_abs_time_s": 2.0169,
+          "max_time_s": 2.0169,
+          "min_time_s": 2.1497
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.37270575760936,
+          "mean": 0.3786372838688973,
+          "max": 0.38408063846579,
+          "range": 0.011374880856430014,
+          "max_abs": 0.38408063846579,
+          "max_abs_time_s": 4.8804,
+          "max_time_s": 4.8804,
+          "min_time_s": 4.13755
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Id_ord_pu",
+      "pgb": 281,
+      "out_file": "3IBR_29.out",
+      "column": 2,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.039942483826303,
+          "mean": -0.03838607644874044,
+          "max": -0.037064203605038,
+          "range": 0.0028782802212649963,
+          "max_abs": 0.039942483826303,
+          "max_abs_time_s": 1.80525,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.80525
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.1048422520595,
+          "mean": -0.030545679227176326,
+          "max": 0.24450554331063,
+          "range": 1.34934779537013,
+          "max_abs": 1.1048422520595,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.11235,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.063025318265613,
+          "mean": -0.04477539070834463,
+          "max": -0.035312109630035,
+          "range": 0.027713208635578003,
+          "max_abs": 0.063025318265613,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.6895,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Edc_pu",
+      "pgb": 284,
+      "out_file": "3IBR_29.out",
+      "column": 5,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.99976416959973,
+          "mean": 0.9998532056704902,
+          "max": 0.9999474200637,
+          "range": 0.0001832504639699417,
+          "max_abs": 0.9999474200637,
+          "max_abs_time_s": 1.98785,
+          "max_time_s": 1.98785,
+          "min_time_s": 1.83015
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.77591377426723,
+          "mean": 0.9876851540491363,
+          "max": 1.4277799048224,
+          "range": 0.6518661305551701,
+          "max_abs": 1.4277799048224,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.0169
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.99928730749965,
+          "mean": 0.9997737550701303,
+          "max": 1.0003102578858,
+          "range": 0.0010229503861500788,
+          "max_abs": 1.0003102578858,
+          "max_abs_time_s": 4.9966,
+          "max_time_s": 4.9966,
+          "min_time_s": 4.3243
+        }
+      },
+      "confidence": "high",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Voltage_dip",
+      "pgb": 285,
+      "out_file": "3IBR_29.out",
+      "column": 6,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.918918918918919,
+          "max": 1.0,
+          "range": 1.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.01275,
+          "max_time_s": 2.01275,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Imax_pu",
+      "pgb": 288,
+      "out_file": "3IBR_29.out",
+      "column": 9,
+      "unit": "pu limit",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.2,
+          "mean": 1.2,
+          "max": 1.2,
+          "range": 0.0,
+          "max_abs": 1.2,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.2,
+          "mean": 1.2,
+          "max": 1.2,
+          "range": 0.0,
+          "max_abs": 1.2,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.2,
+          "mean": 1.2,
+          "max": 1.2,
+          "range": 0.0,
+          "max_abs": 1.2,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iqr_pu_RSC_A",
+      "pgb": 298,
+      "out_file": "3IBR_30.out",
+      "column": 9,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.25493984159063,
+          "mean": 0.2574629352658448,
+          "max": 0.2594930895147,
+          "range": 0.004553247924070025,
+          "max_abs": 0.2594930895147,
+          "max_abs_time_s": 1.992,
+          "max_time_s": 1.992,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.15379543164046,
+          "mean": 0.8078295771552838,
+          "max": 1.2510030395358,
+          "range": 1.09720760789534,
+          "max_abs": 1.2510030395358,
+          "max_abs_time_s": 2.0252,
+          "max_time_s": 2.0252,
+          "min_time_s": 2.01275
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.1695235499649,
+          "mean": 0.23117666464846548,
+          "max": 0.25731737400055,
+          "range": 0.08779382403565,
+          "max_abs": 0.25731737400055,
+          "max_abs_time_s": 4.4986,
+          "max_time_s": 4.4986,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Freq_PLL",
+      "pgb": 304,
+      "out_file": "3IBR_31.out",
+      "column": 5,
+      "unit": "Hz-like internal PLL candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 60.013502542423,
+          "mean": 60.02070667824921,
+          "max": 60.025182389797,
+          "range": 0.011679847374004737,
+          "max_abs": 60.025182389797,
+          "max_abs_time_s": 1.9671,
+          "max_time_s": 1.9671,
+          "min_time_s": 1.83845
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 51.0,
+          "mean": 59.980113782545025,
+          "max": 69.0,
+          "range": 18.0,
+          "max_abs": 69.0,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.0169
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 59.978428684055,
+          "mean": 60.00302663754025,
+          "max": 60.050002704611,
+          "range": 0.0715740205560067,
+          "max_abs": 60.050002704611,
+          "max_abs_time_s": 4.0089,
+          "max_time_s": 4.0089,
+          "min_time_s": 4.50275
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "ImaxN_d_pu",
+      "pgb": 305,
+      "out_file": "3IBR_31.out",
+      "column": 6,
+      "unit": "pu limit",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -1.1725937507207,
+          "mean": -1.1720369547408687,
+          "max": -1.1715972452609,
+          "range": 0.0009965054598000123,
+          "max_abs": 1.1725937507207,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.992,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.1787253113377,
+          "mean": -0.8496583746286157,
+          "max": -0.74777090658637,
+          "range": 0.43095440475133007,
+          "max_abs": 1.1787253113377,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.02105,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -1.1879715131142,
+          "mean": -1.1772926357801254,
+          "max": -1.1721258334882,
+          "range": 0.01584567962599981,
+          "max_abs": 1.1879715131142,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.50275,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Low_Cu_Manag",
+      "pgb": 311,
+      "out_file": "3IBR_32.out",
+      "column": 2,
+      "unit": "logic/factor candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.10380463993071,
+          "mean": 0.2480674916752449,
+          "max": 1.0,
+          "range": 0.89619536006929,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0252
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.0,
+          "mean": 1.0,
+          "max": 1.0,
+          "range": 0.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Idr_pu",
+      "pgb": 312,
+      "out_file": "3IBR_32.out",
+      "column": 3,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.0854096824968,
+          "mean": -0.0826574591393082,
+          "max": -0.080446481165009,
+          "range": 0.004963201331790998,
+          "max_abs": 0.0854096824968,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -0.79778912476192,
+          "mean": -0.12936439280633022,
+          "max": 0.58070930012898,
+          "range": 1.3784984248909,
+          "max_abs": 0.79778912476192,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.02935,
+          "min_time_s": 2.00445
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.11301498292123,
+          "mean": -0.09073837886032977,
+          "max": -0.077235778741799,
+          "range": 0.03577920417943099,
+          "max_abs": 0.11301498292123,
+          "max_abs_time_s": 4.02965,
+          "max_time_s": 4.73515,
+          "min_time_s": 4.02965
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iqr_pu_RSC_B",
+      "pgb": 314,
+      "out_file": "3IBR_32.out",
+      "column": 5,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.25493984159063,
+          "mean": 0.2574629352658448,
+          "max": 0.2594930895147,
+          "range": 0.004553247924070025,
+          "max_abs": 0.2594930895147,
+          "max_abs_time_s": 1.992,
+          "max_time_s": 1.992,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.15379543164046,
+          "mean": 0.8078295771552838,
+          "max": 1.2510030395358,
+          "range": 1.09720760789534,
+          "max_abs": 1.2510030395358,
+          "max_abs_time_s": 2.0252,
+          "max_time_s": 2.0252,
+          "min_time_s": 2.01275
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.1695235499649,
+          "mean": 0.23117666464846548,
+          "max": 0.25731737400055,
+          "range": 0.08779382403565,
+          "max_abs": 0.25731737400055,
+          "max_abs_time_s": 4.4986,
+          "max_time_s": 4.4986,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Imax_d_pu",
+      "pgb": 317,
+      "out_file": "3IBR_32.out",
+      "column": 8,
+      "unit": "pu limit",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.1715972452609,
+          "mean": 1.1720369547408687,
+          "max": 1.1725937507207,
+          "range": 0.0009965054598000123,
+          "max_abs": 1.1725937507207,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.992
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.74777090658637,
+          "mean": 0.8496583746286157,
+          "max": 1.1787253113377,
+          "range": 0.43095440475133007,
+          "max_abs": 1.1787253113377,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.02105
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.1721258334882,
+          "mean": 1.1772926357801254,
+          "max": 1.1879715131142,
+          "range": 0.01584567962599981,
+          "max_abs": 1.1879715131142,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.50275
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Crowbar current:1",
+      "pgb": 318,
+      "out_file": "3IBR_32.out",
+      "column": 9,
+      "unit": "internal current candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -3.65573548773e-06,
+          "mean": -5.473418082976027e-07,
+          "max": 3.2607162469507e-06,
+          "range": 6.9164517346807e-06,
+          "max_abs": 3.65573548773e-06,
+          "max_abs_time_s": 1.97955,
+          "max_time_s": 1.9422,
+          "min_time_s": 1.97955
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -5.7864105819045e-06,
+          "mean": 2.482545398236998e-08,
+          "max": 7.5717520688187e-06,
+          "range": 1.33581626507232e-05,
+          "max_abs": 7.5717520688187e-06,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.00445,
+          "min_time_s": 2.01275
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -3.5472138435014e-06,
+          "mean": -1.1362176989519322e-07,
+          "max": 3.1675843550561e-06,
+          "range": 6.714798198557499e-06,
+          "max_abs": 3.5472138435014e-06,
+          "max_abs_time_s": 4.7144,
+          "max_time_s": 4.7642,
+          "min_time_s": 4.7144
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Crowbar current:2",
+      "pgb": 319,
+      "out_file": "3IBR_32.out",
+      "column": 10,
+      "unit": "internal current candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -3.6690926172671e-06,
+          "mean": 1.863202571914682e-07,
+          "max": 3.2716646195748e-06,
+          "range": 6.9407572368419e-06,
+          "max_abs": 3.6690926172671e-06,
+          "max_abs_time_s": 1.94635,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.94635
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -1.018813154312e-05,
+          "mean": -2.7773468991833544e-07,
+          "max": 5.1581759239709e-06,
+          "range": 1.53463074670909e-05,
+          "max_abs": 1.018813154312e-05,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.01275,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -3.5746206818674e-06,
+          "mean": -1.0205341524919863e-07,
+          "max": 3.1916773099135e-06,
+          "range": 6.7662979917809e-06,
+          "max_abs": 3.5746206818674e-06,
+          "max_abs_time_s": 4.69365,
+          "max_time_s": 4.64385,
+          "min_time_s": 4.69365
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Crowbar current:3",
+      "pgb": 320,
+      "out_file": "3IBR_32.out",
+      "column": 11,
+      "unit": "internal current candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -3.6331154229736e-06,
+          "mean": 2.4483760858481434e-08,
+          "max": 3.2762511820817e-06,
+          "range": 6.9093666050552996e-06,
+          "max_abs": 3.6331154229736e-06,
+          "max_abs_time_s": 1.9256,
+          "max_time_s": 1.9671,
+          "min_time_s": 1.9256
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -7.6009996060426e-06,
+          "mean": 1.0871050899425832e-08,
+          "max": 8.1067753090018e-06,
+          "range": 1.5707774915044402e-05,
+          "max_abs": 8.1067753090018e-06,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.00445
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -3.5729344791872e-06,
+          "mean": -1.1114795563046641e-07,
+          "max": 3.1919258790408e-06,
+          "range": 6.764860358228e-06,
+          "max_abs": 3.5729344791872e-06,
+          "max_abs_time_s": 4.5816,
+          "max_time_s": 4.6148,
+          "min_time_s": 4.5816
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Iovercur",
+      "pgb": 321,
+      "out_file": "3IBR_33.out",
+      "column": 2,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Reset",
+      "pgb": 322,
+      "out_file": "3IBR_33.out",
+      "column": 3,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.918918918918919,
+          "max": 1.0,
+          "range": 1.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.01275,
+          "max_time_s": 2.01275,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "S1",
+      "pgb": 323,
+      "out_file": "3IBR_33.out",
+      "column": 4,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 2.0003,
+          "max_time_s": 2.0003,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Mono_out",
+      "pgb": 324,
+      "out_file": "3IBR_33.out",
+      "column": 5,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.40540540540540543,
+          "max": 1.0,
+          "range": 1.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.01275,
+          "max_time_s": 2.01275,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "Ecap",
+      "pgb": 326,
+      "out_file": "3IBR_33.out",
+      "column": 7,
+      "unit": "kV candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 1.4497299455681,
+          "mean": 1.4497823052247314,
+          "max": 1.4498599813599,
+          "range": 0.00013003579179993174,
+          "max_abs": 1.4498599813599,
+          "max_abs_time_s": 1.99615,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.83845
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 1.3332552985563,
+          "mean": 1.4315432256056702,
+          "max": 1.7615554602453,
+          "range": 0.4283001616890001,
+          "max_abs": 1.7615554602453,
+          "max_abs_time_s": 2.01275,
+          "max_time_s": 2.01275,
+          "min_time_s": 2.0833
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 1.449066217756,
+          "mean": 1.4496678863679677,
+          "max": 1.4503864915247,
+          "range": 0.00132027376869992,
+          "max_abs": 1.4503864915247,
+          "max_abs_time_s": 4.9883,
+          "max_time_s": 4.9883,
+          "min_time_s": 4.32845
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "Imagn",
+      "pgb": 327,
+      "out_file": "3IBR_33.out",
+      "column": 8,
+      "unit": "current magnitude candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.27884961777747,
+          "mean": 0.30508306231091414,
+          "max": 0.31982280185995,
+          "range": 0.04097318408247996,
+          "max_abs": 0.31982280185995,
+          "max_abs_time_s": 1.9505,
+          "max_time_s": 1.9505,
+          "min_time_s": 1.9173
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.30394385836199,
+          "mean": 0.9269263416146055,
+          "max": 1.1200719091327,
+          "range": 0.81612805077071,
+          "max_abs": 1.1200719091327,
+          "max_abs_time_s": 2.1497,
+          "max_time_s": 2.1497,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.21720228158783,
+          "mean": 0.28180927768001907,
+          "max": 0.32086430960277,
+          "range": 0.10366202801494001,
+          "max_abs": 0.32086430960277,
+          "max_abs_time_s": 4.482,
+          "max_time_s": 4.482,
+          "min_time_s": 4.0338
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "BRK_CHOP",
+      "pgb": 328,
+      "out_file": "3IBR_33.out",
+      "column": 9,
+      "unit": "logic candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.8011,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": 0.0,
+          "mean": 0.05405405405405406,
+          "max": 1.0,
+          "range": 1.0,
+          "max_abs": 1.0,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.0086,
+          "min_time_s": 2.0003
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": 0.0,
+          "mean": 0.0,
+          "max": 0.0,
+          "range": 0.0,
+          "max_abs": 0.0,
+          "max_abs_time_s": 4.0006,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.0006
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Requires GUI semantic confirmation before using as formal internal LVRT explanation."
+    },
+    {
+      "name": "TM",
+      "pgb": 229,
+      "out_file": "3IBR_23.out",
+      "column": 10,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.9924125210959,
+          "mean": -0.936950706968032,
+          "max": -0.87863058117509,
+          "range": 0.11378193992080998,
+          "max_abs": 0.9924125210959,
+          "max_abs_time_s": 1.8011,
+          "max_time_s": 1.99615,
+          "min_time_s": 1.8011
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -0.89915717950351,
+          "mean": -0.6794616824461981,
+          "max": -0.38968607176408,
+          "range": 0.50947110773943,
+          "max_abs": 0.89915717950351,
+          "max_abs_time_s": 2.0086,
+          "max_time_s": 2.1497,
+          "min_time_s": 2.0086
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.7961541656855,
+          "mean": -0.7910708820573668,
+          "max": -0.78587771904706,
+          "range": 0.010276446638439962,
+          "max_abs": 0.7961541656855,
+          "max_abs_time_s": 4.8804,
+          "max_time_s": 4.20395,
+          "min_time_s": 4.8804
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    },
+    {
+      "name": "TE",
+      "pgb": 230,
+      "out_file": "3IBR_23.out",
+      "column": 11,
+      "unit": "pu candidate",
+      "end_time_s": 4.9966,
+      "windows": {
+        "pre_1p8_2p0": {
+          "count": 48,
+          "min": -0.81209797253587,
+          "mean": -0.8075504603835073,
+          "max": -0.80169891290008,
+          "range": 0.01039905963579002,
+          "max_abs": 0.81209797253587,
+          "max_abs_time_s": 1.9837,
+          "max_time_s": 1.8094,
+          "min_time_s": 1.9837
+        },
+        "fault_2p0_2p15": {
+          "count": 37,
+          "min": -2.2439876021189,
+          "mean": -0.22397291030103242,
+          "max": 0.12028805697237,
+          "range": 2.3642756590912697,
+          "max_abs": 2.2439876021189,
+          "max_abs_time_s": 2.00445,
+          "max_time_s": 2.0335,
+          "min_time_s": 2.00445
+        },
+        "post_4p0_5p0": {
+          "count": 241,
+          "min": -0.79854201359605,
+          "mean": -0.7927867177694661,
+          "max": -0.78262260468825,
+          "range": 0.01591940890780008,
+          "max_abs": 0.79854201359605,
+          "max_abs_time_s": 4.61065,
+          "max_time_s": 4.0006,
+          "min_time_s": 4.61065
+        }
+      },
+      "confidence": "medium",
+      "limitations": "Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation."
+    }
+  ],
+  "summary_csv": "data/reference/type3_dfig_deep_fault_internal_response_summary.csv",
+  "observations": {
+    "run_end_time_s": 4.9966,
+    "poc_voltage_fault_min": 0.057864762987737,
+    "poc_voltage_fault_mean": 0.13728805500581684,
+    "edc_pu_fault_max": 1.4277799048224,
+    "edc_pu_fault_peak_time_s": 2.0086,
+    "ecap_det_fault_max_kv_candidate": 2.0701263781745,
+    "rsc_max_abs_fault_kA_candidate": 1.7153289194924,
+    "gsc_max_abs_fault_kA_candidate": 1.5328069930015,
+    "fault_current_max_abs_kA": 197.60261891799,
+    "wpu_pre_mean": 1.2056315828916249,
+    "wpu_fault_max": 1.2186223137238,
+    "wpu_post_mean": 1.2000213428765283,
+    "reset_fault_max": 1.0,
+    "mono_out_fault_max": 1.0,
+    "s1_fault_max": 0.0,
+    "iovercur_fault_max": 0.0,
+    "crowbar_current_fault_max_abs": 1.018813154312e-05,
+    "brk_chop_fault_max": 1.0,
+    "freq_pll_fault_min": 51.0,
+    "freq_pll_fault_max": 69.0
+  },
+  "conclusions": {
+    "dc_link_overvoltage_candidate": "Edc_pu peaks at 1.427780 near 2.00860 s during the 2.0-2.15 s fault, with Ecap_Det peaking at 2.070126 kV candidate. Base/unit requires GUI confirmation.",
+    "rsc_gsc_current_increase": "RSC I_RS three-phase max abs reaches 1.715329 kA candidate; GSC Iconv reaches 1.532807 kA candidate during the fault.",
+    "mechanical_speed_recovery": "Wpu mean changes from 1.205632 pre-fault to max 1.218622 during fault and 1.200021 post-fault, indicating recovery close to pre-fault value.",
+    "crowbar_interpretation": "Only Crowbar candidate response can be stated: Reset and Mono_out change, BRK_CHOP pulses, but Iovercur and S1 remain zero and Crowbar current is near zero. GUI confirmation is required before claiming Crowbar action.",
+    "gui_confirmation_needed": true
+  },
+  "manual_gui_confirmation_required": [
+    "Meaning and active direction of Crowbar_prot S1, Mono_out, Reset, and Iovercur.",
+    "Physical unit/base of Ecap_Det and Edc_pu.",
+    "Phase order/sign convention of I_RS, Iconv, and Crowbar current.",
+    "Which duplicated Iqr_pu/Pg_pu/Qg_pu channels should be used as formal interpretation channels."
+  ]
+}
