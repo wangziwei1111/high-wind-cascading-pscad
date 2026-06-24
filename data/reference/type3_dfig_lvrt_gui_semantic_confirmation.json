@@ -1,0 +1,134 @@
+{
+  "task": "Type-3 DFIG LVRT GUI signal semantic confirmation",
+  "date": "2026-06-24",
+  "constraints": {
+    "computer_use": false,
+    "pscad_gui_operated_by_codex": false,
+    "build_run": false,
+    "model_modified": false,
+    "files_modified": [
+      "docs/TYPE3_DFIG_LVRT_GUI_SEMANTIC_CONFIRMATION.md",
+      "data/reference/type3_dfig_lvrt_gui_semantic_confirmation.json"
+    ]
+  },
+  "screenshot_index": {
+    "S01": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-051c1c3f-5067-41ce-b7f9-304dbab67191.png",
+    "S02": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-43dbfd67-c5a7-46f4-8ae8-7cef7a1c71c8.png",
+    "S03": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-00bb14ff-9574-4934-9f25-20e2117c23ec.png",
+    "S04": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-9adbf338-b32f-4541-b675-35939fc94389.png",
+    "S05": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-b3456d37-3283-4670-a5da-f15b709a2e91.png",
+    "S06": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-a73edb0f-4bed-447f-b603-d22ccc1991b4.png",
+    "S07": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-8849501c-d982-444a-9502-e51b1d90c693.png",
+    "S08": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-6e598489-7a33-4d39-bb5e-6a3da5c181fd.png",
+    "S09": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-f9998793-f383-4062-b805-9cb9da3b58d1.png",
+    "S10": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-3f649936-1862-48f9-9fb5-a20651895563.png",
+    "S11": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-3be2f397-6456-44a6-9957-1070c9a0d808.png",
+    "S12": "C:/Users/24186/AppData/Local/Temp/codex-clipboard-d5ccf79f-6811-473b-9b71-c2467de78ad6.png"
+  },
+  "crowbar": {
+    "gui_path": "Type3_WTG_Avg -> DFIG_Converters_Avg -> Crowbar_prot",
+    "formal_state_signal": "S1",
+    "exported_state_signal": "S1o",
+    "logic_direction": {
+      "1": "crowbar power electronic switch commanded active/on",
+      "0": "crowbar switch inactive/off"
+    },
+    "intermediate_signals": {
+      "Iovercur": "rotor-current over-limit comparator output; not actual crowbar state",
+      "Reset": "reset/control signal in latch/monostable chain; not actual crowbar state",
+      "Mono_out": "monostable output; not final crowbar switch state"
+    },
+    "current_signal": "Crowbar current:1..3",
+    "current_semantics": "confirmed as crowbar branch current; exact sign direction not visually confirmed",
+    "static_evidence": [
+      "Crowbar_prot.f:192 Output Channel 'Iovercur'",
+      "Crowbar_prot.f:205 Output Channel 'Reset'",
+      "Crowbar_prot.f:273 Output Channel 'S1'",
+      "Crowbar_prot.f:284 Output Channel 'Mono_out'",
+      "Crowbar_prot.f:303 PESWITCH1_EXE(..., S1, ...)",
+      "Crowbar_prot.f:384 S1o = S1",
+      "Crowbar_prot.f:520-522 Icrowbar(1..3)",
+      "Crowbar_prot.f:524 Output Channel 'Crowbar current'"
+    ],
+    "deep_fault_run_interpretation": "S1 remained 0 and Crowbar current was near zero, so no confirmed crowbar conduction in the current 5 s deep-fault run."
+  },
+  "dc_link_and_chopper": {
+    "vdc_base": {
+      "value": 1.45,
+      "unit": "kV",
+      "gui_source": "Type3_WTG_Avg outer page constant connected to Vdc_Base"
+    },
+    "vdc_kv_signal": "Ecap_Det",
+    "vdc_pu_signal": "Edc_pu",
+    "edc_pu_formula": "Edc_pu = Edc / Vdc_base",
+    "deep_fault_peak": {
+      "Edc_pu": 1.427780,
+      "converted_kv": 2.070281,
+      "Ecap_Det_kv": 2.070126
+    },
+    "chopper_state_signal": "BRK_CHOP",
+    "chopper_logic_direction": {
+      "1": "chopper switch command/state active/on",
+      "0": "chopper switch inactive/off"
+    },
+    "static_evidence": [
+      "DFIG_Converters_Avg.f:342 Vdc_chop_on = 1.15 * Vdc_base",
+      "DFIG_Converters_Avg.f:369 Vdc_chop_off = 1.11 * Vdc_base",
+      "DFIG_Converters_Avg.f:553 CALL ChopperDyn(Ecap_fltrd, Vdc_chop_on, Vdc_chop_off, R_chopper)",
+      "DFIG_Converters_Avg.f:973 Output Channel 'Ecap_Det'",
+      "Grid_side_Controls.f:318 Edc_pu = Edc / Vdc_base",
+      "Chopper.f:145 Output Channel 'BRK_CHOP'"
+    ],
+    "remaining_limitations": [
+      "Physical chopper energy dissipation still requires branch current or resistor power if needed."
+    ]
+  },
+  "currents": {
+    "I_RS": {
+      "semantic": "rotor-side converter / rotor-side terminal three-phase current",
+      "source_object": "DFIG_Converters_Avg multimeter instance 1634455167",
+      "gui_direction": "arrow toward RABC terminal",
+      "phase_mapping": "vector indices 1..3 follow PSCAD three-phase vector ordering; exact A/B/C naming not separately confirmed",
+      "static_evidence": [
+        "DFIG_Converters_Avg.f:926-928 I_RS(1..3) branch currents",
+        "DFIG_Converters_Avg.f:977-980 Output Channel 'I_RS'"
+      ]
+    },
+    "Iconv": {
+      "semantic": "grid-side converter terminal three-phase current",
+      "source_object": "DFIG_Converters_Avg ammeter instance 2143509644",
+      "gui_direction": "arrow from SABC/AC-filter side toward grid-side converter",
+      "phase_mapping": "vector indices 1..3 follow PSCAD three-phase vector ordering; exact A/B/C naming not separately confirmed",
+      "static_evidence": [
+        "DFIG_Converters_Avg.f:913-915 Iconv(1..3) branch currents",
+        "DFIG_Converters_Avg.f:989-992 Output Channel 'Iconv'"
+      ]
+    },
+    "Crowbar current": {
+      "semantic": "crowbar branch current",
+      "source_object": "Crowbar_prot internal branch current measurement",
+      "gui_direction": "not visually confirmed",
+      "phase_mapping": "vector indices 1..3 follow PSCAD three-phase vector ordering; exact A/B/C naming not separately confirmed",
+      "static_evidence": [
+        "Crowbar_prot.f:520-522 Icrowbar(1..3)",
+        "Crowbar_prot.f:524-527 Output Channel 'Crowbar current'"
+      ]
+    }
+  },
+  "upgrade_recommendations": {
+    "can_upgrade": [
+      "S1 is the formal DFIG_CROWBAR_STATE signal.",
+      "Ecap_Det is DC-link voltage in kV.",
+      "Edc_pu is DC-link per-unit voltage using Vdc_base = 1.45 kV.",
+      "BRK_CHOP = 1 is chopper switch command/state active.",
+      "I_RS and Iconv are RSC and GSC terminal current channels.",
+      "Crowbar current:1..3 is crowbar branch current."
+    ],
+    "must_remain_qualified": [
+      "Exact A/B/C mapping of vector channels 1..3.",
+      "Crowbar current sign direction.",
+      "Physical chopper energy dissipation without branch current/resistor power.",
+      "No claim of crowbar action in the current 5 s deep-fault run."
+    ]
+  }
+}
