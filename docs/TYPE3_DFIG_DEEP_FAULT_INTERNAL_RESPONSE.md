@@ -1,135 +1,168 @@
-# Type-3 DFIG ??????? LVRT ??????
+# Type-3 DFIG 深三相故障内部 LVRT 响应离线解析
 
-???2026-06-24  
-???????`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46`  
-??????????? `3IBR.inf` ? `3IBR_*.out`???? PSCAD GUI?? Build/Run?????? `.pscx/.pslx/XML` ??????
+## 任务范围与数据来源
 
-## ?????????
+本文件修复了上一版 Markdown 中中文正文被问号覆盖的问题。修复方式为：以 `data/reference/type3_dfig_deep_fault_internal_response.json` 和 `data/reference/type3_dfig_deep_fault_internal_response_summary.csv` 为数值事实来源，重新生成中文可读文档。
 
-- ???????? `3IBR.gf46`?`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46\3IBR.inf`?
-- ?? `.out` ????? `4.9966 s`??? 5 s ??????? smoke test?
-- ??????????? `1.8-2.0 s`???? `2.0-2.15 s`???? `4.0-5.0 s`?
-- PGB ?????? `3IBR.inf` ?????? 10 ? PGB ???? `3IBR_NN.out`?? 1 ????????? `((PGB-1) mod 10)+2`?
-- ?? CSV ???`data/reference/type3_dfig_deep_fault_internal_response_summary.csv`?
+本次内容只描述已经存在的 5 s 深三相接地故障结果，未打开 PSCAD GUI，未执行 Build/Run，未修改任何 `.pscx/.pslx/XML`、故障参数、输出通道、控制器或主电路。
 
-## ?????
+数据来源：
 
-| Signal | PGB | File | Col | Unit | Pre mean | Fault min | Fault mean | Fault max | Fault peak abs @s | Post mean | Limitation |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| `VIBR1_2` | 2 | `3IBR_01.out` | 3 | pu candidate | 0.99687637 | 0.05786476 | 0.13728806 | 0.98717140 | 2.000300 | 0.99696545 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `PIBR1_2` | 4 | `3IBR_01.out` | 5 | MW | 202.089 | -227.880 | -150.934 | 196.832 | 2.029350 | 199.197 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `QIBR1_2` | 6 | `3IBR_01.out` | 7 | MVAr | -13.826583 | -13.211935 | 3.924918 | 12.363727 | 2.000300 | -21.508556 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `SPD30` | 1 | `3IBR_01.out` | 2 | Hz candidate | 60.000000 | 60.000000 | 60.000000 | 60.000000 | 2.000300 | 60.000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `DFIG_IFLT_A_KA` | 19 | `3IBR_02.out` | 10 | kA | 0.00000013 | -106.300 | 18.604561 | 197.603 | 2.008600 | 0.00000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `DFIG_IFLT_B_KA` | 18 | `3IBR_02.out` | 9 | kA | 0.00000016 | -162.865 | -7.227925 | 98.558851 | 2.004450 | -0.00000002 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `DFIG_IFLT_C_KA` | 17 | `3IBR_02.out` | 8 | kA | -0.00000028 | -137.139 | -11.376630 | 87.315819 | 2.008600 | 0.00000002 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `DFIG_DBLK_CMD` | 22 | `3IBR_03.out` | 3 | logic | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `DFIG_BRK_STATE` | 21 | `3IBR_03.out` | 2 | logic, 0=closed by current project convention | 0.00000000 | 0.00000000 | 0.00000000 | 0.00000000 | 2.000300 | 0.00000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `DFIG_VWIND_MS` | 20 | `3IBR_02.out` | 11 | m/s | 11.000000 | 11.000000 | 11.000000 | 11.000000 | 2.000300 | 11.000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+- 运行结果目录：`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46`
+- 最新映射文件：`C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.gf46\3IBR.inf`
+- 输出数据：`3IBR_*.out`
+- JSON：`data/reference/type3_dfig_deep_fault_internal_response.json`
+- CSV：`data/reference/type3_dfig_deep_fault_internal_response_summary.csv`
+- 相关背景文档：`docs/TYPE3_DFIG_DEEP_FAULT_5S_SMOKE_TEST.md`、`docs/TYPE3_DFIG_LVRT_INTERNAL_SIGNAL_AUDIT.md`
 
-??????`VIBR1_2` ??????? `0.057865`???? `0.137288`????????????`DFIG_IFLT_A/B/C_KA` ?????????????? RSC?GSC???? Crowbar ?????
+当前 `.out` 数据末尾时间约为 `4.996600 s`，对应 5 s 深三相故障 smoke test。
 
-## DC-link ??
+## PGB 映射方法与统计窗口
 
-| Signal | PGB | File | Col | Unit | Pre mean | Fault min | Fault mean | Fault max | Fault peak abs @s | Post mean | Limitation |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| `Ecap_Det` | 256 | `3IBR_26.out` | 7 | kV candidate | 1.449787 | 1.124755 | 1.432150 | 2.070126 | 2.008600 | 1.449672 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Edc_pu` | 284 | `3IBR_29.out` | 5 | pu candidate | 0.99985321 | 0.77591377 | 0.98768515 | 1.427780 | 2.008600 | 0.99977376 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Ecap` | 326 | `3IBR_33.out` | 7 | kV candidate | 1.449782 | 1.333255 | 1.431543 | 1.761555 | 2.012750 | 1.449668 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `BRK_CHOP` | 328 | `3IBR_33.out` | 9 | logic candidate | 0.00000000 | 0.00000000 | 0.05405405 | 1.000000 | 2.008600 | 0.00000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
+PGB 到输出文件的映射重新根据当前 `3IBR.inf` 建立，没有沿用旧列号假设。映射规则为：
 
-?????`Edc_pu` ??????? `1.427780`?????? `2.00860 s`?`Ecap_Det` ??? `2.070126` kV candidate?????? DC-link ????/?????? `Ecap_Det` ?????? `Edc_pu` ????? GUI ??????????????
+- 每 10 个 PGB 写入一个 `.out` 文件；
+- `PGB(n)` 对应文件 `3IBR_{floor((n-1)/10)+1:02d}.out`；
+- `.out` 第 1 列为时间；
+- 数据列为 `((PGB-1) mod 10)+2`。
 
-## Crowbar ? Chopper ????
+统计窗口固定为：
 
-| Signal | PGB | File | Col | Unit | Pre mean | Fault min | Fault mean | Fault max | Fault peak abs @s | Post mean | Limitation |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| `Iovercur` | 321 | `3IBR_33.out` | 2 | logic candidate | 0.00000000 | 0.00000000 | 0.00000000 | 0.00000000 | 2.000300 | 0.00000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Reset` | 322 | `3IBR_33.out` | 3 | logic candidate | 0.00000000 | 0.00000000 | 0.91891892 | 1.000000 | 2.012750 | 0.00000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `S1` | 323 | `3IBR_33.out` | 4 | logic candidate | 0.00000000 | 0.00000000 | 0.00000000 | 0.00000000 | 2.000300 | 0.00000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Mono_out` | 324 | `3IBR_33.out` | 5 | logic candidate | 0.00000000 | 0.00000000 | 0.40540541 | 1.000000 | 2.012750 | 0.00000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Crowbar current:1` | 318 | `3IBR_32.out` | 9 | internal current candidate | -0.00000055 | -0.00000579 | 0.00000002 | 0.00000757 | 2.004450 | -0.00000011 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Crowbar current:2` | 319 | `3IBR_32.out` | 10 | internal current candidate | 0.00000019 | -0.00001019 | -0.00000028 | 0.00000516 | 2.008600 | -0.00000010 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Crowbar current:3` | 320 | `3IBR_32.out` | 11 | internal current candidate | 0.00000002 | -0.00000760 | 0.00000001 | 0.00000811 | 2.008600 | -0.00000011 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `BRK_CHOP` | 328 | `3IBR_33.out` | 9 | logic candidate | 0.00000000 | 0.00000000 | 0.05405405 | 1.000000 | 2.008600 | 0.00000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Imagn` | 327 | `3IBR_33.out` | 8 | current magnitude candidate | 0.30508306 | 0.30394386 | 0.92692634 | 1.120072 | 2.149700 | 0.28180928 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+- 故障前：`1.8–2.0 s`
+- 故障中：`2.0–2.15 s`
+- 故障后：`4.0–5.0 s`
 
-??????`Reset` ? `Mono_out` ?????? 0/1 ???`BRK_CHOP` ????????? `Iovercur=0`?`S1=0`??? `Crowbar current` ??????  
-????????????Crowbar/???????????? GUI ?? `S1/Mono_out/Reset/Iovercur` ?????? active-high/active-low ??????? Crowbar ????
+## POC 外部响应概览
 
-## RSC ??
+| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
+|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `VIBR1_2` | 2 | `3IBR_01.out` | 3 | pu candidate | 0.996876 | 0.057865 | 0.137288 | 0.987171 | 0.987171 | 2.000300 | 0.996965 | high |
+| `PIBR1_2` | 4 | `3IBR_01.out` | 5 | MW | 202.089 | -227.880 | -150.934 | 196.832 | 227.880 | 2.029350 | 199.197 | high |
+| `QIBR1_2` | 6 | `3IBR_01.out` | 7 | MVAr | -13.826583 | -13.211935 | 3.924918 | 12.363727 | 13.211935 | 2.000300 | -21.508556 | high |
+| `SPD30` | 1 | `3IBR_01.out` | 2 | Hz candidate | 60.000000 | 60.000000 | 60.000000 | 60.000000 | 60.000000 | 2.000300 | 60.000000 | medium |
+| `DFIG_IFLT_A_KA` | 19 | `3IBR_02.out` | 10 | kA | 0.000000 | -106.300 | 18.604561 | 197.603 | 197.603 | 2.008600 | 0.000000 | high |
+| `DFIG_IFLT_B_KA` | 18 | `3IBR_02.out` | 9 | kA | 0.000000 | -162.865 | -7.227925 | 98.558851 | 162.865 | 2.004450 | -0.000000 | high |
+| `DFIG_IFLT_C_KA` | 17 | `3IBR_02.out` | 8 | kA | -0.000000 | -137.139 | -11.376630 | 87.315819 | 137.139 | 2.008600 | 0.000000 | high |
+| `DFIG_DBLK_CMD` | 22 | `3IBR_03.out` | 3 | logic | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
+| `DFIG_BRK_STATE` | 21 | `3IBR_03.out` | 2 | logic, 0=closed by current project convention | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 2.000300 | 0.000000 | medium |
+| `DFIG_VWIND_MS` | 20 | `3IBR_02.out` | 11 | m/s | 11.000000 | 11.000000 | 11.000000 | 11.000000 | 11.000000 | 2.000300 | 11.000000 | medium |
 
-| Signal | PGB | File | Col | Unit | Pre mean | Fault min | Fault mean | Fault max | Fault peak abs @s | Post mean | Limitation |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| `I_RS:1` | 257 | `3IBR_26.out` | 8 | kA candidate | -0.00084938 | -1.715329 | 0.04064575 | 1.396186 | 2.004450 | -0.00084508 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `I_RS:2` | 258 | `3IBR_26.out` | 9 | kA candidate | -0.03785788 | -1.238164 | -0.07601179 | 1.560323 | 2.021050 | 0.00032144 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `I_RS:3` | 259 | `3IBR_26.out` | 10 | kA candidate | 0.03870693 | -1.451272 | 0.03536580 | 1.262370 | 2.025200 | 0.00052332 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Idr_pu` | 312 | `3IBR_32.out` | 3 | pu candidate | -0.08265746 | -0.79778912 | -0.12936439 | 0.58070930 | 2.004450 | -0.09073838 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Iqr_pu_RSC_A` | 298 | `3IBR_30.out` | 9 | pu candidate | 0.25746294 | 0.15379543 | 0.80782958 | 1.251003 | 2.025200 | 0.23117666 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Iqr_pu_RSC_B` | 314 | `3IBR_32.out` | 5 | pu candidate | 0.25746294 | 0.15379543 | 0.80782958 | 1.251003 | 2.025200 | 0.23117666 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Imax_pu` | 288 | `3IBR_29.out` | 9 | pu limit | 1.200000 | 1.200000 | 1.200000 | 1.200000 | 2.000300 | 1.200000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Imax_d_pu` | 317 | `3IBR_32.out` | 8 | pu limit | 1.172037 | 0.74777091 | 0.84965837 | 1.178725 | 2.008600 | 1.177293 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `ImaxN_d_pu` | 305 | `3IBR_31.out` | 6 | pu limit | -1.172037 | -1.178725 | -0.84965837 | -0.74777091 | 2.008600 | -1.177293 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Low_Cu_Manag` | 311 | `3IBR_32.out` | 2 | logic/factor candidate | 1.000000 | 0.10380464 | 0.24806749 | 1.000000 | 2.000300 | 1.000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Voltage_dip` | 285 | `3IBR_29.out` | 6 | logic candidate | 0.00000000 | 0.00000000 | 0.91891892 | 1.000000 | 2.012750 | 0.00000000 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+已确认事实：`VIBR1_2` 在故障中最低约 `0.057865`，故障中均值约 `0.137288`，说明本次 0.01 ohm 三相接地故障造成了深电压跌落。`PIBR1_2` 故障后均值约 `199.197 MW`，`VIBR1_2` 故障后均值约 `0.996965`，说明故障清除后 POC 外部量恢复到接近无故障运行状态。
 
-?????RSC ?????? `I_RS:1..3` ???????????? `1.715329` kA candidate??????????`Voltage_dip` ? `Low_Cu_Manag` ????????????? RSC ??????/???????????`Iqr_pu` ??? PGB????????? GUI ???
+限制说明：`DFIG_IFLT_A/B/C_KA` 是新加三相故障元件的故障电流输出，不能替代 RSC 电流、GSC 电流、转子电流或 Crowbar 电流。`SPD30` 是系统频率候选，不能替代 Type-3 内部 `Freq_PLL`。
 
-## GSC ??
+## DC-link 与 chopper 响应
 
-| Signal | PGB | File | Col | Unit | Pre mean | Fault min | Fault mean | Fault max | Fault peak abs @s | Post mean | Limitation |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| `Iconv:1` | 263 | `3IBR_27.out` | 4 | kA candidate | 0.00165626 | -0.49016083 | 0.03098534 | 1.077401 | 2.008600 | -0.00026590 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Iconv:2` | 264 | `3IBR_27.out` | 5 | kA candidate | -0.00163039 | -1.532807 | -0.04573269 | 0.66359192 | 2.008600 | 0.00014703 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Iconv:3` | 265 | `3IBR_27.out` | 6 | kA candidate | -0.00002587 | -0.85900755 | 0.01474736 | 1.160096 | 2.004450 | 0.00011887 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Id_pu_Gsc` | 276 | `3IBR_28.out` | 7 | pu candidate | -0.03838890 | -1.141302 | -0.02870676 | 0.24462211 | 2.008600 | -0.04478018 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Iq_pu_Gsc` | 275 | `3IBR_28.out` | 6 | pu candidate | 0.38093418 | 0.28761886 | 0.32794362 | 0.46369058 | 2.004450 | 0.37863532 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Id_ord_pu` | 281 | `3IBR_29.out` | 2 | pu candidate | -0.03838608 | -1.104842 | -0.03054568 | 0.24450554 | 2.008600 | -0.04477539 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Iq_ord_pu` | 279 | `3IBR_28.out` | 10 | pu candidate | 0.38093393 | 0.28818078 | 0.32595653 | 0.38506705 | 2.016900 | 0.37863728 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
+| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
+|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `Edc_pu` | 284 | `3IBR_29.out` | 5 | pu candidate | 0.999853 | 0.775914 | 0.987685 | 1.427780 | 1.427780 | 2.008600 | 0.999774 | high |
+| `Ecap_Det` | 256 | `3IBR_26.out` | 7 | kV candidate | 1.449787 | 1.124755 | 1.432150 | 2.070126 | 2.070126 | 2.008600 | 1.449672 | high |
+| `Ecap` | 326 | `3IBR_33.out` | 7 | kV candidate | 1.449782 | 1.333255 | 1.431543 | 1.761555 | 1.761555 | 2.012750 | 1.449668 | medium |
+| `BRK_CHOP` | 328 | `3IBR_33.out` | 9 | logic candidate | 0.000000 | 0.000000 | 0.054054 | 1.000000 | 1.000000 | 2.008600 | 0.000000 | medium |
 
-?????GSC ?????? `Iconv:1..3` ???????????? `1.532807` kA candidate?`Id_pu_Gsc/Id_ord_pu` ?????????????????? dq ????? GUI ???
+静态推断：`Edc_pu` 在故障窗口内峰值约 `1.427780`，峰值时刻约 `2.008600 s`；`Ecap_Det` 峰值约 `2.070126 kV candidate`。因此可以描述为 DC-link 在深电压跌落期间出现明显抬升/过压候选响应。
 
-## ????????
+`BRK_CHOP` 在故障窗口内出现变化，说明 chopper 相关逻辑存在候选响应。但在没有通过 PSCAD GUI 确认 `BRK_CHOP` 的 0/1 逻辑方向之前，不能写成“chopper 已确定投入”。
 
-| Signal | PGB | File | Col | Unit | Pre mean | Fault min | Fault mean | Fault max | Fault peak abs @s | Post mean | Limitation |
-|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| `Wpu` | 254 | `3IBR_26.out` | 5 | pu candidate | 1.205632 | 1.206159 | 1.212632 | 1.218622 | 2.149700 | 1.200021 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Pwind_pu` | 250 | `3IBR_25.out` | 11 | pu candidate | 1.129572 | 0.47485603 | 0.82325607 | 1.084518 | 2.008600 | 0.94930140 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `TM` | 229 | `3IBR_23.out` | 10 | pu candidate | -0.93695071 | -0.89915718 | -0.67946168 | -0.38968607 | 2.008600 | -0.79107088 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `TE` | 230 | `3IBR_23.out` | 11 | pu candidate | -0.80755046 | -2.243988 | -0.22397291 | 0.12028806 | 2.004450 | -0.79278672 | Mapped from latest inf/out; physical sign and exact base may still require GUI confirmation. |
-| `Dblk_VdcCtrl` | 234 | `3IBR_24.out` | 5 | logic candidate | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Dblk_Rotor` | 235 | `3IBR_24.out` | 6 | logic candidate | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
-| `Freq_PLL` | 304 | `3IBR_31.out` | 5 | Hz-like internal PLL candidate | 60.020707 | 51.000000 | 59.980114 | 69.000000 | 2.008600 | 60.003027 | Requires GUI semantic confirmation before using as formal internal LVRT explanation. |
+## Crowbar 候选响应
 
-??????`Wpu` ?????? `1.205632`??????? `1.218622`??????? `1.200021`???????????????????????????  
-?????`Freq_PLL` ?????? `51.000` ? `69.000` ??????? Type-3 ?? PLL ??????? `SPD30` ?????
+| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
+|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `Reset` | 322 | `3IBR_33.out` | 3 | logic candidate | 0.000000 | 0.000000 | 0.918919 | 1.000000 | 1.000000 | 2.012750 | 0.000000 | medium |
+| `Mono_out` | 324 | `3IBR_33.out` | 5 | logic candidate | 0.000000 | 0.000000 | 0.405405 | 1.000000 | 1.000000 | 2.012750 | 0.000000 | medium |
+| `Iovercur` | 321 | `3IBR_33.out` | 2 | logic candidate | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 2.000300 | 0.000000 | medium |
+| `S1` | 323 | `3IBR_33.out` | 4 | logic candidate | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 2.000300 | 0.000000 | medium |
+| `Crowbar current:1` | 318 | `3IBR_32.out` | 9 | internal current candidate | -0.000001 | -0.000006 | 0.000000 | 0.000008 | 0.000008 | 2.004450 | -0.000000 | medium |
+| `Crowbar current:2` | 319 | `3IBR_32.out` | 10 | internal current candidate | 0.000000 | -0.000010 | -0.000000 | 0.000005 | 0.000010 | 2.008600 | -0.000000 | medium |
+| `Crowbar current:3` | 320 | `3IBR_32.out` | 11 | internal current candidate | 0.000000 | -0.000008 | 0.000000 | 0.000008 | 0.000008 | 2.008600 | -0.000000 | medium |
+| `Imagn` | 327 | `3IBR_33.out` | 8 | current magnitude candidate | 0.305083 | 0.303944 | 0.926926 | 1.120072 | 1.120072 | 2.149700 | 0.281809 | medium |
 
-## ? POC ????????
+已确认事实：`Reset` 与 `Mono_out` 在故障窗口内发生 0/1 变化；`Iovercur=0`，`S1=0`；`Crowbar current:1..3` 的最大绝对值约 `1.018813e-05`，数值近零。
 
-- `VIBR1_2` ? `2.0-2.15 s` ??????? `0.057865`?
-- ???????????? `197.603 kA`?????????????
-- `Edc_pu` ???`Ecap_Det` ???RSC/GSC ??????????????????? POC ?????????
-- ??? `4.0-5.0 s`?`PIBR1_2` ???? `199.197 MW`?`VIBR1_2` ???? `0.996965`?
+静态推断：当前只能说“Crowbar 相关逻辑候选有响应”。由于 `S1`、`Mono_out`、`Reset`、`Iovercur` 的实际状态语义和 active-high/active-low 方向尚未经过 GUI 确认，而且 Crowbar current 近零，所以没有足够证据证明 Crowbar 实际导通。
 
-## ????? / ???? / ?????
+## RSC/GSC 电流与限流候选响应
 
-??????
-- ?????????? `3IBR.inf` ? `3IBR_*.out`?????????
-- ?? POC ???P/Q??????Dblk/Vwind/BRK ?????????
-- ?? Type-3 ?? PGB ?????????????? DC-link?RSC/GSC ???Crowbar ???Chopper??????PLL ???
+### RSC 侧
 
-?????
-- DC-link ????????/?????
-- RSC/GSC ??????????????
-- ?????? `Wpu` ???????????????
-- Crowbar ??????????????? Crowbar ????
+| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
+|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `I_RS:1` | 257 | `3IBR_26.out` | 8 | kA candidate | -0.000849 | -1.715329 | 0.040646 | 1.396186 | 1.715329 | 2.004450 | -0.000845 | high |
+| `I_RS:2` | 258 | `3IBR_26.out` | 9 | kA candidate | -0.037858 | -1.238164 | -0.076012 | 1.560323 | 1.560323 | 2.021050 | 0.000321 | high |
+| `I_RS:3` | 259 | `3IBR_26.out` | 10 | kA candidate | 0.038707 | -1.451272 | 0.035366 | 1.262370 | 1.451272 | 2.025200 | 0.000523 | high |
+| `Idr_pu` | 312 | `3IBR_32.out` | 3 | pu candidate | -0.082657 | -0.797789 | -0.129364 | 0.580709 | 0.797789 | 2.004450 | -0.090738 | medium |
+| `Iqr_pu_RSC_A` | 298 | `3IBR_30.out` | 9 | pu candidate | 0.257463 | 0.153795 | 0.807830 | 1.251003 | 1.251003 | 2.025200 | 0.231177 | medium |
+| `Iqr_pu_RSC_B` | 314 | `3IBR_32.out` | 5 | pu candidate | 0.257463 | 0.153795 | 0.807830 | 1.251003 | 1.251003 | 2.025200 | 0.231177 | medium |
+| `Voltage_dip` | 285 | `3IBR_29.out` | 6 | logic candidate | 0.000000 | 0.000000 | 0.918919 | 1.000000 | 1.000000 | 2.012750 | 0.000000 | medium |
+| `Low_Cu_Manag` | 311 | `3IBR_32.out` | 2 | logic/factor candidate | 1.000000 | 0.103805 | 0.248067 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
+| `Imax_pu` | 288 | `3IBR_29.out` | 9 | pu limit | 1.200000 | 1.200000 | 1.200000 | 1.200000 | 1.200000 | 2.000300 | 1.200000 | medium |
+| `Imax_d_pu` | 317 | `3IBR_32.out` | 8 | pu limit | 1.172037 | 0.747771 | 0.849658 | 1.178725 | 1.178725 | 2.008600 | 1.177293 | medium |
+| `ImaxN_d_pu` | 305 | `3IBR_31.out` | 6 | pu limit | -1.172037 | -1.178725 | -0.849658 | -0.747771 | 1.178725 | 2.008600 | -1.177293 | medium |
 
-???????????? GUI ??????
-1. `S1`?`Mono_out`?`Reset`?`Iovercur` ??????? Crowbar ????? 1/0 ???
-2. `Ecap_Det` ????`Edc_pu` ??????????????? DC-link kV/pu?
-3. `I_RS:1..3`?`Iconv:1..3`?`Crowbar current:1..3` ??????????
-4. ??? `Iqr_pu/Pg_pu/Qg_pu` ??????????????
+静态推断：`I_RS:1..3` 在故障窗口内三相最大绝对值约 `1.715329 kA candidate`，明显高于故障前平稳状态。`Voltage_dip`、`Low_Cu_Manag`、`Imax_d_pu` 等量在故障窗口内变化，支持 RSC 控制进入电压跌落/限流相关候选响应。
 
-## ??
+### GSC 侧
 
-?? 5 s ??????????????????? POC ????????Type-3 ???????????? P/V ?????????? DC-link ???RSC/GSC ????????????Crowbar ????????????????????????? GUI ?????????????????????
+| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
+|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `Iconv:1` | 263 | `3IBR_27.out` | 4 | kA candidate | 0.001656 | -0.490161 | 0.030985 | 1.077401 | 1.077401 | 2.008600 | -0.000266 | high |
+| `Iconv:2` | 264 | `3IBR_27.out` | 5 | kA candidate | -0.001630 | -1.532807 | -0.045733 | 0.663592 | 1.532807 | 2.008600 | 0.000147 | high |
+| `Iconv:3` | 265 | `3IBR_27.out` | 6 | kA candidate | -0.000026 | -0.859008 | 0.014747 | 1.160096 | 1.160096 | 2.004450 | 0.000119 | high |
+| `Id_pu_Gsc` | 276 | `3IBR_28.out` | 7 | pu candidate | -0.038389 | -1.141302 | -0.028707 | 0.244622 | 1.141302 | 2.008600 | -0.044780 | medium |
+| `Iq_pu_Gsc` | 275 | `3IBR_28.out` | 6 | pu candidate | 0.380934 | 0.287619 | 0.327944 | 0.463691 | 0.463691 | 2.004450 | 0.378635 | medium |
+| `Id_ord_pu` | 281 | `3IBR_29.out` | 2 | pu candidate | -0.038386 | -1.104842 | -0.030546 | 0.244506 | 1.104842 | 2.008600 | -0.044775 | medium |
+| `Iq_ord_pu` | 279 | `3IBR_28.out` | 10 | pu candidate | 0.380934 | 0.288181 | 0.325957 | 0.385067 | 0.385067 | 2.016900 | 0.378637 | medium |
+
+静态推断：`Iconv:1..3` 在故障窗口内三相最大绝对值约 `1.532807 kA candidate`。`Id_pu_Gsc / Iq_pu_Gsc`、`Id_ord_pu / Iq_ord_pu` 在故障窗口内也存在暂态变化，可作为 GSC 电流控制响应候选量。
+
+限制说明：`I_RS`、`Iconv`、`Id/Iq` 相关量的相序、正方向、物理基准和 dq 轴定义仍需 PSCAD GUI 手动确认。`Iqr_pu` 存在重复候选通道，正式解释时不能未经确认任选其中一路。
+
+## 机械侧、内部闭锁与 PLL 响应
+
+| 信号 | PGB | .out | 列 | 单位/语义 | 故障前均值 | 故障中最小 | 故障中均值 | 故障中最大 | 故障中最大绝对值 | 峰值时刻(s) | 故障后均值 | 置信度 |
+|---|---:|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `Wpu` | 254 | `3IBR_26.out` | 5 | pu candidate | 1.205632 | 1.206159 | 1.212632 | 1.218622 | 1.218622 | 2.149700 | 1.200021 | high |
+| `Pwind_pu` | 250 | `3IBR_25.out` | 11 | pu candidate | 1.129572 | 0.474856 | 0.823256 | 1.084518 | 1.084518 | 2.008600 | 0.949301 | medium |
+| `TM` | 229 | `3IBR_23.out` | 10 | pu candidate | -0.936951 | -0.899157 | -0.679462 | -0.389686 | 0.899157 | 2.008600 | -0.791071 | medium |
+| `TE` | 230 | `3IBR_23.out` | 11 | pu candidate | -0.807550 | -2.243988 | -0.223973 | 0.120288 | 2.243988 | 2.004450 | -0.792787 | medium |
+| `Dblk_VdcCtrl` | 234 | `3IBR_24.out` | 5 | logic candidate | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
+| `Dblk_Rotor` | 235 | `3IBR_24.out` | 6 | logic candidate | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 1.000000 | 2.000300 | 1.000000 | medium |
+| `Freq_PLL` | 304 | `3IBR_31.out` | 5 | Hz-like internal PLL candidate | 60.020707 | 51.000000 | 59.980114 | 69.000000 | 69.000000 | 2.008600 | 60.003027 | medium |
+
+已确认事实：`Wpu` 故障前均值约 `1.205632`，故障中最大约 `1.218622`，故障后均值约 `1.200021`。这说明机械转速候选量在故障清除后恢复到接近故障前水平。
+
+`Dblk_VdcCtrl` 与 `Dblk_Rotor` 在该试验中保持其当前逻辑值。它们是 Type-3 内部闭锁候选状态，不能与外部 `DFIG_DBLK_CMD` 混为一谈。
+
+`Freq_PLL` 在故障窗口内约 `51.000–69.000`，只能称为 Type-3 内部 PLL 候选输出，不能与 `SPD30` 系统频率候选混用。
+
+## 已确认事实、静态推断与待 GUI 确认事项
+
+已确认事实：
+
+- 当前 5 s 深故障结果可以从 `3IBR.inf` 与 `3IBR_*.out` 离线解析，不需要重新运行 PSCAD。
+- POC 外部量显示深电压跌落，故障清除后 P/V 恢复。
+- 当前输出文件中已经存在 DC-link、RSC/GSC 电流、Crowbar 候选、chopper 候选、机械侧和 PLL 候选通道。
+
+静态推断：
+
+- `Edc_pu` 与 `Ecap_Det` 支持 DC-link 明显抬升/过压候选响应。
+- `I_RS:1..3` 与 `Iconv:1..3` 支持 RSC/GSC 电流在深故障期间显著增大。
+- `Wpu` 支持机械转速在故障后恢复到接近故障前水平。
+- Crowbar 相关逻辑有候选响应，但当前证据不足以证明 Crowbar 实际导通。
+
+待 GUI 确认事项：
+
+1. `S1`、`Mono_out`、`Reset`、`Iovercur` 中哪个才代表 Crowbar 实际状态，以及 0/1 含义。
+2. `Ecap_Det` 与 `Edc_pu` 的物理单位、基准和取样位置。
+3. `I_RS`、`Iconv`、`Crowbar current` 的相序、正方向和单位。
+4. 重复的 `Iqr_pu/Pg_pu/Qg_pu` 候选通道中哪一组应作为正式解释通道。
+
+## 结论与限制
+
+本次 5 s 深三相故障已经呈现出一条可解释的候选响应链：POC 深电压跌落，DC-link 抬升候选，RSC/GSC 电流显著增大，故障后 POC 电压、有功功率和机械转速候选量恢复。
+
+限制必须保留：Crowbar 的实际动作状态仍未确认，不能作为确定结论；`Ecap_Det/Edc_pu` 的单位与基准、RSC/GSC/Crowbar 电流的方向和相序也需要 GUI 语义确认。下一阶段应优先做手把手 GUI 语义确认，而不是继续修改模型或新增控制逻辑。
+
+## 编码核验记录
+
+本文件由 `data/reference/type3_dfig_deep_fault_internal_response.json` 与 `data/reference/type3_dfig_deep_fault_internal_response_summary.csv` 重建，并以 UTF-8 写入。重建原因是上一版文件虽可 UTF-8 严格解码，但中文正文已经被大量连续 `?` 覆盖，属于真实文本损坏而非终端显示问题。
