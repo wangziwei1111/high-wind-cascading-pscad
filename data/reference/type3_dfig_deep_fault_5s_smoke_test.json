@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "test_name": "Type-3 DFIG 5 s deep three-phase-to-ground fault smoke test",
+  "date_local": "2026-06-24",
+  "pscad_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "generated_directory": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46",
+  "pre_test_commit": "7455bb3",
+  "model_actions_summary": [
+    "Placed Three Phase Fault on Type-3 22 kV POC/collector-side branch between the POC meter area and BRK_DFIG.",
+    "Connected Timed Fault Logic to Three Phase Fault control input.",
+    "Configured ABC-to-ground internal fault, ON resistance 0.01 ohm, OFF resistance 1.0E6 ohm.",
+    "Added three fault-current output channels via IFLT_DFIG_A/B/C data labels."
+  ],
+  "fault_configuration": {
+    "component": "Three Phase Fault",
+    "fault_type_control": "Internal",
+    "fault_type": "ABC-to-ground",
+    "clear_possible_at_any_current": "No",
+    "neutral_grounded": "Yes",
+    "graphics_display": "Single line view",
+    "fault_on_resistance_ohm": 0.01,
+    "fault_off_resistance_ohm": 1000000.0,
+    "time_to_apply_fault_s": 2.0,
+    "duration_of_fault_s": 0.15,
+    "fault_window_s": [
+      2.0,
+      2.15
+    ],
+    "run_duration_s": 5.0,
+    "solution_time_step_us": 5
+  },
+  "build_run_status": {
+    "user_screenshot_observation": "0 Errors, 0 Warnings, EMTDC run completed",
+    "latest_output_end_time_s": 4.9966,
+    "passed_smoke_test": true
+  },
+  "channel_mapping": [
+    {
+      "name": "SPD30",
+      "pgb": 1,
+      "out_file": "3IBR_01.out",
+      "column": 2,
+      "unit": "Hz candidate",
+      "meaning": "system frequency candidate; not Type-3 internal PLL"
+    },
+    {
+      "name": "VIBR1_2",
+      "pgb": 2,
+      "out_file": "3IBR_01.out",
+      "column": 3,
+      "unit": "pu-like",
+      "meaning": "Type-3 22 kV POC voltage candidate"
+    },
+    {
+      "name": "PIBR1_2",
+      "pgb": 4,
+      "out_file": "3IBR_01.out",
+      "column": 5,
+      "unit": "MW",
+      "meaning": "Type-3 branch active power at existing meter orientation"
+    },
+    {
+      "name": "QIBR1_2",
+      "pgb": 6,
+      "out_file": "3IBR_01.out",
+      "column": 7,
+      "unit": "MVAr",
+      "meaning": "Type-3 branch reactive power at existing meter orientation"
+    },
+    {
+      "name": "DFIG_IFLT_C_KA",
+      "pgb": 17,
+      "out_file": "3IBR_02.out",
+      "column": 8,
+      "unit": "kA",
+      "meaning": "Three Phase Fault phase C current output"
+    },
+    {
+      "name": "DFIG_IFLT_B_KA",
+      "pgb": 18,
+      "out_file": "3IBR_02.out",
+      "column": 9,
+      "unit": "kA",
+      "meaning": "Three Phase Fault phase B current output"
+    },
+    {
+      "name": "DFIG_IFLT_A_KA",
+      "pgb": 19,
+      "out_file": "3IBR_02.out",
+      "column": 10,
+      "unit": "kA",
+      "meaning": "Three Phase Fault phase A current output"
+    },
+    {
+      "name": "DFIG_VWIND_MS",
+      "pgb": 20,
+      "out_file": "3IBR_02.out",
+      "column": 11,
+      "unit": "m/s",
+      "meaning": "external Vwind into Type3_WTG_Avg"
+    },
+    {
+      "name": "DFIG_BRK_STATE",
+      "pgb": 21,
+      "out_file": "3IBR_03.out",
+      "column": 2,
+      "unit": "logic",
+      "meaning": "BRK_DFIG breaker A status; current convention 0=closed"
+    },
+    {
+      "name": "DFIG_DBLK_CMD",
+      "pgb": 22,
+      "out_file": "3IBR_03.out",
+      "column": 3,
+      "unit": "logic",
+      "meaning": "external Dblk command into Type3_WTG_Avg"
+    }
+  ],
+  "statistics": {
+    "windows_s": {
+      "pre_fault": [
+        1.8,
+        2.0
+      ],
+      "fault": [
+        2.0,
+        2.15
+      ],
+      "post_fault": [
+        4.0,
+        5.0
+      ]
+    },
+    "SPD30": {
+      "pre_fault": {
+        "min": 60.0,
+        "mean": 60.0,
+        "max": 60.0,
+        "range": 0.0
+      },
+      "fault": {
+        "min": 60.0,
+        "mean": 60.0,
+        "max": 60.0,
+        "range": 0.0
+      },
+      "post_fault": {
+        "min": 60.0,
+        "mean": 60.0,
+        "max": 60.0,
+        "range": 0.0
+      }
+    },
+    "VIBR1_2": {
+      "pre_fault": {
+        "min": 0.996723836,
+        "mean": 0.996876375,
+        "max": 0.996995719,
+        "range": 0.000271882848
+      },
+      "fault": {
+        "min": 0.057864763,
+        "mean": 0.137288055,
+        "max": 0.987171405,
+        "range": 0.929306642
+      },
+      "post_fault": {
+        "min": 0.98145341,
+        "mean": 0.996965454,
+        "max": 1.01198827,
+        "range": 0.0305348637
+      }
+    },
+    "PIBR1_2": {
+      "pre_fault": {
+        "min": 200.919171,
+        "mean": 202.088943,
+        "max": 202.948992,
+        "range": 2.02982147
+      },
+      "fault": {
+        "min": -227.87985,
+        "mean": -150.934048,
+        "max": 196.831883,
+        "range": 424.711733
+      },
+      "post_fault": {
+        "min": 198.896656,
+        "mean": 199.197421,
+        "max": 199.469323,
+        "range": 0.572666393
+      }
+    },
+    "QIBR1_2": {
+      "pre_fault": {
+        "min": -13.9923702,
+        "mean": -13.8265833,
+        "max": -13.6406141,
+        "range": 0.351756088
+      },
+      "fault": {
+        "min": -13.2119348,
+        "mean": 3.92491786,
+        "max": 12.3637273,
+        "range": 25.5756621
+      },
+      "post_fault": {
+        "min": -43.5914699,
+        "mean": -21.5085562,
+        "max": -12.3696307,
+        "range": 31.2218392
+      }
+    },
+    "DFIG_IFLT_A_KA": {
+      "pre_fault": {
+        "min": -7.06947603e-05,
+        "mean": 1.27250674e-07,
+        "max": 7.04341931e-05,
+        "range": 0.000141128953
+      },
+      "fault": {
+        "min": -106.300202,
+        "mean": 18.6045608,
+        "max": 197.602619,
+        "range": 303.902821
+      },
+      "post_fault": {
+        "min": -7.27542138e-05,
+        "mean": 1.77685929e-09,
+        "max": 7.2711462e-05,
+        "range": 0.000145465676
+      }
+    },
+    "DFIG_IFLT_B_KA": {
+      "pre_fault": {
+        "min": -7.13833362e-05,
+        "mean": 1.5763343e-07,
+        "max": 7.13705849e-05,
+        "range": 0.000142753921
+      },
+      "fault": {
+        "min": -162.864968,
+        "mean": -7.22792489,
+        "max": 98.5588512,
+        "range": 261.423819
+      },
+      "post_fault": {
+        "min": -7.17872077e-05,
+        "mean": -1.98733261e-08,
+        "max": 7.18636628e-05,
+        "range": 0.00014365087
+      }
+    },
+    "DFIG_IFLT_C_KA": {
+      "pre_fault": {
+        "min": -5.85323175e-05,
+        "mean": -2.84882963e-07,
+        "max": 5.81809599e-05,
+        "range": 0.000116713277
+      },
+      "fault": {
+        "min": -137.139455,
+        "mean": -11.3766298,
+        "max": 87.3158186,
+        "range": 224.455274
+      },
+      "post_fault": {
+        "min": -7.05151793e-05,
+        "mean": 1.8218415e-08,
+        "max": 7.05925649e-05,
+        "range": 0.000141107744
+      }
+    },
+    "DFIG_VWIND_MS": {
+      "pre_fault": {
+        "min": 11.0,
+        "mean": 11.0,
+        "max": 11.0,
+        "range": 0.0
+      },
+      "fault": {
+        "min": 11.0,
+        "mean": 11.0,
+        "max": 11.0,
+        "range": 0.0
+      },
+      "post_fault": {
+        "min": 11.0,
+        "mean": 11.0,
+        "max": 11.0,
+        "range": 0.0
+      }
+    },
+    "DFIG_BRK_STATE": {
+      "pre_fault": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0,
+        "range": 0.0
+      },
+      "fault": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0,
+        "range": 0.0
+      },
+      "post_fault": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0,
+        "range": 0.0
+      }
+    },
+    "DFIG_DBLK_CMD": {
+      "pre_fault": {
+        "min": 1.0,
+        "mean": 1.0,
+        "max": 1.0,
+        "range": 0.0
+      },
+      "fault": {
+        "min": 1.0,
+        "mean": 1.0,
+        "max": 1.0,
+        "range": 0.0
+      },
+      "post_fault": {
+        "min": 1.0,
+        "mean": 1.0,
+        "max": 1.0,
+        "range": 0.0
+      }
+    }
+  },
+  "interpretation": {
+    "passed": true,
+    "voltage_dip_class": "deep three-phase-to-ground voltage dip / hard short-circuit smoke test",
+    "notes": [
+      "0.01 ohm is a hard short-circuit level fault, not a light LVRT case.",
+      "The model recovered to approximately 1.0 pu voltage and about 199 MW active power by 4-5 s.",
+      "Fault currents are very large, with recorded extrema near hundreds of kA, so future paper-aligned studies should tune fault impedance or choose target voltage sag carefully.",
+      "PGB order changed after adding fault-current channels; future runs must reparse 3IBR.inf."
+    ]
+  }
+}
