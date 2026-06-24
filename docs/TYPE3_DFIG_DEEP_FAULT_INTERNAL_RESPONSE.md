@@ -23,7 +23,7 @@ The following signals are upgraded from candidate-only interpretation to GUI-con
 - `Edc_pu`: DC-link per-unit voltage based on `Vdc_base = 1.45 kV`. It can be used as `DFIG_VDC_PU`.
 - `BRK_CHOP`: active-high chopper switch command/state. `1=active`, `0=inactive`.
 - `S1`: formal crowbar switch command/state. It can be reported as `DFIG_CROWBAR_STATE`. `1=crowbar switch commanded active/on`, `0=inactive/off`.
-- `Crowbar current:1..3`: crowbar branch current.
+- `Crowbar current:1..3`: crowbar branch current sourced from `Icrowbar`; numeric unit is not independently confirmed because the Output Channel Unit field is blank.
 - `I_RS:1..3`: RSC / rotor-side converter terminal three-phase current. The arrow points toward the `RABC` terminal.
 - `Iconv:1..3`: GSC / grid-side converter terminal three-phase current. Positive direction is from the AC filter / grid-side node toward the grid-side converter.
 
@@ -82,13 +82,25 @@ GUI confirmation upgrades the DC-link interpretation from candidate to confirmed
 | Reset | 322 | 3IBR_33.out | 3 | logic | Reset/control signal in Crowbar_prot latch/monostable chain; intermediate logic only. |  |  |  |  |  |  |  | high | Intermediate reset logic, not actual crowbar state. | Do not interpret Reset changes as crowbar insertion. |
 | S1 | 323 | 3IBR_33.out | 4 | logic | GUI-confirmed formal crowbar switch command/state signal. |  |  |  |  |  |  |  | high | 1=crowbar switch commanded active/on; 0=inactive/off. | In this run S1 stayed 0, so no confirmed crowbar insertion was observed. |
 | Mono_out | 324 | 3IBR_33.out | 5 | logic | Monostable output inside Crowbar_prot; intermediate logic only. |  |  |  |  |  |  |  | high | Intermediate pulse/hold logic, not actual crowbar state. | Do not interpret Mono_out changes as crowbar insertion unless S1/current confirm it. |
-| Crowbar current:1 | 318 | 3IBR_32.out | 9 | kA | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current channel. | Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
-| Crowbar current:2 | 319 | 3IBR_32.out | 10 | kA | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current channel. | Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
-| Crowbar current:3 | 320 | 3IBR_32.out | 11 | kA | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current channel. | Positive direction and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
+| Crowbar current:1 | 318 | 3IBR_32.out | 9 | internal crowbar branch current (unit not independently confirmed) | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current from Icrowbar; unit not independently confirmed. | Unit, positive direction, and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
+| Crowbar current:2 | 319 | 3IBR_32.out | 10 | internal crowbar branch current (unit not independently confirmed) | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current from Icrowbar; unit not independently confirmed. | Unit, positive direction, and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
+| Crowbar current:3 | 320 | 3IBR_32.out | 11 | internal crowbar branch current (unit not independently confirmed) | GUI-confirmed crowbar branch current. |  |  |  |  |  |  |  | high | Crowbar branch current from Icrowbar; unit not independently confirmed. | Unit, positive direction, and exact A/B/C vector-index mapping still require GUI confirmation; in this run magnitude stayed near zero. |
 
 GUI confirmation identifies `S1` as the formal crowbar switch command/state signal. In future reports it may be named `DFIG_CROWBAR_STATE`. The logic convention is `S1=1` for crowbar switch commanded active/on and `S1=0` for inactive/off.
 
 In this 5 s deep-fault run, `Reset` and `Mono_out` changed, but they are intermediate protection-chain quantities. `Iovercur=0`, `S1=0`, and `Crowbar current:1..3` stayed near zero, with maximum absolute value about `0.000010188132 kA`. The formal conclusion is therefore: no confirmed crowbar switch insertion or crowbar branch conduction was observed in this run. `Reset` or `Mono_out` changes must not be interpreted as crowbar insertion.
+
+
+## Crowbar Current Measurement Semantics Closure
+
+A read-only PSCAD GUI check was performed on the existing `Crowbar current` Output Channel. The visible source is the `Icrowbar` signal feeding the `Crowbar current` output channel. The Output Channel parameter window shows `Scale Factor = 1.0`, but the `Unit` field is blank. The current `3IBR.inf` PGB entries for `Crowbar current:1..3` also have blank `Units` fields. Therefore, this report no longer treats the values as confirmed `kA`. The formal unit statement is: `internal crowbar branch current (unit not independently confirmed)`.
+
+Evidence screenshots are stored locally and are not committed to Git:
+
+- `C:/pscad_work/type3_dfig_fault_sweep_tmp/evidence/crowbar_current_output_channel_unit_blank.png`
+- `C:/pscad_work/type3_dfig_fault_sweep_tmp/evidence/crowbar_current_icrowbar_connection_page.png`
+
+The GUI check did not provide enough evidence to determine positive current direction or exact A/B/C mapping for vector indices `1..3`; both remain unresolved. Existing numerical statistics are unchanged.
 
 ## RSC/GSC Currents And Current-Limit Candidate Response
 
