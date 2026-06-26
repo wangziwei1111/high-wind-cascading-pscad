@@ -1,0 +1,136 @@
+{
+  "task": "Type-3 DFIG external LVRT implementation validation",
+  "execution_status": "monitoring_only_safe_fallback",
+  "computer_use_used": true,
+  "active_pscad_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "initial_pscx_sha256": "9432E1DC41B1C0979C2B2A4506D5269420A776247880C4036646AEA1A4912319",
+  "final_pscx_sha256": "9432E1DC41B1C0979C2B2A4506D5269420A776247880C4036646AEA1A4912319",
+  "backup_location": "C:\\pscad_work\\backups\\type3_lvrt_full_impl_20260626_191254\\3IBR.pscx",
+  "initial_build": {
+    "errors": 0,
+    "warnings": 44,
+    "messages": 119,
+    "source": "PSCAD Build Messages visible during Computer Use inspection"
+  },
+  "final_build": {
+    "errors": 0,
+    "warnings": 44,
+    "messages": 119,
+    "source": "No new PSCAD Build/Run was executed by Codex in fallback mode; the visible project remained at the previously built state"
+  },
+  "input_scaling_verification": {
+    "VIBR1_2": {
+      "status": "previously_gui_confirmed",
+      "source": "P3 multimeter RMS voltage at Type-3 branch 22 kV collector-side upstream of BRK_DFIG",
+      "base_voltage_kv": 22.0,
+      "frequency_hz": 60.0,
+      "note": "No additional no-fault run was executed in this fallback task."
+    }
+  },
+  "implemented_blocks": [
+    {
+      "signal": "DFIG_LVRT_LOWV",
+      "implemented": true,
+      "meaning": "1 when VIBR1_2 is below 0.90 pu"
+    },
+    {
+      "signal": "DFIG_LVRT_IMMTRIP",
+      "implemented": true,
+      "meaning": "1 when VIBR1_2 is within the immediate-trip low-voltage region"
+    },
+    {
+      "signal": "DFIG_LVRT_CLEAR",
+      "implemented": true,
+      "meaning": "current monitoring-stage clear signal derived from NOT DFIG_LVRT_LOWV"
+    },
+    {
+      "signal": "DFIG_LVRT_TIMER_S",
+      "implemented": true,
+      "meaning": "resettable integrator output for continuous low-voltage timer"
+    },
+    {
+      "signal": "DFIG_LVRT_VSMIN_PU",
+      "implemented": false
+    },
+    {
+      "signal": "DFIG_LVRT_TALLOW_S",
+      "implemented": false
+    },
+    {
+      "signal": "DFIG_LVRT_DURATION_EXCEEDED",
+      "implemented": false
+    },
+    {
+      "signal": "DFIG_LVRT_TRIP_REQUEST",
+      "implemented": false
+    },
+    {
+      "signal": "DFIG_LVRT_TRIP_LATCH",
+      "implemented": false
+    }
+  ],
+  "implemented_signal_semantics": {
+    "BRK_DFIG": "0=closed, 1=open; confirmed in prior GUI inspection and component documentation",
+    "DFIG_BRK_STATE": "Breaker A Status monitor for the linked three-phase breaker"
+  },
+  "breaker_interface_verification": {
+    "status": "not_safe_to_modify_unattended",
+    "existing_command_source_confirmed": false,
+    "combiner_inserted": false,
+    "reason": "The current GUI inspection did not provide sufficient certainty to cut and re-route the existing BRK_DFIG command line without risking a wrong command connection, duplicate drive, or hidden floating signal."
+  },
+  "breaker_combiner": {
+    "implemented": false,
+    "intended_formula": "DFIG_LVRT_FINAL_BRK_CMD = max(DFIG_LVRT_EXISTING_BRK_CMD, DFIG_LVRT_TRIP_LATCH)"
+  },
+  "monitoring_channels": [
+    "DFIG_LVRT_LOWV",
+    "DFIG_LVRT_IMMTRIP",
+    "DFIG_LVRT_TIMER_S",
+    "DFIG_BRK_STATE",
+    "VIBR1_2",
+    "PIBR1_2",
+    "QIBR1_2"
+  ],
+  "test_cases": [],
+  "validation_results": {
+    "no_fault_5s": "not_run_in_this_fallback_task",
+    "fault_0p10_0p75_8s": "not_run_in_this_fallback_task",
+    "fault_0p10_1p00_8s": "not_run_in_this_fallback_task",
+    "fault_0p10_1p25_8s": "not_run_in_this_fallback_task",
+    "fault_0p01_0p15_5s": "not_run_in_this_fallback_task"
+  },
+  "offline_reference_comparison": {
+    "status": "not_applicable",
+    "reason": "No new validation runs were executed because full implementation was not safely completed."
+  },
+  "acceptance_criteria": {
+    "full_success": false,
+    "monitoring_only_safe_fallback": true,
+    "final_pscad_build_errors": 0
+  },
+  "known_warnings": {
+    "count": 44,
+    "note": "Visible warning level remained the known current project level during inspection."
+  },
+  "unresolved_items": [
+    "Safe GUI insertion point for BRK_DFIG command combiner",
+    "Complete event-level Vs_min_latched implementation",
+    "t_allow calculation and limiter",
+    "trip_request and trip_latch implementation",
+    "Full post-implementation scenario validation"
+  ],
+  "fallback_reason": "Unattended GUI editing could not safely guarantee correct BRK_DFIG command-line interception and reconnection.",
+  "final_project_restoration": {
+    "fault_parameters_restored": "unchanged by Codex in this fallback task",
+    "total_simulation_time_restored": "unchanged by Codex in this fallback task",
+    "time_step_restored": "unchanged by Codex in this fallback task"
+  },
+  "committed_files": [
+    "analysis/pscad_tools/analyze_type3_dfig_external_lvrt_implementation_validation.py",
+    "docs/TYPE3_DFIG_EXTERNAL_LVRT_IMPLEMENTATION_VALIDATION.md",
+    "data/reference/type3_dfig_external_lvrt_implementation_validation.json",
+    "data/reference/type3_dfig_external_lvrt_implementation_validation_summary.csv",
+    "external/pscad_snapshot_20260626_lvrt_monitoring_fallback/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx"
+  ]
+}
