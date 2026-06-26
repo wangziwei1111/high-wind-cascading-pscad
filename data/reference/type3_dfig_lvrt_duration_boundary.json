@@ -16085,8 +16085,11 @@
     "all_recovered_within_8s": true,
     "v_min_monotonically_decreases_with_duration": true,
     "crowbar_command_active_any_scenario": false,
-    "chopper_candidate_response_all_scenarios": true,
-    "project_lvrt_reference_boundary_note": "Using the previously recorded project convention and a Vmin-based conservative timer reference, 1.25 s and 1.50 s exceed the reference window; this scan did not implement or prove actual tripping."
+    "project_lvrt_reference_boundary_note": "Using the previously recorded project convention and a Vmin-based conservative timer reference, 1.25 s and 1.50 s exceed the reference window; this scan did not implement or prove actual tripping.",
+    "chopper_command_state_active_all_scenarios": true,
+    "chopper_semantic_note": "BRK_CHOP=1 is active chopper switch command/state; branch current, resistor power, and energy dissipation were not independently measured.",
+    "ecap_det_semantic_note": "Ecap_Det is confirmed DC-link physical voltage in kV; Edc_pu times 1.45 kV is only a consistency cross-check.",
+    "recovery_semantic_note": "V_recovery_time_s uses the 0.95-1.05 pu sustained recovery criterion, while V_fault_time_below_0p90_s and the paper LVRT reference retain the 0.90 pu boundary."
   },
   "semantic_limits": [
     "This run does not implement LVRT trip logic and does not operate BRK_DFIG.",
@@ -16096,7 +16099,14 @@
     "DFIG_IFLT_A/B/C_KA are external fault-element currents, not internal converter or crowbar branch currents.",
     "DFIG_DBLK_CMD is not a physical trip state.",
     "The project LVRT timer comparison is recorded only as a future external logic reference.",
-    "These scan runs do not prove turbine disconnection because BRK_DFIG was not controlled by LVRT logic."
+    "These scan runs do not prove turbine disconnection because BRK_DFIG was not controlled by LVRT logic.",
+    "Ecap_Det is confirmed DC-link physical voltage in kV.",
+    "Edc_pu is DC-link per-unit voltage using Vdc_base = 1.45 kV.",
+    "Edc_pu times 1.45 kV and Ecap_Det are used as a consistency cross-check; pointwise equality is not required because of sampling/filtering/output timing differences.",
+    "BRK_CHOP=1 indicates active chopper switch command/state; physical chopper branch current, resistor power, and energy dissipation were not independently measured in this duration scan.",
+    "V_recovery_time_s is the first post-fault time when VIBR1_2 enters and remains within 0.95-1.05 pu through the remaining output window.",
+    "V_fault_time_below_0p90_s is the duration within the fault window for which VIBR1_2 is below 0.90 pu.",
+    "Crowbar S1/DFIG_CROWBAR_STATE=1 indicates active crowbar switch command; S1=0 indicates the crowbar is not inserted, but this must not be broadened into a claim that no internal protection signal responded."
   ],
   "final_restoration": {
     "archive_dir": "C:\\pscad_work\\type3_dfig_duration_sweep_tmp\\20260626_134153\\final_restored_baseline",
@@ -16513,5 +16523,36 @@
     "docs/TYPE3_DFIG_LVRT_DURATION_BOUNDARY.md",
     "data/reference/type3_dfig_lvrt_duration_boundary.json",
     "data/reference/type3_dfig_lvrt_duration_boundary_summary.csv"
-  ]
+  ],
+  "signal_semantics": {
+    "Ecap_Det": "confirmed DC-link physical voltage in kV",
+    "Edc_pu": "confirmed DC-link per-unit voltage using Vdc_base = 1.45 kV",
+    "BRK_CHOP": "1 indicates active chopper switch command/state; physical energy dissipation was not independently measured",
+    "S1": "1 indicates active crowbar switch command; 0 indicates crowbar not inserted",
+    "DFIG_CROWBAR_STATE": "alias/summary interpretation of S1 crowbar switch command state",
+    "Crowbar current:1..3": "internal crowbar branch currents; unit, positive direction, and exact phase order remain not independently confirmed",
+    "I_RS:1..3": "RSC/rotor-side converter terminal instantaneous three-phase currents, not RMS",
+    "Iconv:1..3": "GSC/grid-side converter terminal instantaneous three-phase currents, not RMS",
+    "SPD30": "system-frequency candidate only",
+    "Freq_PLL": "Type-3 internal PLL frequency only, not a replacement for SPD30"
+  },
+  "summary_field_definitions": {
+    "V_recovery_time_s": "first post-fault time when VIBR1_2 enters and remains within 0.95-1.05 pu through the remaining output window",
+    "V_recovery_status": "recovered means the V_recovery_time_s criterion was satisfied within the output window",
+    "V_fault_time_below_0p90_s": "duration within the fault window for which VIBR1_2 is below 0.90 pu",
+    "Ecap_Det_fault_peak_kV": "fault-window peak of confirmed DC-link physical voltage Ecap_Det in kV",
+    "Edc_pu_fault_peak": "fault-window peak of DC-link per-unit voltage using Vdc_base = 1.45 kV",
+    "BRK_CHOP_active_during_fault": "true when BRK_CHOP exceeds 0.5 during the fault window, meaning active chopper switch command/state was observed",
+    "BRK_CHOP_duration_during_fault_s": "duration during the fault window for which BRK_CHOP command/state is active",
+    "DFIG_CROWBAR_STATE_active": "true when S1/DFIG_CROWBAR_STATE exceeds 0.5, meaning crowbar switch command active"
+  },
+  "recovery_definition": {
+    "signal": "VIBR1_2",
+    "field": "V_recovery_time_s",
+    "criterion": "first post-fault time when VIBR1_2 enters and remains within 0.95-1.05 pu through the remaining output window",
+    "distinct_from": {
+      "V_fault_time_below_0p90_s": "fault-window duration for which VIBR1_2 is below 0.90 pu",
+      "paper_lvrt_0p90_boundary": "0.90 pu remains a paper LVRT recovery/reference boundary, not the script recovery-time criterion"
+    }
+  }
 }
