@@ -1,0 +1,183 @@
+{
+  "audit_time": "2026-06-26T13:17:17+08:00",
+  "task": "Xu Youxin paper Type-3 DFIG low-voltage LVRT trip criterion audit",
+  "constraints_observed": {
+    "computer_use": false,
+    "pscad_gui_opened": false,
+    "build_run": false,
+    "model_files_modified": false,
+    "existing_sweep_results_modified": false,
+    "new_files_only": [
+      "docs/TYPE3_DFIG_LVRT_TRIP_CRITERION_AUDIT.md",
+      "data/reference/type3_dfig_lvrt_trip_criterion_audit.json"
+    ]
+  },
+  "source_pdf": {
+    "path": "C:\\pscad_work\\paper_xu2024.pdf",
+    "filename": "paper_xu2024.pdf",
+    "size_bytes": 4631453,
+    "page_count": 53,
+    "read_methods": [
+      "pdfplumber text extraction",
+      "PyMuPDF page rendering for visual check"
+    ]
+  },
+  "source_location": {
+    "table_of_contents_pdf_page_1based": 7,
+    "section_start_pdf_page_1based": 19,
+    "figure_and_equation_pdf_page_1based": 20,
+    "printed_page_for_figure_and_equation": 12
+  },
+  "section": {
+    "number": "2.3.2",
+    "title": "风机电压穿越保护",
+    "source_type": "paper text"
+  },
+  "figure": {
+    "number": "图 2-3",
+    "title": "风电机组故障电压曲线",
+    "source_type": "rendered PDF page and extracted text",
+    "low_voltage_points_observed": [
+      {
+        "voltage_pu": 0.20,
+        "time_s": 0.625,
+        "evidence": "figure lower LVRT boundary and nearby text"
+      },
+      {
+        "voltage_pu": 0.90,
+        "time_s": 2.0,
+        "evidence": "figure rising LVRT boundary and nearby text"
+      }
+    ]
+  },
+  "equation": {
+    "number": "(2-8)",
+    "source_type": "paper formula",
+    "pdf_page_1based": 20,
+    "printed_page": 12
+  },
+  "evidence_text_summary": {
+    "direct_text_facts": [
+      "The section states that wind turbines should stay grid-connected for 625 ms when the POC voltage drops to 20% of rated voltage.",
+      "The section states that the voltage should recover to 90% of rated voltage within 2 s after voltage sag begins.",
+      "The section introduces a wind turbine trip event and sets the voltage ride-through protection delay tVRT according to POC voltage Vs."
+    ],
+    "formula_facts": [
+      "Equation (2-8) gives tVRT = 0 when Vs <= 0.20 or Vs >= 1.30.",
+      "Equation (2-8) gives a linear low-voltage branch for 0.20 < Vs < 0.90.",
+      "Equation (2-8) includes high-voltage branches for 1.10 to 1.30 pu, outside this low-voltage-only implementation scope."
+    ],
+    "figure_facts": [
+      "Figure 2-3 shows a low-voltage ride-through boundary at about 0.20 pu until t0+0.625 s.",
+      "Figure 2-3 shows a rising recovery boundary from about 0.20 pu at 0.625 s to about 0.90 pu at 2.0 s."
+    ],
+    "conflict": "The text/figure support 0.625 s at 0.20 pu, while equation (2-8) assigns tVRT = 0 to Vs <= 0.20."
+  },
+  "formula_transcription": {
+    "raw_piecewise_readable": [
+      "0, Vs <= 0.20 or Vs >= 1.30",
+      "((Vs - 0.2)/(0.9 - 0.2))*(2.0 - 0.625) + 0.625, 0.20 < Vs < 0.90",
+      "0.5, 1.25 <= Vs <= 1.30",
+      "1.0, 1.20 <= Vs <= 1.25",
+      "10.0, 1.10 <= Vs <= 1.20"
+    ],
+    "low_voltage_linear_branch": "tVRT = ((Vs - 0.2)/(0.9 - 0.2))*(2.0 - 0.625) + 0.625 for 0.20 < Vs < 0.90",
+    "low_voltage_linear_slope": 1.9642857142857144
+  },
+  "variable_definitions": {
+    "Vs": "wind turbine point-of-interconnection voltage",
+    "tVRT": "voltage ride-through protection delay time"
+  },
+  "units": {
+    "Vs": "p.u. on rated voltage base",
+    "tVRT": "seconds"
+  },
+  "piecewise_rule": {
+    "status": "candidate_not_final",
+    "reason_not_final": "The boundary Vs = 0.20 pu is inconsistent between text/figure and equation (2-8), so the complete low-voltage implementation rule requires manual confirmation.",
+    "confirmed_low_voltage_interior": {
+      "condition": "0.20 < Vs < 0.90",
+      "tVRT_s": "((Vs - 0.2)/(0.9 - 0.2))*(2.0 - 0.625) + 0.625"
+    },
+    "candidate_immediate_trip": {
+      "condition": "Vs < 0.20",
+      "tVRT_s": 0,
+      "evidence": "Equation (2-8) first branch; exact equality remains unresolved."
+    },
+    "candidate_exit_low_voltage_timer": {
+      "condition": "Vs >= 0.90 and Vs < 1.10",
+      "action": "do not continue low-voltage trip timing",
+      "evidence": "The low-voltage branch is open at 0.90 and text describes recovery to 90% within 2 s."
+    }
+  },
+  "boundary_handling": {
+    "Vs_0_20": {
+      "status": "manual_confirmation_required",
+      "text_and_figure_candidate": "tVRT = 0.625 s",
+      "equation_candidate": "tVRT = 0 s because equation uses Vs <= 0.20 in the zero-delay branch",
+      "recommended_before_implementation": "Ask user to confirm which boundary convention to use before PSCAD external LVRT logic is implemented."
+    },
+    "Vs_0_90": {
+      "status": "usable_as_recovery_boundary_candidate",
+      "evidence": "Equation low-voltage linear branch is 0.20 < Vs < 0.90; text states recovery to 90% within 2 s.",
+      "candidate_action": "exit or reset low-voltage trip timing at and above 0.90 pu, unless later manual confirmation changes this convention."
+    }
+  },
+  "trip_timer_interpretation": {
+    "paper_basis": "tVRT is introduced as the delay action time of wind turbine voltage ride-through protection according to POC voltage Vs.",
+    "engineering_translation": "When the POC voltage remains in the low-voltage region, compare the low-voltage duration with tVRT(Vs); trip when the duration exceeds the allowed time.",
+    "limitations": [
+      "The nearby paper text does not specify whether the timer should use instantaneous Vs, latched minimum Vs, or a different implementation detail.",
+      "The exact equality convention at Vs = 0.20 pu must be manually confirmed before implementation."
+    ]
+  },
+  "implementation_status": "manual_confirmation_required",
+  "candidate_pscad_input": {
+    "signal": "VIBR1_2",
+    "role": "future candidate input for external LVRT trip prototype",
+    "basis": [
+      "Existing project documentation maps VIBR1_2 to the Type-3 branch 22 kV POC/collector-side voltage output.",
+      "Fault resistance sweep results already use VIBR1_2 as the voltage sag depth comparison signal."
+    ],
+    "limitations": [
+      "VIBR1_2 base and sampling semantics should be confirmed before using it as paper Vs.",
+      "No PSCAD LVRT module or breaker trip logic has been implemented in this task."
+    ]
+  },
+  "scope_alignment": [
+    "The audit is aligned with the paper's Section 2.3.2 low-voltage ride-through trip delay criterion.",
+    "The confirmed interior low-voltage branch can support later external LVRT prototype design after boundary confirmation."
+  ],
+  "scope_gaps": [
+    "The current PSCAD project is a single Type-3 DFIG replacement prototype, not the paper's complete multi-wind-farm cascading-failure model.",
+    "High-voltage branches in equation (2-8), frequency protection, overload protection, UFLS/UVLS, line tripping, MATLAB coupling, and cascading logic are outside this task.",
+    "The exact implementation convention at Vs = 0.20 pu is unresolved."
+  ],
+  "confirmed_facts": [
+    "PDF page 20 contains Figure 2-3 and equation (2-8).",
+    "The low-voltage interior branch of equation (2-8) is 0.20 < Vs < 0.90.",
+    "The low-voltage interior branch connects 0.625 s at 0.20 pu to 2.0 s at 0.90 pu.",
+    "Equation (2-8) assigns zero delay for Vs <= 0.20, creating a boundary conflict with the text/figure at exactly 0.20 pu."
+  ],
+  "engineering_translation": {
+    "ready_parts": [
+      "Use the linear formula for 0.20 < Vs < 0.90.",
+      "Treat Vs below 0.20 as immediate-trip candidate if the equation convention is accepted.",
+      "Treat Vs at or above 0.90 and below high-voltage branches as a recovery/no-low-voltage-timer candidate."
+    ],
+    "not_ready_parts": [
+      "Do not implement exact Vs = 0.20 behavior until manually confirmed.",
+      "Do not claim this is a complete paper model reproduction."
+    ]
+  },
+  "unresolved_items": [
+    "Boundary convention at Vs = 0.20 pu.",
+    "Whether the protection timer uses instantaneous voltage, fault-window minimum voltage, or another implementation detail.",
+    "Whether VIBR1_2 requires scaling/filtering before it can be used as paper Vs."
+  ],
+  "next_recommendation": {
+    "allow_fault_duration_scan_preparation": true,
+    "allow_pscad_trip_logic_implementation": false,
+    "required_manual_confirmation_before_implementation": "Confirm whether Vs = 0.20 pu should use 0 s immediate trip or 0.625 s ride-through hold time."
+  }
+}
