@@ -1,0 +1,201 @@
+{
+  "audit_time": "2026-06-26T00:00:00+08:00",
+  "task": "Type-3 DFIG fault-resistance sweep warning read-only quality audit",
+  "constraints_observed": {
+    "computer_use": false,
+    "pscad_gui": false,
+    "build": false,
+    "run": false,
+    "model_files_modified": false,
+    "existing_sweep_statistics_modified": false,
+    "local_pdf_processed": false
+  },
+  "input_files": [
+    "docs/TYPE3_DFIG_LVRT_FAULT_RESISTANCE_SWEEP.md",
+    "data/reference/type3_dfig_lvrt_fault_resistance_sweep.json",
+    "data/reference/type3_dfig_lvrt_fault_resistance_sweep_summary.csv",
+    "docs/TYPE3_DFIG_DEEP_FAULT_INTERNAL_RESPONSE.md",
+    "data/reference/type3_dfig_deep_fault_internal_response.json",
+    "docs/TYPE3_DFIG_LVRT_GUI_SEMANTIC_CONFIRMATION.md",
+    "data/reference/type3_dfig_lvrt_gui_semantic_confirmation.json",
+    "C:/pscad_work/pnnl_39_3ibr_pscad46_strip5/PSCAD/3IBR.pscx",
+    "C:/pscad_work/pnnl_39_3ibr_pscad46_strip5/PSCAD/3IBR.gf46/P3.f",
+    "C:/Program Files (x86)/PSCAD46/master.pslx",
+    "C:/Users/24186/.codex/attachments/60155a35-1396-4e6f-88aa-504c3fe427db/pasted-text.txt"
+  ],
+  "warning_text": [
+    {
+      "id": 113665858,
+      "component": "master:xfmr-3p2w",
+      "namespace": "3IBR",
+      "description": "Suspicious floating terminal at node 'NT_17'.",
+      "source": "C:/Users/24186/.codex/attachments/60155a35-1396-4e6f-88aa-504c3fe427db/pasted-text.txt:7"
+    },
+    {
+      "id": 113665858,
+      "component": "master:xfmr-3p2w",
+      "namespace": "3IBR",
+      "description": "Suspicious floating terminal at node 'NT_18'.",
+      "source": "C:/Users/24186/.codex/attachments/60155a35-1396-4e6f-88aa-504c3fe427db/pasted-text.txt:8"
+    }
+  ],
+  "associated_object": {
+    "name": "XFMR_DFIG_22_33",
+    "id": 113665858,
+    "definition": "master:xfmr-3p2w",
+    "component_type": "3 Phase 2 Winding Transformer",
+    "page": "3IBR:Main(0):P1(0):P3(0)",
+    "pscx_source": "C:/pscad_work/pnnl_39_3ibr_pscad46_strip5/PSCAD/3IBR.pscx:25632",
+    "generated_code_sources": [
+      "C:/pscad_work/pnnl_39_3ibr_pscad46_strip5/PSCAD/3IBR.gf46/P3.f:2268-2274",
+      "C:/pscad_work/pnnl_39_3ibr_pscad46_strip5/PSCAD/3IBR.gf46/P3.f:3685-3715"
+    ],
+    "key_parameters": {
+      "Tmva": "250.0 [MVA]",
+      "f": "60.0 [Hz]",
+      "V1": "22 [kV]",
+      "V2": "33 [kV]",
+      "YD1": "0 (Y)",
+      "YD2": "0 (Y)",
+      "Xl": "0.1 [pu]",
+      "CuL": "0.005 [pu]",
+      "NLL": "0.0001 [pu]",
+      "Ideal": "1",
+      "Tap": "0",
+      "Enab": "0",
+      "Sat": "0"
+    }
+  },
+  "terminal_role_assessment": {
+    "NT_17": {
+      "status": "unconfirmed_by_text_only",
+      "candidate_roles": [
+        "unused auxiliary terminal",
+        "excitation/no-load/saturation related internal node",
+        "neutral or grounding related node"
+      ],
+      "excluded_by_current_evidence": [
+        "Type-3 controller signal",
+        "fault-control signal",
+        "BRK_DFIG control signal",
+        "Dblk/Vwind support signal",
+        "P/Q/V output channel"
+      ]
+    },
+    "NT_18": {
+      "status": "unconfirmed_by_text_only",
+      "candidate_roles": [
+        "unused auxiliary terminal",
+        "excitation/no-load/saturation related internal node",
+        "neutral or grounding related node"
+      ],
+      "excluded_by_current_evidence": [
+        "Type-3 controller signal",
+        "fault-control signal",
+        "BRK_DFIG control signal",
+        "Dblk/Vwind support signal",
+        "P/Q/V output channel"
+      ]
+    },
+    "final_role_judgement": "Unable to confirm exact port role from read-only text. The nodes are tied to the standard PSCAD xfmr-3p2w instance XFMR_DFIG_22_33 and are most plausibly unused auxiliary/excitation/saturation/neutral-related terminals, but GUI port confirmation is still required."
+  },
+  "scenario_integrity": [
+    {
+      "scenario_id": "r_0p01_restored",
+      "fault_on_resistance_ohm": 0.01,
+      "build_errors": 0,
+      "build_warnings": 2,
+      "emtdc_completed": true,
+      "output_end_time_s": 4.9966,
+      "inf_exists": true,
+      "out_files_checked": 35,
+      "rows_checked": 42175,
+      "nan_or_inf_found": false,
+      "output_truncation_found": false
+    },
+    {
+      "scenario_id": "r_0p03",
+      "fault_on_resistance_ohm": 0.03,
+      "build_errors": 0,
+      "build_warnings": 0,
+      "emtdc_completed": true,
+      "output_end_time_s": 4.9966,
+      "inf_exists": true,
+      "out_files_checked": 35,
+      "rows_checked": 42175,
+      "nan_or_inf_found": false,
+      "output_truncation_found": false
+    },
+    {
+      "scenario_id": "r_0p10",
+      "fault_on_resistance_ohm": 0.1,
+      "build_errors": 0,
+      "build_warnings": 2,
+      "emtdc_completed": true,
+      "output_end_time_s": 4.9966,
+      "inf_exists": true,
+      "out_files_checked": 35,
+      "rows_checked": 42175,
+      "nan_or_inf_found": false,
+      "output_truncation_found": false
+    },
+    {
+      "scenario_id": "r_0p30",
+      "fault_on_resistance_ohm": 0.3,
+      "build_errors": 0,
+      "build_warnings": 2,
+      "emtdc_completed": true,
+      "output_end_time_s": 4.9966,
+      "inf_exists": true,
+      "out_files_checked": 35,
+      "rows_checked": 42175,
+      "nan_or_inf_found": false,
+      "output_truncation_found": false
+    },
+    {
+      "scenario_id": "r_1p00",
+      "fault_on_resistance_ohm": 1.0,
+      "build_errors": 0,
+      "build_warnings": 2,
+      "emtdc_completed": true,
+      "output_end_time_s": 4.9966,
+      "inf_exists": true,
+      "out_files_checked": 35,
+      "rows_checked": 42175,
+      "nan_or_inf_found": false,
+      "output_truncation_found": false
+    }
+  ],
+  "risk_checks": {
+    "compile_errors_found": false,
+    "unresolved_definition_found": false,
+    "missing_signal_found": false,
+    "nan_or_inf_found": false,
+    "time_step_collapse_found": false,
+    "emtdc_abort_found": false,
+    "output_corruption_found": false,
+    "evidence_that_NT17_NT18_participate_in_main_power_or_fault_control": false
+  },
+  "final_classification": "noncritical_but_unresolved",
+  "classification_reason": [
+    "The warning text is confirmed as a suspicious floating terminal warning on XFMR_DFIG_22_33, a standard PSCAD master:xfmr-3p2w transformer instance.",
+    "All sweep scenarios have build_errors=0, emtdc_completed=true, output_end_time_s=4.9966.",
+    "The current copied .out files are parseable and show no NaN/Inf or truncation in read-only checks.",
+    "No text evidence links NT_17/NT_18 to Type-3 controls, fault controls, BRK_DFIG control, Dblk/Vwind, or exported P/Q/V channels.",
+    "The exact physical role of NT_17/NT_18 cannot be confirmed without a later PSCAD GUI port/terminal check, so the warning cannot be closed as known_benign."
+  ],
+  "required_conclusion_text": "当前证据显示该 warning 未导致 Build/Run 失败或已识别的输出损坏，但 XFMR_DFIG_22_33 的 NT_17/NT_18 端口物理含义仍应在后续正式模型整理阶段确认。",
+  "evidence_and_limits": {
+    "build_message_original_source": "User-exported Build Messages text, not generated gf46 logs.",
+    "generated_directory_limit": "PSCAD generated .inf/.out/.log files do not preserve the full Build Messages warning text.",
+    "terminal_role_limit": "Read-only text does not expose the GUI terminal names for NT_17/NT_18.",
+    "credibility_impact": "Supports continued use of the sweep for trend analysis; does not prove the transformer terminal configuration is fully cleaned for final model release."
+  },
+  "next_recommendations": {
+    "allow_paper_lvrt_criterion_audit": true,
+    "allow_duration_scan_preparation": true,
+    "monitor_warning_in_future_runs": true,
+    "manual_gui_confirmation_needed": true,
+    "manual_gui_question": "In PSCAD GUI, inspect XFMR_DFIG_22_33 port/details view to identify whether NT_17 and NT_18 are unused neutral, auxiliary, measurement, grounding, excitation/saturation internal terminals, or another port type."
+  }
+}
