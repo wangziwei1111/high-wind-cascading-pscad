@@ -1,0 +1,64 @@
+flowchart LR
+  subgraph V["Voltage input zone"]
+    V1["Type-3 22 kV collector-side physical measurement point"]
+    V2["Candidate observed value: VIBR1_2<br/>measurement location confirmed"]
+    V3["Future control-source branch<br/>candidate physical measurement source<br/>GUI confirmation required"]
+    V4["Vs scaling / pu-base confirmation<br/>signal validity check"]
+    V5["LVRT state machine input: Vs"]
+    V1 --> V2
+    V1 -.-> V3
+    V3 --> V4 --> V5
+    V2 -. "offline replay reference only" .-> V5
+  end
+
+  subgraph S["Continuous low-voltage event state machine"]
+    S1{"Vs < 0.90 pu?"}
+    S2["event start / continue<br/>event_elapsed timer active"]
+    S3["update Vs_min_latched<br/>minimum Vs in current event"]
+    S4{"Vs_min_latched <= 0.20 pu?"}
+    S5["immediate_trip_request"]
+    S6["compute t_allow<br/>0.625 + ((Vs_min_latched - 0.20) / 0.70) * 1.375"]
+    S7{"event_elapsed >= t_allow?"}
+    S8["duration_exceeded"]
+    S9["trip_latch = 1<br/>latched for this simulation<br/>no auto reclose"]
+    S10{"trip_latch = 0?"}
+    S11["reset event state<br/>clear timer and Vs_min_latched"]
+    S12["no low-voltage event update"]
+    V5 --> S1
+    S1 -- yes --> S2 --> S3 --> S4
+    S4 -- yes --> S5 --> S9
+    S4 -- no --> S6 --> S7
+    S7 -- yes --> S8 --> S9
+    S7 -- no --> S2
+    S1 -- no --> S10
+    S10 -- yes --> S11 --> S12
+    S10 -- no --> S9
+  end
+
+  subgraph B["BRK_DFIG command interface"]
+    B1["existing BRK_DFIG command path"]
+    B2["TBD command combiner / polarity adapter<br/>port name, command polarity, gate type,<br/>pulse or level behavior require GUI confirmation"]
+    B3["external LVRT trip_latch<br/>canonical meaning: request Type-3 branch opening"]
+    B4["BRK_DFIG control input<br/>abstract future interface"]
+    B5["DFIG_BRK_STATE monitoring output"]
+    B1 --> B2
+    B3 -. "future input to TBD interface" .-> B2
+    B2 --> B4 --> B5
+    S9 -. "future trip request" .-> B3
+  end
+
+  subgraph M["Verification and monitoring zone"]
+    M1["DFIG_BRK_STATE<br/>breaker state monitor"]
+    M2["VIBR1_2<br/>POC / collector-side voltage monitor"]
+    M3["PIBR1_2 and QIBR1_2<br/>branch power monitors"]
+    M4["Edc_pu and Ecap_Det<br/>DC-link response monitors"]
+    M5["BRK_CHOP<br/>chopper command / state monitor"]
+    M6["S1<br/>crowbar switch command monitor"]
+    M7["Monitoring outputs only<br/>no feedback into LVRT control"]
+    M1 --> M7
+    M2 --> M7
+    M3 --> M7
+    M4 --> M7
+    M5 --> M7
+    M6 --> M7
+  end

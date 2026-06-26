@@ -1,0 +1,176 @@
+{
+  "task": "Type-3 DFIG external LVRT trip logic drawing and integration plan",
+  "audit_time": "2026-06-26T00:00:00+08:00",
+  "constraints_observed": {
+    "computer_use": false,
+    "pscad_gui_opened_or_operated_by_codex": false,
+    "pscad_saved": false,
+    "build_or_run": false,
+    "model_files_modified": false,
+    "analysis_scripts_modified": false,
+    "historical_waveforms_modified": false
+  },
+  "source_documents": [
+    "docs/TYPE3_DFIG_EXTERNAL_LVRT_GUI_RECON_DRAFT.md",
+    "docs/TYPE3_DFIG_EXTERNAL_LVRT_TRIP_DESIGN.md",
+    "data/reference/type3_dfig_external_lvrt_trip_design.json",
+    "data/reference/type3_dfig_external_lvrt_trip_replay_summary.csv",
+    "docs/TYPE3_DFIG_LVRT_TRIP_CRITERION_AUDIT.md",
+    "data/reference/type3_dfig_lvrt_trip_criterion_audit.json",
+    "docs/TYPE3_DFIG_LVRT_GUI_SEMANTIC_CONFIRMATION.md",
+    "data/reference/type3_dfig_lvrt_gui_semantic_confirmation.json",
+    "docs/TYPE3_DFIG_LVRT_DURATION_BOUNDARY.md",
+    "data/reference/type3_dfig_lvrt_duration_boundary.json"
+  ],
+  "gui_recon_summary": {
+    "draft_status": "absorbed into formal plan and deleted from the working tree",
+    "VIBR1_2": {
+      "observed_objects": [
+        "P3 multimeter instance 1263266056",
+        "P3 pgb instance 2013283288",
+        "P3 datalabel instance 941741407"
+      ],
+      "location_summary": "Type-3 branch 22 kV collector-side measurement point, upstream of BRK_DFIG",
+      "confirmed_fact": "measurement location and offline waveform availability are confirmed"
+    },
+    "BRK_DFIG": {
+      "location_summary": "breaker between the VIBR1_2 measurement point and XFMR_DFIG_22_33",
+      "visible_related_signals": [
+        "BRK_DFIG existing command label",
+        "DFIG_BRK_STATE existing breaker state output"
+      ],
+      "confirmed_fact": "existing command path and state monitor are visible near the breaker"
+    }
+  },
+  "project_lvrt_rule": {
+    "Vs_le_0p20_pu": "immediate_trip_request",
+    "0p20_lt_Vs_lt_0p90": "delayed trip according to tVRT(Vs)",
+    "Vs_ge_0p90_without_trip": "end continuous low-voltage event and reset timer state",
+    "trip_latch": "latched for the current simulation; no auto-reclose",
+    "formula": "tVRT = 0.625 + ((Vs - 0.20) / 0.70) * 1.375 for 0.20 < Vs < 0.90"
+  },
+  "timer_method": "minimum-voltage latch within continuous low-voltage event",
+  "state_machine": {
+    "event_start": "Vs < 0.90 pu and trip_latch=0",
+    "minimum_voltage_latch": "Vs_min_latched is updated to the minimum Vs observed during the continuous low-voltage event",
+    "immediate_trip": "Vs_min_latched <= 0.20 pu",
+    "duration_trip": "event_elapsed >= tVRT(Vs_min_latched)",
+    "reset_condition": "Vs >= 0.90 pu and trip_latch=0",
+    "latch_behavior": "once trip_latch=1, it remains set for the simulation"
+  },
+  "candidate_voltage_interface": {
+    "signal": "VIBR1_2",
+    "status": "measurement location confirmed; control-source wiring and pu scaling unconfirmed",
+    "future_integration_requirement": "sample from the corresponding physical measurement/control output in parallel, not from the PGB output label or .out channel",
+    "required_confirmations": [
+      "actual real-time control output port of the measurement module",
+      "pu base and scaling consistency with VIBR1_2",
+      "need for filtering or signal validity check",
+      "source is upstream of BRK_DFIG"
+    ]
+  },
+  "breaker_command_interface": {
+    "breaker": "BRK_DFIG",
+    "status": "existing command path and state monitor observed; control input polarity and command semantics unconfirmed",
+    "canonical_lvrt_output": "trip_latch=1 requests Type-3 branch opening",
+    "required_confirmations": [
+      "BRK_DFIG control input port name",
+      "existing BRK_DFIG command source and default closed command value",
+      "breaker open command polarity",
+      "whether the command must be pulse, level, delayed, or otherwise shaped"
+    ]
+  },
+  "command_combiner_status": "TBD; do not assume polarity or logic gate before GUI confirmation",
+  "monitoring_signals": {
+    "breaker_state": "DFIG_BRK_STATE",
+    "voltage": "VIBR1_2",
+    "power": [
+      "PIBR1_2",
+      "QIBR1_2"
+    ],
+    "dc_link": [
+      "Edc_pu",
+      "Ecap_Det"
+    ],
+    "chopper": "BRK_CHOP",
+    "crowbar": "S1",
+    "control_use": "monitoring only; do not feed these monitoring outputs back into the LVRT protection control"
+  },
+  "diagram_source": "docs/diagrams/type3_dfig_external_lvrt_logic_plan.mmd",
+  "planned_validation_cases": [
+    {
+      "case_id": "no_false_trip",
+      "fault_on_resistance_ohm": 0.1,
+      "fault_duration_s": 0.75,
+      "fault_start_s": 2.0,
+      "expected": "trip_latch should not set; BRK_DFIG should not open; Type-3 branch should recover"
+    },
+    {
+      "case_id": "main_trip_timing",
+      "fault_on_resistance_ohm": 0.1,
+      "fault_duration_s": 1.25,
+      "fault_start_s": 2.0,
+      "expected": "trip_latch should set during the continuous low-voltage event; actual BRK_DFIG opening depends on later command combiner implementation"
+    },
+    {
+      "case_id": "timer_interpretation_sensitivity",
+      "fault_on_resistance_ohm": 0.1,
+      "fault_duration_s": 1.0,
+      "fault_start_s": 2.0,
+      "expected": "check whether post-clear voltage below 0.90 pu remains part of the continuous low-voltage event"
+    }
+  ],
+  "offline_reference_predictions": {
+    "r0p10_d1p25": {
+      "abstract_trip_request_time_s": 3.0378,
+      "cause": "duration_exceeded",
+      "fault_clear_time_s": 3.25,
+      "note": "offline state-machine prediction only; actual PSCAD trip time can differ after wiring"
+    },
+    "r0p10_d1p00": {
+      "abstract_trip_request_time_s": 3.05025,
+      "cause": "duration_exceeded",
+      "note": "post-clear timing sensitivity case"
+    }
+  },
+  "acceptance_criteria": {
+    "0p75_s_case": [
+      "trip_latch remains 0",
+      "BRK_DFIG remains closed",
+      "Type-3 branch remains connected and recovers"
+    ],
+    "1p25_s_case": [
+      "trip_latch sets near the offline reference time after control-source scaling is confirmed",
+      "if breaker connection has been implemented later, DFIG_BRK_STATE changes consistently with opening",
+      "PIBR1_2 and QIBR1_2 change consistently with branch cut after actual opening"
+    ],
+    "1p00_s_case": [
+      "used to verify continuous-event timing interpretation and post-clear below-0.90 behavior"
+    ]
+  },
+  "unresolved_items": [
+    "VIBR1_2 real-time control-source branch point and pu scaling",
+    "BRK_DFIG command polarity and port name",
+    "safe command combiner implementation",
+    "whether trip_latch monitoring channels should be added before breaker connection"
+  ],
+  "future_manual_integration_sequence": [
+    "Confirm the physical measurement module/control output corresponding to VIBR1_2.",
+    "Confirm voltage pu base and scaling.",
+    "Confirm BRK_DFIG control port, open-command polarity, and existing command source.",
+    "Confirm a safe TBD command combiner method.",
+    "Build the external LVRT state machine without connecting it to BRK_DFIG; output trip_latch monitor first.",
+    "Validate 0.10 ohm / 0.75 s no false trip.",
+    "Validate 0.10 ohm / 1.25 s trip_latch timing.",
+    "Only after command semantics are confirmed, connect the combiner output to BRK_DFIG.",
+    "Rerun 0.75 s, 1.00 s, and 1.25 s cases."
+  ],
+  "non_goals": [
+    "no PSCAD implementation in this task",
+    "no BRK_DFIG connection in this task",
+    "no modification to Type3WTG_Lib",
+    "no modification to Dblk_DFIG",
+    "no fault or cascade logic changes",
+    "no claim that the full paper model has been reproduced"
+  ]
+}
