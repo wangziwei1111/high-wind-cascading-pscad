@@ -1,0 +1,319 @@
+{
+  "task": "Type-3 DFIG external LVRT trip prototype design and offline waveform replay",
+  "audit_time": "2026-06-26T09:24:22.503732+00:00",
+  "constraints_observed": {
+    "computer_use": false,
+    "pscad_gui_opened_or_operated_by_codex": false,
+    "build_or_run": false,
+    "model_files_modified": false,
+    "existing_scan_values_modified": false
+  },
+  "prototype_scope": "offline abstract trip_request/trip_latch prediction only; no PSCAD implementation and no BRK_DFIG connection",
+  "project_boundary_decision": {
+    "source": "docs/TYPE3_DFIG_LVRT_TRIP_CRITERION_AUDIT.md",
+    "Vs_le_0p20_pu": "immediate abstract trip_request",
+    "0p20_lt_Vs_lt_0p90": "duration timer governed by tVRT(Vs)",
+    "Vs_ge_0p90": "low-voltage event ends; reset timer only if trip_latch is not set"
+  },
+  "candidate_input": {
+    "signal": "VIBR1_2",
+    "reason": "existing Type-3 branch/collector-side voltage output used by duration sweep analysis",
+    "semantic_limits": "candidate external POC voltage input only; final PSCAD control source, filtering, scaling, and wiring remain unconfirmed"
+  },
+  "input_semantic_limits": [
+    "VIBR1_2 is replayed from saved PGB output, not from a live control wire.",
+    "The replay starts monitoring at the known fault start time 2.0 s to avoid startup transients being treated as LVRT events.",
+    "No conclusion is made about actual BRK_DFIG opening or Type-3 disconnection."
+  ],
+  "state_machine": {
+    "event_start": "if VIBR1_2 < 0.90 pu and no current event and trip_latch=0, latch event_start_time and Vs_min_latched",
+    "event_update": "while VIBR1_2 < 0.90 pu, update Vs_min_latched=min(Vs_min_latched,VIBR1_2)",
+    "immediate_trip": "if Vs_min_latched <= 0.20 pu, set trip_request=1 and trip_latch=1",
+    "duration_trip": "if 0.20 < Vs_min_latched < 0.90 and elapsed >= tVRT(Vs_min_latched), set trip_request=1 and trip_latch=1",
+    "event_reset": "if VIBR1_2 >= 0.90 pu before trip_latch, clear low-voltage event state",
+    "latch": "once trip_latch=1, it does not reset automatically in the same simulation"
+  },
+  "formula": {
+    "tVRT_s": "0 for Vs<=0.20; 0.625 + ((Vs-0.20)/(0.90-0.20))*(2.0-0.625) for 0.20<Vs<0.90; no timing for Vs>=0.90",
+    "V_trip_immediate_pu": 0.2,
+    "V_event_start_pu": 0.9,
+    "t_at_0p20_s": 0.625,
+    "t_at_0p90_s": 2.0
+  },
+  "timer_method": "minimum-voltage latch within continuous low-voltage event",
+  "trip_latch_behavior": "abstract latch only; no auto-reclose and no physical breaker command in PSCAD in this task",
+  "replay_source": {
+    "archive_root": "C:\\pscad_work\\type3_dfig_duration_sweep_tmp\\20260626_134153",
+    "scenario_ids": [
+      "r0p10_d0p15",
+      "r0p10_d0p50",
+      "r0p10_d0p75",
+      "r0p10_d1p00",
+      "r0p10_d1p25",
+      "r0p10_d1p50"
+    ],
+    "parser_script": "analysis/pscad_tools/replay_type3_dfig_external_lvrt_trip.py",
+    "reference_summary": "data/reference/type3_dfig_lvrt_duration_boundary_summary.csv"
+  },
+  "replay_status": "all six scenario-local 3IBR.inf and 3IBR_*.out waveform sets were read successfully",
+  "scenario_results": [
+    {
+      "scenario_id": "r0p10_d0p15",
+      "fault_ohm": 0.1,
+      "fault_duration_s": 0.15,
+      "output_end_time_s": 7.99705,
+      "VIBR1_2_mapping": {
+        "pgb": 2,
+        "group": "P3",
+        "unit": "",
+        "out_file": "3IBR_01.out",
+        "column": 3
+      },
+      "event_start_time_s": 2.00445,
+      "event_end_time_s": 2.17045,
+      "Vs_min_latched_pu": 0.51478515211888,
+      "t_allow_s": 1.2433279773763715,
+      "abstract_trip_request": false,
+      "trip_latch": false,
+      "trip_time_s": null,
+      "trip_cause": null,
+      "event_elapsed_at_trip_s": null,
+      "trip_before_fault_clear": null,
+      "recovery_reset_before_trip": true,
+      "limitations": [
+        "Offline prediction only; PSCAD LVRT logic was not implemented.",
+        "abstract_trip_request does not mean BRK_DFIG opened.",
+        "VIBR1_2 is a candidate external POC voltage input; final PSCAD control wiring and filtering remain unconfirmed."
+      ]
+    },
+    {
+      "scenario_id": "r0p10_d0p50",
+      "fault_ohm": 0.1,
+      "fault_duration_s": 0.5,
+      "output_end_time_s": 7.99705,
+      "VIBR1_2_mapping": {
+        "pgb": 2,
+        "group": "P3",
+        "unit": "",
+        "out_file": "3IBR_01.out",
+        "column": 3
+      },
+      "event_start_time_s": 2.00445,
+      "event_end_time_s": 2.51905,
+      "Vs_min_latched_pu": 0.49733859575945,
+      "t_allow_s": 1.2090579559560624,
+      "abstract_trip_request": false,
+      "trip_latch": false,
+      "trip_time_s": null,
+      "trip_cause": null,
+      "event_elapsed_at_trip_s": null,
+      "trip_before_fault_clear": null,
+      "recovery_reset_before_trip": true,
+      "limitations": [
+        "Offline prediction only; PSCAD LVRT logic was not implemented.",
+        "abstract_trip_request does not mean BRK_DFIG opened.",
+        "VIBR1_2 is a candidate external POC voltage input; final PSCAD control wiring and filtering remain unconfirmed."
+      ]
+    },
+    {
+      "scenario_id": "r0p10_d0p75",
+      "fault_ohm": 0.1,
+      "fault_duration_s": 0.75,
+      "output_end_time_s": 7.99705,
+      "VIBR1_2_mapping": {
+        "pgb": 2,
+        "group": "P3",
+        "unit": "",
+        "out_file": "3IBR_01.out",
+        "column": 3
+      },
+      "event_start_time_s": 2.00445,
+      "event_end_time_s": 3.0959,
+      "Vs_min_latched_pu": 0.45916041557195,
+      "t_allow_s": 1.1340651020163304,
+      "abstract_trip_request": false,
+      "trip_latch": false,
+      "trip_time_s": null,
+      "trip_cause": null,
+      "event_elapsed_at_trip_s": null,
+      "trip_before_fault_clear": null,
+      "recovery_reset_before_trip": true,
+      "limitations": [
+        "Offline prediction only; PSCAD LVRT logic was not implemented.",
+        "abstract_trip_request does not mean BRK_DFIG opened.",
+        "VIBR1_2 is a candidate external POC voltage input; final PSCAD control wiring and filtering remain unconfirmed."
+      ]
+    },
+    {
+      "scenario_id": "r0p10_d1p00",
+      "fault_ohm": 0.1,
+      "fault_duration_s": 1.0,
+      "output_end_time_s": 7.99705,
+      "VIBR1_2_mapping": {
+        "pgb": 2,
+        "group": "P3",
+        "unit": "",
+        "out_file": "3IBR_01.out",
+        "column": 3
+      },
+      "event_start_time_s": 2.00445,
+      "event_end_time_s": 3.38225,
+      "Vs_min_latched_pu": 0.41249231117332,
+      "t_allow_s": 1.0423956112333073,
+      "abstract_trip_request": true,
+      "trip_latch": true,
+      "trip_time_s": 3.05025,
+      "trip_cause": "duration_exceeded",
+      "event_elapsed_at_trip_s": 1.0458000000000003,
+      "trip_before_fault_clear": false,
+      "recovery_reset_before_trip": false,
+      "limitations": [
+        "Offline prediction only; PSCAD LVRT logic was not implemented.",
+        "abstract_trip_request does not mean BRK_DFIG opened.",
+        "VIBR1_2 is a candidate external POC voltage input; final PSCAD control wiring and filtering remain unconfirmed."
+      ]
+    },
+    {
+      "scenario_id": "r0p10_d1p25",
+      "fault_ohm": 0.1,
+      "fault_duration_s": 1.25,
+      "output_end_time_s": 7.99705,
+      "VIBR1_2_mapping": {
+        "pgb": 2,
+        "group": "P3",
+        "unit": "",
+        "out_file": "3IBR_01.out",
+        "column": 3
+      },
+      "event_start_time_s": 2.00445,
+      "event_end_time_s": 3.71425,
+      "Vs_min_latched_pu": 0.3796494625323,
+      "t_allow_s": 0.9778828728313036,
+      "abstract_trip_request": true,
+      "trip_latch": true,
+      "trip_time_s": 3.0378,
+      "trip_cause": "duration_exceeded",
+      "event_elapsed_at_trip_s": 1.03335,
+      "trip_before_fault_clear": true,
+      "recovery_reset_before_trip": false,
+      "limitations": [
+        "Offline prediction only; PSCAD LVRT logic was not implemented.",
+        "abstract_trip_request does not mean BRK_DFIG opened.",
+        "VIBR1_2 is a candidate external POC voltage input; final PSCAD control wiring and filtering remain unconfirmed."
+      ]
+    },
+    {
+      "scenario_id": "r0p10_d1p50",
+      "fault_ohm": 0.1,
+      "fault_duration_s": 1.5,
+      "output_end_time_s": 7.99705,
+      "VIBR1_2_mapping": {
+        "pgb": 2,
+        "group": "P3",
+        "unit": "",
+        "out_file": "3IBR_01.out",
+        "column": 3
+      },
+      "event_start_time_s": 2.00445,
+      "event_end_time_s": 4.17075,
+      "Vs_min_latched_pu": 0.35351042962573,
+      "t_allow_s": 0.926538343907684,
+      "abstract_trip_request": true,
+      "trip_latch": true,
+      "trip_time_s": 3.0378,
+      "trip_cause": "duration_exceeded",
+      "event_elapsed_at_trip_s": 1.03335,
+      "trip_before_fault_clear": true,
+      "recovery_reset_before_trip": false,
+      "limitations": [
+        "Offline prediction only; PSCAD LVRT logic was not implemented.",
+        "abstract_trip_request does not mean BRK_DFIG opened.",
+        "VIBR1_2 is a candidate external POC voltage input; final PSCAD control wiring and filtering remain unconfirmed."
+      ]
+    }
+  ],
+  "summary": {
+    "scenario_count": 6,
+    "successful_reads": 6,
+    "abstract_trip_request_scenarios": [
+      "r0p10_d1p00",
+      "r0p10_d1p25",
+      "r0p10_d1p50"
+    ],
+    "immediate_low_voltage_trip_count": 0,
+    "duration_exceeded_trip_count": 3,
+    "before_fault_clear_trip_scenarios": [
+      "r0p10_d1p25",
+      "r0p10_d1p50"
+    ],
+    "after_fault_clear_trip_scenarios": [
+      "r0p10_d1p00"
+    ]
+  },
+  "reference_comparison": [
+    {
+      "scenario_id": "r0p10_d0p15",
+      "reference_class": "within_reference_window",
+      "reference_margin_s": "1.098077977376371",
+      "reference_fault_window_below_0p90_s": "0.14525000000000032",
+      "offline_replay_abstract_trip_request": false,
+      "comparison_note": "matches exceed/pass boundary"
+    },
+    {
+      "scenario_id": "r0p10_d0p50",
+      "reference_class": "within_reference_window",
+      "reference_margin_s": "0.7152079559560622",
+      "reference_fault_window_below_0p90_s": "0.4938500000000001",
+      "offline_replay_abstract_trip_request": false,
+      "comparison_note": "matches exceed/pass boundary"
+    },
+    {
+      "scenario_id": "r0p10_d0p75",
+      "reference_class": "within_reference_window",
+      "reference_margin_s": "0.3912151020163299",
+      "reference_fault_window_below_0p90_s": "0.7428500000000002",
+      "offline_replay_abstract_trip_request": false,
+      "comparison_note": "matches exceed/pass boundary"
+    },
+    {
+      "scenario_id": "r0p10_d1p00",
+      "reference_class": "within_reference_window",
+      "reference_margin_s": "0.051848364219063914",
+      "reference_fault_window_below_0p90_s": "0.9918500000000003",
+      "offline_replay_abstract_trip_request": true,
+      "comparison_note": "replay trips because post-clear low-voltage recovery is included in the continuous event timer"
+    },
+    {
+      "scenario_id": "r0p10_d1p25",
+      "reference_class": "exceeds_reference_window",
+      "reference_margin_s": "-0.2671171271686965",
+      "reference_fault_window_below_0p90_s": "1.245",
+      "offline_replay_abstract_trip_request": true,
+      "comparison_note": "matches exceed/pass boundary"
+    },
+    {
+      "scenario_id": "r0p10_d1p50",
+      "reference_class": "exceeds_reference_window",
+      "reference_margin_s": "-0.5674616560923162",
+      "reference_fault_window_below_0p90_s": "1.4940000000000002",
+      "offline_replay_abstract_trip_request": true,
+      "comparison_note": "matches exceed/pass boundary"
+    }
+  ],
+  "confirmed_facts": [
+    "No replayed 0.10 ohm duration case reached Vs <= 0.20 pu.",
+    "r0p10_d1p00, r0p10_d1p25, and r0p10_d1p50 produce abstract duration_exceeded trip_request under the minimum-voltage latch timer.",
+    "r0p10_d0p15, r0p10_d0p50, and r0p10_d0p75 recover before abstract trip_request."
+  ],
+  "engineering_choices": [
+    "The timer monitors only after fault_start_s=2.0 for this replay to avoid startup low-voltage artifacts.",
+    "The continuous event remains active after fault clear until VIBR1_2 recovers to 0.90 pu or a trip latch occurs."
+  ],
+  "unresolved_pscad_integration_items": [
+    "Confirm the live PSCAD signal/source that should feed the external LVRT block, instead of reading saved VIBR1_2 output.",
+    "Confirm voltage filtering, sample timing, and pu base for the future control input.",
+    "Define how abstract trip_request should drive BRK_DFIG or another disconnection path without conflicting with existing BRK_DFIG command/state logic.",
+    "Confirm reset/reclose policy and whether latch should persist for the entire simulation."
+  ],
+  "next_manual_step": "In PSCAD GUI, identify the actual control-accessible voltage signal equivalent to VIBR1_2 and the safe insertion point for an external trip_request to BRK_DFIG, without wiring it yet."
+}

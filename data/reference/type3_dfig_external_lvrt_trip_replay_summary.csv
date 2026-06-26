@@ -1,0 +1,7 @@
+scenario_id,fault_ohm,fault_duration_s,replay_status,output_end_time_s,event_count,event_start_time_s,event_end_time_s,Vs_min_latched_pu,t_allow_s,event_elapsed_at_trip_s,abstract_trip_request,trip_latch,trip_time_s,trip_cause,trip_before_fault_clear,recovery_reset_before_trip,notes
+r0p10_d0p15,0.1,0.15,read_success,7.99705,1,2.00445,2.17045,0.51478515211888,1.2433279773763715,,False,False,,,,True,recovered before abstract trip request
+r0p10_d0p50,0.1,0.5,read_success,7.99705,1,2.00445,2.51905,0.49733859575945,1.2090579559560624,,False,False,,,,True,recovered before abstract trip request
+r0p10_d0p75,0.1,0.75,read_success,7.99705,1,2.00445,3.0959,0.45916041557195,1.1340651020163304,,False,False,,,,True,recovered before abstract trip request
+r0p10_d1p00,0.1,1.0,read_success,7.99705,1,2.00445,3.38225,0.41249231117332,1.0423956112333073,1.0458000000000003,True,True,3.05025,duration_exceeded,False,False,offline abstract duration timer exceeded; trip after fault clear but before voltage recovery to 0.90 pu
+r0p10_d1p25,0.1,1.25,read_success,7.99705,1,2.00445,3.71425,0.3796494625323,0.9778828728313036,1.03335,True,True,3.0378,duration_exceeded,True,False,offline abstract duration timer exceeded
+r0p10_d1p50,0.1,1.5,read_success,7.99705,1,2.00445,4.17075,0.35351042962573,0.926538343907684,1.03335,True,True,3.0378,duration_exceeded,True,False,offline abstract duration timer exceeded
