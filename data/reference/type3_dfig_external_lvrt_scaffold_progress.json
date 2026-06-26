@@ -1,0 +1,100 @@
+{
+  "task": "Type-3 DFIG external LVRT scaffold progress upload",
+  "audit_time": "2026-06-26T18:50:00+08:00",
+  "pscad_project_source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "uploaded_snapshot": {
+    "path": "external/pscad_snapshot_20260626_lvrt_scaffold/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx",
+    "size_bytes": 3371503,
+    "sha256": "9432E1DC41B1C0979C2B2A4506D5269420A776247880C4036646AEA1A4912319",
+    "source_last_write_time": "2026-06-26T18:47:38+08:00",
+    "contents": "current 3IBR PSCAD project after external LVRT LOWV, IMMTRIP, CLEAR, and TIMER_S monitoring scaffold was added"
+  },
+  "confirmed_interfaces": {
+    "VIBR1_2": {
+      "source": "P3 multimeter at Type-3 branch 22 kV collector-side upstream of BRK_DFIG",
+      "quantity": "RMS voltage",
+      "method": "Digital RMS",
+      "frequency_hz": 60.0,
+      "base_voltage_kv": 22.0,
+      "role": "candidate future LVRT Vs input"
+    },
+    "BRK_DFIG": {
+      "component": "3 Phase Breaker",
+      "single_pole_operation": false,
+      "command_semantics": {
+        "0": "closed",
+        "1": "open"
+      },
+      "open_possible_at_any_current": true,
+      "state_output": "DFIG_BRK_STATE"
+    }
+  },
+  "implemented_monitoring_scaffold": [
+    {
+      "signal": "DFIG_LVRT_LOWV",
+      "source": "VIBR1_2 comparator",
+      "threshold": 0.9,
+      "low_output_level": 1,
+      "high_output_level": 0,
+      "meaning": "1 when VIBR1_2 is below 0.90 pu",
+      "output_channel_added": true
+    },
+    {
+      "signal": "DFIG_LVRT_IMMTRIP",
+      "source": "VIBR1_2 comparator",
+      "threshold": 0.2,
+      "low_output_level": 1,
+      "high_output_level": 0,
+      "meaning": "1 when VIBR1_2 is at or below the immediate trip threshold region",
+      "output_channel_added": true
+    },
+    {
+      "signal": "DFIG_LVRT_CLEAR",
+      "source": "DFIG_LVRT_LOWV comparator",
+      "threshold": 0.5,
+      "low_output_level": 1,
+      "high_output_level": 0,
+      "meaning": "1 when the low-voltage event is inactive; used to clear the resettable integrator",
+      "output_channel_added": false
+    },
+    {
+      "signal": "DFIG_LVRT_TIMER_S",
+      "source": "resettable integrator",
+      "input": "DFIG_LVRT_LOWV",
+      "clear": "DFIG_LVRT_CLEAR",
+      "time_constant_s": 1.0,
+      "limits": {
+        "lower": 0,
+        "upper": 10
+      },
+      "meaning": "continuous low-voltage event elapsed time in seconds",
+      "output_channel_added": true
+    }
+  ],
+  "build_check": {
+    "performed_by_user_in_pscad": true,
+    "errors": 0,
+    "warnings": 44,
+    "messages": 119,
+    "note": "warnings are the current known project warning level; no red Build errors after adding the scaffold"
+  },
+  "not_implemented_yet": [
+    "tVRT(Vs_min_latched) calculation",
+    "minimum voltage latch Vs_min_latched",
+    "duration_exceeded comparator",
+    "trip_latch latch",
+    "trip_latch output channel",
+    "any connection to BRK_DFIG"
+  ],
+  "safety_notes": [
+    "The scaffold is monitoring-only and does not command BRK_DFIG.",
+    "No actual PSCAD LVRT trip has been implemented yet.",
+    "Future BRK_DFIG command synthesis must preserve the confirmed 0=closed, 1=open semantics."
+  ],
+  "recommended_next_steps": [
+    "Run a 5 s no-fault baseline to verify LOWV, IMMTRIP, and TIMER_S remain zero.",
+    "Add Vs_min_latched and tVRT calculation.",
+    "Add trip_latch monitoring before connecting any breaker command.",
+    "Only after monitoring validation should BRK_DFIG command synthesis be discussed."
+  ]
+}
