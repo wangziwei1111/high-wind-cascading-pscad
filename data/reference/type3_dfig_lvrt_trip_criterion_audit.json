@@ -115,7 +115,12 @@
       "status": "manual_confirmation_required",
       "text_and_figure_candidate": "tVRT = 0.625 s",
       "equation_candidate": "tVRT = 0 s because equation uses Vs <= 0.20 in the zero-delay branch",
-      "recommended_before_implementation": "Ask user to confirm which boundary convention to use before PSCAD external LVRT logic is implemented."
+      "recommended_before_implementation": "Ask user to confirm which boundary convention to use before PSCAD external LVRT logic is implemented.",
+      "project_implementation_decision": {
+        "decision": "Vs <= 0.20 pu maps to tVRT = 0 s and immediate_trip",
+        "decision_source": "Explicit user-confirmed project implementation convention for follow-on prototype work",
+        "evidence_limit": "This records a project boundary choice and does not erase the paper text/figure versus equation boundary tension at exactly Vs = 0.20 pu."
+      }
     },
     "Vs_0_90": {
       "status": "usable_as_recovery_boundary_candidate",
@@ -162,7 +167,7 @@
   "engineering_translation": {
     "ready_parts": [
       "Use the linear formula for 0.20 < Vs < 0.90.",
-      "Treat Vs below 0.20 as immediate-trip candidate if the equation convention is accepted.",
+      "For this project implementation path, treat Vs <= 0.20 as tVRT = 0 s and immediate_trip by explicit user boundary decision.",
       "Treat Vs at or above 0.90 and below high-voltage branches as a recovery/no-low-voltage-timer candidate."
     ],
     "not_ready_parts": [
@@ -178,6 +183,6 @@
   "next_recommendation": {
     "allow_fault_duration_scan_preparation": true,
     "allow_pscad_trip_logic_implementation": false,
-    "required_manual_confirmation_before_implementation": "Confirm whether Vs = 0.20 pu should use 0 s immediate trip or 0.625 s ride-through hold time."
+    "required_manual_confirmation_before_implementation": "Boundary convention has been selected for the project as Vs <= 0.20 pu -> tVRT = 0 s -> immediate_trip; timer implementation semantics and VIBR1_2 base/sampling still need confirmation before actual PSCAD trip logic."
   }
 }
