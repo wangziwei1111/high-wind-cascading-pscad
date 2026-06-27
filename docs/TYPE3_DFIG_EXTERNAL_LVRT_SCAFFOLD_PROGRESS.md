@@ -2,12 +2,12 @@
 
 ## 范围
 
-本文记录 2026-06-26 在 PSCAD `3IBR:Main(0):P1(0):P3(0)` 页面上已经手工搭建并通过 Build 静态检查的外部 LVRT 前置支架。该支架目前只用于监测与后续验证，尚未接入 `BRK_DFIG`，尚未实现实际脱网。
+本文记录 2026-06-26 至 2026-06-27 在 PSCAD `3IBR:Main(0):P1(0):P3(0)` 页面上手工搭建并通过 Build 静态检查的外部 LVRT 前置支架。该支架目前只用于监测与后续验证，尚未接入 `BRK_DFIG`，尚未实现实际脱网。
 
 本次归档包含当前 `3IBR.pscx` 的轻量快照：
 
 ```text
-external/pscad_snapshot_20260626_lvrt_scaffold/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx
+external/pscad_snapshot_20260627_lvrt_vsmin_mem/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx
 ```
 
 未上传新的 `.gf46`、`.out`、`.inf`、截图、安装包或二进制生成物。
@@ -139,14 +139,14 @@ Lower Limit = 0
 低电压事件结束时 DFIG_LVRT_CLEAR = 1，计时器复位到 0。
 ```
 
-### 最低电压候选/复位支架
+### 最低电压反馈记忆支架
 
-2026-06-27 继续在 PSCAD GUI 中手工搭建 `Vs_min` 相关支架。该支架当前只达到 Build-safe 的候选/复位状态，尚未形成正式反馈锁存，因此不得用于断路器脱网命令。
+2026-06-27 在 PSCAD GUI 中继续搭建 `Vs_min` 相关支架，并引入 Feedback Loop Selector 形成反馈记忆路径。当前结构已通过 Build，但新增 `DFIG_LVRT_VSMIN_MEM` 输出通道后尚未重新 Run，因此仍只能称为待动态验证的反馈记忆支架，不得用于断路器脱网命令。
 
 已搭建结构：
 
 ```text
-VIBR1_2 - DFIG_LVRT_VSMIN_PU
+VIBR1_2 - DFIG_LVRT_VSMIN_MEM
     -> Single Input Level Comparator
        Threshold Input Value = 0
        Low output level = 1
@@ -157,7 +157,7 @@ VIBR1_2 - DFIG_LVRT_VSMIN_PU
 Two Input Selector #1:
     Ctrl = DFIG_LVRT_UPDATE_MIN
     A = VIBR1_2
-    B = DFIG_LVRT_VSMIN_PU
+    B = DFIG_LVRT_VSMIN_MEM
     Output = DFIG_LVRT_VSMIN_CAND
 
 Two Input Selector #2:
@@ -165,13 +165,21 @@ Two Input Selector #2:
     A = 1.0
     B = DFIG_LVRT_VSMIN_CAND
     Output = DFIG_LVRT_VSMIN_PU
-              -> Output Channel DFIG_LVRT_VSMIN_PU
+
+DFIG_LVRT_VSMIN_PU
+    -> Feedback Loop Selector
+       Data Type = Real
+       Dimension = 1
+       Specify Initial Values = Yes
+       Initial Real Value = 1.0
+    -> DFIG_LVRT_VSMIN_MEM
+       -> Output Channel DFIG_LVRT_VSMIN_MEM
 ```
 
 新增 Output Channel：
 
 ```text
-Title = DFIG_LVRT_VSMIN_PU
+Title = DFIG_LVRT_VSMIN_MEM
 Unit = pu
 Scale Factor = 1.0
 Transfer data = Yes
@@ -181,7 +189,7 @@ Default Maximum Display Limit = 1.2
 Default Minimum Display Limit = 0
 ```
 
-图纸旁已添加注释：
+图纸旁仍保留早期支架注释，其中文字“Feedback latch still pending”已不再准确描述当前 Build-safe 结构，后续整理图纸时应更新，但本次归档未为此再次修改模型。
 
 ```text
 LVRT VSMIN scaffold:
@@ -192,10 +200,9 @@ Feedback latch still pending before breaker trip use.
 重要限制：
 
 ```text
-当前 DFIG_LVRT_VSMIN_PU 是候选/复位支架输出，不是已验证的历史最低电压锁存量。
-曾尝试引入 Feedback Loop Selector，但 Build 报告该链路 source 连接到 Unused。
-为恢复 0 Errors，已删除该 Feedback Loop Selector 相关连接。
-后续若要实现真正 Vs_min_latched，应重新设计并单独验证反馈/锁存结构。
+当前反馈结构已能 Build，但 `DFIG_LVRT_VSMIN_MEM` 的动态最低值保持、复位时刻和启动初值尚未通过输出波形确认。
+此前出现的 Feedback Loop Selector `Unused` source 错误已通过把反馈输出改为独立信号 `DFIG_LVRT_VSMIN_MEM` 解决。
+在完成 8 s 动态验证之前，不得把该信号升级为已确认的 `Vs_min_latched`，更不得接入 `BRK_DFIG`。
 ```
 
 ## 静态检查状态
@@ -204,18 +211,20 @@ Feedback latch still pending before breaker trip use.
 
 ```text
 0 Errors
-44 Warnings
-119 Messages
+2 Warnings
+13 Messages
 ```
 
-其中 44 warnings 属于当前工程已有 warning 水平；本轮新增支架未引入红色 Build errors。2026-06-27 新增 `DFIG_LVRT_VSMIN_PU` 候选/复位支架后也已手工 Build，显示 `0 Errors`。该检查只代表静态 Build 通过，尚未代表 VSMIN 反馈锁存语义正确。
+两个 warning 为已审计的 `XFMR_DFIG_22_33` 浮空端子提示。本轮新增 Feedback Loop Selector、`DFIG_LVRT_VSMIN_MEM` 信号和输出通道未引入红色 Build errors。该检查只代表静态 Build 通过，尚未代表 VSMIN 反馈记忆语义正确。
+
+在增加 `DFIG_LVRT_VSMIN_MEM` 输出通道之前，用户完成过一次 8 s 运行，最新 `.out` 末尾时间为 `7.99705 s`。该次运行确认 `DFIG_LVRT_LOWV`、`DFIG_LVRT_CLEAR` 和 `DFIG_LVRT_TIMER_S` 有合理时序，但由于当时尚无 `DFIG_LVRT_VSMIN_MEM` 输出通道，不能作为最低电压记忆闭环的验证证据。新增通道后的 8 s Run 尚未执行。
 
 ## 当前未完成项
 
 尚未搭建：
 
 - `tVRT(Vs_min_latched)` 允许持续时间计算；
-- `Vs_min_latched` 正式最小电压锁存；
+- `Vs_min_latched` 反馈记忆结构的动态验证与正式语义确认；
 - `duration_exceeded` 比较；
 - `trip_latch` 锁存；
 - `trip_latch` 输出通道；
@@ -223,15 +232,15 @@ Feedback latch still pending before breaker trip use.
 
 尚未执行：
 
-- 新支架 5 s 基准 Run 验证；
+- 新增 `DFIG_LVRT_VSMIN_MEM` 输出后的 8 s Run 验证；
 - 0.10 ohm / 0.75 s 无误触发验证；
 - 0.10 ohm / 1.25 s 脱网请求时序验证；
 - 任何实际 `BRK_DFIG` 开断验证。
 
 ## 下一步建议
 
-1. 先运行 5 s 基准，确认 `DFIG_LVRT_LOWV=0`、`DFIG_LVRT_IMMTRIP=0`、`DFIG_LVRT_TIMER_S=0`。
-2. 先修正并验证 `Vs_min_latched` 的反馈锁存，不要直接复用当前候选/复位支架作为正式判据。
+1. 运行当前已配置的 8 s、`0.10 ohm`、`2.0 s / 0.75 s` 故障工况，验证 `DFIG_LVRT_VSMIN_MEM` 是否从 1.0 降至事件最低电压、在事件期间保持，并在 `DFIG_LVRT_CLEAR` 有效后复位。
+2. 只有动态结果正确，才将 `DFIG_LVRT_VSMIN_MEM` 确认为 `Vs_min_latched`。
 3. 再搭建 `tVRT(Vs_min_latched)` 计算与 `duration_exceeded` 比较。
 4. 先只输出 `DFIG_LVRT_TRIP_LATCH` 监测通道，不接 `BRK_DFIG`。
 5. 完成 0.75 s、1.00 s、1.25 s 三个工况的只监测验证后，再讨论断路器命令合成。
