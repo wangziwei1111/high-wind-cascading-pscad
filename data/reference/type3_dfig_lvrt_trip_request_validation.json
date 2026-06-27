@@ -1,0 +1,54 @@
+{
+  "execution_status": "monitoring_trip_latch_safe_fallback",
+  "failed_stage": "B",
+  "reason": "Current PSCAD GUI Run aborted with EMTDC Runtime Error before the five-scenario trip-request validation could complete.",
+  "active_before_sha256": "BA8E57FFDB98AD8BFAB5E116E58D6456D1EB2FBC6F9846EA3D94A41BA1D43F44",
+  "branch_snapshot_sha256": "BA8E57FFDB98AD8BFAB5E116E58D6456D1EB2FBC6F9846EA3D94A41BA1D43F44",
+  "active_final_sha256": "EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D",
+  "stage_a": {
+    "build_status": "pass",
+    "errors": 0,
+    "warnings": 8,
+    "messages": 12,
+    "audit": {
+      "tallow": "pass",
+      "duration_exceeded": "pass",
+      "trip_request": "pass",
+      "trip_latch": "unavailable"
+    },
+    "repair": "Removed a floating DFIG_LVRT_TRIP_LATCH placeholder data label that blocked Build. No BRK_DFIG command wiring was touched."
+  },
+  "stage_b": {
+    "run_status": "fail",
+    "runtime_errors": [
+      "ERROR: Abnormal termination of EMTDC runtime.",
+      "Ungrounded subsystem 22. It may contain a floating network.",
+      "EMTDC Runtime Error: abnormally terminated."
+    ],
+    "inf_mapping_status": "unavailable",
+    "missing_required_outputs": [
+      "DFIG_LVRT_TRIP_REQUEST"
+    ]
+  },
+  "retained_scope": [
+    "TALLOW/DURATION_EXCEEDED/TRIP_REQUEST schematic audit",
+    "Build=0 cleaned PSCAD snapshot",
+    "No TRIP_LATCH implementation",
+    "No CLEAR trip-aware rewrite"
+  ],
+  "unavailable_validation_items": [
+    "B1 no-fault run",
+    "B2 0.10 ohm / 0.75 s run",
+    "B3 0.10 ohm / 1.00 s run",
+    "B4 0.10 ohm / 1.25 s run",
+    "B5 0.01 ohm / 0.15 s run",
+    "TRIP_LATCH implementation and five-scenario validation"
+  ],
+  "safety_confirmations": {
+    "brk_dfig_command_integration": false,
+    "physical_breaker_opening": false,
+    "actual_turbine_disconnection": false,
+    "matlab_coupling": false,
+    "raw_pscad_outputs_committed": false
+  }
+}
