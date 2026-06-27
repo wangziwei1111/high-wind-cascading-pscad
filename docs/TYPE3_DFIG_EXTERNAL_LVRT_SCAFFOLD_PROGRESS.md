@@ -244,3 +244,14 @@ Feedback latch still pending before breaker trip use.
 3. 再搭建 `tVRT(Vs_min_latched)` 计算与 `duration_exceeded` 比较。
 4. 先只输出 `DFIG_LVRT_TRIP_LATCH` 监测通道，不接 `BRK_DFIG`。
 5. 完成 0.75 s、1.00 s、1.25 s 三个工况的只监测验证后，再讨论断路器命令合成。
+
+## 2026-06-27 后续记录
+
+后续无人值守尝试见：
+
+```text
+docs/TYPE3_DFIG_LVRT_MONITORING_FULL_VALIDATION.md
+data/reference/type3_dfig_lvrt_monitoring_full_validation.json
+```
+
+该后续尝试进入 `monitoring_logic_safe_fallback`：完整 `TALLOW / DURATION_EXCEEDED / TRIP_REQUEST / TRIP_LATCH` 监测逻辑未保留在最终 PSCAD 工程中，活动工程恢复到本文记录的 Build=0 VSMIN 支架状态。本文此前记录的历史事实不变。

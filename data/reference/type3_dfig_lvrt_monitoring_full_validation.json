@@ -1,0 +1,103 @@
+{
+  "task": "Type-3 DFIG external LVRT full monitoring logic implementation and validation",
+  "execution_status": "monitoring_logic_safe_fallback",
+  "computer_use_used": true,
+  "initial_pscx_sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+  "final_pscx_sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+  "backup_location": "C:\\pscad_work\\backups\\type3_lvrt_monitoring_full_20260627_121401\\3IBR.pscx",
+  "stage_edit_backup_location": "C:\\pscad_work\\backups\\type3_lvrt_monitoring_full_stage_edit_20260627_121604\\3IBR.pscx",
+  "initial_build": {
+    "errors": 0,
+    "warnings": 2,
+    "messages": 13,
+    "known_warnings": "Two XFMR_DFIG_22_33 suspicious floating-terminal warnings visible in PSCAD Build Messages."
+  },
+  "final_build": {
+    "errors": 0,
+    "warnings": 2,
+    "messages": 13,
+    "basis": "Active project restored to the last known Build=0 scaffold snapshot after the full-monitoring edit path failed to maintain Build=0 in unattended PSCAD."
+  },
+  "implemented_blocks": [
+    "No additional full-monitoring blocks retained in the final PSCAD project.",
+    "The final project remains at the prior build-safe VSMIN_MEM monitoring scaffold state."
+  ],
+  "signal_semantics": {
+    "VIBR1_2": "Type-3 collector-side RMS voltage upstream of BRK_DFIG.",
+    "DFIG_LVRT_LOWV": "1 when VIBR1_2 is below 0.90 pu.",
+    "DFIG_LVRT_IMMTRIP": "1 when VIBR1_2 is below the immediate-trip threshold region near 0.20 pu.",
+    "DFIG_LVRT_TIMER_S": "Resettable low-voltage event timer in seconds.",
+    "DFIG_LVRT_VSMIN_MEM": "Build-safe feedback-memory candidate; not promoted to canonical Vs_min_latched in this run."
+  },
+  "vsmin_dynamic_validation": {
+    "status": "unavailable",
+    "canonical_vs_min_latched": false,
+    "reason": "After unattended PSCAD reload/build recovery, scenario output files were not available for a valid VSMIN_MEM waveform check."
+  },
+  "tallow_implementation": {
+    "status": "not_retained",
+    "formula": "0.625 + ((DFIG_LVRT_VSMIN_MEM - 0.20) / 0.70) * 1.375, clamped to [0.625, 2.000]",
+    "reason": "The attempted monitoring-only edit was rolled back because the PSCAD Build did not remain at 0 errors."
+  },
+  "duration_exceeded_implementation": {
+    "status": "not_retained",
+    "logic": "DFIG_LVRT_LOWV AND (DFIG_LVRT_TIMER_S >= DFIG_LVRT_TALLOW_S)"
+  },
+  "trip_latch_implementation": {
+    "status": "not_retained",
+    "attempted_logic": "TRIP_REQUEST OR previous TRIP_LATCH through zminusone feedback memory with initial value 0",
+    "retained_in_final_project": false
+  },
+  "clear_logic": {
+    "final_project_logic": "DFIG_LVRT_CLEAR remains the previous NOT DFIG_LVRT_LOWV scaffold logic.",
+    "attempted_full_logic": "NOT DFIG_LVRT_LOWV AND NOT DFIG_LVRT_TRIP_LATCH",
+    "attempt_retained": false
+  },
+  "test_cases": [
+    {"scenario_id": "E1_no_fault_5s", "run_status": "not_run", "acceptance_status": "unavailable"},
+    {"scenario_id": "E2_r0p10_d0p75_8s", "run_status": "not_run", "acceptance_status": "unavailable"},
+    {"scenario_id": "E3_r0p10_d1p00_8s", "run_status": "not_run", "acceptance_status": "unavailable"},
+    {"scenario_id": "E4_r0p10_d1p25_8s", "run_status": "not_run", "acceptance_status": "unavailable"},
+    {"scenario_id": "E5_r0p01_d0p15_5s", "run_status": "not_run", "acceptance_status": "unavailable"}
+  ],
+  "validation_results": {
+    "pass": [],
+    "fail": [
+      "Full monitoring implementation did not reach final Build=0 under unattended PSCAD reload/build constraints."
+    ],
+    "unavailable": [
+      "VSMIN dynamic waveform validation",
+      "TALLOW numerical validation",
+      "DURATION_EXCEEDED validation",
+      "TRIP_REQUEST/TRIP_LATCH timing validation",
+      "Five-scenario validation matrix"
+    ]
+  },
+  "offline_reference_comparison": {
+    "status": "unavailable",
+    "reason": "No scenario-local post-edit 3IBR.inf and 3IBR_*.out files were available after rollback."
+  },
+  "breaker_status": {
+    "BRK_DFIG_command_touched": false,
+    "BRK_DFIG_connected_to_lvrt": false,
+    "actual_breaker_opening_tested": false,
+    "DFIG_BRK_STATE_final_claim": "No new breaker-state validation was performed in this fallback run."
+  },
+  "known_warnings": [
+    "XFMR_DFIG_22_33 suspicious floating-terminal warnings were visible in the initial Build view."
+  ],
+  "fallback_reason": "The attempted full-monitoring edit path could not be kept at Build=0 in an unattended PSCAD GUI session after project reload. The active PSCAD project was restored to the last known Build=0 VSMIN scaffold snapshot.",
+  "final_project_restoration": {
+    "fault_parameters": "Restored by restoring the exact stage-start PSCAD file.",
+    "total_simulation_time": "Restored by restoring the exact stage-start PSCAD file.",
+    "time_step": "Restored by restoring the exact stage-start PSCAD file.",
+    "active_project_sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202"
+  },
+  "committed_files": [
+    "analysis/pscad_tools/analyze_type3_dfig_lvrt_monitoring_full_validation.py",
+    "docs/TYPE3_DFIG_LVRT_MONITORING_FULL_VALIDATION.md",
+    "data/reference/type3_dfig_lvrt_monitoring_full_validation.json",
+    "data/reference/type3_dfig_lvrt_monitoring_full_validation_summary.csv",
+    "external/pscad_snapshot_20260627_lvrt_monitoring_full/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx"
+  ]
+}

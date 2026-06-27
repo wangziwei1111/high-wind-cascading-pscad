@@ -1,0 +1,6 @@
+scenario_id,fault_on_resistance_ohm,fault_duration_s,total_time_s,build_errors,build_warnings,run_status,Vs_steady_pu,Vs_min_pu,lowv_start_s,lowv_end_s,vsmin_min_pu,vsmin_rise_while_lowv,vsmin_reset_verified,tallow_s,immtrip_time_s,duration_exceeded_time_s,trip_request_time_s,trip_latch_time_s,trip_latch_holds,trip_before_fault_clear,dfig_brk_state_changed,P_before_trip_MW,P_after_trip_MW,Q_before_trip_Mvar,Q_after_trip_Mvar,acceptance_status,notes
+E1_no_fault_5s,,,5,0,2,not_run,,,,,,,,,,,,,,,,,,,,unavailable,"Safe fallback before validation matrix; no post-edit run retained."
+E2_r0p10_d0p75_8s,0.10,0.75,8,0,2,not_run,,,,,,,,,,,,,,,,,,,,unavailable,"Safe fallback before validation matrix; no post-edit run retained."
+E3_r0p10_d1p00_8s,0.10,1.00,8,0,2,not_run,,,,,,,,,,,,,,,,,,,,unavailable,"Safe fallback before validation matrix; no post-edit run retained."
+E4_r0p10_d1p25_8s,0.10,1.25,8,0,2,not_run,,,,,,,,,,,,,,,,,,,,unavailable,"Safe fallback before validation matrix; no post-edit run retained."
+E5_r0p01_d0p15_5s,0.01,0.15,5,0,2,not_run,,,,,,,,,,,,,,,,,,,,unavailable,"Safe fallback before validation matrix; no post-edit run retained."

@@ -150,5 +150,10 @@
     "Add tVRT calculation and duration_exceeded comparator only after Vs_min_latched is stable.",
     "Add trip_latch monitoring before connecting any breaker command.",
     "Only after monitoring validation should BRK_DFIG command synthesis be discussed."
-  ]
+  ],
+  "superseded_by": [
+    "docs/TYPE3_DFIG_LVRT_MONITORING_FULL_VALIDATION.md",
+    "data/reference/type3_dfig_lvrt_monitoring_full_validation.json"
+  ],
+  "historical_scope_note": "A later unattended full-monitoring attempt on 2026-06-27 safely fell back and restored this Build=0 VSMIN scaffold state. The historical scaffold facts in this file are unchanged."
 }
