@@ -139,6 +139,65 @@ Lower Limit = 0
 低电压事件结束时 DFIG_LVRT_CLEAR = 1，计时器复位到 0。
 ```
 
+### 最低电压候选/复位支架
+
+2026-06-27 继续在 PSCAD GUI 中手工搭建 `Vs_min` 相关支架。该支架当前只达到 Build-safe 的候选/复位状态，尚未形成正式反馈锁存，因此不得用于断路器脱网命令。
+
+已搭建结构：
+
+```text
+VIBR1_2 - DFIG_LVRT_VSMIN_PU
+    -> Single Input Level Comparator
+       Threshold Input Value = 0
+       Low output level = 1
+       High output level = 0
+       Convert output to nearest integer = Yes
+    -> DFIG_LVRT_UPDATE_MIN
+
+Two Input Selector #1:
+    Ctrl = DFIG_LVRT_UPDATE_MIN
+    A = VIBR1_2
+    B = DFIG_LVRT_VSMIN_PU
+    Output = DFIG_LVRT_VSMIN_CAND
+
+Two Input Selector #2:
+    Ctrl = DFIG_LVRT_CLEAR
+    A = 1.0
+    B = DFIG_LVRT_VSMIN_CAND
+    Output = DFIG_LVRT_VSMIN_PU
+              -> Output Channel DFIG_LVRT_VSMIN_PU
+```
+
+新增 Output Channel：
+
+```text
+Title = DFIG_LVRT_VSMIN_PU
+Unit = pu
+Scale Factor = 1.0
+Transfer data = Yes
+Display title on icon = Yes
+Multiple Run Save = All runs
+Default Maximum Display Limit = 1.2
+Default Minimum Display Limit = 0
+```
+
+图纸旁已添加注释：
+
+```text
+LVRT VSMIN scaffold:
+current build-safe candidate/reset logic.
+Feedback latch still pending before breaker trip use.
+```
+
+重要限制：
+
+```text
+当前 DFIG_LVRT_VSMIN_PU 是候选/复位支架输出，不是已验证的历史最低电压锁存量。
+曾尝试引入 Feedback Loop Selector，但 Build 报告该链路 source 连接到 Unused。
+为恢复 0 Errors，已删除该 Feedback Loop Selector 相关连接。
+后续若要实现真正 Vs_min_latched，应重新设计并单独验证反馈/锁存结构。
+```
+
 ## 静态检查状态
 
 用户手工执行 Build 后，PSCAD Build Messages 显示：
@@ -149,14 +208,14 @@ Lower Limit = 0
 119 Messages
 ```
 
-其中 44 warnings 属于当前工程已有 warning 水平；本轮新增支架未引入红色 Build errors。
+其中 44 warnings 属于当前工程已有 warning 水平；本轮新增支架未引入红色 Build errors。2026-06-27 新增 `DFIG_LVRT_VSMIN_PU` 候选/复位支架后也已手工 Build，显示 `0 Errors`。该检查只代表静态 Build 通过，尚未代表 VSMIN 反馈锁存语义正确。
 
 ## 当前未完成项
 
 尚未搭建：
 
 - `tVRT(Vs_min_latched)` 允许持续时间计算；
-- `Vs_min_latched` 最小电压锁存；
+- `Vs_min_latched` 正式最小电压锁存；
 - `duration_exceeded` 比较；
 - `trip_latch` 锁存；
 - `trip_latch` 输出通道；
@@ -172,6 +231,7 @@ Lower Limit = 0
 ## 下一步建议
 
 1. 先运行 5 s 基准，确认 `DFIG_LVRT_LOWV=0`、`DFIG_LVRT_IMMTRIP=0`、`DFIG_LVRT_TIMER_S=0`。
-2. 再搭建 `Vs_min_latched` 与 `tVRT` 计算。
-3. 先只输出 `DFIG_LVRT_TRIP_LATCH` 监测通道，不接 `BRK_DFIG`。
-4. 完成 0.75 s、1.00 s、1.25 s 三个工况的只监测验证后，再讨论断路器命令合成。
+2. 先修正并验证 `Vs_min_latched` 的反馈锁存，不要直接复用当前候选/复位支架作为正式判据。
+3. 再搭建 `tVRT(Vs_min_latched)` 计算与 `duration_exceeded` 比较。
+4. 先只输出 `DFIG_LVRT_TRIP_LATCH` 监测通道，不接 `BRK_DFIG`。
+5. 完成 0.75 s、1.00 s、1.25 s 三个工况的只监测验证后，再讨论断路器命令合成。

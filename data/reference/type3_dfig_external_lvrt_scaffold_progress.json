@@ -1,6 +1,6 @@
 {
   "task": "Type-3 DFIG external LVRT scaffold progress upload",
-  "audit_time": "2026-06-26T18:50:00+08:00",
+  "audit_time": "2026-06-27T00:00:00+08:00",
   "pscad_project_source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
   "uploaded_snapshot": {
     "path": "external/pscad_snapshot_20260626_lvrt_scaffold/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx",
@@ -69,6 +69,50 @@
       },
       "meaning": "continuous low-voltage event elapsed time in seconds",
       "output_channel_added": true
+    },
+    {
+      "signal": "DFIG_LVRT_VSMIN_PU",
+      "source": "candidate/reset scaffold output from two selector stages",
+      "structure": {
+        "difference": "VIBR1_2 - DFIG_LVRT_VSMIN_PU",
+        "update_min_comparator": {
+          "signal": "DFIG_LVRT_UPDATE_MIN",
+          "threshold": 0,
+          "low_output_level": 1,
+          "high_output_level": 0,
+          "convert_output_to_nearest_integer": true
+        },
+        "selector_update_candidate": {
+          "control": "DFIG_LVRT_UPDATE_MIN",
+          "channel_a": "VIBR1_2",
+          "channel_b": "DFIG_LVRT_VSMIN_PU",
+          "output": "DFIG_LVRT_VSMIN_CAND"
+        },
+        "selector_reset": {
+          "control": "DFIG_LVRT_CLEAR",
+          "channel_a": 1.0,
+          "channel_b": "DFIG_LVRT_VSMIN_CAND",
+          "output": "DFIG_LVRT_VSMIN_PU"
+        }
+      },
+      "output_channel_added": true,
+      "output_channel": {
+        "title": "DFIG_LVRT_VSMIN_PU",
+        "unit": "pu",
+        "scale_factor": 1.0,
+        "transfer_data": true,
+        "multiple_run_save": "All runs",
+        "default_display_limits": {
+          "min": 0,
+          "max": 1.2
+        }
+      },
+      "meaning": "build-safe candidate/reset VSMIN scaffold output; not yet a validated latched minimum voltage",
+      "limitations": [
+        "Feedback latch is still pending before this signal can be used for breaker trip logic.",
+        "A Feedback Loop Selector attempt produced a Build error indicating the source was connected to Unused, so that connection was removed.",
+        "Do not treat this signal as confirmed Vs_min_latched until a feedback/latch structure is redesigned and verified."
+      ]
     }
   ],
   "build_check": {
@@ -76,11 +120,11 @@
     "errors": 0,
     "warnings": 44,
     "messages": 119,
-    "note": "warnings are the current known project warning level; no red Build errors after adding the scaffold"
+    "note": "Latest manual Build after adding DFIG_LVRT_VSMIN_PU candidate/reset scaffold showed 0 red errors. This confirms static Build safety only, not final VSMIN latch correctness."
   },
   "not_implemented_yet": [
+    "validated minimum voltage latch Vs_min_latched",
     "tVRT(Vs_min_latched) calculation",
-    "minimum voltage latch Vs_min_latched",
     "duration_exceeded comparator",
     "trip_latch latch",
     "trip_latch output channel",
@@ -88,12 +132,14 @@
   ],
   "safety_notes": [
     "The scaffold is monitoring-only and does not command BRK_DFIG.",
+    "DFIG_LVRT_VSMIN_PU is currently a candidate/reset scaffold output, not a validated latched minimum voltage.",
     "No actual PSCAD LVRT trip has been implemented yet.",
     "Future BRK_DFIG command synthesis must preserve the confirmed 0=closed, 1=open semantics."
   ],
   "recommended_next_steps": [
-    "Run a 5 s no-fault baseline to verify LOWV, IMMTRIP, and TIMER_S remain zero.",
-    "Add Vs_min_latched and tVRT calculation.",
+    "Run a 5 s no-fault baseline to verify LOWV, IMMTRIP, TIMER_S, CLEAR, and VSMIN candidate outputs.",
+    "Redesign and verify the Vs_min_latched feedback/latch structure before using it in trip logic.",
+    "Add tVRT calculation and duration_exceeded comparator only after Vs_min_latched is stable.",
     "Add trip_latch monitoring before connecting any breaker command.",
     "Only after monitoring validation should BRK_DFIG command synthesis be discussed."
   ]
