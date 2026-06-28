@@ -2,7 +2,7 @@
 
 ## Status
 
-execution_status: `trip_request_manual_validation_partial_or_fallback`
+execution_status: `trip_request_manual_validation_success`
 
 This run validates the external LVRT trip-request monitoring signals only:
 
@@ -22,11 +22,12 @@ Page:    3IBR:Main(0):P1(0):P3(0)
 Branch:  codex/lvrt-trip-request-progress
 Run root: C:\pscad_work\lvrt_trip_request_matrix\20260628_111429
 Initial active SHA-256: EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D
-Final active SHA-256:   EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D
+Final active SHA-256:   17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B
 Snapshot: external/pscad_snapshot_20260628_lvrt_trip_request_manual_validated/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx
 ```
 
-The final active PSCAD project was restored to the task-start SHA after the partial validation attempt.
+The final active PSCAD project reflects the successful R5 validation scenario:
+`0.01 ohm / 0.15 s / 5 s`, with Build `0 Errors / 2 Warnings / 12 Messages`.
 
 ## Case Results
 
@@ -36,7 +37,7 @@ The final active PSCAD project was restored to the task-start SHA after the part
 | R2 | 0.10 ohm, 0.75 s, 8 s | parsed | pass | Ride-through; TRIP_REQUEST stayed 0. |
 | R3 | 0.10 ohm, 1.00 s, 8 s | parsed | pass | Duration exceed and TRIP_REQUEST asserted at 3.05 s. |
 | R4 | 0.10 ohm, 1.25 s, 8 s | parsed | pass | TRIP_REQUEST asserted at 3.04 s before fault clear. |
-| R5 | 0.01 ohm, 0.15 s, 5 s | unavailable | unavailable | PSCAD reload/build path failed before a valid R5 `.out` set was produced. |
+| R5 | 0.01 ohm, 0.15 s, 5 s | parsed | pass | IMMTRIP drove TRIP_REQUEST at 2.02 s. |
 
 ## Numeric Evidence
 
@@ -46,21 +47,31 @@ The final active PSCAD project was restored to the task-start SHA after the part
 | R2 | 0.4591604156 | 0.4584382954 | 1.1956323528 | unavailable | unavailable | false |
 | R3 | 0.4125552269 | 0.4121259457 | 1.1472058271 | 3.05 | 3.05 | false |
 | R4 | 0.3795860053 | 0.3795085271 | 1.1044831135 | 3.04 | 3.04 | false |
-| R5 | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable |
+| R5 | 0.0578261913 | 0.0578231959 | 0.6750736873 | unavailable | 2.02 | false |
 
 For R2-R4, `DFIG_LVRT_TALLOW_S` stayed within `[0.625, 2.000]` and did not show a positive step rise during the LOWV window.
 
-## R5 Fallback
+## R5 Evidence
 
-R5 was not marked pass.  After reopening PSCAD from the restored project file and library, GUI Build failed with:
+The later manual R5 run completed and produced valid `.inf/.out` files.  The
+R5 Build status visible in PSCAD was:
 
 ```text
-203 Errors / 40 Warnings / 33 Messages
+0 Errors / 2 Warnings / 12 Messages
 ```
 
-The first visible errors included `master:select` signal type conversion messages, `master:ammeter` unresolved/open-circuit messages, and `No branches to ground found in subsystem 1`.
+The parsed R5 result showed:
 
-A separate read-only fallback attempt copied a previously successful generated EMTDC directory, patched the generated `P3.f` constants to `0.01 ohm` and `0.15 s`, and rebuilt successfully with `make`.  Direct execution of the rebuilt `3IBR.exe` produced no `3IBR_*.out` files because the executable requires a PSCAD runtime session.  Therefore R5 remains `unavailable`.
+```text
+VIBR1_2 minimum = 0.0578261913 pu at 2.08 s
+DFIG_LVRT_IMMTRIP first = 2.02 s
+DFIG_LVRT_DURATION_EXCEEDED first = unavailable
+DFIG_LVRT_TRIP_REQUEST first = 2.02 s
+DFIG_BRK_STATE changed after startup = false
+```
+
+This confirms that R5 trip request was produced by the immediate-trip path,
+not by duration exceedance.
 
 ## Output Files
 

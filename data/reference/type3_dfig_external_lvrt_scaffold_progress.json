@@ -157,8 +157,8 @@
   ],
   "historical_scope_note": "A later unattended full-monitoring attempt on 2026-06-27 safely fell back and restored this Build=0 VSMIN scaffold state. The historical scaffold facts in this file are unchanged.",
   "latest_trip_request_manual_validation": {
-    "audit_time": "2026-06-28T13:30:00+08:00",
-    "execution_status": "trip_request_manual_validation_partial_or_fallback",
+    "audit_time": "2026-06-28T17:05:00+08:00",
+    "execution_status": "trip_request_manual_validation_success",
     "result_file": "data/reference/type3_dfig_lvrt_trip_request_manual_validation.json",
     "summary_csv": "data/reference/type3_dfig_lvrt_trip_request_manual_validation_summary.csv",
     "report": "docs/TYPE3_DFIG_LVRT_TRIP_REQUEST_MANUAL_VALIDATION.md",
@@ -167,7 +167,7 @@
       "R2": "pass",
       "R3": "pass",
       "R4": "pass",
-      "R5": "unavailable"
+      "R5": "pass"
     },
     "safety": {
       "trip_latch_implemented": false,
@@ -176,6 +176,21 @@
       "physical_breaker_opening_validated": false,
       "matlab_coupled": false
     },
-    "final_active_project_sha256": "EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D"
+    "final_active_project_sha256": "17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B",
+    "r5": {
+      "build": {
+        "errors": 0,
+        "warnings": 2,
+        "messages": 12
+      },
+      "run_status": "parsed",
+      "acceptance_status": "pass",
+      "VIBR1_2_min_pu": 0.057826191277082,
+      "VIBR1_2_min_time_s": 2.08,
+      "IMMTRIP_first_s": 2.02,
+      "DURATION_EXCEEDED_first_s": null,
+      "TRIP_REQUEST_first_s": 2.02,
+      "DFIG_BRK_STATE_changed_after_startup": false
+    }
   }
 }

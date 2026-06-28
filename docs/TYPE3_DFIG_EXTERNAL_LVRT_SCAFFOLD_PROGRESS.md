@@ -267,10 +267,11 @@ data/reference/type3_dfig_lvrt_trip_request_manual_validation.json
 data/reference/type3_dfig_lvrt_trip_request_manual_validation_summary.csv
 ```
 
-R1-R4 parsed successfully and passed.  R5 is `unavailable` because the PSCAD
-reload/build path failed before a valid R5 `.out` set could be produced.  The
-final active project was restored to SHA-256
-`EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D`.
+R1-R5 parsed successfully and passed.  R5 confirmed the immediate-trip path:
+`DFIG_LVRT_IMMTRIP` and `DFIG_LVRT_TRIP_REQUEST` first asserted at 2.02 s,
+while `DFIG_LVRT_DURATION_EXCEEDED` did not assert.  The final active project
+SHA-256 for the successful R5 validation scenario is
+`17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B`.
 
 No `TRIP_LATCH` implementation, `DFIG_LVRT_CLEAR` modification, `BRK_DFIG`
 command integration, physical breaker opening, or MATLAB coupling was added.

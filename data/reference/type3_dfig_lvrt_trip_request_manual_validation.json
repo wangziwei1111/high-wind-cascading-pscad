@@ -287,46 +287,71 @@
   {
     "scenario_id": "R5_r0p01_d0p15_5s",
     "case_key": "R5",
-    "run_status": "unavailable",
-    "acceptance_status": "unavailable",
+    "run_status": "parsed",
+    "acceptance_status": "pass",
     "checks": {
-      "build_or_run_completed": "unavailable",
-      "IMMTRIP_present": "unavailable",
-      "TRIP_REQUEST_present": "unavailable",
-      "TRIP_REQUEST_independent_of_DURATION_EXCEEDED": "unavailable",
-      "breaker_state_unchanged": "unavailable",
-      "PIBR1_2_QIBR1_2_grid_connected": "unavailable"
+      "simulation_duration": "pass",
+      "breaker_state_unchanged": "pass",
+      "TALLOW_within_limits": "pass",
+      "LOWV_present": "pass",
+      "TALLOW_nonincreasing_during_LOWV": "pass",
+      "VIBR1_2_min_reference": "pass",
+      "IMMTRIP_present": "pass",
+      "TRIP_REQUEST_present": "pass",
+      "TRIP_REQUEST_from_IMMTRIP": "pass"
     },
-    "available_signals": [],
-    "missing_signals": [
-      "VIBR1_2",
-      "DFIG_LVRT_LOWV",
-      "DFIG_LVRT_IMMTRIP",
-      "DFIG_LVRT_CLEAR",
-      "DFIG_LVRT_TIMER_S",
-      "DFIG_LVRT_VSMIN_MEM",
-      "DFIG_LVRT_TALLOW_S",
-      "DFIG_LVRT_DURATION_EXCEEDED",
-      "DFIG_LVRT_TRIP_REQUEST",
+    "available_signals": [
+      "BRK_CHOP",
       "DFIG_BRK_STATE",
+      "DFIG_LVRT_CLEAR",
+      "DFIG_LVRT_DURATION_EXCEEDED",
+      "DFIG_LVRT_IMMTRIP",
+      "DFIG_LVRT_LOWV",
+      "DFIG_LVRT_TALLOW_S",
+      "DFIG_LVRT_TIMER_S",
+      "DFIG_LVRT_TRIP_REQUEST",
+      "DFIG_LVRT_VSMIN_MEM",
+      "Ecap_Det",
+      "Edc_pu",
       "PIBR1_2",
       "QIBR1_2",
-      "Edc_pu",
-      "Ecap_Det",
-      "BRK_CHOP",
-      "S1"
+      "S1",
+      "VIBR1_2"
     ],
+    "missing_signals": [],
     "metrics": {
-      "simulation_end_s": null,
-      "VIBR1_2_min": null,
-      "IMMTRIP_first_s": null,
+      "simulation_end_s": 5.0,
+      "steady_voltage_pu": 0.9965344611980654,
+      "VIBR1_2_min": {
+        "time_s": 2.08,
+        "value": 0.057826191277082
+      },
+      "LOWV_window_after_startup": {
+        "start_s": 2.01,
+        "end_s": 2.17
+      },
+      "VSMIN_MEM_min": {
+        "time_s": 2.09,
+        "value": 0.057823195871257
+      },
+      "TALLOW_min": {
+        "time_s": 2.02,
+        "value": 0.625
+      },
+      "TALLOW_max": {
+        "time_s": 0.5,
+        "value": 2.0
+      },
+      "TALLOW_fault_mean": 0.6750736872588059,
+      "TALLOW_max_step_rise_during_LOWV": 0.0,
+      "IMMTRIP_first_s": 2.02,
       "DURATION_EXCEEDED_first_s": null,
-      "TRIP_REQUEST_first_s": null,
-      "DFIG_BRK_STATE_changed_after_startup": null
-    },
-    "blocking_evidence": {
-      "pscad_gui_build_result_after_reload": "203 Errors / 40 Warnings / 33 Messages; first visible errors included master:select type conversion, master:ammeter unresolved dimension/open circuit, and No branches to ground found in subsystem 1.",
-      "direct_emtdc_attempt": "A copied successful gf46 directory was patched to R5 constants and make succeeded, but direct 3IBR.exe execution produced no 3IBR_*.out files because the executable requires a PSCAD runtime session."
+      "TRIP_REQUEST_first_s": 2.02,
+      "DFIG_BRK_STATE_changed_after_startup": false,
+      "PIBR1_2_pre_fault_mean": 200.24635189955043,
+      "PIBR1_2_post_fault_mean": 199.19493366746346,
+      "QIBR1_2_pre_fault_mean": -14.27676027497613,
+      "QIBR1_2_post_fault_mean": -21.624779208403286
     }
   }
 ]
