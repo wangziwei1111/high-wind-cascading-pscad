@@ -255,3 +255,22 @@ data/reference/type3_dfig_lvrt_monitoring_full_validation.json
 ```
 
 该后续尝试进入 `monitoring_logic_safe_fallback`：完整 `TALLOW / DURATION_EXCEEDED / TRIP_REQUEST / TRIP_LATCH` 监测逻辑未保留在最终 PSCAD 工程中，活动工程恢复到本文记录的 Build=0 VSMIN 支架状态。本文此前记录的历史事实不变。
+
+## 2026-06-28 Trip-Request Manual Validation Update
+
+Manual PSCAD matrix validation for `DFIG_LVRT_TALLOW_S`,
+`DFIG_LVRT_DURATION_EXCEEDED`, and `DFIG_LVRT_TRIP_REQUEST` is recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_TRIP_REQUEST_MANUAL_VALIDATION.md
+data/reference/type3_dfig_lvrt_trip_request_manual_validation.json
+data/reference/type3_dfig_lvrt_trip_request_manual_validation_summary.csv
+```
+
+R1-R4 parsed successfully and passed.  R5 is `unavailable` because the PSCAD
+reload/build path failed before a valid R5 `.out` set could be produced.  The
+final active project was restored to SHA-256
+`EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D`.
+
+No `TRIP_LATCH` implementation, `DFIG_LVRT_CLEAR` modification, `BRK_DFIG`
+command integration, physical breaker opening, or MATLAB coupling was added.
