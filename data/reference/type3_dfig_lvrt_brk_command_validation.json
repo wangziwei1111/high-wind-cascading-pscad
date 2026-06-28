@@ -63,6 +63,15 @@
     "total_simulation_time_s": 5.0,
     "wind_speed_mps": 11
   },
+  "closed_loop_coverage_follow_up": {
+    "execution_status": "type3_lvrt_closed_loop_coverage_partial",
+    "C1_no_fault": "pass",
+    "C2_ride_through": "unavailable",
+    "C3_duration_trip_breaker": "unavailable",
+    "prior_R5_result_preserved": true,
+    "reason": "C2 Build failed before Run; C3 was skipped by the mandatory stop rule.",
+    "report": "docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md"
+  },
   "signal_pgb_indices": {
     "DFIG_BRK_STATE": 29,
     "DFIG_LVRT_CLEAR": 22,

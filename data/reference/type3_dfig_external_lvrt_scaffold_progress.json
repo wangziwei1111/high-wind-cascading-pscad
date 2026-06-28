@@ -281,5 +281,18 @@
       "actual_turbine_disconnection_validated": false,
       "matlab_coupled": false
     }
+  },
+  "latest_closed_loop_coverage": {
+    "audit_time": "2026-06-28T22:45:00+08:00",
+    "execution_status": "type3_lvrt_closed_loop_coverage_partial",
+    "report": "docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md",
+    "result_file": "data/reference/type3_dfig_lvrt_closed_loop_coverage.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_closed_loop_coverage_summary.csv",
+    "scenarios": {"C1": "pass", "C2": "unavailable", "C3": "unavailable"},
+    "prior_R5_immediate_trip_path": "pass",
+    "C2_blocker": "Build error on master:gain ID 65646757; C2 was not Run.",
+    "task_start_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "final_active_sha256": "10A3B91EE96B8C3BC6FB32D049D6EEB28C9F0923CFFB72BFDBB1F5EC257A9CEB",
+    "model_integrity_status": "model_integrity_needs_explanation"
   }
 }

@@ -1,0 +1,16 @@
+scenario,item,status
+C1,all_required_signals_available,pass
+C1,simulation_reached_expected_end,pass
+C1,DFIG_LVRT_LOWV_remains_low,pass
+C1,DFIG_LVRT_IMMTRIP_remains_low,pass
+C1,DFIG_LVRT_DURATION_EXCEEDED_remains_low,pass
+C1,DFIG_LVRT_TRIP_REQUEST_remains_low,pass
+C1,DFIG_LVRT_TRIP_LATCH_remains_low,pass
+C1,DFIG_LVRT_EXISTING_BRK_CMD_remains_low,pass
+C1,DFIG_LVRT_FINAL_BRK_CMD_remains_low,pass
+C1,DFIG_BRK_STATE_remains_low,pass
+C1,voltage_normal_steady_state,pass
+C1,clear_semantics_available,pass
+C1,active_power_not_cut_off,pass
+C2,artifacts_available,unavailable
+C3,artifacts_available,unavailable

@@ -372,3 +372,25 @@ BRK_STATE holds open = true
 This supersedes the preceding `unavailable` dynamic result. The active PSCAD
 SHA-256 remained `DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6`.
 No second recheck Run was performed.
+
+## 2026-06-28 Closed-Loop Coverage Closeout
+
+The C1/C2/C3 coverage closeout is recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md
+data/reference/type3_dfig_lvrt_closed_loop_coverage.json
+data/reference/type3_dfig_lvrt_closed_loop_coverage_summary.csv
+```
+
+The result is partial. C1 completed to 5.0 s and passed all no-fault,
+no-false-opening checks with all 15 required channels present. C2 was not Run
+because its Build reported a floating input on `master:gain` ID `65646757`;
+C3 was skipped by the mandatory stop rule. The historical R5 immediate-trip
+result remains pass and is not overwritten.
+
+Task-start parameters were restored through PSCAD GUI, but the final Build
+reported two errors on the same gain and the final project SHA-256
+`10A3B91EE96B8C3BC6FB32D049D6EEB28C9F0923CFFB72BFDBB1F5EC257A9CEB`
+does not match the task-start SHA. Model integrity is recorded as
+`model_integrity_needs_explanation`; no direct XML repair was attempted.
