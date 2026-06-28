@@ -1,20 +1,20 @@
-# Type-3 DFIG LVRT Breaker Command Validation
+# Type-3 DFIG LVRT Breaker Command Dynamic Validation
 
 ## Status
 
 ```text
-execution_status = brk_command_state_validation_unavailable
+execution_status = brk_command_state_validation_pass
 run_status = completed
-acceptance_status = unavailable
+acceptance_status = pass
 ```
 
-The single allowed R5 run completed to 5.0 s. The available output channels
-show that `DFIG_LVRT_TRIP_REQUEST`, `DFIG_LVRT_TRIP_LATCH`, and
-`DFIG_BRK_STATE` all changed at 2.02 s, and the breaker state remained open to
-the end of the run. However, `DFIG_LVRT_FINAL_BRK_CMD` was absent from the
-run-time `3IBR.inf`, so criteria that require its measured waveform are
-unavailable. Static generated-source evidence is not substituted for that
-missing dynamic channel.
+The single R5 evidence-recheck run completed to 5.0 s and its run-time
+`3IBR.inf` contains `DFIG_LVRT_FINAL_BRK_CMD`. All B1-B13 dynamic acceptance
+checks pass.
+
+This result supersedes the preceding `unavailable` result, which lacked the
+measured final-command channel. The PSCAD model was not modified during this
+recheck and no second recheck Run was performed.
 
 ## Scope
 
@@ -22,40 +22,29 @@ missing dynamic channel.
 Project: C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR.pscx
 Page: 3IBR:Main(0):P1(0):P3(0)
 Branch: codex/lvrt-trip-request-progress
-Task-start SHA-256: 00C72FAAE357F113DC26C486180A7AA374AACA81BC698B87D9FAB3D706AF1DF9
-Final active SHA-256: DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
-Backup: C:\pscad_work\backups\type3_lvrt_brk_command_20260628_201729\3IBR.pscx
-Run archive: C:\pscad_work\lvrt_brk_command_validation\20260628_201729\R5_breaker_command_validation
-Snapshot: external/pscad_snapshot_20260628_lvrt_brk_command_state_validated/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx
+Active project SHA-256: DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
+Backup: C:\pscad_work\backups\type3_lvrt_final_brk_cmd_recheck_20260628_213352\3IBR.pscx
+Run archive: C:\pscad_work\lvrt_final_brk_cmd_recheck\20260628_213352\R5_final_brk_cmd_recheck
 ```
 
-The backup SHA-256 matched the task-start project SHA-256. No rollback was
-performed.
+The active and backup SHA-256 values match. The active SHA also matches the
+previous round's final SHA, confirming that this recheck did not alter the
+PSCAD model.
 
 ## Command Structure
 
-The original breaker command was audited as a constant zero command:
+The previously audited command path remains unchanged:
 
 ```text
-Constant 0
+DFIG_LVRT_EXISTING_BRK_CMD_BOOL
++ DFIG_LVRT_TRIP_LATCH_BOOL
+-> Hard Limiter [0, 1]
+-> DFIG_LVRT_FINAL_BRK_CMD
 -> Gain 1
--> DFIG_LVRT_EXISTING_BRK_CMD
--> threshold 0.5 comparator
--> DFIG_LVRT_EXISTING_BRK_CMD_BOOL
+-> BRK_DFIG
 ```
 
-The validated trip latch enters the final command through a separate Boolean
-conversion:
-
-```text
-DFIG_LVRT_TRIP_LATCH_MEM
--> Gain 1
--> DFIG_LVRT_TRIP_LATCH
--> threshold 0.5 comparator
--> DFIG_LVRT_TRIP_LATCH_BOOL
-```
-
-The two Boolean signals are added and limited to the range 0 to 1:
+Equivalent generated equations:
 
 ```text
 DFIG_LVRT_FINAL_BRK_CMD =
@@ -66,23 +55,8 @@ LIMIT(0, 1,
 BRK_DFIG = 1.0 * DFIG_LVRT_FINAL_BRK_CMD
 ```
 
-The generated `P3.f` confirms that `BRK_DFIG` has this sole command
-assignment. `DFIG_LVRT_TRIP_REQUEST` does not directly drive the breaker.
-
-## Build Record
-
-| Stage | Errors | Warnings | Messages | Result |
-| --- | ---: | ---: | ---: | --- |
-| A initial read-only sampling | 1 | 46 | unavailable | signal-name contention |
-| A Gain-isolated sampling | 0 | unavailable | unavailable | pass |
-| B initial command synthesis | 1 | 37 | unavailable | floating latch input |
-| B wire-only repair | 1 | 37 | unavailable | undefined latch alias remained |
-| B canonical latch alias repair | 0 | unavailable | unavailable | pass |
-| C sole breaker command integration | 0 | unavailable | unavailable | pass |
-| Final post-run Output Channel Build | 0 | unavailable | unavailable | pass |
-
-Warnings and message counts not visible in the supplied successful Build
-records are reported as unavailable rather than inferred.
+The measured signal path, rather than these static equations, is used for the
+dynamic acceptance decision.
 
 ## R5 Scenario
 
@@ -97,74 +71,88 @@ Solution time step = 5 us
 Total simulation time = 5.0 s
 ```
 
-These are also the task-start values, so final parameter restoration required
-no value change. A final Build was performed without another Run.
+The user performed one Build and one Run. Build errors were zero because the
+Run was permitted and completed. Exact warning and message counts were not
+supplied and are recorded as unavailable.
 
 ## Dynamic Evidence
 
 | Criterion | Status | Evidence |
 | --- | --- | --- |
-| A1 run reached 5 s | pass | `simulation_end_s = 5.0` |
-| A2 trip request asserted near R5 event | pass | first high at 2.02 s |
-| A3 latch set after request without startup set | pass | first high at 2.02 s; prefault max 0 |
-| A4 final command zero prefault | unavailable | FINAL channel absent from run-time INF |
-| A5 final command high after latch | unavailable | FINAL channel absent from run-time INF |
-| A6 latch-to-final timing | unavailable | FINAL channel absent from run-time INF |
-| A7 breaker opens after final command | unavailable | FINAL timing unavailable |
-| A8 breaker not open before final command | unavailable | FINAL timing unavailable |
-| A9 breaker state holds open | pass | state opens at 2.02 s and remains high |
-| A10 original command preserved; no startup opening | pass | startup maxima both 0 |
-| A11 latch-final-breaker ordering | unavailable | middle waveform unavailable |
-| A12 P/Q evidence recorded | pass | both channels parsed |
+| B1 run reached 5 s | pass | `simulation_end_s = 5.0` |
+| B2 trip request near event | pass | first high at 2.02 s |
+| B3 latch after request; no startup set | pass | first high at 2.02 s; prefault max 0 |
+| B4 final command zero prefault | pass | prefault max 0 |
+| B5 final command high after latch | pass | first high at 2.02 s |
+| B6 latch-to-final timing | pass | delay 0.0 s |
+| B7 breaker opens after final command | pass | state first open at 2.02 s |
+| B8 breaker not open before command | pass | same output sample, not earlier |
+| B9 breaker state holds open | pass | remains high through 5.0 s |
+| B10 no startup false opening | pass | startup FINAL and state maxima both 0 |
+| B11 latch-final-state ordering | pass | `2.02 <= 2.02 <= 2.02 s` |
+| B12 original command preserved | pass | original command prefault max below 0.5 |
+| B13 P/Q evidence recorded | pass | both channels parsed |
 
-Numeric evidence:
+## Numeric Evidence
 
 ```text
-TRIP_REQUEST first high = 2.02 s
-TRIP_LATCH first high = 2.02 s
-EXISTING_BRK_CMD first open = unavailable (never asserted)
-FINAL_BRK_CMD first open = unavailable (channel missing)
-BRK_STATE first open = 2.02 s
-BRK_STATE holds open = true
-startup EXISTING_BRK_CMD max = 0.0
-startup BRK_STATE max = 0.0
-PIBR1_2 prefault mean = 189.89013181934155
-QIBR1_2 prefault mean = -15.494975081477733
-PIBR1_2 post-open mean = -2.339824966276821
-QIBR1_2 post-open mean = -1.1889435089549205
+simulation_end_s = 5.0
+TRIP_REQUEST_first_s = 2.02
+TRIP_LATCH_first_s = 2.02
+FINAL_BRK_CMD_first_open_s = 2.02
+BRK_STATE_first_open_s = 2.02
+TRIP_LATCH_to_FINAL_BRK_CMD_delay_s = 0.0
+FINAL_BRK_CMD_to_BRK_STATE_delay_s = 0.0
+TRIP_LATCH_prefault_max = 0.0
+FINAL_BRK_CMD_prefault_max = 0.0
+startup_existing_command_max = 0.0
+startup_final_command_max = 0.0
+startup_brk_state_max = 0.0
+BRK_STATE_holds_open = true
+PIBR1_2_pre_fault_mean = 189.89013181934155
+PIBR1_2_post_open_mean = -2.339824966276821
+QIBR1_2_pre_fault_mean = -15.494975081477733
+QIBR1_2_post_open_mean = -1.1889435089549205
 ```
 
-The P/Q values are supporting electrical-response evidence only. They are not
+The three state transitions occur at the same 10 ms output sample. This is
+accepted by the task's discrete-sample timing rule and does not imply a
+negative command-to-state delay.
+
+P/Q values are supporting electrical-response evidence only. They are not
 used alone to claim physical turbine isolation.
-
-## Post-Run Static Completion
-
-After the only allowed Run, the missing `DFIG_LVRT_FINAL_BRK_CMD` Output
-Channel was added and a Build completed with zero errors. The final project
-therefore contains the channel for a future validation, but this post-run
-addition does not make the present R5 result a pass.
 
 ## Runtime Assessment
 
-The archived output reached 5.0 s. No `Ungrounded subsystem` or abnormal EMTDC
-termination is evidenced by this completed run. The prior run artifacts were
-archived before the final Build removed active `.inf/.out` files.
+The archived output reaches 5.0 s. No EMTDC Runtime Error, abnormal
+termination, or `Ungrounded subsystem` condition is evidenced by this run.
 
 ## Conclusion
 
 ```text
-BRK_DFIG command-and-state response was partially observed in PSCAD.
-Overall dynamic validation is unavailable because the measured
-DFIG_LVRT_FINAL_BRK_CMD waveform is missing from the sole allowed R5 run.
+BRK_DFIG command-and-state response validated in PSCAD.
 ```
 
-Do not restate this result as a validated physical field breaker, an actual
-physical turbine disconnection, or definitive isolation of the entire Type-3
-generator.
+This statement applies only to the modeled PSCAD command and state response.
+It does not validate a physical field breaker, actual physical turbine
+disconnection, or definitive isolation of the entire Type-3 generator.
+
+## Artifacts
+
+```text
+analysis/pscad_tools/analyze_type3_dfig_lvrt_brk_command_validation.py
+data/reference/type3_dfig_lvrt_brk_command_validation.json
+data/reference/type3_dfig_lvrt_brk_command_validation_summary.csv
+docs/TYPE3_DFIG_LVRT_BRK_COMMAND_VALIDATION.md
+```
+
+Raw `.inf/.out` files and logs remain only in the local run archive and are
+not committed.
 
 ## Safety
 
 ```text
+No PSCAD control logic was modified during this recheck.
 BRK_DFIG main-circuit parameters were not modified.
 No automatic reclosing was introduced.
 No MATLAB coupling was added.

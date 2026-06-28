@@ -189,52 +189,55 @@ def analyze(run_dir: Path) -> dict[str, Any]:
     post_open_start = min((breaker_first or FAULT_START_S) + 0.10, EXPECTED_END_S)
 
     checks = {
-        "A1_run_reached_5s": status(end_time is not None and abs(end_time - EXPECTED_END_S) <= SAMPLE_TOLERANCE_S),
-        "A2_trip_request_asserted_near_event": status(
+        "B1_run_reached_5s": status(end_time is not None and abs(end_time - EXPECTED_END_S) <= SAMPLE_TOLERANCE_S),
+        "B2_trip_request_asserted_near_event": status(
             trip_request_first is not None and abs(trip_request_first - 2.02) <= 0.05
         ),
-        "A3_trip_latch_sets_after_request_without_startup_set": status(
+        "B3_trip_latch_sets_after_request_without_startup_set": status(
             trip_request_first is not None
             and trip_latch_first is not None
             and trip_request_first <= trip_latch_first <= trip_request_first + SAMPLE_TOLERANCE_S
             and latch_prefault_max is not None
             and latch_prefault_max < LOGIC_THRESHOLD
         ),
-        "A4_final_command_zero_prefault": status(
+        "B4_final_command_zero_prefault": status(
             None
             if not final_available
             else final_prefault_max is not None and final_prefault_max < LOGIC_THRESHOLD
         ),
-        "A5_final_command_high_after_latch": status(
+        "B5_final_command_high_after_latch": status(
             None
             if not final_available
             else final_after_latch is not None and final_after_latch >= LOGIC_THRESHOLD
         ),
-        "A6_final_command_timing_after_latch": status(
+        "B6_latch_to_final_command_timing": status(
             None
             if not final_available
             else final_delay is not None and 0.0 <= final_delay <= SAMPLE_TOLERANCE_S
         ),
-        "A7_breaker_state_opens_after_final_command": status(
+        "B7_breaker_opens_after_final_command": status(
             None
             if not final_available
-            else breaker_delay is not None and breaker_delay >= 0.0
+            else breaker_delay is not None
+            and breaker_delay >= 0.0
+            and breaker_first is not None
+            and breaker_first <= EXPECTED_END_S
         ),
-        "A8_breaker_not_open_before_final_command": status(
+        "B8_breaker_not_open_before_final_command": status(
             None
             if not final_available
             else breaker_first is not None and final_first is not None and breaker_first >= final_first
         ),
-        "A9_breaker_state_holds_open": status(breaker_holds),
-        "A10_original_command_preserved_and_no_startup_open": status(
-            existing_prefault_max is not None
-            and existing_prefault_max < LOGIC_THRESHOLD
-            and startup_existing_max is not None
-            and startup_existing_max < LOGIC_THRESHOLD
+        "B9_breaker_state_holds_open": status(breaker_holds),
+        "B10_no_startup_false_open": status(
+            None
+            if not final_available
+            else startup_final_max is not None
+            and startup_final_max < LOGIC_THRESHOLD
             and startup_breaker_max is not None
             and startup_breaker_max < LOGIC_THRESHOLD
         ),
-        "A11_latch_final_breaker_ordering": status(
+        "B11_trip_latch_final_command_breaker_ordering": status(
             None
             if not final_available
             else trip_latch_first is not None
@@ -242,13 +245,39 @@ def analyze(run_dir: Path) -> dict[str, Any]:
             and breaker_first is not None
             and trip_latch_first <= final_first <= breaker_first
         ),
-        "A12_pq_evidence_recorded": status(
+        "B12_original_command_preserved_pre_event": status(
+            existing_prefault_max is not None
+            and existing_prefault_max < LOGIC_THRESHOLD
+            and startup_existing_max is not None
+            and startup_existing_max < LOGIC_THRESHOLD
+        ),
+        "B13_pq_electrical_response_recorded": status(
             bool(series.get("PIBR1_2")) and bool(series.get("QIBR1_2"))
         ),
     }
 
     values = set(checks.values())
     acceptance = "fail" if "fail" in values else ("unavailable" if "unavailable" in values else "pass")
+
+    if acceptance == "pass":
+        interpretation = [
+            "The single R5 recheck run reached 5.0 s and all required PSCAD output channels were parsed.",
+            "DFIG_LVRT_FINAL_BRK_CMD is present in 3IBR.inf and remains low before the event and during startup.",
+            "TRIP_LATCH, FINAL_BRK_CMD, and BRK_STATE first assert at the same 2.02 s output sample, which satisfies the permitted discrete-sample ordering.",
+            "BRK_STATE remains open through the end of the run, while the original breaker command remains low before the event.",
+            "BRK_DFIG command-and-state response is validated in PSCAD; no physical field-device claim is made.",
+        ]
+    elif not final_available:
+        interpretation = [
+            "The R5 run output was parsed, but DFIG_LVRT_FINAL_BRK_CMD is absent from 3IBR.inf.",
+            "Every criterion that requires the measured final-command waveform is unavailable.",
+            "Static source evidence is not substituted for missing dynamic waveform evidence.",
+        ]
+    else:
+        interpretation = [
+            "The single R5 recheck output was parsed and includes DFIG_LVRT_FINAL_BRK_CMD.",
+            "At least one measured command-and-state acceptance criterion failed; see the checks and metrics for the exact evidence.",
+        ]
 
     return {
         "execution_status": "brk_command_state_validation_" + acceptance,
@@ -283,6 +312,7 @@ def analyze(run_dir: Path) -> dict[str, Any]:
             "startup_final_command_max": startup_final_max,
             "startup_brk_state_max": startup_breaker_max,
             "TRIP_LATCH_prefault_max": latch_prefault_max,
+            "FINAL_BRK_CMD_prefault_max": final_prefault_max,
             "PIBR1_2_pre_fault_mean": mean(series.get("PIBR1_2", []), 1.0, 1.9),
             "QIBR1_2_pre_fault_mean": mean(series.get("QIBR1_2", []), 1.0, 1.9),
             "PIBR1_2_post_open_mean": mean(series.get("PIBR1_2", []), post_open_start, EXPECTED_END_S),
@@ -291,15 +321,10 @@ def analyze(run_dir: Path) -> dict[str, Any]:
         "derived_evidence": {
             "final_command_formula_static_audit": "LIMIT(0,1,EXISTING_BRK_CMD_BOOL + TRIP_LATCH_BOOL)",
             "breaker_command_assignment_static_audit": "BRK_DFIG = 1.0 * DFIG_LVRT_FINAL_BRK_CMD",
-            "note": "Static equations are explanatory only and do not replace the missing FINAL_BRK_CMD waveform.",
+            "note": "Static equations are supplemental and never replace dynamic FINAL_BRK_CMD waveform evidence.",
         },
         "checks": checks,
-        "interpretation": [
-            "The R5 run reached 5.0 s and the available PSCAD output channels were parsed.",
-            "DFIG_LVRT_FINAL_BRK_CMD is absent from 3IBR.inf, so every criterion requiring its measured waveform is unavailable.",
-            "The generated PSCAD source confirms the intended final-command equation and the sole BRK_DFIG assignment, but static source evidence is not substituted for dynamic waveform evidence.",
-            "BRK_DFIG command-and-state response cannot receive an overall pass without the measured final-command channel.",
-        ],
+        "interpretation": interpretation,
     }
 
 

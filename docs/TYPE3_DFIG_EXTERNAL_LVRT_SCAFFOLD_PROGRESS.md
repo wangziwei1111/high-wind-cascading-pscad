@@ -349,3 +349,26 @@ Final active project SHA-256:
 ```text
 DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
 ```
+
+## 2026-06-28 FINAL_BRK_CMD Dynamic Recheck
+
+The single permitted R5 evidence-recheck run completed without any model
+change. Its `3IBR.inf` contains `DFIG_LVRT_FINAL_BRK_CMD`, and all B1-B13
+checks pass:
+
+```text
+execution_status = brk_command_state_validation_pass
+TRIP_REQUEST first = 2.02 s
+TRIP_LATCH first = 2.02 s
+FINAL_BRK_CMD first = 2.02 s
+BRK_STATE first open = 2.02 s
+TRIP_LATCH -> FINAL_BRK_CMD delay = 0.0 s
+FINAL_BRK_CMD -> BRK_STATE delay = 0.0 s
+startup FINAL_BRK_CMD max = 0.0
+startup BRK_STATE max = 0.0
+BRK_STATE holds open = true
+```
+
+This supersedes the preceding `unavailable` dynamic result. The active PSCAD
+SHA-256 remained `DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6`.
+No second recheck Run was performed.
