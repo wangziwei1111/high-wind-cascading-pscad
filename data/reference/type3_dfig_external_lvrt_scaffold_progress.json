@@ -238,5 +238,44 @@
       "actual_turbine_disconnection_validated": false,
       "matlab_coupled": false
     }
+  },
+  "latest_brk_command_validation": {
+    "audit_time": "2026-06-28T21:25:00+08:00",
+    "execution_status": "brk_command_state_validation_unavailable",
+    "run_status": "completed",
+    "acceptance_status": "unavailable",
+    "result_file": "data/reference/type3_dfig_lvrt_brk_command_validation.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_brk_command_validation_summary.csv",
+    "report": "docs/TYPE3_DFIG_LVRT_BRK_COMMAND_VALIDATION.md",
+    "run_archive": "C:\\pscad_work\\lvrt_brk_command_validation\\20260628_201729\\R5_breaker_command_validation",
+    "task_start_sha256": "00C72FAAE357F113DC26C486180A7AA374AACA81BC698B87D9FAB3D706AF1DF9",
+    "final_active_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "dynamic_evidence": {
+      "simulation_end_s": 5.0,
+      "TRIP_REQUEST_first_s": 2.02,
+      "TRIP_LATCH_first_s": 2.02,
+      "FINAL_BRK_CMD_first_open_s": null,
+      "BRK_STATE_first_open_s": 2.02,
+      "BRK_STATE_holds_open": true,
+      "startup_existing_command_max": 0.0,
+      "startup_brk_state_max": 0.0,
+      "PIBR1_2_pre_fault_mean": 189.89013181934155,
+      "PIBR1_2_post_open_mean": -2.339824966276821,
+      "QIBR1_2_pre_fault_mean": -15.494975081477733,
+      "QIBR1_2_post_open_mean": -1.1889435089549205
+    },
+    "unavailable_reason": "DFIG_LVRT_FINAL_BRK_CMD was absent from the run-time 3IBR.inf; post-run static channel addition cannot replace measured waveform evidence.",
+    "post_run_static_completion": {
+      "final_command_output_channel_added": true,
+      "final_build_errors": 0,
+      "second_run_performed": false
+    },
+    "safety": {
+      "brk_dfig_main_circuit_parameters_modified": false,
+      "automatic_reclosing_added": false,
+      "physical_field_breaker_validated": false,
+      "actual_turbine_disconnection_validated": false,
+      "matlab_coupled": false
+    }
   }
 }

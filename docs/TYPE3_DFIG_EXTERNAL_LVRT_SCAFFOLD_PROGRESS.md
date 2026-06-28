@@ -315,3 +315,37 @@ No physical breaker opening.
 No actual turbine disconnection.
 No MATLAB coupling.
 ```
+
+## 2026-06-28 Breaker Command Validation Update
+
+The breaker-command integration and single R5 validation are recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_BRK_COMMAND_VALIDATION.md
+data/reference/type3_dfig_lvrt_brk_command_validation.json
+data/reference/type3_dfig_lvrt_brk_command_validation_summary.csv
+```
+
+The final static command path is:
+
+```text
+DFIG_LVRT_EXISTING_BRK_CMD_BOOL
++ DFIG_LVRT_TRIP_LATCH_BOOL
+-> Hard Limiter [0, 1]
+-> DFIG_LVRT_FINAL_BRK_CMD
+-> Gain 1
+-> BRK_DFIG
+```
+
+The single R5 run reached 5.0 s. `TRIP_REQUEST`, `TRIP_LATCH`, and
+`DFIG_BRK_STATE` first asserted at 2.02 s, and the breaker state held open.
+The measured `DFIG_LVRT_FINAL_BRK_CMD` channel was absent from that run's
+`3IBR.inf`, so the overall acceptance status is `unavailable`. The missing
+Output Channel was added after the run and passed a final static Build; no
+second run was performed.
+
+Final active project SHA-256:
+
+```text
+DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
+```
