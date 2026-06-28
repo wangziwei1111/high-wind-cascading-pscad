@@ -275,3 +275,42 @@ SHA-256 for the successful R5 validation scenario is
 
 No `TRIP_LATCH` implementation, `DFIG_LVRT_CLEAR` modification, `BRK_DFIG`
 command integration, physical breaker opening, or MATLAB coupling was added.
+
+## 2026-06-28 Trip-Latch Minimal Validation Update
+
+Manual PSCAD R5 minimal validation for `DFIG_LVRT_TRIP_LATCH` and trip-aware
+`DFIG_LVRT_CLEAR` is recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_TRIP_LATCH_MINIMAL_VALIDATION.md
+data/reference/type3_dfig_lvrt_trip_latch_minimal_validation.json
+data/reference/type3_dfig_lvrt_trip_latch_minimal_validation_summary.csv
+```
+
+The single R5 run completed and parsed, but the new trip-latch/CLEAR behavior
+failed minimal acceptance:
+
+```text
+execution_status = trip_latch_minimal_validation_fail
+VIBR1_2 minimum = 0.057826191277082 pu at 2.08 s
+TRIP_REQUEST first = 2.02 s
+TRIP_LATCH first high from 0 s = 0.01 s
+TRIP_LATCH prefault max from 0.03 s to 1.99 s = 1.0
+CLEAR post-LOWV max = 1.0
+DFIG_BRK_STATE changed after startup = false
+```
+
+The failure is specific to the new latch/CLEAR monitoring target.  The prior R5
+TRIP_REQUEST result remains valid, but `DFIG_LVRT_TRIP_LATCH` cannot be accepted
+because it is already high before the external low-voltage event.  The
+trip-aware CLEAR candidate also cannot be accepted because `DFIG_LVRT_CLEAR`
+returns high after LOWV recovery.
+
+Safety boundary for this failed minimal validation:
+
+```text
+No BRK_DFIG command integration.
+No physical breaker opening.
+No actual turbine disconnection.
+No MATLAB coupling.
+```

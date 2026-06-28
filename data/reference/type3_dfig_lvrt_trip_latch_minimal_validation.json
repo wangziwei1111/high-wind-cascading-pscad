@@ -1,0 +1,103 @@
+{
+  "acceptance_status": "fail",
+  "checks": {
+    "C10_vsmem_not_reset_to_1_after_lowv_recovery": "pass",
+    "C11_brk_state_unchanged": "pass",
+    "C12_pq_not_cut_off": "pass",
+    "C1_run_reached_5s": "pass",
+    "C2_trip_request_asserted_by_immtrip": "pass",
+    "C3_duration_exceeded_absent": "pass",
+    "C4_trip_latch_initial_zero": "pass",
+    "C5_trip_latch_not_set_before_fault": "fail",
+    "C6_trip_latch_sets_from_trip_request": "fail",
+    "C7_trip_latch_holds_after_set": "pass",
+    "C8_clear_suppressed_after_trip_latch": "fail",
+    "C9_timer_not_reset_after_lowv_recovery": "pass"
+  },
+  "execution_status": "trip_latch_minimal_validation_fail",
+  "interpretation": [
+    "R5 run output was parsed from 3IBR.inf and 3IBR_*.out.",
+    "TRIP_REQUEST has a startup pulse at 0.01-0.02 s and asserts again at the R5 event around 2.02 s.",
+    "TRIP_LATCH is already high before the external low-voltage event, so the latch cannot be accepted as a valid trip-request latch.",
+    "CLEAR is high after LOWV recovery, so trip-aware CLEAR suppression is not validated by this run.",
+    "DFIG_BRK_STATE stayed unchanged; no BRK_DFIG command integration was validated."
+  ],
+  "metrics": {
+    "CLEAR_post_lowv_max": {
+      "time_s": 2.19,
+      "value": 1.0
+    },
+    "DFIG_BRK_STATE_changed_after_startup": false,
+    "DURATION_EXCEEDED_first_s": null,
+    "IMMTRIP_first_s": 2.02,
+    "LOWV_window": {
+      "end_s": 2.17,
+      "start_s": 2.01
+    },
+    "PIBR1_2_mean_1p0_to_1p9": 189.89013181934155,
+    "PIBR1_2_mean_4p0_to_5p0": 199.19493366746346,
+    "QIBR1_2_mean_1p0_to_1p9": -15.494975081477733,
+    "QIBR1_2_mean_4p0_to_5p0": -21.624779208403286,
+    "TIMER_S_post_lowv_max": {
+      "time_s": 2.19,
+      "value": 0.2670600000001
+    },
+    "TIMER_S_post_lowv_min": {
+      "time_s": 2.19,
+      "value": 0.2670600000001
+    },
+    "TRIP_LATCH_first_from_0s": 0.01,
+    "TRIP_LATCH_first_s": 0.5,
+    "TRIP_LATCH_holds_after_trip_request": true,
+    "TRIP_LATCH_initial_value": 0.0,
+    "TRIP_LATCH_prefault_max_0p03_to_1p99": {
+      "time_s": 0.03,
+      "value": 1.0
+    },
+    "TRIP_REQUEST_first_s": 2.02,
+    "TRIP_REQUEST_startup_window_from_0s": {
+      "end_s": 2.15,
+      "start_s": 0.01
+    },
+    "VIBR1_2_min": {
+      "time_s": 2.08,
+      "value": 0.057826191277082
+    },
+    "VSMIN_MEM_min": {
+      "time_s": 0.5,
+      "value": 7.9121171421309e-05
+    },
+    "VSMIN_MEM_post_lowv_max": {
+      "time_s": 2.19,
+      "value": 7.9121171421309e-05
+    },
+    "simulation_end_s": 5.0
+  },
+  "run_dir": "C:\\pscad_work\\lvrt_trip_latch_minimal\\20260628_171834\\R5_trip_latch_minimal",
+  "scenario": {
+    "case": "R5",
+    "fault_duration_s": 0.15,
+    "fault_off_resistance_ohm": 1000000.0,
+    "fault_on_resistance_ohm": 0.01,
+    "fault_start_s": 2.0,
+    "fault_type": "ABC-to-ground",
+    "solution_time_step_us": 5,
+    "total_simulation_time_s": 5.0,
+    "wind_speed_mps": 11
+  },
+  "signal_pgb_indices": {
+    "DFIG_BRK_STATE": 26,
+    "DFIG_LVRT_CLEAR": 29,
+    "DFIG_LVRT_DURATION_EXCEEDED": 23,
+    "DFIG_LVRT_IMMTRIP": 31,
+    "DFIG_LVRT_LOWV": 30,
+    "DFIG_LVRT_TALLOW_S": 27,
+    "DFIG_LVRT_TIMER_S": 32,
+    "DFIG_LVRT_TRIP_LATCH": 3,
+    "DFIG_LVRT_TRIP_REQUEST": 20,
+    "DFIG_LVRT_VSMIN_MEM": 2,
+    "PIBR1_2": 6,
+    "QIBR1_2": 8,
+    "VIBR1_2": 4
+  }
+}

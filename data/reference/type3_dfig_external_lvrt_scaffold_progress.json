@@ -192,5 +192,38 @@
       "TRIP_REQUEST_first_s": 2.02,
       "DFIG_BRK_STATE_changed_after_startup": false
     }
+  },
+  "latest_trip_latch_minimal_validation": {
+    "audit_time": "2026-06-28T18:10:00+08:00",
+    "execution_status": "trip_latch_minimal_validation_fail",
+    "result_file": "data/reference/type3_dfig_lvrt_trip_latch_minimal_validation.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_trip_latch_minimal_validation_summary.csv",
+    "report": "docs/TYPE3_DFIG_LVRT_TRIP_LATCH_MINIMAL_VALIDATION.md",
+    "run_archive": "C:\\pscad_work\\lvrt_trip_latch_minimal\\20260628_171834\\R5_trip_latch_minimal",
+    "case": "R5",
+    "run_status": "parsed",
+    "acceptance_status": "fail",
+    "VIBR1_2_min_pu": 0.057826191277082,
+    "VIBR1_2_min_time_s": 2.08,
+    "LOWV_start_s": 2.01,
+    "LOWV_end_s": 2.17,
+    "IMMTRIP_first_s": 2.02,
+    "DURATION_EXCEEDED_first_s": null,
+    "TRIP_REQUEST_first_s": 2.02,
+    "TRIP_LATCH_first_from_0s": 0.01,
+    "TRIP_LATCH_prefault_max": 1.0,
+    "CLEAR_post_lowv_max": 1.0,
+    "DFIG_BRK_STATE_changed_after_startup": false,
+    "failed_checks": [
+      "C5_trip_latch_not_set_before_fault",
+      "C6_trip_latch_sets_from_trip_request",
+      "C8_clear_suppressed_after_trip_latch"
+    ],
+    "safety": {
+      "brk_dfig_connected": false,
+      "physical_breaker_opening_validated": false,
+      "actual_turbine_disconnection_validated": false,
+      "matlab_coupled": false
+    }
   }
 }

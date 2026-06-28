@@ -1,0 +1,13 @@
+item,status
+C1_run_reached_5s,pass
+C2_trip_request_asserted_by_immtrip,pass
+C3_duration_exceeded_absent,pass
+C4_trip_latch_initial_zero,pass
+C5_trip_latch_not_set_before_fault,fail
+C6_trip_latch_sets_from_trip_request,fail
+C7_trip_latch_holds_after_set,pass
+C8_clear_suppressed_after_trip_latch,fail
+C9_timer_not_reset_after_lowv_recovery,pass
+C10_vsmem_not_reset_to_1_after_lowv_recovery,pass
+C11_brk_state_unchanged,pass
+C12_pq_not_cut_off,pass
