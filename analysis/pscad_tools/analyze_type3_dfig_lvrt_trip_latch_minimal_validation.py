@@ -235,6 +235,23 @@ def analyze(run_dir: Path) -> dict[str, Any]:
     }
     acceptance = "fail" if "fail" in checks.values() else ("unavailable" if "unavailable" in checks.values() else "pass")
 
+    if acceptance == "pass":
+        interpretation = [
+            "R5 run output was parsed from 3IBR.inf and 3IBR_*.out.",
+            "TRIP_REQUEST has a startup pulse at 0.01-0.02 s, but the armed latch input blocks that startup pulse.",
+            "TRIP_LATCH remains low before the external low-voltage event and first asserts with the R5 trip request around 2.02 s.",
+            "CLEAR remains suppressed after LOWV recovery while TRIP_LATCH is high.",
+            "DFIG_BRK_STATE stayed unchanged; no BRK_DFIG command integration was validated.",
+        ]
+    else:
+        interpretation = [
+            "R5 run output was parsed from 3IBR.inf and 3IBR_*.out.",
+            "TRIP_REQUEST has a startup pulse at 0.01-0.02 s and asserts again at the R5 event around 2.02 s.",
+            "TRIP_LATCH is already high before the external low-voltage event, so the latch cannot be accepted as a valid trip-request latch.",
+            "CLEAR is high after LOWV recovery, so trip-aware CLEAR suppression is not validated by this run.",
+            "DFIG_BRK_STATE stayed unchanged; no BRK_DFIG command integration was validated.",
+        ]
+
     return {
         "execution_status": "trip_latch_minimal_validation_" + acceptance,
         "acceptance_status": acceptance,
@@ -276,13 +293,7 @@ def analyze(run_dir: Path) -> dict[str, Any]:
             "QIBR1_2_mean_4p0_to_5p0": mean_value(series["QIBR1_2"], 4.0, 5.0),
         },
         "checks": checks,
-        "interpretation": [
-            "R5 run output was parsed from 3IBR.inf and 3IBR_*.out.",
-            "TRIP_REQUEST has a startup pulse at 0.01-0.02 s and asserts again at the R5 event around 2.02 s.",
-            "TRIP_LATCH is already high before the external low-voltage event, so the latch cannot be accepted as a valid trip-request latch.",
-            "CLEAR is high after LOWV recovery, so trip-aware CLEAR suppression is not validated by this run.",
-            "DFIG_BRK_STATE stayed unchanged; no BRK_DFIG command integration was validated.",
-        ],
+        "interpretation": interpretation,
     }
 
 

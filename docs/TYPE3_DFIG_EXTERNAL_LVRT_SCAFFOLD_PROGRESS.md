@@ -287,26 +287,27 @@ data/reference/type3_dfig_lvrt_trip_latch_minimal_validation.json
 data/reference/type3_dfig_lvrt_trip_latch_minimal_validation_summary.csv
 ```
 
-The single R5 run completed and parsed, but the new trip-latch/CLEAR behavior
-failed minimal acceptance:
+The repaired single R5 run completed, parsed, and passed the trip-latch/CLEAR
+minimal acceptance checks:
 
 ```text
-execution_status = trip_latch_minimal_validation_fail
+execution_status = trip_latch_minimal_validation_pass
 VIBR1_2 minimum = 0.057826191277082 pu at 2.08 s
+VSMIN_MEM minimum = 0.057823195871257 pu at 2.09 s
 TRIP_REQUEST first = 2.02 s
-TRIP_LATCH first high from 0 s = 0.01 s
-TRIP_LATCH prefault max from 0.03 s to 1.99 s = 1.0
-CLEAR post-LOWV max = 1.0
+TRIP_LATCH first high from 0 s = 2.02 s
+TRIP_LATCH prefault max from 0.03 s to 1.99 s = 0.0
+CLEAR post-LOWV max = 0.0
 DFIG_BRK_STATE changed after startup = false
 ```
 
-The failure is specific to the new latch/CLEAR monitoring target.  The prior R5
-TRIP_REQUEST result remains valid, but `DFIG_LVRT_TRIP_LATCH` cannot be accepted
-because it is already high before the external low-voltage event.  The
-trip-aware CLEAR candidate also cannot be accepted because `DFIG_LVRT_CLEAR`
-returns high after LOWV recovery.
+The fix adds a `TIME > 0.5 s` armed gate before the latch input:
+`DFIG_LVRT_TRIP_REQUEST_ARMED = DFIG_LVRT_TRIP_REQUEST * DFIG_LVRT_ARMED`.
+This blocks the known startup pulse at 0.01-0.02 s from setting the latch.
+The old CLEAR output channel is now `DFIG_LVRT_CLEAR_BASE`, while final
+`DFIG_LVRT_CLEAR` is measured at the trip-aware CLEAR output.
 
-Safety boundary for this failed minimal validation:
+Safety boundary for this minimal validation:
 
 ```text
 No BRK_DFIG command integration.
