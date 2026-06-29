@@ -161,11 +161,10 @@ No .gf46/.out/.inf/screenshots/local run directories were committed.
 
 ## Closed-Loop Coverage Follow-Up
 
-The later C1/C2/C3 closeout is partial. C1 dynamically confirms that
-`FINAL_BRK_CMD` and `BRK_STATE` remain low in the no-fault case. C2 was blocked
-by a Build error before Run, and C3 was skipped by the mandatory stop rule.
-Therefore the prior R5 immediate-trip pass remains valid, while ride-through
-and duration-based closed-loop coverage remain unavailable in this round.
+The later C1/C2/C3 closeout is partial. C1 and C2 pass. C3's complete
+duration-based command-and-state sequence passes at 3.04 s, including breaker
+opening and state hold, but formal C3 acceptance fails because VSMIN_MEM is
+outside the specified historical-reference tolerance.
 
-See `docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md`. The follow-up does not
-downgrade or overwrite the archived R5 measurements.
+See `docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md`. This follow-up neither
+downgrades nor overwrites the archived R5 measurements.

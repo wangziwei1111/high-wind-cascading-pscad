@@ -66,10 +66,11 @@
   "closed_loop_coverage_follow_up": {
     "execution_status": "type3_lvrt_closed_loop_coverage_partial",
     "C1_no_fault": "pass",
-    "C2_ride_through": "unavailable",
-    "C3_duration_trip_breaker": "unavailable",
+    "C2_ride_through": "pass",
+    "C3_duration_trip_breaker": "fail",
+    "C3_command_and_state_sequence": "pass",
     "prior_R5_result_preserved": true,
-    "reason": "C2 Build failed before Run; C3 was skipped by the mandatory stop rule.",
+    "reason": "C2 passed. C3 command-and-state checks passed, but formal C3 acceptance failed because VSMIN_MEM was outside the specified reference tolerance.",
     "report": "docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md"
   },
   "signal_pgb_indices": {

@@ -5,20 +5,22 @@
 ```text
 execution_status = type3_lvrt_closed_loop_coverage_partial
 C1 no-fault = pass
-C2 R2 ride-through = unavailable
-C3 R4 duration trip-to-breaker = unavailable
+C2 R2 ride-through = pass
+C3 R4 duration trip-to-breaker = fail
 model_integrity = model_integrity_needs_explanation
 ```
 
-The no-fault command-and-state path was dynamically validated. The coverage
-matrix did not close because C2 produced a Build error before Run; the
-mandatory stop rule therefore prevented C2 and C3 runs.
+The no-fault and ride-through paths were dynamically validated. The C3
+duration-based command-and-state chain also passed, but the formal C3 result
+is fail because its measured VSMIN_MEM minimum exceeded the specified
+historical-reference tolerance. The complete matrix therefore remains partial.
 
 ## Execution Scope
 
-All PSCAD interactions were performed by Codex through Computer Use. The user
-was not asked to click PSCAD, change parameters, Build, Run, copy artifacts,
-inspect waveforms, execute Python, or run Git.
+The initial C1 run was performed by Codex through Computer Use. After the
+floating Gain was restored, the user manually performed the supplemental C2
+and C3 GUI parameter changes, Builds, and Runs. Codex archived and analyzed
+all run artifacts and handled all repository work.
 
 No LVRT logic, Output Channel, BRK_DFIG main-circuit parameter, automatic
 reclosing logic, Type3WTG_Lib content, or MATLAB coupling was intentionally
@@ -32,7 +34,7 @@ Page: 3IBR:Main(0):P1(0):P3(0)
 Branch: codex/lvrt-trip-request-progress
 Task-start SHA-256: DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
 Backup SHA-256: DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
-Final active SHA-256: 10A3B91EE96B8C3BC6FB32D049D6EEB28C9F0923CFFB72BFDBB1F5EC257A9CEB
+Final active SHA-256: 0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17
 ```
 
 The task-start parameters were restored through the PSCAD GUI:
@@ -48,11 +50,11 @@ Solution time step = 5 us
 Total simulation time = 5.0 s
 ```
 
-The final SHA does not match the task-start SHA. A read-only comparison shows
-saved run-display/revision changes and an active `master:gain` instance with
-ID `65646757` that is absent from the task-start on-disk backup. No direct XML
-repair or backup substitution was performed. The final model state is thus
-`model_integrity_needs_explanation`.
+The final SHA does not match the task-start SHA. The previously floating
+`master:gain` ID `65646757` is no longer present. A read-only comparison still
+shows saved revision and run-display differences from the task-start on-disk
+backup. No direct XML repair or backup substitution was performed. The final
+model state is therefore `model_integrity_needs_explanation`.
 
 ## Build Record
 
@@ -61,15 +63,19 @@ repair or backup substitution was performed. The final model state is thus
 | Precheck | 0 | 46 | 119 | permitted C1 |
 | C1 | 0 | 46 | 119 | permitted one Run |
 | C1 Run compile | 0 | 0 | 11 | Run completed |
-| C2 | 1 | 37 | 33 | Run prohibited; stop matrix |
-| Final restored-parameter Build | 2 | 37 | 33 | integrity needs explanation |
+| Initial C2 attempt | 1 | 37 | 33 | Run prohibited; stop matrix |
+| Supplemental recovery Build | 0 | 46 | 119 | permitted C2 |
+| Supplemental C2 | 0 | unavailable | unavailable | Run completed |
+| Supplemental C3 | 0 | unavailable | unavailable | Run completed |
+| Final restored-parameter Build | 0 | unavailable | unavailable | user reported completed |
 
-The C2 Build error identified `master:gain` ID `65646757` with a floating
-`IN:Dim` input. The final Build reported the same component twice: an `RT_24`
-source conflict and a floating `IN:Dim` input.
+The initial C2 Build error identified `master:gain` ID `65646757` with a
+floating `IN:Dim` input. The user restored the Gain and supplied a recovery
+Build screenshot showing `0 Errors / 46 Warnings / 119 Messages`. Exact
+warning/message counts for the later C2, C3, and final Builds were not supplied.
 
 No EMTDC Runtime Error, `Ungrounded subsystem`, or abnormal Run termination
-occurred. C2 did not reach Run.
+occurred in the completed supplemental runs.
 
 ## C1 No-Fault Evidence
 
@@ -89,15 +95,47 @@ QIBR1_2 post-event-window mean = -16.45742835365371
 This validates the no-fault, no-false-opening behavior in PSCAD for the
 archived C1 run.
 
-## C2 And C3
+## C2 Ride-Through
 
-C2 R2 was configured through the GUI for `0.10 ohm`, `2.0 s`, `0.75 s`, and
-`8.0 s`, but Build failed. It was not Run, so every C2 dynamic criterion is
-`unavailable`.
+C2 R2 completed to 8.0 s and all checks pass:
 
-C3 R4 was not configured or Run because the mandatory stop rule took effect
-after the C2 Build error. Every C3 dynamic timing and breaker-state criterion
-is `unavailable`.
+```text
+LOWV interval = 2.01 to 3.10 s
+VIBR1_2 minimum = 0.45866329080834 pu
+VSMIN_MEM minimum = 0.45843829537505 pu
+TALLOW range = 1.1326466513557 to 2.0 s
+IMMTRIP, DURATION_EXCEEDED, TRIP_REQUEST = 0
+TRIP_LATCH, FINAL_BRK_CMD, BRK_STATE = 0
+PIBR1_2 post-event mean = 199.0569662232042
+```
+
+CLEAR, TIMER_S, and VSMIN_MEM recovered correctly after LOWV ended. No
+ride-through false opening occurred.
+
+## C3 Duration-Based Trip
+
+C3 R4 completed to 8.0 s. Every command-and-state check passes:
+
+```text
+DURATION_EXCEEDED first = 3.04 s
+TRIP_REQUEST first = 3.04 s
+TRIP_LATCH first = 3.04 s
+FINAL_BRK_CMD first = 3.04 s
+BRK_STATE first open = 3.04 s
+TRIP_LATCH to FINAL_BRK_CMD delay = 0.0 s
+FINAL_BRK_CMD to BRK_STATE delay = 0.0 s
+TRIP_LATCH, FINAL_BRK_CMD, and BRK_STATE hold through 8.0 s
+IMMTRIP does not assert
+```
+
+The request precedes nominal fault clearing at 3.25 s. P/Q fall after breaker
+opening and are retained only as supporting electrical-response evidence.
+
+Formal C3 acceptance is `fail` because `VSMIN_MEM minimum =
+0.3301161303713 pu`, an absolute difference of about 0.049533 pu from the
+specified 0.379649 pu reference. The minimum occurs at 3.26 s, after the
+3.04 s breaker opening and near fault clearing. This voltage-reference failure
+does not erase the separately passing command-and-state sequence.
 
 ## Prior R5 Evidence
 
@@ -111,8 +149,8 @@ BRK_STATE first open = 2.02 s
 BRK_STATE holds open = true
 ```
 
-It validates the immediate-trip command-and-state path in PSCAD, but does not
-replace missing C2 ride-through or C3 duration-based evidence.
+It validates the immediate-trip command-and-state path in PSCAD and remains
+separate from the new C2/C3 evidence.
 
 ## Command Priority And Claim Boundary
 

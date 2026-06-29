@@ -7,15 +7,13 @@
     "branch_head_before": "bce984fe8b56eee71725a56adc7c576b3b3857e8",
     "final_restore": {
       "build": {
-        "errors": 2,
-        "messages": 33,
-        "warnings": 37
+        "errors": 0,
+        "messages": null,
+        "warnings": null
       },
-      "build_errors": [
-        "master:gain ID 65646757: Signal RT_24 source conflict",
-        "master:gain ID 65646757: Input port IN:Dim is floating"
-      ],
-      "final_active_sha256": "10A3B91EE96B8C3BC6FB32D049D6EEB28C9F0923CFFB72BFDBB1F5EC257A9CEB",
+      "build_errors": [],
+      "build_note": "User reported the restored-parameter Build completed; exact warning and message counts were not supplied.",
+      "final_active_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
       "model_integrity_status": "model_integrity_needs_explanation",
       "parameters": {
         "fault_duration_s": 0.15,
@@ -59,19 +57,26 @@
         "run_status": "completed"
       },
       "C2": {
-        "acceptance_status": "unavailable",
+        "acceptance_status": "pass",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C2_R2_ride_through",
         "build": {
-          "errors": 1,
-          "messages": 33,
-          "warnings": 37
+          "errors": 0,
+          "messages": null,
+          "warnings": null
         },
-        "reason": "Build blocked by master:gain ID 65646757: RT_24 source conflict and floating IN:Dim input.",
-        "run_status": "not_run"
+        "note": "Supplemental manual GUI Build and Run after the floating Gain was restored. Exact warning and message counts were not supplied.",
+        "run_status": "completed"
       },
       "C3": {
-        "acceptance_status": "unavailable",
-        "reason": "Skipped by the mandatory stop rule after the C2 Build error.",
-        "run_status": "not_run"
+        "acceptance_status": "fail",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
+        "build": {
+          "errors": 0,
+          "messages": null,
+          "warnings": null
+        },
+        "reason": "All command-and-state checks passed, but VSMIN_MEM minimum 0.3301161303713 pu differed from the 0.379649 pu reference by more than 0.02 pu.",
+        "run_status": "completed"
       }
     },
     "task_start_parameters": {
@@ -170,69 +175,161 @@
       }
     },
     "C2": {
-      "acceptance_status": "unavailable",
+      "acceptance_status": "pass",
       "checks": {
-        "artifacts_available": "unavailable"
+        "CLEAR_recovers_high": "pass",
+        "DFIG_BRK_STATE_remains_low": "pass",
+        "DFIG_LVRT_DURATION_EXCEEDED_remains_low": "pass",
+        "DFIG_LVRT_FINAL_BRK_CMD_remains_low": "pass",
+        "DFIG_LVRT_IMMTRIP_remains_low": "pass",
+        "DFIG_LVRT_TRIP_LATCH_remains_low": "pass",
+        "DFIG_LVRT_TRIP_REQUEST_remains_low": "pass",
+        "LOWV_event_present": "pass",
+        "TALLOW_within_bounds": "pass",
+        "TIMER_resets_near_zero": "pass",
+        "VIBR1_2_minimum_matches_reference": "pass",
+        "VSMIN_MEM_minimum_matches_reference": "pass",
+        "VSMIN_MEM_resets_near_one": "pass",
+        "active_power_not_cut_off": "pass",
+        "all_required_signals_available": "pass",
+        "simulation_reached_expected_end": "pass"
       },
       "execution_record": {
-        "acceptance_status": "unavailable",
+        "acceptance_status": "pass",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C2_R2_ride_through",
         "build": {
-          "errors": 1,
-          "messages": 33,
-          "warnings": 37
+          "errors": 0,
+          "messages": null,
+          "warnings": null
         },
-        "reason": "Build blocked by master:gain ID 65646757: RT_24 source conflict and floating IN:Dim input.",
-        "run_status": "not_run"
+        "note": "Supplemental manual GUI Build and Run after the floating Gain was restored. Exact warning and message counts were not supplied.",
+        "run_status": "completed"
       },
-      "missing_signals": [
-        "VIBR1_2",
-        "DFIG_LVRT_LOWV",
-        "DFIG_LVRT_IMMTRIP",
-        "DFIG_LVRT_CLEAR",
-        "DFIG_LVRT_TIMER_S",
-        "DFIG_LVRT_VSMIN_MEM",
-        "DFIG_LVRT_TALLOW_S",
-        "DFIG_LVRT_DURATION_EXCEEDED",
-        "DFIG_LVRT_TRIP_REQUEST",
-        "DFIG_LVRT_TRIP_LATCH",
-        "DFIG_LVRT_EXISTING_BRK_CMD",
-        "DFIG_LVRT_FINAL_BRK_CMD",
-        "DFIG_BRK_STATE",
-        "PIBR1_2",
-        "QIBR1_2"
-      ],
+      "metrics": {
+        "BRK_STATE_first_open_s": null,
+        "DURATION_EXCEEDED_first_s": null,
+        "FINAL_BRK_CMD_first_s": null,
+        "FINAL_BRK_CMD_to_BRK_STATE_delay_s": null,
+        "IMMTRIP_first_s": null,
+        "LOWV_end_s": 3.1,
+        "LOWV_start_s": 2.01,
+        "PIBR1_2_post_event_mean": 199.0569662232042,
+        "PIBR1_2_pre_fault_mean": 189.89013181934155,
+        "QIBR1_2_post_event_mean": -27.078670400477492,
+        "QIBR1_2_pre_fault_mean": -15.494975081477733,
+        "TALLOW_maximum_s": 2.0,
+        "TALLOW_minimum_s": 1.1326466513557,
+        "TRIP_LATCH_first_s": null,
+        "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s": null,
+        "TRIP_REQUEST_first_s": null,
+        "VIBR1_2_minimum": 0.45866329080834,
+        "VSMIN_MEM_minimum": 0.45843829537505,
+        "simulation_end_s": 8.0,
+        "startup_maxima": {
+          "DFIG_BRK_STATE": 0.0,
+          "DFIG_LVRT_FINAL_BRK_CMD": 0.0,
+          "DFIG_LVRT_TRIP_LATCH": 0.0
+        }
+      },
+      "missing_signals": [],
       "run_dir": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C2_R2_ride_through",
-      "run_status": "unavailable"
+      "run_status": "completed",
+      "signal_pgb_indices": {
+        "DFIG_BRK_STATE": 29,
+        "DFIG_LVRT_CLEAR": 22,
+        "DFIG_LVRT_DURATION_EXCEEDED": 26,
+        "DFIG_LVRT_EXISTING_BRK_CMD": 18,
+        "DFIG_LVRT_FINAL_BRK_CMD": 17,
+        "DFIG_LVRT_IMMTRIP": 34,
+        "DFIG_LVRT_LOWV": 33,
+        "DFIG_LVRT_TALLOW_S": 30,
+        "DFIG_LVRT_TIMER_S": 35,
+        "DFIG_LVRT_TRIP_LATCH": 3,
+        "DFIG_LVRT_TRIP_REQUEST": 23,
+        "DFIG_LVRT_VSMIN_MEM": 2,
+        "PIBR1_2": 6,
+        "QIBR1_2": 8,
+        "VIBR1_2": 4
+      }
     },
     "C3": {
-      "acceptance_status": "unavailable",
+      "acceptance_status": "fail",
       "checks": {
-        "artifacts_available": "unavailable"
+        "BRK_STATE_holds_open": "pass",
+        "DURATION_EXCEEDED_asserts": "pass",
+        "FINAL_BRK_CMD_holds_high": "pass",
+        "IMMTRIP_remains_low": "pass",
+        "PQ_electrical_response_recorded": "pass",
+        "TALLOW_within_bounds": "pass",
+        "TRIP_LATCH_holds_high": "pass",
+        "TRIP_REQUEST_asserts_near_reference": "pass",
+        "TRIP_REQUEST_precedes_fault_clear": "pass",
+        "VSMIN_MEM_minimum_matches_reference": "fail",
+        "all_required_signals_available": "pass",
+        "duration_to_request_ordering": "pass",
+        "final_to_breaker_ordering": "pass",
+        "latch_to_final_delay": "pass",
+        "no_startup_false_open": "pass",
+        "request_to_latch_delay": "pass",
+        "simulation_reached_expected_end": "pass"
       },
       "execution_record": {
-        "acceptance_status": "unavailable",
-        "reason": "Skipped by the mandatory stop rule after the C2 Build error.",
-        "run_status": "not_run"
+        "acceptance_status": "fail",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
+        "build": {
+          "errors": 0,
+          "messages": null,
+          "warnings": null
+        },
+        "reason": "All command-and-state checks passed, but VSMIN_MEM minimum 0.3301161303713 pu differed from the 0.379649 pu reference by more than 0.02 pu.",
+        "run_status": "completed"
       },
-      "missing_signals": [
-        "VIBR1_2",
-        "DFIG_LVRT_LOWV",
-        "DFIG_LVRT_IMMTRIP",
-        "DFIG_LVRT_CLEAR",
-        "DFIG_LVRT_TIMER_S",
-        "DFIG_LVRT_VSMIN_MEM",
-        "DFIG_LVRT_TALLOW_S",
-        "DFIG_LVRT_DURATION_EXCEEDED",
-        "DFIG_LVRT_TRIP_REQUEST",
-        "DFIG_LVRT_TRIP_LATCH",
-        "DFIG_LVRT_EXISTING_BRK_CMD",
-        "DFIG_LVRT_FINAL_BRK_CMD",
-        "DFIG_BRK_STATE",
-        "PIBR1_2",
-        "QIBR1_2"
-      ],
+      "metrics": {
+        "BRK_STATE_first_open_s": 3.04,
+        "DURATION_EXCEEDED_first_s": 3.04,
+        "FINAL_BRK_CMD_first_s": 3.04,
+        "FINAL_BRK_CMD_to_BRK_STATE_delay_s": 0.0,
+        "IMMTRIP_first_s": null,
+        "LOWV_end_s": 3.76,
+        "LOWV_start_s": 2.01,
+        "PIBR1_2_post_event_mean": -0.0024417965045137823,
+        "PIBR1_2_pre_fault_mean": 189.89013181934155,
+        "QIBR1_2_post_event_mean": 1.745654727684527e-08,
+        "QIBR1_2_pre_fault_mean": -15.494975081477733,
+        "TALLOW_maximum_s": 2.0,
+        "TALLOW_minimum_s": 0.88058525584932,
+        "TRIP_LATCH_first_s": 3.04,
+        "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s": 0.0,
+        "TRIP_REQUEST_first_s": 3.04,
+        "VIBR1_2_minimum": 0.33022509231603,
+        "VSMIN_MEM_minimum": 0.3301161303713,
+        "simulation_end_s": 8.0,
+        "startup_maxima": {
+          "DFIG_BRK_STATE": 0.0,
+          "DFIG_LVRT_FINAL_BRK_CMD": 0.0,
+          "DFIG_LVRT_TRIP_LATCH": 0.0
+        }
+      },
+      "missing_signals": [],
       "run_dir": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
-      "run_status": "unavailable"
+      "run_status": "completed",
+      "signal_pgb_indices": {
+        "DFIG_BRK_STATE": 29,
+        "DFIG_LVRT_CLEAR": 22,
+        "DFIG_LVRT_DURATION_EXCEEDED": 26,
+        "DFIG_LVRT_EXISTING_BRK_CMD": 18,
+        "DFIG_LVRT_FINAL_BRK_CMD": 17,
+        "DFIG_LVRT_IMMTRIP": 34,
+        "DFIG_LVRT_LOWV": 33,
+        "DFIG_LVRT_TALLOW_S": 30,
+        "DFIG_LVRT_TIMER_S": 35,
+        "DFIG_LVRT_TRIP_LATCH": 3,
+        "DFIG_LVRT_TRIP_REQUEST": 23,
+        "DFIG_LVRT_VSMIN_MEM": 2,
+        "PIBR1_2": 6,
+        "QIBR1_2": 8,
+        "VIBR1_2": 4
+      }
     }
   },
   "scope_statement": "Single-machine Type-3 external LVRT closed-loop coverage is validated in PSCAD only when C1, C2, and C3 all pass."

@@ -394,3 +394,28 @@ reported two errors on the same gain and the final project SHA-256
 `10A3B91EE96B8C3BC6FB32D049D6EEB28C9F0923CFFB72BFDBB1F5EC257A9CEB`
 does not match the task-start SHA. Model integrity is recorded as
 `model_integrity_needs_explanation`; no direct XML repair was attempted.
+
+## 2026-06-29 Supplemental C2/C3 Runs
+
+After the floating Gain was restored manually, the recovery Build showed
+`0 Errors / 46 Warnings / 119 Messages`. C2 and C3 were then run manually and
+analyzed from independently archived outputs.
+
+```text
+C1 = pass
+C2 ride-through = pass
+C3 formal acceptance = fail
+C3 command-and-state sequence = pass
+```
+
+C2 completed without false trip or breaker opening. In C3,
+`DURATION_EXCEEDED`, `TRIP_REQUEST`, `TRIP_LATCH`, `FINAL_BRK_CMD`, and
+`BRK_STATE` all first asserted at 3.04 s, with zero measured adjacent delay and
+the latch/final/state outputs holding through 8.0 s. C3 remains formally failed
+because its `VSMIN_MEM` minimum of `0.3301161303713 pu` differs from the
+specified `0.379649 pu` reference by more than `0.02 pu`.
+
+The restored active project SHA-256 is
+`0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17` and
+still differs from the original task-start SHA, so model integrity remains
+`model_integrity_needs_explanation`.
