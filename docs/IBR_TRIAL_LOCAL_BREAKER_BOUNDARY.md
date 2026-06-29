@@ -79,3 +79,25 @@ coupling was validated.
 
 No Type-3 LVRT logic, `BRK_DFIG`, `FINAL_BRK_CMD`, second-source event packet,
 or dual-source collector change is claimed by this fallback.
+
+## Main-Project SHA Delta Audit Addendum
+
+```text
+main_project_integrity_status =
+main_project_nonfunctional_metadata_difference
+
+functional_equivalence_status =
+supported
+
+trial_resumption_eligibility =
+eligible_for_separate_task
+```
+
+The SHA delta audit found 181 XML differences, all classified as
+`nonfunctional_metadata_or_display_change` (`revisor`, `date`, or `z`
+metadata/display-order fields). It found no component, connection, parameter,
+test-parameter, or Output Channel differences.
+
+No breaker construction was resumed in that audit task. `BRK_IBR2_TRIAL` and
+the four planned `IBR2_TRIAL_*` status-interface signals remain not
+constructed.

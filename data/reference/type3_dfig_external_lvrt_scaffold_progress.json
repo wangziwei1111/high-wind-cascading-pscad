@@ -1,365 +1,391 @@
 {
-    "task":  "Type-3 DFIG external LVRT scaffold progress upload",
-    "audit_time":  "2026-06-27T00:00:00+08:00",
-    "pscad_project_source":  "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
-    "uploaded_snapshot":  {
-                              "path":  "external/pscad_snapshot_20260627_lvrt_vsmin_mem/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx",
-                              "size_bytes":  3383600,
-                              "sha256":  "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
-                              "source_last_write_time":  "2026-06-27T12:01:51+08:00",
-                              "contents":  "current 3IBR PSCAD project with LOWV, IMMTRIP, CLEAR, TIMER_S, and build-safe VSMIN feedback-memory scaffold plus DFIG_LVRT_VSMIN_MEM output channel"
-                          },
-    "confirmed_interfaces":  {
-                                 "VIBR1_2":  {
-                                                 "source":  "P3 multimeter at Type-3 branch 22 kV collector-side upstream of BRK_DFIG",
-                                                 "quantity":  "RMS voltage",
-                                                 "method":  "Digital RMS",
-                                                 "frequency_hz":  60.0,
-                                                 "base_voltage_kv":  22.0,
-                                                 "role":  "candidate future LVRT Vs input"
-                                             },
-                                 "BRK_DFIG":  {
-                                                  "component":  "3 Phase Breaker",
-                                                  "single_pole_operation":  false,
-                                                  "command_semantics":  {
-                                                                            "0":  "closed",
-                                                                            "1":  "open"
-                                                                        },
-                                                  "open_possible_at_any_current":  true,
-                                                  "state_output":  "DFIG_BRK_STATE"
-                                              }
-                             },
-    "implemented_monitoring_scaffold":  [
-                                            {
-                                                "signal":  "DFIG_LVRT_LOWV",
-                                                "source":  "VIBR1_2 comparator",
-                                                "threshold":  0.9,
-                                                "low_output_level":  1,
-                                                "high_output_level":  0,
-                                                "meaning":  "1 when VIBR1_2 is below 0.90 pu",
-                                                "output_channel_added":  true
-                                            },
-                                            {
-                                                "signal":  "DFIG_LVRT_IMMTRIP",
-                                                "source":  "VIBR1_2 comparator",
-                                                "threshold":  0.2,
-                                                "low_output_level":  1,
-                                                "high_output_level":  0,
-                                                "meaning":  "1 when VIBR1_2 is at or below the immediate trip threshold region",
-                                                "output_channel_added":  true
-                                            },
-                                            {
-                                                "signal":  "DFIG_LVRT_CLEAR",
-                                                "source":  "DFIG_LVRT_LOWV comparator",
-                                                "threshold":  0.5,
-                                                "low_output_level":  1,
-                                                "high_output_level":  0,
-                                                "meaning":  "1 when the low-voltage event is inactive; used to clear the resettable integrator",
-                                                "output_channel_added":  false
-                                            },
-                                            {
-                                                "signal":  "DFIG_LVRT_TIMER_S",
-                                                "source":  "resettable integrator",
-                                                "input":  "DFIG_LVRT_LOWV",
-                                                "clear":  "DFIG_LVRT_CLEAR",
-                                                "time_constant_s":  1.0,
-                                                "limits":  {
-                                                               "lower":  0,
-                                                               "upper":  10
-                                                           },
-                                                "meaning":  "continuous low-voltage event elapsed time in seconds",
-                                                "output_channel_added":  true
-                                            },
-                                            {
-                                                "signal":  "DFIG_LVRT_VSMIN_MEM",
-                                                "source":  "feedback-memory signal produced by the reset selector output through a Feedback Loop Selector",
-                                                "structure":  {
-                                                                  "difference":  "VIBR1_2 - DFIG_LVRT_VSMIN_MEM",
-                                                                  "update_min_comparator":  {
-                                                                                                "signal":  "DFIG_LVRT_UPDATE_MIN",
-                                                                                                "threshold":  0,
-                                                                                                "low_output_level":  1,
-                                                                                                "high_output_level":  0,
-                                                                                                "convert_output_to_nearest_integer":  true
-                                                                                            },
-                                                                  "selector_update_candidate":  {
-                                                                                                    "control":  "DFIG_LVRT_UPDATE_MIN",
-                                                                                                    "channel_a":  "VIBR1_2",
-                                                                                                    "channel_b":  "DFIG_LVRT_VSMIN_MEM",
-                                                                                                    "output":  "DFIG_LVRT_VSMIN_CAND"
-                                                                                                },
-                                                                  "selector_reset":  {
-                                                                                         "control":  "DFIG_LVRT_CLEAR",
-                                                                                         "channel_a":  1.0,
-                                                                                         "channel_b":  "DFIG_LVRT_VSMIN_CAND",
-                                                                                         "output":  "DFIG_LVRT_VSMIN_PU"
-                                                                                     },
-                                                                  "feedback_memory":  {
-                                                                                          "input":  "DFIG_LVRT_VSMIN_PU",
-                                                                                          "component":  "Feedback Loop Selector",
-                                                                                          "data_type":  "Real",
-                                                                                          "dimension":  1,
-                                                                                          "initial_real_value":  1.0,
-                                                                                          "output":  "DFIG_LVRT_VSMIN_MEM"
-                                                                                      }
-                                                              },
-                                                "output_channel_added":  true,
-                                                "output_channel":  {
-                                                                       "title":  "DFIG_LVRT_VSMIN_MEM",
-                                                                       "unit":  "pu",
-                                                                       "scale_factor":  1.0,
-                                                                       "transfer_data":  true,
-                                                                       "multiple_run_save":  "All runs",
-                                                                       "default_display_limits":  {
-                                                                                                      "min":  0,
-                                                                                                      "max":  1.2
-                                                                                                  }
-                                                                   },
-                                                "meaning":  "build-safe VSMIN feedback-memory output; not yet dynamically validated as the event minimum voltage latch",
-                                                "limitations":  [
-                                                                    "The prior Unused-source Build error was resolved by separating the feedback memory signal as DFIG_LVRT_VSMIN_MEM.",
-                                                                    "The output channel was added after the last 8 s run, so no dynamic VSMIN_MEM waveform has yet been verified.",
-                                                                    "Do not treat this signal as confirmed Vs_min_latched until the new output is verified in an 8 s run."
-                                                                ]
-                                            }
-                                        ],
-    "build_check":  {
-                        "performed_by_user_in_pscad":  true,
-                        "errors":  0,
-                        "warnings":  2,
-                        "messages":  13,
-                        "note":  "Latest manual Build after adding the DFIG_LVRT_VSMIN_MEM output channel showed 0 errors. The two warnings are the previously audited XFMR_DFIG_22_33 floating-terminal warnings. This confirms static Build safety only, not VSMIN memory dynamics."
-                    },
-    "not_implemented_yet":  [
-                                "dynamic validation and formal confirmation of DFIG_LVRT_VSMIN_MEM as Vs_min_latched",
-                                "tVRT(Vs_min_latched) calculation",
-                                "duration_exceeded comparator",
-                                "trip_latch latch",
-                                "trip_latch output channel",
-                                "any connection to BRK_DFIG"
-                            ],
-    "safety_notes":  [
-                         "The scaffold is monitoring-only and does not command BRK_DFIG.",
-                         "DFIG_LVRT_VSMIN_MEM is build-safe but is not yet a dynamically validated latched minimum voltage.",
-                         "No actual PSCAD LVRT trip has been implemented yet.",
-                         "Future BRK_DFIG command synthesis must preserve the confirmed 0=closed, 1=open semantics."
-                     ],
-    "recommended_next_steps":  [
-                                   "Run the configured 8 s, 0.10 ohm, 2.0 s / 0.75 s fault case to verify DFIG_LVRT_VSMIN_MEM minimum tracking, hold, and reset behavior.",
-                                   "Promote DFIG_LVRT_VSMIN_MEM to confirmed Vs_min_latched only after the new output waveform passes that check.",
-                                   "Add tVRT calculation and duration_exceeded comparator only after Vs_min_latched is stable.",
-                                   "Add trip_latch monitoring before connecting any breaker command.",
-                                   "Only after monitoring validation should BRK_DFIG command synthesis be discussed."
-                               ],
-    "superseded_by":  [
-                          "docs/TYPE3_DFIG_LVRT_MONITORING_FULL_VALIDATION.md",
-                          "data/reference/type3_dfig_lvrt_monitoring_full_validation.json"
-                      ],
-    "historical_scope_note":  "A later unattended full-monitoring attempt on 2026-06-27 safely fell back and restored this Build=0 VSMIN scaffold state. The historical scaffold facts in this file are unchanged.",
-    "latest_trip_request_manual_validation":  {
-                                                  "audit_time":  "2026-06-28T17:05:00+08:00",
-                                                  "execution_status":  "trip_request_manual_validation_success",
-                                                  "result_file":  "data/reference/type3_dfig_lvrt_trip_request_manual_validation.json",
-                                                  "summary_csv":  "data/reference/type3_dfig_lvrt_trip_request_manual_validation_summary.csv",
-                                                  "report":  "docs/TYPE3_DFIG_LVRT_TRIP_REQUEST_MANUAL_VALIDATION.md",
-                                                  "cases":  {
-                                                                "R1":  "pass",
-                                                                "R2":  "pass",
-                                                                "R3":  "pass",
-                                                                "R4":  "pass",
-                                                                "R5":  "pass"
-                                                            },
-                                                  "safety":  {
-                                                                 "trip_latch_implemented":  false,
-                                                                 "clear_modified":  false,
-                                                                 "brk_dfig_connected":  false,
-                                                                 "physical_breaker_opening_validated":  false,
-                                                                 "matlab_coupled":  false
-                                                             },
-                                                  "final_active_project_sha256":  "17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B",
-                                                  "r5":  {
-                                                             "build":  {
-                                                                           "errors":  0,
-                                                                           "warnings":  2,
-                                                                           "messages":  12
-                                                                       },
-                                                             "run_status":  "parsed",
-                                                             "acceptance_status":  "pass",
-                                                             "VIBR1_2_min_pu":  0.057826191277082,
-                                                             "VIBR1_2_min_time_s":  2.08,
-                                                             "IMMTRIP_first_s":  2.02,
-                                                             "DURATION_EXCEEDED_first_s":  null,
-                                                             "TRIP_REQUEST_first_s":  2.02,
-                                                             "DFIG_BRK_STATE_changed_after_startup":  false
-                                                         }
-                                              },
-    "latest_trip_latch_minimal_validation":  {
-                                                 "audit_time":  "2026-06-28T20:05:00+08:00",
-                                                 "execution_status":  "trip_latch_minimal_validation_pass",
-                                                 "result_file":  "data/reference/type3_dfig_lvrt_trip_latch_minimal_validation.json",
-                                                 "summary_csv":  "data/reference/type3_dfig_lvrt_trip_latch_minimal_validation_summary.csv",
-                                                 "report":  "docs/TYPE3_DFIG_LVRT_TRIP_LATCH_MINIMAL_VALIDATION.md",
-                                                 "run_archive":  "C:\\pscad_work\\lvrt_trip_latch_minimal\\20260628_171834\\R5_trip_latch_fix_validation",
-                                                 "case":  "R5",
-                                                 "run_status":  "parsed",
-                                                 "acceptance_status":  "pass",
-                                                 "VIBR1_2_min_pu":  0.057826191277082,
-                                                 "VIBR1_2_min_time_s":  2.08,
-                                                 "VSMIN_MEM_min_pu":  0.057823195871257,
-                                                 "VSMIN_MEM_min_time_s":  2.09,
-                                                 "LOWV_start_s":  2.01,
-                                                 "LOWV_end_s":  2.17,
-                                                 "IMMTRIP_first_s":  2.02,
-                                                 "DURATION_EXCEEDED_first_s":  null,
-                                                 "TRIP_REQUEST_first_s":  2.02,
-                                                 "TRIP_REQUEST_startup_pulse_start_s":  0.01,
-                                                 "TRIP_REQUEST_startup_pulse_end_s":  0.02,
-                                                 "TRIP_LATCH_first_from_0s":  2.02,
-                                                 "TRIP_LATCH_prefault_max":  0.0,
-                                                 "CLEAR_post_lowv_max":  0.0,
-                                                 "DFIG_BRK_STATE_changed_after_startup":  false,
-                                                 "passed_checks":  [
-                                                                       "C1_run_reached_5s",
-                                                                       "C2_trip_request_asserted_by_immtrip",
-                                                                       "C3_duration_exceeded_absent",
-                                                                       "C4_trip_latch_initial_zero",
-                                                                       "C5_trip_latch_not_set_before_fault",
-                                                                       "C6_trip_latch_sets_from_trip_request",
-                                                                       "C7_trip_latch_holds_after_set",
-                                                                       "C8_clear_suppressed_after_trip_latch",
-                                                                       "C9_timer_not_reset_after_lowv_recovery",
-                                                                       "C10_vsmem_not_reset_to_1_after_lowv_recovery",
-                                                                       "C11_brk_state_unchanged",
-                                                                       "C12_pq_not_cut_off"
-                                                                   ],
-                                                 "safety":  {
-                                                                "brk_dfig_connected":  false,
-                                                                "physical_breaker_opening_validated":  false,
-                                                                "actual_turbine_disconnection_validated":  false,
-                                                                "matlab_coupled":  false
-                                                            }
-                                             },
-    "latest_brk_command_validation":  {
-                                          "audit_time":  "2026-06-28T21:50:00+08:00",
-                                          "execution_status":  "brk_command_state_validation_pass",
-                                          "run_status":  "completed",
-                                          "acceptance_status":  "pass",
-                                          "result_file":  "data/reference/type3_dfig_lvrt_brk_command_validation.json",
-                                          "summary_csv":  "data/reference/type3_dfig_lvrt_brk_command_validation_summary.csv",
-                                          "report":  "docs/TYPE3_DFIG_LVRT_BRK_COMMAND_VALIDATION.md",
-                                          "run_archive":  "C:\\pscad_work\\lvrt_final_brk_cmd_recheck\\20260628_213352\\R5_final_brk_cmd_recheck",
-                                          "task_start_sha256":  "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
-                                          "final_active_sha256":  "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
-                                          "dynamic_evidence":  {
-                                                                   "simulation_end_s":  5.0,
-                                                                   "TRIP_REQUEST_first_s":  2.02,
-                                                                   "TRIP_LATCH_first_s":  2.02,
-                                                                   "FINAL_BRK_CMD_first_open_s":  2.02,
-                                                                   "BRK_STATE_first_open_s":  2.02,
-                                                                   "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s":  0.0,
-                                                                   "FINAL_BRK_CMD_to_BRK_STATE_delay_s":  0.0,
-                                                                   "BRK_STATE_holds_open":  true,
-                                                                   "startup_existing_command_max":  0.0,
-                                                                   "startup_final_command_max":  0.0,
-                                                                   "startup_brk_state_max":  0.0,
-                                                                   "PIBR1_2_pre_fault_mean":  189.89013181934155,
-                                                                   "PIBR1_2_post_open_mean":  -2.339824966276821,
-                                                                   "QIBR1_2_pre_fault_mean":  -15.494975081477733,
-                                                                   "QIBR1_2_post_open_mean":  -1.1889435089549205
-                                                               },
-                                          "recheck":  {
-                                                          "final_command_channel_present":  true,
-                                                          "all_B1_to_B13_checks_pass":  true,
-                                                          "model_modified":  false,
-                                                          "single_run_only":  true,
-                                                          "supersedes_previous_unavailable_result":  true
-                                                      },
-                                          "safety":  {
-                                                         "brk_dfig_main_circuit_parameters_modified":  false,
-                                                         "automatic_reclosing_added":  false,
-                                                         "physical_field_breaker_validated":  false,
-                                                         "actual_turbine_disconnection_validated":  false,
-                                                         "matlab_coupled":  false
-                                                     }
-                                      },
-    "latest_closed_loop_coverage":  {
-                                        "audit_time":  "2026-06-28T22:45:00+08:00",
-                                        "execution_status":  "type3_lvrt_closed_loop_coverage_partial",
-                                        "report":  "docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md",
-                                        "result_file":  "data/reference/type3_dfig_lvrt_closed_loop_coverage.json",
-                                        "summary_csv":  "data/reference/type3_dfig_lvrt_closed_loop_coverage_summary.csv",
-                                        "scenarios":  {
-                                                          "C1":  "pass",
-                                                          "C2":  "pass",
-                                                          "C3":  "fail"
-                                                      },
-                                        "prior_R5_immediate_trip_path":  "pass",
-                                        "supplemental_result":  "The floating Gain was restored; C2 and C3 Runs completed. C3 command-and-state checks pass, but formal C3 acceptance fails its VSMIN reference check.",
-                                        "task_start_sha256":  "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
-                                        "final_active_sha256":  "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
-                                        "model_integrity_status":  "model_integrity_nonfunctional_metadata_difference",
-                                        "zero_run_audits":  {
-                                                                "c3_vsmin_comparability":  "data/reference/type3_dfig_lvrt_c3_vsmin_comparability_audit.json",
-                                                                "model_integrity":  "data/reference/type3_dfig_lvrt_model_integrity_audit.json",
-                                                                "decision_window_VSMIN_status":  "pass",
-                                                                "full_run_historical_reference_status":  "fail",
-                                                                "reference_comparability_status":  "needs_explanation",
-                                                                "functional_difference_count":  0,
-                                                                "nonfunctional_difference_count":  128,
-                                                                "unclassified_difference_count":  0
-                                                            }
-                                    },
-    "latest_protection_state_interface":  {
-                                              "audit_time":  "2026-06-29T11:40:00+08:00",
-                                              "execution_status":  "protection_state_interface_static_audit_complete",
-                                              "report":  "docs/TYPE3_DFIG_LVRT_PROTECTION_STATE_INTERFACE.md",
-                                              "result_file":  "data/reference/type3_dfig_lvrt_protection_state_interface.json",
-                                              "summary_csv":  "data/reference/type3_dfig_lvrt_protection_state_interface_summary.csv",
-                                              "task_start_sha256":  "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
-                                              "final_active_sha256":  "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
-                                              "build":  {
-                                                            "errors":  0,
-                                                            "warnings":  null,
-                                                            "messages":  null,
-                                                            "note":  "User confirmed the final Build completed; exact warning and message counts were not supplied."
-                                                        },
-                                              "structure_status":  "pass",
-                                              "control_path_isolation_status":  "pass",
-                                              "output_channel_status":  "pass",
-                                              "dynamic_behavior_status":  "unavailable",
-                                              "pscad_run_performed":  false,
-                                              "output_channel_count":  8,
-                                              "historical_status_preserved":  {
-                                                                                  "C1":  "pass",
-                                                                                  "C2":  "pass",
-                                                                                  "R5_immediate_trip_chain":  "pass",
-                                                                                  "C3_command_state_chain":  "pass",
-                                                                                  "legacy_C3_full_run_VSMIN_reference":  "fail",
-                                                                                  "overall_closed_loop_coverage":  "partial"
-                                                                              }
-                                          },
-    "latest_cascade_event_bus":  {
-                                     "audit_time":  "2026-06-29T19:45:00+08:00",
-                                     "execution_status":  "cascade_event_bus_static_audit_complete",
-                                     "report":  "docs/TYPE3_DFIG_LVRT_CASCADE_EVENT_BUS.md",
-                                     "result_file":  "data/reference/type3_dfig_lvrt_cascade_event_bus.json",
-                                     "summary_csv":  "data/reference/type3_dfig_lvrt_cascade_event_bus_summary.csv",
-                                     "task_start_sha256":  "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
-                                     "final_active_sha256":  "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
-                                     "build":  {
-                                                   "errors":  0,
-                                                   "warnings":  null,
-                                                   "messages":  null,
-                                                   "note":  "User confirmed the final Build completed; exact warning and message counts were not supplied."
-                                               },
-                                     "structure_status":  "pass",
-                                     "control_path_isolation_status":  "pass",
-                                     "output_channel_status":  "pass",
-                                     "dynamic_behavior_status":  "unavailable",
-                                     "multi_source_behavior_status":  "unavailable",
-                                     "pscad_run_performed":  false,
-                                     "output_channel_count":  10,
-                                     "source_id":  "TYPE3_DFIG_1",
-                                     "synthetic_multi_source_created":  false
-                                 }
+  "task": "Type-3 DFIG external LVRT scaffold progress upload",
+  "audit_time": "2026-06-27T00:00:00+08:00",
+  "pscad_project_source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "uploaded_snapshot": {
+    "path": "external/pscad_snapshot_20260627_lvrt_vsmin_mem/pnnl_39_3ibr_pscad46_strip5_PSCAD/3IBR.pscx",
+    "size_bytes": 3383600,
+    "sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+    "source_last_write_time": "2026-06-27T12:01:51+08:00",
+    "contents": "current 3IBR PSCAD project with LOWV, IMMTRIP, CLEAR, TIMER_S, and build-safe VSMIN feedback-memory scaffold plus DFIG_LVRT_VSMIN_MEM output channel"
+  },
+  "confirmed_interfaces": {
+    "VIBR1_2": {
+      "source": "P3 multimeter at Type-3 branch 22 kV collector-side upstream of BRK_DFIG",
+      "quantity": "RMS voltage",
+      "method": "Digital RMS",
+      "frequency_hz": 60.0,
+      "base_voltage_kv": 22.0,
+      "role": "candidate future LVRT Vs input"
+    },
+    "BRK_DFIG": {
+      "component": "3 Phase Breaker",
+      "single_pole_operation": false,
+      "command_semantics": {
+        "0": "closed",
+        "1": "open"
+      },
+      "open_possible_at_any_current": true,
+      "state_output": "DFIG_BRK_STATE"
+    }
+  },
+  "implemented_monitoring_scaffold": [
+    {
+      "signal": "DFIG_LVRT_LOWV",
+      "source": "VIBR1_2 comparator",
+      "threshold": 0.9,
+      "low_output_level": 1,
+      "high_output_level": 0,
+      "meaning": "1 when VIBR1_2 is below 0.90 pu",
+      "output_channel_added": true
+    },
+    {
+      "signal": "DFIG_LVRT_IMMTRIP",
+      "source": "VIBR1_2 comparator",
+      "threshold": 0.2,
+      "low_output_level": 1,
+      "high_output_level": 0,
+      "meaning": "1 when VIBR1_2 is at or below the immediate trip threshold region",
+      "output_channel_added": true
+    },
+    {
+      "signal": "DFIG_LVRT_CLEAR",
+      "source": "DFIG_LVRT_LOWV comparator",
+      "threshold": 0.5,
+      "low_output_level": 1,
+      "high_output_level": 0,
+      "meaning": "1 when the low-voltage event is inactive; used to clear the resettable integrator",
+      "output_channel_added": false
+    },
+    {
+      "signal": "DFIG_LVRT_TIMER_S",
+      "source": "resettable integrator",
+      "input": "DFIG_LVRT_LOWV",
+      "clear": "DFIG_LVRT_CLEAR",
+      "time_constant_s": 1.0,
+      "limits": {
+        "lower": 0,
+        "upper": 10
+      },
+      "meaning": "continuous low-voltage event elapsed time in seconds",
+      "output_channel_added": true
+    },
+    {
+      "signal": "DFIG_LVRT_VSMIN_MEM",
+      "source": "feedback-memory signal produced by the reset selector output through a Feedback Loop Selector",
+      "structure": {
+        "difference": "VIBR1_2 - DFIG_LVRT_VSMIN_MEM",
+        "update_min_comparator": {
+          "signal": "DFIG_LVRT_UPDATE_MIN",
+          "threshold": 0,
+          "low_output_level": 1,
+          "high_output_level": 0,
+          "convert_output_to_nearest_integer": true
+        },
+        "selector_update_candidate": {
+          "control": "DFIG_LVRT_UPDATE_MIN",
+          "channel_a": "VIBR1_2",
+          "channel_b": "DFIG_LVRT_VSMIN_MEM",
+          "output": "DFIG_LVRT_VSMIN_CAND"
+        },
+        "selector_reset": {
+          "control": "DFIG_LVRT_CLEAR",
+          "channel_a": 1.0,
+          "channel_b": "DFIG_LVRT_VSMIN_CAND",
+          "output": "DFIG_LVRT_VSMIN_PU"
+        },
+        "feedback_memory": {
+          "input": "DFIG_LVRT_VSMIN_PU",
+          "component": "Feedback Loop Selector",
+          "data_type": "Real",
+          "dimension": 1,
+          "initial_real_value": 1.0,
+          "output": "DFIG_LVRT_VSMIN_MEM"
+        }
+      },
+      "output_channel_added": true,
+      "output_channel": {
+        "title": "DFIG_LVRT_VSMIN_MEM",
+        "unit": "pu",
+        "scale_factor": 1.0,
+        "transfer_data": true,
+        "multiple_run_save": "All runs",
+        "default_display_limits": {
+          "min": 0,
+          "max": 1.2
+        }
+      },
+      "meaning": "build-safe VSMIN feedback-memory output; not yet dynamically validated as the event minimum voltage latch",
+      "limitations": [
+        "The prior Unused-source Build error was resolved by separating the feedback memory signal as DFIG_LVRT_VSMIN_MEM.",
+        "The output channel was added after the last 8 s run, so no dynamic VSMIN_MEM waveform has yet been verified.",
+        "Do not treat this signal as confirmed Vs_min_latched until the new output is verified in an 8 s run."
+      ]
+    }
+  ],
+  "build_check": {
+    "performed_by_user_in_pscad": true,
+    "errors": 0,
+    "warnings": 2,
+    "messages": 13,
+    "note": "Latest manual Build after adding the DFIG_LVRT_VSMIN_MEM output channel showed 0 errors. The two warnings are the previously audited XFMR_DFIG_22_33 floating-terminal warnings. This confirms static Build safety only, not VSMIN memory dynamics."
+  },
+  "not_implemented_yet": [
+    "dynamic validation and formal confirmation of DFIG_LVRT_VSMIN_MEM as Vs_min_latched",
+    "tVRT(Vs_min_latched) calculation",
+    "duration_exceeded comparator",
+    "trip_latch latch",
+    "trip_latch output channel",
+    "any connection to BRK_DFIG"
+  ],
+  "safety_notes": [
+    "The scaffold is monitoring-only and does not command BRK_DFIG.",
+    "DFIG_LVRT_VSMIN_MEM is build-safe but is not yet a dynamically validated latched minimum voltage.",
+    "No actual PSCAD LVRT trip has been implemented yet.",
+    "Future BRK_DFIG command synthesis must preserve the confirmed 0=closed, 1=open semantics."
+  ],
+  "recommended_next_steps": [
+    "Run the configured 8 s, 0.10 ohm, 2.0 s / 0.75 s fault case to verify DFIG_LVRT_VSMIN_MEM minimum tracking, hold, and reset behavior.",
+    "Promote DFIG_LVRT_VSMIN_MEM to confirmed Vs_min_latched only after the new output waveform passes that check.",
+    "Add tVRT calculation and duration_exceeded comparator only after Vs_min_latched is stable.",
+    "Add trip_latch monitoring before connecting any breaker command.",
+    "Only after monitoring validation should BRK_DFIG command synthesis be discussed."
+  ],
+  "superseded_by": [
+    "docs/TYPE3_DFIG_LVRT_MONITORING_FULL_VALIDATION.md",
+    "data/reference/type3_dfig_lvrt_monitoring_full_validation.json"
+  ],
+  "historical_scope_note": "A later unattended full-monitoring attempt on 2026-06-27 safely fell back and restored this Build=0 VSMIN scaffold state. The historical scaffold facts in this file are unchanged.",
+  "latest_trip_request_manual_validation": {
+    "audit_time": "2026-06-28T17:05:00+08:00",
+    "execution_status": "trip_request_manual_validation_success",
+    "result_file": "data/reference/type3_dfig_lvrt_trip_request_manual_validation.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_trip_request_manual_validation_summary.csv",
+    "report": "docs/TYPE3_DFIG_LVRT_TRIP_REQUEST_MANUAL_VALIDATION.md",
+    "cases": {
+      "R1": "pass",
+      "R2": "pass",
+      "R3": "pass",
+      "R4": "pass",
+      "R5": "pass"
+    },
+    "safety": {
+      "trip_latch_implemented": false,
+      "clear_modified": false,
+      "brk_dfig_connected": false,
+      "physical_breaker_opening_validated": false,
+      "matlab_coupled": false
+    },
+    "final_active_project_sha256": "17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B",
+    "r5": {
+      "build": {
+        "errors": 0,
+        "warnings": 2,
+        "messages": 12
+      },
+      "run_status": "parsed",
+      "acceptance_status": "pass",
+      "VIBR1_2_min_pu": 0.057826191277082,
+      "VIBR1_2_min_time_s": 2.08,
+      "IMMTRIP_first_s": 2.02,
+      "DURATION_EXCEEDED_first_s": null,
+      "TRIP_REQUEST_first_s": 2.02,
+      "DFIG_BRK_STATE_changed_after_startup": false
+    }
+  },
+  "latest_trip_latch_minimal_validation": {
+    "audit_time": "2026-06-28T20:05:00+08:00",
+    "execution_status": "trip_latch_minimal_validation_pass",
+    "result_file": "data/reference/type3_dfig_lvrt_trip_latch_minimal_validation.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_trip_latch_minimal_validation_summary.csv",
+    "report": "docs/TYPE3_DFIG_LVRT_TRIP_LATCH_MINIMAL_VALIDATION.md",
+    "run_archive": "C:\\pscad_work\\lvrt_trip_latch_minimal\\20260628_171834\\R5_trip_latch_fix_validation",
+    "case": "R5",
+    "run_status": "parsed",
+    "acceptance_status": "pass",
+    "VIBR1_2_min_pu": 0.057826191277082,
+    "VIBR1_2_min_time_s": 2.08,
+    "VSMIN_MEM_min_pu": 0.057823195871257,
+    "VSMIN_MEM_min_time_s": 2.09,
+    "LOWV_start_s": 2.01,
+    "LOWV_end_s": 2.17,
+    "IMMTRIP_first_s": 2.02,
+    "DURATION_EXCEEDED_first_s": null,
+    "TRIP_REQUEST_first_s": 2.02,
+    "TRIP_REQUEST_startup_pulse_start_s": 0.01,
+    "TRIP_REQUEST_startup_pulse_end_s": 0.02,
+    "TRIP_LATCH_first_from_0s": 2.02,
+    "TRIP_LATCH_prefault_max": 0.0,
+    "CLEAR_post_lowv_max": 0.0,
+    "DFIG_BRK_STATE_changed_after_startup": false,
+    "passed_checks": [
+      "C1_run_reached_5s",
+      "C2_trip_request_asserted_by_immtrip",
+      "C3_duration_exceeded_absent",
+      "C4_trip_latch_initial_zero",
+      "C5_trip_latch_not_set_before_fault",
+      "C6_trip_latch_sets_from_trip_request",
+      "C7_trip_latch_holds_after_set",
+      "C8_clear_suppressed_after_trip_latch",
+      "C9_timer_not_reset_after_lowv_recovery",
+      "C10_vsmem_not_reset_to_1_after_lowv_recovery",
+      "C11_brk_state_unchanged",
+      "C12_pq_not_cut_off"
+    ],
+    "safety": {
+      "brk_dfig_connected": false,
+      "physical_breaker_opening_validated": false,
+      "actual_turbine_disconnection_validated": false,
+      "matlab_coupled": false
+    }
+  },
+  "latest_brk_command_validation": {
+    "audit_time": "2026-06-28T21:50:00+08:00",
+    "execution_status": "brk_command_state_validation_pass",
+    "run_status": "completed",
+    "acceptance_status": "pass",
+    "result_file": "data/reference/type3_dfig_lvrt_brk_command_validation.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_brk_command_validation_summary.csv",
+    "report": "docs/TYPE3_DFIG_LVRT_BRK_COMMAND_VALIDATION.md",
+    "run_archive": "C:\\pscad_work\\lvrt_final_brk_cmd_recheck\\20260628_213352\\R5_final_brk_cmd_recheck",
+    "task_start_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "final_active_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "dynamic_evidence": {
+      "simulation_end_s": 5.0,
+      "TRIP_REQUEST_first_s": 2.02,
+      "TRIP_LATCH_first_s": 2.02,
+      "FINAL_BRK_CMD_first_open_s": 2.02,
+      "BRK_STATE_first_open_s": 2.02,
+      "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s": 0.0,
+      "FINAL_BRK_CMD_to_BRK_STATE_delay_s": 0.0,
+      "BRK_STATE_holds_open": true,
+      "startup_existing_command_max": 0.0,
+      "startup_final_command_max": 0.0,
+      "startup_brk_state_max": 0.0,
+      "PIBR1_2_pre_fault_mean": 189.89013181934155,
+      "PIBR1_2_post_open_mean": -2.339824966276821,
+      "QIBR1_2_pre_fault_mean": -15.494975081477733,
+      "QIBR1_2_post_open_mean": -1.1889435089549205
+    },
+    "recheck": {
+      "final_command_channel_present": true,
+      "all_B1_to_B13_checks_pass": true,
+      "model_modified": false,
+      "single_run_only": true,
+      "supersedes_previous_unavailable_result": true
+    },
+    "safety": {
+      "brk_dfig_main_circuit_parameters_modified": false,
+      "automatic_reclosing_added": false,
+      "physical_field_breaker_validated": false,
+      "actual_turbine_disconnection_validated": false,
+      "matlab_coupled": false
+    }
+  },
+  "latest_closed_loop_coverage": {
+    "audit_time": "2026-06-28T22:45:00+08:00",
+    "execution_status": "type3_lvrt_closed_loop_coverage_partial",
+    "report": "docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md",
+    "result_file": "data/reference/type3_dfig_lvrt_closed_loop_coverage.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_closed_loop_coverage_summary.csv",
+    "scenarios": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "fail"
+    },
+    "prior_R5_immediate_trip_path": "pass",
+    "supplemental_result": "The floating Gain was restored; C2 and C3 Runs completed. C3 command-and-state checks pass, but formal C3 acceptance fails its VSMIN reference check.",
+    "task_start_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "final_active_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+    "model_integrity_status": "model_integrity_nonfunctional_metadata_difference",
+    "zero_run_audits": {
+      "c3_vsmin_comparability": "data/reference/type3_dfig_lvrt_c3_vsmin_comparability_audit.json",
+      "model_integrity": "data/reference/type3_dfig_lvrt_model_integrity_audit.json",
+      "decision_window_VSMIN_status": "pass",
+      "full_run_historical_reference_status": "fail",
+      "reference_comparability_status": "needs_explanation",
+      "functional_difference_count": 0,
+      "nonfunctional_difference_count": 128,
+      "unclassified_difference_count": 0
+    }
+  },
+  "latest_protection_state_interface": {
+    "audit_time": "2026-06-29T11:40:00+08:00",
+    "execution_status": "protection_state_interface_static_audit_complete",
+    "report": "docs/TYPE3_DFIG_LVRT_PROTECTION_STATE_INTERFACE.md",
+    "result_file": "data/reference/type3_dfig_lvrt_protection_state_interface.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_protection_state_interface_summary.csv",
+    "task_start_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+    "final_active_sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+    "build": {
+      "errors": 0,
+      "warnings": null,
+      "messages": null,
+      "note": "User confirmed the final Build completed; exact warning and message counts were not supplied."
+    },
+    "structure_status": "pass",
+    "control_path_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false,
+    "output_channel_count": 8,
+    "historical_status_preserved": {
+      "C1": "pass",
+      "C2": "pass",
+      "R5_immediate_trip_chain": "pass",
+      "C3_command_state_chain": "pass",
+      "legacy_C3_full_run_VSMIN_reference": "fail",
+      "overall_closed_loop_coverage": "partial"
+    }
+  },
+  "latest_cascade_event_bus": {
+    "audit_time": "2026-06-29T19:45:00+08:00",
+    "execution_status": "cascade_event_bus_static_audit_complete",
+    "report": "docs/TYPE3_DFIG_LVRT_CASCADE_EVENT_BUS.md",
+    "result_file": "data/reference/type3_dfig_lvrt_cascade_event_bus.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_cascade_event_bus_summary.csv",
+    "task_start_sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+    "final_active_sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+    "build": {
+      "errors": 0,
+      "warnings": null,
+      "messages": null,
+      "note": "User confirmed the final Build completed; exact warning and message counts were not supplied."
+    },
+    "structure_status": "pass",
+    "control_path_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "multi_source_behavior_status": "unavailable",
+    "pscad_run_performed": false,
+    "output_channel_count": 10,
+    "source_id": "TYPE3_DFIG_1",
+    "synthetic_multi_source_created": false
+  },
+  "latest_main_project_sha_delta_audit": {
+    "audit_time": "2026-06-29T00:00:00+08:00",
+    "execution_status": "main_project_sha_delta_audit_complete",
+    "report": "docs/MAIN_PROJECT_SHA_DELTA_AUDIT.md",
+    "json": "data/reference/main_project_sha_delta_audit.json",
+    "summary_csv": "data/reference/main_project_sha_delta_audit_summary.csv",
+    "raw_differences_csv": "data/reference/main_project_sha_delta_raw_differences.csv",
+    "baseline_sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+    "current_main_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "raw_byte_identity_status": "fail",
+    "difference_counts": {
+      "raw_xml_difference_count": 181,
+      "nonfunctional_metadata_or_display_change": 181,
+      "functional_control_or_network_change": 0,
+      "test_parameter_change": 0,
+      "output_channel_change": 0,
+      "unclassified_difference": 0
+    },
+    "functional_equivalence_status": "supported",
+    "main_project_integrity_status": "main_project_nonfunctional_metadata_difference",
+    "trial_resumption_eligibility": "eligible_for_separate_task",
+    "breaker_construction_resumed": false,
+    "pscad_gui_started": false,
+    "build_performed": false,
+    "run_performed": false
+  }
 }

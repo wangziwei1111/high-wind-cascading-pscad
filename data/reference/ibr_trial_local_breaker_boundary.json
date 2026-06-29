@@ -48,8 +48,8 @@
     "local_breaker_boundary_status": "not_constructed",
     "breaker_state_semantics_status": "not_constructed",
     "output_channel_status": "not_constructed",
-    "control_path_isolation_status": "unavailable_after_main_integrity_failure",
-    "main_project_integrity_status": "fail",
+    "control_path_isolation_status": "not_rechecked_beyond_sha_delta_audit",
+    "main_project_integrity_status": "main_project_nonfunctional_metadata_difference",
     "dynamic_behavior_status": "unavailable",
     "second_source_event_status": "not_constructed",
     "dual_source_collector_status": "not_constructed"
@@ -68,5 +68,13 @@
     "trial_breaker_inserted": false,
     "second_source_event_packet_created": false,
     "dual_source_collector_created": false
+  },
+  "main_project_sha_delta_audit": {
+    "report": "docs/MAIN_PROJECT_SHA_DELTA_AUDIT.md",
+    "json": "data/reference/main_project_sha_delta_audit.json",
+    "main_project_integrity_status": "main_project_nonfunctional_metadata_difference",
+    "functional_equivalence_status": "supported",
+    "trial_resumption_eligibility": "eligible_for_separate_task",
+    "breaker_construction_resumed_in_audit": false
   }
 }

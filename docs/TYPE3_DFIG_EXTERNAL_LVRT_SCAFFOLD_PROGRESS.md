@@ -276,6 +276,28 @@ SHA-256 for the successful R5 validation scenario is
 No `TRIP_LATCH` implementation, `DFIG_LVRT_CLEAR` modification, `BRK_DFIG`
 command integration, physical breaker opening, or MATLAB coupling was added.
 
+## 2026-06-29 Main Project SHA Delta Audit
+
+The main-project SHA delta after trial project creation is audited in:
+
+```text
+docs/MAIN_PROJECT_SHA_DELTA_AUDIT.md
+data/reference/main_project_sha_delta_audit.json
+data/reference/main_project_sha_delta_audit_summary.csv
+data/reference/main_project_sha_delta_raw_differences.csv
+```
+
+Result:
+
+```text
+functional_equivalence_status = supported
+main_project_integrity_status = main_project_nonfunctional_metadata_difference
+trial_resumption_eligibility = eligible_for_separate_task
+```
+
+The audit was zero GUI, zero Build, zero Run, and read-only. It did not resume
+`IBR2_TRIAL` local breaker construction.
+
 ## 2026-06-28 Trip-Latch Minimal Validation Update
 
 Manual PSCAD R5 minimal validation for `DFIG_LVRT_TRIP_LATCH` and trip-aware
