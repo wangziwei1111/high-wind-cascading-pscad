@@ -100,3 +100,20 @@ The next valid engineering step is to decide whether the PSCAD model should
 expose a real local open-state signal for an existing non-DFIG source branch.
 That would be a separate modeling task and must not be represented by a
 constant, a command-only label, or a shared system switch.
+
+## Trial Boundary Follow-Up
+
+A later trial-only feasibility pass selected `IBR2_TRIAL` as a candidate branch
+for constructing a dedicated local breaker boundary in an independent trial
+project. That does not change this inventory result:
+
+```text
+main project monitor-only second-source status = no_qualified_candidate
+trial-local breaker boundary status = static fallback
+second-source event packet status = not_constructed
+dual-source collector status = not_constructed
+```
+
+The trial path is documented separately in
+`docs/TRIAL_IBR_BREAKER_INSERTION_FEASIBILITY.md` and
+`docs/IBR_TRIAL_LOCAL_BREAKER_BOUNDARY.md`.
