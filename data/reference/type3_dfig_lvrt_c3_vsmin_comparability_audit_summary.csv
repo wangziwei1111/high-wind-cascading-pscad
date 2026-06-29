@@ -1,0 +1,36 @@
+section,item,value,status
+classification,legacy_C3_acceptance_status,fail,fail
+classification,legacy_C3_failed_check,VSMIN_MEM_minimum_matches_reference,
+classification,legacy_C3_full_run_VSMIN_MEM_minimum,0.3301161303713,
+classification,legacy_reference,0.379649,
+classification,legacy_tolerance,0.02,
+classification,command_state_chain_status,pass,pass
+classification,decision_window_VSMIN_status,pass,pass
+classification,full_run_historical_reference_status,fail,fail
+classification,reference_comparability_status,needs_explanation,needs_explanation
+classification,post_breaker_network_response_status,pass,pass
+comparison,decision_window_like_for_like_comparison,0.0,pass
+comparison,full_run_like_for_like_comparison,0.04939239670833001,fail
+comparison,post_breaker_window_comparison,,not_applicable
+decision_window,definition,"[LOWV_first_s, TRIP_REQUEST_first_s)",
+decision_window,VSMIN_MEM_minimum,0.40784436868089,
+decision_window,VSMIN_MEM_minimum_time_s,3.03,
+decision_window,VIBR1_2_minimum,0.40784436868089,
+decision_window,VIBR1_2_minimum_time_s,3.03,
+decision_window,TALLOW_at_last_sample_before_trip_request,1.0332657239352,
+decision_window,TALLOW_sample_time_s,3.03,
+decision_window,TIMER_S_at_last_sample_before_trip_request,1.0264125000025,
+decision_window,TIMER_S_sample_time_s,3.03,
+transition_window,definition,same_sample,
+transition_window,sample_time_s,3.04,
+post_breaker_window,definition,"[BRK_STATE_first_open_s, simulation_end_s]",
+post_breaker_window,VSMIN_MEM_minimum,0.3301161303713,
+post_breaker_window,VSMIN_MEM_minimum_time_s,3.26,
+post_breaker_window,VIBR1_2_minimum,0.33022509231603,
+post_breaker_window,VIBR1_2_minimum_time_s,3.25,
+fault_clear_neighborhood,definition,"[3.20 s, 3.32 s]",
+fault_clear_neighborhood,VSMIN_MEM_minimum,0.3301161303713,
+fault_clear_neighborhood,VSMIN_MEM_minimum_time_s,3.26,
+full_event_window,definition,"[LOWV_first_s, simulation_end_s]",
+full_event_window,VSMIN_MEM_minimum,0.3301161303713,
+full_event_window,VSMIN_MEM_minimum_time_s,3.26,

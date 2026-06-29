@@ -7,7 +7,7 @@ execution_status = type3_lvrt_closed_loop_coverage_partial
 C1 no-fault = pass
 C2 R2 ride-through = pass
 C3 R4 duration trip-to-breaker = fail
-model_integrity = model_integrity_needs_explanation
+model_integrity = model_integrity_nonfunctional_metadata_difference
 ```
 
 The no-fault and ride-through paths were dynamically validated. The C3
@@ -53,8 +53,10 @@ Total simulation time = 5.0 s
 The final SHA does not match the task-start SHA. The previously floating
 `master:gain` ID `65646757` is no longer present. A read-only comparison still
 shows saved revision and run-display differences from the task-start on-disk
-backup. No direct XML repair or backup substitution was performed. The final
-model state is therefore `model_integrity_needs_explanation`.
+backup. No direct XML repair or backup substitution was performed. Before the
+structural audit, this was conservatively recorded as
+`model_integrity_needs_explanation`; the later addendum classifies the observed
+differences using direct XML evidence.
 
 ## Build Record
 
@@ -173,3 +175,37 @@ docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md
 
 Raw `.inf/.out` files and logs remain only under the local run root and are
 not committed.
+
+## C3 VSMIN Comparability Addendum
+
+The zero-run comparability audit found the raw historical R4 archive and
+applied the same pre-request window to both runs:
+
+```text
+decision window = [2.01 s, 3.04 s)
+current VSMIN minimum = 0.40784436868089 pu at 3.03 s
+historical VSMIN minimum = 0.40784436868089 pu at 3.03 s
+decision-window absolute difference = 0.0 pu
+decision_window_VSMIN_status = pass
+```
+
+The current full-event minimum `0.3301161303713 pu at 3.26 s` occurs after
+BRK_STATE opened at 3.04 s. The historical R4 has no equivalent breaker-open
+event. Therefore the legacy full-run reference check remains `fail`, while
+`reference_comparability_status = needs_explanation`. C3 and overall coverage
+remain unchanged; see `TYPE3_DFIG_LVRT_C3_VSMIN_COMPARABILITY_AUDIT.md`.
+
+## Model Integrity Addendum
+
+A read-only XML/structure audit compared the exact task-start backup with the
+current active project. All 128 detected differences are revision, layout,
+display stacking, or saved run-display metadata. There are zero functional,
+test-parameter, Output Channel, wire, or unclassified differences. Gain ID
+`65646757` is absent from both projects.
+
+```text
+model_integrity_status = model_integrity_nonfunctional_metadata_difference
+```
+
+The byte SHA values remain different; byte identity is not claimed. See
+`TYPE3_DFIG_LVRT_MODEL_INTEGRITY_AUDIT.md`.

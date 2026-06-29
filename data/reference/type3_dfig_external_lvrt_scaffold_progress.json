@@ -293,6 +293,16 @@
     "supplemental_result": "The floating Gain was restored; C2 and C3 Runs completed. C3 command-and-state checks pass, but formal C3 acceptance fails its VSMIN reference check.",
     "task_start_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
     "final_active_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
-    "model_integrity_status": "model_integrity_needs_explanation"
+    "model_integrity_status": "model_integrity_nonfunctional_metadata_difference",
+    "zero_run_audits": {
+      "c3_vsmin_comparability": "data/reference/type3_dfig_lvrt_c3_vsmin_comparability_audit.json",
+      "model_integrity": "data/reference/type3_dfig_lvrt_model_integrity_audit.json",
+      "decision_window_VSMIN_status": "pass",
+      "full_run_historical_reference_status": "fail",
+      "reference_comparability_status": "needs_explanation",
+      "functional_difference_count": 0,
+      "nonfunctional_difference_count": 128,
+      "unclassified_difference_count": 0
+    }
   }
 }

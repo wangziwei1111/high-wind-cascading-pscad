@@ -332,5 +332,29 @@
       }
     }
   },
+  "c3_vsmin_comparability_addendum": {
+    "audit_file": "data/reference/type3_dfig_lvrt_c3_vsmin_comparability_audit.json",
+    "command_state_chain_status": "pass",
+    "decision_window_VSMIN_status": "pass",
+    "full_run_historical_reference_status": "fail",
+    "legacy_C3_acceptance_status": "fail",
+    "reference_comparability_status": "needs_explanation",
+    "current_decision_window_minimum": 0.40784436868089,
+    "historical_decision_window_minimum": 0.40784436868089,
+    "decision_window_absolute_difference": 0.0,
+    "current_full_run_minimum": 0.3301161303713,
+    "current_full_run_minimum_time_s": 3.26,
+    "full_run_minimum_occurs_after_breaker_open": true
+  },
+  "model_integrity_audit": {
+    "audit_file": "data/reference/type3_dfig_lvrt_model_integrity_audit.json",
+    "model_integrity_status": "model_integrity_nonfunctional_metadata_difference",
+    "difference_count": 128,
+    "functional_control_or_network_change": 0,
+    "test_parameter_change": 0,
+    "nonfunctional_metadata_or_display_change": 128,
+    "unclassified_difference": 0,
+    "master_gain_65646757": "absent_from_exact_task_start_backup_and_current_active_project"
+  },
   "scope_statement": "Single-machine Type-3 external LVRT closed-loop coverage is validated in PSCAD only when C1, C2, and C3 all pass."
 }

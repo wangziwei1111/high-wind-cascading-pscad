@@ -419,3 +419,30 @@ The restored active project SHA-256 is
 `0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17` and
 still differs from the original task-start SHA, so model integrity remains
 `model_integrity_needs_explanation`.
+
+## 2026-06-29 Zero-Run Comparability And Integrity Audit
+
+No PSCAD GUI, Build, Run, save, or model edit was performed. The raw
+historical R4 archive was found and compared with current C3 using the same
+`[LOWV, TRIP_REQUEST)` window. Both decision-window VSMIN minima are
+`0.40784436868089 pu at 3.03 s`, so the like-for-like decision check passes.
+
+The original full-run C3 fail remains unchanged. Its `0.3301161303713 pu`
+minimum occurs after BRK_STATE opens, while historical R4 has no equivalent
+breaker-open event; reference comparability is `needs_explanation`.
+
+The exact task-start backup and current active project were also parsed and
+compared structurally. All 128 differences are nonfunctional metadata/display
+differences, with zero functional, test-parameter, Output Channel, wire, or
+unclassified differences. Gain ID `65646757` is absent from both files.
+
+```text
+model_integrity_status = model_integrity_nonfunctional_metadata_difference
+```
+
+Reports:
+
+```text
+docs/TYPE3_DFIG_LVRT_C3_VSMIN_COMPARABILITY_AUDIT.md
+docs/TYPE3_DFIG_LVRT_MODEL_INTEGRITY_AUDIT.md
+```

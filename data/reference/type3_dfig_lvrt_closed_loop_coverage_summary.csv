@@ -45,3 +45,8 @@ C3,FINAL_BRK_CMD_holds_high,pass
 C3,BRK_STATE_holds_open,pass
 C3,no_startup_false_open,pass
 C3,PQ_electrical_response_recorded,pass
+C3_AUDIT,command_state_chain_status,pass
+C3_AUDIT,decision_window_VSMIN_status,pass
+C3_AUDIT,full_run_historical_reference_status,fail
+C3_AUDIT,reference_comparability_status,needs_explanation
+MODEL_AUDIT,model_integrity_nonfunctional_metadata_difference,pass
