@@ -469,3 +469,29 @@ does not feed back into the existing protection chain.
 Historical results remain unchanged: C1 pass, C2 pass, R5 immediate-trip
 chain pass, C3 command/state chain pass, legacy C3 full-run VSMIN reference
 check fail, and overall closed-loop coverage partial.
+
+## 2026-06-29 Cascade-Event Bus And Single-Source Collector
+
+The monitor-only cascade-event source packet and current single-source
+collector are recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_CASCADE_EVENT_BUS.md
+data/reference/type3_dfig_lvrt_cascade_event_bus.json
+data/reference/type3_dfig_lvrt_cascade_event_bus_summary.csv
+```
+
+The final static audit result is:
+
+```text
+structure_status = pass
+control_path_isolation_status = pass
+output_channel_status = pass
+dynamic_behavior_status = unavailable
+multi_source_behavior_status = unavailable
+```
+
+The collector currently represents only the real `TYPE3_DFIG_1` source. No
+second source, synthetic source, new dynamic PSCAD Run, multi-machine cascade
+validation, or MATLAB coupling was added. Existing LVRT, `FINAL_BRK_CMD`, and
+`BRK_DFIG` control paths remain outside the new monitor-only outputs.

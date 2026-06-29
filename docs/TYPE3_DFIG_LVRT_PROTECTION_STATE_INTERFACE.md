@@ -102,3 +102,31 @@ reference comparability = needs_explanation
 This task does not claim validated multi-machine cascading, dynamic cause-code
 behavior, MATLAB integration, physical field-breaker operation, or actual
 turbine isolation.
+
+## Cascade-Event Bus Addendum
+
+A later zero-run static task constructed the next monitor-only layer:
+
+```text
+Type-3 LVRT cascade-event bus and single-source collector:
+statically constructed and Build-verified.
+
+No new dynamic PSCAD validation was performed.
+No multi-machine cascade behavior was validated.
+No MATLAB coupling was added.
+```
+
+The new source event packet reads this protection-state interface without
+feeding back into the LVRT or breaker command path:
+
+```text
+DFIG_LVRT_CASCADE_EVENT_VALID = DFIG_LVRT_TRIP_CONFIRMED
+DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE = DFIG_LVRT_TRIP_CAUSE_CODE
+DFIG_LVRT_CASCADE_EVENT_BRK_OPEN = DFIG_LVRT_BRK_OPEN_BOOL
+DFIG_LVRT_CASCADE_SOURCE_AVAILABLE = DFIG_LVRT_CASCADE_AVAILABLE
+DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S = first captured EVENT_VALID time
+```
+
+The single-source collector currently represents only `TYPE3_DFIG_1`; no
+second source, synthetic source, multi-machine cascade behavior, or MATLAB
+coupling was added. See `TYPE3_DFIG_LVRT_CASCADE_EVENT_BUS.md`.
