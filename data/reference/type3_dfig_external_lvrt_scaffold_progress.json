@@ -304,5 +304,34 @@
       "nonfunctional_difference_count": 128,
       "unclassified_difference_count": 0
     }
+  },
+  "latest_protection_state_interface": {
+    "audit_time": "2026-06-29T11:40:00+08:00",
+    "execution_status": "protection_state_interface_static_audit_complete",
+    "report": "docs/TYPE3_DFIG_LVRT_PROTECTION_STATE_INTERFACE.md",
+    "result_file": "data/reference/type3_dfig_lvrt_protection_state_interface.json",
+    "summary_csv": "data/reference/type3_dfig_lvrt_protection_state_interface_summary.csv",
+    "task_start_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+    "final_active_sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+    "build": {
+      "errors": 0,
+      "warnings": null,
+      "messages": null,
+      "note": "User confirmed the final Build completed; exact warning and message counts were not supplied."
+    },
+    "structure_status": "pass",
+    "control_path_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false,
+    "output_channel_count": 8,
+    "historical_status_preserved": {
+      "C1": "pass",
+      "C2": "pass",
+      "R5_immediate_trip_chain": "pass",
+      "C3_command_state_chain": "pass",
+      "legacy_C3_full_run_VSMIN_reference": "fail",
+      "overall_closed_loop_coverage": "partial"
+    }
   }
 }

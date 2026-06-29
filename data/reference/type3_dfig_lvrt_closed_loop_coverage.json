@@ -356,5 +356,23 @@
     "unclassified_difference": 0,
     "master_gain_65646757": "absent_from_exact_task_start_backup_and_current_active_project"
   },
-  "scope_statement": "Single-machine Type-3 external LVRT closed-loop coverage is validated in PSCAD only when C1, C2, and C3 all pass."
+  "scope_statement": "Single-machine Type-3 external LVRT closed-loop coverage is validated in PSCAD only when C1, C2, and C3 all pass.",
+  "protection_state_interface_addendum": {
+    "audit_file": "data/reference/type3_dfig_lvrt_protection_state_interface.json",
+    "report": "docs/TYPE3_DFIG_LVRT_PROTECTION_STATE_INTERFACE.md",
+    "final_active_sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+    "structure_status": "pass",
+    "control_path_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3_formal_acceptance": "fail",
+      "C3_command_state_chain": "pass",
+      "R5_immediate_trip_chain": "pass",
+      "overall": "partial"
+    }
+  }
 }

@@ -1,0 +1,269 @@
+{
+  "active_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C"
+  },
+  "build": {
+    "errors": 0,
+    "messages": null,
+    "source": "user-confirmed final Build; exact warning/message counts not supplied",
+    "warnings": null
+  },
+  "checks": [
+    {
+      "check": "output_channel:DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_TRIP_CAUSE_IMM_LATCH\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"688400342\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1906095098\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_TRIP_CAUSE_CODE",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"3.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_TRIP_CAUSE_CODE\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"code\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"541903365\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1079396455\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_FINAL_CMD_BOOL",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_FINAL_CMD_BOOL\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1749856422\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_BRK_OPEN_BOOL",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_BRK_OPEN_BOOL\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1251750859\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_TRIP_CONFIRMED",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_TRIP_CONFIRMED\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1051031339\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_CASCADE_AVAILABLE",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_CASCADE_AVAILABLE\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"345805582\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "imm_request_is_armed",
+      "evidence": "DFIG_LVRT_CAUSE_IMM_REQ\\s*=\\s*REAL\\(DFIG_LVRT_IMMTRIP_BOOL_MON\\)\\s*\\*\\s*REAL\\(DFIG_LVRT_ARMED_BOOL_MON\\)",
+      "status": "pass"
+    },
+    {
+      "check": "duration_request_is_armed",
+      "evidence": "DFIG_LVRT_CAUSE_DUR_REQ\\s*=\\s*REAL\\(DFIG_LVRT_ARMED_BOOL_MON\\)\\s*\\*\\s*REAL\\(DFIG_LVRT_DURATION_BOOL_MON\\)",
+      "status": "pass"
+    },
+    {
+      "check": "imm_latch_initial_zero",
+      "evidence": "IF \\(TIMEZERO\\) DFIG_LVRT_CAUSE_IMM_MEM = 0\\.0",
+      "status": "pass"
+    },
+    {
+      "check": "duration_latch_initial_zero",
+      "evidence": "IF \\(TIMEZERO\\) DFIG_LVRT_CAUSE_DUR_MEM = 0\\.0",
+      "status": "pass"
+    },
+    {
+      "check": "cause_code_formula",
+      "evidence": "DFIG_LVRT_TRIP_CAUSE_CODE\\s*=\\s*\\+\\s*RT_27\\s*\\+\\s*RT_28",
+      "status": "pass"
+    },
+    {
+      "check": "cause_code_imm_weight",
+      "evidence": "RT_27\\s*=\\s*2\\.0\\s*\\*\\s*DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+      "status": "pass"
+    },
+    {
+      "check": "cause_code_duration_weight",
+      "evidence": "RT_28\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CAUSE_DUR_LATCH",
+      "status": "pass"
+    },
+    {
+      "check": "trip_confirmed_formula",
+      "evidence": "DFIG_LVRT_TRIP_CONFIRMED\\s*=\\s*RT_26\\s*\\*\\s*REAL\\(DFIG_LVRT_BRK_OPEN_BOOL\\)",
+      "status": "pass"
+    },
+    {
+      "check": "trip_confirmed_first_stage",
+      "evidence": "RT_26\\s*=\\s*REAL\\(DFIG_LVRT_TRIP_LATCH_BOOL_MON\\)\\s*\\*\\s*REAL\\(DFIG_LVRT_FINAL_CMD_BOOL\\)",
+      "status": "pass"
+    },
+    {
+      "check": "cascade_available_inversion",
+      "evidence": "EMTDC_X2COMP\\(0,0,0\\.5,REAL\\(DFIG_LVRT_BRK_OPEN_BOOL\\),1\\.0,0\\.0,0\\.0,RVD2_1\\)",
+      "status": "pass"
+    },
+    {
+      "check": "final_command_composition",
+      "evidence": "RT_23\\s*=\\s*\\+\\s*DFIG_LVRT_EXISTING_BRK_CMD_BOOL\\s*\\+\\s*DFIG_LVRT_TRIP_LATCH_BOOL",
+      "status": "pass"
+    },
+    {
+      "check": "final_command_limiter",
+      "evidence": "DFIG_LVRT_FINAL_BRK_CMD\\s*=\\s*LIMIT\\(0\\.0,\\s*1\\.0,\\s*RT_23\\)",
+      "status": "pass"
+    },
+    {
+      "check": "breaker_sole_command",
+      "evidence": "BRK_DFIG\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_FINAL_BRK_CMD",
+      "status": "pass"
+    },
+    {
+      "check": "preexisting_protected_component_parameters_unchanged",
+      "evidence": "[]",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": {
+    "dynamic_behavior_validated_in_this_task": false,
+    "matlab_coupling_added": false,
+    "multi_machine_cascade_validated": false,
+    "physical_field_breaker_validated": false,
+    "static_structure_verified": true
+  },
+  "control_path_isolation_status": "pass",
+  "dynamic_behavior_note": "No PSCAD Run or EMTDC execution was performed for this static interface task.",
+  "dynamic_behavior_status": "unavailable",
+  "execution_status": "protection_state_interface_static_audit_complete",
+  "failed_checks": [],
+  "generated_fortran": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\P3.f",
+    "sha256": "D9D2624807EB4F5C3C121B9496075C66C33E38E8FAB34D309E58555AA9B6E2C1"
+  },
+  "historical_status_preserved": {
+    "C1_no_fault": "pass",
+    "C2_ride_through": "pass",
+    "C3_command_state_chain": "pass",
+    "R5_immediate_trip_chain": "pass",
+    "legacy_C3_full_run_VSMIN_reference": "fail",
+    "overall_closed_loop_coverage": "partial"
+  },
+  "output_channel_status": "pass",
+  "output_channels": {
+    "DFIG_LVRT_BRK_OPEN_BOOL": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_BRK_OPEN_BOOL",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1251750859",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_CASCADE_AVAILABLE": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_CASCADE_AVAILABLE",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "345805582",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_FINAL_CMD_BOOL": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_FINAL_CMD_BOOL",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1749856422",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1079396455",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_TRIP_CAUSE_CODE": {
+      "Display": "1",
+      "Group": "",
+      "Max": "3.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_TRIP_CAUSE_CODE",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "code",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "541903365",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1906095098",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_TRIP_CAUSE_IMM_LATCH": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "688400342",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_TRIP_CONFIRMED": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_TRIP_CONFIRMED",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1051031339",
+      "mrun": "1"
+    }
+  },
+  "protected_component_differences": [],
+  "structure_status": "pass",
+  "task_start_baseline": {
+    "path": "C:\\pscad_work\\backups\\type3_lvrt_protection_state_interface_20260629_103244\\3IBR.pscx",
+    "sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17"
+  }
+}

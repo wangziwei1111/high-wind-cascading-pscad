@@ -446,3 +446,26 @@ Reports:
 docs/TYPE3_DFIG_LVRT_C3_VSMIN_COMPARABILITY_AUDIT.md
 docs/TYPE3_DFIG_LVRT_MODEL_INTEGRITY_AUDIT.md
 ```
+
+## 2026-06-29 Protection-State / Cascade-Export Interface
+
+The monitor-only protection-state and cascade-export interface was manually
+constructed and passed a final static Build with zero errors. Eight new Output
+Channels expose the two cause latches, cause code, original/final command
+states, breaker-open state, trip confirmation, and cascade availability.
+
+```text
+Protection-state / cascade-export interface: static Build-verified
+Dynamic validation: deferred
+Final project SHA-256: 891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C
+```
+
+The generated Fortran confirms `TRIP_CAUSE_CODE = 2*IMM + 1*DURATION`,
+`TRIP_CONFIRMED = TRIP_LATCH_BOOL * FINAL_CMD_BOOL * BRK_OPEN_BOOL`, and
+`CASCADE_AVAILABLE = NOT BRK_OPEN_BOOL`. `BRK_DFIG` remains driven solely by
+`DFIG_LVRT_FINAL_BRK_CMD`. No new PSCAD Run was performed and the interface
+does not feed back into the existing protection chain.
+
+Historical results remain unchanged: C1 pass, C2 pass, R5 immediate-trip
+chain pass, C3 command/state chain pass, legacy C3 full-run VSMIN reference
+check fail, and overall closed-loop coverage partial.

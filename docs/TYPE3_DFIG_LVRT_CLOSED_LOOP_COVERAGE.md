@@ -209,3 +209,21 @@ model_integrity_status = model_integrity_nonfunctional_metadata_difference
 
 The byte SHA values remain different; byte identity is not claimed. See
 `TYPE3_DFIG_LVRT_MODEL_INTEGRITY_AUDIT.md`.
+
+## Protection-State Interface Addendum
+
+A zero-run static audit verified the newly added monitor-only protection-state
+and cascade-export interface:
+
+```text
+structure_status = pass
+control_path_isolation_status = pass
+output_channel_status = pass
+dynamic_behavior_status = unavailable
+```
+
+This addendum does not alter the scenario matrix. C1 and C2 remain pass, the
+C3 command-and-state chain remains pass, the legacy C3 full-run VSMIN check
+remains fail, and overall closed-loop coverage remains partial. The interface
+has not been dynamically validated in C1/C2/C3/R5 and does not establish
+multi-machine cascade behavior.
