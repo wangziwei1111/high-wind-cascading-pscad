@@ -387,5 +387,25 @@
     "pscad_gui_started": false,
     "build_performed": false,
     "run_performed": false
+  },
+  "latest_ibr2_trial_local_breaker_boundary": {
+    "audit_time": "2026-06-30T11:45:00+08:00",
+    "execution_status": "trial_local_breaker_boundary_static_build_verified",
+    "report": "docs/IBR2_TRIAL_LOCAL_BREAKER_BOUNDARY.md",
+    "result_file": "data/reference/ibr2_trial_local_breaker_boundary.json",
+    "summary_csv": "data/reference/ibr2_trial_local_breaker_boundary_summary.csv",
+    "main_project_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "trial_start_sha256": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15",
+    "trial_final_sha256": "FB29872FCA8BCF92E5450C5944A312C1E6F018F87B5B499FEAF0E6B16C8A4A1E",
+    "build_errors": 0,
+    "build_warnings": null,
+    "build_messages": null,
+    "local_breaker_boundary_status": "pass",
+    "no_parallel_bypass_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "second_source_event_status": "not_constructed",
+    "dual_source_collector_status": "not_constructed",
+    "pscad_run_performed": false
   }
 }

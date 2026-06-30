@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "execution_status": "trial_local_breaker_boundary_static_build_verified",
+  "main_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "start_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "end_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906"
+  },
+  "trial_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "start_sha256": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15",
+    "end_sha256": "FB29872FCA8BCF92E5450C5944A312C1E6F018F87B5B499FEAF0E6B16C8A4A1E",
+    "independent_from_main": true
+  },
+  "target": {
+    "source_id": "IBR2_TRIAL",
+    "component": "IBR_AVM_2_1_1_1",
+    "observables": {
+      "VIBR2": true,
+      "PIBR2": true,
+      "QIBR2": true
+    }
+  },
+  "boundary": {
+    "breaker": "BRK_IBR2_TRIAL",
+    "component_id": "1612913074",
+    "network_mapping": "IBR2/NT_8 phases -> BRK_IBR2_TRIAL -> NT_16 phases/E_2_30_1 0.6 kV side",
+    "command_initial_value": 0.0,
+    "actual_state_values": {
+      "closed": 0,
+      "open": 2
+    },
+    "open_bool_formula": "IBR2_TRIAL_BRK_STATE >= 0.5",
+    "source_available_formula": "NOT IBR2_TRIAL_BRK_OPEN_BOOL"
+  },
+  "output_channels": {
+    "IBR2_TRIAL_BRK_CMD": {
+      "count": 1,
+      "transfer_data": "1",
+      "multiple_run_save": "1",
+      "scale": "1.0",
+      "min": "0",
+      "max": "1.2",
+      "pass": true
+    },
+    "IBR2_TRIAL_BRK_STATE": {
+      "count": 1,
+      "transfer_data": "1",
+      "multiple_run_save": "1",
+      "scale": "1.0",
+      "min": "0",
+      "max": "2.2",
+      "pass": true
+    },
+    "IBR2_TRIAL_BRK_OPEN_BOOL": {
+      "count": 1,
+      "transfer_data": "1",
+      "multiple_run_save": "1",
+      "scale": "1.0",
+      "min": "0",
+      "max": "1.2",
+      "pass": true
+    },
+    "IBR2_TRIAL_SOURCE_AVAILABLE": {
+      "count": 1,
+      "transfer_data": "1",
+      "multiple_run_save": "1",
+      "scale": "1.0",
+      "min": "0",
+      "max": "1.2",
+      "pass": true
+    }
+  },
+  "build_evidence": {
+    "p3_fortran_exists": true,
+    "executable_exists": true,
+    "errors": 0,
+    "warnings": "not_reported",
+    "messages": "not_reported"
+  },
+  "statuses": {
+    "main_project_integrity_status": "pass",
+    "trial_project_status": "pass",
+    "ibr2_branch_mapping_status": "pass",
+    "local_breaker_boundary_status": "pass",
+    "no_parallel_bypass_status": "pass",
+    "breaker_state_semantics_status": "pass",
+    "output_channel_status": "pass",
+    "control_path_isolation_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "second_source_event_status": "not_constructed",
+    "dual_source_collector_status": "not_constructed"
+  },
+  "claim_boundary": {
+    "pscad_run_performed": false,
+    "dynamic_disconnection_validated": false,
+    "second_source_event_packet_created": false,
+    "dual_source_collector_created": false,
+    "cascade_propagation_validated": false,
+    "matlab_used": false
+  }
+}

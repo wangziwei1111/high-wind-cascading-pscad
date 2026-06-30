@@ -517,3 +517,17 @@ The collector currently represents only the real `TYPE3_DFIG_1` source. No
 second source, synthetic source, new dynamic PSCAD Run, multi-machine cascade
 validation, or MATLAB coupling was added. Existing LVRT, `FINAL_BRK_CMD`, and
 `BRK_DFIG` control paths remain outside the new monitor-only outputs.
+
+## 2026-06-30 IBR2 Trial-Local Breaker Boundary
+
+Only the independent `3IBR_DFIG1_TRIAL.pscx` project was changed. A physical
+three-phase `BRK_IBR2_TRIAL` boundary, closed command, actual state,
+standardized open state, source availability, and four Output Channels passed
+static XML/Fortran/network-map audit and a zero-error Build.
+
+The protected main project SHA remained
+`97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906`.
+No Run was performed. This trial boundary is not a qualified monitor-only
+second source: no second-source event packet or dual-source collector exists,
+and no dynamic breaker action, real source isolation, event timing,
+multi-machine propagation, cascade behavior, or MATLAB behavior was validated.

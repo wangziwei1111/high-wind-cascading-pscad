@@ -1,80 +1,18 @@
 {
   "schema_version": 1,
-  "execution_status": "trial_ibr_breaker_boundary_static_fallback",
+  "execution_status": "trial_local_breaker_boundary_static_build_verified",
   "selected_source_id": "IBR2_TRIAL",
   "selected_candidate": "IBR_AVM_2_1_1_1",
-  "main_project": {
-    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
-    "protected_sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
-    "current_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
-    "integrity_status": "fail"
-  },
-  "trial_project": {
-    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
-    "sha256": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15",
-    "exists": true,
-    "fortran_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
-    "fortran_exists": true
-  },
-  "planned_boundary": {
-    "source_id": "IBR2_TRIAL",
-    "target_ibr": "IBR_AVM_2_1_1_1",
-    "p_q_v_signals": [
-      "VIBR2",
-      "PIBR2",
-      "QIBR2"
-    ],
-    "breaker_name": "BRK_IBR2_TRIAL",
-    "recommended_insertion_point": "Trial project only: insert a series 3-phase breaker on the IBR2_TRIAL local branch between the 0.6 kV side of transformer E_2_30_1 (component id 275469438) and the low-voltage multimeter that exports VIBR2, PIBR2, QIBR2 (component id 1433370859).",
-    "new_signals": [
-      "IBR2_TRIAL_BRK_CMD",
-      "IBR2_TRIAL_BRK_STATE",
-      "IBR2_TRIAL_BRK_OPEN_BOOL",
-      "IBR2_TRIAL_SOURCE_AVAILABLE"
-    ]
-  },
-  "static_presence": {
-    "breaker_present_in_trial_fortran": false,
-    "new_signal_presence_in_trial_fortran": {
-      "IBR2_TRIAL_BRK_CMD": false,
-      "IBR2_TRIAL_BRK_STATE": false,
-      "IBR2_TRIAL_BRK_OPEN_BOOL": false,
-      "IBR2_TRIAL_SOURCE_AVAILABLE": false
-    }
-  },
-  "statuses": {
-    "trial_project_status": "created",
-    "ibr_branch_mapping_status": "pass",
-    "local_breaker_boundary_status": "not_constructed",
-    "breaker_state_semantics_status": "not_constructed",
-    "output_channel_status": "not_constructed",
-    "control_path_isolation_status": "not_rechecked_beyond_sha_delta_audit",
-    "main_project_integrity_status": "main_project_nonfunctional_metadata_difference",
-    "dynamic_behavior_status": "unavailable",
-    "second_source_event_status": "not_constructed",
-    "dual_source_collector_status": "not_constructed"
-  },
-  "build_evidence": {
-    "trial_build_user_report": "completed",
-    "trial_p3_fortran_exists": true,
-    "build_error_count": "unavailable",
-    "build_warning_count": "unavailable",
-    "build_message_count": "unavailable"
-  },
-  "stop_reason": "Main project SHA changed from the protected baseline after trial stage A. Per task rules, no further GUI construction is allowed in this turn.",
-  "claim_boundary": {
-    "pscad_run_performed": false,
-    "main_project_modification_by_codex": false,
-    "trial_breaker_inserted": false,
-    "second_source_event_packet_created": false,
-    "dual_source_collector_created": false
-  },
-  "main_project_sha_delta_audit": {
-    "report": "docs/MAIN_PROJECT_SHA_DELTA_AUDIT.md",
-    "json": "data/reference/main_project_sha_delta_audit.json",
-    "main_project_integrity_status": "main_project_nonfunctional_metadata_difference",
-    "functional_equivalence_status": "supported",
-    "trial_resumption_eligibility": "eligible_for_separate_task",
-    "breaker_construction_resumed_in_audit": false
-  }
+  "detail_json": "data/reference/ibr2_trial_local_breaker_boundary.json",
+  "report": "docs/IBR2_TRIAL_LOCAL_BREAKER_BOUNDARY.md",
+  "main_project_integrity_status": "pass",
+  "local_breaker_boundary_status": "pass",
+  "no_parallel_bypass_status": "pass",
+  "breaker_state_semantics_status": "pass",
+  "output_channel_status": "pass",
+  "control_path_isolation_status": "pass",
+  "dynamic_behavior_status": "unavailable",
+  "second_source_event_status": "not_constructed",
+  "dual_source_collector_status": "not_constructed",
+  "pscad_run_performed": false
 }
