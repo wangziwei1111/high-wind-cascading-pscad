@@ -41,3 +41,11 @@ different semantics. They are never added into a global cause code.
 
 These are static interface expectations only. No dynamic PSCAD Run was
 performed. No causal cascade propagation was validated.
+
+## Event chronology addendum
+
+The preserved collector now feeds a monitor-only chronology layer exposing
+both-events, second-event time, absolute event-time gap, sequence code, and a
+three-state consistency flag. The existing count, first-time, first-source,
+availability, trip, breaker-open, and per-source cause logic was not changed.
+No dynamic ordering or causal propagation was validated.

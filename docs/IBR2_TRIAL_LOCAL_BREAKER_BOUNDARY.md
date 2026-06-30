@@ -49,3 +49,11 @@ The preserved boundary now feeds a trial-only monitor packet and two-real-
 source collector. Static audit confirms that breaker parameters, the command
 chain, `NT_8`–breaker–`NT_16` topology, and the original IBR2 controller were
 not changed. No Run was performed.
+
+## 2026-06-30 default-disabled opening stimulus addendum
+
+The fixed-zero source was replaced, only in the trial project, by a
+default-disabled one-shot test controller. `TEST_ENABLE` remains 0, so the
+default `IBR2_TRIAL_BRK_CMD` remains the closed command 0. The breaker
+parameters, physical series boundary, state interface, and original IBR2
+controller remain preserved. This was statically built but not run.

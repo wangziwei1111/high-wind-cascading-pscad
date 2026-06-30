@@ -62,5 +62,12 @@
     "time_memory": true,
     "first_time_export": true
   },
-  "cause_code_4_semantics": "observed armed local breaker opening; root cause unclassified"
+  "cause_code_4_semantics": "observed armed local breaker opening; root cause unclassified",
+  "latest_trial_stimulus_chronology_extension": {
+    "stimulus": "data/reference/ibr2_trial_one_shot_opening_stimulus.json",
+    "chronology": "data/reference/ibr2_trial_event_chronology_monitor.json",
+    "packet_preservation_status": "pass",
+    "source2_dynamic_opening_status": "unavailable",
+    "pscad_run_performed": false
+  }
 }

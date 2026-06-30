@@ -413,5 +413,16 @@
         "cascade_propagation_status": "unavailable",
         "pscad_run_performed": false,
         "scenario_status_unchanged": true
+    },
+    "trial_stimulus_chronology_static_addendum": {
+        "stimulus": "data/reference/ibr2_trial_one_shot_opening_stimulus.json",
+        "chronology": "data/reference/ibr2_trial_event_chronology_monitor.json",
+        "static_audit_status": "pass",
+        "dynamic_behavior_status": "unavailable",
+        "source2_dynamic_opening_status": "unavailable",
+        "dual_source_dynamic_behavior_status": "unavailable",
+        "cascade_propagation_status": "unavailable",
+        "pscad_run_performed": false,
+        "scenario_status_unchanged": true
     }
 }

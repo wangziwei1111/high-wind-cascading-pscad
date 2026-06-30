@@ -1,0 +1,8 @@
+status_key,status_value
+trial_opening_stimulus_status,pass
+default_closed_command_status,pass
+trial_opening_isolation_status,pass
+output_channel_status,pass
+dynamic_behavior_status,unavailable
+source2_dynamic_opening_status,unavailable
+matlab_status,not_added

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "execution_status": "ibr2_trial_stimulus_and_chronology_static_build_verified",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_start_sha256": "541091C47BE05729B60F0585657AE308277CB031CBBA07A6583F3D3A04FD1A36",
+  "trial_end_sha256": "EFE2FA9D537653C34C13C0223C2E48EE15A77788EAE35A1CC173364AA52D2959",
+  "defaults": {
+    "IBR2_TEST_ENABLE": 0.0,
+    "IBR2_TEST_OPEN_TIME_S": 4.0,
+    "IBR2_TRIAL_BRK_CMD": 0.0
+  },
+  "formulas": {
+    "IBR2_TEST_TIME_REACHED": "TIME >= IBR2_TEST_OPEN_TIME_S",
+    "IBR2_TEST_ARMED": "IBR2_TEST_ENABLE AND DFIG_LVRT_ARMED",
+    "IBR2_TEST_OPEN_REQ": "IBR2_TEST_ARMED AND IBR2_TEST_TIME_REACHED",
+    "IBR2_TEST_CMD_LIMITED": "LIMIT(0,1,IBR2_TEST_OPEN_REQ)",
+    "IBR2_TRIAL_BRK_CMD": "1.0 * IBR2_TEST_CMD_LIMITED"
+  },
+  "output_channels": {
+    "IBR2_TRIAL_TEST_ENABLE": "IBR2_TEST_ENABLE",
+    "IBR2_TRIAL_TEST_OPEN_TIME_S": "IBR2_TEST_OPEN_TIME_S",
+    "IBR2_TRIAL_TEST_TIME_REACHED": "IBR2_TEST_TIME_REACHED",
+    "IBR2_TRIAL_TEST_OPEN_REQUEST": "IBR2_TEST_OPEN_REQ"
+  },
+  "statuses": {
+    "trial_opening_stimulus_status": "pass",
+    "default_closed_command_status": "pass",
+    "trial_opening_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "source2_dynamic_opening_status": "unavailable",
+    "matlab_status": "not_added"
+  },
+  "claim_boundary": {
+    "pscad_run_performed": false,
+    "dynamic_opening_validated": false,
+    "physical_isolation_validated": false,
+    "automatic_reclosing_added": false
+  }
+}

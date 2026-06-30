@@ -253,3 +253,11 @@ The independent trial now exposes two real-source event interfaces and static
 ordering logic. Historical C1/C2/C3/R5 results and overall coverage are
 unchanged. Dual-source dynamic behavior and cascade propagation remain
 unavailable because no new Run was performed.
+
+## Trial chronology-monitor addendum
+
+The default-disabled IBR2 test stimulus and chronology monitor do not change
+the historical C1/C2/C3/R5 scenario results or the partial overall coverage
+status. Their static structure and nine Output Channels pass audit, while
+dynamic source-2 opening, event timing, dual-source interaction, and cascade
+propagation remain unavailable.

@@ -422,5 +422,16 @@
     "dual_source_dynamic_behavior_status": "unavailable",
     "cascade_propagation_status": "unavailable",
     "pscad_run_performed": false
+  },
+  "latest_ibr2_trial_stimulus_chronology": {
+    "execution_status": "ibr2_trial_stimulus_and_chronology_static_build_verified",
+    "stimulus": "data/reference/ibr2_trial_one_shot_opening_stimulus.json",
+    "chronology": "data/reference/ibr2_trial_event_chronology_monitor.json",
+    "trial_start_sha256": "541091C47BE05729B60F0585657AE308277CB031CBBA07A6583F3D3A04FD1A36",
+    "trial_end_sha256": "EFE2FA9D537653C34C13C0223C2E48EE15A77788EAE35A1CC173364AA52D2959",
+    "new_output_channel_count": 9,
+    "build_errors": 0,
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false
   }
 }

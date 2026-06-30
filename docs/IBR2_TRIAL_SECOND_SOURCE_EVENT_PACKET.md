@@ -30,3 +30,11 @@ continuously output TIME.
 
 No PSCAD Run was performed. Dynamic IBR2 disconnection, event time, physical
 source isolation, and root-cause attribution remain unvalidated.
+
+## Trial-stimulus linkage addendum
+
+The packet now has a default-disabled trial-only opening stimulus upstream of
+the already-preserved local breaker. The packet logic itself is unchanged.
+Static chronology fields consume its existing event-valid and first-time
+signals without feedback. No dynamic source-2 opening or event capture was
+validated.

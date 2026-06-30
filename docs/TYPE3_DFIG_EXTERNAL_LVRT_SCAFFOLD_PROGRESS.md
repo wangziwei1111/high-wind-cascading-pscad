@@ -538,3 +538,12 @@ The trial-only IBR2 packet, two-real-source collector, ordering interface, and
 eight public Output Channels passed a zero-error static Build and audit. The
 active main SHA differs only in 51 `revisor/date` metadata fields; functional
 integrity remains supported. No dynamic event ordering was tested.
+
+## 2026-06-30 trial opening-stimulus and chronology layer
+
+The independent trial adds a default-disabled IBR2 opening stimulus and five
+monitor-only chronology fields. Nine new Output Channels passed static audit.
+The current main SHA is unchanged at
+`CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB`.
+No Run, MATLAB coupling, automatic reclosing, third source, or virtual source
+was added.

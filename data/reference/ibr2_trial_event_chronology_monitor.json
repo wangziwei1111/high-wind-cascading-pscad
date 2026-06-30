@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "execution_status": "ibr2_trial_stimulus_and_chronology_static_build_verified",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_start_sha256": "541091C47BE05729B60F0585657AE308277CB031CBBA07A6583F3D3A04FD1A36",
+  "trial_end_sha256": "EFE2FA9D537653C34C13C0223C2E48EE15A77788EAE35A1CC173364AA52D2959",
+  "inputs": {
+    "source1_event_valid": "DFIG_LVRT_CASCADE_EVENT_VALID",
+    "source1_first_event_time": "DFIG_LVRT_CAS_FIRST_TIME_S",
+    "source2_event_valid": "IBR2_CAS_EVT_VALID",
+    "source2_first_event_time": "IBR2_CAS_FIRST_S",
+    "evented_source_count": "CAS_COL_EVENTED_COUNT",
+    "first_event_source_code": "CAS_COL_FIRST_SRC_CODE",
+    "first_event_time": "CASCADE_MONITOR_FIRST_TIME_S"
+  },
+  "formulas": {
+    "both_events_recorded": "S1_EVENT_VALID AND S2_EVENT_VALID",
+    "second_event_time_s": "both ? max(S1_TIME,S2_TIME) : -1",
+    "event_time_gap_s": "both ? abs(S1_TIME-S2_TIME) : -1",
+    "chronology_consistent": "state0_valid OR state1_valid OR state2_valid"
+  },
+  "sequence_code": {
+    "0": "no event",
+    "1": "only source 1",
+    "2": "only source 2",
+    "3": "both; source 1 earlier",
+    "4": "both; source 2 earlier",
+    "5": "both tie/indistinguishable or invalid fallback"
+  },
+  "output_channels": {
+    "CASCADE_MONITOR_BOTH_EVENTS_RECORDED": "CAS_CHR_BOTH_EVENTS",
+    "CASCADE_MONITOR_SECOND_EVENT_TIME_S": "CAS_CHR_SECOND_TIME_S",
+    "CASCADE_MONITOR_EVENT_TIME_GAP_S": "CAS_CHR_EVENT_TIME_GAP_S",
+    "CASCADE_MONITOR_EVENT_SEQUENCE_CODE": "CAS_CHR_SEQUENCE_CODE",
+    "CASCADE_MONITOR_CHRONOLOGY_CONSISTENT": "CAS_CHR_CHRONOLOGY_CONSISTENT"
+  },
+  "statuses": {
+    "chronology_structure_status": "pass",
+    "second_event_time_logic_status": "pass",
+    "event_gap_logic_status": "pass",
+    "event_sequence_logic_status": "pass",
+    "chronology_consistency_logic_status": "pass",
+    "output_channel_status": "pass",
+    "control_path_isolation_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "dual_source_dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "matlab_status": "not_added"
+  },
+  "claim_boundary": {
+    "pscad_run_performed": false,
+    "dynamic_event_timing_validated": false,
+    "dual_source_interaction_validated": false,
+    "causal_cascade_propagation_validated": false
+  }
+}

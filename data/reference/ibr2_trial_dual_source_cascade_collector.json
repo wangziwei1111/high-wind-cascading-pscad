@@ -78,5 +78,13 @@
     "CASCADE_MONITOR_EVENTED_SOURCE_COUNT": true,
     "CASCADE_MONITOR_FIRST_EVENT_SOURCE_CODE": true
   },
-  "available_source_count_max": "2.2"
+  "available_source_count_max": "2.2",
+  "latest_chronology_extension": {
+    "record": "data/reference/ibr2_trial_event_chronology_monitor.json",
+    "collector_preservation_status": "pass",
+    "new_output_channel_count": 5,
+    "dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false
+  }
 }

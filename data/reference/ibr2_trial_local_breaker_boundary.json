@@ -103,5 +103,13 @@
     "event_packet_json": "data/reference/ibr2_trial_second_source_event_packet.json",
     "collector_json": "data/reference/ibr2_trial_dual_source_cascade_collector.json",
     "dynamic_behavior_status": "unavailable"
+  },
+  "trial_opening_stimulus_extension": {
+    "record": "data/reference/ibr2_trial_one_shot_opening_stimulus.json",
+    "default_test_enable": 0.0,
+    "default_breaker_command": 0.0,
+    "boundary_preservation_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false
   }
 }
