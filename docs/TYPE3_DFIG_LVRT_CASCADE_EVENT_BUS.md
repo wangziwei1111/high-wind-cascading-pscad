@@ -209,3 +209,10 @@ performed in this task.
 This task does not validate multi-machine cascade propagation, dynamic event
 time behavior, dynamic cause-code behavior, field breaker operation, physical
 turbine isolation, or MATLAB integration.
+
+## 2026-06-30 trial dual-source extension
+
+The independent trial retains this source-1 packet unchanged and adds
+`IBR2_TRIAL` as a second real monitor source. The collector statically combines
+two event-valid, breaker-open, availability, per-source cause, and first-event
+time interfaces. No Run was performed.

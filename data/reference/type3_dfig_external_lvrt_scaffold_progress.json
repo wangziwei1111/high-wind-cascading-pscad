@@ -407,5 +407,20 @@
     "second_source_event_status": "not_constructed",
     "dual_source_collector_status": "not_constructed",
     "pscad_run_performed": false
+  },
+  "latest_ibr2_trial_dual_source_collector": {
+    "execution_status": "ibr2_trial_event_packet_dual_collector_static_build_verified",
+    "event_packet": "data/reference/ibr2_trial_second_source_event_packet.json",
+    "collector": "data/reference/ibr2_trial_dual_source_cascade_collector.json",
+    "main_start_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "main_end_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_start_sha256": "FB29872FCA8BCF92E5450C5944A312C1E6F018F87B5B499FEAF0E6B16C8A4A1E",
+    "trial_end_sha256": "541091C47BE05729B60F0585657AE308277CB031CBBA07A6583F3D3A04FD1A36",
+    "new_output_channel_count": 8,
+    "build_errors": 0,
+    "dynamic_behavior_status": "unavailable",
+    "dual_source_dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false
   }
 }

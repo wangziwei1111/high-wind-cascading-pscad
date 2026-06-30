@@ -401,5 +401,17 @@
                                                                          "R5_immediate_trip_chain":  "pass",
                                                                          "overall":  "partial"
                                                                      }
-                                   }
+                                   },
+    "trial_dual_source_static_addendum": {
+        "event_packet": "data/reference/ibr2_trial_second_source_event_packet.json",
+        "collector": "data/reference/ibr2_trial_dual_source_cascade_collector.json",
+        "source2_packet_structure_status": "pass",
+        "collector_structure_status": "pass",
+        "event_time_logic_status": "pass",
+        "event_source_code_logic_status": "pass",
+        "dynamic_behavior_status": "unavailable",
+        "cascade_propagation_status": "unavailable",
+        "pscad_run_performed": false,
+        "scenario_status_unchanged": true
+    }
 }

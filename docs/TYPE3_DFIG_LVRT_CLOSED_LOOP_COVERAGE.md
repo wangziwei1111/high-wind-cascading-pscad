@@ -246,3 +246,10 @@ C3 command-and-state chain remains pass, the legacy C3 full-run VSMIN check
 remains fail, and overall closed-loop coverage remains partial. No new PSCAD
 Run was performed, and the collector has not validated multi-machine cascade
 behavior.
+
+## Trial dual-source static interface addendum
+
+The independent trial now exposes two real-source event interfaces and static
+ordering logic. Historical C1/C2/C3/R5 results and overall coverage are
+unchanged. Dual-source dynamic behavior and cascade propagation remain
+unavailable because no new Run was performed.

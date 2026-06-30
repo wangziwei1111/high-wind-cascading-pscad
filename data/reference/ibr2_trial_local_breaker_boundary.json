@@ -88,15 +88,20 @@
     "output_channel_status": "pass",
     "control_path_isolation_status": "pass",
     "dynamic_behavior_status": "unavailable",
-    "second_source_event_status": "not_constructed",
-    "dual_source_collector_status": "not_constructed"
+    "second_source_event_status": "constructed_static_build_verified",
+    "dual_source_collector_status": "constructed_static_build_verified"
   },
   "claim_boundary": {
     "pscad_run_performed": false,
     "dynamic_disconnection_validated": false,
-    "second_source_event_packet_created": false,
-    "dual_source_collector_created": false,
+    "second_source_event_packet_created": true,
+    "dual_source_collector_created": true,
     "cascade_propagation_validated": false,
     "matlab_used": false
+  },
+  "trial_dual_source_extension": {
+    "event_packet_json": "data/reference/ibr2_trial_second_source_event_packet.json",
+    "collector_json": "data/reference/ibr2_trial_dual_source_cascade_collector.json",
+    "dynamic_behavior_status": "unavailable"
   }
 }

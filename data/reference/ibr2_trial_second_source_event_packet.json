@@ -1,0 +1,66 @@
+{
+  "execution_status": "ibr2_trial_event_packet_dual_collector_static_build_verified",
+  "main_project": {
+    "start_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "end_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "difference_count": 51,
+    "difference_classes": {
+      "nonfunctional_metadata_or_display_change": 51
+    }
+  },
+  "trial_project": {
+    "start_sha256": "FB29872FCA8BCF92E5450C5944A312C1E6F018F87B5B499FEAF0E6B16C8A4A1E",
+    "end_sha256": "541091C47BE05729B60F0585657AE308277CB031CBBA07A6583F3D3A04FD1A36"
+  },
+  "build": {
+    "errors": 0,
+    "warnings": "not_reported",
+    "messages": "not_reported",
+    "p3_exists": true,
+    "executable_exists": true
+  },
+  "statuses": {
+    "main_project_integrity_status": "pass",
+    "trial_project_status": "pass",
+    "ibr2_local_breaker_boundary_preservation_status": "pass",
+    "source1_packet_preservation_status": "pass",
+    "source2_packet_structure_status": "pass",
+    "collector_structure_status": "pass",
+    "event_time_logic_status": "pass",
+    "event_source_code_logic_status": "pass",
+    "output_channel_status": "pass",
+    "control_path_isolation_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "dual_source_dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "matlab_status": "not_added"
+  },
+  "claim_boundary": {
+    "pscad_run_performed": false,
+    "dynamic_event_timing_validated": false,
+    "dual_source_interaction_validated": false,
+    "cascade_propagation_validated": false,
+    "matlab_added": false
+  },
+  "source_id": "IBR2_TRIAL",
+  "source_component": "IBR_AVM_2_1_1_1",
+  "interface_mapping": {
+    "IBR2_TRIAL_CASCADE_EVENT_VALID": "IBR2_CAS_EVT_VALID",
+    "IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE": "IBR2_CAS_CAUSE",
+    "IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN": "IBR2_CAS_BRK_OPEN",
+    "IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE": "IBR2_CAS_AVAIL",
+    "IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S": "IBR2_CAS_FIRST_S"
+  },
+  "structure_checks": {
+    "breaker_open_passthrough": true,
+    "availability_passthrough": true,
+    "armed_gate": true,
+    "sticky_latch": true,
+    "cause_code": true,
+    "time_unset": true,
+    "time_capture": true,
+    "time_memory": true,
+    "first_time_export": true
+  },
+  "cause_code_4_semantics": "observed armed local breaker opening; root cause unclassified"
+}

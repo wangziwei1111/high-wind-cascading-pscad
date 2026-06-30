@@ -42,3 +42,10 @@ Run was performed. No dynamic source disconnection, second-source event
 packet, cause code, first-event time, dual-source collector, automatic
 reclosing, virtual source, cascade propagation, or MATLAB behavior was built
 or validated.
+
+## 2026-06-30 event-interface addendum
+
+The preserved boundary now feeds a trial-only monitor packet and two-real-
+source collector. Static audit confirms that breaker parameters, the command
+chain, `NT_8`–breaker–`NT_16` topology, and the original IBR2 controller were
+not changed. No Run was performed.

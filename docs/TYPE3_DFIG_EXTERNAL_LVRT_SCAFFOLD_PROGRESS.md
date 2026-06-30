@@ -531,3 +531,10 @@ No Run was performed. This trial boundary is not a qualified monitor-only
 second source: no second-source event packet or dual-source collector exists,
 and no dynamic breaker action, real source isolation, event timing,
 multi-machine propagation, cascade behavior, or MATLAB behavior was validated.
+
+## 2026-06-30 Trial two-real-source collector
+
+The trial-only IBR2 packet, two-real-source collector, ordering interface, and
+eight public Output Channels passed a zero-error static Build and audit. The
+active main SHA differs only in 51 `revisor/date` metadata fields; functional
+integrity remains supported. No dynamic event ordering was tested.
