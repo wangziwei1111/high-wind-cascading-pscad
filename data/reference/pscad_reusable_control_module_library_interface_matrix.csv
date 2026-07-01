@@ -46,3 +46,9 @@ THREE_SOURCE_EVENT_COLLECTOR,port,OUT_EVENTED_SOURCE_COUNT,output,REAL,1,,evente
 THREE_SOURCE_EVENT_COLLECTOR,port,OUT_FIRST_EVENT_TIME_S,output,REAL,1,,minimum valid nonnegative time or -1
 THREE_SOURCE_EVENT_COLLECTOR,port,OUT_FIRST_EVENT_SOURCE_CODE,output,REAL,1,,0 none 1 A 2 B 3 C 4 tie
 THREE_SOURCE_EVENT_COLLECTOR,port,OUT_CAUSE_CODE_A|B|C,output,REAL,1,,independent cause passthrough
+THREE_EVENT_CHRONOLOGY_MONITOR,port,IN_EVENT_VALID_A|B|C,input,REAL,1,,per-source event-valid only
+THREE_EVENT_CHRONOLOGY_MONITOR,port,IN_FIRST_EVENT_TIME_A|B|C_S,input,REAL,1,,per-source first-event time only
+THREE_EVENT_CHRONOLOGY_MONITOR,port,OUT_EVENTED|TIMED_COUNT,output,REAL,1,,raw evented count and timed-event count
+THREE_EVENT_CHRONOLOGY_MONITOR,port,OUT_FIRST|SECOND|THIRD_TIME_S,output,REAL,1,,ordered first second third event times
+THREE_EVENT_CHRONOLOGY_MONITOR,port,OUT_GAP_12|GAP_23_S,output,REAL,1,,adjacent chronology gaps
+THREE_EVENT_CHRONOLOGY_MONITOR,port,OUT_FIRST_SRC|ORDER_CLASS|CONSISTENT,output,REAL,1,,source code order class and consistency

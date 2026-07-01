@@ -569,3 +569,11 @@ static Build has zero errors, the Output Channel count is 245, and the main
 project remains byte-identical. No PSCAD Run, dynamic opening, physical
 isolation validation, three-source interaction, or causal cascade validation
 was performed.
+
+## 2026-07-01 CASCADE3 three-event chronology monitor
+
+The trial now contains `THREE_EVENT_CHRONOLOGY_MONITOR` and a P3 production
+instance `CASCADE3_TRIAL__CHRONOLOGY_MONITOR` reading A=`TYPE3_DFIG_1`,
+B=`IBR2_TRIAL`, and C=`IBR3_TRIAL` event-valid/first-time interfaces. Eight
+Output Channels were added, bringing the total to 253. The static audit
+passes; no PSCAD Run or dynamic ordering validation was performed.

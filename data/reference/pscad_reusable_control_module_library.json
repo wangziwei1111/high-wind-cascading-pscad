@@ -61,5 +61,21 @@
     "output_channel_count": 245,
     "build_errors": 0,
     "run_performed": false
+  },
+  "phase3_addendum": {
+    "execution_status": "three_event_chronology_static_pass",
+    "modules_added": ["THREE_EVENT_CHRONOLOGY_MONITOR"],
+    "test_instances": [
+      "MODTEST_THREE_EVENT_CHRONOLOGY_NONE",
+      "MODTEST_THREE_EVENT_CHRONOLOGY_TWO_STRICT",
+      "MODTEST_THREE_EVENT_CHRONOLOGY_THREE_TIE"
+    ],
+    "production_instance": "CASCADE3_TRIAL__CHRONOLOGY_MONITOR",
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_final_sha256": "469103EF282C97CF7735D0E4BB8665A6D57FA453A6AA7F5BA86B5770951CDE92",
+    "output_channel_count": 253,
+    "build_errors": 0,
+    "run_performed": false,
+    "dynamic_behavior_status": "unavailable"
   }
 }

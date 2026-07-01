@@ -269,3 +269,11 @@ structure, control-isolation, and Output Channel audits. Historical
 C1/C2/C3/R5 results and partial overall coverage are unchanged. IBR3 dynamic
 opening, physical isolation, three-source interaction, and causal cascade
 propagation remain unavailable because no new PSCAD Run occurred.
+
+## Three-event chronology static addendum
+
+The CASCADE3 chronology monitor adds static observability for first, second,
+and third event times, two adjacent time gaps, first-source code, order-class
+code, and consistency. Historical C1/C2/C3/R5 coverage is unchanged. Dynamic
+three-source timing, event sequence, physical isolation, source interaction,
+and cascade propagation remain unavailable because no new PSCAD Run occurred.

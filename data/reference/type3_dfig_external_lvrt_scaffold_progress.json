@@ -461,5 +461,18 @@
     "dynamic_behavior_status": "unavailable",
     "cascade_propagation_status": "unavailable",
     "pscad_run_performed": false
+  },
+  "latest_three_event_chronology_static_deployment": {
+    "execution_status": "three_event_chronology_static_pass",
+    "module_report": "docs/THREE_EVENT_CHRONOLOGY_MONITOR.md",
+    "deployment_report": "docs/CASCADE3_TRIAL_EVENT_CHRONOLOGY_DEPLOYMENT.md",
+    "record": "data/reference/cascade3_trial_event_chronology_deployment.json",
+    "trial_final_sha256": "469103EF282C97CF7735D0E4BB8665A6D57FA453A6AA7F5BA86B5770951CDE92",
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "output_channel_count": 253,
+    "build_errors": 0,
+    "dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false
   }
 }

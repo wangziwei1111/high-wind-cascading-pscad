@@ -436,5 +436,16 @@
         "cascade_propagation_status": "unavailable",
         "pscad_run_performed": false,
         "scenario_status_unchanged": true
+    },
+    "three_event_chronology_static_addendum": {
+        "module": "data/reference/three_event_chronology_monitor.json",
+        "deployment": "data/reference/cascade3_trial_event_chronology_deployment.json",
+        "static_audit_status": "pass",
+        "output_channel_count": 253,
+        "dynamic_behavior_status": "unavailable",
+        "three_source_dynamic_behavior_status": "unavailable",
+        "cascade_propagation_status": "unavailable",
+        "pscad_run_performed": false,
+        "scenario_status_unchanged": true
     }
 }

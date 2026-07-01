@@ -32,3 +32,11 @@ C=`IBR3_TRIAL`. This count does not represent every generator in the system.
 No fake or fourth source is present. These are static interface expectations
 only. No PSCAD Run was performed, and no causal cascade propagation was
 validated.
+
+## Chronology monitor addendum
+
+The separate `CASCADE3_TRIAL__CHRONOLOGY_MONITOR` instance reads only the
+existing three-source event-valid and first-event-time interfaces. It does
+not modify `CASCADE3_TRIAL__EVENT_COLLECTOR`, does not consume cause codes or
+breaker commands, and does not feed any protection or breaker path. Its
+outputs are `CASCADE3_CHR_*` monitor-only labels.

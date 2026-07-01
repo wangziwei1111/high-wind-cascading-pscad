@@ -68,3 +68,14 @@ in Output Channel titles or documentation.
 
 Multi-source cause codes remain per source. Do not add global cause codes,
 cause sums, virtual sources, or a fourth source to a three-source instance.
+
+## Phase 3 chronology instance rules
+
+`THREE_EVENT_CHRONOLOGY_MONITOR` instances are monitor-only. Production
+instances must live on the same PSCAD page as the source Data Labels they
+read; in the CASCADE3 trial deployment this is P3, not the parent `Main`
+page. Ordinary PSCAD 4.6 Data Labels are not assumed to bridge page scope.
+
+Keep internal labels short and generic. Do not place project-specific labels
+such as `DFIG`, `IBR2`, `IBR3`, `CASCADE3`, `CAS_CHR`, `LINE_`, or `BRK_`
+inside the reusable module definition.

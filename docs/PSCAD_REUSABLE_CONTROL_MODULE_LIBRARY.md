@@ -114,3 +114,19 @@ Phase 2 is deployed only in the trial IBR3 path. Final Output Channel count is
 unchanged. PSCAD internal identifiers are kept within 31 characters; long
 names are reserved for Output Channel titles and documentation. No Run was
 performed.
+
+## Phase 3 addendum - 2026-07-01
+
+The trial project now also contains the native reusable module
+`THREE_EVENT_CHRONOLOGY_MONITOR`. It adds monitor-only three-event chronology
+ordering, three isolated harness instances, and one CASCADE3 production
+deployment instance:
+
+- `MODTEST_THREE_EVENT_CHRONOLOGY_NONE`
+- `MODTEST_THREE_EVENT_CHRONOLOGY_TWO_STRICT`
+- `MODTEST_THREE_EVENT_CHRONOLOGY_THREE_TIE`
+- `CASCADE3_TRIAL__CHRONOLOGY_MONITOR`
+
+The final trial SHA-256 for this static deployment is
+`469103EF282C97CF7735D0E4BB8665A6D57FA453A6AA7F5BA86B5770951CDE92`.
+The Output Channel count is 253. No PSCAD Run was performed.

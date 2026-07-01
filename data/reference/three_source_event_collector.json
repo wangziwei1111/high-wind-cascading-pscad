@@ -28,5 +28,14 @@
   "build_errors": 0,
   "pscad_run_performed": false,
   "dynamic_behavior_status": "unavailable",
-  "cascade_propagation_status": "unavailable"
+  "cascade_propagation_status": "unavailable",
+  "chronology_monitor_addendum": {
+    "module": "THREE_EVENT_CHRONOLOGY_MONITOR",
+    "production_instance": "CASCADE3_TRIAL__CHRONOLOGY_MONITOR",
+    "inputs": ["event_valid", "first_event_time_s"],
+    "outputs": "CASCADE3_CHR_*",
+    "collector_modified": false,
+    "control_feedback_added": false,
+    "pscad_run_performed": false
+  }
 }

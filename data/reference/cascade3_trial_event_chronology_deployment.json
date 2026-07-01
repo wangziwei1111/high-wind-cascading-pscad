@@ -1,0 +1,51 @@
+{
+  "execution_status": "three_event_chronology_static_pass",
+  "production_instance": "CASCADE3_TRIAL__CHRONOLOGY_MONITOR",
+  "module": "THREE_EVENT_CHRONOLOGY_MONITOR",
+  "page": "P3",
+  "source_mapping": {
+    "A": {
+      "source": "TYPE3_DFIG_1",
+      "event_valid": "DFIG_LVRT_CASCADE_EVENT_VALID",
+      "first_time": "DFIG_LVRT_CAS_FIRST_TIME_S"
+    },
+    "B": {
+      "source": "IBR2_TRIAL",
+      "event_valid": "IBR2_CAS_EVT_VALID",
+      "first_time": "IBR2_CAS_FIRST_S"
+    },
+    "C": {
+      "source": "IBR3_TRIAL",
+      "event_valid": "IBR3_CAS_EVT_VALID",
+      "first_time": "IBR3_CAS_FIRST_S"
+    }
+  },
+  "output_labels": [
+    "CASCADE3_CHR_EVENTED_COUNT",
+    "CASCADE3_CHR_TIMED_COUNT",
+    "CASCADE3_CHR_FIRST_TIME_S",
+    "CASCADE3_CHR_SECOND_TIME_S",
+    "CASCADE3_CHR_THIRD_TIME_S",
+    "CASCADE3_CHR_GAP_12_S",
+    "CASCADE3_CHR_GAP_23_S",
+    "CASCADE3_CHR_FIRST_SRC_CODE",
+    "CASCADE3_CHR_ORDER_CLASS",
+    "CASCADE3_CHR_CONSISTENT"
+  ],
+  "new_output_channels": [
+    "CASCADE3_MONITOR_TIMED_EVENT_SOURCE_COUNT",
+    "CASCADE3_MONITOR_SECOND_EVENT_TIME_S",
+    "CASCADE3_MONITOR_THIRD_EVENT_TIME_S",
+    "CASCADE3_MONITOR_FIRST_TO_SECOND_GAP_S",
+    "CASCADE3_MONITOR_SECOND_TO_THIRD_GAP_S",
+    "CASCADE3_MONITOR_CHRONOLOGY_FIRST_SOURCE_CODE",
+    "CASCADE3_MONITOR_EVENT_ORDER_CLASS_CODE",
+    "CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT"
+  ],
+  "output_channel_count": 253,
+  "build_errors": 0,
+  "run_performed": false,
+  "dynamic_behavior_status": "unavailable",
+  "cascade_propagation_status": "unavailable",
+  "matlab_status": "not_added"
+}
