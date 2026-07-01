@@ -1,0 +1,32 @@
+module,interface_kind,name,direction,type,dimension,default,meaning
+MONITORED_OBJECT_EVENT_PACKET,port,IN_OBJECT_OPEN_BOOL,input,REAL,1,,actual object-open state
+MONITORED_OBJECT_EVENT_PACKET,port,IN_OBJECT_AVAILABLE,input,REAL,1,,object availability
+MONITORED_OBJECT_EVENT_PACKET,port,IN_ARMED,input,REAL,1,,event recording arm
+MONITORED_OBJECT_EVENT_PACKET,port,IN_TIME,input,REAL,1,,current simulation time
+MONITORED_OBJECT_EVENT_PACKET,parameter,CAUSE_CODE_VALUE,input,REAL,1,4.0,event cause code
+MONITORED_OBJECT_EVENT_PACKET,parameter,EVENT_LATCH_INITIAL,input,REAL,1,0.0,event-latch initial state
+MONITORED_OBJECT_EVENT_PACKET,parameter,FIRST_TIME_INITIAL,input,REAL,1,-1.0,first-time initial state
+MONITORED_OBJECT_EVENT_PACKET,port,OUT_EVENT_VALID,output,REAL,1,,sticky event-valid
+MONITORED_OBJECT_EVENT_PACKET,port,OUT_CAUSE_CODE,output,REAL,1,,gated cause code
+MONITORED_OBJECT_EVENT_PACKET,port,OUT_OBJECT_OPEN,output,REAL,1,,object-open passthrough
+MONITORED_OBJECT_EVENT_PACKET,port,OUT_OBJECT_AVAILABLE,output,REAL,1,,availability passthrough
+MONITORED_OBJECT_EVENT_PACKET,port,OUT_FIRST_EVENT_TIME_S,output,REAL,1,,first event time
+ONE_SHOT_BREAKER_OPEN_STIMULUS,port,IN_TEST_ENABLE,input,REAL,1,,explicit test enable
+ONE_SHOT_BREAKER_OPEN_STIMULUS,port,IN_ARMED,input,REAL,1,,external arm
+ONE_SHOT_BREAKER_OPEN_STIMULUS,port,IN_TIME,input,REAL,1,,current simulation time
+ONE_SHOT_BREAKER_OPEN_STIMULUS,parameter,OPEN_TIME_S,input,REAL,1,4.0,opening threshold time
+ONE_SHOT_BREAKER_OPEN_STIMULUS,port,OUT_TIME_REACHED,output,REAL,1,,time threshold state
+ONE_SHOT_BREAKER_OPEN_STIMULUS,port,OUT_OPEN_REQUEST,output,REAL,1,,armed opening request
+ONE_SHOT_BREAKER_OPEN_STIMULUS,port,OUT_BREAKER_COMMAND,output,REAL,1,,limited command template
+TWO_EVENT_CHRONOLOGY_MONITOR,port,IN_EVENT_VALID_A,input,REAL,1,,event-valid A
+TWO_EVENT_CHRONOLOGY_MONITOR,port,IN_FIRST_EVENT_TIME_A_S,input,REAL,1,,first time A
+TWO_EVENT_CHRONOLOGY_MONITOR,port,IN_EVENT_VALID_B,input,REAL,1,,event-valid B
+TWO_EVENT_CHRONOLOGY_MONITOR,port,IN_FIRST_EVENT_TIME_B_S,input,REAL,1,,first time B
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_EVENTED_OBJECT_COUNT,output,REAL,1,,number of evented objects
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_BOTH_EVENTS_RECORDED,output,REAL,1,,both-events flag
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_FIRST_EVENT_TIME_S,output,REAL,1,,earlier nonnegative time
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_SECOND_EVENT_TIME_S,output,REAL,1,,later time when both event
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_EVENT_TIME_GAP_S,output,REAL,1,,nonnegative event-time gap
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_FIRST_EVENT_SOURCE_CODE,output,REAL,1,,0 none 1 A 2 B 3 tie
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_EVENT_SEQUENCE_CODE,output,REAL,1,,0 none 1 A-only 2 B-only 3 A-first 4 B-first 5 tie
+TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_CHRONOLOGY_CONSISTENT,output,REAL,1,,valid/time-set consistency

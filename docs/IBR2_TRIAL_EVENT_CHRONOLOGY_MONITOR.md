@@ -56,3 +56,13 @@ and second times, gap, first-source code, sequence code, and consistency.
 
 These are future validation plans only. No PSCAD Run was performed in this
 task. No causal cascade propagation was validated.
+
+## Reusable module-library addendum
+
+The native `TWO_EVENT_CHRONOLOGY_MONITOR` definition exposes the same generic
+two-event ordering contract through four REAL inputs and eight REAL outputs.
+The existing collector and chronology monitor remain frozen and are not
+connected to the isolated `MODTEST_TWO_EVENT_CHRONOLOGY` instance. The module
+uses codes 0-5 documented above and validates event-valid/time-set
+consistency. Static Build and audit passed; no dynamic event ordering was
+tested.

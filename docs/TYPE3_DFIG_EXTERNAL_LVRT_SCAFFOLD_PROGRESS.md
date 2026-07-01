@@ -547,3 +547,15 @@ The current main SHA is unchanged at
 `CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB`.
 No Run, MATLAB coupling, automatic reclosing, third source, or virtual source
 was added.
+
+## 2026-07-01 reusable PSCAD control-module library
+
+The independent trial now contains three native reusable definitions:
+`MONITORED_OBJECT_EVENT_PACKET`, `ONE_SHOT_BREAKER_OPEN_STIMULUS`, and
+`TWO_EVENT_CHRONOLOGY_MONITOR`. They are exercised only by default-safe,
+isolated instances under `MODULE_TEMPLATE_TEST_HARNESS`. The final trial SHA
+is `D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314`;
+the main SHA remains unchanged. The final static Build and complete audit
+passed with zero errors. No Output Channel, Run, MATLAB integration, automatic
+reclosing, third source, virtual source, or production-path migration was
+added.

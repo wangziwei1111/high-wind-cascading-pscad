@@ -433,5 +433,20 @@
     "build_errors": 0,
     "dynamic_behavior_status": "unavailable",
     "pscad_run_performed": false
+  },
+  "latest_pscad_reusable_control_module_library": {
+    "execution_status": "pscad_reusable_control_module_library_static_build_verified",
+    "report": "docs/PSCAD_REUSABLE_CONTROL_MODULE_LIBRARY.md",
+    "instance_rules": "docs/PSCAD_MODULE_INSTANCE_RULES.md",
+    "record": "data/reference/pscad_reusable_control_module_library.json",
+    "interface_matrix": "data/reference/pscad_reusable_control_module_library_interface_matrix.csv",
+    "trial_start_sha256": "EFE2FA9D537653C34C13C0223C2E48EE15A77788EAE35A1CC173364AA52D2959",
+    "trial_final_sha256": "D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314",
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "native_module_definition_count": 3,
+    "build_errors": 0,
+    "output_channel_count": 224,
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false
   }
 }

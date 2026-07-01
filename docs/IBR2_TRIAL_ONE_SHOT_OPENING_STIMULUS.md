@@ -48,3 +48,11 @@ unity adapter remains the only connection from that command to
 These are future validation plans only. No PSCAD Run was performed in this
 task. No dynamic opening, physical isolation, event timing, or causal cascade
 propagation was validated.
+
+## Reusable module-library addendum
+
+`ONE_SHOT_BREAKER_OPEN_STIMULUS` is now available as an independent native
+page-module definition with `OPEN_TIME_S=4`. Its isolated harness instance is
+default-disabled. The existing IBR2 trial stimulus and breaker command path
+were preserved and were not migrated to the reusable module. Static Build and
+audit passed; dynamic behavior remains unavailable.

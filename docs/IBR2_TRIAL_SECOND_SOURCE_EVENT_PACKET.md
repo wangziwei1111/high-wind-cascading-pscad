@@ -38,3 +38,13 @@ the already-preserved local breaker. The packet logic itself is unchanged.
 Static chronology fields consume its existing event-valid and first-time
 signals without feedback. No dynamic source-2 opening or event capture was
 validated.
+
+## Reusable module-library addendum
+
+The trial now also contains the native reusable definition
+`MONITORED_OBJECT_EVENT_PACKET`. It reproduces the generic packet boundary
+with declared ports and instance parameters, but the existing IBR2 packet was
+not migrated, replaced, or connected to the new definition. The isolated
+`MODTEST_OBJECT_EVENT_PACKET` instance uses inputs 0, 1, 0, 0 and parameters
+4, 0, -1. The final static Build and module-library audit passed; no PSCAD Run
+was performed.
