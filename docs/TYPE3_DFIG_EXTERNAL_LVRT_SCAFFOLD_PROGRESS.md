@@ -559,3 +559,13 @@ the main SHA remains unchanged. The final static Build and complete audit
 passed with zero errors. No Output Channel, Run, MATLAB integration, automatic
 reclosing, third source, virtual source, or production-path migration was
 added.
+
+## 2026-07-01 IBR3 real-source and three-source collector
+
+The trial now contains a real third-source boundary on `IBR_AVM_2_1_1_2`,
+reusable breaker-state adaptation, an IBR3 event packet, and an independent
+collector for `TYPE3_DFIG_1`, `IBR2_TRIAL`, and `IBR3_TRIAL`. The final
+static Build has zero errors, the Output Channel count is 245, and the main
+project remains byte-identical. No PSCAD Run, dynamic opening, physical
+isolation validation, three-source interaction, or causal cascade validation
+was performed.

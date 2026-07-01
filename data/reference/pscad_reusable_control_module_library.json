@@ -51,5 +51,15 @@
     "virtual_source_added": false
   },
   "static_audit": "analysis/pscad_tools/audit_pscad_reusable_control_module_library.py",
-  "dynamic_behavior_status": "unavailable"
+  "dynamic_behavior_status": "unavailable",
+  "phase2_addendum": {
+    "execution_status": "ibr3_real_source_three_source_collector_static_pass",
+    "modules_added": ["BREAKER_STATE_ADAPTER", "THREE_SOURCE_EVENT_COLLECTOR"],
+    "test_instances": ["MODTEST_BREAKER_STATE_ADAPTER", "MODTEST_THREE_SOURCE_EVENT_COLLECTOR"],
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_final_sha256": "CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E",
+    "output_channel_count": 245,
+    "build_errors": 0,
+    "run_performed": false
+  }
 }

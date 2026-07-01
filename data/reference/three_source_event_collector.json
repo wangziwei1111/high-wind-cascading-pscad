@@ -1,0 +1,32 @@
+{
+  "module": "THREE_SOURCE_EVENT_COLLECTOR",
+  "execution_status": "static_build_verified",
+  "inputs_per_source": ["EVENT_VALID", "BREAKER_OPEN", "SOURCE_AVAILABLE", "FIRST_EVENT_TIME_S", "CAUSE_CODE"],
+  "sources": {"A": "TYPE3_DFIG_1", "B": "IBR2_TRIAL", "C": "IBR3_TRIAL"},
+  "outputs": [
+    "OUT_ANY_EVENT_VALID",
+    "OUT_ANY_BREAKER_OPEN",
+    "OUT_AVAILABLE_SOURCE_COUNT",
+    "OUT_EVENTED_SOURCE_COUNT",
+    "OUT_FIRST_EVENT_TIME_S",
+    "OUT_FIRST_EVENT_SOURCE_CODE",
+    "OUT_CAUSE_CODE_A",
+    "OUT_CAUSE_CODE_B",
+    "OUT_CAUSE_CODE_C"
+  ],
+  "first_source_codes": {"0": "none", "1": "A", "2": "B", "3": "C", "4": "tie_or_indistinguishable"},
+  "valid_time_rule": "EVENT_VALID=1 and FIRST_EVENT_TIME_S>=0",
+  "no_valid_time_output": -1.0,
+  "tie_tolerance_s": 1e-9,
+  "cause_policy": "per-source passthrough; never summed",
+  "test_instance": {
+    "name": "MODTEST_THREE_SOURCE_EVENT_COLLECTOR",
+    "input_per_source": [0.0, 0.0, 1.0, -1.0, 0.0],
+    "expected_outputs": [0.0, 0.0, 3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0]
+  },
+  "production_instance": "CASCADE3_TRIAL__EVENT_COLLECTOR",
+  "build_errors": 0,
+  "pscad_run_performed": false,
+  "dynamic_behavior_status": "unavailable",
+  "cascade_propagation_status": "unavailable"
+}

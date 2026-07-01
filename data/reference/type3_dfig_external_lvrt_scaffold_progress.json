@@ -448,5 +448,18 @@
     "output_channel_count": 224,
     "dynamic_behavior_status": "unavailable",
     "pscad_run_performed": false
+  },
+  "latest_ibr3_three_source_static_deployment": {
+    "execution_status": "ibr3_real_source_three_source_collector_static_pass",
+    "report": "docs/IBR3_TRIAL_REAL_SOURCE_MODULE_DEPLOYMENT.md",
+    "collector_report": "docs/THREE_SOURCE_EVENT_COLLECTOR.md",
+    "trial_final_sha256": "CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E",
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "real_sources": ["TYPE3_DFIG_1", "IBR2_TRIAL", "IBR3_TRIAL"],
+    "output_channel_count": 245,
+    "build_errors": 0,
+    "dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false
   }
 }

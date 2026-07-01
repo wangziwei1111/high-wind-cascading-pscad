@@ -424,5 +424,17 @@
         "cascade_propagation_status": "unavailable",
         "pscad_run_performed": false,
         "scenario_status_unchanged": true
+    },
+    "ibr3_three_source_static_addendum": {
+        "report": "docs/IBR3_TRIAL_REAL_SOURCE_MODULE_DEPLOYMENT.md",
+        "collector": "data/reference/three_source_event_collector.json",
+        "static_audit_status": "pass",
+        "output_channel_count": 245,
+        "dynamic_behavior_status": "unavailable",
+        "third_source_dynamic_behavior_status": "unavailable",
+        "three_source_dynamic_behavior_status": "unavailable",
+        "cascade_propagation_status": "unavailable",
+        "pscad_run_performed": false,
+        "scenario_status_unchanged": true
     }
 }

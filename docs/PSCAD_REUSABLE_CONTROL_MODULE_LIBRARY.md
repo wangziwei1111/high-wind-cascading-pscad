@@ -98,3 +98,19 @@ Output Channel count, and absence of automatic reclosing, MATLAB, third
 source, or virtual source structures. It does not establish dynamic opening,
 event timing, multi-source interaction, physical cascade propagation, or
 runtime behavior.
+
+## Phase 2 addendum — 2026-07-01
+
+Two native definitions were added: `BREAKER_STATE_ADAPTER` and
+`THREE_SOURCE_EVENT_COLLECTOR`. Their isolated harness instances are
+`MODTEST_BREAKER_STATE_ADAPTER` and
+`MODTEST_THREE_SOURCE_EVENT_COLLECTOR`. The adapter uses
+`OPEN_THRESHOLD=0.5`; default state 0 has expected outputs open=0 and
+available=1. The collector has 15 inputs and nine outputs; its default test
+expects `0,0,3,0,-1,0,0,0,0`.
+
+Phase 2 is deployed only in the trial IBR3 path. Final Output Channel count is
+245. The original three definitions and prior 224 channels are statically
+unchanged. PSCAD internal identifiers are kept within 31 characters; long
+names are reserved for Output Channel titles and documentation. No Run was
+performed.

@@ -30,3 +30,19 @@ TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_EVENT_TIME_GAP_S,output,REAL,1,,nonnegativ
 TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_FIRST_EVENT_SOURCE_CODE,output,REAL,1,,0 none 1 A 2 B 3 tie
 TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_EVENT_SEQUENCE_CODE,output,REAL,1,,0 none 1 A-only 2 B-only 3 A-first 4 B-first 5 tie
 TWO_EVENT_CHRONOLOGY_MONITOR,port,OUT_CHRONOLOGY_CONSISTENT,output,REAL,1,,valid/time-set consistency
+BREAKER_STATE_ADAPTER,port,IN_BREAKER_STATE,input,REAL,1,,actual breaker state code
+BREAKER_STATE_ADAPTER,parameter,OPEN_THRESHOLD,input,REAL,1,0.5,state threshold interpreted as open
+BREAKER_STATE_ADAPTER,port,OUT_BREAKER_OPEN_BOOL,output,REAL,1,,standardized breaker-open flag
+BREAKER_STATE_ADAPTER,port,OUT_SOURCE_AVAILABLE,output,REAL,1,,inverse of breaker-open flag
+THREE_SOURCE_EVENT_COLLECTOR,port,IN_EVENT_VALID_A|B|C,input,REAL,1,,per-source event-valid
+THREE_SOURCE_EVENT_COLLECTOR,port,IN_BREAKER_OPEN_A|B|C,input,REAL,1,,per-source breaker-open
+THREE_SOURCE_EVENT_COLLECTOR,port,IN_SOURCE_AVAILABLE_A|B|C,input,REAL,1,,per-source availability
+THREE_SOURCE_EVENT_COLLECTOR,port,IN_FIRST_EVENT_TIME_A_S|B_S|C_S,input,REAL,1,,per-source first-event time
+THREE_SOURCE_EVENT_COLLECTOR,port,IN_CAUSE_CODE_A|B|C,input,REAL,1,,independent per-source cause
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_ANY_EVENT_VALID,output,REAL,1,,limited any-event flag
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_ANY_BREAKER_OPEN,output,REAL,1,,limited any-open flag
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_AVAILABLE_SOURCE_COUNT,output,REAL,1,,available count 0 to 3
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_EVENTED_SOURCE_COUNT,output,REAL,1,,evented count 0 to 3
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_FIRST_EVENT_TIME_S,output,REAL,1,,minimum valid nonnegative time or -1
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_FIRST_EVENT_SOURCE_CODE,output,REAL,1,,0 none 1 A 2 B 3 C 4 tie
+THREE_SOURCE_EVENT_COLLECTOR,port,OUT_CAUSE_CODE_A|B|C,output,REAL,1,,independent cause passthrough

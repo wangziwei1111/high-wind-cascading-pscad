@@ -56,3 +56,15 @@ When an instance exports a signal to a parent page, use:
 
 No reusable stimulus may be connected to a real breaker command without a
 separate, explicit trial authorization.
+
+## Phase 2 naming and collector rules
+
+The harness also reserves `MODTEST_BREAKER_STATE_ADAPTER` and
+`MODTEST_THREE_SOURCE_EVENT_COLLECTOR`.
+
+PSCAD 4.6 internal Data Label names must be no longer than 31 characters.
+Use short aliases such as `IBR3_CAS_EVT_VALID`; keep long public descriptions
+in Output Channel titles or documentation.
+
+Multi-source cause codes remain per source. Do not add global cause codes,
+cause sums, virtual sources, or a fourth source to a three-source instance.

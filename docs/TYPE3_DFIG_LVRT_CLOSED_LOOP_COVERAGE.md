@@ -261,3 +261,11 @@ the historical C1/C2/C3/R5 scenario results or the partial overall coverage
 status. Their static structure and nine Output Channels pass audit, while
 dynamic source-2 opening, event timing, dual-source interaction, and cascade
 propagation remain unavailable.
+
+## IBR3 three-source static addendum
+
+The trial-only third-source deployment and three-source collector pass static
+structure, control-isolation, and Output Channel audits. Historical
+C1/C2/C3/R5 results and partial overall coverage are unchanged. IBR3 dynamic
+opening, physical isolation, three-source interaction, and causal cascade
+propagation remain unavailable because no new PSCAD Run occurred.
