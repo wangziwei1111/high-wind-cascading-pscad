@@ -89,3 +89,20 @@ reproduction.
 
 Those claims require a future dynamic Run and offline analysis using the
 already audited full-network TLine measurement layer.
+
+## Dynamic Run follow-up
+
+The future dynamic Run described above has now been executed once by the user
+and parsed offline. The Run confirms a valid 0-20 s output time axis, preserves
+the protected main and trial project hashes, and provides complete full-network
+TLine terminal A/B P/Q/I window metrics for 31 branches.
+
+The dynamic evidence is documented in
+`docs/PAPER_ALIGNED_20S_DYNAMIC_RUN_AND_TLINE_RESPONSE.md` and audited in
+`data/validation/paper_aligned_20s_dynamic_run_final_audit.json`.
+
+The claim boundary remains deliberately narrow: raw branch P/Q/I response was
+observed, but line loading ratio, overload, relay operation, branch trip,
+natural cascade propagation, protection coordination, voltage-support
+performance, system stability, and strict paper reproduction remain
+unvalidated.

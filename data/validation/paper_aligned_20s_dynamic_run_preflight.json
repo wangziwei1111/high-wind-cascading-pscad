@@ -1,0 +1,56 @@
+{
+  "audit_name": "paper_aligned_20s_dynamic_run_preflight",
+  "generated_at_local": "2026-07-03T01:03:14",
+  "execution_status": "pass",
+  "gates": {
+    "main_project_integrity_status": "pass",
+    "trial_static_scenario_integrity_status": "pass",
+    "fault_configuration_status": "pass",
+    "simulation_horizon_status": "pass",
+    "existing_448_channel_preservation_status": "pass",
+    "full_network_tline_measurement_preservation_status": "pass",
+    "default_trial_state_status": "pass",
+    "build_artifact_status": "pass",
+    "static_final_audit_status": "pass",
+    "full_network_tline_final_audit_status": "pass"
+  },
+  "main_sha_before_run": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_before_run": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "fault": {
+    "fault_component_count": 1,
+    "fault_component_id": "413214904",
+    "fault_defn": "master:tfaultn",
+    "fault_x": "3276",
+    "fault_y": "72",
+    "fault_start_s": 0.5,
+    "fault_duration_s": 2.0,
+    "fault_clear_s": 2.5,
+    "n29_ground_branch_evidence_count": 12,
+    "three_phase_fault_code_present": true,
+    "fault_timing_code_present": true
+  },
+  "project_settings": {
+    "time_duration": "20",
+    "time_step": "5",
+    "sample_step": "10000"
+  },
+  "output_channel_summary": {
+    "xml_output_channel_count": 448,
+    "status": "pass"
+  },
+  "tline_measurement_summary": {
+    "inventory_tline_count": 31,
+    "expected_tline_raw_channel_count": 186,
+    "missing_tline_channel_groups": [],
+    "status": "pass"
+  },
+  "default_trial_state": {
+    "IBR2_TEST_ENABLE_label_present": true,
+    "IBR3_TEST_ENABLE_label_present": true,
+    "IBR2_TEST_OPEN_TIME_S_4_in_build_code": true,
+    "IBR3_TEST_OPEN_TIME_S_5_in_build_code": true,
+    "status": "pass"
+  },
+  "run_input_manifest": "data/validation/paper_aligned_20s_dynamic_run_input_manifest.json",
+  "next_action": "allow_single_user_gui_run"
+}

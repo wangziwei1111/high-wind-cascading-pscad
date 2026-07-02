@@ -1,0 +1,3151 @@
+{
+  "baseline_name": "paper_aligned_20s_dynamic_run_channel_baseline",
+  "generated_at_local": "2026-07-03T01:03:14",
+  "xml_output_channel_count": 448,
+  "expected_original_existing_channel_count": 262,
+  "expected_tline_raw_channel_count": 186,
+  "tline_measurement_status": {
+    "inventory_tline_count": 31,
+    "expected_tline_raw_channel_count": 186,
+    "missing_tline_channel_groups": [],
+    "status": "pass"
+  },
+  "channels": [
+    {
+      "component_id": "139895817",
+      "name": "Wang_39",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "774958082",
+      "name": "Wpu_39",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "133816600",
+      "name": "Ef_39",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "134078744",
+      "name": "If_39",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "1963005607",
+      "name": "TE_39",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "1606775247",
+      "name": "TM_39",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "181722735",
+      "name": "Vm_39",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "1234496440",
+      "name": "P_39",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "1234430904",
+      "name": "Q_39",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "355168961",
+      "name": "Wang_30",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "1248384312",
+      "name": "Wpu_30",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "2011286094",
+      "name": "Ef_30",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "2011548238",
+      "name": "If_30",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "1871106633",
+      "name": "TE_30",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "1514876273",
+      "name": "TM_30",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "89823761",
+      "name": "Vm_30",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "1910772808",
+      "name": "P_30",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "1910838344",
+      "name": "Q_30",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "1980933719",
+      "name": "Wang_37",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "2144398928",
+      "name": "Wpu_37",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "1089490634",
+      "name": "Ef_37",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "1089228490",
+      "name": "If_37",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "1229670095",
+      "name": "TE_37",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "873439735",
+      "name": "TM_37",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "1996475049",
+      "name": "Vm_37",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "667858551",
+      "name": "P_37",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "667924087",
+      "name": "Q_37",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "2068268600",
+      "name": "Wang_38",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "46499993",
+      "name": "Wpu_38",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "172719289",
+      "name": "Ef_38",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "172457145",
+      "name": "If_38",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "849900664",
+      "name": "TE_38",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "493670304",
+      "name": "TM_38",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "931382208",
+      "name": "Vm_38",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "435950664",
+      "name": "P_38",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "436016200",
+      "name": "Q_38",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "1893004843",
+      "name": "Wang_31",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "671788594",
+      "name": "Wpu_31",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "1835982812",
+      "name": "Ef_31",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "1835720668",
+      "name": "If_31",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "1438330611",
+      "name": "TE_31",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "1082100251",
+      "name": "TM_31",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "1788076677",
+      "name": "Vm_31",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "240325704",
+      "name": "P_31",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "240391240",
+      "name": "Q_31",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "575034364",
+      "name": "Wang_32",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "102703821",
+      "name": "Wpu_32",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "2062139987",
+      "name": "Ef_32",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "2062402131",
+      "name": "If_32",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "234917060",
+      "name": "TE_32",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "121313300",
+      "name": "TM_32",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "1303477068",
+      "name": "Vm_32",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "1866329016",
+      "name": "P_32",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "1866263480",
+      "name": "Q_32",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "937323206",
+      "name": "Wang_33",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "847329687",
+      "name": "Wpu_33",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "360207479",
+      "name": "Ef_33",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "359945335",
+      "name": "If_33",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "218061938",
+      "name": "TE_33",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "574292298",
+      "name": "TM_33",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "850498070",
+      "name": "Vm_33",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "758191176",
+      "name": "P_33",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "758256712",
+      "name": "Q_33",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "142513466",
+      "name": "Wang_34",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "1386101143",
+      "name": "Wpu_34",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "89216119",
+      "name": "Ef_34",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "88953975",
+      "name": "If_34",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "52929422",
+      "name": "TE_34",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "303300938",
+      "name": "TM_34",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "1121489430",
+      "name": "Vm_34",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "1417155656",
+      "name": "P_34",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "1417221192",
+      "name": "Q_34",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "1172195462",
+      "name": "Wang_35",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "497514933",
+      "name": "Wpu_35",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "595897499",
+      "name": "Ef_35",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "595635355",
+      "name": "If_35",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "1898876374",
+      "name": "TE_35",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "1542646014",
+      "name": "TM_35",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "1327268770",
+      "name": "Vm_35",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "149993079",
+      "name": "P_35",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "150058615",
+      "name": "Q_35",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "2086881414",
+      "name": "Wang_36",
+      "group": "",
+      "x": "108",
+      "y": "324"
+    },
+    {
+      "component_id": "1735755339",
+      "name": "Wpu_36",
+      "group": "",
+      "x": "108",
+      "y": "360"
+    },
+    {
+      "component_id": "1396026523",
+      "name": "Ef_36",
+      "group": "",
+      "x": "108",
+      "y": "396"
+    },
+    {
+      "component_id": "1395764379",
+      "name": "If_36",
+      "group": "",
+      "x": "108",
+      "y": "432"
+    },
+    {
+      "component_id": "1595961898",
+      "name": "TE_36",
+      "group": "",
+      "x": "108",
+      "y": "468"
+    },
+    {
+      "component_id": "1952192258",
+      "name": "TM_36",
+      "group": "",
+      "x": "108",
+      "y": "504"
+    },
+    {
+      "component_id": "527139746",
+      "name": "Vm_36",
+      "group": "",
+      "x": "108",
+      "y": "540"
+    },
+    {
+      "component_id": "1956661641",
+      "name": "P_36",
+      "group": "",
+      "x": "108",
+      "y": "576"
+    },
+    {
+      "component_id": "1956596105",
+      "name": "Q_36",
+      "group": "",
+      "x": "108",
+      "y": "612"
+    },
+    {
+      "component_id": "76620425",
+      "name": "SPD30",
+      "group": "",
+      "x": "5778",
+      "y": "4482"
+    },
+    {
+      "component_id": "2115405417",
+      "name": "V30",
+      "group": "",
+      "x": "5886",
+      "y": "4482"
+    },
+    {
+      "component_id": "814604080",
+      "name": "P30",
+      "group": "",
+      "x": "5994",
+      "y": "4482"
+    },
+    {
+      "component_id": "518740083",
+      "name": "Q30",
+      "group": "",
+      "x": "6084",
+      "y": "4482"
+    },
+    {
+      "component_id": "1403705382",
+      "name": "QIBR2",
+      "group": "",
+      "x": "5058",
+      "y": "4032"
+    },
+    {
+      "component_id": "2479722",
+      "name": "PIBR3",
+      "group": "",
+      "x": "5544",
+      "y": "4032"
+    },
+    {
+      "component_id": "1025846643",
+      "name": "QIBR3",
+      "group": "",
+      "x": "5760",
+      "y": "4032"
+    },
+    {
+      "component_id": "2013283288",
+      "name": "VIBR1_2",
+      "group": "",
+      "x": "5292",
+      "y": "4158"
+    },
+    {
+      "component_id": "862805808",
+      "name": "PIBR1_2",
+      "group": "",
+      "x": "5508",
+      "y": "4158"
+    },
+    {
+      "component_id": "1043010314",
+      "name": "QIBR1_2",
+      "group": "",
+      "x": "5688",
+      "y": "4158"
+    },
+    {
+      "component_id": "1736369162",
+      "name": "VIBR2_2",
+      "group": "",
+      "x": "5310",
+      "y": "4284"
+    },
+    {
+      "component_id": "1600085984",
+      "name": "PIBR2_2",
+      "group": "",
+      "x": "5418",
+      "y": "4284"
+    },
+    {
+      "component_id": "1405026150",
+      "name": "QIBR2_2",
+      "group": "",
+      "x": "5508",
+      "y": "4284"
+    },
+    {
+      "component_id": "220982143",
+      "name": "VIBR3_2",
+      "group": "",
+      "x": "5310",
+      "y": "4320"
+    },
+    {
+      "component_id": "1212984070",
+      "name": "PIBR3_2",
+      "group": "",
+      "x": "5418",
+      "y": "4320"
+    },
+    {
+      "component_id": "284190345",
+      "name": "QIBR3_2",
+      "group": "",
+      "x": "5508",
+      "y": "4320"
+    },
+    {
+      "component_id": "617389359",
+      "name": "VIBR3",
+      "group": "",
+      "x": "5310",
+      "y": "4032"
+    },
+    {
+      "component_id": "352110449",
+      "name": "VIBR2",
+      "group": "",
+      "x": "5166",
+      "y": "4158"
+    },
+    {
+      "component_id": "2037625487",
+      "name": "PIBR2",
+      "group": "",
+      "x": "5040",
+      "y": "4158"
+    },
+    {
+      "component_id": "510286702",
+      "name": "DFIG_DBLK_CMD",
+      "group": "",
+      "x": "324",
+      "y": "1080"
+    },
+    {
+      "component_id": "98290045",
+      "name": "DFIG_VWIND_MS",
+      "group": "",
+      "x": "324",
+      "y": "1170"
+    },
+    {
+      "component_id": "432621999",
+      "name": "DFIG_BRK_STATE",
+      "group": "",
+      "x": "936",
+      "y": "1062"
+    },
+    {
+      "component_id": "943129517",
+      "name": "DFIG_IFLT_A_KA",
+      "group": "",
+      "x": "972",
+      "y": "1116"
+    },
+    {
+      "component_id": "1430717756",
+      "name": "DFIG_IFLT_B_KA",
+      "group": "",
+      "x": "972",
+      "y": "1152"
+    },
+    {
+      "component_id": "2018870442",
+      "name": "DFIG_IFLT_C_KA",
+      "group": "",
+      "x": "972",
+      "y": "1188"
+    },
+    {
+      "component_id": "1563984728",
+      "name": "DFIG_IFLT_A_KA",
+      "group": "",
+      "x": "5112",
+      "y": "4248"
+    },
+    {
+      "component_id": "1377154997",
+      "name": "DFIG_LVRT_LOWV",
+      "group": "",
+      "x": "864",
+      "y": "828"
+    },
+    {
+      "component_id": "1514932",
+      "name": "DFIG_LVRT_IMMTRIP",
+      "group": "",
+      "x": "864",
+      "y": "684"
+    },
+    {
+      "component_id": "52204636",
+      "name": "DFIG_LVRT_TIMER_S",
+      "group": "",
+      "x": "558",
+      "y": "648"
+    },
+    {
+      "component_id": "660219171",
+      "name": "DFIG_LVRT_CLEAR_BASE",
+      "group": "",
+      "x": "540",
+      "y": "864"
+    },
+    {
+      "component_id": "1568953131",
+      "name": "DFIG_LVRT_VSMIN_MEM",
+      "group": "",
+      "x": "1494",
+      "y": "648"
+    },
+    {
+      "component_id": "855700634",
+      "name": "DFIG_LVRT_TALLOW_S",
+      "group": "",
+      "x": "4014",
+      "y": "1710"
+    },
+    {
+      "component_id": "1430029174",
+      "name": "DFIG_LVRT_DURATION_EXCEEDED",
+      "group": "",
+      "x": "3978",
+      "y": "1422"
+    },
+    {
+      "component_id": "932997196",
+      "name": "DFIG_LVRT_TRIP_REQUEST",
+      "group": "",
+      "x": "3996",
+      "y": "1134"
+    },
+    {
+      "component_id": "2025602951",
+      "name": "DFIG_LVRT_TRIP_LATCH",
+      "group": "",
+      "x": "3726",
+      "y": "594"
+    },
+    {
+      "component_id": "1757271943",
+      "name": "DFIG_LVRT_CLEAR",
+      "group": "",
+      "x": "2034",
+      "y": "1800"
+    },
+    {
+      "component_id": "1445655642",
+      "name": "DFIG_LVRT_EXISTING_BRK_CMD",
+      "group": "",
+      "x": "2448",
+      "y": "2142"
+    },
+    {
+      "component_id": "229635092",
+      "name": "DFIG_LVRT_FINAL_BRK_CMD",
+      "group": "",
+      "x": "2826",
+      "y": "2484"
+    },
+    {
+      "component_id": "688400342",
+      "name": "DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+      "group": "",
+      "x": "2790",
+      "y": "2772"
+    },
+    {
+      "component_id": "1906095098",
+      "name": "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH",
+      "group": "",
+      "x": "3672",
+      "y": "2430"
+    },
+    {
+      "component_id": "1079396455",
+      "name": "DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL",
+      "group": "",
+      "x": "288",
+      "y": "2610"
+    },
+    {
+      "component_id": "1749856422",
+      "name": "DFIG_LVRT_FINAL_CMD_BOOL",
+      "group": "",
+      "x": "306",
+      "y": "2682"
+    },
+    {
+      "component_id": "1251750859",
+      "name": "DFIG_LVRT_BRK_OPEN_BOOL",
+      "group": "",
+      "x": "306",
+      "y": "2754"
+    },
+    {
+      "component_id": "1051031339",
+      "name": "DFIG_LVRT_TRIP_CONFIRMED",
+      "group": "",
+      "x": "3402",
+      "y": "2196"
+    },
+    {
+      "component_id": "345805582",
+      "name": "DFIG_LVRT_CASCADE_AVAILABLE",
+      "group": "",
+      "x": "630",
+      "y": "2754"
+    },
+    {
+      "component_id": "541903365",
+      "name": "DFIG_LVRT_TRIP_CAUSE_CODE",
+      "group": "",
+      "x": "360",
+      "y": "4500"
+    },
+    {
+      "component_id": "810673841",
+      "name": "DFIG_LVRT_CASCADE_EVENT_VALID",
+      "group": "",
+      "x": "3636",
+      "y": "2178"
+    },
+    {
+      "component_id": "2111023746",
+      "name": "DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE",
+      "group": "",
+      "x": "612",
+      "y": "4464"
+    },
+    {
+      "component_id": "288637322",
+      "name": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+      "group": "",
+      "x": "3456",
+      "y": "2988"
+    },
+    {
+      "component_id": "537095251",
+      "name": "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE",
+      "group": "",
+      "x": "1548",
+      "y": "2610"
+    },
+    {
+      "component_id": "2133635045",
+      "name": "DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S",
+      "group": "",
+      "x": "1458",
+      "y": "4230"
+    },
+    {
+      "component_id": "1682633210",
+      "name": "CASCADE_MONITOR_ANY_TRIP",
+      "group": "",
+      "x": "3870",
+      "y": "2070"
+    },
+    {
+      "component_id": "1448433561",
+      "name": "CASCADE_MONITOR_ANY_BRK_OPEN",
+      "group": "",
+      "x": "3690",
+      "y": "3222"
+    },
+    {
+      "component_id": "568013308",
+      "name": "CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT",
+      "group": "",
+      "x": "1764",
+      "y": "2556"
+    },
+    {
+      "component_id": "935760742",
+      "name": "CASCADE_MONITOR_FIRST_EVENT_TIME_S",
+      "group": "",
+      "x": "1692",
+      "y": "4302"
+    },
+    {
+      "component_id": "453162503",
+      "name": "CASCADE_MONITOR_CAUSE_CODE_DFIG1",
+      "group": "",
+      "x": "738",
+      "y": "4356"
+    },
+    {
+      "component_id": "1980377912",
+      "name": "IBR2_TRIAL_BRK_CMD",
+      "group": "",
+      "x": "954",
+      "y": "1422"
+    },
+    {
+      "component_id": "697328006",
+      "name": "IBR2_TRIAL_BRK_STATE",
+      "group": "",
+      "x": "1422",
+      "y": "3492"
+    },
+    {
+      "component_id": "1599230309",
+      "name": "IBR2_TRIAL_BRK_OPEN_BOOL",
+      "group": "",
+      "x": "1620",
+      "y": "3564"
+    },
+    {
+      "component_id": "1316801807",
+      "name": "IBR2_TRIAL_SOURCE_AVAILABLE",
+      "group": "",
+      "x": "1584",
+      "y": "3636"
+    },
+    {
+      "component_id": "1333729966",
+      "name": "IBR2_TRIAL_CASCADE_EVENT_VALID",
+      "group": "",
+      "x": "1854",
+      "y": "3978"
+    },
+    {
+      "component_id": "1594462443",
+      "name": "IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+      "group": "",
+      "x": "1620",
+      "y": "4068"
+    },
+    {
+      "component_id": "530921801",
+      "name": "IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN",
+      "group": "",
+      "x": "1656",
+      "y": "3744"
+    },
+    {
+      "component_id": "1133397423",
+      "name": "IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE",
+      "group": "",
+      "x": "1710",
+      "y": "3816"
+    },
+    {
+      "component_id": "1246653803",
+      "name": "IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+      "group": "",
+      "x": "2358",
+      "y": "1530"
+    },
+    {
+      "component_id": "678128319",
+      "name": "CASCADE_MONITOR_CAUSE_CODE_IBR2_TRIAL",
+      "group": "",
+      "x": "396",
+      "y": "4284"
+    },
+    {
+      "component_id": "308169611",
+      "name": "CASCADE_MONITOR_EVENTED_SOURCE_COUNT",
+      "group": "",
+      "x": "414",
+      "y": "4140"
+    },
+    {
+      "component_id": "1084056130",
+      "name": "CASCADE_MONITOR_FIRST_EVENT_SOURCE_CODE",
+      "group": "",
+      "x": "2304",
+      "y": "4734"
+    },
+    {
+      "component_id": "439646965",
+      "name": "IBR2_TRIAL_TEST_ENABLE",
+      "group": "",
+      "x": "360",
+      "y": "3042"
+    },
+    {
+      "component_id": "1732298783",
+      "name": "IBR2_TRIAL_TEST_OPEN_TIME_S",
+      "group": "",
+      "x": "342",
+      "y": "3006"
+    },
+    {
+      "component_id": "321505631",
+      "name": "IBR2_TRIAL_TEST_TIME_REACHED",
+      "group": "",
+      "x": "378",
+      "y": "2934"
+    },
+    {
+      "component_id": "1966392858",
+      "name": "IBR2_TRIAL_TEST_OPEN_REQUEST",
+      "group": "",
+      "x": "360",
+      "y": "3222"
+    },
+    {
+      "component_id": "1437590940",
+      "name": "CASCADE_MONITOR_BOTH_EVENTS_RECORDED",
+      "group": "",
+      "x": "684",
+      "y": "2952"
+    },
+    {
+      "component_id": "1678189062",
+      "name": "CASCADE_MONITOR_SECOND_EVENT_TIME_S",
+      "group": "",
+      "x": "1008",
+      "y": "3276"
+    },
+    {
+      "component_id": "1235803054",
+      "name": "CASCADE_MONITOR_EVENT_TIME_GAP_S",
+      "group": "",
+      "x": "1098",
+      "y": "3600"
+    },
+    {
+      "component_id": "1744957183",
+      "name": "CASCADE_MONITOR_EVENT_SEQUENCE_CODE",
+      "group": "",
+      "x": "1602",
+      "y": "3006"
+    },
+    {
+      "component_id": "751586832",
+      "name": "CASCADE_MONITOR_CHRONOLOGY_CONSISTENT",
+      "group": "",
+      "x": "2358",
+      "y": "3546"
+    },
+    {
+      "component_id": "314179139",
+      "name": "IBR3_TRIAL_BRK_CMD",
+      "group": "",
+      "x": "1098",
+      "y": "1908"
+    },
+    {
+      "component_id": "1742096436",
+      "name": "IBR3_TRIAL_BRK_STATE",
+      "group": "",
+      "x": "1098",
+      "y": "1962"
+    },
+    {
+      "component_id": "413580736",
+      "name": "IBR3_TRIAL_BRK_OPEN_BOOL",
+      "group": "",
+      "x": "1098",
+      "y": "2016"
+    },
+    {
+      "component_id": "188107961",
+      "name": "IBR3_TRIAL_SOURCE_AVAILABLE",
+      "group": "",
+      "x": "1098",
+      "y": "2070"
+    },
+    {
+      "component_id": "2104873241",
+      "name": "IBR3_TRIAL_CASCADE_EVENT_VALID",
+      "group": "",
+      "x": "4374",
+      "y": "1332"
+    },
+    {
+      "component_id": "336217680",
+      "name": "IBR3_TRIAL_TEST_OPEN_REQUEST",
+      "group": "",
+      "x": "4374",
+      "y": "1278"
+    },
+    {
+      "component_id": "102391943",
+      "name": "IBR3_TRIAL_TEST_OPEN_TIME_S",
+      "group": "",
+      "x": "4374",
+      "y": "1224"
+    },
+    {
+      "component_id": "330042602",
+      "name": "IBR3_TRIAL_TEST_ENABLE",
+      "group": "",
+      "x": "4374",
+      "y": "1170"
+    },
+    {
+      "component_id": "628630160",
+      "name": "IBR3_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+      "group": "",
+      "x": "4374",
+      "y": "1548"
+    },
+    {
+      "component_id": "1137895653",
+      "name": "IBR3_TRIAL_CASCADE_SOURCE_AVAILABLE",
+      "group": "",
+      "x": "4374",
+      "y": "1494"
+    },
+    {
+      "component_id": "1649394846",
+      "name": "IBR3_TRIAL_CASCADE_EVENT_BRK_OPEN",
+      "group": "",
+      "x": "4374",
+      "y": "1440"
+    },
+    {
+      "component_id": "704454136",
+      "name": "IBR3_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+      "group": "",
+      "x": "4374",
+      "y": "1386"
+    },
+    {
+      "component_id": "1118719820",
+      "name": "CASCADE3_MONITOR_FIRST_EVENT_TIME_S",
+      "group": "",
+      "x": "4824",
+      "y": "1332"
+    },
+    {
+      "component_id": "958692305",
+      "name": "CASCADE3_MONITOR_FIRST_EVENT_SOURCE_CODE",
+      "group": "",
+      "x": "4824",
+      "y": "1386"
+    },
+    {
+      "component_id": "387683866",
+      "name": "CASCADE3_MONITOR_CAUSE_CODE_DFIG1",
+      "group": "",
+      "x": "4824",
+      "y": "1440"
+    },
+    {
+      "component_id": "965748339",
+      "name": "CASCADE3_MONITOR_CAUSE_CODE_IBR2_TRIAL",
+      "group": "",
+      "x": "4824",
+      "y": "1494"
+    },
+    {
+      "component_id": "252560986",
+      "name": "CASCADE3_MONITOR_ANY_TRIP",
+      "group": "",
+      "x": "4824",
+      "y": "1116"
+    },
+    {
+      "component_id": "1668540437",
+      "name": "CASCADE3_MONITOR_ANY_BRK_OPEN",
+      "group": "",
+      "x": "4824",
+      "y": "1170"
+    },
+    {
+      "component_id": "1549846141",
+      "name": "CASCADE3_MONITOR_AVAILABLE_SOURCE_COUNT",
+      "group": "",
+      "x": "4824",
+      "y": "1224"
+    },
+    {
+      "component_id": "1593702461",
+      "name": "CASCADE3_MONITOR_EVENTED_SOURCE_COUNT",
+      "group": "",
+      "x": "4824",
+      "y": "1278"
+    },
+    {
+      "component_id": "357971772",
+      "name": "CASCADE3_MONITOR_CAUSE_CODE_IBR3_TRIAL",
+      "group": "",
+      "x": "4824",
+      "y": "1548"
+    },
+    {
+      "component_id": "678065703",
+      "name": "CASCADE3_MONITOR_TIMED_EVENT_SOURCE_COUNT",
+      "group": "",
+      "x": "4482",
+      "y": "1728"
+    },
+    {
+      "component_id": "694779509",
+      "name": "CASCADE3_MONITOR_SECOND_EVENT_TIME_S",
+      "group": "",
+      "x": "4500",
+      "y": "1782"
+    },
+    {
+      "component_id": "996919888",
+      "name": "CASCADE3_MONITOR_THIRD_EVENT_TIME_S",
+      "group": "",
+      "x": "4500",
+      "y": "1836"
+    },
+    {
+      "component_id": "705384293",
+      "name": "CASCADE3_MONITOR_FIRST_TO_SECOND_GAP_S",
+      "group": "",
+      "x": "4518",
+      "y": "1908"
+    },
+    {
+      "component_id": "171176579",
+      "name": "CASCADE3_MONITOR_SECOND_TO_THIRD_GAP_S",
+      "group": "",
+      "x": "4518",
+      "y": "1962"
+    },
+    {
+      "component_id": "1291362722",
+      "name": "CASCADE3_MONITOR_CHRONOLOGY_FIRST_SOURCE_CODE",
+      "group": "",
+      "x": "4536",
+      "y": "2016"
+    },
+    {
+      "component_id": "743389278",
+      "name": "CASCADE3_MONITOR_EVENT_ORDER_CLASS_CODE",
+      "group": "",
+      "x": "4554",
+      "y": "2070"
+    },
+    {
+      "component_id": "949620494",
+      "name": "CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT",
+      "group": "",
+      "x": "4554",
+      "y": "2124"
+    },
+    {
+      "component_id": "341215590",
+      "name": "CASCADE3_ELEC_DFIG_V",
+      "group": "",
+      "x": "5292",
+      "y": "4122"
+    },
+    {
+      "component_id": "259576720",
+      "name": "CASCADE3_ELEC_DFIG_P",
+      "group": "",
+      "x": "5508",
+      "y": "4122"
+    },
+    {
+      "component_id": "1673326269",
+      "name": "CASCADE3_ELEC_DFIG_Q",
+      "group": "",
+      "x": "5688",
+      "y": "4122"
+    },
+    {
+      "component_id": "135761766",
+      "name": "CASCADE3_ELEC_IBR2_V",
+      "group": "",
+      "x": "5166",
+      "y": "4122"
+    },
+    {
+      "component_id": "1901789474",
+      "name": "CASCADE3_ELEC_IBR2_P",
+      "group": "",
+      "x": "5040",
+      "y": "4122"
+    },
+    {
+      "component_id": "17446706",
+      "name": "CASCADE3_ELEC_IBR2_Q",
+      "group": "",
+      "x": "5058",
+      "y": "3996"
+    },
+    {
+      "component_id": "1324708704",
+      "name": "CASCADE3_ELEC_IBR3_V",
+      "group": "",
+      "x": "5310",
+      "y": "3996"
+    },
+    {
+      "component_id": "1936644910",
+      "name": "CASCADE3_ELEC_IBR3_P",
+      "group": "",
+      "x": "5544",
+      "y": "3978"
+    },
+    {
+      "component_id": "1021145018",
+      "name": "CASCADE3_ELEC_IBR3_Q",
+      "group": "",
+      "x": "5760",
+      "y": "3978"
+    },
+    {
+      "component_id": "1999862043",
+      "name": "E_16_19_1_A_P",
+      "group": "",
+      "x": "2430",
+      "y": "702"
+    },
+    {
+      "component_id": "292593853",
+      "name": "E_16_19_1_B_P",
+      "group": "",
+      "x": "2520",
+      "y": "702"
+    },
+    {
+      "component_id": "230015453",
+      "name": "E_16_19_1_B_Q",
+      "group": "",
+      "x": "2520",
+      "y": "738"
+    },
+    {
+      "component_id": "581534372",
+      "name": "E_16_19_1_A_Q",
+      "group": "",
+      "x": "2430",
+      "y": "738"
+    },
+    {
+      "component_id": "1022831344",
+      "name": "E_16_19_1_B_I",
+      "group": "",
+      "x": "2520",
+      "y": "774"
+    },
+    {
+      "component_id": "318527216",
+      "name": "E_16_19_1_A_I",
+      "group": "",
+      "x": "2430",
+      "y": "774"
+    },
+    {
+      "component_id": "1674315766",
+      "name": "E_2_25_1_A_I",
+      "group": "",
+      "x": "90",
+      "y": "288"
+    },
+    {
+      "component_id": "301247045",
+      "name": "E_2_25_1_B_I",
+      "group": "",
+      "x": "180",
+      "y": "288"
+    },
+    {
+      "component_id": "1418134308",
+      "name": "E_2_25_1_A_Q",
+      "group": "",
+      "x": "90",
+      "y": "252"
+    },
+    {
+      "component_id": "928750945",
+      "name": "E_2_25_1_B_Q",
+      "group": "",
+      "x": "180",
+      "y": "252"
+    },
+    {
+      "component_id": "780598056",
+      "name": "E_2_25_1_B_P",
+      "group": "",
+      "x": "180",
+      "y": "216"
+    },
+    {
+      "component_id": "89325455",
+      "name": "E_2_25_1_A_P",
+      "group": "",
+      "x": "90",
+      "y": "216"
+    },
+    {
+      "component_id": "1641538646",
+      "name": "E_16_21_1_A_P",
+      "group": "",
+      "x": "2358",
+      "y": "1044"
+    },
+    {
+      "component_id": "1766007667",
+      "name": "E_16_21_1_B_P",
+      "group": "",
+      "x": "2484",
+      "y": "1044"
+    },
+    {
+      "component_id": "685160439",
+      "name": "E_16_21_1_B_Q",
+      "group": "",
+      "x": "2484",
+      "y": "1080"
+    },
+    {
+      "component_id": "988190728",
+      "name": "E_16_21_1_A_Q",
+      "group": "",
+      "x": "2358",
+      "y": "1080"
+    },
+    {
+      "component_id": "262525710",
+      "name": "E_16_21_1_B_I",
+      "group": "",
+      "x": "2484",
+      "y": "1116"
+    },
+    {
+      "component_id": "83584402",
+      "name": "E_16_21_1_A_I",
+      "group": "",
+      "x": "2358",
+      "y": "1116"
+    },
+    {
+      "component_id": "1319492892",
+      "name": "E_1_39_1_A_I",
+      "group": "",
+      "x": "54",
+      "y": "1080"
+    },
+    {
+      "component_id": "59734218",
+      "name": "E_1_39_1_B_I",
+      "group": "",
+      "x": "180",
+      "y": "1080"
+    },
+    {
+      "component_id": "412561835",
+      "name": "E_1_39_1_A_Q",
+      "group": "",
+      "x": "54",
+      "y": "1044"
+    },
+    {
+      "component_id": "1963785391",
+      "name": "E_1_39_1_B_Q",
+      "group": "",
+      "x": "180",
+      "y": "1044"
+    },
+    {
+      "component_id": "1632047426",
+      "name": "E_1_39_1_B_P",
+      "group": "",
+      "x": "180",
+      "y": "1008"
+    },
+    {
+      "component_id": "565470920",
+      "name": "E_1_39_1_A_P",
+      "group": "",
+      "x": "54",
+      "y": "1008"
+    },
+    {
+      "component_id": "1272158499",
+      "name": "E_2_3_1_A_I",
+      "group": "",
+      "x": "270",
+      "y": "90"
+    },
+    {
+      "component_id": "319536663",
+      "name": "E_2_3_1_B_I",
+      "group": "",
+      "x": "396",
+      "y": "90"
+    },
+    {
+      "component_id": "346570910",
+      "name": "E_2_3_1_A_Q",
+      "group": "",
+      "x": "270",
+      "y": "54"
+    },
+    {
+      "component_id": "1616724533",
+      "name": "E_2_3_1_B_Q",
+      "group": "",
+      "x": "396",
+      "y": "54"
+    },
+    {
+      "component_id": "1510828331",
+      "name": "E_2_3_1_B_P",
+      "group": "",
+      "x": "396",
+      "y": "18"
+    },
+    {
+      "component_id": "714753914",
+      "name": "E_2_3_1_A_P",
+      "group": "",
+      "x": "270",
+      "y": "18"
+    },
+    {
+      "component_id": "1224540573",
+      "name": "E_1_2_1_A_I",
+      "group": "",
+      "x": "198",
+      "y": "540"
+    },
+    {
+      "component_id": "1622869676",
+      "name": "E_1_2_1_B_I",
+      "group": "",
+      "x": "324",
+      "y": "540"
+    },
+    {
+      "component_id": "877526058",
+      "name": "E_1_2_1_A_Q",
+      "group": "",
+      "x": "198",
+      "y": "504"
+    },
+    {
+      "component_id": "1448776543",
+      "name": "E_1_2_1_B_Q",
+      "group": "",
+      "x": "324",
+      "y": "504"
+    },
+    {
+      "component_id": "276859901",
+      "name": "E_1_2_1_B_P",
+      "group": "",
+      "x": "324",
+      "y": "468"
+    },
+    {
+      "component_id": "1755710870",
+      "name": "E_1_2_1_A_P",
+      "group": "",
+      "x": "198",
+      "y": "468"
+    },
+    {
+      "component_id": "395173985",
+      "name": "E_3_4_1_A_I",
+      "group": "",
+      "x": "378",
+      "y": "324"
+    },
+    {
+      "component_id": "412541855",
+      "name": "E_3_4_1_B_I",
+      "group": "",
+      "x": "504",
+      "y": "324"
+    },
+    {
+      "component_id": "141920747",
+      "name": "E_3_4_1_A_Q",
+      "group": "",
+      "x": "378",
+      "y": "288"
+    },
+    {
+      "component_id": "478368529",
+      "name": "E_3_4_1_B_Q",
+      "group": "",
+      "x": "504",
+      "y": "288"
+    },
+    {
+      "component_id": "501759032",
+      "name": "E_3_4_1_B_P",
+      "group": "",
+      "x": "504",
+      "y": "252"
+    },
+    {
+      "component_id": "1823827042",
+      "name": "E_3_4_1_A_P",
+      "group": "",
+      "x": "378",
+      "y": "252"
+    },
+    {
+      "component_id": "2076581168",
+      "name": "E_3_18_1_A_I",
+      "group": "",
+      "x": "414",
+      "y": "486"
+    },
+    {
+      "component_id": "263870714",
+      "name": "E_3_18_1_B_I",
+      "group": "",
+      "x": "558",
+      "y": "486"
+    },
+    {
+      "component_id": "395239917",
+      "name": "E_3_18_1_A_Q",
+      "group": "",
+      "x": "414",
+      "y": "450"
+    },
+    {
+      "component_id": "1428349614",
+      "name": "E_3_18_1_B_Q",
+      "group": "",
+      "x": "558",
+      "y": "450"
+    },
+    {
+      "component_id": "421998574",
+      "name": "E_3_18_1_B_P",
+      "group": "",
+      "x": "558",
+      "y": "396"
+    },
+    {
+      "component_id": "35142719",
+      "name": "E_3_18_1_A_P",
+      "group": "",
+      "x": "414",
+      "y": "396"
+    },
+    {
+      "component_id": "759430671",
+      "name": "E_4_5_1_A_I",
+      "group": "",
+      "x": "540",
+      "y": "90"
+    },
+    {
+      "component_id": "1701880397",
+      "name": "E_4_5_1_B_I",
+      "group": "",
+      "x": "666",
+      "y": "90"
+    },
+    {
+      "component_id": "1858505132",
+      "name": "E_4_5_1_A_Q",
+      "group": "",
+      "x": "540",
+      "y": "54"
+    },
+    {
+      "component_id": "384285450",
+      "name": "E_4_5_1_B_Q",
+      "group": "",
+      "x": "666",
+      "y": "54"
+    },
+    {
+      "component_id": "1111965826",
+      "name": "E_4_5_1_B_P",
+      "group": "",
+      "x": "666",
+      "y": "18"
+    },
+    {
+      "component_id": "1674732826",
+      "name": "E_4_5_1_A_P",
+      "group": "",
+      "x": "540",
+      "y": "18"
+    },
+    {
+      "component_id": "759421550",
+      "name": "E_4_14_1_A_I",
+      "group": "",
+      "x": "720",
+      "y": "396"
+    },
+    {
+      "component_id": "422478298",
+      "name": "E_4_14_1_B_I",
+      "group": "",
+      "x": "864",
+      "y": "396"
+    },
+    {
+      "component_id": "1310925391",
+      "name": "E_4_14_1_A_Q",
+      "group": "",
+      "x": "738",
+      "y": "378"
+    },
+    {
+      "component_id": "1153784078",
+      "name": "E_4_14_1_B_Q",
+      "group": "",
+      "x": "864",
+      "y": "378"
+    },
+    {
+      "component_id": "763402688",
+      "name": "E_4_14_1_B_P",
+      "group": "",
+      "x": "864",
+      "y": "342"
+    },
+    {
+      "component_id": "956960324",
+      "name": "E_4_14_1_A_P",
+      "group": "",
+      "x": "738",
+      "y": "342"
+    },
+    {
+      "component_id": "698381116",
+      "name": "E_5_8_1_A_I",
+      "group": "",
+      "x": "792",
+      "y": "90"
+    },
+    {
+      "component_id": "1857525705",
+      "name": "E_5_8_1_B_I",
+      "group": "",
+      "x": "918",
+      "y": "90"
+    },
+    {
+      "component_id": "859106636",
+      "name": "E_5_8_1_A_Q",
+      "group": "",
+      "x": "792",
+      "y": "54"
+    },
+    {
+      "component_id": "1520394063",
+      "name": "E_5_8_1_B_Q",
+      "group": "",
+      "x": "918",
+      "y": "54"
+    },
+    {
+      "component_id": "56279579",
+      "name": "E_5_8_1_B_P",
+      "group": "",
+      "x": "918",
+      "y": "18"
+    },
+    {
+      "component_id": "1071029402",
+      "name": "E_5_8_1_A_P",
+      "group": "",
+      "x": "792",
+      "y": "18"
+    },
+    {
+      "component_id": "1929758863",
+      "name": "E_6_7_1_A_I",
+      "group": "",
+      "x": "1170",
+      "y": "90"
+    },
+    {
+      "component_id": "2140148773",
+      "name": "E_6_7_1_B_I",
+      "group": "",
+      "x": "1296",
+      "y": "90"
+    },
+    {
+      "component_id": "286031992",
+      "name": "E_6_7_1_A_Q",
+      "group": "",
+      "x": "1170",
+      "y": "54"
+    },
+    {
+      "component_id": "177363001",
+      "name": "E_6_7_1_B_Q",
+      "group": "",
+      "x": "1296",
+      "y": "54"
+    },
+    {
+      "component_id": "116490757",
+      "name": "E_6_7_1_B_P",
+      "group": "",
+      "x": "1296",
+      "y": "18"
+    },
+    {
+      "component_id": "2008282529",
+      "name": "E_6_7_1_A_P",
+      "group": "",
+      "x": "1170",
+      "y": "18"
+    },
+    {
+      "component_id": "1887523133",
+      "name": "E_6_11_1_A_I",
+      "group": "",
+      "x": "1440",
+      "y": "90"
+    },
+    {
+      "component_id": "827929216",
+      "name": "E_6_11_1_B_I",
+      "group": "",
+      "x": "1566",
+      "y": "90"
+    },
+    {
+      "component_id": "1305046445",
+      "name": "E_6_11_1_A_Q",
+      "group": "",
+      "x": "1440",
+      "y": "54"
+    },
+    {
+      "component_id": "415923163",
+      "name": "E_6_11_1_B_Q",
+      "group": "",
+      "x": "1566",
+      "y": "54"
+    },
+    {
+      "component_id": "216628292",
+      "name": "E_6_11_1_B_P",
+      "group": "",
+      "x": "1566",
+      "y": "18"
+    },
+    {
+      "component_id": "900189978",
+      "name": "E_6_11_1_A_P",
+      "group": "",
+      "x": "1440",
+      "y": "18"
+    },
+    {
+      "component_id": "465677998",
+      "name": "E_7_8_1_A_I",
+      "group": "",
+      "x": "1026",
+      "y": "342"
+    },
+    {
+      "component_id": "2100313526",
+      "name": "E_7_8_1_B_I",
+      "group": "",
+      "x": "1152",
+      "y": "342"
+    },
+    {
+      "component_id": "1665589539",
+      "name": "E_7_8_1_A_Q",
+      "group": "",
+      "x": "1026",
+      "y": "288"
+    },
+    {
+      "component_id": "1834694845",
+      "name": "E_7_8_1_B_Q",
+      "group": "",
+      "x": "1152",
+      "y": "288"
+    },
+    {
+      "component_id": "2008789636",
+      "name": "E_7_8_1_B_P",
+      "group": "",
+      "x": "1152",
+      "y": "252"
+    },
+    {
+      "component_id": "1790170258",
+      "name": "E_7_8_1_A_P",
+      "group": "",
+      "x": "1026",
+      "y": "252"
+    },
+    {
+      "component_id": "675713916",
+      "name": "E_8_9_1_A_I",
+      "group": "",
+      "x": "1170",
+      "y": "1062"
+    },
+    {
+      "component_id": "155046897",
+      "name": "E_8_9_1_B_I",
+      "group": "",
+      "x": "1296",
+      "y": "1062"
+    },
+    {
+      "component_id": "953966825",
+      "name": "E_8_9_1_A_Q",
+      "group": "",
+      "x": "1170",
+      "y": "1026"
+    },
+    {
+      "component_id": "86034421",
+      "name": "E_8_9_1_B_Q",
+      "group": "",
+      "x": "1296",
+      "y": "1026"
+    },
+    {
+      "component_id": "1805057855",
+      "name": "E_8_9_1_B_P",
+      "group": "",
+      "x": "1296",
+      "y": "990"
+    },
+    {
+      "component_id": "67600612",
+      "name": "E_8_9_1_A_P",
+      "group": "",
+      "x": "1170",
+      "y": "990"
+    },
+    {
+      "component_id": "1241728029",
+      "name": "E_9_39_1_A_I",
+      "group": "",
+      "x": "1170",
+      "y": "1188"
+    },
+    {
+      "component_id": "1323577882",
+      "name": "E_9_39_1_B_I",
+      "group": "",
+      "x": "1296",
+      "y": "1188"
+    },
+    {
+      "component_id": "1618150511",
+      "name": "E_9_39_1_A_Q",
+      "group": "",
+      "x": "1170",
+      "y": "1152"
+    },
+    {
+      "component_id": "1532070910",
+      "name": "E_9_39_1_B_Q",
+      "group": "",
+      "x": "1296",
+      "y": "1152"
+    },
+    {
+      "component_id": "1972351875",
+      "name": "E_9_39_1_B_P",
+      "group": "",
+      "x": "1296",
+      "y": "1116"
+    },
+    {
+      "component_id": "1597153425",
+      "name": "E_9_39_1_A_P",
+      "group": "",
+      "x": "1170",
+      "y": "1116"
+    },
+    {
+      "component_id": "1285190891",
+      "name": "E_13_14_1_A_I",
+      "group": "",
+      "x": "1872",
+      "y": "90"
+    },
+    {
+      "component_id": "1450170497",
+      "name": "E_13_14_1_B_I",
+      "group": "",
+      "x": "1998",
+      "y": "90"
+    },
+    {
+      "component_id": "1574540099",
+      "name": "E_13_14_1_A_Q",
+      "group": "",
+      "x": "1872",
+      "y": "54"
+    },
+    {
+      "component_id": "1224489112",
+      "name": "E_13_14_1_B_Q",
+      "group": "",
+      "x": "1998",
+      "y": "54"
+    },
+    {
+      "component_id": "229990721",
+      "name": "E_13_14_1_B_P",
+      "group": "",
+      "x": "1998",
+      "y": "18"
+    },
+    {
+      "component_id": "95673326",
+      "name": "E_13_14_1_A_P",
+      "group": "",
+      "x": "1872",
+      "y": "18"
+    },
+    {
+      "component_id": "1359672276",
+      "name": "E_14_15_1_A_I",
+      "group": "",
+      "x": "1944",
+      "y": "342"
+    },
+    {
+      "component_id": "1974431355",
+      "name": "E_14_15_1_B_I",
+      "group": "",
+      "x": "2070",
+      "y": "342"
+    },
+    {
+      "component_id": "1560838652",
+      "name": "E_14_15_1_A_Q",
+      "group": "",
+      "x": "1944",
+      "y": "306"
+    },
+    {
+      "component_id": "319889747",
+      "name": "E_14_15_1_B_Q",
+      "group": "",
+      "x": "2070",
+      "y": "306"
+    },
+    {
+      "component_id": "1953723737",
+      "name": "E_14_15_1_B_P",
+      "group": "",
+      "x": "2070",
+      "y": "270"
+    },
+    {
+      "component_id": "509232351",
+      "name": "E_14_15_1_A_P",
+      "group": "",
+      "x": "1944",
+      "y": "270"
+    },
+    {
+      "component_id": "252600461",
+      "name": "E_15_16_1_A_I",
+      "group": "",
+      "x": "2196",
+      "y": "108"
+    },
+    {
+      "component_id": "1068887377",
+      "name": "E_15_16_1_B_I",
+      "group": "",
+      "x": "2322",
+      "y": "108"
+    },
+    {
+      "component_id": "1043164152",
+      "name": "E_15_16_1_A_Q",
+      "group": "",
+      "x": "2196",
+      "y": "72"
+    },
+    {
+      "component_id": "1025015467",
+      "name": "E_15_16_1_B_Q",
+      "group": "",
+      "x": "2322",
+      "y": "72"
+    },
+    {
+      "component_id": "1150914960",
+      "name": "E_15_16_1_A_P",
+      "group": "",
+      "x": "2196",
+      "y": "36"
+    },
+    {
+      "component_id": "1485410067",
+      "name": "E_15_16_1_B_P",
+      "group": "",
+      "x": "2322",
+      "y": "36"
+    },
+    {
+      "component_id": "469620877",
+      "name": "E_16_24_1_A_I",
+      "group": "",
+      "x": "2556",
+      "y": "1224"
+    },
+    {
+      "component_id": "1347021643",
+      "name": "E_16_24_1_B_I",
+      "group": "",
+      "x": "2682",
+      "y": "1224"
+    },
+    {
+      "component_id": "1756685474",
+      "name": "E_16_24_1_A_Q",
+      "group": "",
+      "x": "2556",
+      "y": "1188"
+    },
+    {
+      "component_id": "203094552",
+      "name": "E_16_24_1_B_Q",
+      "group": "",
+      "x": "2682",
+      "y": "1188"
+    },
+    {
+      "component_id": "1556999142",
+      "name": "E_16_24_1_B_P",
+      "group": "",
+      "x": "2682",
+      "y": "1152"
+    },
+    {
+      "component_id": "885093637",
+      "name": "E_16_24_1_A_P",
+      "group": "",
+      "x": "2556",
+      "y": "1152"
+    },
+    {
+      "component_id": "1683482393",
+      "name": "E_17_18_1_A_I",
+      "group": "",
+      "x": "2646",
+      "y": "450"
+    },
+    {
+      "component_id": "220805846",
+      "name": "E_17_18_1_B_I",
+      "group": "",
+      "x": "2736",
+      "y": "450"
+    },
+    {
+      "component_id": "1101352989",
+      "name": "E_17_18_1_A_Q",
+      "group": "",
+      "x": "2646",
+      "y": "396"
+    },
+    {
+      "component_id": "1502058106",
+      "name": "E_17_18_1_B_Q",
+      "group": "",
+      "x": "2736",
+      "y": "432"
+    },
+    {
+      "component_id": "85250727",
+      "name": "E_17_18_1_B_P",
+      "group": "",
+      "x": "2736",
+      "y": "378"
+    },
+    {
+      "component_id": "565144072",
+      "name": "E_17_18_1_A_P",
+      "group": "",
+      "x": "2646",
+      "y": "378"
+    },
+    {
+      "component_id": "2114647004",
+      "name": "E_17_27_1_A_P",
+      "group": "",
+      "x": "2628",
+      "y": "18"
+    },
+    {
+      "component_id": "599995441",
+      "name": "E_17_27_1_B_P",
+      "group": "",
+      "x": "2718",
+      "y": "18"
+    },
+    {
+      "component_id": "1626851030",
+      "name": "E_17_27_1_B_Q",
+      "group": "",
+      "x": "2718",
+      "y": "54"
+    },
+    {
+      "component_id": "505899417",
+      "name": "E_17_27_1_A_Q",
+      "group": "",
+      "x": "2628",
+      "y": "54"
+    },
+    {
+      "component_id": "1741345923",
+      "name": "E_17_27_1_B_I",
+      "group": "",
+      "x": "2718",
+      "y": "90"
+    },
+    {
+      "component_id": "77810243",
+      "name": "E_17_27_1_A_I",
+      "group": "",
+      "x": "2628",
+      "y": "90"
+    },
+    {
+      "component_id": "1590321760",
+      "name": "E_21_22_1_A_I",
+      "group": "",
+      "x": "2592",
+      "y": "864"
+    },
+    {
+      "component_id": "1456918796",
+      "name": "E_21_22_1_B_I",
+      "group": "",
+      "x": "2718",
+      "y": "864"
+    },
+    {
+      "component_id": "2133321418",
+      "name": "E_21_22_1_A_Q",
+      "group": "",
+      "x": "2592",
+      "y": "828"
+    },
+    {
+      "component_id": "2057657878",
+      "name": "E_21_22_1_B_Q",
+      "group": "",
+      "x": "2718",
+      "y": "828"
+    },
+    {
+      "component_id": "1703368296",
+      "name": "E_21_22_1_B_P",
+      "group": "",
+      "x": "2718",
+      "y": "792"
+    },
+    {
+      "component_id": "1763026688",
+      "name": "E_21_22_1_A_P",
+      "group": "",
+      "x": "2592",
+      "y": "792"
+    },
+    {
+      "component_id": "9957131",
+      "name": "E_22_23_1_A_P",
+      "group": "",
+      "x": "2898",
+      "y": "792"
+    },
+    {
+      "component_id": "1086049601",
+      "name": "E_22_23_1_B_P",
+      "group": "",
+      "x": "3024",
+      "y": "792"
+    },
+    {
+      "component_id": "1364937158",
+      "name": "E_22_23_1_B_Q",
+      "group": "",
+      "x": "3024",
+      "y": "828"
+    },
+    {
+      "component_id": "1311354233",
+      "name": "E_22_23_1_A_Q",
+      "group": "",
+      "x": "2898",
+      "y": "828"
+    },
+    {
+      "component_id": "949551032",
+      "name": "E_22_23_1_B_I",
+      "group": "",
+      "x": "3024",
+      "y": "864"
+    },
+    {
+      "component_id": "467628462",
+      "name": "E_22_23_1_A_I",
+      "group": "",
+      "x": "2898",
+      "y": "864"
+    },
+    {
+      "component_id": "728596569",
+      "name": "E_23_24_1_A_P",
+      "group": "",
+      "x": "3186",
+      "y": "792"
+    },
+    {
+      "component_id": "1040581427",
+      "name": "E_23_24_1_B_P",
+      "group": "",
+      "x": "3312",
+      "y": "792"
+    },
+    {
+      "component_id": "295240987",
+      "name": "E_23_24_1_B_Q",
+      "group": "",
+      "x": "3312",
+      "y": "828"
+    },
+    {
+      "component_id": "1705913420",
+      "name": "E_23_24_1_A_Q",
+      "group": "",
+      "x": "3186",
+      "y": "828"
+    },
+    {
+      "component_id": "1672958815",
+      "name": "E_23_24_1_B_I",
+      "group": "",
+      "x": "3312",
+      "y": "864"
+    },
+    {
+      "component_id": "1529624026",
+      "name": "E_23_24_1_A_I",
+      "group": "",
+      "x": "3186",
+      "y": "864"
+    },
+    {
+      "component_id": "2044158552",
+      "name": "E_25_26_1_A_P",
+      "group": "",
+      "x": "2988",
+      "y": "450"
+    },
+    {
+      "component_id": "1592248183",
+      "name": "E_25_26_1_B_P",
+      "group": "",
+      "x": "3114",
+      "y": "450"
+    },
+    {
+      "component_id": "1066883784",
+      "name": "E_25_26_1_B_Q",
+      "group": "",
+      "x": "3114",
+      "y": "486"
+    },
+    {
+      "component_id": "2032778088",
+      "name": "E_25_26_1_A_Q",
+      "group": "",
+      "x": "2988",
+      "y": "486"
+    },
+    {
+      "component_id": "1797257820",
+      "name": "E_25_26_1_B_I",
+      "group": "",
+      "x": "3114",
+      "y": "522"
+    },
+    {
+      "component_id": "128389211",
+      "name": "E_25_26_1_A_I",
+      "group": "",
+      "x": "2988",
+      "y": "522"
+    },
+    {
+      "component_id": "615994028",
+      "name": "E_26_27_1_A_I",
+      "group": "",
+      "x": "2736",
+      "y": "324"
+    },
+    {
+      "component_id": "1538087823",
+      "name": "E_26_27_1_B_I",
+      "group": "",
+      "x": "2826",
+      "y": "324"
+    },
+    {
+      "component_id": "1497268863",
+      "name": "E_26_27_1_A_Q",
+      "group": "",
+      "x": "2736",
+      "y": "288"
+    },
+    {
+      "component_id": "1348887123",
+      "name": "E_26_27_1_B_Q",
+      "group": "",
+      "x": "2826",
+      "y": "288"
+    },
+    {
+      "component_id": "1402035498",
+      "name": "E_26_27_1_B_P",
+      "group": "",
+      "x": "2826",
+      "y": "252"
+    },
+    {
+      "component_id": "971727454",
+      "name": "E_26_27_1_A_P",
+      "group": "",
+      "x": "2736",
+      "y": "252"
+    },
+    {
+      "component_id": "1979701707",
+      "name": "E_26_28_1_A_I",
+      "group": "",
+      "x": "2988",
+      "y": "90"
+    },
+    {
+      "component_id": "812139948",
+      "name": "E_26_28_1_B_I",
+      "group": "",
+      "x": "3078",
+      "y": "90"
+    },
+    {
+      "component_id": "1357818295",
+      "name": "E_26_28_1_A_Q",
+      "group": "",
+      "x": "2988",
+      "y": "54"
+    },
+    {
+      "component_id": "81673629",
+      "name": "E_26_28_1_B_Q",
+      "group": "",
+      "x": "3078",
+      "y": "54"
+    },
+    {
+      "component_id": "1689196956",
+      "name": "E_26_28_1_B_P",
+      "group": "",
+      "x": "3078",
+      "y": "18"
+    },
+    {
+      "component_id": "784873247",
+      "name": "E_26_28_1_A_P",
+      "group": "",
+      "x": "2988",
+      "y": "18"
+    },
+    {
+      "component_id": "759213314",
+      "name": "E_26_29_1_A_P",
+      "group": "",
+      "x": "3456",
+      "y": "234"
+    },
+    {
+      "component_id": "1204488324",
+      "name": "E_26_29_1_B_P",
+      "group": "",
+      "x": "3546",
+      "y": "234"
+    },
+    {
+      "component_id": "1058242353",
+      "name": "E_26_29_1_B_Q",
+      "group": "",
+      "x": "3546",
+      "y": "270"
+    },
+    {
+      "component_id": "469985944",
+      "name": "E_26_29_1_A_Q",
+      "group": "",
+      "x": "3456",
+      "y": "270"
+    },
+    {
+      "component_id": "1011287374",
+      "name": "E_26_29_1_B_I",
+      "group": "",
+      "x": "3546",
+      "y": "306"
+    },
+    {
+      "component_id": "1347199140",
+      "name": "E_26_29_1_A_I",
+      "group": "",
+      "x": "3456",
+      "y": "306"
+    },
+    {
+      "component_id": "2084418159",
+      "name": "E_28_29_1_A_I",
+      "group": "",
+      "x": "3492",
+      "y": "90"
+    },
+    {
+      "component_id": "11383335",
+      "name": "E_28_29_1_B_I",
+      "group": "",
+      "x": "3618",
+      "y": "90"
+    },
+    {
+      "component_id": "1694381187",
+      "name": "E_28_29_1_A_Q",
+      "group": "",
+      "x": "3492",
+      "y": "54"
+    },
+    {
+      "component_id": "756535321",
+      "name": "E_28_29_1_B_Q",
+      "group": "",
+      "x": "3618",
+      "y": "54"
+    },
+    {
+      "component_id": "773629425",
+      "name": "E_28_29_1_B_P",
+      "group": "",
+      "x": "3618",
+      "y": "18"
+    },
+    {
+      "component_id": "1556898854",
+      "name": "E_28_29_1_A_P",
+      "group": "",
+      "x": "3492",
+      "y": "18"
+    },
+    {
+      "component_id": "306573742",
+      "name": "E_16_17_1_B_P",
+      "group": "",
+      "x": "2538",
+      "y": "270"
+    },
+    {
+      "component_id": "1580747686",
+      "name": "E_16_17_1_A_P",
+      "group": "",
+      "x": "2394",
+      "y": "270"
+    },
+    {
+      "component_id": "672274866",
+      "name": "E_16_17_1_B_Q",
+      "group": "",
+      "x": "2538",
+      "y": "306"
+    },
+    {
+      "component_id": "1103590722",
+      "name": "E_16_17_1_A_Q",
+      "group": "",
+      "x": "2394",
+      "y": "306"
+    },
+    {
+      "component_id": "1528618907",
+      "name": "E_16_17_1_B_I",
+      "group": "",
+      "x": "2538",
+      "y": "342"
+    },
+    {
+      "component_id": "1014269679",
+      "name": "E_16_17_1_A_I",
+      "group": "",
+      "x": "2394",
+      "y": "342"
+    },
+    {
+      "component_id": "1562377855",
+      "name": "Ipcmd",
+      "group": "",
+      "x": "1332",
+      "y": "306"
+    },
+    {
+      "component_id": "1862100554",
+      "name": "Ip_LVPL",
+      "group": "",
+      "x": "1332",
+      "y": "342"
+    },
+    {
+      "component_id": "1537584531",
+      "name": "Ip_cmd",
+      "group": "",
+      "x": "1332",
+      "y": "378"
+    },
+    {
+      "component_id": "349761298",
+      "name": "Iqcmd",
+      "group": "",
+      "x": "1332",
+      "y": "54"
+    },
+    {
+      "component_id": "1818661700",
+      "name": "Iq",
+      "group": "",
+      "x": "1332",
+      "y": "90"
+    },
+    {
+      "component_id": "1370766571",
+      "name": "Vflt",
+      "group": "",
+      "x": "1332",
+      "y": "486"
+    },
+    {
+      "component_id": "153056021",
+      "name": "Vt_scaled",
+      "group": "",
+      "x": "1332",
+      "y": "522"
+    },
+    {
+      "component_id": "1099187009",
+      "name": "LVPL",
+      "group": "",
+      "x": "1332",
+      "y": "558"
+    },
+    {
+      "component_id": "580625651",
+      "name": "PQflag",
+      "group": "",
+      "x": "3456",
+      "y": "180"
+    },
+    {
+      "component_id": "1574836590",
+      "name": "Qflag",
+      "group": "",
+      "x": "3456",
+      "y": "144"
+    },
+    {
+      "component_id": "258007133",
+      "name": "Vflag",
+      "group": "",
+      "x": "3456",
+      "y": "108"
+    },
+    {
+      "component_id": "1766896535",
+      "name": "PF_Flag",
+      "group": "",
+      "x": "3456",
+      "y": "72"
+    },
+    {
+      "component_id": "252601991",
+      "name": "Pflag",
+      "group": "",
+      "x": "3456",
+      "y": "216"
+    },
+    {
+      "component_id": "1226990372",
+      "name": "Freeze",
+      "group": "",
+      "x": "3456",
+      "y": "288"
+    },
+    {
+      "component_id": "1516760206",
+      "name": "online",
+      "group": "",
+      "x": "3456",
+      "y": "324"
+    },
+    {
+      "component_id": "1450500460",
+      "name": "Vt_filt",
+      "group": "",
+      "x": "3456",
+      "y": "432"
+    },
+    {
+      "component_id": "1201874902",
+      "name": "Ivdl1",
+      "group": "",
+      "x": "3456",
+      "y": "468"
+    },
+    {
+      "component_id": "1817277221",
+      "name": "Ivdl2",
+      "group": "",
+      "x": "3456",
+      "y": "504"
+    },
+    {
+      "component_id": "180432592",
+      "name": "Volt_dip",
+      "group": "",
+      "x": "3456",
+      "y": "360"
+    },
+    {
+      "component_id": "1363305825",
+      "name": "State2",
+      "group": "",
+      "x": "3456",
+      "y": "576"
+    },
+    {
+      "component_id": "638858606",
+      "name": "Iqinj",
+      "group": "",
+      "x": "3456",
+      "y": "612"
+    },
+    {
+      "component_id": "27490869",
+      "name": "11",
+      "group": "",
+      "x": "2070",
+      "y": "954"
+    },
+    {
+      "component_id": "616978169",
+      "name": "33",
+      "group": "",
+      "x": "2520",
+      "y": "954"
+    },
+    {
+      "component_id": "1360873131",
+      "name": "22",
+      "group": "",
+      "x": "2268",
+      "y": "1062"
+    },
+    {
+      "component_id": "1505823658",
+      "name": "PQVdipflag",
+      "group": "",
+      "x": "1224",
+      "y": "1296"
+    },
+    {
+      "component_id": "1600116776",
+      "name": "RT_9",
+      "group": "",
+      "x": "2466",
+      "y": "1332"
+    },
+    {
+      "component_id": "338829223",
+      "name": "RT_8",
+      "group": "",
+      "x": "2286",
+      "y": "1314"
+    },
+    {
+      "component_id": "1134905579",
+      "name": "Iq",
+      "group": "",
+      "x": "2214",
+      "y": "468"
+    },
+    {
+      "component_id": "1041376540",
+      "name": "Qord",
+      "group": "",
+      "x": "1872",
+      "y": "270"
+    },
+    {
+      "component_id": "1295323910",
+      "name": "Pord",
+      "group": "",
+      "x": "1872",
+      "y": "234"
+    },
+    {
+      "component_id": "1774947919",
+      "name": "PLL_f",
+      "group": "",
+      "x": "1872",
+      "y": "162"
+    },
+    {
+      "component_id": "1929161100",
+      "name": "Iq",
+      "group": "",
+      "x": "1872",
+      "y": "342"
+    },
+    {
+      "component_id": "1963689431",
+      "name": "Id",
+      "group": "",
+      "x": "1872",
+      "y": "306"
+    },
+    {
+      "component_id": "2061020047",
+      "name": "Theta_P",
+      "group": "",
+      "x": "1872",
+      "y": "198"
+    },
+    {
+      "component_id": "1752611454",
+      "name": "Vrms",
+      "group": "",
+      "x": "1872",
+      "y": "54"
+    },
+    {
+      "component_id": "1943474528",
+      "name": "IPord",
+      "group": "",
+      "x": "1872",
+      "y": "378"
+    },
+    {
+      "component_id": "1478475001",
+      "name": "IQord",
+      "group": "",
+      "x": "1872",
+      "y": "414"
+    },
+    {
+      "component_id": "214056558",
+      "name": "Vd",
+      "group": "",
+      "x": "1872",
+      "y": "450"
+    },
+    {
+      "component_id": "293385472",
+      "name": "Vq",
+      "group": "",
+      "x": "1872",
+      "y": "486"
+    },
+    {
+      "component_id": "2043757830",
+      "name": "Pfilter",
+      "group": "",
+      "x": "1872",
+      "y": "522"
+    },
+    {
+      "component_id": "12140810",
+      "name": "Qfilter",
+      "group": "",
+      "x": "1872",
+      "y": "558"
+    },
+    {
+      "component_id": "595025690",
+      "name": "Ve",
+      "group": "",
+      "x": "1872",
+      "y": "18"
+    },
+    {
+      "component_id": "1496928028",
+      "name": "Pe",
+      "group": "",
+      "x": "1872",
+      "y": "90"
+    },
+    {
+      "component_id": "775591632",
+      "name": "P",
+      "group": "",
+      "x": "1872",
+      "y": "126"
+    },
+    {
+      "component_id": "1168372200",
+      "name": "Iaa",
+      "group": "",
+      "x": "1872",
+      "y": "666"
+    },
+    {
+      "component_id": "724279129",
+      "name": "Ref_a",
+      "group": "",
+      "x": "1872",
+      "y": "702"
+    },
+    {
+      "component_id": "99830841",
+      "name": "Idc_out",
+      "group": "",
+      "x": "1872",
+      "y": "594"
+    },
+    {
+      "component_id": "807034221",
+      "name": "Edc",
+      "group": "",
+      "x": "1872",
+      "y": "630"
+    },
+    {
+      "component_id": "1703981874",
+      "name": "Q0",
+      "group": "",
+      "x": "1782",
+      "y": "18"
+    },
+    {
+      "component_id": "1853265881",
+      "name": "Qref_REEC",
+      "group": "",
+      "x": "1854",
+      "y": "180"
+    },
+    {
+      "component_id": "376516141",
+      "name": "Pref_REEC",
+      "group": "",
+      "x": "1944",
+      "y": "180"
+    },
+    {
+      "component_id": "361898034",
+      "name": "1",
+      "group": "",
+      "x": "1188",
+      "y": "306"
+    },
+    {
+      "component_id": "1392675272",
+      "name": "2",
+      "group": "",
+      "x": "1296",
+      "y": "306"
+    },
+    {
+      "component_id": "1561958760",
+      "name": "3",
+      "group": "",
+      "x": "1530",
+      "y": "306"
+    },
+    {
+      "component_id": "1192539155",
+      "name": "4",
+      "group": "",
+      "x": "1728",
+      "y": "306"
+    },
+    {
+      "component_id": "696959547",
+      "name": "P_err",
+      "group": "",
+      "x": "972",
+      "y": "720"
+    },
+    {
+      "component_id": "1129853286",
+      "name": "Droop",
+      "group": "",
+      "x": "936",
+      "y": "864"
+    }
+  ]
+}

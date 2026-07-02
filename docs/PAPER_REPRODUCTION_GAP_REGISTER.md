@@ -49,3 +49,15 @@ G09 is also no longer contradicted at the static project-setting level because
 `Duration of Run` is now 20 s. It remains dynamically unvalidated: no Run was
 performed in this stage, and no paper cascade outcome, load shedding, line
 overload, generator protection, or mitigation-performance claim is permitted.
+
+## Paper-aligned 20 s dynamic Run addendum
+
+G03 has advanced from static construction to raw dynamic observability. The
+single approved 20 s Run was parsed offline, and all 31 network TLines have
+usable terminal A/B P/Q/I window metrics. This provides evidence for raw
+network-wide branch response observation only.
+
+G04 and G05 remain open. No line loading ratio, inverse-time overload relay,
+line breaker command, or transmission-line trip mechanism exists. The dynamic
+Run therefore cannot be cited as overload validation, branch-trip validation,
+natural cascade propagation, or strict thesis reproduction.

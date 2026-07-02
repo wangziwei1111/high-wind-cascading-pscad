@@ -1,7 +1,7 @@
 {
   "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
-  "trial_sha256": "1F747F067339547ECCFD03AD41A1B56ABE3DDC6D627AD1F085B37BFA9532DD95",
-  "output_channel_count": 262,
+  "trial_sha256": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "output_channel_count": 448,
   "capabilities": [
     {
       "capability_id": "CAP01",
@@ -32,9 +32,9 @@
       "source_or_network_object": "branches",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
       "xml_or_fortran_evidence": "31 genuine P3 network TLines each have terminal A/B native master:multimeter P/Q/Crms bindings and six monitor-only Output Channels; final XML channel count 448 = 262 + 186",
-      "existing_dynamic_evidence": "data/validation/full_network_tline_measurement_final_audit.json",
-      "current_status": "implemented_static_only",
-      "claim_boundary": "Full-network raw branch P/Q/I observability is statically built and audited; loading ratio, overload status, protection, branch trip and cascade behavior remain unavailable until future Run/offline analysis."
+      "existing_dynamic_evidence": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json; data/derived/full_network_tline_window_metrics.csv",
+      "current_status": "dynamic_raw_response_observed_no_loading_or_protection",
+      "claim_boundary": "Full-network raw branch P/Q/I response is observable and parsed for one 20 s N29 fault Run; loading ratio, overload status, protection, branch trip, causality and cascade behavior remain unavailable."
     },
     {
       "capability_id": "CAP04",
@@ -65,9 +65,9 @@
       "source_or_network_object": "fault",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
       "xml_or_fortran_evidence": "master:tfaultn present; existing fixed scenario differs from thesis bus-29 benchmark",
-      "existing_dynamic_evidence": "data/reference/type3_dfig_fault_interface_audit.json",
-      "current_status": "partially_available",
-      "claim_boundary": "A fault mechanism exists, but paper location/timing and clearing are not reproduced."
+      "existing_dynamic_evidence": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json",
+      "current_status": "dynamic_fault_run_observed",
+      "claim_boundary": "The configured 20 s N29 three-phase fault Run was parsed; this is not strict thesis scenario reproduction and does not validate cascade mechanisms."
     },
     {
       "capability_id": "CAP07",
@@ -302,5 +302,8 @@
     }
   ],
   "trial_sha256_after_full_network_tline_measurement": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",
-  "output_channel_count_after_full_network_tline_measurement": 448
+  "output_channel_count_after_full_network_tline_measurement": 448,
+  "paper_aligned_20s_dynamic_run_status": "pass",
+  "paper_aligned_20s_dynamic_run_final_audit": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json",
+  "full_network_tline_dynamic_raw_signal_count": 186
 }

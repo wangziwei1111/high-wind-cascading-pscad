@@ -117,3 +117,23 @@ This updates P03/P04/P05/P06 to `implemented_static_only` or
 upgrade the overall reproduction level to strict or dynamic paper reproduction:
 no Run was performed, and branch overload, line-trip, UFLS/UVLS, generator
 protection, and mitigation mechanisms remain future work.
+
+## Paper-aligned 20 s dynamic Run and full-network TLine response addendum
+
+The approved single PSCAD GUI Run of the already configured 20 s N29
+three-phase fault has now been parsed offline. The trial model hash remained
+`F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300`, the main
+model hash remained
+`CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB`, and the
+static XML Output Channel count remained 448.
+
+The Run produced a valid 0-20 s time axis and all 31 genuine network TLines
+were parsed with terminal A/B P/Q/I metrics, for 186 raw branch signals. This
+updates P08 from `implemented_static_only` to
+`dynamic_observation_not_causal`: raw power-flow/current redistribution is now
+observable in the Run outputs, but loading ratios, overload status, relays,
+line trips, and causality remain unavailable.
+
+P09, P10, P11-P15 remain missing. Strict thesis reproduction remains
+`not_achieved`; the safe project name remains `controlled-interface validation
+scaffold`.
