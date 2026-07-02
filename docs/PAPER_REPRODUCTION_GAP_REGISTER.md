@@ -73,3 +73,14 @@ G04 remains open because no overload relay, inverse-time delay, thermal memory,
 or trip criterion exists. G05 remains open because no transmission-line breaker
 command or line-opening boundary has been implemented. Ratio-above-one
 observations are therefore not overload proof and not line-protection evidence.
+
+## Stage-five-B semantic correction
+
+The later TLine Total MVA semantic audit reclassified the uniform `100.0 MVA`
+field as `uniform_model_value_or_default_parameter`, not a verified continuous
+thermal or protection-grade rating. Therefore previous S/100 MVA values must be
+read as a `100-MVA-normalized apparent-power response index`, not an overload
+ratio. `E_28_29_1` remains only the highest normalized apparent-power response
+line. Shadow overload relay modeling is blocked until auditable per-line
+continuous thermal limits, or a reproducible paper-to-current-model rating
+mapping, are available.

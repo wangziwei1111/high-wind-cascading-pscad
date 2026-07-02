@@ -132,3 +132,14 @@ reproduction remain unavailable/unvalidated.
 Detailed evidence is in
 `docs/FULL_NETWORK_TLINE_RATING_AND_LOADING_AUDIT.md` and
 `data/validation/tline_rating_loading_final_audit.json`.
+
+## Stage-five-B semantic correction
+
+The later TLine Total MVA semantic audit reclassified the uniform `100.0 MVA`
+field as `uniform_model_value_or_default_parameter`, not a verified continuous
+thermal or protection-grade rating. Therefore previous S/100 MVA values must be
+read as a `100-MVA-normalized apparent-power response index`, not an overload
+ratio. `E_28_29_1` remains only the highest normalized apparent-power response
+line. Shadow overload relay modeling is blocked until auditable per-line
+continuous thermal limits, or a reproducible paper-to-current-model rating
+mapping, are available.

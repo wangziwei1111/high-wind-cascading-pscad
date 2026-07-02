@@ -1,8 +1,8 @@
 {
   "artifact": "full_network_tline_rating_basis",
   "generated_at_local": "2026-07-03T03:37:36",
-  "rating_coverage_status": "pass_full_rating_coverage",
-  "qualified_line_count": 31,
+  "rating_coverage_status": "semantic_reclassified_not_protection_grade",
+  "qualified_line_count": 0,
   "insufficient_line_count": 0,
   "conflicting_line_count": 0,
   "rating_source_summary": {
@@ -10,7 +10,7 @@
     "external_raw_rate_fields_zero_unspecified": 31
   },
   "current_rating_qualified_count": 0,
-  "apparent_power_rating_qualified_count": 31,
+  "apparent_power_rating_qualified_count": 0,
   "rows": [
     {
       "network_branch_id": "E_1_2_1",
@@ -27,7 +27,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -36,8 +36,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -55,7 +55,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -64,8 +64,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -83,7 +83,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -92,8 +92,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -111,7 +111,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -120,8 +120,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -139,7 +139,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -148,8 +148,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -167,7 +167,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -176,8 +176,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -195,7 +195,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -204,8 +204,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -223,7 +223,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -232,8 +232,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -251,7 +251,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -260,8 +260,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -279,7 +279,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -288,8 +288,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -307,7 +307,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -316,8 +316,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -335,7 +335,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -344,8 +344,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -363,7 +363,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -372,8 +372,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -391,7 +391,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -400,8 +400,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -419,7 +419,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -428,8 +428,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -447,7 +447,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -456,8 +456,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -475,7 +475,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -484,8 +484,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -503,7 +503,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -512,8 +512,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -531,7 +531,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -540,8 +540,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -559,7 +559,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -568,8 +568,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -587,7 +587,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -596,8 +596,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -615,7 +615,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -624,8 +624,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -643,7 +643,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -652,8 +652,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -671,7 +671,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -680,8 +680,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -699,7 +699,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -708,8 +708,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -727,7 +727,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -736,8 +736,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -755,7 +755,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -764,8 +764,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -783,7 +783,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -792,8 +792,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -811,7 +811,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -820,8 +820,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -839,7 +839,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -848,8 +848,8 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     },
     {
@@ -867,7 +867,7 @@
       "rating_kind": "apparent_power",
       "rating_value": 100.0,
       "rating_unit": "MVA",
-      "rating_continuous_or_short_term_status": "model_total_mva_rating_no_short_term_flag",
+      "rating_continuous_or_short_term_status": "not_verified_continuous_thermal_or_protection_grade",
       "voltage_rating_kv_ll_rms": 345.0,
       "signal_unit_basis": "P/Q are p.u. on 100 MVA system base from audited master:multimeter semantics",
       "signal_base_value": "100 MVA",
@@ -876,9 +876,15 @@
       "terminal_B_rating_compatibility_status": "pass",
       "branch_mapping_status": "pass",
       "unit_consistency_status": "pass",
-      "qualification_status": "qualified_apparent_power_rating",
-      "rejection_reason": "",
+      "qualification_status": "model_total_mva_field_not_protection_grade",
+      "rejection_reason": "Stage-five-B semantic audit found no independent continuous thermal/protection-grade evidence for the uniform 100 MVA field.",
       "supporting_negative_evidence": "External RAW RATE1..RATE12 fields are zero for network branches and are treated as unspecified, not as usable ratings."
     }
-  ]
+  ],
+  "stage5b_semantic_correction": {
+    "semantic_classification": "uniform_model_value_or_default_parameter",
+    "loading_ratio_semantic_status": "not_protection_grade_use_normalized_apparent_power_response_index",
+    "corrected_safe_term": "100-MVA-normalized apparent-power response index",
+    "reason": "Total MVA Rating lacks verified continuous thermal / protection-grade semantics"
+  }
 }

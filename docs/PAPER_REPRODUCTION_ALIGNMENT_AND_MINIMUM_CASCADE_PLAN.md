@@ -154,3 +154,14 @@ trip, or natural cascade mechanism has been implemented or validated.
 The recommended future shadow-overload candidate is `E_28_29_1`; `E_16_19_1`
 remains paper-relevant but ranks ninth under the current model's audited
 post-clear loading metric. Strict thesis reproduction remains `not_achieved`.
+
+## Stage-five-B semantic correction
+
+The later TLine Total MVA semantic audit reclassified the uniform `100.0 MVA`
+field as `uniform_model_value_or_default_parameter`, not a verified continuous
+thermal or protection-grade rating. Therefore previous S/100 MVA values must be
+read as a `100-MVA-normalized apparent-power response index`, not an overload
+ratio. `E_28_29_1` remains only the highest normalized apparent-power response
+line. Shadow overload relay modeling is blocked until auditable per-line
+continuous thermal limits, or a reproducible paper-to-current-model rating
+mapping, are available.

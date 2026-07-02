@@ -14,8 +14,8 @@
   "no_pscad_modification_status": "pass",
   "no_build_status": "pass",
   "no_run_status": "pass",
-  "line_loading_ratio_status": "observed_for_qualified_lines_only",
-  "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
+  "line_loading_ratio_status": "reclassified_as_100mva_normalized_apparent_power_response_index",
+  "line_overload_status": "not_validated",
   "line_protection_status": "unavailable",
   "branch_trip_status": "unavailable",
   "natural_cascade_propagation_status": "unavailable",
@@ -31,5 +31,8 @@
   "xml_output_channel_count": 448,
   "tline_raw_signal_count": 186,
   "runtime_non_tline_missing_channel_count": 9,
-  "claim_boundary": "Offline rating/loading audit only; no PSCAD model change, Build, Run, relay, breaker command, line trip, or natural cascade validation."
+  "claim_boundary": "Numeric S/model-Total-MVA response remains available; no protection-grade loading ratio, overload, relay, line trip, or natural cascade is validated.",
+  "tline_rating_semantic_stage5b_status": "corrected_not_protection_grade",
+  "shadow_relay_modeling_readiness": "blocked",
+  "semantic_correction_audit": "data/validation/tline_rating_semantic_final_audit.json"
 }

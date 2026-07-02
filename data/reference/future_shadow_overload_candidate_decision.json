@@ -1,28 +1,14 @@
 {
-  "recommended_candidate_line": "E_28_29_1",
-  "rating_basis_id": "E_28_29_1:generated_tli_total_mva_rating",
-  "loading_formula": "L_S(t)=max(sqrt(P_A(t)^2+Q_A(t)^2), sqrt(P_B(t)^2+Q_B(t)^2))/(Total_MVA_Rating/100MVA)",
-  "post_clear_loading_metrics": {
-    "post_clear_late_loading_max": 15.36295434464307,
-    "post_clear_late_loading_mean": 12.944166897570064,
-    "post_clear_early_loading_max": 19.695969170689732,
-    "post_clear_early_loading_mean": 16.45095235413388
-  },
-  "candidate_selection_rationale": "Highest post-clear-late loading max under the audited TLI Total MVA rating basis.",
-  "paper_relation": "Candidate for future monitor-only shadow overload evaluation only; not evidence of paper line protection or natural cascade.",
-  "e_16_19_1_status": {
-    "exists_in_current_project": true,
-    "rating_basis_status": "qualified_apparent_power_rating",
-    "loading_ratio_computable": true,
-    "rank": 9,
-    "post_clear_late_loading_max": 12.302169745636933,
-    "reason_not_preselected_from_paper": "The thesis names E_16_19_1 as a first overloaded line in its own model, but current PSCAD topology/ratings are an adaptation; selection must follow current audited ratings and run outputs."
-  },
-  "required_missing_items_before_shadow_relay": [
-    "Explicit shadow-relay criterion and time model",
-    "Build-only implementation plan",
-    "One controlled Run and offline parser",
-    "Audit proving no breaker command or line trip is introduced unless separately authorized"
+  "shadow_relay_modeling_readiness": "blocked",
+  "recommended_candidate_line": null,
+  "blocking_reason": "Total MVA Rating lacks verified continuous thermal / protection-grade semantics",
+  "required_next_task": "Find or import auditable per-line continuous thermal limits, or build a reproducible mapping between paper line ratings and current PSCAD TLine instances before any shadow overload relay modeling.",
+  "highest_normalized_apparent_power_response_line": "E_28_29_1",
+  "current_safe_term_for_E_28_29_1": "highest normalized apparent-power response line",
+  "prohibited_terms": [
+    "shadow-relay candidate",
+    "overload indication",
+    "protection-grade loading ratio"
   ],
-  "recommended_next_task": "One combined future task: monitor-only shadow overload criterion for the selected line -> Build -> one controlled Run -> automatic parsing -> audit/docs/Git/PR."
+  "semantic_audit": "data/reference/tline_total_mva_rating_semantic_audit.json"
 }
