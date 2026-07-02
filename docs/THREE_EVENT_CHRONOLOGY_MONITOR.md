@@ -131,3 +131,10 @@ The corrected final audit keeps the three-event dynamic chronology evidence
 unchanged, but fixes the static IBR2 production target used for restoration
 checks. No PSCAD Build or Run was performed. See
 `docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.
+## 2026-07-02 electrical-response Run addendum
+
+The controlled electrical-response Run retained strict A < B < C ordering at
+2.01603, 4.000005, and 4.5 s, with first-source code 1, order-class code 4,
+and consistency 1. See
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`. This is controlled
+timing-interface evidence, not natural cascade evidence.

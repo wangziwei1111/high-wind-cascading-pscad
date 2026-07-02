@@ -516,5 +516,13 @@
     "report": "docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md",
     "audit_correction_report": "docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md",
     "claim_boundary": "Controlled timing-interface validation only; does not validate natural cascade propagation, physical causality direction, stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_three_source_electrical_response_validation": {
+    "date": "2026-07-02",
+    "dynamic_run_status": "pass",
+    "electrical_response_observability_status": "pass",
+    "summary": "One controlled Run parsed three event interfaces and complete descriptive windows for nine V/P/Q monitor-only channels; trial defaults were restored and rebuilt without another Run.",
+    "report": "docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md",
+    "claim_boundary": "Does not expand scaffold coverage to natural cascade propagation, physical causality, stability, protection coordination, voltage-support performance, or MATLAB coupling."
   }
 }

@@ -78,5 +78,15 @@
     "summary": "One approved Run exercised the strict three-event branch: first=2.01603 s, second=4.000005 s, third=5.0 s, gaps 1.983975 s and 0.999995 s, first-source=1, order-class=4, consistency=1.",
     "report": "docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md",
     "claim_boundary": "Controlled timing-interface validation only; does not validate natural cascade propagation, physical causality direction, stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_three_source_electrical_response_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "CONTROLLED_DFIG_IBR2_IBR3_ELECTRICAL_RESPONSE",
+    "dynamic_run_status": "pass",
+    "event_times_s": [2.01603, 4.000005, 4.5],
+    "controlled_three_event_order_status": "pass",
+    "summary": "The controlled Run retained A < B < C, first-source 1, order-class 4, and consistency 1 while nine monitor-only V/P/Q traces were parsed.",
+    "report": "docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md",
+    "claim_boundary": "Controlled timing-interface evidence only; no natural cascade propagation or physical causality is validated."
   }
 }

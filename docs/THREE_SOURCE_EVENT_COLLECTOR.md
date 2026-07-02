@@ -90,3 +90,10 @@ The corrected final audit no longer uses module-test harness objects as IBR2
 production evidence. It resolves source-B via the production `IBR2_CAS_*`
 signals and their `IBR2_TRIAL_CASCADE_*` Output Channels feeding the collector.
 See `docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.
+## 2026-07-02 electrical-response Run addendum
+
+One controlled Run recorded event times 2.01603, 4.000005, and 4.5 s. The
+collector reported three evented/timed sources and cause codes 2/4/5. Nine
+V/P/Q traces were parsed separately as monitor-only data. See
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`; no natural cascade or
+physical causality claim is made.

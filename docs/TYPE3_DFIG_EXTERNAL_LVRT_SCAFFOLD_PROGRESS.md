@@ -619,3 +619,12 @@ to both test enables at 0 and rebuilt without a second Run.
 
 See `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`. This is
 not a natural cascade propagation or physical causality validation.
+
+## 2026-07-02 three-source electrical-response observability
+
+One controlled Run parsed the existing DFIG event and independently scheduled
+IBR2/IBR3 trial events together with all nine V/P/Q monitor-only channels.
+Complete descriptive event windows are recorded in
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`. This does not expand
+the scaffold into a causality, stability, protection, or voltage-support
+validation.

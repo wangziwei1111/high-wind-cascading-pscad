@@ -86,3 +86,9 @@ production path from module-test harness objects. The corrected target uses
 the production `IBR2_TEST_ENABLE`, `IBR2_TRIAL_BRK_CMD`, `BRK_IBR2_TRIAL`,
 `IBR2_CAS_*`, and `IBR2_TRIAL_CASCADE_*` interfaces. See
 `docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.
+## Three-source electrical-response addendum
+
+A later single controlled Run temporarily enabled both trial stimuli and
+recorded the IBR2 event at 4.000005 s with cause 4 plus complete nine-channel
+V/P/Q windows. IBR2 was restored disabled afterward. See
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`.

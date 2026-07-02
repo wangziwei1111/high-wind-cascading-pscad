@@ -318,3 +318,11 @@ Historical C1/C2/C3/R5 closed-loop coverage remains unchanged and partial.
 This addendum does not validate natural cascade propagation, physical
 causality direction, system stability, protection coordination, or MATLAB
 coupling.
+
+## Three-source electrical-response observability addendum
+
+One controlled Run added descriptive V/P/Q trajectory evidence around the
+three configured event times. See
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`. Historical closed-loop
+coverage remains unchanged and partial; the result is not stability,
+protection coordination, voltage-support, causality, or MATLAB validation.

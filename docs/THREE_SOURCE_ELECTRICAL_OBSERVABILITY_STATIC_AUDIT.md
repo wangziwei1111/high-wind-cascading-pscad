@@ -34,3 +34,14 @@ electrical response is claimed.
 This change adds observability only. It does not add sources, breakers,
 event modules, time-ordering logic, protection logic, control feedback,
 MATLAB coupling, or runtime validation.
+
+## 2026-07-02 controlled dynamic observability addendum
+
+One later approved Run parsed all nine monitor-only channels and complete
+pre/early-post/late-post windows around DFIG, IBR2_TRIAL, and IBR3_TRIAL
+controlled events. Both trial enables and the temporary IBR3 4.5 s setting
+were restored afterward. See
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`.
+
+This addendum records trajectories only and does not validate physical
+performance, natural cascade propagation, causality, or stability.

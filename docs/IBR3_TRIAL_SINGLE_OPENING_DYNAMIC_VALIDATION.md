@@ -140,3 +140,9 @@ A later approved single Run enabled both IBR2_TRIAL and IBR3_TRIAL
 trial-only stimuli. IBR3_TRIAL appeared as the third event at 5.0 s in the
 strict three-event chronology. See
 `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`.
+## Three-source electrical-response addendum
+
+A later single controlled Run temporarily used IBR3 `OPEN_TIME_S = 4.5 s` and
+recorded the IBR3 event at 4.5 s with cause 5 plus complete nine-channel V/P/Q
+windows. IBR3 was restored disabled with `OPEN_TIME_S = 5.0 s` afterward. See
+`docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md`.
