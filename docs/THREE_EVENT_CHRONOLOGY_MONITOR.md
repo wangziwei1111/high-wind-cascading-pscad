@@ -79,3 +79,17 @@ The isolated harness instances are:
 - `MODTEST_THREE_EVENT_CHRONOLOGY_THREE_TIE`
 
 These are static build harnesses only. No PSCAD Run was performed.
+
+## Dynamic validation addendum: 2026-07-02
+
+One later approved IBR3_TRIAL single-opening Run parsed the production
+`CASCADE3_TRIAL__CHRONOLOGY_MONITOR` Output Channels. In that run an existing
+DFIG event was first at 2.01603 s and the IBR3 trial event was second at
+5.0 s; the first-to-second gap was 2.98397 s, third time remained `-1`, and
+`CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT` remained 1.
+
+The detailed result is documented in
+`docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This validates only
+that single run's chronology monitor outputs and does not establish cascade
+propagation, physical causality direction, system stability, or MATLAB
+coupling.

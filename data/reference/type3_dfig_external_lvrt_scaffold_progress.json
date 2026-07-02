@@ -455,7 +455,11 @@
     "collector_report": "docs/THREE_SOURCE_EVENT_COLLECTOR.md",
     "trial_final_sha256": "CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E",
     "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
-    "real_sources": ["TYPE3_DFIG_1", "IBR2_TRIAL", "IBR3_TRIAL"],
+    "real_sources": [
+      "TYPE3_DFIG_1",
+      "IBR2_TRIAL",
+      "IBR3_TRIAL"
+    ],
     "output_channel_count": 245,
     "build_errors": 0,
     "dynamic_behavior_status": "unavailable",
@@ -474,5 +478,13 @@
     "dynamic_behavior_status": "unavailable",
     "cascade_propagation_status": "unavailable",
     "pscad_run_performed": false
+  },
+  "last_dynamic_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "summary": "One approved trial-only PSCAD Run temporarily enabled IBR3_TRIAL__OPEN_STIMULUS, observed the IBR3 local-opening chain at 5.0 s, parsed collector/chronology monitor outputs, and restored IBR3 test enable to 0.",
+    "report": "docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
   }
 }

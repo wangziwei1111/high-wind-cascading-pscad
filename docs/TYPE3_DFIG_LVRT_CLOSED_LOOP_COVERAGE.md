@@ -277,3 +277,14 @@ and third event times, two adjacent time gaps, first-source code, order-class
 code, and consistency. Historical C1/C2/C3/R5 coverage is unchanged. Dynamic
 three-source timing, event sequence, physical isolation, source interaction,
 and cascade propagation remain unavailable because no new PSCAD Run occurred.
+
+## IBR3 single-opening dynamic validation addendum
+
+One approved later PSCAD Run observed the IBR3_TRIAL local-opening chain at
+5.0 s under a temporary trial-only test enable. The final trial project was
+restored to `IBR3 test enable = 0`. See
+`docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`.
+
+This addendum does not expand closed-loop coverage to cascade propagation,
+physical causality direction, system stability, protection coordination, or
+MATLAB coupling.

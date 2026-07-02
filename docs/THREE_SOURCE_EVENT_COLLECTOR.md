@@ -40,3 +40,16 @@ existing three-source event-valid and first-event-time interfaces. It does
 not modify `CASCADE3_TRIAL__EVENT_COLLECTOR`, does not consume cause codes or
 breaker commands, and does not feed any protection or breaker path. Its
 outputs are `CASCADE3_CHR_*` monitor-only labels.
+
+## Dynamic validation addendum: 2026-07-02
+
+One later approved Run temporarily enabled only the IBR3 trial local-opening
+stimulus. The three-source collector monitor outputs were parsed from PSCAD
+Output Channels: IBR3 cause code propagated as 5, evented source count reached
+2 because an existing DFIG event was also present, and IBR2 test enable stayed
+0. The result is documented in
+`docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`.
+
+This addendum validates the collector's monitored dynamic equivalence for that
+single fixed run only. It is not a claim of cascade propagation, physical
+causality direction, system stability, or MATLAB coupling.

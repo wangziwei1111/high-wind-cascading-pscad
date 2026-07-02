@@ -577,3 +577,15 @@ instance `CASCADE3_TRIAL__CHRONOLOGY_MONITOR` reading A=`TYPE3_DFIG_1`,
 B=`IBR2_TRIAL`, and C=`IBR3_TRIAL` event-valid/first-time interfaces. Eight
 Output Channels were added, bringing the total to 253. The static audit
 passes; no PSCAD Run or dynamic ordering validation was performed.
+
+## 2026-07-02 IBR3 single-opening dynamic validation
+
+One approved trial-only PSCAD Run temporarily enabled only the
+`IBR3_TRIAL__OPEN_STIMULUS` test enable. The IBR3 open request, breaker
+command, actual breaker open monitor, event packet, collector output, and
+chronology output were dynamically observed and parsed. The final trial was
+restored to `IBR3 test enable = 0`.
+
+See `docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This does not
+validate three-source cascade propagation, physical causality direction,
+system stability, protection coordination, or MATLAB coupling.

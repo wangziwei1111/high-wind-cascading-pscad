@@ -58,3 +58,16 @@ Twenty-one channels were added, bringing the total from 224 to 245; the prior
 These are static interface expectations only. No PSCAD Run was performed in
 this task. No causal cascade propagation was validated. Physical isolation,
 dynamic timing, and three-source interaction remain unavailable.
+
+## Dynamic validation update: 2026-07-02
+
+One later approved trial-only Run temporarily enabled only
+`IBR3_TRIAL__OPEN_STIMULUS` and observed the IBR3 local-opening chain at
+5.0 s. The run result is documented in
+`docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`.
+
+The final trial project was restored to the default-disabled IBR3 test stimulus
+(`IBR3 test enable = 0`). This update validates only the IBR3_TRIAL local
+opening interface in that single run. It does not validate three-source cascade
+propagation, physical causality direction, system stability, protection
+coordination, or MATLAB coupling.
