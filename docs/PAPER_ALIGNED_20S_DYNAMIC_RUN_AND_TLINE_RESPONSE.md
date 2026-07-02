@@ -114,3 +114,21 @@ This stage does not support claims of line loading ratio, overload, relay
 operation, branch trip, natural cascade propagation, physical causality
 direction, protection coordination, voltage-support performance, system
 stability, MATLAB coupling, or strict thesis reproduction.
+
+## Stage-five offline loading addendum
+
+The follow-up rating/loading audit reused this same 20 s Run and did not modify
+PSCAD, Build, or Run. Exact generated `.tli` records were found for all 31
+network TLines, each with `Total MVA Rating = 100.0`, enabling offline
+apparent-power loading-ratio reconstruction for qualified lines only.
+
+The resulting `line_loading_ratio_status` is
+`observed_for_qualified_lines_only`. `line_overload_status` remains
+`not_validated_no_relay_or_thermal_time_model`, and line protection, branch
+trip, natural cascade propagation, causality, stability, protection
+coordination, voltage-support performance, MATLAB coupling, and strict thesis
+reproduction remain unavailable/unvalidated.
+
+Detailed evidence is in
+`docs/FULL_NETWORK_TLINE_RATING_AND_LOADING_AUDIT.md` and
+`data/validation/tline_rating_loading_final_audit.json`.

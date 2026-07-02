@@ -61,3 +61,15 @@ G04 and G05 remain open. No line loading ratio, inverse-time overload relay,
 line breaker command, or transmission-line trip mechanism exists. The dynamic
 Run therefore cannot be cited as overload validation, branch-trip validation,
 natural cascade propagation, or strict thesis reproduction.
+
+## Full-network TLine rating/loading addendum
+
+G03 now has offline loading-ratio evidence for all 31 current-model TLines,
+using exact generated `.tli` `Total MVA Rating` records and the existing
+stage-four 20 s Run. This closes the rating-basis part of the raw observability
+gap for the current PSCAD adaptation.
+
+G04 remains open because no overload relay, inverse-time delay, thermal memory,
+or trip criterion exists. G05 remains open because no transmission-line breaker
+command or line-opening boundary has been implemented. Ratio-above-one
+observations are therefore not overload proof and not line-protection evidence.

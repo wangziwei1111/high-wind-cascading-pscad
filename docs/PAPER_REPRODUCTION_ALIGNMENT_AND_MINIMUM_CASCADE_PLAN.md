@@ -137,3 +137,20 @@ line trips, and causality remain unavailable.
 P09, P10, P11-P15 remain missing. Strict thesis reproduction remains
 `not_achieved`; the safe project name remains `controlled-interface validation
 scaffold`.
+
+## Full-network TLine rating and offline loading addendum
+
+The next offline audit traced exact generated `.tli` records for all 31 current
+network TLines. Each record contains `Total MVA Rating = 100.0`, so the current
+project now has a qualified apparent-power rating basis for every audited TLine
+and an offline apparent-power loading-ratio reconstruction from the existing
+20 s Run.
+
+This refines P08 without upgrading P09/P10: raw redistribution and loading
+ratio can be observed for qualified current-model lines, but no inverse-time
+relay, thermal time model, protection action, line breaker command, branch
+trip, or natural cascade mechanism has been implemented or validated.
+
+The recommended future shadow-overload candidate is `E_28_29_1`; `E_16_19_1`
+remains paper-relevant but ranks ninth under the current model's audited
+post-clear loading metric. Strict thesis reproduction remains `not_achieved`.

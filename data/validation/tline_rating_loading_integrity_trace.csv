@@ -1,0 +1,6 @@
+check,expected,observed,status
+main_project_sha,CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB,CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB,pass
+trial_project_sha,F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300,F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300,pass
+allowed_git_worktree_paths,only analysis/docs/csv/json task artifacts,,pass
+forbidden_file_suffixes,no .pscx/.gf46/.out/.inf/.sav/binary artifacts,,pass
+runtime_non_tline_gap_registered,9 missing non-TLine channels registered,9,pass

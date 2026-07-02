@@ -1,6 +1,6 @@
 {
   "paper_source_status": "available_primary_paper_source",
-  "design_status": "minimum_chain_designed_static_fault_configured_and_single_raw_response_run_parsed",
+  "design_status": "minimum_chain_designed_static_fault_configured_single_raw_response_run_and_offline_loading_ratio_parsed",
   "controlled_existing_sequence_classification": "controlled interface-validation sequence",
   "controlled_existing_sequence_prohibited_classifications": [
     "paper cascade chain",
@@ -42,11 +42,12 @@
       ],
       "minimum_model_change": "First add monitor-only target-line P/Q/I/loading outputs; do not add relay or actuation in that stage.",
       "future_run_count_before_claim": "minimum 2 after staged implementation: one observability baseline and one later shadow-relay evaluation; more required before any natural-cascade claim",
-      "claim_boundary": "Raw branch P/Q/I dynamic response is available for one configured 20 s Run, but no loading ratio, overload relay, line trip, or natural cascade behavior has been validated.",
+      "claim_boundary": "Raw branch P/Q/I and offline loading ratio are available for the configured 20 s Run, but no overload relay, line trip, or natural cascade behavior has been validated.",
       "rejection_reason_if_not_feasible": "Reject if the target branch and its electrical measurements cannot be unambiguously mapped.",
       "implemented_prerequisites": [
         "full-network raw TLine P/Q/I monitor-only observability",
-        "one parsed 20 s N29 fault raw TLine P/Q/I response run"
+        "one parsed 20 s N29 fault raw TLine P/Q/I response run",
+        "offline apparent-power loading-ratio reconstruction for all 31 current-model TLines"
       ]
     },
     {
@@ -72,17 +73,18 @@
       ],
       "minimum_model_change": "Same first step as MC01: branch observability only.",
       "future_run_count_before_claim": "at least 2 staged runs after implementation",
-      "claim_boundary": "Raw branch P/Q/I dynamic response is available for one configured 20 s Run, but no loading ratio, overload relay, line trip, or natural cascade behavior has been validated.",
+      "claim_boundary": "Raw branch P/Q/I and offline loading ratio are available for the configured 20 s Run, but no overload relay, line trip, or natural cascade behavior has been validated.",
       "rejection_reason_if_not_feasible": "Less immediately reusable than MC01 because the current audited first protection is source-side DFIG LVRT.",
       "implemented_prerequisites": [
         "full-network raw TLine P/Q/I monitor-only observability",
-        "one parsed 20 s N29 fault raw TLine P/Q/I response run"
+        "one parsed 20 s N29 fault raw TLine P/Q/I response run",
+        "offline apparent-power loading-ratio reconstruction for all 31 current-model TLines"
       ]
     }
   ],
-  "next_stage": "offline line-rating/loading-basis audit before any overload or relay claim",
+  "next_stage": "single combined monitor-only shadow overload criterion task for the selected candidate line, followed by Build, one controlled Run, automatic parsing, audit, docs, Git and PR",
   "why_this_stage_matches_the_paper": "E003, E010 and E012 place branch-flow redistribution and overload between the first source event and later protection actions.",
-  "why_other_stages_are_deferred": "The single 20 s Run provides raw P/Q/I response, but a relay still lacks audited loading ratios, thresholds, branch actuation boundaries, and causal validation.",
+  "why_other_stages_are_deferred": "Loading-ratio observations exist, but relay criteria, thermal time behavior, line actuation boundaries and causal validation are still missing.",
   "primary_paper_evidence_supporting_order": [
     "E003",
     "E010",
@@ -119,5 +121,17 @@
     "ibr2_default_disabled_status": "not_triggered",
     "ibr3_default_disabled_status": "not_triggered",
     "claim_boundary": "raw TLine P/Q/I response observation only; no overload, relay, line trip, causality, natural cascade, or strict reproduction claim"
+  },
+  "tline_rating_loading_audit": {
+    "execution_status": "pass",
+    "rating_coverage_status": "pass_full_rating_coverage",
+    "qualified_line_count": 31,
+    "qualified_rating_type": "apparent_power_total_mva_from_generated_tli",
+    "line_loading_ratio_status": "observed_for_qualified_lines_only",
+    "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
+    "recommended_candidate_line": "E_28_29_1",
+    "e_16_19_1_rank_under_current_model": 9,
+    "final_audit": "data/validation/tline_rating_loading_final_audit.json",
+    "claim_boundary": "offline loading-ratio reconstruction only; no relay, line trip, thermal overload proof, natural cascade, or strict reproduction claim"
   }
 }

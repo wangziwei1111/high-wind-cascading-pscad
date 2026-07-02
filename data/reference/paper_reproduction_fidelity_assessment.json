@@ -14,9 +14,9 @@
   "branch_observability_stage2_status": "full_network_raw_tline_pqi_dynamic_observation_available_for_one_run",
   "strict_reproduction_status_after_stage2": "not_achieved",
   "current_safe_name_after_stage2": "controlled-interface validation scaffold",
-  "power_flow_redistribution_status": "raw_branch_pqi_response_observed_not_loading_or_causal",
-  "line_loading_ratio_status": "unavailable_no_audited_line_rating_basis",
-  "line_overload_status": "unavailable",
+  "power_flow_redistribution_status": "raw_branch_pqi_and_offline_loading_ratio_observed_not_causal",
+  "line_loading_ratio_status": "observed_for_qualified_lines_only",
+  "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
   "paper_aligned_20s_fault_static_status": "implemented_static_build_only",
   "paper_aligned_20s_fault_final_audit": "data/validation/paper_aligned_fault_scenario_final_audit.json",
   "paper_aligned_20s_fault_trial_sha256": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
@@ -24,5 +24,11 @@
   "paper_aligned_20s_dynamic_final_audit": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json",
   "branch_trip_status": "unavailable",
   "strict_reproduction_status_after_dynamic_run": "not_achieved",
-  "current_safe_name_after_dynamic_run": "controlled-interface validation scaffold"
+  "current_safe_name_after_dynamic_run": "controlled-interface validation scaffold",
+  "tline_rating_loading_audit_status": "pass_full_rating_coverage",
+  "tline_rating_loading_final_audit": "data/validation/tline_rating_loading_final_audit.json",
+  "line_protection_status": "unavailable",
+  "strict_reproduction_status_after_loading_audit": "not_achieved",
+  "current_safe_name_after_loading_audit": "controlled-interface validation scaffold",
+  "future_shadow_overload_candidate": "E_28_29_1"
 }

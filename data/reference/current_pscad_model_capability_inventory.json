@@ -32,9 +32,9 @@
       "source_or_network_object": "branches",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
       "xml_or_fortran_evidence": "31 genuine P3 network TLines each have terminal A/B native master:multimeter P/Q/Crms bindings and six monitor-only Output Channels; final XML channel count 448 = 262 + 186",
-      "existing_dynamic_evidence": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json; data/derived/full_network_tline_window_metrics.csv",
-      "current_status": "dynamic_raw_response_observed_no_loading_or_protection",
-      "claim_boundary": "Full-network raw branch P/Q/I response is observable and parsed for one 20 s N29 fault Run; loading ratio, overload status, protection, branch trip, causality and cascade behavior remain unavailable."
+      "existing_dynamic_evidence": "data/validation/tline_rating_loading_final_audit.json; data/derived/full_network_tline_loading_ratio_metrics.csv; data/reference/full_network_tline_rating_basis.json",
+      "current_status": "dynamic_raw_response_and_offline_loading_ratio_observed_no_protection",
+      "claim_boundary": "Full-network raw branch P/Q/I response and offline apparent-power loading ratio are observed for 31 qualified current-model TLines; overload, relay, branch trip, causality and natural cascade remain unavailable."
     },
     {
       "capability_id": "CAP04",
@@ -305,5 +305,10 @@
   "output_channel_count_after_full_network_tline_measurement": 448,
   "paper_aligned_20s_dynamic_run_status": "pass",
   "paper_aligned_20s_dynamic_run_final_audit": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json",
-  "full_network_tline_dynamic_raw_signal_count": 186
+  "full_network_tline_dynamic_raw_signal_count": 186,
+  "tline_rating_loading_audit_status": "pass_full_rating_coverage",
+  "tline_rating_loading_final_audit": "data/validation/tline_rating_loading_final_audit.json",
+  "line_loading_ratio_status": "observed_for_qualified_lines_only",
+  "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
+  "future_shadow_overload_candidate": "E_28_29_1"
 }
