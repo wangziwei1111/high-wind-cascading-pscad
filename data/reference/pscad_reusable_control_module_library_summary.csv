@@ -1,0 +1,12 @@
+field,value,status
+main_sha256,CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB,pass
+trial_start_sha256,EFE2FA9D537653C34C13C0223C2E48EE15A77788EAE35A1CC173364AA52D2959,pass
+trial_final_sha256,D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314,pass
+native_module_definition_count,3,pass
+test_instance_count,3,pass
+build_errors,0,pass
+output_channel_count,224,pass
+main_project_integrity,unchanged,pass
+existing_control_path_preservation,unchanged,pass
+pscad_run_performed,false,not_performed
+dynamic_behavior,unavailable,not_tested

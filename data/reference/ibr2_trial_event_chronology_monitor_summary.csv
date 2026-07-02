@@ -1,0 +1,12 @@
+status_key,status_value
+chronology_structure_status,pass
+second_event_time_logic_status,pass
+event_gap_logic_status,pass
+event_sequence_logic_status,pass
+chronology_consistency_logic_status,pass
+output_channel_status,pass
+control_path_isolation_status,pass
+dynamic_behavior_status,unavailable
+dual_source_dynamic_behavior_status,unavailable
+cascade_propagation_status,unavailable
+matlab_status,not_added

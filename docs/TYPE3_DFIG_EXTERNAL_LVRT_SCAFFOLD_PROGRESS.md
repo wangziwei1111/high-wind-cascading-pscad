@@ -255,3 +255,344 @@ data/reference/type3_dfig_lvrt_monitoring_full_validation.json
 ```
 
 该后续尝试进入 `monitoring_logic_safe_fallback`：完整 `TALLOW / DURATION_EXCEEDED / TRIP_REQUEST / TRIP_LATCH` 监测逻辑未保留在最终 PSCAD 工程中，活动工程恢复到本文记录的 Build=0 VSMIN 支架状态。本文此前记录的历史事实不变。
+
+## 2026-06-28 Trip-Request Manual Validation Update
+
+Manual PSCAD matrix validation for `DFIG_LVRT_TALLOW_S`,
+`DFIG_LVRT_DURATION_EXCEEDED`, and `DFIG_LVRT_TRIP_REQUEST` is recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_TRIP_REQUEST_MANUAL_VALIDATION.md
+data/reference/type3_dfig_lvrt_trip_request_manual_validation.json
+data/reference/type3_dfig_lvrt_trip_request_manual_validation_summary.csv
+```
+
+R1-R5 parsed successfully and passed.  R5 confirmed the immediate-trip path:
+`DFIG_LVRT_IMMTRIP` and `DFIG_LVRT_TRIP_REQUEST` first asserted at 2.02 s,
+while `DFIG_LVRT_DURATION_EXCEEDED` did not assert.  The final active project
+SHA-256 for the successful R5 validation scenario is
+`17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B`.
+
+No `TRIP_LATCH` implementation, `DFIG_LVRT_CLEAR` modification, `BRK_DFIG`
+command integration, physical breaker opening, or MATLAB coupling was added.
+
+## 2026-06-29 Main Project SHA Delta Audit
+
+The main-project SHA delta after trial project creation is audited in:
+
+```text
+docs/MAIN_PROJECT_SHA_DELTA_AUDIT.md
+data/reference/main_project_sha_delta_audit.json
+data/reference/main_project_sha_delta_audit_summary.csv
+data/reference/main_project_sha_delta_raw_differences.csv
+```
+
+Result:
+
+```text
+functional_equivalence_status = supported
+main_project_integrity_status = main_project_nonfunctional_metadata_difference
+trial_resumption_eligibility = eligible_for_separate_task
+```
+
+The audit was zero GUI, zero Build, zero Run, and read-only. It did not resume
+`IBR2_TRIAL` local breaker construction.
+
+## 2026-06-28 Trip-Latch Minimal Validation Update
+
+Manual PSCAD R5 minimal validation for `DFIG_LVRT_TRIP_LATCH` and trip-aware
+`DFIG_LVRT_CLEAR` is recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_TRIP_LATCH_MINIMAL_VALIDATION.md
+data/reference/type3_dfig_lvrt_trip_latch_minimal_validation.json
+data/reference/type3_dfig_lvrt_trip_latch_minimal_validation_summary.csv
+```
+
+The repaired single R5 run completed, parsed, and passed the trip-latch/CLEAR
+minimal acceptance checks:
+
+```text
+execution_status = trip_latch_minimal_validation_pass
+VIBR1_2 minimum = 0.057826191277082 pu at 2.08 s
+VSMIN_MEM minimum = 0.057823195871257 pu at 2.09 s
+TRIP_REQUEST first = 2.02 s
+TRIP_LATCH first high from 0 s = 2.02 s
+TRIP_LATCH prefault max from 0.03 s to 1.99 s = 0.0
+CLEAR post-LOWV max = 0.0
+DFIG_BRK_STATE changed after startup = false
+```
+
+The fix adds a `TIME > 0.5 s` armed gate before the latch input:
+`DFIG_LVRT_TRIP_REQUEST_ARMED = DFIG_LVRT_TRIP_REQUEST * DFIG_LVRT_ARMED`.
+This blocks the known startup pulse at 0.01-0.02 s from setting the latch.
+The old CLEAR output channel is now `DFIG_LVRT_CLEAR_BASE`, while final
+`DFIG_LVRT_CLEAR` is measured at the trip-aware CLEAR output.
+
+Safety boundary for this minimal validation:
+
+```text
+No BRK_DFIG command integration.
+No physical breaker opening.
+No actual turbine disconnection.
+No MATLAB coupling.
+```
+
+## 2026-06-28 Breaker Command Validation Update
+
+The breaker-command integration and single R5 validation are recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_BRK_COMMAND_VALIDATION.md
+data/reference/type3_dfig_lvrt_brk_command_validation.json
+data/reference/type3_dfig_lvrt_brk_command_validation_summary.csv
+```
+
+The final static command path is:
+
+```text
+DFIG_LVRT_EXISTING_BRK_CMD_BOOL
++ DFIG_LVRT_TRIP_LATCH_BOOL
+-> Hard Limiter [0, 1]
+-> DFIG_LVRT_FINAL_BRK_CMD
+-> Gain 1
+-> BRK_DFIG
+```
+
+The single R5 run reached 5.0 s. `TRIP_REQUEST`, `TRIP_LATCH`, and
+`DFIG_BRK_STATE` first asserted at 2.02 s, and the breaker state held open.
+The measured `DFIG_LVRT_FINAL_BRK_CMD` channel was absent from that run's
+`3IBR.inf`, so the overall acceptance status is `unavailable`. The missing
+Output Channel was added after the run and passed a final static Build; no
+second run was performed.
+
+Final active project SHA-256:
+
+```text
+DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6
+```
+
+## 2026-06-28 FINAL_BRK_CMD Dynamic Recheck
+
+The single permitted R5 evidence-recheck run completed without any model
+change. Its `3IBR.inf` contains `DFIG_LVRT_FINAL_BRK_CMD`, and all B1-B13
+checks pass:
+
+```text
+execution_status = brk_command_state_validation_pass
+TRIP_REQUEST first = 2.02 s
+TRIP_LATCH first = 2.02 s
+FINAL_BRK_CMD first = 2.02 s
+BRK_STATE first open = 2.02 s
+TRIP_LATCH -> FINAL_BRK_CMD delay = 0.0 s
+FINAL_BRK_CMD -> BRK_STATE delay = 0.0 s
+startup FINAL_BRK_CMD max = 0.0
+startup BRK_STATE max = 0.0
+BRK_STATE holds open = true
+```
+
+This supersedes the preceding `unavailable` dynamic result. The active PSCAD
+SHA-256 remained `DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6`.
+No second recheck Run was performed.
+
+## 2026-06-28 Closed-Loop Coverage Closeout
+
+The C1/C2/C3 coverage closeout is recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_CLOSED_LOOP_COVERAGE.md
+data/reference/type3_dfig_lvrt_closed_loop_coverage.json
+data/reference/type3_dfig_lvrt_closed_loop_coverage_summary.csv
+```
+
+The result is partial. C1 completed to 5.0 s and passed all no-fault,
+no-false-opening checks with all 15 required channels present. C2 was not Run
+because its Build reported a floating input on `master:gain` ID `65646757`;
+C3 was skipped by the mandatory stop rule. The historical R5 immediate-trip
+result remains pass and is not overwritten.
+
+Task-start parameters were restored through PSCAD GUI, but the final Build
+reported two errors on the same gain and the final project SHA-256
+`10A3B91EE96B8C3BC6FB32D049D6EEB28C9F0923CFFB72BFDBB1F5EC257A9CEB`
+does not match the task-start SHA. Model integrity is recorded as
+`model_integrity_needs_explanation`; no direct XML repair was attempted.
+
+## 2026-06-29 Supplemental C2/C3 Runs
+
+After the floating Gain was restored manually, the recovery Build showed
+`0 Errors / 46 Warnings / 119 Messages`. C2 and C3 were then run manually and
+analyzed from independently archived outputs.
+
+```text
+C1 = pass
+C2 ride-through = pass
+C3 formal acceptance = fail
+C3 command-and-state sequence = pass
+```
+
+C2 completed without false trip or breaker opening. In C3,
+`DURATION_EXCEEDED`, `TRIP_REQUEST`, `TRIP_LATCH`, `FINAL_BRK_CMD`, and
+`BRK_STATE` all first asserted at 3.04 s, with zero measured adjacent delay and
+the latch/final/state outputs holding through 8.0 s. C3 remains formally failed
+because its `VSMIN_MEM` minimum of `0.3301161303713 pu` differs from the
+specified `0.379649 pu` reference by more than `0.02 pu`.
+
+The restored active project SHA-256 is
+`0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17` and
+still differs from the original task-start SHA, so model integrity remains
+`model_integrity_needs_explanation`.
+
+## 2026-06-29 Zero-Run Comparability And Integrity Audit
+
+No PSCAD GUI, Build, Run, save, or model edit was performed. The raw
+historical R4 archive was found and compared with current C3 using the same
+`[LOWV, TRIP_REQUEST)` window. Both decision-window VSMIN minima are
+`0.40784436868089 pu at 3.03 s`, so the like-for-like decision check passes.
+
+The original full-run C3 fail remains unchanged. Its `0.3301161303713 pu`
+minimum occurs after BRK_STATE opens, while historical R4 has no equivalent
+breaker-open event; reference comparability is `needs_explanation`.
+
+The exact task-start backup and current active project were also parsed and
+compared structurally. All 128 differences are nonfunctional metadata/display
+differences, with zero functional, test-parameter, Output Channel, wire, or
+unclassified differences. Gain ID `65646757` is absent from both files.
+
+```text
+model_integrity_status = model_integrity_nonfunctional_metadata_difference
+```
+
+Reports:
+
+```text
+docs/TYPE3_DFIG_LVRT_C3_VSMIN_COMPARABILITY_AUDIT.md
+docs/TYPE3_DFIG_LVRT_MODEL_INTEGRITY_AUDIT.md
+```
+
+## 2026-06-29 Protection-State / Cascade-Export Interface
+
+The monitor-only protection-state and cascade-export interface was manually
+constructed and passed a final static Build with zero errors. Eight new Output
+Channels expose the two cause latches, cause code, original/final command
+states, breaker-open state, trip confirmation, and cascade availability.
+
+```text
+Protection-state / cascade-export interface: static Build-verified
+Dynamic validation: deferred
+Final project SHA-256: 891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C
+```
+
+The generated Fortran confirms `TRIP_CAUSE_CODE = 2*IMM + 1*DURATION`,
+`TRIP_CONFIRMED = TRIP_LATCH_BOOL * FINAL_CMD_BOOL * BRK_OPEN_BOOL`, and
+`CASCADE_AVAILABLE = NOT BRK_OPEN_BOOL`. `BRK_DFIG` remains driven solely by
+`DFIG_LVRT_FINAL_BRK_CMD`. No new PSCAD Run was performed and the interface
+does not feed back into the existing protection chain.
+
+Historical results remain unchanged: C1 pass, C2 pass, R5 immediate-trip
+chain pass, C3 command/state chain pass, legacy C3 full-run VSMIN reference
+check fail, and overall closed-loop coverage partial.
+
+## 2026-06-29 Cascade-Event Bus And Single-Source Collector
+
+The monitor-only cascade-event source packet and current single-source
+collector are recorded in:
+
+```text
+docs/TYPE3_DFIG_LVRT_CASCADE_EVENT_BUS.md
+data/reference/type3_dfig_lvrt_cascade_event_bus.json
+data/reference/type3_dfig_lvrt_cascade_event_bus_summary.csv
+```
+
+The final static audit result is:
+
+```text
+structure_status = pass
+control_path_isolation_status = pass
+output_channel_status = pass
+dynamic_behavior_status = unavailable
+multi_source_behavior_status = unavailable
+```
+
+The collector currently represents only the real `TYPE3_DFIG_1` source. No
+second source, synthetic source, new dynamic PSCAD Run, multi-machine cascade
+validation, or MATLAB coupling was added. Existing LVRT, `FINAL_BRK_CMD`, and
+`BRK_DFIG` control paths remain outside the new monitor-only outputs.
+
+## 2026-06-30 IBR2 Trial-Local Breaker Boundary
+
+Only the independent `3IBR_DFIG1_TRIAL.pscx` project was changed. A physical
+three-phase `BRK_IBR2_TRIAL` boundary, closed command, actual state,
+standardized open state, source availability, and four Output Channels passed
+static XML/Fortran/network-map audit and a zero-error Build.
+
+The protected main project SHA remained
+`97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906`.
+No Run was performed. This trial boundary is not a qualified monitor-only
+second source: no second-source event packet or dual-source collector exists,
+and no dynamic breaker action, real source isolation, event timing,
+multi-machine propagation, cascade behavior, or MATLAB behavior was validated.
+
+## 2026-06-30 Trial two-real-source collector
+
+The trial-only IBR2 packet, two-real-source collector, ordering interface, and
+eight public Output Channels passed a zero-error static Build and audit. The
+active main SHA differs only in 51 `revisor/date` metadata fields; functional
+integrity remains supported. No dynamic event ordering was tested.
+
+## 2026-06-30 trial opening-stimulus and chronology layer
+
+The independent trial adds a default-disabled IBR2 opening stimulus and five
+monitor-only chronology fields. Nine new Output Channels passed static audit.
+The current main SHA is unchanged at
+`CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB`.
+No Run, MATLAB coupling, automatic reclosing, third source, or virtual source
+was added.
+
+## 2026-07-01 reusable PSCAD control-module library
+
+The independent trial now contains three native reusable definitions:
+`MONITORED_OBJECT_EVENT_PACKET`, `ONE_SHOT_BREAKER_OPEN_STIMULUS`, and
+`TWO_EVENT_CHRONOLOGY_MONITOR`. They are exercised only by default-safe,
+isolated instances under `MODULE_TEMPLATE_TEST_HARNESS`. The final trial SHA
+is `D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314`;
+the main SHA remains unchanged. The final static Build and complete audit
+passed with zero errors. No Output Channel, Run, MATLAB integration, automatic
+reclosing, third source, virtual source, or production-path migration was
+added.
+
+## 2026-07-01 IBR3 real-source and three-source collector
+
+The trial now contains a real third-source boundary on `IBR_AVM_2_1_1_2`,
+reusable breaker-state adaptation, an IBR3 event packet, and an independent
+collector for `TYPE3_DFIG_1`, `IBR2_TRIAL`, and `IBR3_TRIAL`. The final
+static Build has zero errors, the Output Channel count is 245, and the main
+project remains byte-identical. No PSCAD Run, dynamic opening, physical
+isolation validation, three-source interaction, or causal cascade validation
+was performed.
+
+## 2026-07-01 CASCADE3 three-event chronology monitor
+
+The trial now contains `THREE_EVENT_CHRONOLOGY_MONITOR` and a P3 production
+instance `CASCADE3_TRIAL__CHRONOLOGY_MONITOR` reading A=`TYPE3_DFIG_1`,
+B=`IBR2_TRIAL`, and C=`IBR3_TRIAL` event-valid/first-time interfaces. Eight
+Output Channels were added, bringing the total to 253. The static audit
+passes; no PSCAD Run or dynamic ordering validation was performed.
+
+## 2026-07-02 IBR3 single-opening dynamic validation
+
+One approved trial-only PSCAD Run temporarily enabled only the
+`IBR3_TRIAL__OPEN_STIMULUS` test enable. The IBR3 open request, breaker
+command, actual breaker open monitor, event packet, collector output, and
+chronology output were dynamically observed and parsed. The final trial was
+restored to `IBR3 test enable = 0`.
+
+See `docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This does not
+validate three-source cascade propagation, physical causality direction,
+system stability, protection coordination, or MATLAB coupling.
+
+## 2026-07-02 IBR3 default-disabled baseline
+
+A paired baseline Run kept IBR2 and IBR3 trial test stimuli disabled. IBR3 did
+not request, command, open, or record a trial-local event. The paired
+enabled-vs-disabled contrast is documented in
+`docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.

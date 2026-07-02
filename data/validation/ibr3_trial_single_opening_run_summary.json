@@ -1,0 +1,278 @@
+{
+  "run_id": "IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_114837",
+  "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+  "run_timestamp": "2026-07-02T11:48:37+08:00",
+  "trial_sha_during_run": "B9F8CCE9B6C43F57644DF4693D0D651815FB6DBCC2706F9D48A0882DEA705E42",
+  "main_sha_during_run": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "build_error_count": 0,
+  "build_error_count_basis": "User reported Build completed before Run; PSCAD output artifacts were generated and parsed before the restore Build.",
+  "run_completion_status": "completed_output_files_generated",
+  "parser_status": "parsed_before_restore_build",
+  "post_restore_raw_pgb_artifact_status": "unavailable_after_restore_build",
+  "claim_boundary": "This result only validates one IBR3_TRIAL trial-only local-opening run under the existing fixed model, default fault, and run settings. It does not validate cascade propagation, physical causality direction, system stability, protection coordination, or MATLAB coupling.",
+  "result_directory": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+  "inf_parsed_before_restore": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.inf",
+  "missing_signals": [],
+  "simulation_start_time_s": 0.0,
+  "simulation_end_time_s": 5.0,
+  "simulation_timestep_s": 0.000005,
+  "channel_plot_step_s": 0.01,
+  "sample_count": 501,
+  "channel_parse_status": "PASS",
+  "checks": {
+    "parser_mapping_status": "PASS",
+    "ibr2_test_enable_zero_status": "PASS",
+    "ibr3_test_enable_high_status": "PASS",
+    "ibr3_open_request_at_5s_status": "PASS",
+    "ibr3_breaker_command_at_5s_status": "PASS",
+    "ibr3_actual_open_status": "PASS",
+    "ibr3_source_unavailable_after_open_status": "PASS",
+    "ibr3_event_packet_valid_status": "PASS",
+    "ibr3_cause_code_status": "PASS",
+    "cascade3_ibr3_cause_code_status": "PASS",
+    "cascade3_chronology_consistent_status": "PASS"
+  },
+  "classification": "PASS",
+  "dynamic_run_status": "pass",
+  "event_times_s": {
+    "ibr3_test_open_request_first_ge_0p5": 5.0,
+    "ibr3_breaker_command_first_ge_0p5": 5.0,
+    "ibr3_breaker_state_first_ge_0p5": 5.0,
+    "ibr3_breaker_open_bool_first_ge_0p5": 5.0,
+    "ibr3_event_valid_first_ge_0p5": 5.0,
+    "cascade3_first_event_time_last": 2.01603,
+    "cascade3_second_event_time_last": 5.0,
+    "cascade3_third_event_time_last": -1.0,
+    "cascade3_first_to_second_gap_last": 2.98397,
+    "cascade3_second_to_third_gap_last": -1.0
+  },
+  "selected_channel_summary": {
+    "IBR2_TRIAL_TEST_ENABLE": {
+      "first": 0.0,
+      "last": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "status": "held_zero"
+    },
+    "IBR3_TRIAL_TEST_ENABLE": {
+      "pgb": 92,
+      "points": 501,
+      "first": 1.0,
+      "last": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "first_ge_0p5_s": 0.0
+    },
+    "IBR3_TRIAL_TEST_OPEN_TIME_S": {
+      "pgb": 90,
+      "points": 501,
+      "first": 5.0,
+      "last": 5.0,
+      "min": 5.0,
+      "max": 5.0
+    },
+    "IBR3_TRIAL_TEST_OPEN_REQUEST": {
+      "pgb": 88,
+      "points": 501,
+      "first": 0.0,
+      "last": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_ge_0p5_s": 5.0
+    },
+    "IBR3_TRIAL_BRK_CMD": {
+      "pgb": 74,
+      "points": 501,
+      "first": 0.0,
+      "last": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_ge_0p5_s": 5.0
+    },
+    "IBR3_TRIAL_BRK_STATE": {
+      "pgb": 72,
+      "points": 501,
+      "first": 0.0,
+      "last": 2.0,
+      "min": 0.0,
+      "max": 2.0,
+      "first_ge_0p5_s": 5.0
+    },
+    "IBR3_TRIAL_BRK_OPEN_BOOL": {
+      "pgb": 70,
+      "points": 501,
+      "first": 0.0,
+      "last": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_ge_0p5_s": 5.0
+    },
+    "IBR3_TRIAL_SOURCE_AVAILABLE": {
+      "pgb": 68,
+      "points": 501,
+      "first": 1.0,
+      "last": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_change_s": 5.0
+    },
+    "IBR3_TRIAL_CASCADE_EVENT_VALID": {
+      "pgb": 85,
+      "points": 501,
+      "first": 0.0,
+      "last": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_ge_0p5_s": 5.0
+    },
+    "IBR3_TRIAL_CASCADE_EVENT_CAUSE_CODE": {
+      "pgb": 82,
+      "points": 501,
+      "first": 0.0,
+      "last": 5.0,
+      "min": 0.0,
+      "max": 5.0,
+      "first_change_s": 5.0
+    },
+    "IBR3_TRIAL_CASCADE_EVENT_BRK_OPEN": {
+      "pgb": 80,
+      "points": 501,
+      "first": 0.0,
+      "last": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_ge_0p5_s": 5.0
+    },
+    "IBR3_TRIAL_CASCADE_SOURCE_AVAILABLE": {
+      "pgb": 78,
+      "points": 501,
+      "first": 1.0,
+      "last": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "first_change_s": 5.0
+    },
+    "IBR3_TRIAL_CASCADE_FIRST_EVENT_TIME_S": {
+      "pgb": 76,
+      "points": 501,
+      "first": -1.0,
+      "last": 5.0,
+      "min": -1.0,
+      "max": 5.0,
+      "first_change_s": 5.0
+    },
+    "CASCADE3_MONITOR_EVENTED_SOURCE_COUNT": {
+      "pgb": 87,
+      "points": 501,
+      "first": 0.0,
+      "last": 2.0,
+      "min": 0.0,
+      "max": 2.0,
+      "first_change_s": 2.02
+    },
+    "CASCADE3_MONITOR_TIMED_EVENT_SOURCE_COUNT": {
+      "pgb": 69,
+      "points": 501,
+      "first": 0.0,
+      "last": 2.0,
+      "min": 0.0,
+      "max": 2.0,
+      "first_change_s": 2.02
+    },
+    "CASCADE3_MONITOR_FIRST_EVENT_TIME_S": {
+      "pgb": 84,
+      "points": 501,
+      "first": -1.0,
+      "last": 2.01603,
+      "min": -1.0,
+      "max": 2.01603
+    },
+    "CASCADE3_MONITOR_SECOND_EVENT_TIME_S": {
+      "pgb": 67,
+      "points": 501,
+      "first": -1.0,
+      "last": 5.0,
+      "min": -1.0,
+      "max": 5.0
+    },
+    "CASCADE3_MONITOR_THIRD_EVENT_TIME_S": {
+      "pgb": 66,
+      "points": 501,
+      "first": -1.0,
+      "last": -1.0,
+      "min": -1.0,
+      "max": -1.0
+    },
+    "CASCADE3_MONITOR_FIRST_TO_SECOND_GAP_S": {
+      "pgb": 65,
+      "points": 501,
+      "first": -1.0,
+      "last": 2.98397,
+      "min": -1.0,
+      "max": 2.98397
+    },
+    "CASCADE3_MONITOR_SECOND_TO_THIRD_GAP_S": {
+      "pgb": 63,
+      "points": 501,
+      "first": -1.0,
+      "last": -1.0,
+      "min": -1.0,
+      "max": -1.0
+    },
+    "CASCADE3_MONITOR_CAUSE_CODE_DFIG1": {
+      "pgb": 79,
+      "points": 501,
+      "first": 0.0,
+      "last": 2.0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "CASCADE3_MONITOR_CAUSE_CODE_IBR2_TRIAL": {
+      "pgb": 77,
+      "points": 501,
+      "first": 0.0,
+      "last": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "CASCADE3_MONITOR_CAUSE_CODE_IBR3_TRIAL": {
+      "pgb": 73,
+      "points": 501,
+      "first": 0.0,
+      "last": 5.0,
+      "min": 0.0,
+      "max": 5.0,
+      "first_change_s": 5.0
+    },
+    "CASCADE3_MONITOR_CHRONOLOGY_FIRST_SOURCE_CODE": {
+      "pgb": 61,
+      "points": 501,
+      "first": 0.0,
+      "last": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "CASCADE3_MONITOR_EVENT_ORDER_CLASS_CODE": {
+      "pgb": 60,
+      "points": 501,
+      "first": 0.0,
+      "last": 2.0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT": {
+      "pgb": 57,
+      "points": 501,
+      "first": 1.0,
+      "last": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    }
+  },
+  "dynamic_claim_boundary": {
+    "cascade_propagation_status": "unavailable",
+    "multi_source_causality_status": "unavailable",
+    "system_stability_status": "unavailable",
+    "matlab_coupling_status": "unavailable"
+  }
+}

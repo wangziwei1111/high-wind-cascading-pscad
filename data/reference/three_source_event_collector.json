@@ -1,0 +1,93 @@
+{
+  "module": "THREE_SOURCE_EVENT_COLLECTOR",
+  "execution_status": "static_build_verified",
+  "inputs_per_source": [
+    "EVENT_VALID",
+    "BREAKER_OPEN",
+    "SOURCE_AVAILABLE",
+    "FIRST_EVENT_TIME_S",
+    "CAUSE_CODE"
+  ],
+  "sources": {
+    "A": "TYPE3_DFIG_1",
+    "B": "IBR2_TRIAL",
+    "C": "IBR3_TRIAL"
+  },
+  "outputs": [
+    "OUT_ANY_EVENT_VALID",
+    "OUT_ANY_BREAKER_OPEN",
+    "OUT_AVAILABLE_SOURCE_COUNT",
+    "OUT_EVENTED_SOURCE_COUNT",
+    "OUT_FIRST_EVENT_TIME_S",
+    "OUT_FIRST_EVENT_SOURCE_CODE",
+    "OUT_CAUSE_CODE_A",
+    "OUT_CAUSE_CODE_B",
+    "OUT_CAUSE_CODE_C"
+  ],
+  "first_source_codes": {
+    "0": "none",
+    "1": "A",
+    "2": "B",
+    "3": "C",
+    "4": "tie_or_indistinguishable"
+  },
+  "valid_time_rule": "EVENT_VALID=1 and FIRST_EVENT_TIME_S>=0",
+  "no_valid_time_output": -1.0,
+  "tie_tolerance_s": 1e-09,
+  "cause_policy": "per-source passthrough; never summed",
+  "test_instance": {
+    "name": "MODTEST_THREE_SOURCE_EVENT_COLLECTOR",
+    "input_per_source": [
+      0.0,
+      0.0,
+      1.0,
+      -1.0,
+      0.0
+    ],
+    "expected_outputs": [
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "production_instance": "CASCADE3_TRIAL__EVENT_COLLECTOR",
+  "build_errors": 0,
+  "pscad_run_performed": false,
+  "dynamic_behavior_status": "unavailable",
+  "cascade_propagation_status": "unavailable",
+  "chronology_monitor_addendum": {
+    "module": "THREE_EVENT_CHRONOLOGY_MONITOR",
+    "production_instance": "CASCADE3_TRIAL__CHRONOLOGY_MONITOR",
+    "inputs": [
+      "event_valid",
+      "first_event_time_s"
+    ],
+    "outputs": "CASCADE3_CHR_*",
+    "collector_modified": false,
+    "control_feedback_added": false,
+    "pscad_run_performed": false
+  },
+  "last_dynamic_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "summary": "One approved trial-only PSCAD Run temporarily enabled IBR3_TRIAL__OPEN_STIMULUS, observed the IBR3 local-opening chain at 5.0 s, parsed collector/chronology monitor outputs, and restored IBR3 test enable to 0.",
+    "report": "docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_default_disabled_baseline_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE",
+    "dynamic_baseline_status": "pass",
+    "stimulus_specific_contrast_status": "pass",
+    "summary": "One approved default-disabled PSCAD Run kept IBR2 and IBR3 trial test stimuli at 0; IBR3 open request, command, actual open, and event packet stayed absent. Compared with the prior enabled-stimulus run, this supports a stimulus-specific contrast for the fixed trial configuration only.",
+    "report": "docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  }
+}

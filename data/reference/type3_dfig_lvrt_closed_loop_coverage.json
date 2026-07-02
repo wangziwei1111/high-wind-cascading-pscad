@@ -1,0 +1,460 @@
+{
+  "acceptance_status": "partial",
+  "execution_record": {
+    "active_before_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "backup_dir": "C:\\pscad_work\\backups\\type3_lvrt_closed_loop_coverage_20260628_220356",
+    "backup_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "branch_head_before": "bce984fe8b56eee71725a56adc7c576b3b3857e8",
+    "final_restore": {
+      "build": {
+        "errors": 0,
+        "messages": null,
+        "warnings": null
+      },
+      "build_errors": [],
+      "build_note": "User reported the restored-parameter Build completed; exact warning and message counts were not supplied.",
+      "final_active_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+      "model_integrity_status": "model_integrity_needs_explanation",
+      "parameters": {
+        "fault_duration_s": 0.15,
+        "fault_off_resistance_ohm": 1000000.0,
+        "fault_on_resistance_ohm": 0.01,
+        "fault_start_s": 2.0,
+        "fault_type": "ABC-to-ground",
+        "time_step_us": 5,
+        "total_simulation_time_s": 5.0,
+        "wind_speed_mps": 11
+      },
+      "parameters_restored_via_gui": true,
+      "sha_matches_task_start": false
+    },
+    "hashes_match": true,
+    "precheck": {
+      "active_sha256_unchanged": true,
+      "all_required_output_channels_present": true,
+      "armed_gate_present": true,
+      "automatic_reclosing_detected": false,
+      "build_errors": 0,
+      "build_messages": 119,
+      "build_warnings": 46,
+      "static_command_audit": "pass"
+    },
+    "run_root": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356",
+    "runtime_errors": {
+      "abnormal_termination": false,
+      "emtdc_runtime_error": false,
+      "ungrounded_subsystem": false
+    },
+    "scenario_results": {
+      "C1": {
+        "acceptance_status": "pass",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C1_no_fault_5s",
+        "build": {
+          "errors": 0,
+          "messages": 119,
+          "warnings": 46
+        },
+        "run_status": "completed"
+      },
+      "C2": {
+        "acceptance_status": "pass",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C2_R2_ride_through",
+        "build": {
+          "errors": 0,
+          "messages": null,
+          "warnings": null
+        },
+        "note": "Supplemental manual GUI Build and Run after the floating Gain was restored. Exact warning and message counts were not supplied.",
+        "run_status": "completed"
+      },
+      "C3": {
+        "acceptance_status": "fail",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
+        "build": {
+          "errors": 0,
+          "messages": null,
+          "warnings": null
+        },
+        "reason": "All command-and-state checks passed, but VSMIN_MEM minimum 0.3301161303713 pu differed from the 0.379649 pu reference by more than 0.02 pu.",
+        "run_status": "completed"
+      }
+    },
+    "task_start_parameters": {
+      "channel_plot_step_us": 10000,
+      "fault_duration_s": 0.15,
+      "fault_off_resistance_ohm": 1000000,
+      "fault_on_resistance_ohm": 0.01,
+      "fault_start_s": 2,
+      "fault_type": "ABC-to-ground",
+      "time_step_us": 5,
+      "total_simulation_time_s": 5,
+      "wind_speed_mps": 11
+    },
+    "timestamp": "20260628_220356"
+  },
+  "execution_status": "type3_lvrt_closed_loop_coverage_partial",
+  "original_command_priority": {
+    "statement": "Static command-composition audit passed. The original command source is constant 0 in the tested model, so a dynamic original-command-open stimulus was not performed.",
+    "status": "static_only"
+  },
+  "prior_R5_immediate_trip_path": "pass",
+  "run_root": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356",
+  "scenarios": {
+    "C1": {
+      "acceptance_status": "pass",
+      "checks": {
+        "DFIG_BRK_STATE_remains_low": "pass",
+        "DFIG_LVRT_DURATION_EXCEEDED_remains_low": "pass",
+        "DFIG_LVRT_EXISTING_BRK_CMD_remains_low": "pass",
+        "DFIG_LVRT_FINAL_BRK_CMD_remains_low": "pass",
+        "DFIG_LVRT_IMMTRIP_remains_low": "pass",
+        "DFIG_LVRT_LOWV_remains_low": "pass",
+        "DFIG_LVRT_TRIP_LATCH_remains_low": "pass",
+        "DFIG_LVRT_TRIP_REQUEST_remains_low": "pass",
+        "active_power_not_cut_off": "pass",
+        "all_required_signals_available": "pass",
+        "clear_semantics_available": "pass",
+        "simulation_reached_expected_end": "pass",
+        "voltage_normal_steady_state": "pass"
+      },
+      "execution_record": {
+        "acceptance_status": "pass",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C1_no_fault_5s",
+        "build": {
+          "errors": 0,
+          "messages": 119,
+          "warnings": 46
+        },
+        "run_status": "completed"
+      },
+      "metrics": {
+        "BRK_STATE_first_open_s": null,
+        "DURATION_EXCEEDED_first_s": null,
+        "FINAL_BRK_CMD_first_s": null,
+        "FINAL_BRK_CMD_to_BRK_STATE_delay_s": null,
+        "IMMTRIP_first_s": null,
+        "LOWV_end_s": null,
+        "LOWV_start_s": null,
+        "PIBR1_2_post_event_mean": 199.04263076352905,
+        "PIBR1_2_pre_fault_mean": 189.89013181934155,
+        "QIBR1_2_post_event_mean": -16.45742835365371,
+        "QIBR1_2_pre_fault_mean": -15.494975081477733,
+        "TALLOW_maximum_s": 2.0,
+        "TALLOW_minimum_s": 2.0,
+        "TRIP_LATCH_first_s": null,
+        "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s": null,
+        "TRIP_REQUEST_first_s": null,
+        "VIBR1_2_minimum": 0.99350715027154,
+        "VSMIN_MEM_minimum": 1.0,
+        "simulation_end_s": 5.0,
+        "startup_maxima": {
+          "DFIG_BRK_STATE": 0.0,
+          "DFIG_LVRT_FINAL_BRK_CMD": 0.0,
+          "DFIG_LVRT_TRIP_LATCH": 0.0
+        }
+      },
+      "missing_signals": [],
+      "run_dir": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C1_no_fault_5s",
+      "run_status": "completed",
+      "signal_pgb_indices": {
+        "DFIG_BRK_STATE": 29,
+        "DFIG_LVRT_CLEAR": 22,
+        "DFIG_LVRT_DURATION_EXCEEDED": 26,
+        "DFIG_LVRT_EXISTING_BRK_CMD": 18,
+        "DFIG_LVRT_FINAL_BRK_CMD": 17,
+        "DFIG_LVRT_IMMTRIP": 34,
+        "DFIG_LVRT_LOWV": 33,
+        "DFIG_LVRT_TALLOW_S": 30,
+        "DFIG_LVRT_TIMER_S": 35,
+        "DFIG_LVRT_TRIP_LATCH": 3,
+        "DFIG_LVRT_TRIP_REQUEST": 23,
+        "DFIG_LVRT_VSMIN_MEM": 2,
+        "PIBR1_2": 6,
+        "QIBR1_2": 8,
+        "VIBR1_2": 4
+      }
+    },
+    "C2": {
+      "acceptance_status": "pass",
+      "checks": {
+        "CLEAR_recovers_high": "pass",
+        "DFIG_BRK_STATE_remains_low": "pass",
+        "DFIG_LVRT_DURATION_EXCEEDED_remains_low": "pass",
+        "DFIG_LVRT_FINAL_BRK_CMD_remains_low": "pass",
+        "DFIG_LVRT_IMMTRIP_remains_low": "pass",
+        "DFIG_LVRT_TRIP_LATCH_remains_low": "pass",
+        "DFIG_LVRT_TRIP_REQUEST_remains_low": "pass",
+        "LOWV_event_present": "pass",
+        "TALLOW_within_bounds": "pass",
+        "TIMER_resets_near_zero": "pass",
+        "VIBR1_2_minimum_matches_reference": "pass",
+        "VSMIN_MEM_minimum_matches_reference": "pass",
+        "VSMIN_MEM_resets_near_one": "pass",
+        "active_power_not_cut_off": "pass",
+        "all_required_signals_available": "pass",
+        "simulation_reached_expected_end": "pass"
+      },
+      "execution_record": {
+        "acceptance_status": "pass",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C2_R2_ride_through",
+        "build": {
+          "errors": 0,
+          "messages": null,
+          "warnings": null
+        },
+        "note": "Supplemental manual GUI Build and Run after the floating Gain was restored. Exact warning and message counts were not supplied.",
+        "run_status": "completed"
+      },
+      "metrics": {
+        "BRK_STATE_first_open_s": null,
+        "DURATION_EXCEEDED_first_s": null,
+        "FINAL_BRK_CMD_first_s": null,
+        "FINAL_BRK_CMD_to_BRK_STATE_delay_s": null,
+        "IMMTRIP_first_s": null,
+        "LOWV_end_s": 3.1,
+        "LOWV_start_s": 2.01,
+        "PIBR1_2_post_event_mean": 199.0569662232042,
+        "PIBR1_2_pre_fault_mean": 189.89013181934155,
+        "QIBR1_2_post_event_mean": -27.078670400477492,
+        "QIBR1_2_pre_fault_mean": -15.494975081477733,
+        "TALLOW_maximum_s": 2.0,
+        "TALLOW_minimum_s": 1.1326466513557,
+        "TRIP_LATCH_first_s": null,
+        "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s": null,
+        "TRIP_REQUEST_first_s": null,
+        "VIBR1_2_minimum": 0.45866329080834,
+        "VSMIN_MEM_minimum": 0.45843829537505,
+        "simulation_end_s": 8.0,
+        "startup_maxima": {
+          "DFIG_BRK_STATE": 0.0,
+          "DFIG_LVRT_FINAL_BRK_CMD": 0.0,
+          "DFIG_LVRT_TRIP_LATCH": 0.0
+        }
+      },
+      "missing_signals": [],
+      "run_dir": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C2_R2_ride_through",
+      "run_status": "completed",
+      "signal_pgb_indices": {
+        "DFIG_BRK_STATE": 29,
+        "DFIG_LVRT_CLEAR": 22,
+        "DFIG_LVRT_DURATION_EXCEEDED": 26,
+        "DFIG_LVRT_EXISTING_BRK_CMD": 18,
+        "DFIG_LVRT_FINAL_BRK_CMD": 17,
+        "DFIG_LVRT_IMMTRIP": 34,
+        "DFIG_LVRT_LOWV": 33,
+        "DFIG_LVRT_TALLOW_S": 30,
+        "DFIG_LVRT_TIMER_S": 35,
+        "DFIG_LVRT_TRIP_LATCH": 3,
+        "DFIG_LVRT_TRIP_REQUEST": 23,
+        "DFIG_LVRT_VSMIN_MEM": 2,
+        "PIBR1_2": 6,
+        "QIBR1_2": 8,
+        "VIBR1_2": 4
+      }
+    },
+    "C3": {
+      "acceptance_status": "fail",
+      "checks": {
+        "BRK_STATE_holds_open": "pass",
+        "DURATION_EXCEEDED_asserts": "pass",
+        "FINAL_BRK_CMD_holds_high": "pass",
+        "IMMTRIP_remains_low": "pass",
+        "PQ_electrical_response_recorded": "pass",
+        "TALLOW_within_bounds": "pass",
+        "TRIP_LATCH_holds_high": "pass",
+        "TRIP_REQUEST_asserts_near_reference": "pass",
+        "TRIP_REQUEST_precedes_fault_clear": "pass",
+        "VSMIN_MEM_minimum_matches_reference": "fail",
+        "all_required_signals_available": "pass",
+        "duration_to_request_ordering": "pass",
+        "final_to_breaker_ordering": "pass",
+        "latch_to_final_delay": "pass",
+        "no_startup_false_open": "pass",
+        "request_to_latch_delay": "pass",
+        "simulation_reached_expected_end": "pass"
+      },
+      "execution_record": {
+        "acceptance_status": "fail",
+        "archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
+        "build": {
+          "errors": 0,
+          "messages": null,
+          "warnings": null
+        },
+        "reason": "All command-and-state checks passed, but VSMIN_MEM minimum 0.3301161303713 pu differed from the 0.379649 pu reference by more than 0.02 pu.",
+        "run_status": "completed"
+      },
+      "metrics": {
+        "BRK_STATE_first_open_s": 3.04,
+        "DURATION_EXCEEDED_first_s": 3.04,
+        "FINAL_BRK_CMD_first_s": 3.04,
+        "FINAL_BRK_CMD_to_BRK_STATE_delay_s": 0.0,
+        "IMMTRIP_first_s": null,
+        "LOWV_end_s": 3.76,
+        "LOWV_start_s": 2.01,
+        "PIBR1_2_post_event_mean": -0.0024417965045137823,
+        "PIBR1_2_pre_fault_mean": 189.89013181934155,
+        "QIBR1_2_post_event_mean": 1.745654727684527e-08,
+        "QIBR1_2_pre_fault_mean": -15.494975081477733,
+        "TALLOW_maximum_s": 2.0,
+        "TALLOW_minimum_s": 0.88058525584932,
+        "TRIP_LATCH_first_s": 3.04,
+        "TRIP_LATCH_to_FINAL_BRK_CMD_delay_s": 0.0,
+        "TRIP_REQUEST_first_s": 3.04,
+        "VIBR1_2_minimum": 0.33022509231603,
+        "VSMIN_MEM_minimum": 0.3301161303713,
+        "simulation_end_s": 8.0,
+        "startup_maxima": {
+          "DFIG_BRK_STATE": 0.0,
+          "DFIG_LVRT_FINAL_BRK_CMD": 0.0,
+          "DFIG_LVRT_TRIP_LATCH": 0.0
+        }
+      },
+      "missing_signals": [],
+      "run_dir": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
+      "run_status": "completed",
+      "signal_pgb_indices": {
+        "DFIG_BRK_STATE": 29,
+        "DFIG_LVRT_CLEAR": 22,
+        "DFIG_LVRT_DURATION_EXCEEDED": 26,
+        "DFIG_LVRT_EXISTING_BRK_CMD": 18,
+        "DFIG_LVRT_FINAL_BRK_CMD": 17,
+        "DFIG_LVRT_IMMTRIP": 34,
+        "DFIG_LVRT_LOWV": 33,
+        "DFIG_LVRT_TALLOW_S": 30,
+        "DFIG_LVRT_TIMER_S": 35,
+        "DFIG_LVRT_TRIP_LATCH": 3,
+        "DFIG_LVRT_TRIP_REQUEST": 23,
+        "DFIG_LVRT_VSMIN_MEM": 2,
+        "PIBR1_2": 6,
+        "QIBR1_2": 8,
+        "VIBR1_2": 4
+      }
+    }
+  },
+  "c3_vsmin_comparability_addendum": {
+    "audit_file": "data/reference/type3_dfig_lvrt_c3_vsmin_comparability_audit.json",
+    "command_state_chain_status": "pass",
+    "decision_window_VSMIN_status": "pass",
+    "full_run_historical_reference_status": "fail",
+    "legacy_C3_acceptance_status": "fail",
+    "reference_comparability_status": "needs_explanation",
+    "current_decision_window_minimum": 0.40784436868089,
+    "historical_decision_window_minimum": 0.40784436868089,
+    "decision_window_absolute_difference": 0.0,
+    "current_full_run_minimum": 0.3301161303713,
+    "current_full_run_minimum_time_s": 3.26,
+    "full_run_minimum_occurs_after_breaker_open": true
+  },
+  "model_integrity_audit": {
+    "audit_file": "data/reference/type3_dfig_lvrt_model_integrity_audit.json",
+    "model_integrity_status": "model_integrity_nonfunctional_metadata_difference",
+    "difference_count": 128,
+    "functional_control_or_network_change": 0,
+    "test_parameter_change": 0,
+    "nonfunctional_metadata_or_display_change": 128,
+    "unclassified_difference": 0,
+    "master_gain_65646757": "absent_from_exact_task_start_backup_and_current_active_project"
+  },
+  "scope_statement": "Single-machine Type-3 external LVRT closed-loop coverage is validated in PSCAD only when C1, C2, and C3 all pass.",
+  "protection_state_interface_addendum": {
+    "audit_file": "data/reference/type3_dfig_lvrt_protection_state_interface.json",
+    "report": "docs/TYPE3_DFIG_LVRT_PROTECTION_STATE_INTERFACE.md",
+    "final_active_sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+    "structure_status": "pass",
+    "control_path_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3_formal_acceptance": "fail",
+      "C3_command_state_chain": "pass",
+      "R5_immediate_trip_chain": "pass",
+      "overall": "partial"
+    }
+  },
+  "cascade_event_bus_addendum": {
+    "audit_file": "data/reference/type3_dfig_lvrt_cascade_event_bus.json",
+    "report": "docs/TYPE3_DFIG_LVRT_CASCADE_EVENT_BUS.md",
+    "final_active_sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+    "structure_status": "pass",
+    "control_path_isolation_status": "pass",
+    "output_channel_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "multi_source_behavior_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3_formal_acceptance": "fail",
+      "C3_command_state_chain": "pass",
+      "R5_immediate_trip_chain": "pass",
+      "overall": "partial"
+    }
+  },
+  "trial_dual_source_static_addendum": {
+    "event_packet": "data/reference/ibr2_trial_second_source_event_packet.json",
+    "collector": "data/reference/ibr2_trial_dual_source_cascade_collector.json",
+    "source2_packet_structure_status": "pass",
+    "collector_structure_status": "pass",
+    "event_time_logic_status": "pass",
+    "event_source_code_logic_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": true
+  },
+  "trial_stimulus_chronology_static_addendum": {
+    "stimulus": "data/reference/ibr2_trial_one_shot_opening_stimulus.json",
+    "chronology": "data/reference/ibr2_trial_event_chronology_monitor.json",
+    "static_audit_status": "pass",
+    "dynamic_behavior_status": "unavailable",
+    "source2_dynamic_opening_status": "unavailable",
+    "dual_source_dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": true
+  },
+  "ibr3_three_source_static_addendum": {
+    "report": "docs/IBR3_TRIAL_REAL_SOURCE_MODULE_DEPLOYMENT.md",
+    "collector": "data/reference/three_source_event_collector.json",
+    "static_audit_status": "pass",
+    "output_channel_count": 245,
+    "dynamic_behavior_status": "unavailable",
+    "third_source_dynamic_behavior_status": "unavailable",
+    "three_source_dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": true
+  },
+  "three_event_chronology_static_addendum": {
+    "module": "data/reference/three_event_chronology_monitor.json",
+    "deployment": "data/reference/cascade3_trial_event_chronology_deployment.json",
+    "static_audit_status": "pass",
+    "output_channel_count": 253,
+    "dynamic_behavior_status": "unavailable",
+    "three_source_dynamic_behavior_status": "unavailable",
+    "cascade_propagation_status": "unavailable",
+    "pscad_run_performed": false,
+    "scenario_status_unchanged": true
+  },
+  "last_dynamic_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "summary": "One approved trial-only PSCAD Run temporarily enabled IBR3_TRIAL__OPEN_STIMULUS, observed the IBR3 local-opening chain at 5.0 s, parsed collector/chronology monitor outputs, and restored IBR3 test enable to 0.",
+    "report": "docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_default_disabled_baseline_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE",
+    "dynamic_baseline_status": "pass",
+    "stimulus_specific_contrast_status": "pass",
+    "summary": "One approved default-disabled PSCAD Run kept IBR2 and IBR3 trial test stimuli at 0; IBR3 open request, command, actual open, and event packet stayed absent. Compared with the prior enabled-stimulus run, this supports a stimulus-specific contrast for the fixed trial configuration only.",
+    "report": "docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  }
+}

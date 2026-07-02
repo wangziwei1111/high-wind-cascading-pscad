@@ -1,0 +1,5 @@
+item,status,detail
+structure_status,pass,monitor-only structure and formulas
+control_path_isolation_status,pass,pre-existing protected component parameters
+output_channel_status,pass,eight required channels and parameters
+dynamic_behavior_status,unavailable,no new PSCAD Run

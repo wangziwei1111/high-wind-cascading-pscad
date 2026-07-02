@@ -1,0 +1,65 @@
+{
+  "module": "THREE_EVENT_CHRONOLOGY_MONITOR",
+  "purpose": "monitor-only three-event chronology ordering",
+  "inputs": [
+    "IN_EVENT_VALID_A",
+    "IN_FIRST_EVENT_TIME_A_S",
+    "IN_EVENT_VALID_B",
+    "IN_FIRST_EVENT_TIME_B_S",
+    "IN_EVENT_VALID_C",
+    "IN_FIRST_EVENT_TIME_C_S"
+  ],
+  "outputs": [
+    "OUT_EVENTED_OBJECT_COUNT",
+    "OUT_TIMED_EVENT_OBJECT_COUNT",
+    "OUT_FIRST_EVENT_TIME_S",
+    "OUT_SECOND_EVENT_TIME_S",
+    "OUT_THIRD_EVENT_TIME_S",
+    "OUT_FIRST_TO_SECOND_GAP_S",
+    "OUT_SECOND_TO_THIRD_GAP_S",
+    "OUT_FIRST_EVENT_SOURCE_CODE",
+    "OUT_EVENT_ORDER_CLASS_CODE",
+    "OUT_CHRONOLOGY_CONSISTENT"
+  ],
+  "first_source_code": {
+    "0": "no timed event",
+    "1": "A uniquely first",
+    "2": "B uniquely first",
+    "3": "C uniquely first",
+    "4": "tie or indistinguishable first source"
+  },
+  "order_class_code": {
+    "0": "no timed event",
+    "1": "one timed event",
+    "2": "two timed events, strict order",
+    "3": "two timed events, tied",
+    "4": "three timed events, strict order",
+    "5": "three timed events, at least one adjacent tie",
+    "6": "evented count and timed count inconsistent"
+  },
+  "harness_instances": [
+    "MODTEST_THREE_EVENT_CHRONOLOGY_NONE",
+    "MODTEST_THREE_EVENT_CHRONOLOGY_TWO_STRICT",
+    "MODTEST_THREE_EVENT_CHRONOLOGY_THREE_TIE"
+  ],
+  "monitor_only": true,
+  "run_performed": false,
+  "dynamic_behavior_status": "unavailable",
+  "last_dynamic_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "summary": "One approved trial-only PSCAD Run temporarily enabled IBR3_TRIAL__OPEN_STIMULUS, observed the IBR3 local-opening chain at 5.0 s, parsed collector/chronology monitor outputs, and restored IBR3 test enable to 0.",
+    "report": "docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_default_disabled_baseline_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE",
+    "dynamic_baseline_status": "pass",
+    "stimulus_specific_contrast_status": "pass",
+    "summary": "One approved default-disabled PSCAD Run kept IBR2 and IBR3 trial test stimuli at 0; IBR3 open request, command, actual open, and event packet stayed absent. Compared with the prior enabled-stimulus run, this supports a stimulus-specific contrast for the fixed trial configuration only.",
+    "report": "docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  }
+}
