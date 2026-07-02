@@ -1,0 +1,1731 @@
+{
+  "execution_status": "ready_for_single_tline_gui_stage",
+  "inventory_count": 31,
+  "selected_native_component": "master:multimeter",
+  "measurement_plan_rank": 2,
+  "meters_per_tline": 2,
+  "outputs_per_tline": 6,
+  "existing_output_channel_count": 262,
+  "new_output_channel_count_after_full_deployment": 186,
+  "final_output_channel_count_after_full_deployment": 448,
+  "single_line_stage_target": "E_16_19_1",
+  "terminal_definition": {
+    "A": "first node encoded by E_<first>_<second>_<parallel>; TLine send/left terminal at orientation 0",
+    "B": "second node encoded by E_<first>_<second>_<parallel>; TLine receive/right terminal at orientation 0"
+  },
+  "meter_orientation": "For both ends, component port A faces the bus and component port B faces the TLine, so P/Q positive means injection from that bus into the line.",
+  "selected_meter_parameters": {
+    "Instantaneous Voltage?": "No",
+    "Instantaneous Current?": "No",
+    "Active Power flow?": "Yes",
+    "Reactive Power flow?": "Yes",
+    "RMS Voltage?": "No",
+    "RMS Current?": "Yes, Analog",
+    "Phase Angle": "No",
+    "Base MVA": "100.0 MVA",
+    "Base Current": "1.0 kA",
+    "Smoothing Time Constant": "0.02 s",
+    "Animated Display?": "No"
+  },
+  "selected_meter_raw_parameter_values": {
+    "MeasV": "0",
+    "MeasI": "0",
+    "MeasP": "1",
+    "MeasQ": "1",
+    "RMS": "0",
+    "IRMS": "1",
+    "MeasPh": "0",
+    "S": "100.0 [MVA]",
+    "BaseA": "1.0 [kA]",
+    "TS": "0.02 [s]",
+    "Dis": "0"
+  },
+  "output_channel_parameters": {
+    "Transfer Data": "Yes (enab=1)",
+    "Multiple Run Save": "No (mrun=0)",
+    "Scale Factor": "1.0",
+    "Use signal name as title": "No (UseSignalName=0)",
+    "Display": "Yes (Display=1)",
+    "Polarity": "0"
+  },
+  "full_output_plan": [
+    {
+      "network_branch_id": "E_1_2_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_1_2_1_A_P",
+      "output_channel_name": "E_1_2_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_2_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_1_2_1_A_Q",
+      "output_channel_name": "E_1_2_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_2_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_1_2_1_A_I",
+      "output_channel_name": "E_1_2_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_2_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_1_2_1_B_P",
+      "output_channel_name": "E_1_2_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_2_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_1_2_1_B_Q",
+      "output_channel_name": "E_1_2_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_2_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_1_2_1_B_I",
+      "output_channel_name": "E_1_2_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_1_39_1_A_P",
+      "output_channel_name": "E_1_39_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_1_39_1_A_Q",
+      "output_channel_name": "E_1_39_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_1_39_1_A_I",
+      "output_channel_name": "E_1_39_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_1_39_1_B_P",
+      "output_channel_name": "E_1_39_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_1_39_1_B_Q",
+      "output_channel_name": "E_1_39_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_1_39_1_B_I",
+      "output_channel_name": "E_1_39_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_2_3_1_A_P",
+      "output_channel_name": "E_2_3_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_2_3_1_A_Q",
+      "output_channel_name": "E_2_3_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_2_3_1_A_I",
+      "output_channel_name": "E_2_3_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_2_3_1_B_P",
+      "output_channel_name": "E_2_3_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_2_3_1_B_Q",
+      "output_channel_name": "E_2_3_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_2_3_1_B_I",
+      "output_channel_name": "E_2_3_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_2_25_1_A_P",
+      "output_channel_name": "E_2_25_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_2_25_1_A_Q",
+      "output_channel_name": "E_2_25_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_2_25_1_A_I",
+      "output_channel_name": "E_2_25_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_2_25_1_B_P",
+      "output_channel_name": "E_2_25_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_2_25_1_B_Q",
+      "output_channel_name": "E_2_25_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_2_25_1_B_I",
+      "output_channel_name": "E_2_25_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_3_4_1_A_P",
+      "output_channel_name": "E_3_4_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_3_4_1_A_Q",
+      "output_channel_name": "E_3_4_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_3_4_1_A_I",
+      "output_channel_name": "E_3_4_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_3_4_1_B_P",
+      "output_channel_name": "E_3_4_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_3_4_1_B_Q",
+      "output_channel_name": "E_3_4_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_3_4_1_B_I",
+      "output_channel_name": "E_3_4_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_3_18_1_A_P",
+      "output_channel_name": "E_3_18_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_3_18_1_A_Q",
+      "output_channel_name": "E_3_18_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_3_18_1_A_I",
+      "output_channel_name": "E_3_18_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_3_18_1_B_P",
+      "output_channel_name": "E_3_18_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_3_18_1_B_Q",
+      "output_channel_name": "E_3_18_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_3_18_1_B_I",
+      "output_channel_name": "E_3_18_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_4_5_1_A_P",
+      "output_channel_name": "E_4_5_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_4_5_1_A_Q",
+      "output_channel_name": "E_4_5_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_4_5_1_A_I",
+      "output_channel_name": "E_4_5_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_4_5_1_B_P",
+      "output_channel_name": "E_4_5_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_4_5_1_B_Q",
+      "output_channel_name": "E_4_5_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_4_5_1_B_I",
+      "output_channel_name": "E_4_5_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_4_14_1_A_P",
+      "output_channel_name": "E_4_14_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_4_14_1_A_Q",
+      "output_channel_name": "E_4_14_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_4_14_1_A_I",
+      "output_channel_name": "E_4_14_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_4_14_1_B_P",
+      "output_channel_name": "E_4_14_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_4_14_1_B_Q",
+      "output_channel_name": "E_4_14_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_4_14_1_B_I",
+      "output_channel_name": "E_4_14_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_5_8_1_A_P",
+      "output_channel_name": "E_5_8_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_5_8_1_A_Q",
+      "output_channel_name": "E_5_8_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_5_8_1_A_I",
+      "output_channel_name": "E_5_8_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_5_8_1_B_P",
+      "output_channel_name": "E_5_8_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_5_8_1_B_Q",
+      "output_channel_name": "E_5_8_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_5_8_1_B_I",
+      "output_channel_name": "E_5_8_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_6_7_1_A_P",
+      "output_channel_name": "E_6_7_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_6_7_1_A_Q",
+      "output_channel_name": "E_6_7_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_6_7_1_A_I",
+      "output_channel_name": "E_6_7_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_6_7_1_B_P",
+      "output_channel_name": "E_6_7_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_6_7_1_B_Q",
+      "output_channel_name": "E_6_7_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_6_7_1_B_I",
+      "output_channel_name": "E_6_7_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_6_11_1_A_P",
+      "output_channel_name": "E_6_11_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_6_11_1_A_Q",
+      "output_channel_name": "E_6_11_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_6_11_1_A_I",
+      "output_channel_name": "E_6_11_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_6_11_1_B_P",
+      "output_channel_name": "E_6_11_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_6_11_1_B_Q",
+      "output_channel_name": "E_6_11_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_6_11_1_B_I",
+      "output_channel_name": "E_6_11_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_7_8_1_A_P",
+      "output_channel_name": "E_7_8_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_7_8_1_A_Q",
+      "output_channel_name": "E_7_8_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_7_8_1_A_I",
+      "output_channel_name": "E_7_8_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_7_8_1_B_P",
+      "output_channel_name": "E_7_8_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_7_8_1_B_Q",
+      "output_channel_name": "E_7_8_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_7_8_1_B_I",
+      "output_channel_name": "E_7_8_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_8_9_1_A_P",
+      "output_channel_name": "E_8_9_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_8_9_1_A_Q",
+      "output_channel_name": "E_8_9_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_8_9_1_A_I",
+      "output_channel_name": "E_8_9_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_8_9_1_B_P",
+      "output_channel_name": "E_8_9_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_8_9_1_B_Q",
+      "output_channel_name": "E_8_9_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_8_9_1_B_I",
+      "output_channel_name": "E_8_9_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_9_39_1_A_P",
+      "output_channel_name": "E_9_39_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_9_39_1_A_Q",
+      "output_channel_name": "E_9_39_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_9_39_1_A_I",
+      "output_channel_name": "E_9_39_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_9_39_1_B_P",
+      "output_channel_name": "E_9_39_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_9_39_1_B_Q",
+      "output_channel_name": "E_9_39_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_9_39_1_B_I",
+      "output_channel_name": "E_9_39_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_13_14_1_A_P",
+      "output_channel_name": "E_13_14_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_13_14_1_A_Q",
+      "output_channel_name": "E_13_14_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_13_14_1_A_I",
+      "output_channel_name": "E_13_14_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_13_14_1_B_P",
+      "output_channel_name": "E_13_14_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_13_14_1_B_Q",
+      "output_channel_name": "E_13_14_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_13_14_1_B_I",
+      "output_channel_name": "E_13_14_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_14_15_1_A_P",
+      "output_channel_name": "E_14_15_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_14_15_1_A_Q",
+      "output_channel_name": "E_14_15_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_14_15_1_A_I",
+      "output_channel_name": "E_14_15_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_14_15_1_B_P",
+      "output_channel_name": "E_14_15_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_14_15_1_B_Q",
+      "output_channel_name": "E_14_15_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_14_15_1_B_I",
+      "output_channel_name": "E_14_15_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_15_16_1_A_P",
+      "output_channel_name": "E_15_16_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_15_16_1_A_Q",
+      "output_channel_name": "E_15_16_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_15_16_1_A_I",
+      "output_channel_name": "E_15_16_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_15_16_1_B_P",
+      "output_channel_name": "E_15_16_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_15_16_1_B_Q",
+      "output_channel_name": "E_15_16_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_15_16_1_B_I",
+      "output_channel_name": "E_15_16_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_16_17_1_A_P",
+      "output_channel_name": "E_16_17_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_17_1_A_Q",
+      "output_channel_name": "E_16_17_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_16_17_1_A_I",
+      "output_channel_name": "E_16_17_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_16_17_1_B_P",
+      "output_channel_name": "E_16_17_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_17_1_B_Q",
+      "output_channel_name": "E_16_17_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_16_17_1_B_I",
+      "output_channel_name": "E_16_17_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_16_19_1_A_P",
+      "output_channel_name": "E_16_19_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_19_1_A_Q",
+      "output_channel_name": "E_16_19_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_16_19_1_A_I",
+      "output_channel_name": "E_16_19_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_16_19_1_B_P",
+      "output_channel_name": "E_16_19_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_19_1_B_Q",
+      "output_channel_name": "E_16_19_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_16_19_1_B_I",
+      "output_channel_name": "E_16_19_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_16_21_1_A_P",
+      "output_channel_name": "E_16_21_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_21_1_A_Q",
+      "output_channel_name": "E_16_21_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_16_21_1_A_I",
+      "output_channel_name": "E_16_21_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_16_21_1_B_P",
+      "output_channel_name": "E_16_21_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_21_1_B_Q",
+      "output_channel_name": "E_16_21_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_16_21_1_B_I",
+      "output_channel_name": "E_16_21_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_16_24_1_A_P",
+      "output_channel_name": "E_16_24_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_24_1_A_Q",
+      "output_channel_name": "E_16_24_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_16_24_1_A_I",
+      "output_channel_name": "E_16_24_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_16_24_1_B_P",
+      "output_channel_name": "E_16_24_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_16_24_1_B_Q",
+      "output_channel_name": "E_16_24_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_16_24_1_B_I",
+      "output_channel_name": "E_16_24_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_17_18_1_A_P",
+      "output_channel_name": "E_17_18_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_17_18_1_A_Q",
+      "output_channel_name": "E_17_18_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_17_18_1_A_I",
+      "output_channel_name": "E_17_18_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_17_18_1_B_P",
+      "output_channel_name": "E_17_18_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_17_18_1_B_Q",
+      "output_channel_name": "E_17_18_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_17_18_1_B_I",
+      "output_channel_name": "E_17_18_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_17_27_1_A_P",
+      "output_channel_name": "E_17_27_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_17_27_1_A_Q",
+      "output_channel_name": "E_17_27_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_17_27_1_A_I",
+      "output_channel_name": "E_17_27_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_17_27_1_B_P",
+      "output_channel_name": "E_17_27_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_17_27_1_B_Q",
+      "output_channel_name": "E_17_27_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_17_27_1_B_I",
+      "output_channel_name": "E_17_27_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_21_22_1_A_P",
+      "output_channel_name": "E_21_22_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_21_22_1_A_Q",
+      "output_channel_name": "E_21_22_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_21_22_1_A_I",
+      "output_channel_name": "E_21_22_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_21_22_1_B_P",
+      "output_channel_name": "E_21_22_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_21_22_1_B_Q",
+      "output_channel_name": "E_21_22_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_21_22_1_B_I",
+      "output_channel_name": "E_21_22_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_22_23_1_A_P",
+      "output_channel_name": "E_22_23_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_22_23_1_A_Q",
+      "output_channel_name": "E_22_23_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_22_23_1_A_I",
+      "output_channel_name": "E_22_23_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_22_23_1_B_P",
+      "output_channel_name": "E_22_23_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_22_23_1_B_Q",
+      "output_channel_name": "E_22_23_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_22_23_1_B_I",
+      "output_channel_name": "E_22_23_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_23_24_1_A_P",
+      "output_channel_name": "E_23_24_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_23_24_1_A_Q",
+      "output_channel_name": "E_23_24_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_23_24_1_A_I",
+      "output_channel_name": "E_23_24_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_23_24_1_B_P",
+      "output_channel_name": "E_23_24_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_23_24_1_B_Q",
+      "output_channel_name": "E_23_24_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_23_24_1_B_I",
+      "output_channel_name": "E_23_24_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_25_26_1_A_P",
+      "output_channel_name": "E_25_26_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_25_26_1_A_Q",
+      "output_channel_name": "E_25_26_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_25_26_1_A_I",
+      "output_channel_name": "E_25_26_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_25_26_1_B_P",
+      "output_channel_name": "E_25_26_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_25_26_1_B_Q",
+      "output_channel_name": "E_25_26_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_25_26_1_B_I",
+      "output_channel_name": "E_25_26_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_26_27_1_A_P",
+      "output_channel_name": "E_26_27_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_26_27_1_A_Q",
+      "output_channel_name": "E_26_27_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_26_27_1_A_I",
+      "output_channel_name": "E_26_27_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_26_27_1_B_P",
+      "output_channel_name": "E_26_27_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_26_27_1_B_Q",
+      "output_channel_name": "E_26_27_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_26_27_1_B_I",
+      "output_channel_name": "E_26_27_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_26_28_1_A_P",
+      "output_channel_name": "E_26_28_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_26_28_1_A_Q",
+      "output_channel_name": "E_26_28_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_26_28_1_A_I",
+      "output_channel_name": "E_26_28_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_26_28_1_B_P",
+      "output_channel_name": "E_26_28_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_26_28_1_B_Q",
+      "output_channel_name": "E_26_28_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_26_28_1_B_I",
+      "output_channel_name": "E_26_28_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_26_29_1_A_P",
+      "output_channel_name": "E_26_29_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_26_29_1_A_Q",
+      "output_channel_name": "E_26_29_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_26_29_1_A_I",
+      "output_channel_name": "E_26_29_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_26_29_1_B_P",
+      "output_channel_name": "E_26_29_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_26_29_1_B_Q",
+      "output_channel_name": "E_26_29_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_26_29_1_B_I",
+      "output_channel_name": "E_26_29_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_28_29_1",
+      "terminal": "A",
+      "quantity": "P",
+      "meter_signal_name": "E_28_29_1_A_P",
+      "output_channel_name": "E_28_29_1_A_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_28_29_1",
+      "terminal": "A",
+      "quantity": "Q",
+      "meter_signal_name": "E_28_29_1_A_Q",
+      "output_channel_name": "E_28_29_1_A_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_28_29_1",
+      "terminal": "A",
+      "quantity": "I",
+      "meter_signal_name": "E_28_29_1_A_I",
+      "output_channel_name": "E_28_29_1_A_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_28_29_1",
+      "terminal": "B",
+      "quantity": "P",
+      "meter_signal_name": "E_28_29_1_B_P",
+      "output_channel_name": "E_28_29_1_B_P",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_28_29_1",
+      "terminal": "B",
+      "quantity": "Q",
+      "meter_signal_name": "E_28_29_1_B_Q",
+      "output_channel_name": "E_28_29_1_B_Q",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    },
+    {
+      "network_branch_id": "E_28_29_1",
+      "terminal": "B",
+      "quantity": "I",
+      "meter_signal_name": "E_28_29_1_B_I",
+      "output_channel_name": "E_28_29_1_B_I",
+      "meter_component": "master:multimeter",
+      "meter_port_orientation": "A=bus, B=TLine"
+    }
+  ],
+  "no_in_model_calculation": true,
+  "no_page_module": true,
+  "no_control_or_protection_connection": true,
+  "run_status": "not_performed"
+}

@@ -86,3 +86,18 @@ P08 therefore remains `missing`; P09 line-overload protection and P10 branch
 trip also remain `missing`. The recommended research direction remains
 `branch observability only`, but a future task must explicitly authorize
 minimal inline meters or establish a native TLine measurement interface.
+
+## Full-network TLine P/Q/I observability implementation addendum
+
+The later full-network TLine measurement stage implemented the previously
+recommended branch-observability step as a static, monitor-only trial
+extension. All 31 genuine P3 network `TLine` instances now have terminal A/B
+native `master:multimeter` P/Q/Crms measurements and six Output Channels per
+line, for 186 new branch channels and 448 total XML Output Channels.
+
+This updates P08 from `missing` to `partially_aligned /
+implemented_static_only`: the raw line P/Q/I observability bridge now exists,
+but no Run has verified power-flow redistribution and no in-model loading
+ratio, overload protection, or line trip logic exists. P09 and P10 remain
+missing. The safe project name remains `controlled-interface validation
+scaffold`; strict paper reproduction remains `not_achieved`.

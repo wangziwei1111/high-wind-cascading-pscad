@@ -36,15 +36,17 @@
         "source V/P/Q"
       ],
       "missing_components": [
-        "audited target-line measurements",
         "line loading limits",
         "line breaker observability",
         "overload shadow relay"
       ],
       "minimum_model_change": "First add monitor-only target-line P/Q/I/loading outputs; do not add relay or actuation in that stage.",
       "future_run_count_before_claim": "minimum 2 after staged implementation: one observability baseline and one later shadow-relay evaluation; more required before any natural-cascade claim",
-      "claim_boundary": "Paper-aligned candidate design only; no propagation or protection behavior has been implemented or validated.",
-      "rejection_reason_if_not_feasible": "Reject if the target branch and its electrical measurements cannot be unambiguously mapped."
+      "claim_boundary": "Raw branch P/Q/I observability is available, but no loading ratio, overload relay, line trip, or natural cascade behavior has been validated.",
+      "rejection_reason_if_not_feasible": "Reject if the target branch and its electrical measurements cannot be unambiguously mapped.",
+      "implemented_prerequisites": [
+        "full-network raw TLine P/Q/I monitor-only observability"
+      ]
     },
     {
       "candidate_chain_id": "MC02",
@@ -64,17 +66,19 @@
         "network model"
       ],
       "missing_components": [
-        "line observability",
         "shadow relay",
         "transmission-line actuation boundary"
       ],
       "minimum_model_change": "Same first step as MC01: branch observability only.",
       "future_run_count_before_claim": "at least 2 staged runs after implementation",
-      "claim_boundary": "Alternative paper mechanism, not selected as the minimum current path.",
-      "rejection_reason_if_not_feasible": "Less immediately reusable than MC01 because the current audited first protection is source-side DFIG LVRT."
+      "claim_boundary": "Raw branch P/Q/I observability is available, but no loading ratio, overload relay, line trip, or natural cascade behavior has been validated.",
+      "rejection_reason_if_not_feasible": "Less immediately reusable than MC01 because the current audited first protection is source-side DFIG LVRT.",
+      "implemented_prerequisites": [
+        "full-network raw TLine P/Q/I monitor-only observability"
+      ]
     }
   ],
-  "next_stage": "branch observability only",
+  "next_stage": "dynamic branch redistribution run and offline loading analysis only after scenario manifest",
   "why_this_stage_matches_the_paper": "E003, E010 and E012 place branch-flow redistribution and overload between the first source event and later protection actions.",
   "why_other_stages_are_deferred": "A relay lacks an audited input and branch boundary; extra UVRT duplicates an already audited source-side path; another fixed-timing Run cannot create the missing network propagation measurement.",
   "primary_paper_evidence_supporting_order": [
@@ -90,5 +94,7 @@
     "reason": "Real TLine candidates were found, but none exposes an existing P/Q/I signal path and this stage forbids adding measurement elements.",
     "next_stage_remains": "branch observability only",
     "required_scope_change": "Explicitly authorize minimal inline meters or establish an authoritative native TLine measurement interface; still no module, relay, breaker command, or in-model loading calculation."
-  }
+  },
+  "branch_observability_stage2_status": "full_network_raw_tline_pqi_static_observability_implemented",
+  "stage2_full_network_tline_measurement_evidence": "data/validation/full_network_tline_measurement_final_audit.json"
 }

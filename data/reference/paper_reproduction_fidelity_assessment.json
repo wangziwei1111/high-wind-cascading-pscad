@@ -11,7 +11,10 @@
   "current_safe_name": "controlled-interface validation scaffold",
   "strict_reproduction_status": "not_achieved",
   "structural_alignment_status": "partial",
-  "branch_observability_stage2_status": "static_fallback_missing_existing_pqi_measurement_semantics",
+  "branch_observability_stage2_status": "full_network_raw_tline_pqi_static_observability_implemented",
   "strict_reproduction_status_after_stage2": "not_achieved",
-  "current_safe_name_after_stage2": "controlled-interface validation scaffold"
+  "current_safe_name_after_stage2": "controlled-interface validation scaffold",
+  "power_flow_redistribution_status": "unavailable_until_future_run",
+  "line_loading_ratio_status": "unavailable_not_computed_in_pscad",
+  "line_overload_status": "unavailable"
 }

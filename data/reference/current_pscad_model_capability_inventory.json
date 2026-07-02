@@ -28,13 +28,13 @@
     {
       "capability_id": "CAP03",
       "category": "line P / Q / I / loading observability",
-      "component_name": "no audited line-channel set",
+      "component_name": "full-network dual-end native TLine P/Q/I measurement layer",
       "source_or_network_object": "branches",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
-      "xml_or_fortran_evidence": "262 Output Channels contain no audited comprehensive line P/Q/I/loading map; four real TLine candidates were traced but expose no existing P/Q/I transfer signals",
-      "existing_dynamic_evidence": "data/reference/paper_branch_candidate_registry.json",
-      "current_status": "not_found",
-      "claim_boundary": "Stage-two preflight ended in static fallback; no branch Output Channel was added."
+      "xml_or_fortran_evidence": "31 genuine P3 network TLines each have terminal A/B native master:multimeter P/Q/Crms bindings and six monitor-only Output Channels; final XML channel count 448 = 262 + 186",
+      "existing_dynamic_evidence": "data/validation/full_network_tline_measurement_final_audit.json",
+      "current_status": "implemented_static_only",
+      "claim_boundary": "Full-network raw branch P/Q/I observability is statically built and audited; loading ratio, overload status, protection, branch trip and cascade behavior remain unavailable until future Run/offline analysis."
     },
     {
       "capability_id": "CAP04",
@@ -300,5 +300,7 @@
       "current_status": "not_implemented",
       "claim_boundary": "No MATLAB coupling claim."
     }
-  ]
+  ],
+  "trial_sha256_after_full_network_tline_measurement": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",
+  "output_channel_count_after_full_network_tline_measurement": 448
 }

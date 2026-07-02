@@ -23,3 +23,15 @@ G03 remains open. Four genuine TLines were traced, but no eligible branch had
 an existing P/Q/I transfer-signal path. `PL16` was rejected because it measures
 load branch `E_16_0_1`, not transmission line `E_16_19_1`, and has no Q/I
 outputs. No model capability or reproduction-fidelity level changed.
+
+## Full-network TLine P/Q/I observability implementation addendum
+
+G03 is no longer a raw-observability construction gap. The trial project now
+contains statically audited dual-end P/Q/I monitor-only outputs for all 31
+genuine network `TLine` instances. The remaining G03 boundary is dynamic:
+power-flow redistribution, loading ratio, overload candidate screening, and
+causal propagation are still unavailable until a future Run and offline
+analysis use the audited raw channels.
+
+G04 and G05 remain open. No overload relay, inverse-time logic, breaker
+command, or transmission-line trip mechanism was added in this stage.
