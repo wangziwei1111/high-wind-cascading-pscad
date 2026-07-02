@@ -101,3 +101,19 @@ but no Run has verified power-flow redistribution and no in-model loading
 ratio, overload protection, or line trip logic exists. P09 and P10 remain
 missing. The safe project name remains `controlled-interface validation
 scaffold`; strict paper reproduction remains `not_achieved`.
+
+## Paper-aligned 20 s baseline fault static configuration addendum
+
+The trial project now contains a static paper-aligned baseline fault
+configuration. The existing `master:tfaultn` component was reused and configured
+for a three-phase fault at the structurally aligned P3 `N29` target, starting at
+0.50 s and lasting 2.00 s. The project `Duration of Run` is 20 s. The main
+project remains unchanged, the full-network TLine measurement layer remains at
+448 XML Output Channels, and PSCAD Build artifacts verify N29 fault branches and
+timing code.
+
+This updates P03/P04/P05/P06 to `implemented_static_only` or
+`structurally_aligned_adaptation` for the configuration layer. It does not
+upgrade the overall reproduction level to strict or dynamic paper reproduction:
+no Run was performed, and branch overload, line-trip, UFLS/UVLS, generator
+protection, and mitigation mechanisms remain future work.

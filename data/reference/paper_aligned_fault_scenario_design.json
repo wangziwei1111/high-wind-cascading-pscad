@@ -1,0 +1,33 @@
+{
+  "scenario_id": "paper_aligned_20s_bus29_three_phase_fault_static",
+  "claim_boundary": "static structural adaptation, not a complete paper identity proof",
+  "paper_fault": {
+    "location": "near bus 29",
+    "fault_type": "three-phase short circuit",
+    "start_s": 0.5,
+    "duration_s": 2.0,
+    "clear_s": 2.5,
+    "simulation_duration_s": 20.0,
+    "supporting_evidence": [
+      "E009",
+      "E010",
+      "E017",
+      "E018"
+    ]
+  },
+  "manual_gui_actions_required": [
+    "reuse the single existing master:tfaultn component; do not add a new fault component",
+    "move/reconnect the existing fault component to the P3 N29 node boundary",
+    "set TF=0.50 s and DF=2.00 s, so clearing occurs at 2.50 s",
+    "set project Duration of Run to 20.00 s",
+    "save and Build only; do not Run"
+  ],
+  "preserve": {
+    "output_channel_count": 448,
+    "full_network_tline_measurement_layer": "unchanged",
+    "IBR2_TEST_ENABLE": 0,
+    "IBR3_TEST_ENABLE": 0,
+    "IBR2_TEST_OPEN_TIME_S": 4.0,
+    "IBR3_TEST_OPEN_TIME_S": 5.0
+  }
+}

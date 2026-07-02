@@ -1,6 +1,6 @@
 {
   "paper_source_status": "available_primary_paper_source",
-  "design_status": "minimum_chain_designed_not_implemented",
+  "design_status": "minimum_chain_designed_initial_fault_static_configured",
   "controlled_existing_sequence_classification": "controlled interface-validation sequence",
   "controlled_existing_sequence_prohibited_classifications": [
     "paper cascade chain",
@@ -96,5 +96,16 @@
     "required_scope_change": "Explicitly authorize minimal inline meters or establish an authoritative native TLine measurement interface; still no module, relay, breaker command, or in-model loading calculation."
   },
   "branch_observability_stage2_status": "full_network_raw_tline_pqi_static_observability_implemented",
-  "stage2_full_network_tline_measurement_evidence": "data/validation/full_network_tline_measurement_final_audit.json"
+  "stage2_full_network_tline_measurement_evidence": "data/validation/full_network_tline_measurement_final_audit.json",
+  "paper_aligned_20s_fault_static_configuration": {
+    "execution_status": "implemented_static_build_only",
+    "fault_target_mapping": "structurally_aligned_P3_N29_adaptation",
+    "fault_start_s": 0.5,
+    "fault_duration_s": 2.0,
+    "fault_clear_s": 2.5,
+    "simulation_duration_s": 20.0,
+    "final_audit": "data/validation/paper_aligned_fault_scenario_final_audit.json",
+    "dynamic_status": "not_run_not_validated",
+    "claim_boundary": "Initial disturbance is statically configured; natural cascade propagation remains unvalidated."
+  }
 }

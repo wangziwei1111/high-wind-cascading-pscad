@@ -3,7 +3,7 @@
   "system_level_fidelity": "partial",
   "topology_fidelity": "partially_aligned",
   "source_model_fidelity": "structurally_aligned_adaptation",
-  "fault_scenario_fidelity": "partial_and_not_paper_configured",
+  "fault_scenario_fidelity": "paper_aligned_static_configuration_only",
   "protection_system_fidelity": "mostly_missing_except_partial_DFIG_LVRT",
   "cascade_mechanism_fidelity": "not_implemented",
   "mitigation_measure_fidelity": "not_implemented",
@@ -16,5 +16,9 @@
   "current_safe_name_after_stage2": "controlled-interface validation scaffold",
   "power_flow_redistribution_status": "unavailable_until_future_run",
   "line_loading_ratio_status": "unavailable_not_computed_in_pscad",
-  "line_overload_status": "unavailable"
+  "line_overload_status": "unavailable",
+  "paper_aligned_20s_fault_static_status": "implemented_static_build_only",
+  "paper_aligned_20s_fault_final_audit": "data/validation/paper_aligned_fault_scenario_final_audit.json",
+  "paper_aligned_20s_fault_trial_sha256": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "paper_aligned_20s_fault_dynamic_status": "not_run_not_validated"
 }

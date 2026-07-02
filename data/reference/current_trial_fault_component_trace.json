@@ -1,0 +1,19 @@
+{
+  "fault_component_count": 1,
+  "fault_components": [
+    {
+      "id": "413214904",
+      "defn": "master:tfaultn",
+      "definition_path": "project[3IBR_DFIG1_TRIAL]/definitions[]/Definition[P3]/schematic[]/User[413214904]",
+      "x": "774",
+      "y": "1080",
+      "w": "76",
+      "h": "56",
+      "params": {
+        "TF": "2.0",
+        "DF": "0.15"
+      }
+    }
+  ],
+  "existing_fault_component_status": "pass"
+}

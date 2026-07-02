@@ -1,0 +1,125 @@
+{
+  "audit_name": "paper_aligned_fault_scenario_final_static_audit",
+  "generated_at_local": "2026-07-03T00:54:35",
+  "execution_status": "pass",
+  "run_status": "not_performed_by_task_design",
+  "build_status": "user_build_completed_static_audit_passed",
+  "main_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "trial_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "baseline_trial_sha256_before_fault_static_config": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",
+  "project_settings": {
+    "creator": "ETRAN, 984688192",
+    "time_duration": "20",
+    "time_step": "5",
+    "sample_step": "10000",
+    "chatter_threshold": "0.001",
+    "branch_threshold": "0.0005",
+    "latency_count": "100",
+    "StartType": "0",
+    "PlotType": "1",
+    "output_filename": "$(Namespace).out",
+    "SnapType": "0",
+    "SnapTime": "30.0",
+    "snapshot_filename": "IBR_snp",
+    "MrunType": "0",
+    "Mruns": "1",
+    "Scenario": "",
+    "Advanced": "21503",
+    "Options": "48",
+    "Build": "22",
+    "Warn": "0",
+    "Check": "0",
+    "description": "",
+    "revisor": "24186, 1783010900",
+    "architecture": "windows",
+    "Debug": "0",
+    "startup_filename": "C:\\Users\\nguy258\\OneDrive - PNNL\\Projects\\IBR_Analytics\\Simulation\\Github Folder Management\\IEEE_39_No_IBR_QN\\Generator_Trip\\PSCAD\\IBR_ConvZ_Modified5.gf46\\IBR_snp.snp",
+    "sparsity_threshold": "200"
+  },
+  "gates": {
+    "main_project_unchanged": true,
+    "trial_changed_from_full_network_baseline": true,
+    "duration_20s": true,
+    "time_step_preserved_5us": true,
+    "plot_step_preserved_10000us": true,
+    "fault_static_configuration": true,
+    "output_channels_preserved": true,
+    "tline_measurements_preserved": true,
+    "build_artifacts_present": true,
+    "preflight_was_pass": true
+  },
+  "paper_evidence_extract": {
+    "registry_path": "data/reference/paper_reproduction_evidence_registry.csv",
+    "gates": {
+      "E009": {
+        "present": true,
+        "has_section": true,
+        "has_pages": true,
+        "has_anchor": true,
+        "claim": "Generators at buses 33, 35 and 38 are replaced by equal-output wind farms; 85 bus-fault/line-outage initial conditions are run for 20 s.",
+        "quote_or_paraphrase": "33、35、38母线上火电机组由相同出力的风电场模型所替代"
+      },
+      "E010": {
+        "present": true,
+        "has_section": true,
+        "has_pages": true,
+        "has_anchor": true,
+        "claim": "At 0.50 s a 2 s three-phase fault near bus 29 is followed by wind trip, UFLS, sequential overloaded-line openings, further wind trip, and generator protection.",
+        "quote_or_paraphrase": "母线29近区发生三相短路故障，故障持续时间2.0s"
+      },
+      "E017": {
+        "present": true,
+        "has_section": true,
+        "has_pages": true,
+        "has_anchor": true,
+        "claim": "The baseline initial fault is located near bus 29.",
+        "quote_or_paraphrase": "母线29近区发生三相短路故障"
+      },
+      "E018": {
+        "present": true,
+        "has_section": true,
+        "has_pages": true,
+        "has_anchor": true,
+        "claim": "The baseline fault begins at 0.50 s and lasts 2.0 s.",
+        "quote_or_paraphrase": "故障持续时间2.0s"
+      }
+    }
+  },
+  "fault_summary": {
+    "fault_component_count": 1,
+    "xml_fault_start_s": 0.5,
+    "xml_fault_duration_s": 2.0,
+    "xml_fault_clear_s": 2.5,
+    "n29_ground_branch_evidence_count": 12,
+    "timing_code_evidence_count": 3,
+    "three_phase_fault_code_present": true,
+    "status": "pass"
+  },
+  "channel_summary": {
+    "xml_output_channel_count": 448,
+    "status": "pass"
+  },
+  "tline_summary": {
+    "inventory_tline_count": 31,
+    "all_tline_measurements_preserved": true,
+    "status": "pass"
+  },
+  "build_summary": {
+    "gf46_dir_exists": true,
+    "p3_f_exists": true,
+    "p3_dta_exists": true,
+    "map_exists": true,
+    "exe_exists": true,
+    "build_generated_latest_files_local": {
+      "P3.f": "2026-07-03T00:48:23",
+      "P3.dta": "2026-07-03T00:48:23",
+      "map": "2026-07-03T00:48:27",
+      "exe": "2026-07-03T00:48:51"
+    },
+    "log_files_with_error_text": [],
+    "status": "pass"
+  },
+  "claim_boundary": "paper-aligned static baseline fault configuration; no dynamic reproduction claim until a later Run and parsed results"
+}

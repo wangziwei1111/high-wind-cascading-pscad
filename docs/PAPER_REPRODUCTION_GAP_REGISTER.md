@@ -35,3 +35,17 @@ analysis use the audited raw channels.
 
 G04 and G05 remain open. No overload relay, inverse-time logic, breaker
 command, or transmission-line trip mechanism was added in this stage.
+
+## Paper-aligned 20 s baseline fault static configuration addendum
+
+G02 is no longer an unconfigured static fault gap. The trial project now reuses
+the existing `master:tfaultn` component and statically configures it as the
+paper-aligned baseline disturbance: three-phase fault at the structurally
+aligned P3 `N29` target, `TF=0.50 s`, `DF=2.00 s`, clearing at `2.50 s`.
+Build-generated `P3.dta` confirms N29 phase-to-ground fault branches, and
+`P3.f` confirms the timing logic.
+
+G09 is also no longer contradicted at the static project-setting level because
+`Duration of Run` is now 20 s. It remains dynamically unvalidated: no Run was
+performed in this stage, and no paper cascade outcome, load shedding, line
+overload, generator protection, or mitigation-performance claim is permitted.
