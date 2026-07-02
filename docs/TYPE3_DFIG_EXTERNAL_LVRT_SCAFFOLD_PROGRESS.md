@@ -589,3 +589,10 @@ restored to `IBR3 test enable = 0`.
 See `docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This does not
 validate three-source cascade propagation, physical causality direction,
 system stability, protection coordination, or MATLAB coupling.
+
+## 2026-07-02 IBR3 default-disabled baseline
+
+A paired baseline Run kept IBR2 and IBR3 trial test stimuli disabled. IBR3 did
+not request, command, open, or record a trial-local event. The paired
+enabled-vs-disabled contrast is documented in
+`docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.

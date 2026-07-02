@@ -1,0 +1,44 @@
+{
+  "stimulus_specific_contrast_status": "pass",
+  "enabled_run_id": "IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_114837",
+  "disabled_run_id": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_RUN_20260702_151518",
+  "comparison_rows": [
+    {
+      "metric": "IBR3 test enable",
+      "enabled": 1.0,
+      "disabled": 0.0,
+      "contrast": "enabled=1 vs disabled=0"
+    },
+    {
+      "metric": "IBR3 open request time",
+      "enabled": 5.0,
+      "disabled": null,
+      "contrast": "present at 5.0 s vs absent"
+    },
+    {
+      "metric": "IBR3 actual open time",
+      "enabled": 5.0,
+      "disabled": null,
+      "contrast": "present at 5.0 s vs absent"
+    },
+    {
+      "metric": "IBR3 event valid time",
+      "enabled": 5.0,
+      "disabled": null,
+      "contrast": "present at 5.0 s vs absent"
+    },
+    {
+      "metric": "IBR3 cause code",
+      "enabled": 5.0,
+      "disabled": 0.0,
+      "contrast": "cause 5 vs cause 0"
+    },
+    {
+      "metric": "CASCADE3 second event time",
+      "enabled": 5.0,
+      "disabled": -1.0,
+      "contrast": "5.0 s vs unset -1"
+    }
+  ],
+  "claim_boundary": "This run only establishes the default-disabled IBR3 trial stimulus baseline for the fixed trial model and default scenario. It does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+}

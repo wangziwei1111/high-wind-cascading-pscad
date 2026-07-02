@@ -53,3 +53,10 @@ Output Channels: IBR3 cause code propagated as 5, evented source count reached
 This addendum validates the collector's monitored dynamic equivalence for that
 single fixed run only. It is not a claim of cascade propagation, physical
 causality direction, system stability, or MATLAB coupling.
+
+## Default-disabled baseline addendum: 2026-07-02
+
+In the paired default-disabled baseline Run, IBR3 remained non-evented:
+`CASCADE3_MONITOR_CAUSE_CODE_IBR3_TRIAL` held at 0 and the CASCADE3 evented
+source count remained at the existing DFIG-only value of 1. See
+`docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.

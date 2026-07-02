@@ -71,3 +71,13 @@ The final trial project was restored to the default-disabled IBR3 test stimulus
 opening interface in that single run. It does not validate three-source cascade
 propagation, physical causality direction, system stability, protection
 coordination, or MATLAB coupling.
+
+## Default-disabled baseline update: 2026-07-02
+
+A paired default-disabled baseline Run kept `IBR3_TRIAL__OPEN_STIMULUS`
+disabled. IBR3 open request, breaker command, actual open monitor, and IBR3
+event packet remained absent; the prior enabled run observed them at 5.0 s.
+See `docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.
+
+The paired runs support only a stimulus-specific contrast in the fixed trial
+configuration.

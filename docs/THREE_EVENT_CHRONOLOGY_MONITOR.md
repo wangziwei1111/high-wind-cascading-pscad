@@ -93,3 +93,10 @@ The detailed result is documented in
 that single run's chronology monitor outputs and does not establish cascade
 propagation, physical causality direction, system stability, or MATLAB
 coupling.
+
+## Default-disabled baseline addendum: 2026-07-02
+
+In the paired default-disabled baseline Run, the existing DFIG event remained
+first at 2.01603 s, while CASCADE3 second and third event times remained `-1`.
+`CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT` remained 1. See
+`docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.

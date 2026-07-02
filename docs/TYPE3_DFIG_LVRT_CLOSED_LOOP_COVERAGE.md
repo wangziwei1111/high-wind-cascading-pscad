@@ -288,3 +288,10 @@ restored to `IBR3 test enable = 0`. See
 This addendum does not expand closed-loop coverage to cascade propagation,
 physical causality direction, system stability, protection coordination, or
 MATLAB coupling.
+
+## IBR3 default-disabled baseline addendum
+
+A paired default-disabled Run kept IBR2 and IBR3 trial test stimuli at 0. IBR3
+opening and event channels stayed absent, while the default DFIG event
+signature remained parseable. See
+`docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.

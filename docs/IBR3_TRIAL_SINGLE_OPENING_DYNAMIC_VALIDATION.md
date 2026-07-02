@@ -123,3 +123,13 @@ It does not prove:
 - protection coordination setting validity,
 - MATLAB coupling,
 - general applicability beyond this one run.
+
+## Paired default-disabled baseline update: 2026-07-02
+
+A later default-disabled baseline Run kept both `IBR2_TRIAL_TEST_ENABLE` and
+`IBR3_TRIAL_TEST_ENABLE` at 0. In that baseline, the IBR3 open request,
+breaker command, actual open monitor, and IBR3 event packet remained absent.
+
+The paired comparison is documented in
+`docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md` and supports only a
+stimulus-specific contrast for this fixed trial configuration.
