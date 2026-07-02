@@ -306,3 +306,15 @@ See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`.
 This addendum does not expand closed-loop coverage to natural cascade
 propagation, physical causality direction, system stability, protection
 coordination, or MATLAB coupling.
+
+## Controlled three-source chronology dynamic validation addendum
+
+One approved later PSCAD Run exercised the three-event strict ordering branch
+of the monitor with the existing DFIG event, IBR2_TRIAL at 4.000005 s, and
+IBR3_TRIAL at 5.0 s. See
+`docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`.
+
+Historical C1/C2/C3/R5 closed-loop coverage remains unchanged and partial.
+This addendum does not validate natural cascade propagation, physical
+causality direction, system stability, protection coordination, or MATLAB
+coupling.

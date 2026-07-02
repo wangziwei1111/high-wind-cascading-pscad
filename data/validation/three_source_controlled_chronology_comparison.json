@@ -1,0 +1,45 @@
+{
+  "three_source_controlled_chronology_comparison_status": "pass",
+  "baseline_run_id": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_RUN_20260702_151518",
+  "ibr2_only_run_id": "IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_154655",
+  "ibr3_only_run_id": "IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_114837",
+  "three_source_run_id": "THREE_SOURCE_CONTROLLED_CHRONOLOGY_RUN_20260702_172923",
+  "comparison_rows": [
+    {
+      "metric": "evented source count",
+      "default_disabled": 1.0,
+      "ibr2_only": 2.0,
+      "ibr3_only": 2.0,
+      "three_source_controlled": 3.0
+    },
+    {
+      "metric": "timed event source count",
+      "default_disabled": 1.0,
+      "ibr2_only": 2.0,
+      "ibr3_only": 2.0,
+      "three_source_controlled": 3.0
+    },
+    {
+      "metric": "second event time",
+      "default_disabled": -1.0,
+      "ibr2_only": 4.000005,
+      "ibr3_only": 5.0,
+      "three_source_controlled": 4.000005
+    },
+    {
+      "metric": "third event time",
+      "default_disabled": -1.0,
+      "ibr2_only": -1.0,
+      "ibr3_only": -1.0,
+      "three_source_controlled": 5.0
+    },
+    {
+      "metric": "order class code",
+      "default_disabled": 1.0,
+      "ibr2_only": 2.0,
+      "ibr3_only": 2.0,
+      "three_source_controlled": 4.0
+    }
+  ],
+  "claim_boundary": "This run validates only one controlled timing-interface scenario: existing default DFIG event plus independently scheduled IBR2_TRIAL and IBR3_TRIAL local-opening stimuli. It does not validate natural cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+}

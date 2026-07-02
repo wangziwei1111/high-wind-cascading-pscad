@@ -73,3 +73,13 @@ See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This validates
 the collector interface for that single fixed source-B run only; it is not a
 claim of natural cascade propagation, physical causality direction, stability,
 protection coordination, or MATLAB coupling.
+
+## Controlled three-source chronology addendum: 2026-07-02
+
+One approved later Run temporarily enabled both IBR2_TRIAL and IBR3_TRIAL
+trial-only local-opening stimuli. The collector reported three evented and
+three timed sources, with independent cause codes DFIG=2, IBR2=4, and IBR3=5.
+
+See `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`. This is
+a controlled timing-interface validation only and is not a natural cascade or
+causality validation.

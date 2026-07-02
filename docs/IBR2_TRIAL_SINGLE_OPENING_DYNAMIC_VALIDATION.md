@@ -71,3 +71,10 @@ three-source collector, and three-event chronology outputs.
 It does not validate natural DFIG-to-IBR2 cascade propagation, physical
 causality direction, system stability, protection coordination, MATLAB
 coupling, or general applicability.
+
+## Three-source controlled chronology follow-up: 2026-07-02
+
+A later approved single Run enabled both IBR2_TRIAL and IBR3_TRIAL
+trial-only stimuli. IBR2_TRIAL remained the second event at 4.000005 s in the
+strict three-event chronology. See
+`docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`.

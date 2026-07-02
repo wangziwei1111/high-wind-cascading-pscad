@@ -113,3 +113,14 @@ See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This validates
 only that single run's monitor outputs and does not establish cascade
 propagation, physical causality direction, system stability, protection
 coordination, or MATLAB coupling.
+
+## Controlled three-source chronology addendum: 2026-07-02
+
+One approved later Run exercised the strict three-event branch. The chronology
+monitor reported first=2.01603 s, second=4.000005 s, third=5.0 s,
+first-to-second gap=1.983975 s, second-to-third gap=0.999995 s,
+first-source code=1, order-class code=4, and consistency=1.
+
+See `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`. This is
+a controlled timing-interface validation only and is not a natural cascade or
+causality validation.

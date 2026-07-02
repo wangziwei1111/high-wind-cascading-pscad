@@ -69,5 +69,14 @@
     "summary": "One approved trial-only PSCAD Run observed the existing DFIG event first at 2.01603 s and the IBR2_TRIAL source-B event second at 4.000005 s; the third event remained absent and chronology consistency stayed 1.",
     "report": "docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
     "claim_boundary": "Does not validate natural DFIG-to-IBR2 cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_three_source_controlled_chronology_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "THREE_SOURCE_CONTROLLED_CHRONOLOGY_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "controlled_three_event_order_status": "pass",
+    "summary": "One approved Run exercised the strict three-event branch: first=2.01603 s, second=4.000005 s, third=5.0 s, gaps 1.983975 s and 0.999995 s, first-source=1, order-class=4, consistency=1.",
+    "report": "docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Controlled timing-interface validation only; does not validate natural cascade propagation, physical causality direction, stability, protection coordination, MATLAB coupling, or general applicability."
   }
 }

@@ -133,3 +133,10 @@ breaker command, actual open monitor, and IBR3 event packet remained absent.
 The paired comparison is documented in
 `docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md` and supports only a
 stimulus-specific contrast for this fixed trial configuration.
+
+## Three-source controlled chronology follow-up: 2026-07-02
+
+A later approved single Run enabled both IBR2_TRIAL and IBR3_TRIAL
+trial-only stimuli. IBR3_TRIAL appeared as the third event at 5.0 s in the
+strict three-event chronology. See
+`docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`.

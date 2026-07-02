@@ -503,5 +503,14 @@
     "summary": "One approved trial-only PSCAD Run temporarily enabled only the IBR2 test stimulus at 4.0 s, parsed the source-B local-opening chain through the collector and chronology monitor, kept IBR3 disabled, and restored both trial test enables to 0.",
     "report": "docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
     "claim_boundary": "Does not validate natural DFIG-to-IBR2 cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_three_source_controlled_chronology_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "THREE_SOURCE_CONTROLLED_CHRONOLOGY_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "controlled_three_event_order_status": "pass",
+    "summary": "One approved Run temporarily enabled IBR2 and IBR3 trial-only local-opening stimuli and parsed a strict DFIG/IBR2/IBR3 three-event chronology. The trial was restored to both test enables at 0 afterward.",
+    "report": "docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Controlled timing-interface validation only; does not validate natural cascade propagation, physical causality direction, stability, protection coordination, MATLAB coupling, or general applicability."
   }
 }

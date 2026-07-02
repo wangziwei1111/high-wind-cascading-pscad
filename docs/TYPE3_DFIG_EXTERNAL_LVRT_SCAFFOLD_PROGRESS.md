@@ -609,3 +609,13 @@ Run.
 See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This does not
 validate natural DFIG-to-IBR2 cascade propagation, physical causality
 direction, system stability, protection coordination, or MATLAB coupling.
+
+## 2026-07-02 controlled three-source chronology dynamic validation
+
+One approved Run temporarily enabled both IBR2 and IBR3 trial-only local
+opening stimuli. The existing DFIG event plus IBR2_TRIAL and IBR3_TRIAL
+events produced a strict three-event chronology record. The trial was restored
+to both test enables at 0 and rebuilt without a second Run.
+
+See `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`. This is
+not a natural cascade propagation or physical causality validation.
