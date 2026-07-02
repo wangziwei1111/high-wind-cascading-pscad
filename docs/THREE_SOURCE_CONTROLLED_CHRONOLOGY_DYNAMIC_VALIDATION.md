@@ -64,6 +64,26 @@ The chronology outputs matched the controlled timing interface:
 - `data/validation/three_source_controlled_chronology_comparison.json`
 - `data/validation/three_source_controlled_chronology_comparison.csv`
 - `data/validation/three_source_controlled_chronology_final_audit.json`
+- `data/validation/three_source_controlled_chronology_final_audit_corrected.json`
+- `data/validation/three_source_controlled_chronology_production_target_correction.json`
+- `data/validation/three_source_controlled_chronology_production_target_trace.csv`
+
+## Audit target correction: 2026-07-02
+
+The original final static audit used two module-test harness objects for IBR2
+parameter checks. The corrected audit supersedes that target and resolves the
+actual IBR2_TRIAL production source-B path:
+
+```text
+IBR2_TEST_ENABLE -> IBR2_TRIAL_BRK_CMD -> BRK_IBR2_TRIAL
+-> IBR2_CAS_EVT_VALID / IBR2_CAS_CAUSE / IBR2_CAS_FIRST_S
+-> IBR2_TRIAL_CASCADE_* Output Channels
+```
+
+No PSCAD model file was modified. No Build or Run was performed. The previous
+dynamic time-series results were only rechecked, not regenerated.
+
+See `docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.
 
 ## Boundary of the claim
 

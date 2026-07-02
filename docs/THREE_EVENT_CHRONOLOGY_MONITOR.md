@@ -124,3 +124,10 @@ first-source code=1, order-class code=4, and consistency=1.
 See `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`. This is
 a controlled timing-interface validation only and is not a natural cascade or
 causality validation.
+
+## IBR2 production audit target correction: 2026-07-02
+
+The corrected final audit keeps the three-event dynamic chronology evidence
+unchanged, but fixes the static IBR2 production target used for restoration
+checks. No PSCAD Build or Run was performed. See
+`docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.

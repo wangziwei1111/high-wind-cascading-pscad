@@ -83,3 +83,10 @@ three timed sources, with independent cause codes DFIG=2, IBR2=4, and IBR3=5.
 See `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`. This is
 a controlled timing-interface validation only and is not a natural cascade or
 causality validation.
+
+## IBR2 production audit target correction: 2026-07-02
+
+The corrected final audit no longer uses module-test harness objects as IBR2
+production evidence. It resolves source-B via the production `IBR2_CAS_*`
+signals and their `IBR2_TRIAL_CASCADE_*` Output Channels feeding the collector.
+See `docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.

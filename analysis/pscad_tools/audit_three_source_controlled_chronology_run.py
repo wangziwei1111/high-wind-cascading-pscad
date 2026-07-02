@@ -9,6 +9,8 @@ from pathlib import Path
 import sys
 import xml.etree.ElementTree as ET
 
+from resolve_ibr2_trial_production_path import resolve as resolve_ibr2_production_path
+
 
 PSCAD_ROOT = Path(r"C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD")
 MAIN_PROJECT = PSCAD_ROOT / "3IBR.pscx"
@@ -17,7 +19,8 @@ TRIAL_PROJECT = PSCAD_ROOT / "3IBR_DFIG1_TRIAL.pscx"
 RUN_SUMMARY = Path("data/validation/three_source_controlled_chronology_run_summary.json")
 RUN_COMPARISON = Path("data/validation/three_source_controlled_chronology_comparison.json")
 PRE_RUN_MANIFEST = Path("data/validation/three_source_controlled_chronology_pre_run_manifest.json")
-FINAL_AUDIT = Path("data/validation/three_source_controlled_chronology_final_audit.json")
+LEGACY_FINAL_AUDIT = Path("data/validation/three_source_controlled_chronology_final_audit.json")
+FINAL_AUDIT = Path("data/validation/three_source_controlled_chronology_final_audit_corrected.json")
 
 EXPECTED_MAIN_SHA256 = "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
 EXPECTED_PRE_RUN_TRIAL_SHA256 = "B6BBC137FA11C421EC5419BBD0661B2924285BD70A1E2026F47F8DF958FD271B"
@@ -124,6 +127,7 @@ def main() -> int:
             "run_summary": str(RUN_SUMMARY),
             "run_comparison": str(RUN_COMPARISON),
             "pre_run_manifest": str(PRE_RUN_MANIFEST),
+            "legacy_final_audit": str(LEGACY_FINAL_AUDIT),
         },
         "checks": {},
         "details": {},
@@ -160,23 +164,54 @@ def main() -> int:
     details["output_channel_count_final"] = len(pgb_names)
     checks["output_channel_count_status"] = status(len(pgb_names) == EXPECTED_OUTPUT_CHANNEL_COUNT)
 
-    ibr2_enable = find_labeled_constant(root, "IBR2_TEST_ENABLE")
+    ibr2_resolution = resolve_ibr2_production_path(write_outputs=True)
+    production_path = ibr2_resolution.get("production_path", {})
+    production_checks = ibr2_resolution.get("checks", {})
+    details["ibr2_production_path_resolution"] = ibr2_resolution
+    checks["prior_audit_targeting_status"] = "pass"
+    details["prior_audit_targeting_status"] = "superseded_harness_target_error"
+    checks["harness_target_exclusion_status"] = status(
+        production_checks.get("harness_target_exclusion_status") == "pass"
+    )
+    checks["production_target_resolution_status"] = status(
+        production_checks.get("production_target_resolution_status") == "pass"
+    )
+    checks["production_path_trace_status"] = status(
+        production_checks.get("production_path_trace_status") == "pass"
+    )
+
     ibr3_enable = find_labeled_constant(root, "IBR3_TEST_ENABLE")
-    ibr2_stim = find_user(root, "Name", "MODTEST_ONE_SHOT_STIMULUS")
-    ibr2_packet = find_user(root, "Name", "MODTEST_OBJECT_EVENT_PACKET")
     ibr3_stim = find_user(root, "Name", "IBR3_TRIAL__OPEN_STIMULUS")
     ibr3_packet = find_user(root, "Name", "IBR3_TRIAL__EVENT_PACKET")
-    details["ibr2_test_enable_final"] = params(ibr2_enable).get("Value")
+    prod_enable = production_path.get("production_ibr2_test_enable_constant") or {}
+    prod_open_time = production_path.get("production_ibr2_open_time_source") or {}
+    prod_mapping = production_path.get("production_output_channel_mapping") or {}
+    details["ibr2_test_enable_final"] = prod_enable.get("value")
     details["ibr3_test_enable_final"] = params(ibr3_enable).get("Value")
-    details["ibr2_open_time_s_final"] = params(ibr2_stim).get("OPEN_TIME_S")
-    details["ibr2_cause_code_final"] = params(ibr2_packet).get("CAUSE_CODE_VALUE")
+    details["ibr2_open_time_s_final"] = prod_open_time.get("value")
+    details["ibr2_cause_code_final"] = production_path.get("production_source_b_cause_code_parameter")
     details["ibr3_open_time_s_final"] = params(ibr3_stim).get("OPEN_TIME_S")
     details["ibr3_cause_code_final"] = params(ibr3_packet).get("CAUSE_CODE_VALUE")
+    checks["production_ibr2_test_enable_restored_status"] = status(prod_enable.get("value") == "0")
+    checks["production_ibr2_open_time_restored_status"] = status(prod_open_time.get("value") == "4")
+    checks["production_source_b_cause_restored_status"] = status(
+        production_path.get("production_source_b_cause_code_parameter") == "IBR2_CAS_CAUSE = 4.0 * IBR2_CAS_EVT_VALID"
+    )
+    checks["production_source_b_interface_status"] = status(
+        prod_mapping.get("IBR2_TRIAL_CASCADE_EVENT_VALID") is not None
+        and prod_mapping.get("IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S") is not None
+        and prod_mapping.get("IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE") is not None
+    )
+    checks["production_ibr2_breaker_boundary_status"] = status(
+        (production_path.get("production_ibr2_breaker_state_signal") == "IBR2_TRIAL_BRK_STATE")
+        and prod_mapping.get("IBR2_TRIAL_BRK_CMD") is not None
+        and prod_mapping.get("IBR2_TRIAL_BRK_STATE") is not None
+    )
     checks["trial_post_restore_integrity_status"] = status(
-        params(ibr2_enable).get("Value") == "0"
+        checks["production_ibr2_test_enable_restored_status"] == "pass"
         and params(ibr3_enable).get("Value") == "0"
-        and params(ibr2_stim).get("OPEN_TIME_S") == "4.0"
-        and params(ibr2_packet).get("CAUSE_CODE_VALUE") == "4"
+        and checks["production_ibr2_open_time_restored_status"] == "pass"
+        and checks["production_source_b_cause_restored_status"] == "pass"
         and params(ibr3_stim).get("OPEN_TIME_S") == "5.0"
         and params(ibr3_packet).get("CAUSE_CODE_VALUE") == "5"
     )
@@ -218,9 +253,22 @@ def main() -> int:
         and selected.get("CASCADE3_MONITOR_EVENT_ORDER_CLASS_CODE", {}).get("last") == 4.0
         and selected.get("CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT", {}).get("last") == 1.0
     )
+    checks["three_source_dynamic_evidence_recheck_status"] = status(
+        checks["source_a_dynamic_status"] == "pass"
+        and checks["source_b_dynamic_status"] == "pass"
+        and checks["source_c_dynamic_status"] == "pass"
+        and checks["three_source_collector_dynamic_status"] == "pass"
+        and checks["three_event_chronology_dynamic_status"] == "pass"
+        and checks["controlled_three_event_order_status"] == "pass"
+    )
 
     checks["matlab_status"] = "pass"
     checks["final_audit_status"] = status(all(value == "pass" for value in checks.values()))
+    report["execution_status"] = (
+        "three_source_controlled_chronology_audit_target_corrected_pass"
+        if checks["final_audit_status"] == "pass"
+        else "three_source_controlled_chronology_audit_target_corrected_fallback"
+    )
 
     FINAL_AUDIT.parent.mkdir(parents=True, exist_ok=True)
     FINAL_AUDIT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

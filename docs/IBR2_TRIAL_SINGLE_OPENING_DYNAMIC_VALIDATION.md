@@ -78,3 +78,11 @@ A later approved single Run enabled both IBR2_TRIAL and IBR3_TRIAL
 trial-only stimuli. IBR2_TRIAL remained the second event at 4.000005 s in the
 strict three-event chronology. See
 `docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md`.
+
+## Production audit target correction: 2026-07-02
+
+A later read-only audit correction distinguishes the real IBR2_TRIAL
+production path from module-test harness objects. The corrected target uses
+the production `IBR2_TEST_ENABLE`, `IBR2_TRIAL_BRK_CMD`, `BRK_IBR2_TRIAL`,
+`IBR2_CAS_*`, and `IBR2_TRIAL_CASCADE_*` interfaces. See
+`docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md`.

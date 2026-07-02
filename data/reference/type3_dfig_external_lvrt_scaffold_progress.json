@@ -509,8 +509,12 @@
     "scenario_name": "THREE_SOURCE_CONTROLLED_CHRONOLOGY_DEFAULT_SCENARIO",
     "dynamic_run_status": "pass",
     "controlled_three_event_order_status": "pass",
+    "three_source_controlled_timing_interface_status": "pass",
+    "ibr2_production_static_audit_target_status": "pass",
+    "audit_target_correction_status": "corrected_harness_target_superseded",
     "summary": "One approved Run temporarily enabled IBR2 and IBR3 trial-only local-opening stimuli and parsed a strict DFIG/IBR2/IBR3 three-event chronology. The trial was restored to both test enables at 0 afterward.",
     "report": "docs/THREE_SOURCE_CONTROLLED_CHRONOLOGY_DYNAMIC_VALIDATION.md",
+    "audit_correction_report": "docs/IBR2_PRODUCTION_PATH_AUDIT_CORRECTION.md",
     "claim_boundary": "Controlled timing-interface validation only; does not validate natural cascade propagation, physical causality direction, stability, protection coordination, MATLAB coupling, or general applicability."
   }
 }

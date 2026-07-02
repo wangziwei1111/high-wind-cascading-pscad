@@ -1,0 +1,691 @@
+{
+  "execution_status": "ibr2_trial_production_path_resolved_pass",
+  "main_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "trial_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "p3_f": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+  "p3_dta": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.dta",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_read_only": "8D064E343455A8D2CDF30B0EF80E658961FE4CAC958825DE861F44595DCD99CB",
+  "output_channel_count": 253,
+  "output_channel_count_status": "pass",
+  "main_project_integrity_status": "pass",
+  "prior_audit_targeting_status": "superseded_harness_target_error",
+  "production_path": {
+    "production_ibr2_test_enable_constant": {
+      "id": "1778759091",
+      "defn": "master:const",
+      "x": 252.0,
+      "y": 3042.0,
+      "name": "",
+      "value": "0",
+      "open_time_s": null,
+      "cause_code_value": null,
+      "sbra": null
+    },
+    "production_ibr2_test_enable_label": {
+      "id": "1783667148",
+      "defn": "master:datalabel",
+      "x": 360.0,
+      "y": 3042.0,
+      "name": "IBR2_TEST_ENABLE",
+      "value": null,
+      "open_time_s": null,
+      "cause_code_value": null,
+      "sbra": null
+    },
+    "production_ibr2_open_time_source": {
+      "id": "939314032",
+      "defn": "master:const",
+      "x": 252.0,
+      "y": 3006.0,
+      "name": "",
+      "value": "4",
+      "open_time_s": null,
+      "cause_code_value": null,
+      "sbra": null
+    },
+    "production_ibr2_open_request_signal": {
+      "id": "1032750697",
+      "defn": "master:datalabel",
+      "x": 360.0,
+      "y": 3222.0,
+      "name": "IBR2_TEST_OPEN_REQ",
+      "value": null,
+      "open_time_s": null,
+      "cause_code_value": null,
+      "sbra": null
+    },
+    "production_ibr2_breaker_command_signal": {
+      "id": "1980377912",
+      "defn": "master:pgb",
+      "x": 954.0,
+      "y": 1422.0,
+      "name": "IBR2_TRIAL_BRK_CMD",
+      "value": null,
+      "open_time_s": null,
+      "cause_code_value": null,
+      "sbra": null
+    },
+    "production_ibr2_breaker_state_signal": "IBR2_TRIAL_BRK_STATE",
+    "production_ibr2_open_bool_signal": "IBR2_CAS_BRK_OPEN / IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN",
+    "production_ibr2_source_available_signal": "IBR2_CAS_AVAIL / IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE",
+    "production_source_b_event_packet_object": "P3 inline production source-B event packet logic group (IBR2_CAS_* labels), not MODTEST_OBJECT_EVENT_PACKET",
+    "production_source_b_cause_code_parameter": "IBR2_CAS_CAUSE = 4.0 * IBR2_CAS_EVT_VALID",
+    "production_source_b_event_valid_signal": "IBR2_CAS_EVT_VALID / IBR2_TRIAL_CASCADE_EVENT_VALID",
+    "production_source_b_first_event_time_signal": "IBR2_CAS_FIRST_S / IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+    "production_source_b_cause_output_signal": "IBR2_CAS_CAUSE / IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+    "production_output_channel_mapping": {
+      "IBR2_TRIAL_TEST_ENABLE": 159,
+      "IBR2_TRIAL_TEST_OPEN_TIME_S": 160,
+      "IBR2_TRIAL_TEST_OPEN_REQUEST": 162,
+      "IBR2_TRIAL_BRK_CMD": 147,
+      "IBR2_TRIAL_BRK_STATE": 148,
+      "IBR2_TRIAL_BRK_OPEN_BOOL": 149,
+      "IBR2_TRIAL_SOURCE_AVAILABLE": 150,
+      "IBR2_TRIAL_CASCADE_EVENT_VALID": 151,
+      "IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE": 152,
+      "IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN": 153,
+      "IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE": 154,
+      "IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S": 155
+    }
+  },
+  "module_test_harness_path": {
+    "module_test_harness_path": "MODULE_TEMPLATE_TEST_HARNESS",
+    "excluded_objects": {
+      "MODTEST_ONE_SHOT_STIMULUS": {
+        "id": "720222925",
+        "defn": "3IBR_DFIG1_TRIAL:ONE_SHOT_BREAKER_OPEN_STIMULUS",
+        "x": 486.0,
+        "y": 450.0,
+        "name": "MODTEST_ONE_SHOT_STIMULUS",
+        "value": null,
+        "open_time_s": "4.0",
+        "cause_code_value": null,
+        "sbra": null
+      },
+      "MODTEST_OBJECT_EVENT_PACKET": {
+        "id": "792781856",
+        "defn": "3IBR_DFIG1_TRIAL:MONITORED_OBJECT_EVENT_PACKET",
+        "x": 468.0,
+        "y": 216.0,
+        "name": "MODTEST_OBJECT_EVENT_PACKET",
+        "value": null,
+        "open_time_s": null,
+        "cause_code_value": "4",
+        "sbra": null
+      }
+    },
+    "hierarchy_evidence": {
+      "stimulus_under_module_template_test_harness": true,
+      "packet_under_module_template_test_harness": true
+    }
+  },
+  "production_trace": [
+    {
+      "step": "production_ibr2_test_enable_constant",
+      "evidence": "P3 XML label IBR2_TEST_ENABLE is co-located with Output Channel IBR2_TRIAL_TEST_ENABLE; nearest Constant is the restored production enable value.",
+      "xml": {
+        "id": "1778759091",
+        "defn": "master:const",
+        "x": 252.0,
+        "y": 3042.0,
+        "name": "",
+        "value": "0",
+        "open_time_s": null,
+        "cause_code_value": null,
+        "sbra": null
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2240,
+          "text": "IBR2_TEST_ENABLE = 0.0"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2244,
+          "text": "PGB(IPGB+5) = IBR2_TEST_ENABLE"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 5221,
+          "text": "IBR2_TEST_ENABLE = 0.0"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 6034,
+          "text": "IBR2_TEST_ENABLE = 0.0"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 7159,
+          "text": "IBR2_TEST_ENABLE = 0.0"
+        }
+      ]
+    },
+    {
+      "step": "production_ibr2_open_time_source",
+      "evidence": "P3 XML label IBR2_TEST_OPEN_TIME_S is co-located with Output Channel IBR2_TRIAL_TEST_OPEN_TIME_S and Constant 4.",
+      "xml": {
+        "id": "939314032",
+        "defn": "master:const",
+        "x": 252.0,
+        "y": 3006.0,
+        "name": "",
+        "value": "4",
+        "open_time_s": null,
+        "cause_code_value": null,
+        "sbra": null
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2228,
+          "text": "IBR2_TEST_OPEN_TIME_S = 4.0"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2232,
+          "text": "PGB(IPGB+3) = IBR2_TEST_OPEN_TIME_S"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 5217,
+          "text": "IBR2_TEST_OPEN_TIME_S = 4.0"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 6027,
+          "text": "IBR2_TEST_OPEN_TIME_S = 4.0"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 7156,
+          "text": "IBR2_TEST_OPEN_TIME_S = 4.0"
+        }
+      ]
+    },
+    {
+      "step": "production_ibr2_open_request_signal",
+      "evidence": "P3 XML Output Channel IBR2_TRIAL_TEST_OPEN_REQUEST records IBR2_TEST_OPEN_REQ; P3.f forms it from enable, armed, and time-reached logic.",
+      "xml": {
+        "id": "1032750697",
+        "defn": "master:datalabel",
+        "x": 360.0,
+        "y": 3222.0,
+        "name": "IBR2_TEST_OPEN_REQ",
+        "value": null,
+        "open_time_s": null,
+        "cause_code_value": null,
+        "sbra": null
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2258,
+          "text": "IBR2_TEST_ARMED = IBR2_TEST_ENABLE * REAL(DFIG_LVRT_ARMED)"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2548,
+          "text": "IBR2_TRIAL_BRK_CMD = 1.0 * IBR2_TEST_CMD_LIMITED"
+        }
+      ]
+    },
+    {
+      "step": "production_ibr2_breaker_command_signal",
+      "evidence": "IBR2_TRIAL_BRK_CMD has a production PGB and is assigned from IBR2_TEST_CMD_LIMITED, then drives BRK_IBR2_TRIAL.",
+      "xml": {
+        "pgb": {
+          "id": "1980377912",
+          "defn": "master:pgb",
+          "x": 954.0,
+          "y": 1422.0,
+          "name": "IBR2_TRIAL_BRK_CMD",
+          "value": null,
+          "open_time_s": null,
+          "cause_code_value": null,
+          "sbra": null
+        },
+        "labels": [
+          {
+            "id": "1340977026",
+            "defn": "master:datalabel",
+            "x": 846.0,
+            "y": 1386.0,
+            "name": "IBR2_TRIAL_BRK_CMD",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1147033277",
+            "defn": "master:datalabel",
+            "x": 396.0,
+            "y": 3366.0,
+            "name": "IBR2_TRIAL_BRK_CMD",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          }
+        ]
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2548,
+          "text": "IBR2_TRIAL_BRK_CMD = 1.0 * IBR2_TEST_CMD_LIMITED"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2662,
+          "text": "BRK_IBR2_TRIAL = 1.0 * IBR2_TRIAL_BRK_CMD"
+        }
+      ]
+    },
+    {
+      "step": "production_ibr2_breaker_boundary",
+      "evidence": "The real three-phase breaker is BRK_IBR2_TRIAL and returns state through IBR2_TRIAL_BRK_STATE.",
+      "xml": {
+        "id": "1612913074",
+        "defn": "master:breaker3",
+        "x": 918.0,
+        "y": 1332.0,
+        "name": "BRK_IBR2_TRIAL",
+        "value": null,
+        "open_time_s": null,
+        "cause_code_value": null,
+        "sbra": "IBR2_TRIAL_BRK_STATE"
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2810,
+          "text": "! 2200:[breaker3] 3 Phase Breaker 'BRK_IBR2_TRIAL'"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2837,
+          "text": "IBR2_TRIAL_BRK_STATE = IVD1_1"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 5414,
+          "text": "! 2200:[breaker3] 3 Phase Breaker 'BRK_IBR2_TRIAL'"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 6262,
+          "text": "! 2200:[breaker3] 3 Phase Breaker 'BRK_IBR2_TRIAL'"
+        }
+      ]
+    },
+    {
+      "step": "production_source_b_event_packet_logic",
+      "evidence": "Production source-B event packet is implemented by P3 source-B labels/logic, not by MODTEST_OBJECT_EVENT_PACKET; cause is assigned as 4.0 * IBR2_CAS_EVT_VALID.",
+      "xml": {
+        "event_valid_labels": [
+          {
+            "id": "1036432137",
+            "defn": "master:datalabel",
+            "x": 1890.0,
+            "y": 4014.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1980437939",
+            "defn": "master:datalabel",
+            "x": 1350.0,
+            "y": 4104.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1645677996",
+            "defn": "master:datalabel",
+            "x": 2592.0,
+            "y": 1476.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1818286885",
+            "defn": "master:datalabel",
+            "x": 3636.0,
+            "y": 2034.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "576677934",
+            "defn": "master:datalabel",
+            "x": 324.0,
+            "y": 4230.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "648265782",
+            "defn": "master:datalabel",
+            "x": 612.0,
+            "y": 3006.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "792531264",
+            "defn": "master:datalabel",
+            "x": 5346.0,
+            "y": 1728.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1536932640",
+            "defn": "master:datalabel",
+            "x": 5166.0,
+            "y": 2070.0,
+            "name": "IBR2_CAS_EVT_VALID",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          }
+        ],
+        "cause_labels": [
+          {
+            "id": "1063124216",
+            "defn": "master:datalabel",
+            "x": 1656.0,
+            "y": 4104.0,
+            "name": "IBR2_CAS_CAUSE",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1319090438",
+            "defn": "master:datalabel",
+            "x": 252.0,
+            "y": 4320.0,
+            "name": "IBR2_CAS_CAUSE",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1799886489",
+            "defn": "master:datalabel",
+            "x": 5346.0,
+            "y": 1800.0,
+            "name": "IBR2_CAS_CAUSE",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          }
+        ],
+        "first_time_labels": [
+          {
+            "id": "1389972896",
+            "defn": "master:datalabel",
+            "x": 2358.0,
+            "y": 1566.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1715622269",
+            "defn": "master:datalabel",
+            "x": 252.0,
+            "y": 3942.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1965832617",
+            "defn": "master:datalabel",
+            "x": 288.0,
+            "y": 3636.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1120264817",
+            "defn": "master:datalabel",
+            "x": 558.0,
+            "y": 3582.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1397145488",
+            "defn": "master:datalabel",
+            "x": 1242.0,
+            "y": 4320.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "683798073",
+            "defn": "master:datalabel",
+            "x": 1242.0,
+            "y": 4464.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "784543270",
+            "defn": "master:datalabel",
+            "x": 522.0,
+            "y": 3168.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "82935547",
+            "defn": "master:datalabel",
+            "x": 612.0,
+            "y": 3312.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "451696823",
+            "defn": "master:datalabel",
+            "x": 558.0,
+            "y": 3366.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1788733034",
+            "defn": "master:datalabel",
+            "x": 864.0,
+            "y": 3078.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "1796527902",
+            "defn": "master:datalabel",
+            "x": 5346.0,
+            "y": 1782.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          },
+          {
+            "id": "39015226",
+            "defn": "master:datalabel",
+            "x": 5166.0,
+            "y": 2088.0,
+            "name": "IBR2_CAS_FIRST_S",
+            "value": null,
+            "open_time_s": null,
+            "cause_code_value": null,
+            "sbra": null
+          }
+        ]
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2074,
+          "text": "IBR2_CAS_FIRST_S = 1.0 * IBR2_CAS_TIME_MEM"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2308,
+          "text": "IBR2_CAS_EVT_VALID = 1.0 * IBR2_CAS_LATCH_MEM"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 2312,
+          "text": "IBR2_CAS_CAUSE = 4.0 * IBR2_CAS_EVT_VALID"
+        }
+      ]
+    },
+    {
+      "step": "production_source_b_output_interface",
+      "evidence": "The production source-B labels feed the IBR2_TRIAL_CASCADE_* Output Channels used by the dynamic run parser.",
+      "xml": {
+        "event_valid": {
+          "id": "1333729966",
+          "defn": "master:pgb",
+          "x": 1854.0,
+          "y": 3978.0,
+          "name": "IBR2_TRIAL_CASCADE_EVENT_VALID",
+          "value": null,
+          "open_time_s": null,
+          "cause_code_value": null,
+          "sbra": null
+        },
+        "cause": {
+          "id": "1594462443",
+          "defn": "master:pgb",
+          "x": 1620.0,
+          "y": 4068.0,
+          "name": "IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+          "value": null,
+          "open_time_s": null,
+          "cause_code_value": null,
+          "sbra": null
+        },
+        "breaker_open": {
+          "id": "530921801",
+          "defn": "master:pgb",
+          "x": 1656.0,
+          "y": 3744.0,
+          "name": "IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN",
+          "value": null,
+          "open_time_s": null,
+          "cause_code_value": null,
+          "sbra": null
+        },
+        "source_available": {
+          "id": "1133397423",
+          "defn": "master:pgb",
+          "x": 1710.0,
+          "y": 3816.0,
+          "name": "IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE",
+          "value": null,
+          "open_time_s": null,
+          "cause_code_value": null,
+          "sbra": null
+        },
+        "first_event_time": {
+          "id": "1246653803",
+          "defn": "master:pgb",
+          "x": 2358.0,
+          "y": 1530.0,
+          "name": "IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+          "value": null,
+          "open_time_s": null,
+          "cause_code_value": null,
+          "sbra": null
+        }
+      },
+      "p3f": [
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 3354,
+          "text": "PGB(IPGB+33) = IBR2_CAS_CAUSE"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 3371,
+          "text": "PGB(IPGB+35) = IBR2_CAS_EVT_VALID"
+        },
+        {
+          "file": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+          "line": 3656,
+          "text": "PGB(IPGB+86) = IBR2_CAS_FIRST_S"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "harness_target_exclusion_status": "pass",
+    "production_target_resolution_status": "pass",
+    "production_path_trace_status": "pass"
+  }
+}
