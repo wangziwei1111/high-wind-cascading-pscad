@@ -1,0 +1,4 @@
+option_id,next_stage,selected,primary_paper_evidence,current_model_evidence,prerequisites,why_selected_or_deferred,explicit_claim_boundary
+A,branch observability only,yes,E003;E010;E012,CAP02;CAP03,map target real lines and signal semantics,"Paper requires flow redistribution/overload, while current branch measurements are absent.",monitor-only; no protection or trip claim
+B,branch overload shadow relay,no,E003,CAP03;CAP05,complete option A; verify limit and target-line boundary,Deferred because no audited loading input or line boundary exists.,future shadow only; no breaker connection
+C,source or load protection shadow monitor,no,E004;E005;E006;E007,CAP08;CAP19-CAP24,network propagation observability and target signal maps,The current DFIG path already covers the first source action; the immediate missing bridge is network-side.,future monitor only; no validated protection

@@ -1,0 +1,75 @@
+# Paper reproduction alignment and minimum cascade plan
+
+## 1. 目标论文身份与原始资料状态
+
+- 题名：《高比例风电系统连锁故障分析与抑制措施研究》
+- 作者：许佑欣
+- 类型：华北电力大学专业硕士学位论文
+- 答辩时间：2024 年 5 月
+- 原始 PDF：本地文件存在，SHA-256 记录于 source manifest；53 页均有可提取文本层。
+- `paper_source_status = available_primary_paper_source`
+
+## 2. 当前项目的严格复现边界
+
+当前 PNNL 39-bus / 3IBR / DFIG trial 不是论文系统的一比一复现。拓扑族、
+一个 Type-3 DFIG 和若干事件接口具有结构对齐价值，但母线替换、源参数、故障
+配置、线路保护、减载、常规机组保护和补偿设备均未逐项复现。
+
+## 3. 论文事故链机制拆解
+
+论文直接给出两种机制。与当前 DFIG 基础设施最接近的是脱网主导链：
+
+`初始三相短路 -> PCC 电压扰动 -> 风机电压穿越失败/脱网 -> 功率缺额 -> 潮流大幅转移 -> 线路过负荷候选 -> 线路开断 -> 减载/其余风机或机组保护`。
+
+过载主导链则从短路恢复阶段的线路过载和开断开始，再推动更多潮流转移、
+源荷保护和解列。论文明确提醒图示事件并非严格单向因果。
+
+## 4. 当前模型已具备的基础设施
+
+已审计：DFIG LVRT 与本地脱网链、IBR2/IBR3 trial-only 本地开断接口、三源
+event packet、collector、chronology，以及三源 V/P/Q monitor-only 记录。
+当前三来源受控时序与 V/P/Q Run 属于基础设施验证和记录性动态证据；它们
+不构成论文的自然连锁故障复现。
+
+## 5. 当前模型与论文的逐项差距矩阵
+
+完整矩阵见 `data/reference/paper_reproduction_alignment_matrix.csv`。分类计数：
+{"partially_aligned": 5, "structurally_aligned_adaptation": 1, "missing": 9, "contradicted": 1}。关键首缺口是：没有面向真实输电支路的
+P/Q/I/负载率通道，因而无法观察“源脱网/故障 -> 潮流重分布 -> 支路过载”传播链。
+
+## 6. 当前最安全的项目命名
+
+`controlled-interface validation scaffold`
+
+不能使用 `strict paper reproduction`。在完成线路与保护机制前，也不宜把当前
+工程称为完整的 `partial mechanism reproduction`。
+
+## 7. 最小论文式事故链候选方案
+
+首选候选为论文表 2-2 / 图 3-4 支持的脱网主导链。当前 DFIG LVRT 可承接第一
+保护动作，但网络传播链缺少真实线路观测。现有固定 DFIG -> IBR2 -> IBR3
+定时序列仅为 `controlled interface-validation sequence`，不是 paper cascade chain。
+
+## 8. 下一阶段唯一推荐
+
+`next_stage = branch observability only`
+
+只增加目标线路的 P/Q/I/负载率 monitor-only 输出；不接断路器，不增加 relay。
+该顺序由 E003、E010、E012 直接支持：论文把潮流重分布和线路过负荷置于风机
+脱网后的传播环节，而 CAP03 证明当前恰缺少这一可观测桥梁。
+
+暂缓 shadow UVRT：当前已有 DFIG LVRT 本地链，下一处论文机制缺口在网络侧。
+暂缓 overload shadow relay：尚无可追溯线路量、目标线路边界和验证输入。
+暂缓默认基线 Run：重复 Run 不能补齐缺失的线路测量接口。
+
+## 9. 当前不能做的事情
+
+不能把定时开断写成自然级联；不能把未来 shadow 设计写成已实现保护；不能
+在缺少线路观测时连接线路断路器；不能先加入 SVC/STATCOM 并宣称抑制效果。
+
+## 10. 结论边界
+
+本轮仅完成原论文证据登记、当前模型静态盘点、逐项差距映射与最小事故链
+设计。后续建模应由论文中明确的“故障—保护—网络重分布—后续保护”链条
+决定。本轮没有修改 PSCAD、没有 Build、没有 Run，也没有验证自然级联、
+物理因果、稳定性、保护协调、电压支撑或 MATLAB 耦合。

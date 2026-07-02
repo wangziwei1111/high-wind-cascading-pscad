@@ -1,0 +1,14 @@
+{
+  "paper_source_status": "available_primary_paper_source",
+  "system_level_fidelity": "partial",
+  "topology_fidelity": "partially_aligned",
+  "source_model_fidelity": "structurally_aligned_adaptation",
+  "fault_scenario_fidelity": "partial_and_not_paper_configured",
+  "protection_system_fidelity": "mostly_missing_except_partial_DFIG_LVRT",
+  "cascade_mechanism_fidelity": "not_implemented",
+  "mitigation_measure_fidelity": "not_implemented",
+  "current_reproduction_level": "infrastructure and evidence preparation",
+  "current_safe_name": "controlled-interface validation scaffold",
+  "strict_reproduction_status": "not_achieved",
+  "structural_alignment_status": "partial"
+}

@@ -1,0 +1,85 @@
+{
+  "paper_source_status": "available_primary_paper_source",
+  "design_status": "minimum_chain_designed_not_implemented",
+  "controlled_existing_sequence_classification": "controlled interface-validation sequence",
+  "controlled_existing_sequence_prohibited_classifications": [
+    "paper cascade chain",
+    "natural cascade",
+    "causal propagation"
+  ],
+  "selected_candidate_chain_id": "MC01",
+  "candidates": [
+    {
+      "candidate_chain_id": "MC01",
+      "paper_evidence_id": "E003;E010;E012",
+      "initial_disturbance": "paper-aligned three-phase fault at a traceable network bus",
+      "first_required_observability": "PCC voltage plus source V/P/Q and actual DFIG breaker state",
+      "first_protection_candidate": "existing DFIG LVRT/local trip path after paper-criterion gap is documented",
+      "network_propagation_link": "source power loss and branch P/Q/I/loading redistribution",
+      "second_protection_candidate": "future line-overload shadow relay; no breaker connection",
+      "required_measurements": [
+        "target-line P",
+        "target-line Q",
+        "target-line I",
+        "target-line loading ratio",
+        "line breaker state",
+        "PCC voltage",
+        "frequency"
+      ],
+      "required_existing_components": [
+        "fault source",
+        "DFIG LVRT",
+        "BRK_DFIG",
+        "event packet",
+        "collector",
+        "chronology",
+        "source V/P/Q"
+      ],
+      "missing_components": [
+        "audited target-line measurements",
+        "line loading limits",
+        "line breaker observability",
+        "overload shadow relay"
+      ],
+      "minimum_model_change": "First add monitor-only target-line P/Q/I/loading outputs; do not add relay or actuation in that stage.",
+      "future_run_count_before_claim": "minimum 2 after staged implementation: one observability baseline and one later shadow-relay evaluation; more required before any natural-cascade claim",
+      "claim_boundary": "Paper-aligned candidate design only; no propagation or protection behavior has been implemented or validated.",
+      "rejection_reason_if_not_feasible": "Reject if the target branch and its electrical measurements cannot be unambiguously mapped."
+    },
+    {
+      "candidate_chain_id": "MC02",
+      "paper_evidence_id": "E003;E011",
+      "initial_disturbance": "short fault followed by recovery-stage line loading increase",
+      "first_required_observability": "target-line loading and breaker state",
+      "first_protection_candidate": "future line-overload shadow relay",
+      "network_propagation_link": "line opening to subsequent redistribution",
+      "second_protection_candidate": "future source/load shadow protection",
+      "required_measurements": [
+        "line P/Q/I/loading",
+        "line breaker states",
+        "bus V/f"
+      ],
+      "required_existing_components": [
+        "fault source",
+        "network model"
+      ],
+      "missing_components": [
+        "line observability",
+        "shadow relay",
+        "transmission-line actuation boundary"
+      ],
+      "minimum_model_change": "Same first step as MC01: branch observability only.",
+      "future_run_count_before_claim": "at least 2 staged runs after implementation",
+      "claim_boundary": "Alternative paper mechanism, not selected as the minimum current path.",
+      "rejection_reason_if_not_feasible": "Less immediately reusable than MC01 because the current audited first protection is source-side DFIG LVRT."
+    }
+  ],
+  "next_stage": "branch observability only",
+  "why_this_stage_matches_the_paper": "E003, E010 and E012 place branch-flow redistribution and overload between the first source event and later protection actions.",
+  "why_other_stages_are_deferred": "A relay lacks an audited input and branch boundary; extra UVRT duplicates an already audited source-side path; another fixed-timing Run cannot create the missing network propagation measurement.",
+  "primary_paper_evidence_supporting_order": [
+    "E003",
+    "E010",
+    "E012"
+  ]
+}
