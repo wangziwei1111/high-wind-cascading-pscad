@@ -1,0 +1,62 @@
+{
+  "audit_id": "IBR2_TRIAL_SINGLE_OPENING_FINAL_AUDIT",
+  "claim_boundary": "This audit supports only the approved IBR2_TRIAL source-B trial-only local-opening validation in the fixed trial model. It does not validate natural DFIG-to-IBR2 cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability.",
+  "paths": {
+    "main_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "trial_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "run_summary": "data\\validation\\ibr2_trial_single_opening_run_summary.json",
+    "run_comparison": "data\\validation\\ibr2_enabled_vs_default_disabled_run_comparison.json",
+    "pre_run_manifest": "data\\validation\\ibr2_single_opening_pre_run_manifest.json"
+  },
+  "checks": {
+    "main_project_integrity_status": "pass",
+    "output_channel_count_restored_status": "pass",
+    "test_enable_restored_default_status": "pass",
+    "trial_configuration_restored_status": "pass",
+    "no_disallowed_scope_expansion_status": "pass",
+    "dynamic_run_summary_status": "pass",
+    "ibr2_source_b_chain_dynamic_status": "pass",
+    "ibr3_default_disabled_isolation_status": "pass",
+    "collector_and_chronology_dynamic_status": "pass",
+    "baseline_contrast_status": "pass",
+    "final_audit_status": "pass"
+  },
+  "details": {
+    "main_sha_final": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_sha_final_restored_build": "B6BBC137FA11C421EC5419BBD0661B2924285BD70A1E2026F47F8DF958FD271B",
+    "trial_xml_parse_status": "pass",
+    "output_channel_count_final": 253,
+    "ibr2_test_enable_final": "0",
+    "ibr3_test_enable_final": "0",
+    "ibr2_open_time_s_final": "4.0",
+    "ibr2_cause_code_final": "4",
+    "ibr3_open_time_s_final": "5.0",
+    "ibr3_cause_code_final": "5",
+    "forbidden_token_hits": [],
+    "run_id": "IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_154655",
+    "run_dynamic_status": "pass",
+    "run_checks": {
+      "parser_mapping_status": "PASS",
+      "ibr2_test_enable_dynamic_status": "PASS",
+      "ibr2_stimulus_request_status": "PASS",
+      "ibr2_breaker_command_status": "PASS",
+      "ibr2_actual_open_status": "PASS",
+      "ibr2_state_adapter_dynamic_status": "PASS",
+      "ibr2_source_available_status": "PASS",
+      "source_b_event_packet_dynamic_status": "PASS",
+      "ibr3_default_disabled_isolation_status": "PASS",
+      "default_dfig_signature_status": "PASS",
+      "three_source_collector_dynamic_status": "PASS",
+      "three_event_chronology_dynamic_status": "PASS"
+    },
+    "comparison_status": "pass"
+  },
+  "unsupported_claims": {
+    "natural_dfig_to_ibr2_cascade_validation": "not_claimed",
+    "physical_causality_direction": "not_claimed",
+    "system_stability": "not_claimed",
+    "protection_coordination": "not_claimed",
+    "matlab_coupling": "not_claimed",
+    "general_applicability": "not_claimed"
+  }
+}

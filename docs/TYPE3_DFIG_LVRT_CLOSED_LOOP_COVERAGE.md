@@ -295,3 +295,14 @@ A paired default-disabled Run kept IBR2 and IBR3 trial test stimuli at 0. IBR3
 opening and event channels stayed absent, while the default DFIG event
 signature remained parseable. See
 `docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.
+
+## IBR2 single-opening dynamic validation addendum
+
+One approved later PSCAD Run observed the IBR2_TRIAL source-B local-opening
+chain at 4.0 s under a temporary trial-only test enable. The final trial
+project was restored to `IBR2 test enable = 0` and `IBR3 test enable = 0`.
+See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`.
+
+This addendum does not expand closed-loop coverage to natural cascade
+propagation, physical causality direction, system stability, protection
+coordination, or MATLAB coupling.

@@ -60,3 +60,16 @@ In the paired default-disabled baseline Run, IBR3 remained non-evented:
 `CASCADE3_MONITOR_CAUSE_CODE_IBR3_TRIAL` held at 0 and the CASCADE3 evented
 source count remained at the existing DFIG-only value of 1. See
 `docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.
+
+## IBR2 source-B dynamic validation addendum: 2026-07-02
+
+One approved later Run temporarily enabled only the IBR2 trial-local opening
+stimulus at 4.0 s. The collector observed the existing DFIG event plus the
+IBR2_TRIAL source-B event: IBR2 cause code propagated as 4, IBR3 remained
+disabled and non-evented, and the final project was restored to both trial
+test enables at 0.
+
+See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This validates
+the collector interface for that single fixed source-B run only; it is not a
+claim of natural cascade propagation, physical causality direction, stability,
+protection coordination, or MATLAB coupling.

@@ -56,3 +56,17 @@ page-module definition with `OPEN_TIME_S=4`. Its isolated harness instance is
 default-disabled. The existing IBR2 trial stimulus and breaker command path
 were preserved and were not migrated to the reusable module. Static Build and
 audit passed; dynamic behavior remains unavailable.
+
+## Dynamic validation addendum: 2026-07-02
+
+One approved PSCAD Run temporarily set `IBR2_TEST_ENABLE=1` with
+`IBR2_TEST_OPEN_TIME_S=4.0`. The IBR2 trial-local opening request, breaker
+command, actual breaker open monitor, source availability change, source-B
+event packet, collector, and chronology outputs were parsed successfully. The
+trial project was then restored to `IBR2_TEST_ENABLE=0` and rebuilt without a
+second Run.
+
+See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This validates
+only the source-B trial-only local-opening chain and does not validate natural
+cascade propagation, physical causality direction, stability, protection
+coordination, or MATLAB coupling.

@@ -27,13 +27,13 @@
     "default_closed_command_status": "pass",
     "trial_opening_isolation_status": "pass",
     "output_channel_status": "pass",
-    "dynamic_behavior_status": "unavailable",
-    "source2_dynamic_opening_status": "unavailable",
+    "dynamic_behavior_status": "pass_for_single_approved_trial_run",
+    "source2_dynamic_opening_status": "pass_for_single_approved_trial_run",
     "matlab_status": "not_added"
   },
   "claim_boundary": {
-    "pscad_run_performed": false,
-    "dynamic_opening_validated": false,
+    "pscad_run_performed": true,
+    "dynamic_opening_validated": true,
     "physical_isolation_validated": false,
     "automatic_reclosing_added": false
   },
@@ -45,5 +45,15 @@
     "static_build_errors": 0,
     "trial_final_sha256": "D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314",
     "record": "data/reference/pscad_reusable_control_module_library.json"
+  },
+  "last_dynamic_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR2_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "run_summary": "data/validation/ibr2_trial_single_opening_run_summary.json",
+    "final_audit": "data/validation/ibr2_trial_single_opening_final_audit.json",
+    "report": "docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+    "summary": "One approved Run temporarily set IBR2_TEST_ENABLE=1 with OPEN_TIME_S=4.0, observed the source-B local-opening chain, then restored IBR2_TEST_ENABLE=0 and IBR3_TEST_ENABLE=0 without a second Run.",
+    "claim_boundary": "Does not validate natural DFIG-to-IBR2 cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
   }
 }

@@ -100,3 +100,16 @@ In the paired default-disabled baseline Run, the existing DFIG event remained
 first at 2.01603 s, while CASCADE3 second and third event times remained `-1`.
 `CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT` remained 1. See
 `docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.
+
+## IBR2 source-B dynamic validation addendum: 2026-07-02
+
+One approved later Run temporarily enabled only the IBR2 trial-local opening
+stimulus. The chronology monitor reported the existing DFIG event first at
+2.01603 s and the IBR2_TRIAL event second at 4.000005 s. The first-to-second
+gap was 1.983975 s, the third event time stayed `-1`, and chronology
+consistency stayed 1.
+
+See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This validates
+only that single run's monitor outputs and does not establish cascade
+propagation, physical causality direction, system stability, protection
+coordination, or MATLAB coupling.

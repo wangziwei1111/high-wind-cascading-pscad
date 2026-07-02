@@ -596,3 +596,16 @@ A paired baseline Run kept IBR2 and IBR3 trial test stimuli disabled. IBR3 did
 not request, command, open, or record a trial-local event. The paired
 enabled-vs-disabled contrast is documented in
 `docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md`.
+
+## 2026-07-02 IBR2 single-opening dynamic validation
+
+One approved trial-only PSCAD Run temporarily enabled only the IBR2 test
+stimulus at 4.0 s while IBR3 remained disabled. The IBR2 opening request,
+breaker command, actual trial breaker open monitor, event packet, collector,
+and chronology monitor were parsed successfully. The trial was restored to
+`IBR2 test enable = 0` and `IBR3 test enable = 0` and rebuilt without a second
+Run.
+
+See `docs/IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md`. This does not
+validate natural DFIG-to-IBR2 cascade propagation, physical causality
+direction, system stability, protection coordination, or MATLAB coupling.

@@ -1,0 +1,7 @@
+metric,baseline_default_disabled,ibr2_enabled_run,contrast
+IBR2 test enable,0.0,1.0,baseline source-B cause 0 vs enabled test enable 1
+IBR2 open request time,unavailable_in_baseline_summary,4.0,baseline detail unavailable/absent vs 4.0 s
+IBR2 actual open time,unavailable_in_baseline_summary,4.0,baseline detail unavailable/absent vs 4.0 s
+IBR2 event valid time,unavailable_in_baseline_summary,4.01,baseline detail unavailable/absent vs 4.0 s
+IBR2 cause code,0.0,4.0,0 vs 4
+CASCADE3 second event time,-1.0,4.000005,-1 vs 4.0 s
