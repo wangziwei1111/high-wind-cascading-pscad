@@ -81,5 +81,14 @@
     "E003",
     "E010",
     "E012"
-  ]
+  ],
+  "stage2_branch_observability_preflight": {
+    "execution_status": "branch_raw_measurements_static_fallback",
+    "real_branch_traceability_status": "pass",
+    "branch_measurement_semantics_status": "fail",
+    "selected_branch_count": 0,
+    "reason": "Real TLine candidates were found, but none exposes an existing P/Q/I signal path and this stage forbids adding measurement elements.",
+    "next_stage_remains": "branch observability only",
+    "required_scope_change": "Explicitly authorize minimal inline meters or establish an authoritative native TLine measurement interface; still no module, relay, breaker command, or in-model loading calculation."
+  }
 }

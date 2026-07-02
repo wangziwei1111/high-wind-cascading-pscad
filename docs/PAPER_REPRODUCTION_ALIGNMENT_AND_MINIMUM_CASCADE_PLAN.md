@@ -73,3 +73,16 @@ P/Q/I/负载率通道，因而无法观察“源脱网/故障 -> 潮流重分布
 设计。后续建模应由论文中明确的“故障—保护—网络重分布—后续保护”链条
 决定。本轮没有修改 PSCAD、没有 Build、没有 Run，也没有验证自然级联、
 物理因果、稳定性、保护协调、电压支撑或 MATLAB 耦合。
+
+## Stage-two branch-observability preflight addendum
+
+The next-stage preflight traced real TLines `E_2_3_1`, `E_1_2_1`,
+`E_2_25_1`, and `E_16_19_1`, but none exposes an existing, semantically
+confirmed P/Q/I signal path. Because the approved scope prohibited adding
+meters or calculations, the stage ended in static fallback without GUI,
+Build, Run, or new Output Channels.
+
+P08 therefore remains `missing`; P09 line-overload protection and P10 branch
+trip also remain `missing`. The recommended research direction remains
+`branch observability only`, but a future task must explicitly authorize
+minimal inline meters or establish a native TLine measurement interface.

@@ -10,5 +10,8 @@
   "current_reproduction_level": "infrastructure and evidence preparation",
   "current_safe_name": "controlled-interface validation scaffold",
   "strict_reproduction_status": "not_achieved",
-  "structural_alignment_status": "partial"
+  "structural_alignment_status": "partial",
+  "branch_observability_stage2_status": "static_fallback_missing_existing_pqi_measurement_semantics",
+  "strict_reproduction_status_after_stage2": "not_achieved",
+  "current_safe_name_after_stage2": "controlled-interface validation scaffold"
 }

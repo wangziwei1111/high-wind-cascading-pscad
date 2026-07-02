@@ -1,0 +1,7781 @@
+{
+  "trial_sha256": "1F747F067339547ECCFD03AD41A1B56ABE3DDC6D627AD1F085B37BFA9532DD95",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "output_channel_count": 262,
+  "output_channel_fingerprint": "AFB5CCE9082972DF2C95ABF7C5431A07975EEB57A4A12CB89E5F17AFABC0C13D",
+  "generated_fortran_output_assignment_count": 331,
+  "unmapped_xml_channel_names": [
+    "Ef_30",
+    "If_30",
+    "P_30",
+    "Q_30",
+    "TE_30",
+    "TM_30",
+    "Vm_30",
+    "Wang_30",
+    "Wpu_30"
+  ],
+  "unmapped_channel_explanation": "Nine G_30 legacy definition channels remain in XML but have no active generated call-site mapping because the replaced G_30 definition has no compiled instance; they are frozen unchanged.",
+  "channels": [
+    {
+      "xml_order": 1,
+      "name": "Wang_39",
+      "component_id": "139895817",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663426"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 2,
+      "name": "Wpu_39",
+      "component_id": "774958082",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663425"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 3,
+      "name": "Ef_39",
+      "component_id": "133816600",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663424"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 4,
+      "name": "If_39",
+      "component_id": "134078744",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663423"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 5,
+      "name": "TE_39",
+      "component_id": "1963005607",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663422"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 6,
+      "name": "TM_39",
+      "component_id": "1606775247",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663421"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 7,
+      "name": "Vm_39",
+      "component_id": "181722735",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663420"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 8,
+      "name": "P_39",
+      "component_id": "1234496440",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "10000",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663419"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "10000.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 9,
+      "name": "Q_39",
+      "component_id": "1234430904",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_39",
+        "Group": "",
+        "Display": "1",
+        "Scale": "10000",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663418"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_39_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "10000.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 10,
+      "name": "Wang_30",
+      "component_id": "355168961",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663399"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 11,
+      "name": "Wpu_30",
+      "component_id": "1248384312",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663398"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 12,
+      "name": "Ef_30",
+      "component_id": "2011286094",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663397"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 13,
+      "name": "If_30",
+      "component_id": "2011548238",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663396"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 14,
+      "name": "TE_30",
+      "component_id": "1871106633",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663395"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 15,
+      "name": "TM_30",
+      "component_id": "1514876273",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663394"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 16,
+      "name": "Vm_30",
+      "component_id": "89823761",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663393"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 17,
+      "name": "P_30",
+      "component_id": "1910772808",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "480",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663392"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 18,
+      "name": "Q_30",
+      "component_id": "1910838344",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_30",
+        "Group": "",
+        "Display": "1",
+        "Scale": "480",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663391"
+      },
+      "fortran_mappings": []
+    },
+    {
+      "xml_order": 19,
+      "name": "Wang_37",
+      "component_id": "1980933719",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663381"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 20,
+      "name": "Wpu_37",
+      "component_id": "2144398928",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663380"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 21,
+      "name": "Ef_37",
+      "component_id": "1089490634",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663379"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 22,
+      "name": "If_37",
+      "component_id": "1089228490",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663378"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 23,
+      "name": "TE_37",
+      "component_id": "1229670095",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663377"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 24,
+      "name": "TM_37",
+      "component_id": "873439735",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663376"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 25,
+      "name": "Vm_37",
+      "component_id": "1996475049",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663375"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 26,
+      "name": "P_37",
+      "component_id": "667858551",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "600",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663374"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "600.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 27,
+      "name": "Q_37",
+      "component_id": "667924087",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_37",
+        "Group": "",
+        "Display": "1",
+        "Scale": "600",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663373"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_37_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "600.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 28,
+      "name": "Wang_38",
+      "component_id": "2068268600",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663372"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 29,
+      "name": "Wpu_38",
+      "component_id": "46499993",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663371"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 30,
+      "name": "Ef_38",
+      "component_id": "172719289",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663370"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 31,
+      "name": "If_38",
+      "component_id": "172457145",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663369"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 32,
+      "name": "TE_38",
+      "component_id": "849900664",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663368"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 33,
+      "name": "TM_38",
+      "component_id": "493670304",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663367"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 34,
+      "name": "Vm_38",
+      "component_id": "931382208",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663366"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 35,
+      "name": "P_38",
+      "component_id": "435950664",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "920",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663365"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "920.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 36,
+      "name": "Q_38",
+      "component_id": "436016200",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_38",
+        "Group": "",
+        "Display": "1",
+        "Scale": "890",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663364"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_38_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "890.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 37,
+      "name": "Wang_31",
+      "component_id": "1893004843",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663408"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 38,
+      "name": "Wpu_31",
+      "component_id": "671788594",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663407"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 39,
+      "name": "Ef_31",
+      "component_id": "1835982812",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663406"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 40,
+      "name": "If_31",
+      "component_id": "1835720668",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663405"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 41,
+      "name": "TE_31",
+      "component_id": "1438330611",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663404"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 42,
+      "name": "TM_31",
+      "component_id": "1082100251",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663403"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 43,
+      "name": "Vm_31",
+      "component_id": "1788076677",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663402"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 44,
+      "name": "P_31",
+      "component_id": "240325704",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "610",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663401"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "610.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 45,
+      "name": "Q_31",
+      "component_id": "240391240",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_31",
+        "Group": "",
+        "Display": "1",
+        "Scale": "610",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663400"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_31_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "610.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 46,
+      "name": "Wang_32",
+      "component_id": "575034364",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663399"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 47,
+      "name": "Wpu_32",
+      "component_id": "102703821",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663398"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 48,
+      "name": "Ef_32",
+      "component_id": "2062139987",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663397"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 49,
+      "name": "If_32",
+      "component_id": "2062402131",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663396"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 50,
+      "name": "TE_32",
+      "component_id": "234917060",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663395"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 51,
+      "name": "TM_32",
+      "component_id": "121313300",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663394"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 52,
+      "name": "Vm_32",
+      "component_id": "1303477068",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663393"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 53,
+      "name": "P_32",
+      "component_id": "1866329016",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "720",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663392"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "720.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 54,
+      "name": "Q_32",
+      "component_id": "1866263480",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_32",
+        "Group": "",
+        "Display": "1",
+        "Scale": "720",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663391"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_32_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "720.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 55,
+      "name": "Wang_33",
+      "component_id": "937323206",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663417"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 56,
+      "name": "Wpu_33",
+      "component_id": "847329687",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663416"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 57,
+      "name": "Ef_33",
+      "component_id": "360207479",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663415"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 58,
+      "name": "If_33",
+      "component_id": "359945335",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663414"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 59,
+      "name": "TE_33",
+      "component_id": "218061938",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663413"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 60,
+      "name": "TM_33",
+      "component_id": "574292298",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663412"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 61,
+      "name": "Vm_33",
+      "component_id": "850498070",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663411"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 62,
+      "name": "P_33",
+      "component_id": "758191176",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "680",
+        "Units": "MW",
+        "mrun": "0",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663410"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "680.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 63,
+      "name": "Q_33",
+      "component_id": "758256712",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_33",
+        "Group": "",
+        "Display": "1",
+        "Scale": "680",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663409"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_33_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "680.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 64,
+      "name": "Wang_34",
+      "component_id": "142513466",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663390"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 65,
+      "name": "Wpu_34",
+      "component_id": "1386101143",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663389"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 66,
+      "name": "Ef_34",
+      "component_id": "89216119",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663388"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 67,
+      "name": "If_34",
+      "component_id": "88953975",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663387"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 68,
+      "name": "TE_34",
+      "component_id": "52929422",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663386"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 69,
+      "name": "TM_34",
+      "component_id": "303300938",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663385"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 70,
+      "name": "Vm_34",
+      "component_id": "1121489430",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663384"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 71,
+      "name": "P_34",
+      "component_id": "1417155656",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "540",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663383"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "540.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 72,
+      "name": "Q_34",
+      "component_id": "1417221192",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_34",
+        "Group": "",
+        "Display": "1",
+        "Scale": "540",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663382"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_34_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "540.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 73,
+      "name": "Wang_35",
+      "component_id": "1172195462",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663444"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 74,
+      "name": "Wpu_35",
+      "component_id": "497514933",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663443"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 75,
+      "name": "Ef_35",
+      "component_id": "595897499",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663442"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 76,
+      "name": "If_35",
+      "component_id": "595635355",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663441"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 77,
+      "name": "TE_35",
+      "component_id": "1898876374",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663440"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 78,
+      "name": "TM_35",
+      "component_id": "1542646014",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663439"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 79,
+      "name": "Vm_35",
+      "component_id": "1327268770",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663438"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 80,
+      "name": "P_35",
+      "component_id": "149993079",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "720",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663437"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "720.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 81,
+      "name": "Q_35",
+      "component_id": "150058615",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_35",
+        "Group": "",
+        "Display": "1",
+        "Scale": "720",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663436"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_35_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "720.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 82,
+      "name": "Wang_36",
+      "component_id": "2086881414",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "Wang_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "57.29578",
+        "Units": "Deg",
+        "mrun": "1",
+        "Min": "-180.0",
+        "Max": "180.0",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663435"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 9,
+          "signal_binding": "57.29578 * Wang",
+          "fortran_line": 369
+        }
+      ]
+    },
+    {
+      "xml_order": 83,
+      "name": "Wpu_36",
+      "component_id": "1735755339",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Wpu_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.95",
+        "Max": "1.05",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663434"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 8,
+          "signal_binding": "Wpu",
+          "fortran_line": 365
+        }
+      ]
+    },
+    {
+      "xml_order": 84,
+      "name": "Ef_36",
+      "component_id": "1396026523",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "396",
+      "xml_parameters": {
+        "Name": "Ef_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663433"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ef",
+          "fortran_line": 361
+        }
+      ]
+    },
+    {
+      "xml_order": 85,
+      "name": "If_36",
+      "component_id": "1395764379",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "If_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663432"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 6,
+          "signal_binding": "If",
+          "fortran_line": 357
+        }
+      ]
+    },
+    {
+      "xml_order": 86,
+      "name": "TE_36",
+      "component_id": "1595961898",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "TE_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663431"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 5,
+          "signal_binding": "TE",
+          "fortran_line": 353
+        }
+      ]
+    },
+    {
+      "xml_order": 87,
+      "name": "TM_36",
+      "component_id": "1952192258",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "TM_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "-1",
+        "Max": "4",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663430"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 4,
+          "signal_binding": "TM",
+          "fortran_line": 349
+        }
+      ]
+    },
+    {
+      "xml_order": 88,
+      "name": "Vm_36",
+      "component_id": "527139746",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "540",
+      "xml_parameters": {
+        "Name": "Vm_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Min": "0.9",
+        "Max": "1.1",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663429"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vm",
+          "fortran_line": 345
+        }
+      ]
+    },
+    {
+      "xml_order": 89,
+      "name": "P_36",
+      "component_id": "1956661641",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "P_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "610",
+        "Units": "MW",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663428"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 2,
+          "signal_binding": "610.0 * P",
+          "fortran_line": 337
+        }
+      ]
+    },
+    {
+      "xml_order": 90,
+      "name": "Q_36",
+      "component_id": "1956596105",
+      "definition": "master:pgb",
+      "x": "108",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Q_36",
+        "Group": "",
+        "Display": "1",
+        "Scale": "610",
+        "Units": "MVAR",
+        "mrun": "1",
+        "Min": "-1000",
+        "Max": "1000",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663427"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "G_36_0_1_DYR.f",
+          "pgb_offset": 1,
+          "signal_binding": "610.0 * Q",
+          "fortran_line": 333
+        }
+      ]
+    },
+    {
+      "xml_order": 91,
+      "name": "SPD30",
+      "component_id": "76620425",
+      "definition": "master:pgb",
+      "x": "5778",
+      "y": "4482",
+      "xml_parameters": {
+        "Name": "SPD30",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663297"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 31,
+          "signal_binding": "SPD30",
+          "fortran_line": 2367
+        }
+      ]
+    },
+    {
+      "xml_order": 92,
+      "name": "V30",
+      "component_id": "2115405417",
+      "definition": "master:pgb",
+      "x": "5886",
+      "y": "4482",
+      "xml_parameters": {
+        "Name": "V30",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663363"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 32,
+          "signal_binding": "V30",
+          "fortran_line": 5381
+        }
+      ]
+    },
+    {
+      "xml_order": 93,
+      "name": "P30",
+      "component_id": "814604080",
+      "definition": "master:pgb",
+      "x": "5994",
+      "y": "4482",
+      "xml_parameters": {
+        "Name": "P30",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663362"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 33,
+          "signal_binding": "P30",
+          "fortran_line": 5385
+        }
+      ]
+    },
+    {
+      "xml_order": 94,
+      "name": "Q30",
+      "component_id": "518740083",
+      "definition": "master:pgb",
+      "x": "6084",
+      "y": "4482",
+      "xml_parameters": {
+        "Name": "Q30",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663361"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 34,
+          "signal_binding": "Q30",
+          "fortran_line": 5389
+        }
+      ]
+    },
+    {
+      "xml_order": 95,
+      "name": "QIBR2",
+      "component_id": "1403705382",
+      "definition": "master:pgb",
+      "x": "5058",
+      "y": "4032",
+      "xml_parameters": {
+        "Name": "QIBR2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663323"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 10,
+          "signal_binding": "QIBR2",
+          "fortran_line": 5281
+        }
+      ]
+    },
+    {
+      "xml_order": 96,
+      "name": "PIBR3",
+      "component_id": "2479722",
+      "definition": "master:pgb",
+      "x": "5544",
+      "y": "4032",
+      "xml_parameters": {
+        "Name": "PIBR3",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663331"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 13,
+          "signal_binding": "PIBR3",
+          "fortran_line": 5293
+        }
+      ]
+    },
+    {
+      "xml_order": 97,
+      "name": "QIBR3",
+      "component_id": "1025846643",
+      "definition": "master:pgb",
+      "x": "5760",
+      "y": "4032",
+      "xml_parameters": {
+        "Name": "QIBR3",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663330"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 14,
+          "signal_binding": "QIBR3",
+          "fortran_line": 5297
+        }
+      ]
+    },
+    {
+      "xml_order": 98,
+      "name": "VIBR1_2",
+      "component_id": "2013283288",
+      "definition": "master:pgb",
+      "x": "5292",
+      "y": "4158",
+      "xml_parameters": {
+        "Name": "VIBR1_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663318"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 21,
+          "signal_binding": "VIBR1_2",
+          "fortran_line": 5333
+        }
+      ]
+    },
+    {
+      "xml_order": 99,
+      "name": "PIBR1_2",
+      "component_id": "862805808",
+      "definition": "master:pgb",
+      "x": "5508",
+      "y": "4158",
+      "xml_parameters": {
+        "Name": "PIBR1_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663320"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 23,
+          "signal_binding": "PIBR1_2",
+          "fortran_line": 5341
+        }
+      ]
+    },
+    {
+      "xml_order": 100,
+      "name": "QIBR1_2",
+      "component_id": "1043010314",
+      "definition": "master:pgb",
+      "x": "5688",
+      "y": "4158",
+      "xml_parameters": {
+        "Name": "QIBR1_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663322"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 24,
+          "signal_binding": "QIBR1_2",
+          "fortran_line": 5345
+        }
+      ]
+    },
+    {
+      "xml_order": 101,
+      "name": "VIBR2_2",
+      "component_id": "1736369162",
+      "definition": "master:pgb",
+      "x": "5310",
+      "y": "4284",
+      "xml_parameters": {
+        "Name": "VIBR2_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663324"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 25,
+          "signal_binding": "VIBR2_2",
+          "fortran_line": 5353
+        }
+      ]
+    },
+    {
+      "xml_order": 102,
+      "name": "PIBR2_2",
+      "component_id": "1600085984",
+      "definition": "master:pgb",
+      "x": "5418",
+      "y": "4284",
+      "xml_parameters": {
+        "Name": "PIBR2_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663325"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 26,
+          "signal_binding": "PIBR2_2",
+          "fortran_line": 5357
+        }
+      ]
+    },
+    {
+      "xml_order": 103,
+      "name": "QIBR2_2",
+      "component_id": "1405026150",
+      "definition": "master:pgb",
+      "x": "5508",
+      "y": "4284",
+      "xml_parameters": {
+        "Name": "QIBR2_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663326"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 27,
+          "signal_binding": "QIBR2_2",
+          "fortran_line": 5361
+        }
+      ]
+    },
+    {
+      "xml_order": 104,
+      "name": "VIBR3_2",
+      "component_id": "220982143",
+      "definition": "master:pgb",
+      "x": "5310",
+      "y": "4320",
+      "xml_parameters": {
+        "Name": "VIBR3_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663327"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 28,
+          "signal_binding": "VIBR3_2",
+          "fortran_line": 5365
+        }
+      ]
+    },
+    {
+      "xml_order": 105,
+      "name": "PIBR3_2",
+      "component_id": "1212984070",
+      "definition": "master:pgb",
+      "x": "5418",
+      "y": "4320",
+      "xml_parameters": {
+        "Name": "PIBR3_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663328"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 29,
+          "signal_binding": "PIBR3_2",
+          "fortran_line": 5369
+        }
+      ]
+    },
+    {
+      "xml_order": 106,
+      "name": "QIBR3_2",
+      "component_id": "284190345",
+      "definition": "master:pgb",
+      "x": "5508",
+      "y": "4320",
+      "xml_parameters": {
+        "Name": "QIBR3_2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663329"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 30,
+          "signal_binding": "QIBR3_2",
+          "fortran_line": 5373
+        }
+      ]
+    },
+    {
+      "xml_order": 107,
+      "name": "VIBR3",
+      "component_id": "617389359",
+      "definition": "master:pgb",
+      "x": "5310",
+      "y": "4032",
+      "xml_parameters": {
+        "Name": "VIBR3",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663332"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 12,
+          "signal_binding": "VIBR3",
+          "fortran_line": 5289
+        }
+      ]
+    },
+    {
+      "xml_order": 108,
+      "name": "VIBR2",
+      "component_id": "352110449",
+      "definition": "master:pgb",
+      "x": "5166",
+      "y": "4158",
+      "xml_parameters": {
+        "Name": "VIBR2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663319"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 20,
+          "signal_binding": "VIBR2",
+          "fortran_line": 5329
+        }
+      ]
+    },
+    {
+      "xml_order": 109,
+      "name": "PIBR2",
+      "component_id": "2037625487",
+      "definition": "master:pgb",
+      "x": "5040",
+      "y": "4158",
+      "xml_parameters": {
+        "Name": "PIBR2",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663321"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 18,
+          "signal_binding": "PIBR2",
+          "fortran_line": 5321
+        }
+      ]
+    },
+    {
+      "xml_order": 110,
+      "name": "DFIG_DBLK_CMD",
+      "component_id": "510286702",
+      "definition": "master:pgb",
+      "x": "324",
+      "y": "1080",
+      "xml_parameters": {
+        "Name": "DFIG_DBLK_CMD",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1",
+        "Units": "logic",
+        "mrun": "1",
+        "Min": "-0.5",
+        "Max": "1.5",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663399"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 110,
+          "signal_binding": "Dblk_DFIG",
+          "fortran_line": 3749
+        }
+      ]
+    },
+    {
+      "xml_order": 111,
+      "name": "DFIG_VWIND_MS",
+      "component_id": "98290045",
+      "definition": "master:pgb",
+      "x": "324",
+      "y": "1170",
+      "xml_parameters": {
+        "Name": "DFIG_VWIND_MS",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1",
+        "Units": "m/s",
+        "mrun": "1",
+        "Min": "0",
+        "Max": "25",
+        "Pol": "0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663399"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 108,
+          "signal_binding": "Vwind",
+          "fortran_line": 3724
+        }
+      ]
+    },
+    {
+      "xml_order": 112,
+      "name": "DFIG_BRK_STATE",
+      "component_id": "432621999",
+      "definition": "master:pgb",
+      "x": "936",
+      "y": "1062",
+      "xml_parameters": {
+        "Name": "DFIG_BRK_STATE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 109,
+          "signal_binding": "REAL(DFIG_BRK_STATE)",
+          "fortran_line": 3738
+        }
+      ]
+    },
+    {
+      "xml_order": 113,
+      "name": "DFIG_IFLT_A_KA",
+      "component_id": "943129517",
+      "definition": "master:pgb",
+      "x": "972",
+      "y": "1116",
+      "xml_parameters": {
+        "Name": "DFIG_IFLT_A_KA",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "kA",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "29",
+        "Min": "-20"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 36,
+          "signal_binding": "IFLT_DFIG_A",
+          "fortran_line": 3317
+        },
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 107,
+          "signal_binding": "IFLT_DFIG_A",
+          "fortran_line": 3720
+        }
+      ]
+    },
+    {
+      "xml_order": 114,
+      "name": "DFIG_IFLT_B_KA",
+      "component_id": "1430717756",
+      "definition": "master:pgb",
+      "x": "972",
+      "y": "1152",
+      "xml_parameters": {
+        "Name": "DFIG_IFLT_B_KA",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "kA",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "29",
+        "Min": "-20"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 106,
+          "signal_binding": "IFLT_DFIG_B",
+          "fortran_line": 3716
+        }
+      ]
+    },
+    {
+      "xml_order": 115,
+      "name": "DFIG_IFLT_C_KA",
+      "component_id": "2018870442",
+      "definition": "master:pgb",
+      "x": "972",
+      "y": "1188",
+      "xml_parameters": {
+        "Name": "DFIG_IFLT_C_KA",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "kA",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "29",
+        "Min": "-20"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 105,
+          "signal_binding": "IFLT_DFIG_C",
+          "fortran_line": 3708
+        }
+      ]
+    },
+    {
+      "xml_order": 116,
+      "name": "DFIG_IFLT_A_KA",
+      "component_id": "1563984728",
+      "definition": "master:pgb",
+      "x": "5112",
+      "y": "4248",
+      "xml_parameters": {
+        "Name": "DFIG_IFLT_A_KA",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "kA",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "29",
+        "Min": "-20"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 36,
+          "signal_binding": "IFLT_DFIG_A",
+          "fortran_line": 3317
+        },
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 107,
+          "signal_binding": "IFLT_DFIG_A",
+          "fortran_line": 3720
+        }
+      ]
+    },
+    {
+      "xml_order": 117,
+      "name": "DFIG_LVRT_LOWV",
+      "component_id": "1377154997",
+      "definition": "master:pgb",
+      "x": "864",
+      "y": "828",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_LOWV",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 113,
+          "signal_binding": "REAL(DFIG_LVRT_LOWV)",
+          "fortran_line": 5502
+        }
+      ]
+    },
+    {
+      "xml_order": 118,
+      "name": "DFIG_LVRT_IMMTRIP",
+      "component_id": "1514932",
+      "definition": "master:pgb",
+      "x": "864",
+      "y": "684",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_IMMTRIP",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 114,
+          "signal_binding": "REAL(DFIG_LVRT_IMMTRIP)",
+          "fortran_line": 5506
+        }
+      ]
+    },
+    {
+      "xml_order": 119,
+      "name": "DFIG_LVRT_TIMER_S",
+      "component_id": "52204636",
+      "definition": "master:pgb",
+      "x": "558",
+      "y": "648",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TIMER_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 115,
+          "signal_binding": "DFIG_LVRT_TIMER_S",
+          "fortran_line": 3817
+        }
+      ]
+    },
+    {
+      "xml_order": 120,
+      "name": "DFIG_LVRT_CLEAR_BASE",
+      "component_id": "660219171",
+      "definition": "master:pgb",
+      "x": "540",
+      "y": "864",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CLEAR_BASE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 112,
+          "signal_binding": "REAL(DFIG_LVRT_CLEAR_BASE)",
+          "fortran_line": 5498
+        }
+      ]
+    },
+    {
+      "xml_order": 121,
+      "name": "DFIG_LVRT_VSMIN_MEM",
+      "component_id": "1568953131",
+      "definition": "master:pgb",
+      "x": "1494",
+      "y": "648",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_VSMIN_MEM",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "pu",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 1,
+          "signal_binding": "DFIG_LVRT_VSMIN_MEM",
+          "fortran_line": 1548
+        }
+      ]
+    },
+    {
+      "xml_order": 122,
+      "name": "DFIG_LVRT_TALLOW_S",
+      "component_id": "855700634",
+      "definition": "master:pgb",
+      "x": "4014",
+      "y": "1710",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TALLOW_S",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "2.1",
+        "Min": "0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 80,
+          "signal_binding": "DFIG_LVRT_TALLOW_S",
+          "fortran_line": 3583
+        }
+      ]
+    },
+    {
+      "xml_order": 123,
+      "name": "DFIG_LVRT_DURATION_EXCEEDED",
+      "component_id": "1430029174",
+      "definition": "master:pgb",
+      "x": "3978",
+      "y": "1422",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_DURATION_EXCEEDED",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 92,
+          "signal_binding": "DFIG_LVRT_DURATION_EXCEEDED",
+          "fortran_line": 3635
+        }
+      ]
+    },
+    {
+      "xml_order": 124,
+      "name": "DFIG_LVRT_TRIP_REQUEST",
+      "component_id": "932997196",
+      "definition": "master:pgb",
+      "x": "3996",
+      "y": "1134",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TRIP_REQUEST",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 103,
+          "signal_binding": "DFIG_LVRT_TRIP_REQUEST",
+          "fortran_line": 3692
+        }
+      ]
+    },
+    {
+      "xml_order": 125,
+      "name": "DFIG_LVRT_TRIP_LATCH",
+      "component_id": "2025602951",
+      "definition": "master:pgb",
+      "x": "3726",
+      "y": "594",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TRIP_LATCH",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 111,
+          "signal_binding": "DFIG_LVRT_TRIP_LATCH",
+          "fortran_line": 3795
+        }
+      ]
+    },
+    {
+      "xml_order": 126,
+      "name": "DFIG_LVRT_CLEAR",
+      "component_id": "1757271943",
+      "definition": "master:pgb",
+      "x": "2034",
+      "y": "1800",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CLEAR",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.5",
+        "Min": "-0.5"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 84,
+          "signal_binding": "DFIG_LVRT_CLEAR",
+          "fortran_line": 3603
+        }
+      ]
+    },
+    {
+      "xml_order": 127,
+      "name": "DFIG_LVRT_EXISTING_BRK_CMD",
+      "component_id": "1445655642",
+      "definition": "master:pgb",
+      "x": "2448",
+      "y": "2142",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_EXISTING_BRK_CMD",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 73,
+          "signal_binding": "DFIG_LVRT_EXISTING_BRK_CMD",
+          "fortran_line": 3544
+        }
+      ]
+    },
+    {
+      "xml_order": 128,
+      "name": "DFIG_LVRT_FINAL_BRK_CMD",
+      "component_id": "229635092",
+      "definition": "master:pgb",
+      "x": "2826",
+      "y": "2484",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_FINAL_BRK_CMD",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "logic",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 61,
+          "signal_binding": "DFIG_LVRT_FINAL_BRK_CMD",
+          "fortran_line": 3458
+        }
+      ]
+    },
+    {
+      "xml_order": 129,
+      "name": "DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+      "component_id": "688400342",
+      "definition": "master:pgb",
+      "x": "2790",
+      "y": "2772",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 4,
+          "signal_binding": "DFIG_LVRT_TRIP_CAUSE_IMM_LATCH",
+          "fortran_line": 2236
+        }
+      ]
+    },
+    {
+      "xml_order": 130,
+      "name": "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH",
+      "component_id": "1906095098",
+      "definition": "master:pgb",
+      "x": "3672",
+      "y": "2430",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 2,
+          "signal_binding": "DFIG_LVRT_CAUSE_DUR_LATCH",
+          "fortran_line": 2207
+        }
+      ]
+    },
+    {
+      "xml_order": 131,
+      "name": "DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL",
+      "component_id": "1079396455",
+      "definition": "master:pgb",
+      "x": "288",
+      "y": "2610",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 65,
+          "signal_binding": "REAL(DFIG_LVRT_ORIG_CMD_OPEN_BOOL)",
+          "fortran_line": 3487
+        }
+      ]
+    },
+    {
+      "xml_order": 132,
+      "name": "DFIG_LVRT_FINAL_CMD_BOOL",
+      "component_id": "1749856422",
+      "definition": "master:pgb",
+      "x": "306",
+      "y": "2682",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_FINAL_CMD_BOOL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 64,
+          "signal_binding": "REAL(DFIG_LVRT_FINAL_CMD_BOOL)",
+          "fortran_line": 3474
+        }
+      ]
+    },
+    {
+      "xml_order": 133,
+      "name": "DFIG_LVRT_BRK_OPEN_BOOL",
+      "component_id": "1251750859",
+      "definition": "master:pgb",
+      "x": "306",
+      "y": "2754",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_BRK_OPEN_BOOL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 60,
+          "signal_binding": "REAL(DFIG_LVRT_BRK_OPEN_BOOL)",
+          "fortran_line": 3454
+        }
+      ]
+    },
+    {
+      "xml_order": 134,
+      "name": "DFIG_LVRT_TRIP_CONFIRMED",
+      "component_id": "1051031339",
+      "definition": "master:pgb",
+      "x": "3402",
+      "y": "2196",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TRIP_CONFIRMED",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 68,
+          "signal_binding": "DFIG_LVRT_TRIP_CONFIRMED",
+          "fortran_line": 3509
+        }
+      ]
+    },
+    {
+      "xml_order": 135,
+      "name": "DFIG_LVRT_CASCADE_AVAILABLE",
+      "component_id": "345805582",
+      "definition": "master:pgb",
+      "x": "630",
+      "y": "2754",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CASCADE_AVAILABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 59,
+          "signal_binding": "REAL(DFIG_LVRT_CASCADE_AVAILABLE)",
+          "fortran_line": 3450
+        }
+      ]
+    },
+    {
+      "xml_order": 136,
+      "name": "DFIG_LVRT_TRIP_CAUSE_CODE",
+      "component_id": "541903365",
+      "definition": "master:pgb",
+      "x": "360",
+      "y": "4500",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_TRIP_CAUSE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "code",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 37,
+          "signal_binding": "DFIG_LVRT_TRIP_CAUSE_CODE",
+          "fortran_line": 3321
+        }
+      ]
+    },
+    {
+      "xml_order": 137,
+      "name": "DFIG_LVRT_CASCADE_EVENT_VALID",
+      "component_id": "810673841",
+      "definition": "master:pgb",
+      "x": "3636",
+      "y": "2178",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CASCADE_EVENT_VALID",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 67,
+          "signal_binding": "DFIG_LVRT_CASCADE_EVENT_VALID",
+          "fortran_line": 3505
+        }
+      ]
+    },
+    {
+      "xml_order": 138,
+      "name": "DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE",
+      "component_id": "2111023746",
+      "definition": "master:pgb",
+      "x": "612",
+      "y": "4464",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 38,
+          "signal_binding": "DFIG_LVRT_CAS_CAUSE_CODE",
+          "fortran_line": 3325
+        }
+      ]
+    },
+    {
+      "xml_order": 139,
+      "name": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+      "component_id": "288637322",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "2988",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 54,
+          "signal_binding": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+          "fortran_line": 3414
+        }
+      ]
+    },
+    {
+      "xml_order": 140,
+      "name": "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE",
+      "component_id": "537095251",
+      "definition": "master:pgb",
+      "x": "1548",
+      "y": "2610",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 62,
+          "signal_binding": "DFIG_LVRT_CAS_SRC_AVAIL",
+          "fortran_line": 3462
+        }
+      ]
+    },
+    {
+      "xml_order": 141,
+      "name": "DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S",
+      "component_id": "2133635045",
+      "definition": "master:pgb",
+      "x": "1458",
+      "y": "4230",
+      "xml_parameters": {
+        "Name": "DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 6,
+          "signal_binding": "DFIG_LVRT_CAS_FIRST_TIME_S",
+          "fortran_line": 2335
+        }
+      ]
+    },
+    {
+      "xml_order": 142,
+      "name": "CASCADE_MONITOR_ANY_TRIP",
+      "component_id": "1682633210",
+      "definition": "master:pgb",
+      "x": "3870",
+      "y": "2070",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_ANY_TRIP",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 71,
+          "signal_binding": "CASCADE_MONITOR_ANY_TRIP",
+          "fortran_line": 3536
+        }
+      ]
+    },
+    {
+      "xml_order": 143,
+      "name": "CASCADE_MONITOR_ANY_BRK_OPEN",
+      "component_id": "1448433561",
+      "definition": "master:pgb",
+      "x": "3690",
+      "y": "3222",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_ANY_BRK_OPEN",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 52,
+          "signal_binding": "CASCADE_MONITOR_ANY_BRK_OPEN",
+          "fortran_line": 3406
+        }
+      ]
+    },
+    {
+      "xml_order": 144,
+      "name": "CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT",
+      "component_id": "568013308",
+      "definition": "master:pgb",
+      "x": "1764",
+      "y": "2556",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "2.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 63,
+          "signal_binding": "CASCADE_MONITOR_AVAIL_SRC_COUNT",
+          "fortran_line": 3470
+        }
+      ]
+    },
+    {
+      "xml_order": 145,
+      "name": "CASCADE_MONITOR_FIRST_EVENT_TIME_S",
+      "component_id": "935760742",
+      "definition": "master:pgb",
+      "x": "1692",
+      "y": "4302",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_FIRST_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 39,
+          "signal_binding": "CASCADE_MONITOR_FIRST_TIME_S",
+          "fortran_line": 3329
+        }
+      ]
+    },
+    {
+      "xml_order": 146,
+      "name": "CASCADE_MONITOR_CAUSE_CODE_DFIG1",
+      "component_id": "453162503",
+      "definition": "master:pgb",
+      "x": "738",
+      "y": "4356",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_CAUSE_CODE_DFIG1",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 40,
+          "signal_binding": "CASCADE_MONITOR_CAUSE_CODE_DFIG1",
+          "fortran_line": 3337
+        }
+      ]
+    },
+    {
+      "xml_order": 147,
+      "name": "IBR2_TRIAL_BRK_CMD",
+      "component_id": "1980377912",
+      "definition": "master:pgb",
+      "x": "954",
+      "y": "1422",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_BRK_CMD",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 104,
+          "signal_binding": "IBR2_TRIAL_BRK_CMD",
+          "fortran_line": 3696
+        }
+      ]
+    },
+    {
+      "xml_order": 148,
+      "name": "IBR2_TRIAL_BRK_STATE",
+      "component_id": "697328006",
+      "definition": "master:pgb",
+      "x": "1422",
+      "y": "3492",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_BRK_STATE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "2.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 51,
+          "signal_binding": "REAL(IBR2_TRIAL_BRK_STATE)",
+          "fortran_line": 3402
+        }
+      ]
+    },
+    {
+      "xml_order": 149,
+      "name": "IBR2_TRIAL_BRK_OPEN_BOOL",
+      "component_id": "1599230309",
+      "definition": "master:pgb",
+      "x": "1620",
+      "y": "3564",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_BRK_OPEN_BOOL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 49,
+          "signal_binding": "REAL(IBR2_TRIAL_BRK_OPEN_BOOL)",
+          "fortran_line": 3394
+        }
+      ]
+    },
+    {
+      "xml_order": 150,
+      "name": "IBR2_TRIAL_SOURCE_AVAILABLE",
+      "component_id": "1316801807",
+      "definition": "master:pgb",
+      "x": "1584",
+      "y": "3636",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_SOURCE_AVAILABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 47,
+          "signal_binding": "REAL(IBR2_TRIAL_SOURCE_AVAILABLE)",
+          "fortran_line": 3386
+        }
+      ]
+    },
+    {
+      "xml_order": 151,
+      "name": "IBR2_TRIAL_CASCADE_EVENT_VALID",
+      "component_id": "1333729966",
+      "definition": "master:pgb",
+      "x": "1854",
+      "y": "3978",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_CASCADE_EVENT_VALID",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 44,
+          "signal_binding": "IBR2_CAS_EVT_VALID",
+          "fortran_line": 3362
+        }
+      ]
+    },
+    {
+      "xml_order": 152,
+      "name": "IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+      "component_id": "1594462443",
+      "definition": "master:pgb",
+      "x": "1620",
+      "y": "4068",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "4.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 42,
+          "signal_binding": "IBR2_CAS_CAUSE",
+          "fortran_line": 3354
+        }
+      ]
+    },
+    {
+      "xml_order": 153,
+      "name": "IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN",
+      "component_id": "530921801",
+      "definition": "master:pgb",
+      "x": "1656",
+      "y": "3744",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_CASCADE_EVENT_BRK_OPEN",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 46,
+          "signal_binding": "IBR2_CAS_BRK_OPEN",
+          "fortran_line": 3382
+        }
+      ]
+    },
+    {
+      "xml_order": 154,
+      "name": "IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE",
+      "component_id": "1133397423",
+      "definition": "master:pgb",
+      "x": "1710",
+      "y": "3816",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_CASCADE_SOURCE_AVAILABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 45,
+          "signal_binding": "IBR2_CAS_AVAIL",
+          "fortran_line": 3375
+        }
+      ]
+    },
+    {
+      "xml_order": 155,
+      "name": "IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+      "component_id": "1246653803",
+      "definition": "master:pgb",
+      "x": "2358",
+      "y": "1530",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 95,
+          "signal_binding": "IBR2_CAS_FIRST_S",
+          "fortran_line": 3656
+        }
+      ]
+    },
+    {
+      "xml_order": 156,
+      "name": "CASCADE_MONITOR_CAUSE_CODE_IBR2_TRIAL",
+      "component_id": "678128319",
+      "definition": "master:pgb",
+      "x": "396",
+      "y": "4284",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_CAUSE_CODE_IBR2_TRIAL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "4.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 41,
+          "signal_binding": "CAS_COL_CAUSE_IBR2",
+          "fortran_line": 3350
+        }
+      ]
+    },
+    {
+      "xml_order": 157,
+      "name": "CASCADE_MONITOR_EVENTED_SOURCE_COUNT",
+      "component_id": "308169611",
+      "definition": "master:pgb",
+      "x": "414",
+      "y": "4140",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_EVENTED_SOURCE_COUNT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "2.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 43,
+          "signal_binding": "CAS_COL_EVENTED_COUNT",
+          "fortran_line": 3358
+        }
+      ]
+    },
+    {
+      "xml_order": 158,
+      "name": "CASCADE_MONITOR_FIRST_EVENT_SOURCE_CODE",
+      "component_id": "1084056130",
+      "definition": "master:pgb",
+      "x": "2304",
+      "y": "4734",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_FIRST_EVENT_SOURCE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 35,
+          "signal_binding": "CAS_COL_FIRST_SRC_CODE",
+          "fortran_line": 3313
+        }
+      ]
+    },
+    {
+      "xml_order": 159,
+      "name": "IBR2_TRIAL_TEST_ENABLE",
+      "component_id": "439646965",
+      "definition": "master:pgb",
+      "x": "360",
+      "y": "3042",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_TEST_ENABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 5,
+          "signal_binding": "IBR2_TEST_ENABLE",
+          "fortran_line": 2244
+        }
+      ]
+    },
+    {
+      "xml_order": 160,
+      "name": "IBR2_TRIAL_TEST_OPEN_TIME_S",
+      "component_id": "1732298783",
+      "definition": "master:pgb",
+      "x": "342",
+      "y": "3006",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_TEST_OPEN_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 3,
+          "signal_binding": "IBR2_TEST_OPEN_TIME_S",
+          "fortran_line": 2232
+        }
+      ]
+    },
+    {
+      "xml_order": 161,
+      "name": "IBR2_TRIAL_TEST_TIME_REACHED",
+      "component_id": "321505631",
+      "definition": "master:pgb",
+      "x": "378",
+      "y": "2934",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_TEST_TIME_REACHED",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 58,
+          "signal_binding": "REAL(IBR2_TEST_TIME_REACHED)",
+          "fortran_line": 3446
+        }
+      ]
+    },
+    {
+      "xml_order": 162,
+      "name": "IBR2_TRIAL_TEST_OPEN_REQUEST",
+      "component_id": "1966392858",
+      "definition": "master:pgb",
+      "x": "360",
+      "y": "3222",
+      "xml_parameters": {
+        "Name": "IBR2_TRIAL_TEST_OPEN_REQUEST",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 55,
+          "signal_binding": "IBR2_TEST_OPEN_REQ",
+          "fortran_line": 3418
+        }
+      ]
+    },
+    {
+      "xml_order": 163,
+      "name": "CASCADE_MONITOR_BOTH_EVENTS_RECORDED",
+      "component_id": "1437590940",
+      "definition": "master:pgb",
+      "x": "684",
+      "y": "2952",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_BOTH_EVENTS_RECORDED",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 57,
+          "signal_binding": "CAS_CHR_BOTH_EVENTS",
+          "fortran_line": 3433
+        }
+      ]
+    },
+    {
+      "xml_order": 164,
+      "name": "CASCADE_MONITOR_SECOND_EVENT_TIME_S",
+      "component_id": "1678189062",
+      "definition": "master:pgb",
+      "x": "1008",
+      "y": "3276",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_SECOND_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 53,
+          "signal_binding": "CAS_CHR_SECOND_TIME_S",
+          "fortran_line": 3410
+        }
+      ]
+    },
+    {
+      "xml_order": 165,
+      "name": "CASCADE_MONITOR_EVENT_TIME_GAP_S",
+      "component_id": "1235803054",
+      "definition": "master:pgb",
+      "x": "1098",
+      "y": "3600",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_EVENT_TIME_GAP_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 50,
+          "signal_binding": "CAS_CHR_EVENT_TIME_GAP_S",
+          "fortran_line": 3398
+        }
+      ]
+    },
+    {
+      "xml_order": 166,
+      "name": "CASCADE_MONITOR_EVENT_SEQUENCE_CODE",
+      "component_id": "1744957183",
+      "definition": "master:pgb",
+      "x": "1602",
+      "y": "3006",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_EVENT_SEQUENCE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "5.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 56,
+          "signal_binding": "CAS_CHR_SEQUENCE_CODE",
+          "fortran_line": 3422
+        }
+      ]
+    },
+    {
+      "xml_order": 167,
+      "name": "CASCADE_MONITOR_CHRONOLOGY_CONSISTENT",
+      "component_id": "751586832",
+      "definition": "master:pgb",
+      "x": "2358",
+      "y": "3546",
+      "xml_parameters": {
+        "Name": "CASCADE_MONITOR_CHRONOLOGY_CONSISTENT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 48,
+          "signal_binding": "CAS_CHR_CHRONOLOGY_CONSISTENT",
+          "fortran_line": 3390
+        }
+      ]
+    },
+    {
+      "xml_order": 168,
+      "name": "IBR3_TRIAL_BRK_CMD",
+      "component_id": "314179139",
+      "definition": "master:pgb",
+      "x": "1098",
+      "y": "1908",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_BRK_CMD",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 83,
+          "signal_binding": "IBR3_TRIAL_BRK_CMD",
+          "fortran_line": 3599
+        }
+      ]
+    },
+    {
+      "xml_order": 169,
+      "name": "IBR3_TRIAL_BRK_STATE",
+      "component_id": "1742096436",
+      "definition": "master:pgb",
+      "x": "1098",
+      "y": "1962",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_BRK_STATE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "2.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 81,
+          "signal_binding": "REAL(IBR3_TRIAL_BRK_STATE)",
+          "fortran_line": 3587
+        }
+      ]
+    },
+    {
+      "xml_order": 170,
+      "name": "IBR3_TRIAL_BRK_OPEN_BOOL",
+      "component_id": "413580736",
+      "definition": "master:pgb",
+      "x": "1098",
+      "y": "2016",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_BRK_OPEN_BOOL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 79,
+          "signal_binding": "IBR3_TRIAL_BRK_OPEN_BOOL",
+          "fortran_line": 3579
+        }
+      ]
+    },
+    {
+      "xml_order": 171,
+      "name": "IBR3_TRIAL_SOURCE_AVAILABLE",
+      "component_id": "188107961",
+      "definition": "master:pgb",
+      "x": "1098",
+      "y": "2070",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_SOURCE_AVAILABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 77,
+          "signal_binding": "IBR3_TRIAL_SOURCE_AVAILABLE",
+          "fortran_line": 3571
+        }
+      ]
+    },
+    {
+      "xml_order": 172,
+      "name": "IBR3_TRIAL_CASCADE_EVENT_VALID",
+      "component_id": "2104873241",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1332",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_CASCADE_EVENT_VALID",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 94,
+          "signal_binding": "IBR3_CAS_EVT_VALID",
+          "fortran_line": 3652
+        }
+      ]
+    },
+    {
+      "xml_order": 173,
+      "name": "IBR3_TRIAL_TEST_OPEN_REQUEST",
+      "component_id": "336217680",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1278",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_TEST_OPEN_REQUEST",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 97,
+          "signal_binding": "IBR3_TRIAL_TEST_OPEN_REQUEST",
+          "fortran_line": 3668
+        }
+      ]
+    },
+    {
+      "xml_order": 174,
+      "name": "IBR3_TRIAL_TEST_OPEN_TIME_S",
+      "component_id": "102391943",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1224",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_TEST_OPEN_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 99,
+          "signal_binding": "IBR3_TEST_OPEN_TIME_S",
+          "fortran_line": 3676
+        }
+      ]
+    },
+    {
+      "xml_order": 175,
+      "name": "IBR3_TRIAL_TEST_ENABLE",
+      "component_id": "330042602",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1170",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_TEST_ENABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 101,
+          "signal_binding": "IBR3_TEST_ENABLE",
+          "fortran_line": 3684
+        }
+      ]
+    },
+    {
+      "xml_order": 176,
+      "name": "IBR3_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+      "component_id": "628630160",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1548",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_CASCADE_FIRST_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 85,
+          "signal_binding": "IBR3_CAS_FIRST_S",
+          "fortran_line": 3607
+        }
+      ]
+    },
+    {
+      "xml_order": 177,
+      "name": "IBR3_TRIAL_CASCADE_SOURCE_AVAILABLE",
+      "component_id": "1137895653",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1494",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_CASCADE_SOURCE_AVAILABLE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 87,
+          "signal_binding": "IBR3_CAS_AVAIL",
+          "fortran_line": 3615
+        }
+      ]
+    },
+    {
+      "xml_order": 178,
+      "name": "IBR3_TRIAL_CASCADE_EVENT_BRK_OPEN",
+      "component_id": "1649394846",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1440",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_CASCADE_EVENT_BRK_OPEN",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 89,
+          "signal_binding": "IBR3_CAS_BRK_OPEN",
+          "fortran_line": 3623
+        }
+      ]
+    },
+    {
+      "xml_order": 179,
+      "name": "IBR3_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+      "component_id": "704454136",
+      "definition": "master:pgb",
+      "x": "4374",
+      "y": "1386",
+      "xml_parameters": {
+        "Name": "IBR3_TRIAL_CASCADE_EVENT_CAUSE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "5.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 91,
+          "signal_binding": "IBR3_CAS_CAUSE",
+          "fortran_line": 3631
+        }
+      ]
+    },
+    {
+      "xml_order": 180,
+      "name": "CASCADE3_MONITOR_FIRST_EVENT_TIME_S",
+      "component_id": "1118719820",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1332",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_FIRST_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 93,
+          "signal_binding": "C3_FIRST_TIME_S",
+          "fortran_line": 3639
+        }
+      ]
+    },
+    {
+      "xml_order": 181,
+      "name": "CASCADE3_MONITOR_FIRST_EVENT_SOURCE_CODE",
+      "component_id": "958692305",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1386",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_FIRST_EVENT_SOURCE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "4.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 90,
+          "signal_binding": "C3_FIRST_SRC_CODE",
+          "fortran_line": 3627
+        }
+      ]
+    },
+    {
+      "xml_order": 182,
+      "name": "CASCADE3_MONITOR_CAUSE_CODE_DFIG1",
+      "component_id": "387683866",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1440",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_CAUSE_CODE_DFIG1",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 88,
+          "signal_binding": "C3_CAUSE_DFIG1",
+          "fortran_line": 3619
+        }
+      ]
+    },
+    {
+      "xml_order": 183,
+      "name": "CASCADE3_MONITOR_CAUSE_CODE_IBR2_TRIAL",
+      "component_id": "965748339",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1494",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_CAUSE_CODE_IBR2_TRIAL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "4.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 86,
+          "signal_binding": "C3_CAUSE_IBR2",
+          "fortran_line": 3611
+        }
+      ]
+    },
+    {
+      "xml_order": 184,
+      "name": "CASCADE3_MONITOR_ANY_TRIP",
+      "component_id": "252560986",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1116",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_ANY_TRIP",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 102,
+          "signal_binding": "C3_ANY_TRIP",
+          "fortran_line": 3688
+        }
+      ]
+    },
+    {
+      "xml_order": 185,
+      "name": "CASCADE3_MONITOR_ANY_BRK_OPEN",
+      "component_id": "1668540437",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1170",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_ANY_BRK_OPEN",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 100,
+          "signal_binding": "C3_ANY_BRK_OPEN",
+          "fortran_line": 3680
+        }
+      ]
+    },
+    {
+      "xml_order": 186,
+      "name": "CASCADE3_MONITOR_AVAILABLE_SOURCE_COUNT",
+      "component_id": "1549846141",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1224",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_AVAILABLE_SOURCE_COUNT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 98,
+          "signal_binding": "C3_AVAIL_COUNT",
+          "fortran_line": 3672
+        }
+      ]
+    },
+    {
+      "xml_order": 187,
+      "name": "CASCADE3_MONITOR_EVENTED_SOURCE_COUNT",
+      "component_id": "1593702461",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1278",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_EVENTED_SOURCE_COUNT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 96,
+          "signal_binding": "C3_EVENTED_COUNT",
+          "fortran_line": 3664
+        }
+      ]
+    },
+    {
+      "xml_order": 188,
+      "name": "CASCADE3_MONITOR_CAUSE_CODE_IBR3_TRIAL",
+      "component_id": "357971772",
+      "definition": "master:pgb",
+      "x": "4824",
+      "y": "1548",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_CAUSE_CODE_IBR3_TRIAL",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "5.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 82,
+          "signal_binding": "C3_CAUSE_IBR3",
+          "fortran_line": 3595
+        }
+      ]
+    },
+    {
+      "xml_order": 189,
+      "name": "CASCADE3_MONITOR_TIMED_EVENT_SOURCE_COUNT",
+      "component_id": "678065703",
+      "definition": "master:pgb",
+      "x": "4482",
+      "y": "1728",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_TIMED_EVENT_SOURCE_COUNT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "3.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 78,
+          "signal_binding": "CASCADE3_CHR_TIMED_COUNT",
+          "fortran_line": 3575
+        }
+      ]
+    },
+    {
+      "xml_order": 190,
+      "name": "CASCADE3_MONITOR_SECOND_EVENT_TIME_S",
+      "component_id": "694779509",
+      "definition": "master:pgb",
+      "x": "4500",
+      "y": "1782",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_SECOND_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 76,
+          "signal_binding": "CASCADE3_CHR_SECOND_TIME_S",
+          "fortran_line": 3556
+        }
+      ]
+    },
+    {
+      "xml_order": 191,
+      "name": "CASCADE3_MONITOR_THIRD_EVENT_TIME_S",
+      "component_id": "996919888",
+      "definition": "master:pgb",
+      "x": "4500",
+      "y": "1836",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_THIRD_EVENT_TIME_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 75,
+          "signal_binding": "CASCADE3_CHR_THIRD_TIME_S",
+          "fortran_line": 3552
+        }
+      ]
+    },
+    {
+      "xml_order": 192,
+      "name": "CASCADE3_MONITOR_FIRST_TO_SECOND_GAP_S",
+      "component_id": "705384293",
+      "definition": "master:pgb",
+      "x": "4518",
+      "y": "1908",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_FIRST_TO_SECOND_GAP_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 74,
+          "signal_binding": "CASCADE3_CHR_GAP_12_S",
+          "fortran_line": 3548
+        }
+      ]
+    },
+    {
+      "xml_order": 193,
+      "name": "CASCADE3_MONITOR_SECOND_TO_THIRD_GAP_S",
+      "component_id": "171176579",
+      "definition": "master:pgb",
+      "x": "4518",
+      "y": "1962",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_SECOND_TO_THIRD_GAP_S",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "s",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "10.2",
+        "Min": "-1.2"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 72,
+          "signal_binding": "CASCADE3_CHR_GAP_23_S",
+          "fortran_line": 3540
+        }
+      ]
+    },
+    {
+      "xml_order": 194,
+      "name": "CASCADE3_MONITOR_CHRONOLOGY_FIRST_SOURCE_CODE",
+      "component_id": "1291362722",
+      "definition": "master:pgb",
+      "x": "4536",
+      "y": "2016",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_CHRONOLOGY_FIRST_SOURCE_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "4.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 70,
+          "signal_binding": "CASCADE3_CHR_FIRST_SRC_CODE",
+          "fortran_line": 3517
+        }
+      ]
+    },
+    {
+      "xml_order": 195,
+      "name": "CASCADE3_MONITOR_EVENT_ORDER_CLASS_CODE",
+      "component_id": "743389278",
+      "definition": "master:pgb",
+      "x": "4554",
+      "y": "2070",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_EVENT_ORDER_CLASS_CODE",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "6.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 69,
+          "signal_binding": "CASCADE3_CHR_ORDER_CLASS",
+          "fortran_line": 3513
+        }
+      ]
+    },
+    {
+      "xml_order": 196,
+      "name": "CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT",
+      "component_id": "949620494",
+      "definition": "master:pgb",
+      "x": "4554",
+      "y": "2124",
+      "xml_parameters": {
+        "Name": "CASCADE3_MONITOR_CHRONOLOGY_CONSISTENT",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "1",
+        "Pol": "0",
+        "Max": "1.2",
+        "Min": "0"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 66,
+          "signal_binding": "CASCADE3_CHR_CONSISTENT",
+          "fortran_line": 3501
+        }
+      ]
+    },
+    {
+      "xml_order": 197,
+      "name": "CASCADE3_ELEC_DFIG_V",
+      "component_id": "341215590",
+      "definition": "master:pgb",
+      "x": "5292",
+      "y": "4122",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_DFIG_V",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663318"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 17,
+          "signal_binding": "VIBR1_2",
+          "fortran_line": 5313
+        }
+      ]
+    },
+    {
+      "xml_order": 198,
+      "name": "CASCADE3_ELEC_DFIG_P",
+      "component_id": "259576720",
+      "definition": "master:pgb",
+      "x": "5508",
+      "y": "4122",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_DFIG_P",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663320"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 19,
+          "signal_binding": "PIBR1_2",
+          "fortran_line": 5325
+        }
+      ]
+    },
+    {
+      "xml_order": 199,
+      "name": "CASCADE3_ELEC_DFIG_Q",
+      "component_id": "1673326269",
+      "definition": "master:pgb",
+      "x": "5688",
+      "y": "4122",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_DFIG_Q",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663322"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 22,
+          "signal_binding": "QIBR1_2",
+          "fortran_line": 5337
+        }
+      ]
+    },
+    {
+      "xml_order": 200,
+      "name": "CASCADE3_ELEC_IBR2_V",
+      "component_id": "135761766",
+      "definition": "master:pgb",
+      "x": "5166",
+      "y": "4122",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_IBR2_V",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663319"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 16,
+          "signal_binding": "VIBR2",
+          "fortran_line": 5309
+        }
+      ]
+    },
+    {
+      "xml_order": 201,
+      "name": "CASCADE3_ELEC_IBR2_P",
+      "component_id": "1901789474",
+      "definition": "master:pgb",
+      "x": "5040",
+      "y": "4122",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_IBR2_P",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663321"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 15,
+          "signal_binding": "PIBR2",
+          "fortran_line": 5305
+        }
+      ]
+    },
+    {
+      "xml_order": 202,
+      "name": "CASCADE3_ELEC_IBR2_Q",
+      "component_id": "17446706",
+      "definition": "master:pgb",
+      "x": "5058",
+      "y": "3996",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_IBR2_Q",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663323"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 7,
+          "signal_binding": "QIBR2",
+          "fortran_line": 5269
+        }
+      ]
+    },
+    {
+      "xml_order": 203,
+      "name": "CASCADE3_ELEC_IBR3_V",
+      "component_id": "1324708704",
+      "definition": "master:pgb",
+      "x": "5310",
+      "y": "3996",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_IBR3_V",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663332"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 8,
+          "signal_binding": "VIBR3",
+          "fortran_line": 5273
+        }
+      ]
+    },
+    {
+      "xml_order": 204,
+      "name": "CASCADE3_ELEC_IBR3_P",
+      "component_id": "1936644910",
+      "definition": "master:pgb",
+      "x": "5544",
+      "y": "3978",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_IBR3_P",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663331"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 9,
+          "signal_binding": "PIBR3",
+          "fortran_line": 5277
+        }
+      ]
+    },
+    {
+      "xml_order": 205,
+      "name": "CASCADE3_ELEC_IBR3_Q",
+      "component_id": "1021145018",
+      "definition": "master:pgb",
+      "x": "5760",
+      "y": "3978",
+      "xml_parameters": {
+        "Name": "CASCADE3_ELEC_IBR3_Q",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663330"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "P3.f",
+          "pgb_offset": 11,
+          "signal_binding": "QIBR3",
+          "fortran_line": 5285
+        }
+      ]
+    },
+    {
+      "xml_order": 206,
+      "name": "Ipcmd",
+      "component_id": "1562377855",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "306",
+      "xml_parameters": {
+        "Name": "Ipcmd",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663593"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 2,
+          "signal_binding": "Ipcmd",
+          "fortran_line": 196
+        }
+      ]
+    },
+    {
+      "xml_order": 207,
+      "name": "Ip_LVPL",
+      "component_id": "1862100554",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "342",
+      "xml_parameters": {
+        "Name": "Ip_LVPL",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663598"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ip_LVPL",
+          "fortran_line": 339
+        }
+      ]
+    },
+    {
+      "xml_order": 208,
+      "name": "Ip_cmd",
+      "component_id": "1537584531",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "378",
+      "xml_parameters": {
+        "Name": "Ip_cmd",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663597"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 6,
+          "signal_binding": "Ip_cmd",
+          "fortran_line": 335
+        }
+      ]
+    },
+    {
+      "xml_order": 209,
+      "name": "Iqcmd",
+      "component_id": "349761298",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "54",
+      "xml_parameters": {
+        "Name": "Iqcmd",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663592"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 1,
+          "signal_binding": "Iqcmd",
+          "fortran_line": 172
+        }
+      ]
+    },
+    {
+      "xml_order": 210,
+      "name": "Iq",
+      "component_id": "1818661700",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "90",
+      "xml_parameters": {
+        "Name": "Iq",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663599"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 13,
+          "signal_binding": "Iq",
+          "fortran_line": 865
+        },
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 13,
+          "signal_binding": "Iqo_qflag",
+          "fortran_line": 1102
+        },
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 8,
+          "signal_binding": "Iq",
+          "fortran_line": 343
+        }
+      ]
+    },
+    {
+      "xml_order": 211,
+      "name": "Vflt",
+      "component_id": "1370766571",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "486",
+      "xml_parameters": {
+        "Name": "Vflt",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663596"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 5,
+          "signal_binding": "Vflt",
+          "fortran_line": 331
+        }
+      ]
+    },
+    {
+      "xml_order": 212,
+      "name": "Vt_scaled",
+      "component_id": "153056021",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "522",
+      "xml_parameters": {
+        "Name": "Vt_scaled",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663595"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 4,
+          "signal_binding": "Vt_scaled",
+          "fortran_line": 327
+        }
+      ]
+    },
+    {
+      "xml_order": 213,
+      "name": "LVPL",
+      "component_id": "1099187009",
+      "definition": "master:pgb",
+      "x": "1332",
+      "y": "558",
+      "xml_parameters": {
+        "Name": "LVPL",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663594"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 3,
+          "signal_binding": "LVPL",
+          "fortran_line": 323
+        }
+      ]
+    },
+    {
+      "xml_order": 214,
+      "name": "PQflag",
+      "component_id": "580625651",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "180",
+      "xml_parameters": {
+        "Name": "PQflag",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663588"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 17,
+          "signal_binding": "PQflag",
+          "fortran_line": 1118
+        }
+      ]
+    },
+    {
+      "xml_order": 215,
+      "name": "Qflag",
+      "component_id": "1574836590",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "144",
+      "xml_parameters": {
+        "Name": "Qflag",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663589"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 18,
+          "signal_binding": "Qflag",
+          "fortran_line": 1122
+        }
+      ]
+    },
+    {
+      "xml_order": 216,
+      "name": "Vflag",
+      "component_id": "258007133",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "108",
+      "xml_parameters": {
+        "Name": "Vflag",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663590"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 19,
+          "signal_binding": "Vflag",
+          "fortran_line": 1126
+        }
+      ]
+    },
+    {
+      "xml_order": 217,
+      "name": "PF_Flag",
+      "component_id": "1766896535",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "72",
+      "xml_parameters": {
+        "Name": "PF_Flag",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663591"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 20,
+          "signal_binding": "PF_flag",
+          "fortran_line": 1130
+        }
+      ]
+    },
+    {
+      "xml_order": 218,
+      "name": "Pflag",
+      "component_id": "252601991",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "216",
+      "xml_parameters": {
+        "Name": "Pflag",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663587"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 16,
+          "signal_binding": "Pflag",
+          "fortran_line": 1114
+        }
+      ]
+    },
+    {
+      "xml_order": 219,
+      "name": "Freeze",
+      "component_id": "1226990372",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "288",
+      "xml_parameters": {
+        "Name": "Freeze",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663586"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 15,
+          "signal_binding": "REAL(Freeze)",
+          "fortran_line": 1110
+        }
+      ]
+    },
+    {
+      "xml_order": 220,
+      "name": "online",
+      "component_id": "1516760206",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "324",
+      "xml_parameters": {
+        "Name": "online",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663585"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 14,
+          "signal_binding": "REAL(online)",
+          "fortran_line": 1106
+        }
+      ]
+    },
+    {
+      "xml_order": 221,
+      "name": "Vt_filt",
+      "component_id": "1450500460",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "432",
+      "xml_parameters": {
+        "Name": "Vt_filt",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663572"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 1,
+          "signal_binding": "Vt_filt",
+          "fortran_line": 410
+        }
+      ]
+    },
+    {
+      "xml_order": 222,
+      "name": "Ivdl1",
+      "component_id": "1201874902",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "Ivdl1",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663582"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 11,
+          "signal_binding": "Ivdl1",
+          "fortran_line": 1094
+        }
+      ]
+    },
+    {
+      "xml_order": 223,
+      "name": "Ivdl2",
+      "component_id": "1817277221",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "504",
+      "xml_parameters": {
+        "Name": "Ivdl2",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663581"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 10,
+          "signal_binding": "Ivdl2",
+          "fortran_line": 1090
+        }
+      ]
+    },
+    {
+      "xml_order": 224,
+      "name": "Volt_dip",
+      "component_id": "180432592",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "360",
+      "xml_parameters": {
+        "Name": "Volt_dip",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663583"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 12,
+          "signal_binding": "Volt_dip",
+          "fortran_line": 1098
+        }
+      ]
+    },
+    {
+      "xml_order": 225,
+      "name": "State2",
+      "component_id": "1363305825",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "576",
+      "xml_parameters": {
+        "Name": "State2",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663580"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 9,
+          "signal_binding": "State2",
+          "fortran_line": 1086
+        }
+      ]
+    },
+    {
+      "xml_order": 226,
+      "name": "Iqinj",
+      "component_id": "638858606",
+      "definition": "master:pgb",
+      "x": "3456",
+      "y": "612",
+      "xml_parameters": {
+        "Name": "Iqinj",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663579"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 8,
+          "signal_binding": "Iqinj",
+          "fortran_line": 1082
+        }
+      ]
+    },
+    {
+      "xml_order": 227,
+      "name": "11",
+      "component_id": "27490869",
+      "definition": "master:pgb",
+      "x": "2070",
+      "y": "954",
+      "xml_parameters": {
+        "Name": "11",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663573"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 2,
+          "signal_binding": "RT_36",
+          "fortran_line": 504
+        }
+      ]
+    },
+    {
+      "xml_order": 228,
+      "name": "33",
+      "component_id": "616978169",
+      "definition": "master:pgb",
+      "x": "2520",
+      "y": "954",
+      "xml_parameters": {
+        "Name": "33",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663578"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ipcmd",
+          "fortran_line": 1078
+        }
+      ]
+    },
+    {
+      "xml_order": 229,
+      "name": "22",
+      "component_id": "1360873131",
+      "definition": "master:pgb",
+      "x": "2268",
+      "y": "1062",
+      "xml_parameters": {
+        "Name": "22",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663574"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 3,
+          "signal_binding": "Vt_filt",
+          "fortran_line": 546
+        }
+      ]
+    },
+    {
+      "xml_order": 230,
+      "name": "PQVdipflag",
+      "component_id": "1505823658",
+      "definition": "master:pgb",
+      "x": "1224",
+      "y": "1296",
+      "xml_parameters": {
+        "Name": "PQVdipflag",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663577"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 6,
+          "signal_binding": "REAL(PQVdipflag)",
+          "fortran_line": 1064
+        }
+      ]
+    },
+    {
+      "xml_order": 231,
+      "name": "RT_9",
+      "component_id": "1600116776",
+      "definition": "master:pgb",
+      "x": "2466",
+      "y": "1332",
+      "xml_parameters": {
+        "Name": "RT_9",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663575"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 4,
+          "signal_binding": "RT_9",
+          "fortran_line": 1056
+        }
+      ]
+    },
+    {
+      "xml_order": 232,
+      "name": "RT_8",
+      "component_id": "338829223",
+      "definition": "master:pgb",
+      "x": "2286",
+      "y": "1314",
+      "xml_parameters": {
+        "Name": "RT_8",
+        "Group": "",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "0",
+        "Max": "1.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663576"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 5,
+          "signal_binding": "RT_8",
+          "fortran_line": 1060
+        }
+      ]
+    },
+    {
+      "xml_order": 233,
+      "name": "Iq",
+      "component_id": "1134905579",
+      "definition": "master:pgb",
+      "x": "2214",
+      "y": "468",
+      "xml_parameters": {
+        "Name": "Iq",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663584"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 13,
+          "signal_binding": "Iq",
+          "fortran_line": 865
+        },
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 13,
+          "signal_binding": "Iqo_qflag",
+          "fortran_line": 1102
+        },
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 8,
+          "signal_binding": "Iq",
+          "fortran_line": 343
+        }
+      ]
+    },
+    {
+      "xml_order": 234,
+      "name": "Qord",
+      "component_id": "1041376540",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "270",
+      "xml_parameters": {
+        "Name": "Qord",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663552"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 2,
+          "signal_binding": "Qord",
+          "fortran_line": 370
+        }
+      ]
+    },
+    {
+      "xml_order": 235,
+      "name": "Pord",
+      "component_id": "1295323910",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "234",
+      "xml_parameters": {
+        "Name": "Pord",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663551"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 1,
+          "signal_binding": "Pord",
+          "fortran_line": 363
+        }
+      ]
+    },
+    {
+      "xml_order": 236,
+      "name": "PLL_f",
+      "component_id": "1774947919",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "162",
+      "xml_parameters": {
+        "Name": "PLL_f",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663566"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 16,
+          "signal_binding": "RT_27",
+          "fortran_line": 901
+        }
+      ]
+    },
+    {
+      "xml_order": 237,
+      "name": "Iq",
+      "component_id": "1929161100",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "342",
+      "xml_parameters": {
+        "Name": "Iq",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663563"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 13,
+          "signal_binding": "Iq",
+          "fortran_line": 865
+        },
+        {
+          "generated_file": "REEC_A_1_2_1_1.f",
+          "pgb_offset": 13,
+          "signal_binding": "Iqo_qflag",
+          "fortran_line": 1102
+        },
+        {
+          "generated_file": "REGC_A_1_2_1_1.f",
+          "pgb_offset": 8,
+          "signal_binding": "Iq",
+          "fortran_line": 343
+        }
+      ]
+    },
+    {
+      "xml_order": 238,
+      "name": "Id",
+      "component_id": "1963689431",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "306",
+      "xml_parameters": {
+        "Name": "Id",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663564"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 14,
+          "signal_binding": "Id",
+          "fortran_line": 878
+        }
+      ]
+    },
+    {
+      "xml_order": 239,
+      "name": "Theta_P",
+      "component_id": "2061020047",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "198",
+      "xml_parameters": {
+        "Name": "Theta_P",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663565"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 15,
+          "signal_binding": "Theta_P",
+          "fortran_line": 882
+        }
+      ]
+    },
+    {
+      "xml_order": 240,
+      "name": "Vrms",
+      "component_id": "1752611454",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "54",
+      "xml_parameters": {
+        "Name": "Vrms",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663569"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 19,
+          "signal_binding": "Vrms",
+          "fortran_line": 1531
+        }
+      ]
+    },
+    {
+      "xml_order": 241,
+      "name": "IPord",
+      "component_id": "1943474528",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "378",
+      "xml_parameters": {
+        "Name": "IPord",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663562"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 12,
+          "signal_binding": "IPord",
+          "fortran_line": 861
+        }
+      ]
+    },
+    {
+      "xml_order": 242,
+      "name": "IQord",
+      "component_id": "1478475001",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "414",
+      "xml_parameters": {
+        "Name": "IQord",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663561"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 11,
+          "signal_binding": "IQord",
+          "fortran_line": 857
+        }
+      ]
+    },
+    {
+      "xml_order": 243,
+      "name": "Vd",
+      "component_id": "214056558",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "450",
+      "xml_parameters": {
+        "Name": "Vd",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663560"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 10,
+          "signal_binding": "Vd",
+          "fortran_line": 853
+        }
+      ]
+    },
+    {
+      "xml_order": 244,
+      "name": "Vq",
+      "component_id": "293385472",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "486",
+      "xml_parameters": {
+        "Name": "Vq",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663559"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 9,
+          "signal_binding": "Vq",
+          "fortran_line": 849
+        }
+      ]
+    },
+    {
+      "xml_order": 245,
+      "name": "Pfilter",
+      "component_id": "2043757830",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "522",
+      "xml_parameters": {
+        "Name": "Pfilter",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663553"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 3,
+          "signal_binding": "RT_45",
+          "fortran_line": 1414
+        }
+      ]
+    },
+    {
+      "xml_order": 246,
+      "name": "Qfilter",
+      "component_id": "12140810",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "558",
+      "xml_parameters": {
+        "Name": "Qfilter",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663554"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 4,
+          "signal_binding": "RT_46",
+          "fortran_line": 1425
+        }
+      ]
+    },
+    {
+      "xml_order": 247,
+      "name": "Ve",
+      "component_id": "595025690",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "18",
+      "xml_parameters": {
+        "Name": "Ve",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663570"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 20,
+          "signal_binding": "Ve",
+          "fortran_line": 1535
+        }
+      ]
+    },
+    {
+      "xml_order": 248,
+      "name": "Pe",
+      "component_id": "1496928028",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "90",
+      "xml_parameters": {
+        "Name": "Pe",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663568"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 18,
+          "signal_binding": "RT_50",
+          "fortran_line": 1527
+        }
+      ]
+    },
+    {
+      "xml_order": 249,
+      "name": "P",
+      "component_id": "775591632",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "126",
+      "xml_parameters": {
+        "Name": "P",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663567"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 17,
+          "signal_binding": "RT_51",
+          "fortran_line": 1523
+        }
+      ]
+    },
+    {
+      "xml_order": 250,
+      "name": "Iaa",
+      "component_id": "1168372200",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "666",
+      "xml_parameters": {
+        "Name": "Iaa",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663558"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 8,
+          "signal_binding": "Iaa",
+          "fortran_line": 811
+        }
+      ]
+    },
+    {
+      "xml_order": 251,
+      "name": "Ref_a",
+      "component_id": "724279129",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "702",
+      "xml_parameters": {
+        "Name": "Ref_a",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663557"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 7,
+          "signal_binding": "Ref_a",
+          "fortran_line": 807
+        }
+      ]
+    },
+    {
+      "xml_order": 252,
+      "name": "Idc_out",
+      "component_id": "99830841",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "594",
+      "xml_parameters": {
+        "Name": "Idc_out",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "1",
+        "enab": "1",
+        "gaddress": "100663555"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 5,
+          "signal_binding": "Idc_out",
+          "fortran_line": 1436
+        }
+      ]
+    },
+    {
+      "xml_order": 253,
+      "name": "Edc",
+      "component_id": "807034221",
+      "definition": "master:pgb",
+      "x": "1872",
+      "y": "630",
+      "xml_parameters": {
+        "Name": "Edc",
+        "Group": "",
+        "Display": "0",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Min": "-2.0",
+        "Max": "2.0",
+        "UseSignalName": "0",
+        "enab": "1",
+        "gaddress": "100663556"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 6,
+          "signal_binding": "RT_52",
+          "fortran_line": 1444
+        }
+      ]
+    },
+    {
+      "xml_order": 254,
+      "name": "Q0",
+      "component_id": "1703981874",
+      "definition": "master:pgb",
+      "x": "1782",
+      "y": "18",
+      "xml_parameters": {
+        "Name": "Q0",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663571"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "IBR_AVM_2_1_1.f",
+          "pgb_offset": 21,
+          "signal_binding": "Q0",
+          "fortran_line": 1539
+        }
+      ]
+    },
+    {
+      "xml_order": 255,
+      "name": "Qref_REEC",
+      "component_id": "1853265881",
+      "definition": "master:pgb",
+      "x": "1854",
+      "y": "180",
+      "xml_parameters": {
+        "Name": "Qref_REEC",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663501"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 8,
+          "signal_binding": "Qref_REEC",
+          "fortran_line": 591
+        }
+      ]
+    },
+    {
+      "xml_order": 256,
+      "name": "Pref_REEC",
+      "component_id": "376516141",
+      "definition": "master:pgb",
+      "x": "1944",
+      "y": "180",
+      "xml_parameters": {
+        "Name": "Pref_REEC",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663500"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 7,
+          "signal_binding": "Pref_REEC",
+          "fortran_line": 587
+        }
+      ]
+    },
+    {
+      "xml_order": 257,
+      "name": "1",
+      "component_id": "361898034",
+      "definition": "master:pgb",
+      "x": "1188",
+      "y": "306",
+      "xml_parameters": {
+        "Name": "1",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663499"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 6,
+          "signal_binding": "RT_7",
+          "fortran_line": 583
+        }
+      ]
+    },
+    {
+      "xml_order": 258,
+      "name": "2",
+      "component_id": "1392675272",
+      "definition": "master:pgb",
+      "x": "1296",
+      "y": "306",
+      "xml_parameters": {
+        "Name": "2",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663498"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 5,
+          "signal_binding": "RT_10",
+          "fortran_line": 579
+        }
+      ]
+    },
+    {
+      "xml_order": 259,
+      "name": "3",
+      "component_id": "1561958760",
+      "definition": "master:pgb",
+      "x": "1530",
+      "y": "306",
+      "xml_parameters": {
+        "Name": "3",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663497"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 4,
+          "signal_binding": "RT_23",
+          "fortran_line": 575
+        }
+      ]
+    },
+    {
+      "xml_order": 260,
+      "name": "4",
+      "component_id": "1192539155",
+      "definition": "master:pgb",
+      "x": "1728",
+      "y": "306",
+      "xml_parameters": {
+        "Name": "4",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663496"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 3,
+          "signal_binding": "RT_11",
+          "fortran_line": 571
+        }
+      ]
+    },
+    {
+      "xml_order": 261,
+      "name": "P_err",
+      "component_id": "696959547",
+      "definition": "master:pgb",
+      "x": "972",
+      "y": "720",
+      "xml_parameters": {
+        "Name": "P_err",
+        "Group": "",
+        "UseSignalName": "1",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663495"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 2,
+          "signal_binding": "P_err",
+          "fortran_line": 567
+        }
+      ]
+    },
+    {
+      "xml_order": 262,
+      "name": "Droop",
+      "component_id": "1129853286",
+      "definition": "master:pgb",
+      "x": "936",
+      "y": "864",
+      "xml_parameters": {
+        "Name": "Droop",
+        "Group": "",
+        "UseSignalName": "0",
+        "enab": "1",
+        "Display": "1",
+        "Scale": "1.0",
+        "Units": "",
+        "mrun": "0",
+        "Pol": "0",
+        "Max": "2.0",
+        "Min": "-2.0",
+        "gaddress": "100663494"
+      },
+      "fortran_mappings": [
+        {
+          "generated_file": "REPC_A_1.f",
+          "pgb_offset": 1,
+          "signal_binding": "dP_dF",
+          "fortran_line": 563
+        }
+      ]
+    }
+  ]
+}

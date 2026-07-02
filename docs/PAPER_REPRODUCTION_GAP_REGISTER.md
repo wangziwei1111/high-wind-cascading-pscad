@@ -16,3 +16,10 @@
 当前三来源受控时序与 V/P/Q Run 属于基础设施验证和记录性动态证据，不构成
 论文的自然连锁故障复现。后续顺序必须由原文的故障—保护—网络重分布—后续
 保护链条决定。
+
+## Stage-two preflight addendum
+
+G03 remains open. Four genuine TLines were traced, but no eligible branch had
+an existing P/Q/I transfer-signal path. `PL16` was rejected because it measures
+load branch `E_16_0_1`, not transmission line `E_16_19_1`, and has no Q/I
+outputs. No model capability or reproduction-fidelity level changed.

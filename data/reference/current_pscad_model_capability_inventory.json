@@ -31,10 +31,10 @@
       "component_name": "no audited line-channel set",
       "source_or_network_object": "branches",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
-      "xml_or_fortran_evidence": "262 Output Channels contain no audited comprehensive line P/Q/I/loading map",
-      "existing_dynamic_evidence": "docs/THREE_SOURCE_ELECTRICAL_OBSERVABILITY_STATIC_AUDIT.md",
+      "xml_or_fortran_evidence": "262 Output Channels contain no audited comprehensive line P/Q/I/loading map; four real TLine candidates were traced but expose no existing P/Q/I transfer signals",
+      "existing_dynamic_evidence": "data/reference/paper_branch_candidate_registry.json",
       "current_status": "not_found",
-      "claim_boundary": "Raw meters may exist; no traceable target-line loading dataset is available."
+      "claim_boundary": "Stage-two preflight ended in static fallback; no branch Output Channel was added."
     },
     {
       "capability_id": "CAP04",
