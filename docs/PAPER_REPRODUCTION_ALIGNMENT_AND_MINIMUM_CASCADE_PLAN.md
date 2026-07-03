@@ -220,3 +220,22 @@ protection`. The remaining boundary is unchanged: the `PAPER_OVL1` limit is a
 paper-calibrated equivalent capacity, not a recovered PNNL thermal rating, and
 the 50 us result cannot be cited as proof of 5 us numerical equivalence or a
 full multi-stage natural cascade.
+
+## Stage 12 two-line paper-order result
+
+Stage 12 extends the Stage-11 first-line result with a second real breaker
+opening. The second line was selected offline from the prior 20 s runtime:
+`E_26_29_1` uniquely passed the no-pre-first-trip-pickup and sustained 5 s
+post-first-trip window gates. Its frozen paper-calibrated effective capacity is
+`18.262873134069956`, with threshold multiplier `1.1` and delay `5.0 s`.
+
+The single 20 s / 50 us runtime records the desired event order:
+fault -> DFIG physical trip at 2.44 s -> PAPER_OVL1 actual open at 7.53 s ->
+PAPER_OVL2 actual open at 12.60 s. PAPER_CHAIN chronology is not an in-model
+component in this result; it is reconstructed offline from the runtime
+channels under an explicit user-approved waiver.
+
+The safe project description is now `trial-only paper-like two-line mechanism
+reproduction under equivalent capacities`. Strict paper reproduction remains
+unclaimed because line capacities are calibrated equivalents, not recovered
+PNNL continuous thermal limits or real protection settings.

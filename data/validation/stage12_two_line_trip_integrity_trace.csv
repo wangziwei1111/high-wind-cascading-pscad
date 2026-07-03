@@ -1,0 +1,4 @@
+check,status,value
+runtime_20s,pass,20.0
+channels_readable,pass,True
+result_class,pass,stage12_two_line_paper_order_pass

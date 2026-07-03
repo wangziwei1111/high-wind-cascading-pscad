@@ -1,0 +1,25 @@
+{
+  "manifest_name": "stage12_gui_change_manifest",
+  "generated_at_local": "2026-07-03T21:27:40+08:00",
+  "gui_stage_authorized": true,
+  "selected_tline_id": "E_26_29_1",
+  "required_new_objects": [
+    "PAPER_OVL2_RELAY",
+    "BRK_PAPER_OVL2_TRIAL",
+    "PAPER_CHAIN__CHRONOLOGY_MONITOR_WAIVED_OFFLINE_PARSER"
+  ],
+  "must_copy_semantics_from": "PAPER_OVL1 relay and breaker pattern",
+  "forbidden_inputs_to_paper_ovl2": [
+    "fault",
+    "DFIG event",
+    "PAPER_OVL1 trip request",
+    "absolute time",
+    "one-shot"
+  ],
+  "expected_output_channel_count_minimum_after_build": 650,
+  "paper_chain_model_monitor_waiver": {
+    "status": "waived_by_user",
+    "replacement": "offline chronology parser after the single Run",
+    "reason": "Chronology is observational only and not needed for breaker control."
+  }
+}

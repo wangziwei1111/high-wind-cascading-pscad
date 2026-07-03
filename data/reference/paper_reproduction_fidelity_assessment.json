@@ -52,5 +52,13 @@
   "stage11_evidence": "data/validation/stage11_20s_50us_final_audit.json",
   "stage11_boundary": "50 us single-run result with trial-only paper-calibrated equivalent E_28_29_1 protection; not proof of recovered PNNL thermal rating, 5 us equivalence, or complete multi-trip natural cascade.",
   "strict_reproduction_status_after_stage11": "not_achieved",
-  "current_safe_name_after_stage11": "partial paper-like mechanism reproduction under trial-only equivalent protection"
+  "current_safe_name_after_stage11": "partial paper-like mechanism reproduction under trial-only equivalent protection",
+  "stage12_20s_50us_status": "stage12_two_line_paper_order_pass",
+  "stage12_selected_second_line": "E_26_29_1",
+  "stage12_second_line_capacity_status": "paper_calibrated_effective_capacity_not_pnnl_thermal_rating",
+  "stage12_event_order_status": "fault_to_dfig_to_first_line_to_second_line_observed",
+  "stage12_paper_chain_monitor_status": "waived_model_monitor_offline_chronology_parser_used",
+  "stage12_evidence": "data/validation/stage12_two_line_trip_final_audit.json",
+  "strict_reproduction_status_after_stage12": "not_achieved",
+  "current_safe_name_after_stage12": "trial-only paper-like two-line mechanism reproduction under equivalent capacities"
 }

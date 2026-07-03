@@ -1,0 +1,93 @@
+{
+  "audit_name": "stage12_second_trip_candidate_final_audit",
+  "generated_at_local": "2026-07-03T21:27:40+08:00",
+  "stage12_candidate_status": "pass",
+  "data_source": {
+    "stage11_commit": "0a53d1217ffde1f1ba101ef658d0c3c0bab7b17a",
+    "stage11_runtime_manifest": "data/derived/stage11_20s_50us_runtime_manifest.json",
+    "runtime_time_end_s": 20.0,
+    "runtime_plot_step_s": 0.01,
+    "dfig_actual_breaker_open_s": 2.44,
+    "first_line_actual_breaker_open_s": 7.53,
+    "excluded_first_line": "E_28_29_1"
+  },
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+  "main_sha_matches_expected": true,
+  "candidate_count": 30,
+  "eligible_count": 1,
+  "top_three_screened_lines": [
+    {
+      "tline_id": "E_26_29_1",
+      "eligible": true,
+      "rejection_reason": "",
+      "pre_first_trip_max_s": 18.663806161094747,
+      "post_first_trip_5s_floor_s": 21.51451473385916,
+      "threshold_t": 20.089160447476953,
+      "effective_capacity_c_eff": 18.262873134069956,
+      "selection_margin": 2.850708572764411,
+      "expected_pickup_time_s": 9.91,
+      "expected_second_open_time_s": 14.91,
+      "selected_5s_window_start_s": 9.95,
+      "selected_5s_window_end_s": 14.95,
+      "sustained_sample_count": 501,
+      "score": 345.8085551640641,
+      "candidate_status": "eligible"
+    },
+    {
+      "tline_id": "E_22_23_1",
+      "eligible": false,
+      "rejection_reason": "post_5s_floor_not_above_pre_first_trip_max",
+      "pre_first_trip_max_s": 1.3992968713548721,
+      "post_first_trip_5s_floor_s": 0.4646691973452204,
+      "threshold_t": null,
+      "effective_capacity_c_eff": null,
+      "selection_margin": -0.9346276740096517,
+      "expected_pickup_time_s": null,
+      "expected_second_open_time_s": null,
+      "selected_5s_window_start_s": 8.76,
+      "selected_5s_window_end_s": 13.76,
+      "sustained_sample_count": 501,
+      "score": -1.0,
+      "candidate_status": "rejected"
+    },
+    {
+      "tline_id": "E_4_14_1",
+      "eligible": false,
+      "rejection_reason": "post_5s_floor_not_above_pre_first_trip_max",
+      "pre_first_trip_max_s": 4.137761912038534,
+      "post_first_trip_5s_floor_s": 2.126421601205793,
+      "threshold_t": null,
+      "effective_capacity_c_eff": null,
+      "selection_margin": -2.011340310832741,
+      "expected_pickup_time_s": null,
+      "expected_second_open_time_s": null,
+      "selected_5s_window_start_s": 9.9,
+      "selected_5s_window_end_s": 14.9,
+      "sustained_sample_count": 501,
+      "score": -1.0,
+      "candidate_status": "rejected"
+    }
+  ],
+  "top_three_eligible_candidates": [
+    {
+      "tline_id": "E_26_29_1",
+      "eligible": true,
+      "rejection_reason": "",
+      "pre_first_trip_max_s": 18.663806161094747,
+      "post_first_trip_5s_floor_s": 21.51451473385916,
+      "threshold_t": 20.089160447476953,
+      "effective_capacity_c_eff": 18.262873134069956,
+      "selection_margin": 2.850708572764411,
+      "expected_pickup_time_s": 9.91,
+      "expected_second_open_time_s": 14.91,
+      "selected_5s_window_start_s": 9.95,
+      "selected_5s_window_end_s": 14.95,
+      "sustained_sample_count": 501,
+      "score": 345.8085551640641,
+      "candidate_status": "eligible"
+    }
+  ],
+  "selected_tline_id": "E_26_29_1",
+  "claim_boundary": "Second-line capacity is paper-calibrated effective capacity from Stage-11 raw P/Q response. It is not a PNNL thermal rating or real protection setting."
+}

@@ -1,0 +1,59 @@
+{
+  "freeze_name": "stage12_second_trip_parameter_freeze",
+  "generated_at_local": "2026-07-03T21:27:40+08:00",
+  "selected_tline_id": "E_26_29_1",
+  "selected_tline_compiled_endpoints_before_change": [
+    {
+      "side": "A",
+      "compiled_bus": 17,
+      "phase_nodes": [
+        339,
+        340,
+        341
+      ]
+    },
+    {
+      "side": "B",
+      "compiled_bus": 1,
+      "phase_nodes": [
+        342,
+        343,
+        344
+      ]
+    }
+  ],
+  "paper_target_status": "paper_event_order_proxy",
+  "selection_reason": "Highest ranked eligible Stage-11 raw S response with no pre-first-trip pickup and a sustained 5 s post-first-trip window.",
+  "pre_first_trip_window": [
+    0.0,
+    7.53
+  ],
+  "post_first_trip_5s_window": [
+    9.95,
+    14.95
+  ],
+  "pre_first_trip_max_S": 18.663806161094747,
+  "post_first_trip_5s_floor_S": 21.51451473385916,
+  "threshold_T": 20.089160447476953,
+  "effective_capacity_C_eff": 18.262873134069956,
+  "threshold_multiplier": 1.1,
+  "definite_time_delay_s": 5.0,
+  "selection_margin": 2.850708572764411,
+  "expected_pickup_time_s": 9.91,
+  "expected_second_open_time_s": 14.91,
+  "first_trip_reference_time_s": 7.53,
+  "DFIG_reference_time_s": 2.44,
+  "solution_time_step_us": 50.0,
+  "plot_step_s": 0.01,
+  "run_duration_s": 20.0,
+  "forbidden_parameter_changes": [
+    "N29 fault parameters and timing",
+    "DFIG LVRT thresholds, delay, controls, BRK_DFIG, and event packet",
+    "PAPER_OVL1 relay, capacity, threshold, delay, breaker, and outputs",
+    "E_26_29_1 N29 endpoint repair",
+    "E_28_29_1 endpoint and PAPER_OVL1 series boundary",
+    "all TLine R/X/B and existing Output Channels",
+    "solution time step, plot step, and single-run target"
+  ],
+  "claim_boundary": "The frozen capacity is a paper-calibrated effective capacity inferred from Stage-11 raw relay input response; it is not a true thermal rating, real protection setting, or third-party PNNL rating."
+}

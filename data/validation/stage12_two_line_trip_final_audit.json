@@ -1,0 +1,21 @@
+{
+  "audit_name": "stage12_two_line_trip_final_audit",
+  "generated_at_local": "2026-07-03T22:22:09+08:00",
+  "execution_status": "pass",
+  "stage12_result_class": "stage12_two_line_paper_order_pass",
+  "event_times_s": {
+    "fault_start": 0.5,
+    "fault_clear": 2.5,
+    "dfig_actual_breaker_open": 2.44,
+    "dfig_event_valid": 2.44,
+    "dfig_source_availability_lost": 2.44,
+    "paper_ovl1_pickup": 2.53,
+    "paper_ovl1_timer_done": 7.53,
+    "paper_ovl1_actual_open": 7.53,
+    "paper_ovl2_pickup": 7.6,
+    "paper_ovl2_timer_done": 12.6,
+    "paper_ovl2_trip_request": 12.6,
+    "paper_ovl2_breaker_command": 12.6,
+    "paper_ovl2_actual_open": 12.6
+  }
+}

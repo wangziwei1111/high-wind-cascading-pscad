@@ -138,3 +138,23 @@ first-trip mechanism. It does not recover PNNL continuous thermal limits, does
 not validate a real protection setting, does not demonstrate a second cascade
 trip, and does not prove equivalence to a different 5 us numerical run.
 Strict reproduction remains `not_achieved`.
+
+## Stage 12 two-line paper-order validation
+
+Status: `stage12_two_line_paper_order_pass`. The second line was selected from
+Stage-11 raw dual-end P/Q responses, not manually forced. `E_26_29_1` was the
+only line satisfying the strict gates: no pickup before the first line open,
+a sustained post-first-trip 5 s raw-S window, and expected opening before
+15 s. The frozen paper-calibrated effective capacity is
+`18.262873134069956`.
+
+The single Stage-12 20 s / 50 us Run records DFIG open at 2.44 s,
+PAPER_OVL1 open at 7.53 s, PAPER_OVL2 pickup at 7.60 s, and PAPER_OVL2 actual
+open at 12.60 s. PAPER_CHAIN was intentionally not added to the model; the
+chronology is reconstructed offline from runtime channels because it is
+observational only and does not drive protection.
+
+This demonstrates a trial-only, paper-like two-line mechanism under
+paper-calibrated equivalent capacities. It still does not prove real PNNL
+thermal ratings, real protection settings, 5 us equivalence, full natural
+cascade reproduction, third trip, or protection coordination.
