@@ -194,3 +194,12 @@ Decision: `no_defensible_electrical_difference_found`. XML geometry alone sugges
 ## Stage 10C compiled network and initial-state audit
 
 Classification: `B_intended_PAPER_OVL1_closed_state_difference_quantified_but_not_proven_causal`. The only scoped compiled-network initialization candidate is PAPER breaker `RON=0.001 ohm`. Because the TLine input is `RXB p.u./m` with length `0.001 m`, RON equals about 60.0% of the line's reconstructed positive-sequence resistance and 5.54% of its |Z|, increasing |Z| by about 0.663%. Runtime E_28_29_1 P/I differs by about 51%-52%, but available evidence does not prove RON alone caused that meshed-network flow shift or the DFIG fault-voltage change. No model edit, Build, or Run is authorized.
+
+## Stage 10D compiled-endpoint repair
+
+`E_26_29_1` terminal B was found on compiled bus 19 rather than N29. An
+electrical `N29` Node Label restored it to bus 1, preserved the PAPER breaker
+as a series element, and restored the physical DFIG trip at 2.44 s in the
+single 3.0 s validation Run. From this stage onward, every breaker insertion,
+line-end move, or node-label edit must pass a generated-`P3.dta` TLine endpoint
+bus and three-phase connectivity check before a Run is authorized.
