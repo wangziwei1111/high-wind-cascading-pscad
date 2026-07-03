@@ -302,10 +302,10 @@
     },
     {
       "capability_id": "PAPER_CALIBRATED_EQUIVALENT_FIRST_TRIP",
-      "status": "stage8_pre_fault_false_trip",
-      "description": "Stage-8 runtime outputs are readable, but the relay/breaker chain is asserted before the fault while ABOVE_THRESHOLD remains zero.",
+      "status": "stage9_short_run_flow_driven_first_trip_pass",
+      "description": "Stage-9 9 s runtime shows healthy initialization and a 5 s flow-driven equivalent first trip on E_28_29_1.",
       "selected_line": "E_28_29_1",
-      "claim_boundary": "Stage 8 proves runtime Output Channel observability only. It does not prove flow-driven protection: the timer/latch/command chain is asserted at t=0 while ABOVE_THRESHOLD remains zero. The capacity is paper-calibrated equivalent capacity, not a PNNL continuous thermal rating or real protection setting."
+      "claim_boundary": "This Stage-9 result validates a trial-only, paper-calibrated equivalent first-trip chain. It does not establish PNNL continuous thermal capacity, real overload or protection settings/coordination, a second trip, natural cascading, or strict paper reproduction."
     }
   ],
   "trial_sha256_after_full_network_tline_measurement": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",

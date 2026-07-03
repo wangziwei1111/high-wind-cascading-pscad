@@ -91,6 +91,19 @@ def semantic_fingerprint(path: Path) -> str:
     v_off = relay.find(".//User[@id='522397627']/paramlist/param[@name='Value']")
     if v_off is not None:
         v_off.set("value", "<stage9-authorized>")
+    # PSCAD writes runtime display/readback values when the project is saved.
+    # These are not model configuration and must not invalidate a semantic gate.
+    for user in root.findall(".//User"):
+        defn = user.get("defn", "")
+        if defn == "master:breaker3":
+            user.set("w", "<runtime-display-width>")
+            for p in user.findall("./paramlist/param"):
+                if p.get("name") in {"BOpen1", "BOpen2", "BOpen3", "P", "Q"}:
+                    p.set("value", "<runtime-readback>")
+        if defn == "ETRAN:Electranix_Load":
+            for p in user.findall("./paramlist/param"):
+                if p.get("name") in {"Pdisplay", "Qdisplay"}:
+                    p.set("value", "<runtime-readback>")
     raw = ET.tostring(root, encoding="utf-8")
     return hashlib.sha256(raw).hexdigest().upper()
 

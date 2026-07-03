@@ -12,5 +12,7 @@
   "stage7_boundary": "This stage documents a trial-only paper-calibrated equivalent protection attempt. It does not represent PNNL real continuous thermal capacity or true protection-setting validation.",
   "strict_reproduction_status": "not_achieved",
   "stage8_runtime_status": "stage8_pre_fault_false_trip",
-  "stage8_runtime_evidence": "data/validation/stage8_paper_ovl1_dynamic_final_audit.json"
+  "stage8_runtime_evidence": "data/validation/stage8_paper_ovl1_dynamic_final_audit.json",
+  "stage9_short_run_status": "stage9_short_run_flow_driven_first_trip_pass",
+  "stage9_short_run_evidence": "data/validation/stage9_short_run_dynamic_final_audit.json"
 }

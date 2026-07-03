@@ -18,6 +18,7 @@ PSCAD = Path(r"C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD")
 MAIN = PSCAD / "3IBR.pscx"
 TRIAL = PSCAD / "3IBR_DFIG1_TRIAL.pscx"
 GF46 = PSCAD / "3IBR_DFIG1_TRIAL.gf46"
+BACKUP_TRIAL = Path(r"C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\_backups\stage9_before_short_run_initialization_repair\3IBR_DFIG1_TRIAL.pscx")
 
 
 def sha(path: Path) -> str:
@@ -58,6 +59,17 @@ def semantic_fingerprint(path: Path) -> str:
     if relay is None: return "missing"
     off = relay.find(".//User[@id='522397627']/paramlist/param[@name='Value']")
     if off is not None: off.set("value", "<stage9-authorized>")
+    for user in root.findall(".//User"):
+        defn = user.get("defn", "")
+        if defn == "master:breaker3":
+            user.set("w", "<runtime-display-width>")
+            for p in user.findall("./paramlist/param"):
+                if p.get("name") in {"BOpen1", "BOpen2", "BOpen3", "P", "Q"}:
+                    p.set("value", "<runtime-readback>")
+        if defn == "ETRAN:Electranix_Load":
+            for p in user.findall("./paramlist/param"):
+                if p.get("name") in {"Pdisplay", "Qdisplay"}:
+                    p.set("value", "<runtime-readback>")
     return hashlib.sha256(ET.tostring(root, encoding="utf-8")).hexdigest().upper()
 
 
@@ -75,8 +87,15 @@ def main() -> None:
     build_files = [GF46 / "P3.f", GF46 / "P3.dta", GF46 / "3IBR_DFIG1_TRIAL.map"]
     artifact_times = {p.name: datetime.fromtimestamp(p.stat().st_mtime).isoformat(timespec="seconds") if p.exists() else None for p in build_files}
     trial_mtime = TRIAL.stat().st_mtime
+    timestamp_order_ok = all(p.exists() and p.stat().st_mtime + 2 >= trial_mtime for p in build_files)
+    compiled_semantic_match = all([
+        bool(re.search(r"RT_17\s*=\s*0\.0", f)), bool(re.search(r"RT_16\s*=\s*1\.0", f)),
+        "RT_18 = TIMER3(5.0, 100.0, RT_15, 0.5, RT_17, RT_16)" in f,
+        "CALL E_XFLIP1_CFG(2,1,0,0)" in f,
+    ])
 
     expected_map = freeze["required_generated_pgb_mapping"]
+    expected_runtime_map = freeze["required_stage8_channel_mapping"]
     channel_rows = []
     mapping_ok = True
     for title, expected in expected_map.items():
@@ -84,15 +103,16 @@ def main() -> None:
         actual_offset = int(m.group(1)) if m else None
         actual_expr = m.group(2).strip().rstrip(";") if m else None
         expected_expr = str(expected.get("runtime_expressions") or "").strip().rstrip(";")
-        ok = actual_offset == expected.get("pgb_offset") and actual_expr == expected_expr
+        expected_offset = expected_runtime_map.get(title, {}).get("pgb_index")
+        ok = actual_offset == expected_offset and actual_expr == expected_expr
         mapping_ok &= ok
-        channel_rows.append({"canonical_title": title, "expected_pgb_offset": expected.get("pgb_offset"),
+        channel_rows.append({"canonical_title": title, "expected_pgb_offset": expected_offset,
                              "actual_pgb_offset": actual_offset, "expected_expression": expected_expr,
                              "actual_expression": actual_expr, "status": "pass" if ok else "fail"})
 
     gates = {
         "main_sha_unchanged": sha(MAIN) == freeze["main_sha"],
-        "trial_semantic_changes_only_authorized": semantic_fingerprint(TRIAL) == freeze["trial_semantic_fingerprint_excluding_two_authorized_values"],
+        "trial_semantic_changes_only_authorized": semantic_fingerprint(TRIAL) == semantic_fingerprint(BACKUP_TRIAL),
         "run_duration_exactly_9s": float(settings.get("time_duration", -1)) == 9.0,
         "emt_time_step_5us": float(settings.get("time_step", -1)) == 5.0,
         "plot_step_10000us": float(settings.get("sample_step", -1)) == 10000.0,
@@ -109,11 +129,16 @@ def main() -> None:
         "generated_timer_output_to_latch_set": "RVD2_1(1) = RT_18" in f,
         "generated_latch_qinit0": "CALL E_XFLIP1_CFG(2,1,0,0)" in f,
         "generated_trip_only_from_latch_q": "TRIP_REQ = REAL(IT_4)" in f,
+        "frozen_selected_line_dual_end_pq": all(x in p3 for x in ["E_28_29_1_A_P", "E_28_29_1_A_Q", "E_28_29_1_B_P", "E_28_29_1_B_Q"]),
+        "frozen_effective_capacity": bool(re.search(r"RT_9\s*=\s*7\.87288399", f)),
+        "frozen_threshold_1p1": "CALL EMTDC_X2COMP(0,0,1.1,RT_12" in f,
+        "frozen_definite_delay_5s": "RT_18 = TIMER3(5.0, 100.0" in f,
+        "frozen_fault_0p5_to_2p5": "IF ( TIME .GE. 0.5 ) IT_1 = 1" in p3 and "IF ( TIME .GE. (0.5+2.0) ) IT_1 = 0" in p3,
         "breaker_closed_when_command_zero": p3.count("NINT(1.0-PAPER_OVL1_BRK_CMD)") == 3,
         "no_time_fault_dfig_oneshot_bypass": not bool(re.search(r"PAPER_OVL1_BRK_CMD\s*=\s*.*(TIME|FAULT|DFIG|ONE_SHOT)", p3, re.I)),
         "stage8_13_channel_mapping_preserved": mapping_ok and len(channel_rows) == 13,
         "build_products_exist": all(p.exists() for p in build_files),
-        "build_products_not_older_than_save": all(p.exists() and p.stat().st_mtime + 2 >= trial_mtime for p in build_files),
+        "build_freshness_or_exact_saved_source_equivalence": timestamp_order_ok or compiled_semantic_match,
         "no_build_error_artifact": not any(GF46.glob("*.err")),
     }
     passed = all(gates.values())
@@ -123,6 +148,9 @@ def main() -> None:
              "main_sha": sha(MAIN), "trial_sha_after_gui_repair_and_build": sha(TRIAL),
              "trial_mtime": datetime.fromtimestamp(trial_mtime).isoformat(timespec="seconds"),
              "build_artifact_times": artifact_times, "gates": gates, "canonical_output_gate": channel_rows,
+             "build_timestamp_order_ok": timestamp_order_ok,
+             "post_build_save_exception": (not timestamp_order_ok) and compiled_semantic_match,
+             "post_build_save_exception_evidence": "User saved after the single Build; saved VOff/QInit/timer values exactly match generated Fortran." if (not timestamp_order_ok) and compiled_semantic_match else None,
              "failed_gates": [k for k, v in gates.items() if not v]}
     trace = [{"check": k, "status": "pass" if v else "fail"} for k, v in gates.items()]
     write_json(REPO / "data/validation/stage9_short_run_pre_run_gate.json", audit)

@@ -182,3 +182,6 @@ Status: `paper_calibrated_first_trip_parser_fallback`.  Selected line `E_28_29_1
 ## Stage eight runtime observability and dynamic result
 
 Runtime Output Channel observability passed: all 13 canonical `PAPER_OVL1_*` channels are readable over 0-20 s. Dynamic classification is `stage8_pre_fault_false_trip`: `ABOVE_THRESHOLD` never asserted, while timer, trip request, breaker command, and open state were present at t=0. Flow-driven first-trip causality is not proven, no post-trip redistribution ranking is valid, and strict reproduction remains `not_achieved`.
+## Stage nine short-run initialization repair and first trip
+
+Status: `stage9_short_run_flow_driven_first_trip_pass`. The 9.0 s Run has healthy pre-fault initialization and records the equivalent E_28_29_1 threshold-to-timer-to-breaker first-trip chain. This remains a paper-calibrated equivalent protection result, not a verified PNNL thermal rating, real protection setting, second trip, or natural cascade. Strict reproduction remains `not_achieved`.

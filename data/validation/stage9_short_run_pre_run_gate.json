@@ -1,0 +1,155 @@
+{
+  "audit_name": "stage9_short_run_pre_run_gate",
+  "generated_at_local": "2026-07-03T17:32:07",
+  "execution_status": "pre_run_gate_pass",
+  "run_authorization": "RUN_9S_ALLOWED_ONCE",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_after_gui_repair_and_build": "F2A3C1012D8261805C03F688CCC2E8BFBCE68A80D1ACC352CAFA666B149744A0",
+  "trial_mtime": "2026-07-03T17:29:13",
+  "build_artifact_times": {
+    "P3.f": "2026-07-03T17:25:32",
+    "P3.dta": "2026-07-03T17:25:32",
+    "3IBR_DFIG1_TRIAL.map": "2026-07-03T17:25:36"
+  },
+  "gates": {
+    "main_sha_unchanged": true,
+    "trial_semantic_changes_only_authorized": true,
+    "run_duration_exactly_9s": true,
+    "emt_time_step_5us": true,
+    "plot_step_10000us": true,
+    "timer_trigger_threshold_0p5": true,
+    "timer_delay_5s": true,
+    "timer_duration_on_100s": true,
+    "timer_von_is_1": true,
+    "timer_voff_repaired_to_0": true,
+    "latch_simple_rs_qinit0": true,
+    "latch_reset_zero": true,
+    "generated_timer_off_value_zero": true,
+    "generated_timer_on_value_one": true,
+    "generated_active_low_completion_logic": true,
+    "generated_timer_output_to_latch_set": true,
+    "generated_latch_qinit0": true,
+    "generated_trip_only_from_latch_q": true,
+    "frozen_selected_line_dual_end_pq": true,
+    "frozen_effective_capacity": true,
+    "frozen_threshold_1p1": true,
+    "frozen_definite_delay_5s": true,
+    "frozen_fault_0p5_to_2p5": true,
+    "breaker_closed_when_command_zero": true,
+    "no_time_fault_dfig_oneshot_bypass": true,
+    "stage8_13_channel_mapping_preserved": true,
+    "build_products_exist": true,
+    "build_freshness_or_exact_saved_source_equivalence": true,
+    "no_build_error_artifact": true
+  },
+  "canonical_output_gate": [
+    {
+      "canonical_title": "PAPER_OVL1_S_A_PU",
+      "expected_pgb_offset": 183,
+      "actual_pgb_offset": 183,
+      "expected_expression": "PAPER_OVL1_S_A_PU",
+      "actual_expression": "PAPER_OVL1_S_A_PU",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_S_B_PU",
+      "expected_pgb_offset": 179,
+      "actual_pgb_offset": 179,
+      "expected_expression": "PAPER_OVL1_S_B_PU",
+      "actual_expression": "PAPER_OVL1_S_B_PU",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_S_MAX_PU",
+      "expected_pgb_offset": 177,
+      "actual_pgb_offset": 177,
+      "expected_expression": "PAPER_OVL1_S_MAX_PU",
+      "actual_expression": "PAPER_OVL1_S_MAX_PU",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "expected_pgb_offset": 173,
+      "actual_pgb_offset": 173,
+      "expected_expression": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "actual_expression": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "expected_pgb_offset": 170,
+      "actual_pgb_offset": 170,
+      "expected_expression": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "actual_expression": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "expected_pgb_offset": 168,
+      "actual_pgb_offset": 168,
+      "expected_expression": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "actual_expression": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "expected_pgb_offset": 166,
+      "actual_pgb_offset": 166,
+      "expected_expression": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "actual_expression": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_TRIP_REQUEST",
+      "expected_pgb_offset": 181,
+      "actual_pgb_offset": 181,
+      "expected_expression": "PAPER_OVL1_BRK_CMD",
+      "actual_expression": "PAPER_OVL1_BRK_CMD",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_BRK_CMD",
+      "expected_pgb_offset": 178,
+      "actual_pgb_offset": 178,
+      "expected_expression": "PAPER_OVL1_BRK_CMD",
+      "actual_expression": "PAPER_OVL1_BRK_CMD",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_BRK_STATE",
+      "expected_pgb_offset": 174,
+      "actual_pgb_offset": 174,
+      "expected_expression": "REAL(PAPER_OVL1_BRK_STATE)",
+      "actual_expression": "REAL(PAPER_OVL1_BRK_STATE)",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_TRIP_EVENT_VALID",
+      "expected_pgb_offset": 172,
+      "actual_pgb_offset": 172,
+      "expected_expression": "PAPER_OVL1_BRK_CMD",
+      "actual_expression": "PAPER_OVL1_BRK_CMD",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "expected_pgb_offset": 169,
+      "actual_pgb_offset": 169,
+      "expected_expression": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "actual_expression": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_RELAY_ENABLE",
+      "expected_pgb_offset": 92,
+      "actual_pgb_offset": 92,
+      "expected_expression": "PAPER_OVL1_RELAY_ENABLE",
+      "actual_expression": "PAPER_OVL1_RELAY_ENABLE",
+      "status": "pass"
+    }
+  ],
+  "build_timestamp_order_ok": false,
+  "post_build_save_exception": true,
+  "post_build_save_exception_evidence": "User saved after the single Build; saved VOff/QInit/timer values exactly match generated Fortran.",
+  "failed_gates": []
+}

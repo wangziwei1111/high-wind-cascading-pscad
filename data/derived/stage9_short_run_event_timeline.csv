@@ -1,0 +1,9 @@
+event,time_s,status
+fault_start,0.5,frozen_reference
+fault_clear,2.5,frozen_reference
+dfig_event,,not_observed
+threshold_crossing_and_timer_accumulation_start,2.51,observed
+timer_completion,7.51,observed
+trip_request,7.51,observed
+breaker_command,7.51,observed
+actual_breaker_open,7.51,observed

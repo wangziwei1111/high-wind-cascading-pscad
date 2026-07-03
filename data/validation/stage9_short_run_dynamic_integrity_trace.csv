@@ -1,0 +1,9 @@
+check,status
+runtime output integrity,pass
+t0 and pre-fault healthy,pass
+threshold/timer/trip/open present,pass
+5 s timer delay,pass
+causal order,pass
+no fixed-time bypass,pass
+31 line post-trip response,pass
+single 9 s run,pass
