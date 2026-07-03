@@ -1,4 +1,4 @@
-# Paper-aligned 20 s N29 fault dynamic run and full-network TLine response audit
+﻿# Paper-aligned 20 s N29 fault dynamic run and full-network TLine response audit
 
 ## Scope
 
@@ -152,3 +152,7 @@ thermal limits: all mapped current-network branch RATE fields are zero.  The
 safe quantity remains the `100-MVA-normalized apparent-power response index`;
 `protection-grade loading ratio` remains unavailable, and shadow relay modeling
 remains blocked.
+
+## Stage seven paper-calibrated equivalent first-trip attempt
+
+Status: `paper_calibrated_first_trip_parser_fallback`.  Selected line `E_28_29_1` with equivalent capacity `7.872883989661206` and 1.1 + 5 s fallback logic. Generated code confirms the trial relay/breaker chain, but runtime PGB waveforms were unavailable; therefore no dynamic flow-driven trip or actual breaker-open causality is claimed.

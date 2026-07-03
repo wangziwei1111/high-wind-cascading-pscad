@@ -6,5 +6,9 @@
   "highest_normalized_apparent_power_response_line": "E_28_29_1",
   "thesis_relevant_line": "E_16_19_1",
   "coverage_status": "fallback_no_protection_grade_rating_coverage",
-  "mapping_audit": "data/reference/current_tline_external_rating_mapping.json"
+  "mapping_audit": "data/reference/current_tline_external_rating_mapping.json",
+  "stage7_paper_calibrated_first_trip_status": "paper_calibrated_first_trip_parser_fallback",
+  "stage7_selected_line": "E_28_29_1",
+  "stage7_boundary": "This stage documents a trial-only paper-calibrated equivalent protection attempt. It does not represent PNNL real continuous thermal capacity or true protection-setting validation.",
+  "strict_reproduction_status": "not_achieved"
 }

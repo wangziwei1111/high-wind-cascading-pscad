@@ -1,4 +1,4 @@
-# Paper reproduction gap register
+﻿# Paper reproduction gap register
 
 | gap_id | paper requirement | current gap | risk if ignored | required evidence | recommended stage | not-yet-permitted claim |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -13,9 +13,9 @@
 | G09 | 20 s scenario and parameter sweeps | Current evidence uses fixed 5 s interface scenarios | Results are not comparable to paper tables | Completed mechanisms and scenario manifest | final integration | paper scenario matrix reproduced |
 | G10 | SVC/STATCOM mitigation | Devices absent; unmitigated chain incomplete | Mitigation could hide missing mechanism | Baseline chain plus device/controller provenance | last | voltage-support performance validated |
 
-当前三来源受控时序与 V/P/Q Run 属于基础设施验证和记录性动态证据，不构成
-论文的自然连锁故障复现。后续顺序必须由原文的故障—保护—网络重分布—后续
-保护链条决定。
+褰撳墠涓夋潵婧愬彈鎺ф椂搴忎笌 V/P/Q Run 灞炰簬鍩虹璁炬柦楠岃瘉鍜岃褰曟€у姩鎬佽瘉鎹紝涓嶆瀯鎴?
+璁烘枃鐨勮嚜鐒惰繛閿佹晠闅滃鐜般€傚悗缁『搴忓繀椤荤敱鍘熸枃鐨勬晠闅溾€斾繚鎶も€旂綉缁滈噸鍒嗗竷鈥斿悗缁?
+淇濇姢閾炬潯鍐冲畾銆?
 
 ## Stage-two preflight addendum
 
@@ -93,3 +93,7 @@ thermal limits: all mapped current-network branch RATE fields are zero.  The
 safe quantity remains the `100-MVA-normalized apparent-power response index`;
 `protection-grade loading ratio` remains unavailable, and shadow relay modeling
 remains blocked.
+
+## Stage seven paper-calibrated equivalent first-trip attempt
+
+Status: `paper_calibrated_first_trip_parser_fallback`.  Selected line `E_28_29_1` with equivalent capacity `7.872883989661206` and 1.1 + 5 s fallback logic. Generated code confirms the trial relay/breaker chain, but runtime PGB waveforms were unavailable; therefore no dynamic flow-driven trip or actual breaker-open causality is claimed.

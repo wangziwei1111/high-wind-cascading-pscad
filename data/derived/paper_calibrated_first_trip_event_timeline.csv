@@ -1,0 +1,7 @@
+event,time_s,source,status
+fault_start,0.5,frozen stage-four scenario,reference
+fault_clear,2.5,frozen stage-four scenario,reference
+dfig_event_observed_in_baseline,2.43,paper_aligned_20s_event_timeline.csv,reference
+paper_ovl1_threshold_crossing,,PAPER_OVL1_* runtime PGB outputs,unavailable_runtime_pgb_outputs_missing
+paper_ovl1_trip_request,,PAPER_OVL1_* runtime PGB outputs,unavailable_runtime_pgb_outputs_missing
+paper_ovl1_actual_breaker_open,,PAPER_OVL1_BRK_STATE runtime PGB output,unavailable_runtime_pgb_outputs_missing

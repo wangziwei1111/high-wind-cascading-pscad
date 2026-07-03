@@ -1,0 +1,5 @@
+check,status
+generated relay/breaker static chain,pass
+runtime PGB output availability,runtime_pgb_outputs_missing
+dynamic causality proof,unavailable_runtime_pgb_outputs_missing
+forbidden Git artifacts,pass
