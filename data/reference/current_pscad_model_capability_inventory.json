@@ -302,10 +302,10 @@
     },
     {
       "capability_id": "PAPER_CALIBRATED_EQUIVALENT_FIRST_TRIP",
-      "status": "parser_fallback_unverified",
-      "description": "Trial-only equivalent-capacity relay and breaker boundary were generated, but runtime PGB waveforms were unavailable for dynamic causality proof.",
+      "status": "stage8_pre_fault_false_trip",
+      "description": "Stage-8 runtime outputs are readable, but the relay/breaker chain is asserted before the fault while ABOVE_THRESHOLD remains zero.",
       "selected_line": "E_28_29_1",
-      "claim_boundary": "This stage documents a trial-only paper-calibrated equivalent protection attempt. It does not represent PNNL real continuous thermal capacity or true protection-setting validation."
+      "claim_boundary": "Stage 8 proves runtime Output Channel observability only. It does not prove flow-driven protection: the timer/latch/command chain is asserted at t=0 while ABOVE_THRESHOLD remains zero. The capacity is paper-calibrated equivalent capacity, not a PNNL continuous thermal rating or real protection setting."
     }
   ],
   "trial_sha256_after_full_network_tline_measurement": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",

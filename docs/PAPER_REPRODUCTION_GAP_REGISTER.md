@@ -97,3 +97,7 @@ remains blocked.
 ## Stage seven paper-calibrated equivalent first-trip attempt
 
 Status: `paper_calibrated_first_trip_parser_fallback`.  Selected line `E_28_29_1` with equivalent capacity `7.872883989661206` and 1.1 + 5 s fallback logic. Generated code confirms the trial relay/breaker chain, but runtime PGB waveforms were unavailable; therefore no dynamic flow-driven trip or actual breaker-open causality is claimed.
+
+## Stage eight runtime observability and dynamic result
+
+Runtime Output Channel observability passed: all 13 canonical `PAPER_OVL1_*` channels are readable over 0-20 s. Dynamic classification is `stage8_pre_fault_false_trip`: `ABOVE_THRESHOLD` never asserted, while timer, trip request, breaker command, and open state were present at t=0. Flow-driven first-trip causality is not proven, no post-trip redistribution ranking is valid, and strict reproduction remains `not_achieved`.

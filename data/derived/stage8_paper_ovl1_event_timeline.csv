@@ -1,0 +1,9 @@
+event,time_s,status
+fault_start,0.5,frozen_reference
+fault_clear,2.5,frozen_reference
+dfig_event,,not_observed
+threshold_crossing,,not_observed
+timer_state_asserted,0.0,observed
+trip_request_asserted,0.0,observed
+breaker_command_asserted,0.0,observed
+breaker_open_state,0.0,observed
