@@ -14,5 +14,8 @@
   "stage8_runtime_status": "stage8_pre_fault_false_trip",
   "stage8_runtime_evidence": "data/validation/stage8_paper_ovl1_dynamic_final_audit.json",
   "stage9_short_run_status": "stage9_short_run_flow_driven_first_trip_pass",
-  "stage9_short_run_evidence": "data/validation/stage9_short_run_dynamic_final_audit.json"
+  "stage9_short_run_evidence": "data/validation/stage9_short_run_dynamic_final_audit.json",
+  "stage10_dfig_event_consistency_status": "stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9",
+  "stage10_minimal_next_change_scope": "fault_to_dfig_interface_alignment",
+  "next_run_gate": "Demonstrate from static evidence that the unchanged physical LVRT chain will see a fault-period VIBR1_2 below 0.9 long enough to operate; do not synthesize an event or timed breaker command."
 }

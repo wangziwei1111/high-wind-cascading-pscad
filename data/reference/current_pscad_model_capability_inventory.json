@@ -87,9 +87,9 @@
       "source_or_network_object": "DFIG",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
       "xml_or_fortran_evidence": "DFIG_LVRT_* labels and BRK_DFIG path",
-      "existing_dynamic_evidence": "data/reference/type3_dfig_lvrt_closed_loop_coverage.json",
-      "current_status": "implemented_and_audited",
-      "claim_boundary": "Only audited current criterion/chain; not full paper Eq. 2-8 reproduction."
+      "existing_dynamic_evidence": "data/validation/stage10_dfig_event_consistency_final_audit.json",
+      "current_status": "stage10_stage4_trip_confirmed_stage9_no_trip_confirmed",
+      "claim_boundary": "Stage 9 validates only the flow-driven E_28_29_1 protection subchain. Until a physical DFIG event precedes the first line trip, it is not a complete paper-style accident-chain reproduction."
     },
     {
       "capability_id": "CAP09",
@@ -142,9 +142,9 @@
       "source_or_network_object": "DFIG",
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
       "xml_or_fortran_evidence": "DFIG event packet labels and Output Channels",
-      "existing_dynamic_evidence": "data/validation/three_source_electrical_response_final_audit.json",
-      "current_status": "implemented_and_audited",
-      "claim_boundary": "Monitor record only."
+      "existing_dynamic_evidence": "data/validation/stage10_dfig_event_consistency_final_audit.json",
+      "current_status": "stage10_stage4_trip_confirmed_stage9_no_trip_confirmed",
+      "claim_boundary": "Stage 9 validates only the flow-driven E_28_29_1 protection subchain. Until a physical DFIG event precedes the first line trip, it is not a complete paper-style accident-chain reproduction."
     },
     {
       "capability_id": "CAP14",
@@ -319,5 +319,7 @@
   "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
   "future_shadow_overload_candidate": null,
   "normalized_apparent_power_response_status": "available",
-  "tline_thermal_limit_recovery_status": "exact_branch_mapping_recovered_but_no_protection_grade_ratings"
+  "tline_thermal_limit_recovery_status": "exact_branch_mapping_recovered_but_no_protection_grade_ratings",
+  "stage10_dfig_event_consistency_status": "stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9",
+  "stage10_dfig_event_consistency_evidence": "data/validation/stage10_dfig_event_consistency_final_audit.json"
 }

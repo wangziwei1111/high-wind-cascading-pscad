@@ -35,5 +35,9 @@
   "tline_thermal_limit_recovery_status": "fallback_no_protection_grade_rating_coverage",
   "stage7_paper_calibrated_first_trip_status": "paper_calibrated_first_trip_parser_fallback",
   "stage7_selected_line": "E_28_29_1",
-  "stage7_boundary": "This stage documents a trial-only paper-calibrated equivalent protection attempt. It does not represent PNNL real continuous thermal capacity or true protection-setting validation."
+  "stage7_boundary": "This stage documents a trial-only paper-calibrated equivalent protection attempt. It does not represent PNNL real continuous thermal capacity or true protection-setting validation.",
+  "stage10_dfig_event_consistency_status": "stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9",
+  "stage10_paper_event_order_status": "not_aligned_dfig_absent_before_first_line_trip",
+  "strict_reproduction_status_after_stage10": "not_achieved",
+  "stage10_evidence": "data/validation/stage10_dfig_event_consistency_final_audit.json"
 }

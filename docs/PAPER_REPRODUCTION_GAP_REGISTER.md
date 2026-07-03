@@ -104,3 +104,6 @@ Runtime Output Channel observability passed: all 13 canonical `PAPER_OVL1_*` cha
 ## Stage nine short-run initialization repair and first trip
 
 Status: `stage9_short_run_flow_driven_first_trip_pass`. The 9.0 s Run has healthy pre-fault initialization and records the equivalent E_28_29_1 threshold-to-timer-to-breaker first-trip chain. This remains a paper-calibrated equivalent protection result, not a verified PNNL thermal rating, real protection setting, second trip, or natural cascade. Strict reproduction remains `not_achieved`.
+## Stage 10A DFIG event consistency and paper sequence
+
+Status: `stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9`. Stage 4 contains a physical DFIG opening and matching event packet at 2.43 s; Stage 9 contains neither before the E_28_29_1 opening at 7.51 s. The channels are present and readable, so this is not an observability/parser failure. The verified signal-level cause is that Stage-9 fault-period VIBR1_2 stayed above the unchanged 0.9 duration-LVRT threshold. Stage 9 validates only the flow-driven E_28_29_1 protection subchain. Until a physical DFIG event precedes the first line trip, it is not a complete paper-style accident-chain reproduction.

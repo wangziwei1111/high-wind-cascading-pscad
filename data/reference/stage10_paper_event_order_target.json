@@ -1,0 +1,27 @@
+{
+  "target_name": "stage10_paper_event_order_target",
+  "status": "static_gate_for_next_unique_run",
+  "required_order": [
+    "N29 three-phase fault",
+    "physical DFIG LVRT/source-unavailable event",
+    "power-flow redistribution",
+    "flow-driven E_28_29_1 threshold and 5 s timer",
+    "actual E_28_29_1 open",
+    ">=1.0 s post-open response"
+  ],
+  "physical_evidence_required": [
+    "BRK_DFIG transition",
+    "DFIG source availability loss",
+    "matching event packet",
+    "real TLine P/Q-driven protection"
+  ],
+  "prohibited_shortcuts": [
+    "synthetic event packet",
+    "fixed-time DFIG trip",
+    "fixed-time line trip",
+    "manual breaker pulse",
+    "capacity/threshold/delay change without new evidence"
+  ],
+  "recommended_unique_run_duration_s": 9.0,
+  "run_gate": "Do not run until fault-to-DFIG interface alignment is statically justified and the original physical LVRT chain, not an injected event, is expected to operate."
+}
