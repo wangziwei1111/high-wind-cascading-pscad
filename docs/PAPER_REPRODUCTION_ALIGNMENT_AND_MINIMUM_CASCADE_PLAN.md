@@ -188,3 +188,6 @@ Status: `stage9_short_run_flow_driven_first_trip_pass`. The 9.0 s Run has health
 ## Stage 10A DFIG event consistency and paper sequence
 
 Status: `stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9`. Stage 4 contains a physical DFIG opening and matching event packet at 2.43 s; Stage 9 contains neither before the E_28_29_1 opening at 7.51 s. The channels are present and readable, so this is not an observability/parser failure. The verified signal-level cause is that Stage-9 fault-period VIBR1_2 stayed above the unchanged 0.9 duration-LVRT threshold. Stage 9 validates only the flow-driven E_28_29_1 protection subchain. Until a physical DFIG event precedes the first line trip, it is not a complete paper-style accident-chain reproduction.
+## Stage 10B fault-to-DFIG static fallback
+
+Decision: `no_defensible_electrical_difference_found`. XML geometry alone suggested a gap, but generated `P3.dta` proves the Stage-9 breaker and fault remain on the compiled `N29(1..3)` boundary. No permitted single interface repair is defensible, so GUI, Build, and Run are blocked. Strict reproduction remains `not_achieved`.

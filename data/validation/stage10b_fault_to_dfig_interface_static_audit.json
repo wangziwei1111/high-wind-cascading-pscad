@@ -1,0 +1,39 @@
+{
+  "audit_name": "stage10b_fault_to_dfig_interface_static_audit",
+  "generated_at_local": "2026-07-03T18:41:27",
+  "execution_status": "stage10b_static_blocked_no_defensible_electrical_difference",
+  "analysis_mode": "read_only_no_gui_no_build_no_run",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "stage4_trial_sha": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "stage9_trial_sha": "F2A3C1012D8261805C03F688CCC2E8BFBCE68A80D1ACC352CAFA666B149744A0",
+  "backup_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage10b_before_fault_to_dfig_alignment",
+  "backup_trial_sha": "F2A3C1012D8261805C03F688CCC2E8BFBCE68A80D1ACC352CAFA666B149744A0",
+  "backup_gf46_exists": true,
+  "frozen_fault_parameters_equal": true,
+  "compiled_fault_and_breaker_share_N29_boundary": true,
+  "stage4_geometry": {
+    "n29_common_junction_x": 3312,
+    "fault_vertical": "(3348,36) -> (3348,162)",
+    "n29_label_wire": "(3330,162) -> (3348,162)"
+  },
+  "stage9_geometry": {
+    "actual_post_breaker_n29_x": 3384,
+    "fault_vertical_end_x": 3348,
+    "n29_label_wire": "(3330,162) -> (3348,162)",
+    "missing_horizontal_connection_px": 36,
+    "paper_breaker_anchor": "(3294,162)",
+    "paper_breaker_RON": "1.0e-3 [ohm]",
+    "paper_breaker_ROFF": "1.0e6 [ohm]"
+  },
+  "answers": {
+    "q1_closed_breaker_equivalent": "The generated node map preserves the Stage-4 N29 electrical boundary. The only intended closed-state difference is the required breaker RON=1e-3 ohm; no unintended open node is present.",
+    "q2_voltage_transfer_difference": "No defensible wrong connection, phase mismatch, ground, bypass, or extra series element was found. The apparent 36 px schematic gap is not an electrical gap; generated P3.dta connects the breaker internal nodes NT_84(1..3) to N29(1..3).",
+    "q3_other_relevant_difference": "No second fault-to-DFIG electrical difference was found in the scoped stable-ID comparison. Fault parameters, DFIG breaker identity, TLine parameters, load and transformer roles remain frozen.",
+    "q4_single_minimal_fix": "No. Any wire, RON, fault, or LVRT change would be unsupported by the scoped static evidence.",
+    "q5_run_if_unproven": "Yes. Stage 10B must stop before GUI, Build, and Run rather than modify a compiled-correct interface."
+  },
+  "decision": "no_defensible_electrical_difference_found",
+  "gui_change_authorized": false,
+  "run_authorized_now": false,
+  "build_authorized_after_user_gui_repair": false
+}
