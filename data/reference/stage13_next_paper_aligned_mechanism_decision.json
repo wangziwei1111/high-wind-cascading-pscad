@@ -1,0 +1,38 @@
+{
+  "decision_name": "stage13_next_paper_aligned_mechanism_decision",
+  "generated_at_local": "2026-07-03T22:56:06+08:00",
+  "selected_next_path": "extend_runtime_before_third_line_path",
+  "decision_confidence": "medium",
+  "paper_evidence_ids": [
+    "E003",
+    "E010",
+    "E011",
+    "E012",
+    "E013"
+  ],
+  "runtime_evidence_ids": [
+    "stage12_run_manifest",
+    "stage13_post_second_trip_tline_risk_ranking"
+  ],
+  "required_observables": [
+    "existing TLine dual-end P/Q",
+    "compiled topology",
+    "actual breaker state chronology"
+  ],
+  "missing_observables": [
+    "real continuous thermal ratings",
+    "real protection settings",
+    "network-wide voltage coverage",
+    "direct UFLS/load-shed state"
+  ],
+  "model_change_needed_next_stage": false,
+  "why_other_paths_rejected": {
+    "third_line_protection_path": "Rejected as an immediate model change because the leading candidate is not yet third_line_candidate_ready.",
+    "extend_runtime_before_third_line_path": "Selected or retained when post-second-trip line stress rises but the existing window is not enough to justify a physical third relay.",
+    "ufls_uvls_observability_first_path": "Rejected as immediate next path because a line-risk path is directly supported by current raw P/Q evidence; UFLS/UVLS still require observability before any shedding model.",
+    "generator_protection_observability_first_path": "Rejected because no directly observed conventional-generator protection precursor is available.",
+    "topology_partition_consequence_path": "Rejected because topology status is connected_after_second_trip.",
+    "no_defensible_post_second_trip_escalation": "Rejected because the W4 raw P/Q-derived stress ranking shows separable post-second-trip line-risk candidates."
+  },
+  "claim_boundary": "This freezes only the next mechanism direction. It does not add a third breaker, UFLS/UVLS, generator protection, islanding model, Build, or Run."
+}

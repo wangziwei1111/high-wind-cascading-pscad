@@ -1,0 +1,359 @@
+{
+  "frequency_candidates": [
+    {
+      "channel": "Freq_PLL",
+      "classification": "local_controller_frequency_only",
+      "W0": {
+        "mean": 60.17446852365811,
+        "max": 69.0,
+        "min": 59.07366411511
+      },
+      "W4": {
+        "mean": 69.0,
+        "max": 69.0,
+        "min": 69.0
+      }
+    },
+    {
+      "channel": "PLL_f",
+      "classification": "local_controller_frequency_only",
+      "W0": {
+        "mean": 59.59872413925424,
+        "max": 60.421823993647,
+        "min": 48.0
+      },
+      "W4": {
+        "mean": 60.607490235068475,
+        "max": 64.39730163096,
+        "min": 56.991005458608
+      }
+    },
+    {
+      "channel": "PLL_f_1",
+      "classification": "local_controller_frequency_only",
+      "W0": {
+        "mean": 59.59872413925424,
+        "max": 60.421823993647,
+        "min": 48.0
+      },
+      "W4": {
+        "mean": 60.607490235068475,
+        "max": 64.39730163096,
+        "min": 56.991005458608
+      }
+    },
+    {
+      "channel": "SPD30",
+      "classification": "direct_system_frequency",
+      "W0": {
+        "mean": 60.0,
+        "max": 60.0,
+        "min": 60.0
+      },
+      "W4": {
+        "mean": 60.0,
+        "max": 60.0,
+        "min": 60.0
+      }
+    },
+    {
+      "channel": "Wang_31",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3689.859067710046,
+        "max": -2361.4858300692,
+        "min": -4846.5195637142
+      }
+    },
+    {
+      "channel": "Wang_32",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3676.3015187079072,
+        "max": -2348.9255320073,
+        "min": -4839.7826843009
+      }
+    },
+    {
+      "channel": "Wang_33",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3681.6758734899518,
+        "max": -2358.9040262833,
+        "min": -4838.9815708941
+      }
+    },
+    {
+      "channel": "Wang_34",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3672.0202199144096,
+        "max": -2354.9551981526,
+        "min": -4829.1398983265
+      }
+    },
+    {
+      "channel": "Wang_35",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3688.4760635100847,
+        "max": -2359.439966356,
+        "min": -4851.6641983081
+      }
+    },
+    {
+      "channel": "Wang_36",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3680.364359739889,
+        "max": -2356.4642669163,
+        "min": -4839.9401614225
+      }
+    },
+    {
+      "channel": "Wang_37",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -3689.0509022350484,
+        "max": -2377.4900936697,
+        "min": -4816.524767763
+      }
+    },
+    {
+      "channel": "Wang_38",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -28322.200138338878,
+        "max": -14155.934267787,
+        "min": -46293.299287137
+      }
+    },
+    {
+      "channel": "Wang_39",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "W4": {
+        "mean": -7454.188415987256,
+        "max": -4059.5925386225,
+        "min": -10379.865247905
+      }
+    },
+    {
+      "channel": "Wpu",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.2,
+        "max": 1.2,
+        "min": 1.2
+      },
+      "W4": {
+        "mean": 1.2,
+        "max": 1.2,
+        "min": 1.2
+      }
+    },
+    {
+      "channel": "Wpu_31",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0102851409627616,
+        "max": 1.0310934879179,
+        "min": 0.94875544191282
+      }
+    },
+    {
+      "channel": "Wpu_32",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0103723440314563,
+        "max": 1.0295020505442,
+        "min": 0.94904025490188
+      }
+    },
+    {
+      "channel": "Wpu_33",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0101433732067726,
+        "max": 1.0297849514656,
+        "min": 0.95045429672657
+      }
+    },
+    {
+      "channel": "Wpu_34",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0100063036044766,
+        "max": 1.0297847805778,
+        "min": 0.94985006503265
+      }
+    },
+    {
+      "channel": "Wpu_35",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0102608480420492,
+        "max": 1.0293216174253,
+        "min": 0.94905765378385
+      }
+    },
+    {
+      "channel": "Wpu_36",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0102028453886434,
+        "max": 1.0294212240668,
+        "min": 0.94885367578586
+      }
+    },
+    {
+      "channel": "Wpu_37",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0102085855834622,
+        "max": 1.0311020115446,
+        "min": 0.94878834567378
+      }
+    },
+    {
+      "channel": "Wpu_38",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 0.7987359338056151,
+        "max": 0.94592276959493,
+        "min": 0.75026673892638
+      }
+    },
+    {
+      "channel": "Wpu_39",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 0.960403082835421,
+        "max": 0.97045722404739,
+        "min": 0.94816164718991
+      }
+    },
+    {
+      "channel": "wind torque",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      }
+    },
+    {
+      "channel": "windtorq",
+      "classification": "machine_speed_proxy_only",
+      "W0": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      },
+      "W4": {
+        "mean": 1.0,
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "frequency_observability_status": "direct_system_frequency_available",
+  "frequency_post_second_trip_trend": "frequency_risk_not_observed",
+  "ufls_precondition_status": "ufls_precondition_evaluable",
+  "generator_underfrequency_protection_precondition_status": "generator_underfrequency_precondition_evaluable",
+  "claim_boundary": "Only direct_system_frequency may be compared to paper Hz thresholds."
+}

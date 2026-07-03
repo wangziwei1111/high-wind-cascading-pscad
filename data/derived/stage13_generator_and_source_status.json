@@ -1,0 +1,9 @@
+{
+  "DFIG_actual_disconnect": "directly_observed",
+  "other_wind_farm_disconnect": "not_observed",
+  "synchronous_generator_disconnect": "not_observable",
+  "conventional_generator_protection_action": "not_observable",
+  "system_active_power_deficit": "not_observable",
+  "system_reactive_power_deficit": "not_observable",
+  "claim_boundary": "Only DFIG disconnect is directly observed; line raw S changes are not source-trip evidence."
+}

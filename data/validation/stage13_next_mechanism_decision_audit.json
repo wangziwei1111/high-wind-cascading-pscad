@@ -1,0 +1,10 @@
+{
+  "audit_name": "stage13_next_mechanism_decision_audit",
+  "generated_at_local": "2026-07-03T22:56:06+08:00",
+  "execution_status": "stage13_next_mechanism_decision_frozen",
+  "selected_next_path": "extend_runtime_before_third_line_path",
+  "checks": {
+    "paper_chain_waiver_accepted": true,
+    "one_path_selected": true
+  }
+}

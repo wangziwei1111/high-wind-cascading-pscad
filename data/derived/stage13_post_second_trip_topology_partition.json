@@ -1,0 +1,37 @@
+{
+  "status": "connected_after_second_trip",
+  "component_count": 1,
+  "components": [
+    [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ]
+  ],
+  "opened_lines_removed": [
+    "E_26_29_1",
+    "E_28_29_1"
+  ],
+  "claim_boundary": "Topological connectivity only; not proof of island frequency, voltage, or balance."
+}
