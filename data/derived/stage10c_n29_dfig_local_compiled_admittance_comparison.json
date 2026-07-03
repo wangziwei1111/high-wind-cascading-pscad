@@ -1,6 +1,6 @@
 {
-  "local_equivalent_status": "not_reconstructible_from_available_generated_artifacts",
-  "reason": "P3.map is absent and TLine/transformer dynamic stamps are not expressed as a complete frequency-domain local Y matrix; exact DFIG PCC node naming/path cannot be recovered without inventing semantics.",
+  "local_equivalent_status": "partial_reconstruction_sufficient_to_quantify_E_28_29_RON_but_not_full_N29_to_DFIG_Y",
+  "reason": "E_28_29_1.tli provides RXB p.u./m, length and 345 kV/100 MVA base, allowing its positive-sequence series impedance and breaker RON to be quantified. P3.map is absent, so the complete N29-to-DFIG PCC Y equivalent remains unavailable.",
   "stage4_local_branch_count": 36,
   "stage9_local_branch_count": 33,
   "per_phase_N29_summary": [
@@ -350,18 +350,18 @@
   ],
   "paper_breaker_RON_audit": {
     "RON_ohm": 0.001,
-    "E_28_29_mapped_R_pu": 0.0014,
-    "E_28_29_mapped_X_pu": 0.0151,
-    "Zbase_230kV_100MVA_ohm": 529.0,
+    "TLine_data_format": "RXB p.u./m",
+    "line_length_m": 0.001,
+    "E_28_29_R_pu_per_m": 0.0014,
+    "E_28_29_X_pu_per_m": 0.0151,
     "Zbase_345kV_100MVA_ohm": 1190.25,
-    "mapped_path_magnitude_ohm_bounds": [
-      8.022158984338319,
-      18.04985771476122
-    ],
-    "RON_fraction_of_path_magnitude_bounds": [
-      5.540209877567054e-05,
-      0.00012465472224525875
-    ],
-    "conclusion": "RON is about 0.0056%-0.0125% of mapped |Z| under the two traceable voltage-base interpretations. It is not a dominant term and no causal evidence links it to the 0.058 pu VIBR minimum difference; it is not a defensible modification basis."
+    "line_R_ohm": 0.0016663499999999998,
+    "line_X_ohm": 0.017972775,
+    "line_magnitude_ohm": 0.018049857714761215,
+    "line_plus_RON_magnitude_ohm": 0.018169481652571297,
+    "RON_over_line_R": 0.6001140216641163,
+    "RON_over_line_magnitude": 0.05540209877567056,
+    "line_magnitude_relative_increase_with_RON": 0.006627417218488807,
+    "conclusion": "RON is 60.0% of reconstructed line R and 5.54% of line |Z|; it increases |Z| by about 0.663%. It is the only quantified closed-state initialization candidate and its direction is consistent with weaker N29 coupling, but available evidence does not prove it alone caused the 51%-52% flow shift or VIBR change."
   }
 }
