@@ -1,0 +1,24 @@
+{
+  "freeze_name": "stage8_output_observability_repair_freeze",
+  "generated_at_local": "2026-07-03T15:38:13",
+  "selected_line": "E_28_29_1",
+  "effective_capacity_pu": 7.872883989661206,
+  "threshold_multiplier": 1.1,
+  "protection_curve_type": "paper-inspired definite-time fallback",
+  "definite_delay_s": 5.0,
+  "only_allowed_gui_change": {
+    "component_id": 518433536,
+    "component_type": "Output Channel",
+    "current_title": "PAPER_OVL1_RELAY_ENABLE",
+    "target_title": "PAPER_OVL1_ABOVE_THRESHOLD",
+    "source_signal_must_remain": "PAPER_OVL1_ABOVE_THRESHOLD"
+  },
+  "must_not_change": [
+    "PAPER_OVL1_RELAY internals",
+    "PAPER_OVL1_BRK_CMD wiring",
+    "BRK_PAPER_OVL1_TRIAL breaker position or polarity",
+    "E_28_29_1 topology or parameters",
+    "N29 fault settings",
+    "DFIG/IBR2/IBR3/collector/chronology logic"
+  ]
+}
