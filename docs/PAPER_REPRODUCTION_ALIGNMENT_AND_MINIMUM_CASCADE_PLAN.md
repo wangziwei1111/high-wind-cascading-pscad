@@ -203,3 +203,20 @@ as a series element, and restored the physical DFIG trip at 2.44 s in the
 single 3.0 s validation Run. From this stage onward, every breaker insertion,
 line-end move, or node-label edit must pass a generated-`P3.dta` TLine endpoint
 bus and three-phase connectivity check before a Run is authorized.
+
+## Stage 11 20 s / 50 us paper-like main-chain result
+
+The repaired endpoint enabled the intended paper-like order to be observed in a
+single 20 s runtime output set at 50 us solution step and 0.01 s plot step:
+fault application at 0.50 s, fault clearing at 2.50 s, DFIG LVRT physical
+breaker opening at 2.44 s, DFIG event packet/source-unavailability at 2.44 s,
+`E_28_29_1` equivalent loading threshold crossing at 2.53 s, 5 s timer
+completion at 7.53 s, and `PAPER_OVL1` physical line-breaker opening at
+7.53 s.
+
+This updates the safe project description from pure infrastructure to
+`partial paper-like mechanism reproduction under trial-only equivalent
+protection`. The remaining boundary is unchanged: the `PAPER_OVL1` limit is a
+paper-calibrated equivalent capacity, not a recovered PNNL thermal rating, and
+the 50 us result cannot be cited as proof of 5 us numerical equivalence or a
+full multi-stage natural cascade.

@@ -123,3 +123,18 @@ that conductor restored terminal B to bus 1 without bypassing the PAPER
 breaker. A single 3.0 s Run then recorded the DFIG final breaker command, trip
 confirmation, and physical breaker-state change at 2.44 s. Future physical
 wiring edits require a generated-`P3.dta` endpoint-bus gate before any Run.
+
+## Stage 11 20 s / 50 us paper-like main-chain validation
+
+Status: `stage11_20s_50us_paper_order_first_trip_pass`. The single parsed 20 s
+runtime output records the intended main-chain order under the repaired N29
+endpoint: N29 three-phase fault at 0.50 s, DFIG physical LVRT trip and source
+availability loss at 2.44 s, `E_28_29_1` paper-calibrated loading threshold
+crossing at 2.53 s, 5.00 s sustained timer completion at 7.53 s, and
+`PAPER_OVL1` breaker opening at 7.53 s.
+
+This advances G04/G05 only for the trial-only, paper-calibrated equivalent
+first-trip mechanism. It does not recover PNNL continuous thermal limits, does
+not validate a real protection setting, does not demonstrate a second cascade
+trip, and does not prove equivalence to a different 5 us numerical run.
+Strict reproduction remains `not_achieved`.

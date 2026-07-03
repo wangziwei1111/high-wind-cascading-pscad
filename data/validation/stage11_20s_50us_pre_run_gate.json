@@ -1,0 +1,83 @@
+{
+  "audit_name": "stage11_20s_50us_pre_run_gate",
+  "generated_at_local": "2026-07-03T21:12:42+08:00",
+  "execution_status": "stage11_20s_50us_pre_run_gate_pass",
+  "run_authorization": "ONE_20S_RUN_AFTER_ZERO_ERROR_BUILD",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+  "P3_dta_sha256": "E123A935C40CC605A3F6A33BFF34422A187EE84EE7DD5CA9546B0F3D1B8C3158",
+  "actual_fault_start_s": 0.5,
+  "actual_fault_clear_s": 2.5,
+  "pre_fault_window_s": [
+    0.0,
+    0.49
+  ],
+  "E_26_29_1_terminals": [
+    {
+      "side": "A",
+      "compiled_bus": 17,
+      "phase_nodes": [
+        339,
+        340,
+        341
+      ]
+    },
+    {
+      "side": "B",
+      "compiled_bus": 1,
+      "phase_nodes": [
+        342,
+        343,
+        344
+      ]
+    }
+  ],
+  "E_28_29_1_terminals": [
+    {
+      "side": "A",
+      "compiled_bus": 18,
+      "phase_nodes": [
+        345,
+        346,
+        347
+      ]
+    },
+    {
+      "side": "B",
+      "compiled_bus": 1,
+      "phase_nodes": [
+        348,
+        349,
+        350
+      ]
+    }
+  ],
+  "PAPER_breaker_series_boundary": "N29 <-> NT_83 through RS breaker stamps; E_28_29_1 terminal passes NT_82 <-> NT_83 through meter stamps",
+  "gates": {
+    "main_sha_unchanged": true,
+    "current_trial_matches_stage10d_semantic_freeze": true,
+    "solution_time_step_exactly_50us": true,
+    "plot_step_exactly_0p01s": true,
+    "current_duration_is_stage10d_3s_and_gui_change_to_20s_is_authorized": true,
+    "single_N29_three_phase_fault_component": true,
+    "fault_start_exactly_0p50s": true,
+    "fault_clear_exactly_2p50s": true,
+    "compiled_fault_timing_matches_xml": true,
+    "E_26_29_1_B_terminal_compiled_bus_1": true,
+    "E_28_29_1_B_terminal_compiled_bus_1": true,
+    "E_26_29_1_three_phases_join_N29": true,
+    "PAPER_breaker_present_and_frozen": true,
+    "PAPER_breaker_is_series_not_bypassed": true,
+    "BRK_DFIG_present_and_frozen": true,
+    "existing_LVRT_chain_present": true,
+    "PAPER_capacity_frozen": true,
+    "PAPER_threshold_frozen": true,
+    "PAPER_delay_frozen_5s": true,
+    "all_DFIG_key_output_channels_registered": true,
+    "all_13_PAPER_output_channels_registered": true,
+    "all_31_TLine_dual_end_PQI_groups_registered": true,
+    "output_channel_inventory_preserved_448_plus_13": true,
+    "no_unapproved_semantic_model_change": true
+  },
+  "failed_gates": []
+}

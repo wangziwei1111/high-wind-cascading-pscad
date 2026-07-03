@@ -1,0 +1,8 @@
+check,status,value
+runtime_duration_20s,pass,20.0
+plot_step_0p01s,pass,0.01
+required_channels_readable,pass,True
+pre_fault_dfig_healthy,pass,"{'status': 'healthy', 'checks': {'DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH_max': 0.0, 'DFIG_LVRT_FINAL_BRK_CMD_max': 0.0, 'DFIG_BRK_STATE_max': 0.0, 'DFIG_LVRT_CASCADE_EVENT_VALID_max': 0.0, 'DFIG_LVRT_CASCADE_SOURCE_AVAILABLE_min': 1.0}}"
+dfig_after_fault_before_line_trip,pass,"{'dfig': 2.44, 'line': 7.53}"
+timer_delay_about_5s,pass,5.0
+final_class_allowed,pass,stage11_20s_50us_paper_order_first_trip_pass

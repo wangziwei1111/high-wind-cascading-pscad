@@ -46,5 +46,11 @@
   "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json",
   "stage10c_compiled_network_initial_state_status": "stage10c_read_only_audit_corrected_RON_candidate_quantified",
   "stage10c_evidence": "data/validation/stage10c_compiled_network_initial_state_final_audit.json",
-  "stage10c_model_change_allowed": false
+  "stage10c_model_change_allowed": false,
+  "stage11_20s_50us_status": "stage11_20s_50us_paper_order_first_trip_pass",
+  "stage11_event_order_status": "fault_to_dfig_to_equivalent_line_overload_timer_to_line_trip_observed",
+  "stage11_evidence": "data/validation/stage11_20s_50us_final_audit.json",
+  "stage11_boundary": "50 us single-run result with trial-only paper-calibrated equivalent E_28_29_1 protection; not proof of recovered PNNL thermal rating, 5 us equivalence, or complete multi-trip natural cascade.",
+  "strict_reproduction_status_after_stage11": "not_achieved",
+  "current_safe_name_after_stage11": "partial paper-like mechanism reproduction under trial-only equivalent protection"
 }

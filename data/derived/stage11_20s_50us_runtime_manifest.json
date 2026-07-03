@@ -1,0 +1,66 @@
+{
+  "manifest_name": "stage11_20s_50us_runtime_manifest",
+  "generated_at_local": "2026-07-03T21:13:20+08:00",
+  "execution_status": "stage11_20s_50us_runtime_outputs_detected",
+  "main_sha256_final": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256_final": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+  "solution_time_step_us": 50.0,
+  "project_file_time_duration_s": 3.0,
+  "runtime_observed_duration_s": 20.0,
+  "plot_step_us": 10000.0,
+  "runtime_output_file_count": 64,
+  "runtime_output_oldest_mtime": "2026-07-03T21:04:20+08:00",
+  "runtime_output_newest_mtime": "2026-07-03T21:04:20+08:00",
+  "inf_channel_count": 637,
+  "channels_per_out_file": 10,
+  "sample_count": 2001,
+  "time_start_s": 0.0,
+  "time_end_s": 20.0,
+  "plot_step_s_observed": 0.01,
+  "required_channels_readable": true,
+  "common_time_axis": true,
+  "fault_window_s": [
+    0.5,
+    2.5
+  ],
+  "pre_fault_window_s": [
+    0.0,
+    0.49
+  ],
+  "pre_fault_health": {
+    "status": "healthy",
+    "checks": {
+      "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH_max": 0.0,
+      "DFIG_LVRT_FINAL_BRK_CMD_max": 0.0,
+      "DFIG_BRK_STATE_max": 0.0,
+      "DFIG_LVRT_CASCADE_EVENT_VALID_max": 0.0,
+      "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE_min": 1.0
+    }
+  },
+  "event_times_s": {
+    "fault_start": 0.5,
+    "fault_clear": 2.5,
+    "dfig_duration_latch": 2.44,
+    "dfig_final_breaker_command": 2.44,
+    "dfig_trip_confirmed": 2.44,
+    "dfig_actual_breaker_open": 2.44,
+    "dfig_cascade_event_valid": 2.44,
+    "dfig_source_available_lost": 2.44,
+    "paper_threshold_crossing": 2.53,
+    "paper_above_threshold": 2.53,
+    "paper_timer_done": 7.53,
+    "paper_trip_request": 7.53,
+    "paper_breaker_command": 7.53,
+    "paper_actual_breaker_open": 7.53,
+    "paper_trip_event_valid": 7.53
+  },
+  "dfig_event_cause_code_at_valid": 1.0,
+  "dfig_cascade_first_event_time_signal_final_s": 2.43395,
+  "paper_first_trip_time_signal_final_s": -1.0,
+  "paper_loading_index_max": 2.4966485782573,
+  "paper_delay_observed_s": 5.0,
+  "raw_tline_groups": 31,
+  "raw_runtime_artifacts_not_committed": true,
+  "stage11_result_class": "stage11_20s_50us_paper_order_first_trip_pass",
+  "paper_order_assertion": "fault_to_dfig_to_line_overload_to_5s_line_trip_observed"
+}

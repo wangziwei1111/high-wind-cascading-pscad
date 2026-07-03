@@ -1,0 +1,22 @@
+{
+  "freeze_name": "stage11_20s_50us_run_freeze",
+  "gate_status": "pass",
+  "authorized_gui_changes": {
+    "time_duration": {
+      "from_s": 3.0,
+      "to_s": 20.0
+    }
+  },
+  "must_remain": {
+    "time_step_us": 50,
+    "plot_step_s": 0.01,
+    "fault_start_s": 0.5,
+    "fault_clear_s": 2.5,
+    "E_26_29_1_B_bus": 1,
+    "E_28_29_1_B_bus": 1
+  },
+  "run_count_authorized": 1,
+  "build_requirement": "Build Errors = 0 before the one Run",
+  "trial_sha_before_authorized_duration_change": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+  "P3_dta_sha_before_build": "E123A935C40CC605A3F6A33BFF34422A187EE84EE7DD5CA9546B0F3D1B8C3158"
+}
