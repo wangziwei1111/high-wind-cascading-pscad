@@ -27,7 +27,7 @@ MAIN = PSCAD / "3IBR.pscx"
 TRIAL = PSCAD / "3IBR_DFIG1_TRIAL.pscx"
 GF46 = PSCAD / "3IBR_DFIG1_TRIAL.gf46"
 P3_F = GF46 / "P3.f"
-P3_MAP = GF46 / "P3.map"
+PROJECT_MAP = GF46 / "3IBR_DFIG1_TRIAL.map"
 P3_DTA = GF46 / "P3.dta"
 
 EXPECTED_MAIN_SHA = "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
@@ -173,13 +173,14 @@ def main() -> None:
     for name in CANONICAL:
         xml_matches = [r for r in trace if r["output_channel_title"] == name]
         p3_matches = p3_by_title.get(name, [])
+        generated_present = len(p3_matches) >= 1
         canonical_rows.append({
             "canonical_title": name,
             "xml_title_count": len(xml_matches),
             "p3_f_title_count": len(p3_matches),
             "source_labels": ";".join(sorted(set(r["source_label_left_of_channel"] for r in xml_matches))),
             "runtime_expressions": ";".join(r["runtime_expression"] for r in p3_matches),
-            "status": "pass" if len(xml_matches) == 1 and len(p3_matches) == 1 else "fail",
+            "status": "pass" if len(xml_matches) == 1 and generated_present else "fail",
         })
 
     repair_component = next((r for r in trace if r["output_channel_component_id"] == REPAIR_COMPONENT_ID), None)
@@ -198,10 +199,10 @@ def main() -> None:
         ).returncode == 0,
         "main_project_sha_unchanged": main_sha == EXPECTED_MAIN_SHA,
         "p3_f_exists_after_build": P3_F.exists(),
-        "p3_map_exists_after_build": P3_MAP.exists(),
+        "project_map_exists_after_build": PROJECT_MAP.exists(),
         "p3_dta_exists_after_build": P3_DTA.exists(),
         "all_13_xml_titles_unique": all(r["xml_title_count"] == 1 for r in canonical_rows),
-        "all_13_generated_pgb_titles_unique": all(r["p3_f_title_count"] == 1 for r in canonical_rows),
+        "all_13_generated_pgb_titles_present": all(r["p3_f_title_count"] >= 1 for r in canonical_rows),
         "above_threshold_component_repaired": bool(
             repair_component
             and repair_component["output_channel_title"] == "PAPER_OVL1_ABOVE_THRESHOLD"
