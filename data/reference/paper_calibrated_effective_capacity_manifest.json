@@ -1,0 +1,17 @@
+{
+  "manifest_name": "paper_calibrated_effective_capacity_manifest",
+  "selected_network_branch_id": "E_28_29_1",
+  "parameter_name": "paper_calibrated_effective_capacity_pu_on_100MVA_base",
+  "parameter_value": 7.872883989661206,
+  "unit": "p.u. on existing 100 MVA system base",
+  "threshold_multiplier": 1.1,
+  "protection_time_parameters": {
+    "curve_type": "paper-inspired definite-time fallback",
+    "definite_delay_s": 5.0
+  },
+  "source_data": {
+    "existing_run_manifest_path": "data/derived/paper_aligned_20s_run_manifest.json",
+    "candidate_scan_path": "data/derived/paper_calibrated_first_trip_candidate_scan.csv"
+  },
+  "claim_boundary": "effective_capacity_pu is a calibrated equivalent parameter for paper-mechanism reproduction; it is not a PNNL original continuous thermal rating, not a true protection setting, and not a real thermal limit."
+}
