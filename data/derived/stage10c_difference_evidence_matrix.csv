@@ -1,0 +1,5 @@
+difference_id,description,class,materiality,causal_support,model_change_basis
+D01,PAPER_OVL1 breaker adds 0.001 ohm closed resistance,intended_PAPER_OVL1_closed_state_difference,not_material_at_reconstructed_scale,none,no
+D02,E_28_29_1 pre-fault P/I means differ by approximately 51%-52% while DFIG V/P/Q differ below 1%,pre_fault_initial_condition_difference_located_but_model_source_unresolved,material and persistent in the 0.40-0.49 s steady pre-fault window,"proves different local branch operating point, but does not identify which model/static initialization item caused it",no until source is traced
+D03,Fault-period VIBR1_2 differs across 0.9 threshold,observed_dynamic_difference_not_static_root_cause,material to LVRT outcome,effect proven; upstream static cause not located,no
+D04,N29 runtime voltage and exact DFIG PCC compiled-node path unavailable,cannot_reconstruct_from_available_compiled_artifacts,blocks direct transfer-function attribution,evidence gap,no

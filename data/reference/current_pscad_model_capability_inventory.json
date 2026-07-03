@@ -323,5 +323,8 @@
   "stage10_dfig_event_consistency_status": "stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9",
   "stage10_dfig_event_consistency_evidence": "data/validation/stage10_dfig_event_consistency_final_audit.json",
   "stage10b_fault_to_dfig_alignment_status": "blocked_no_defensible_electrical_difference_found",
-  "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json"
+  "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json",
+  "stage10c_compiled_network_initial_state_status": "stage10c_read_only_audit_complete_no_defensible_model_change",
+  "stage10c_evidence": "data/validation/stage10c_compiled_network_initial_state_final_audit.json",
+  "stage10c_model_change_allowed": false
 }

@@ -43,5 +43,8 @@
   "stage10b_fault_to_dfig_alignment_status": "blocked_no_defensible_electrical_difference_found",
   "stage10b_run_status": "not_authorized",
   "strict_reproduction_status_after_stage10b": "not_achieved",
-  "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json"
+  "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json",
+  "stage10c_compiled_network_initial_state_status": "stage10c_read_only_audit_complete_no_defensible_model_change",
+  "stage10c_evidence": "data/validation/stage10c_compiled_network_initial_state_final_audit.json",
+  "stage10c_model_change_allowed": false
 }

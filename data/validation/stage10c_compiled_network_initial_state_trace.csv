@@ -1,0 +1,9 @@
+check,status
+main_sha,pass
+trial_shas,pass
+zero_model_change,pass
+stage4_runtime,pass
+stage9_runtime,pass
+N29_compiled_graph,pass
+RON_not_dominant,pass
+no_model_change_allowed,pass

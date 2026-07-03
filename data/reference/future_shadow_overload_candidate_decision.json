@@ -20,5 +20,8 @@
   "next_run_gate": "Demonstrate from static evidence that the unchanged physical LVRT chain will see a fault-period VIBR1_2 below 0.9 long enough to operate; do not synthesize an event or timed breaker command.",
   "stage10b_alignment_decision": "no_defensible_electrical_difference_found",
   "stage10b_gui_build_run_status": "blocked_before_gui",
-  "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json"
+  "stage10b_evidence": "data/validation/stage10b_fault_to_dfig_interface_static_audit.json",
+  "stage10c_compiled_network_initial_state_status": "stage10c_read_only_audit_complete_no_defensible_model_change",
+  "stage10c_evidence": "data/validation/stage10c_compiled_network_initial_state_final_audit.json",
+  "stage10c_model_change_allowed": false
 }
