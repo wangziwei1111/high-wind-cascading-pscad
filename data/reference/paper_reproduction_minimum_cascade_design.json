@@ -1,6 +1,6 @@
 {
   "paper_source_status": "available_primary_paper_source",
-  "design_status": "minimum_chain_blocked_before_shadow_relay_due_to_unverified_line_thermal_ratings",
+  "design_status": "blocked_before_shadow_relay_due_to_zero_unspecified_raw_rate_fields",
   "controlled_existing_sequence_classification": "controlled interface-validation sequence",
   "controlled_existing_sequence_prohibited_classifications": [
     "paper cascade chain",
@@ -84,7 +84,7 @@
       ]
     }
   ],
-  "next_stage": "rating-source acquisition or paper-to-current-model rating mapping; no shadow relay until continuous thermal/protection-grade semantics are verified",
+  "next_stage": "rating-source acquisition only; no shadow relay until per-line continuous thermal limits are recovered",
   "why_this_stage_matches_the_paper": "E003, E010 and E012 place branch-flow redistribution and overload between the first source event and later protection actions.",
   "why_other_stages_are_deferred": "Loading-ratio observations exist, but relay criteria, thermal time behavior, line actuation boundaries and causal validation are still missing.",
   "primary_paper_evidence_supporting_order": [
@@ -140,5 +140,9 @@
     "semantic_classification": "uniform_model_value_or_default_parameter",
     "shadow_relay_modeling_readiness": "blocked",
     "highest_normalized_apparent_power_response_line": "E_28_29_1"
+  },
+  "tline_thermal_limit_recovery": {
+    "coverage_status": "fallback_no_protection_grade_rating_coverage",
+    "shadow_relay_modeling_readiness": "blocked"
   }
 }

@@ -33,8 +33,8 @@
       "project_path": "3IBR_DFIG1_TRIAL.pscx",
       "xml_or_fortran_evidence": "31 genuine P3 network TLines each have terminal A/B native master:multimeter P/Q/Crms bindings and six monitor-only Output Channels; final XML channel count 448 = 262 + 186",
       "existing_dynamic_evidence": "data/validation/tline_rating_semantic_final_audit.json; data/derived/full_network_tline_normalized_apparent_power_response.csv",
-      "current_status": "dynamic_raw_response_and_100mva_normalized_apparent_power_response_observed_no_protection_grade_loading",
-      "claim_boundary": "Full-network raw branch P/Q/I response and a 100-MVA-normalized apparent-power response index are available; verified thermal loading ratio, overload, relay, branch trip, causality and natural cascade remain unavailable."
+      "current_status": "dynamic_raw_response_and_exact_open_raw_branch_mapping_available_no_thermal_rating",
+      "claim_boundary": "Raw P/Q/I and exact PNNL 3IBR RAW branch mapping are available; RATE fields are zero, so protection-grade loading ratio and overload remain unavailable."
     },
     {
       "capability_id": "CAP04",
@@ -308,8 +308,9 @@
   "full_network_tline_dynamic_raw_signal_count": 186,
   "tline_rating_loading_audit_status": "semantic_reclassified_not_protection_grade",
   "tline_rating_loading_final_audit": "data/validation/tline_rating_loading_final_audit.json",
-  "line_loading_ratio_status": "unavailable_no_verified_continuous_thermal_rating",
+  "line_loading_ratio_status": "unavailable_no_recovered_continuous_thermal_rating",
   "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
   "future_shadow_overload_candidate": null,
-  "normalized_apparent_power_response_status": "available"
+  "normalized_apparent_power_response_status": "available",
+  "tline_thermal_limit_recovery_status": "exact_branch_mapping_recovered_but_no_protection_grade_ratings"
 }

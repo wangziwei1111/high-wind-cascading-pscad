@@ -15,7 +15,7 @@
   "strict_reproduction_status_after_stage2": "not_achieved",
   "current_safe_name_after_stage2": "controlled-interface validation scaffold",
   "power_flow_redistribution_status": "raw_branch_pqi_and_100mva_normalized_apparent_power_response_observed_not_causal",
-  "line_loading_ratio_status": "unavailable_no_verified_continuous_thermal_rating",
+  "line_loading_ratio_status": "unavailable_no_recovered_continuous_thermal_rating",
   "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
   "paper_aligned_20s_fault_static_status": "implemented_static_build_only",
   "paper_aligned_20s_fault_final_audit": "data/validation/paper_aligned_fault_scenario_final_audit.json",
@@ -31,5 +31,6 @@
   "strict_reproduction_status_after_loading_audit": "not_achieved",
   "current_safe_name_after_loading_audit": "controlled-interface validation scaffold",
   "future_shadow_overload_candidate": null,
-  "highest_normalized_apparent_power_response_line": "E_28_29_1"
+  "highest_normalized_apparent_power_response_line": "E_28_29_1",
+  "tline_thermal_limit_recovery_status": "fallback_no_protection_grade_rating_coverage"
 }

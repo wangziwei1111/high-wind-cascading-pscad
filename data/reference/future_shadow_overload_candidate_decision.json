@@ -1,14 +1,10 @@
 {
   "shadow_relay_modeling_readiness": "blocked",
   "recommended_candidate_line": null,
-  "blocking_reason": "Total MVA Rating lacks verified continuous thermal / protection-grade semantics",
-  "required_next_task": "Find or import auditable per-line continuous thermal limits, or build a reproducible mapping between paper line ratings and current PSCAD TLine instances before any shadow overload relay modeling.",
+  "blocking_reason": "No auditable per-line continuous thermal limits were recovered; current PSCAD TLines map to open PNNL 3IBR RAW branches, but mapped branch RATE fields are zero/unspecified.",
+  "next_task": "Continue searching for current PNNL/PSCAD original branch-rating data or obtain thesis-model line continuous limits that can be mapped to current TLines; do not enter relay modeling before that evidence exists.",
   "highest_normalized_apparent_power_response_line": "E_28_29_1",
-  "current_safe_term_for_E_28_29_1": "highest normalized apparent-power response line",
-  "prohibited_terms": [
-    "shadow-relay candidate",
-    "overload indication",
-    "protection-grade loading ratio"
-  ],
-  "semantic_audit": "data/reference/tline_total_mva_rating_semantic_audit.json"
+  "thesis_relevant_line": "E_16_19_1",
+  "coverage_status": "fallback_no_protection_grade_rating_coverage",
+  "mapping_audit": "data/reference/current_tline_external_rating_mapping.json"
 }

@@ -143,3 +143,12 @@ ratio. `E_28_29_1` remains only the highest normalized apparent-power response
 line. Shadow overload relay modeling is blocked until auditable per-line
 continuous thermal limits, or a reproducible paper-to-current-model rating
 mapping, are available.
+
+## Stage-six thermal-limit recovery result
+
+Stage six recovered exact branch identity mapping from the current PSCAD TLines
+to the PNNL 3IBR RAW network branch table, but did not recover usable continuous
+thermal limits: all mapped current-network branch RATE fields are zero.  The
+safe quantity remains the `100-MVA-normalized apparent-power response index`;
+`protection-grade loading ratio` remains unavailable, and shadow relay modeling
+remains blocked.
