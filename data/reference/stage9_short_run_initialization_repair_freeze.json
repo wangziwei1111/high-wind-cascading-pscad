@@ -1,0 +1,185 @@
+{
+  "freeze_name": "stage9_short_run_initialization_repair_freeze",
+  "generated_at_local": "2026-07-03T17:22:49",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_before_repair": "1AA180E4B8C784B3BAE14453261672783B21B87EA157C56DB26649F98E78992F",
+  "trial_semantic_fingerprint_excluding_two_authorized_values": "5D1F0B63A623A269E9E89A2253DD361B8DD357743FE6E7D18FD8FBC710AA361D",
+  "selected_line": "E_28_29_1",
+  "effective_capacity_pu": 7.872883989661206,
+  "threshold_multiplier": 1.1,
+  "definite_delay_s": 5.0,
+  "authorized_changes": [
+    {
+      "component_id": 522397627,
+      "port": "Timer VOff/bottom",
+      "from": 1.0,
+      "to": 0.0
+    },
+    {
+      "project_setting": "time_duration",
+      "from": 20.0,
+      "to": 9.0
+    }
+  ],
+  "required_preserved_timer_latch": {
+    "timer": {
+      "component_id": 2132554116,
+      "definition": "master:timer",
+      "trigger_threshold": "0.5",
+      "delay_until_on": "5.0 [s]",
+      "duration_on": "100 [s]"
+    },
+    "timer_von": {
+      "component_id": 2118574082,
+      "value": "1.0",
+      "port": "VOn/top"
+    },
+    "timer_voff": {
+      "component_id": 522397627,
+      "value": "1.0",
+      "port": "VOff/bottom"
+    },
+    "latch": {
+      "component_id": 897892378,
+      "mode": "2",
+      "type": "1",
+      "q_initial": "0",
+      "interpolation": "0"
+    },
+    "latch_reset": {
+      "component_id": 801784199,
+      "value": "0",
+      "port": "R"
+    },
+    "run_duration_s": 20.0,
+    "emt_time_step_us": 5.0,
+    "plot_step_us": 10000.0
+  },
+  "required_stage8_channel_mapping": {
+    "PAPER_OVL1_S_A_PU": {
+      "pgb_index": 183,
+      "out_file": "3IBR_DFIG1_TRIAL_19.out",
+      "data_column_after_time": 3
+    },
+    "PAPER_OVL1_S_B_PU": {
+      "pgb_index": 179,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 9
+    },
+    "PAPER_OVL1_S_MAX_PU": {
+      "pgb_index": 177,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 7
+    },
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU": {
+      "pgb_index": 173,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 3
+    },
+    "PAPER_OVL1_LOADING_INDEX_EQ": {
+      "pgb_index": 170,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 10
+    },
+    "PAPER_OVL1_ABOVE_THRESHOLD": {
+      "pgb_index": 168,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 8
+    },
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE": {
+      "pgb_index": 166,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 6
+    },
+    "PAPER_OVL1_TRIP_REQUEST": {
+      "pgb_index": 181,
+      "out_file": "3IBR_DFIG1_TRIAL_19.out",
+      "data_column_after_time": 1
+    },
+    "PAPER_OVL1_BRK_CMD": {
+      "pgb_index": 178,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 8
+    },
+    "PAPER_OVL1_BRK_STATE": {
+      "pgb_index": 174,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 4
+    },
+    "PAPER_OVL1_TRIP_EVENT_VALID": {
+      "pgb_index": 172,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 2
+    },
+    "PAPER_OVL1_FIRST_TRIP_TIME_S": {
+      "pgb_index": 169,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 9
+    },
+    "PAPER_OVL1_RELAY_ENABLE": {
+      "pgb_index": 92,
+      "out_file": "3IBR_DFIG1_TRIAL_10.out",
+      "data_column_after_time": 2
+    }
+  },
+  "required_generated_pgb_mapping": {
+    "PAPER_OVL1_S_A_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_S_A_PU;"
+    },
+    "PAPER_OVL1_S_B_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_S_B_PU;"
+    },
+    "PAPER_OVL1_S_MAX_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_S_MAX_PU;"
+    },
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU;"
+    },
+    "PAPER_OVL1_LOADING_INDEX_EQ": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_LOADING_INDEX_EQ;"
+    },
+    "PAPER_OVL1_ABOVE_THRESHOLD": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_ABOVE_THRESHOLD;"
+    },
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_TIMER_OR_CURVE_STATE;"
+    },
+    "PAPER_OVL1_TRIP_REQUEST": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;"
+    },
+    "PAPER_OVL1_BRK_CMD": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;"
+    },
+    "PAPER_OVL1_BRK_STATE": {
+      "pgb_offset": null,
+      "runtime_expressions": "REAL(PAPER_OVL1_BRK_STATE);"
+    },
+    "PAPER_OVL1_TRIP_EVENT_VALID": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;"
+    },
+    "PAPER_OVL1_FIRST_TRIP_TIME_S": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_FIRST_TRIP_TIME_S;"
+    },
+    "PAPER_OVL1_RELAY_ENABLE": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_RELAY_ENABLE;"
+    }
+  },
+  "expected_generated_code_after_build": [
+    "RT_17 = 0.0",
+    "RT_16 = 1.0",
+    "RT_18 = TIMER3(5.0, 100.0, RT_15, 0.5, RT_17, RT_16)",
+    "CALL E_XFLIP1_CFG(2,1,0,0)"
+  ]
+}

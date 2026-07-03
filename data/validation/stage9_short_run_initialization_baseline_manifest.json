@@ -1,0 +1,23 @@
+{
+  "manifest_name": "stage9_short_run_initialization_baseline_manifest",
+  "created_at_local": "2026-07-03T17:22:49",
+  "git_head_start": "db5fcb4abbe6eaa0e53a20224541756ae7a2d8ef",
+  "main_sha_start": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_start": "1AA180E4B8C784B3BAE14453261672783B21B87EA157C56DB26649F98E78992F",
+  "backup_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage9_before_short_run_initialization_repair",
+  "backup_file_count": 316,
+  "backup_created_at": "2026-07-03T17:14:59",
+  "selected_line": "E_28_29_1",
+  "effective_capacity_pu": 7.872883989661206,
+  "threshold_multiplier": 1.1,
+  "definite_delay_s": 5.0,
+  "expected_threshold_crossing_s": 2.53,
+  "expected_trip_s": 7.53,
+  "run_end_s": 9.0,
+  "stage8_dynamic_audit_path": "data/validation/stage8_paper_ovl1_dynamic_final_audit.json",
+  "stage8_runtime_channel_inventory_path": "data/derived/stage8_paper_ovl1_runtime_channel_inventory.json",
+  "stage8_relay_trace_path": "data/derived/stage8_paper_ovl1_relay_trace.csv",
+  "stage8_result_commit": "db5fcb4abbe6eaa0e53a20224541756ae7a2d8ef",
+  "runtime_channel_count": 13,
+  "runtime_plot_step_s": 0.01
+}
