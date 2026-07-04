@@ -239,3 +239,17 @@ The safe project description is now `trial-only paper-like two-line mechanism
 reproduction under equivalent capacities`. Strict paper reproduction remains
 unclaimed because line capacities are calibrated equivalents, not recovered
 PNNL continuous thermal limits or real protection settings.
+
+## Stage 15 paper 33/35/38 wind-source refactor preparation
+
+Status: `stage15_static_ready_for_gui_refactor`. Stage 15 freezes a new
+mainline that supersedes the Stage-14 direction: restore bus30 as a
+synchronous generator and replace the paper buses 33/35/38 with three
+independent wind-farm/LVRT source branches. The Stage-12/13 bus30-source-layout
+result is retained only as `legacy_bus30_source_layout_protection_experiment`.
+
+No PSCAD model edit, Build, or Run has been performed in this preparation
+commit. The clean GUI baseline is the Stage-7 backup because it preserves the
+network observability layer while excluding the later PAPER_OVL1/PAPER_OVL2
+relay chain. Strict reproduction remains unclaimed until the new trial is
+built, pre-run gated, and dynamically parsed.

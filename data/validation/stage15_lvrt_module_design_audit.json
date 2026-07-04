@@ -1,0 +1,11 @@
+{
+  "audit_name": "stage15_lvrt_module_design_audit",
+  "status": "pass",
+  "module_name": "PAPER_WF_LVRT_TRIP",
+  "instances": [
+    "WF33_LVRT_TRIP",
+    "WF35_LVRT_TRIP",
+    "WF38_LVRT_TRIP"
+  ],
+  "state_independence_required": true
+}

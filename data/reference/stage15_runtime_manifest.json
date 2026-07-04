@@ -1,0 +1,9 @@
+{
+  "audit_name": "stage15_runtime_manifest",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "new_trial_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_PAPER_WF33_35_38_TRIAL.pscx",
+  "new_gf46_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_PAPER_WF33_35_38_TRIAL.gf46",
+  "status": "runtime_missing",
+  "runtime_status": "runtime_missing",
+  "claim_boundary": "Raw runtime files are not committed to Git."
+}

@@ -1,0 +1,28 @@
+{
+  "audit_name": "stage15_gui_change_manifest",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "new_trial_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_PAPER_WF33_35_38_TRIAL.pscx",
+  "baseline_to_open": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage7_before_paper_calibrated_first_trip\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "save_as_required": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_PAPER_WF33_35_38_TRIAL.pscx",
+  "allowed_new_model_boundary": [
+    "WF33",
+    "WF35",
+    "WF38",
+    "PAPER_WF_LVRT_TRIP",
+    "three local windfarm breakers",
+    "15 output channels"
+  ],
+  "absolute_do_not_touch": [
+    "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "legacy Stage9-13 trial outputs",
+    "old runtime files"
+  ],
+  "build_repair_scope": [
+    "wiring omission",
+    "label spelling",
+    "port direction",
+    "output channel registration",
+    "duplicate names"
+  ]
+}

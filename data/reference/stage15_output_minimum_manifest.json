@@ -1,0 +1,32 @@
+{
+  "audit_name": "stage15_output_minimum_manifest",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "new_output_channel_count": 15,
+  "new_output_channels": [
+    "WF33_PCC_V",
+    "WF33_PCC_P",
+    "WF33_PCC_Q",
+    "WF33_LVRT_TRIP_REQUEST",
+    "WF33_BRK_STATE",
+    "WF35_PCC_V",
+    "WF35_PCC_P",
+    "WF35_PCC_Q",
+    "WF35_LVRT_TRIP_REQUEST",
+    "WF35_BRK_STATE",
+    "WF38_PCC_V",
+    "WF38_PCC_P",
+    "WF38_PCC_Q",
+    "WF38_LVRT_TRIP_REQUEST",
+    "WF38_BRK_STATE"
+  ],
+  "backend_only": [
+    "LVRT timer state",
+    "LVRT region code",
+    "event packet",
+    "source availability",
+    "breaker command",
+    "chronology monitor",
+    "collector"
+  ],
+  "status": "ready_for_gui_mapping"
+}

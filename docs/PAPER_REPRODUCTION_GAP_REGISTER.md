@@ -158,3 +158,12 @@ This demonstrates a trial-only, paper-like two-line mechanism under
 paper-calibrated equivalent capacities. It still does not prove real PNNL
 thermal ratings, real protection settings, 5 us equivalence, full natural
 cascade reproduction, third trip, or protection coordination.
+
+## Stage 15 33/35/38 wind-source refactor preparation
+
+G01 and G02/G07 are not closed yet, but the next mechanism path is now frozen:
+bus30 must be restored as `G_30_0_1_DYR`, while buses 33/35/38 become three
+independent paper-aligned wind-farm branches with local LVRT trip logic.
+The selected clean baseline is the Stage-7 backup, not the Stage-12/13 legacy
+trial. This is a static GO for GUI refactor only; no Build, Run, or strict
+paper reproduction claim is permitted before the Stage-15 pre-run gate passes.

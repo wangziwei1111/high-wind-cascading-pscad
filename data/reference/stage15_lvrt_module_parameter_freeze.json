@@ -1,0 +1,41 @@
+{
+  "audit_name": "stage15_lvrt_module_parameter_freeze",
+  "generated_at_local": "2026-07-04T15:08:32+08:00",
+  "module_name": "PAPER_WF_LVRT_TRIP",
+  "instances": [
+    "WF33_LVRT_TRIP",
+    "WF35_LVRT_TRIP",
+    "WF38_LVRT_TRIP"
+  ],
+  "state_independence_required": true,
+  "input_rule": "Each instance reads only its own PCC voltage.",
+  "timer_method": "minimum-voltage latch within continuous low/high voltage event",
+  "trip_latch_behavior": "once trip_request=1, latch for the run and drive only the local windfarm breaker",
+  "output_channels_allowed": [
+    "WF33_PCC_V",
+    "WF33_PCC_P",
+    "WF33_PCC_Q",
+    "WF33_LVRT_TRIP_REQUEST",
+    "WF33_BRK_STATE",
+    "WF35_PCC_V",
+    "WF35_PCC_P",
+    "WF35_PCC_Q",
+    "WF35_LVRT_TRIP_REQUEST",
+    "WF35_BRK_STATE",
+    "WF38_PCC_V",
+    "WF38_PCC_P",
+    "WF38_PCC_Q",
+    "WF38_LVRT_TRIP_REQUEST",
+    "WF38_BRK_STATE"
+  ],
+  "paper_wind_layout": {
+    "WF33": 33,
+    "WF35": 35,
+    "WF38": 38
+  },
+  "paper_reported_wind_power_MW": {
+    "WF33": 632.0,
+    "WF35": 650.0,
+    "WF38": 850.0
+  }
+}

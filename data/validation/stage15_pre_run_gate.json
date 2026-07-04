@@ -1,0 +1,39 @@
+{
+  "audit_name": "stage15_pre_run_gate",
+  "generated_at_local": "2026-07-04T15:06:31+08:00",
+  "gate_status": "BLOCKED",
+  "checks": {
+    "main_sha_unchanged": true,
+    "legacy_trial_unchanged": true,
+    "new_trial_exists": false,
+    "new_gf46_exists": false,
+    "new_inf_exists": false,
+    "new_p3_dta_exists": false,
+    "new_p3_map_exists": false,
+    "freeze_files_exist": true
+  },
+  "required_new_output_channels": [
+    "WF33_PCC_V",
+    "WF33_PCC_P",
+    "WF33_PCC_Q",
+    "WF33_LVRT_TRIP_REQUEST",
+    "WF33_BRK_STATE",
+    "WF35_PCC_V",
+    "WF35_PCC_P",
+    "WF35_PCC_Q",
+    "WF35_LVRT_TRIP_REQUEST",
+    "WF35_BRK_STATE",
+    "WF38_PCC_V",
+    "WF38_PCC_P",
+    "WF38_PCC_Q",
+    "WF38_LVRT_TRIP_REQUEST",
+    "WF38_BRK_STATE"
+  ],
+  "manual_gate_items_after_build": [
+    "Verify exactly WF33/WF35/WF38 at bus33/35/38.",
+    "Verify bus30 is G_30_0_1_DYR and no bus30 DFIG/IBR remains.",
+    "Verify each LVRT reads only its own PCC voltage.",
+    "Verify no OVL1/OVL2 or fixed-time path drives windfarm breakers."
+  ],
+  "claim_boundary": "This gate is automatic file/build-integrity gate plus explicit checklist. It does not run PSCAD."
+}

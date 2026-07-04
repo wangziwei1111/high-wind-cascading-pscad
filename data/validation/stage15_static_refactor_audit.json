@@ -1,0 +1,18 @@
+{
+  "audit_name": "stage15_static_refactor_audit",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "stage15_static_status": "stage15_static_ready_for_gui_refactor",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "main_sha_expected": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "legacy_trial_sha": "74EB2656E6F65106F519F1F1D85492CBF6960008588835F219D8F88B27C483CE",
+  "legacy_trial_sha_expected": "74EB2656E6F65106F519F1F1D85492CBF6960008588835F219D8F88B27C483CE",
+  "backup_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage15_before_paper_wf33_35_38_refactor",
+  "checks": {
+    "main_sha_unchanged": true,
+    "legacy_trial_present": true,
+    "clean_baseline_go": true,
+    "bus30_restoration_policy_user_confirmed": true,
+    "new_trial_not_created_by_backend": true
+  },
+  "claim_boundary": "Static GO only. No PSCAD model edit, Build or Run was performed by this script."
+}

@@ -1,0 +1,7 @@
+{
+  "audit_name": "stage15_windfarm_power_balance_audit",
+  "status": "pass",
+  "policy": "per_bus_replacement_equivalence",
+  "noted_difference_MW": 20.0,
+  "claim_boundary": "Preserves pre-fault power balance; does not claim strict paper windfarm power equivalence."
+}

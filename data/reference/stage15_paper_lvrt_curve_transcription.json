@@ -1,0 +1,73 @@
+{
+  "audit_name": "stage15_paper_lvrt_curve_transcription",
+  "generated_at_local": "2026-07-04T15:08:32+08:00",
+  "paper_evidence_id": "E004",
+  "paper_section": "2.3.2 wind turbine voltage ride-through protection",
+  "paper_figure_or_equation": "Fig. 2-3; Eq. 2-8",
+  "source_audit": "data/reference/type3_dfig_lvrt_trip_criterion_audit.json",
+  "regions": [
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8",
+      "voltage_condition": "Vs <= 0.20",
+      "delay_condition": "0 s immediate trip",
+      "implementation_expression": "trip_request = 1 immediately",
+      "reset_condition": "latched until run end / breaker open",
+      "confidence": "project_boundary_decision_recorded"
+    },
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8; Fig. 2-3",
+      "voltage_condition": "0.20 < Vs < 0.90",
+      "delay_condition": "0.625 + ((Vs - 0.20)/(0.90 - 0.20))*(2.0 - 0.625)",
+      "implementation_expression": "use minimum-voltage latch inside one continuous low-voltage event, trip when elapsed >= t_allow(Vs_min)",
+      "reset_condition": "if Vs >= 0.90 before latch, reset low-voltage event",
+      "confidence": "high_for_interior_branch"
+    },
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8",
+      "voltage_condition": "0.90 <= Vs < 1.10",
+      "delay_condition": "healthy/no low-voltage trip timing",
+      "implementation_expression": "low-voltage timer reset if not already latched",
+      "reset_condition": "normal state",
+      "confidence": "engineering_translation"
+    },
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8",
+      "voltage_condition": "1.10 <= Vs < 1.20",
+      "delay_condition": "10.0 s",
+      "implementation_expression": "high-voltage delayed trip branch",
+      "reset_condition": "reset if voltage returns to normal before latch",
+      "confidence": "paper_formula_transcribed"
+    },
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8",
+      "voltage_condition": "1.20 <= Vs < 1.25",
+      "delay_condition": "1.0 s",
+      "implementation_expression": "high-voltage delayed trip branch",
+      "reset_condition": "reset if voltage returns to normal before latch",
+      "confidence": "paper_formula_transcribed"
+    },
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8",
+      "voltage_condition": "1.25 <= Vs < 1.30",
+      "delay_condition": "0.5 s",
+      "implementation_expression": "high-voltage delayed trip branch",
+      "reset_condition": "reset if voltage returns to normal before latch",
+      "confidence": "paper_formula_transcribed"
+    },
+    {
+      "paper_page": "11-12 (PDF 19-20)",
+      "paper_figure_or_equation": "Eq. 2-8",
+      "voltage_condition": "Vs >= 1.30",
+      "delay_condition": "0 s immediate trip",
+      "implementation_expression": "trip_request = 1 immediately",
+      "reset_condition": "latched until run end / breaker open",
+      "confidence": "paper_formula_transcribed"
+    }
+  ]
+}
