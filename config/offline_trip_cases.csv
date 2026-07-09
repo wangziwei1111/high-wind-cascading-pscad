@@ -1,0 +1,5 @@
+case_id,wf38_trip_time_s,wf35_trip_time_s,wf33_trip_time_s,notes
+baseline_manual_verified,0.57,0.67,0.77,Matches the three-wind-farm manual trip case verified in PSCAD.
+delayed_all_50ms,0.62,0.72,0.82,Smoke case for offline protection iteration plumbing.
+wf38_first_wf35_hold_wf33_hold,0.57,5.00,5.00,Trips only WF38 within the 5 s simulation window.
+no_trip_hold_all,99.00,99.00,99.00,Keeps all three wind farms connected throughout the 5 s simulation window.

@@ -1,0 +1,4 @@
+wind_id,bus_id,replaces_generator_id,breaker_id,obs_voltage_index,obs_power_index,command_index,status
+wind_33,33,gen_33,BR_WIND_33,1,1,1,planned
+wind_35,35,gen_35,BR_WIND_35,2,2,2,planned
+wind_38,38,gen_38,BR_WIND_38,3,3,3,planned

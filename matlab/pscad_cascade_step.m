@@ -11,8 +11,22 @@ if nargin < 5 || isempty(settings)
 end
 
 [raw, state, events] = cfm.VRTProtection(t, dt, obs, state, settings);
+events = cfm.stampEvents(events, t);
+
+if isfield(obs, 'line_loading_pu') && isfield(obs, 'line_online')
+    if ~isfield(state, 'overload') || isempty(state.overload)
+        state.overload = struct();
+    end
+    lineSettings = struct();
+    if isfield(settings, 'overload')
+        lineSettings = settings.overload;
+    end
+    [lineTrip, state.overload, lineEvents] = cfm.OverloadProtection( ...
+        obs.line_loading_pu(:), dt, logical(obs.line_online(:)), lineSettings, state.overload);
+    raw.lineTrip = lineTrip;
+    events = [events(:); cfm.stampEvents(lineEvents(:), t)];
+end
 cmd = cfm.CommandDispatcher(raw, obs);
-cmd.any_action = any(cmd.wind_disconnect_cmd(:));
 cmd.simulation_stop_cmd = false;
 cmd.matlab_command_time_s = t;
 state.last_command_time_s = t;

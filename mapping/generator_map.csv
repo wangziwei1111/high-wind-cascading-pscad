@@ -1,0 +1,11 @@
+generator_id,bus_id,breaker_id,obs_index,command_index,role,status
+gen_30,30,BR_GEN_30,1,1,conventional,planned
+gen_31,31,BR_GEN_31,2,2,conventional,planned
+gen_32,32,BR_GEN_32,3,3,conventional,planned
+gen_33,33,BR_GEN_33,4,4,replaced_by_wind,planned
+gen_34,34,BR_GEN_34,5,5,conventional,planned
+gen_35,35,BR_GEN_35,6,6,replaced_by_wind,planned
+gen_36,36,BR_GEN_36,7,7,conventional,planned
+gen_37,37,BR_GEN_37,8,8,conventional,planned
+gen_38,38,BR_GEN_38,9,9,replaced_by_wind,planned
+gen_39,39,BR_GEN_39,10,10,conventional,planned
