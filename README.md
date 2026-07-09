@@ -4,6 +4,36 @@ Independent clean-rebuild framework for cascading-failure studies in a high wind
 
 This repository does not contain redistributed third-party PSCAD projects unless their redistribution rights are explicitly confirmed. PSCAD assembly, wiring, compilation, initialization, and simulation must be completed manually in PSCAD GUI and recorded as validation evidence.
 
+## Current Route
+
+The current project route is:
+
+```text
+offline MATLAB protection iteration + PSCAD feedback replay
+```
+
+or, equivalently:
+
+```text
+offline quasi-dynamic protection loop
+```
+
+The live PSCAD-MATLAB runtime coupling used by the paper is not the current
+project target because the required PSCAD 4.6.2 + MATLAB 2016b environment is
+not reliably reproducible here. This repository must not claim that the original
+live runtime interface has been completed.
+
+The substitute route preserves the core mechanism:
+
+- PSCAD performs the electromagnetic transient physical run.
+- MATLAB evaluates protection decisions from exported PSCAD observations.
+- PSCAD executes scheduled breaker feedback in a replay run.
+- MATLAB audits the resulting event chain.
+
+The current minimum verified loop is WFFB1: a WF38-side PSCAD three-phase fault
+produces a voltage trace, MATLAB computes `WF38_TRIP_TIME = 2.02 s`, and PSCAD
+feedback replay opens the WF38 breaker at `2.02 s` while WF33/WF35 remain online.
+
 ## Current clean rebuild scope
 
 - A previous dirty-but-working PSCAD-MATLAB interaction model is treated as a frozen reference for interface extraction.
@@ -27,6 +57,9 @@ Use the PNNL Enhanced IEEE 39-Bus System three-IBR PSCAD project as the network 
 - Interface shell design: `docs/pscad_interface_shell_design.md`
 - Signal contract: `docs/pscad_matlab_signal_contract.md`
 - Breaker rules: `docs/breaker_mapping_rules.md`
+- Offline loop route: `docs/OFFLINE_PSCAD_MATLAB_PROTECTION_LOOP.md`
+- Live coupling boundary: `docs/LIVE_COUPLING_LIMITATION_AND_SUBSTITUTE.md`
+- WFFB1 evidence: `docs/WFFB1_REAL_FAULT_FEEDBACK_EVIDENCE.md`
 - Mapping tables: `mapping/*.csv`
 - MATLAB main entry: `matlab/pscad_cascade_step.m`
 

@@ -4,7 +4,8 @@ root = fileparts(mfilename('fullpath'));
 addpath(root);
 addpath(fullfile(root, 'tests'));
 results = [runtests('testProtectionLogic'), runtests('testPscadCascadeStep'), ...
-    runtests('testCommandDispatcher'), runtests('testWindVRTTripShell')];
+    runtests('testCommandDispatcher'), runtests('testWindVRTTripShell'), ...
+    runtests('testOfflineFeedbackReplay')];
 disp(table(results));
 assertSuccess(results);
 end

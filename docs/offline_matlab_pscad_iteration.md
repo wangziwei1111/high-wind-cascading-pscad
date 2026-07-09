@@ -60,6 +60,33 @@ config/offline_trip_cases.csv
 
 PSCAD remains the EMT simulation engine. MATLAB owns the protection decision and timing logic. The repository does not claim live PSCAD-MATLAB co-simulation for this stage.
 
+For Stage 17 and later, the preferred schedule/audit tools are:
+
+```text
+matlab/compute_trip_schedule_from_pscad_trace.m
+matlab/export_trip_schedule.m
+matlab/audit_feedback_replay.m
+matlab/+cfm/TraceReader.m
+matlab/+cfm/TripScheduleWriter.m
+matlab/+cfm/FeedbackReplayAuditor.m
+```
+
+`compute_trip_schedule_from_pscad_trace` exports the standard long-form
+`trip_schedule.csv` schema:
+
+```text
+target_id,target_type,action,trip_time_s,source_protection,measured_value_at_decision,criterion,notes
+```
+
+`audit_feedback_replay` consumes the observation trace, trip schedule, and
+feedback trace, then emits:
+
+```text
+event_chain.csv
+run_summary.json
+validation_report.md
+```
+
 ## Verified Real-Fault Feedback Loop
 
 The first real PSCAD electrical-disturbance feedback loop has been verified locally:
