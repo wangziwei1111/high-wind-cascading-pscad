@@ -1,0 +1,347 @@
+<Meta name="Orginal">
+  <messagelist>
+    <message status="normal" label="build" scope="Orginal" groupid="100006"><![CDATA[Generating 'C:\pscad_work\pnnl_clean_no_ibr_no_outputs_build\Enhanced IEEE 39-Bus System\PSCAD\Orginal.gf46\Orginal.map'.]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100014"><![CDATA[The total number of live nodes: 312]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="400000"><![CDATA[Time for Compile: 0ms  Make: 125ms]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100015"><![CDATA[Will execute (1): call C:\Program Files (x86)\GFortran\4.2.1\bin\gf46vars.bat]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100015"><![CDATA[Will execute (1): call "C:\Program Files (x86)\GFortran\4.2.1\bin\gf46vars.bat"]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100015"><![CDATA[Will execute (2): make -f Orginal.mak]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100015"><![CDATA[Will execute (2): "C:\pscad_work\pnnl_clean_no_ibr_no_outputs_build\Enhanced IEEE 39-Bus System\PSCAD\Orginal.gf46\Orginal.mak.bat"]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100005"><![CDATA[Creating EMTDC executable...]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="0"><![CDATA[C:\pscad_work\pnnl_clean_no_ibr_no_outputs_build\Enhanced IEEE 39-Bus System\PSCAD\Orginal.gf46>call "C:\Program Files (x86)\GFortran\4.2.1\bin\gf46vars.bat" ]]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="100012"><![CDATA[Linking objects and libraries into binary 'Orginal.exe']]></message>
+    <message status="normal" label="build" scope="Orginal" groupid="400000"><![CDATA[Solve Time = 485ms]]></message>
+  </messagelist>
+  <Catalog count="0" />
+  <ViewContext>
+    <Window defn="Orginal:P3" call="0" />
+  </ViewContext>
+  <List classid="View">
+    <View name="Main" zoomlevel="6" scrollx="0" scrolly="0" />
+    <View name="P1" zoomlevel="6" scrollx="0" scrolly="0" />
+    <View name="P3" zoomlevel="7" scrollx="3542" scrolly="638" />
+  </List>
+  <Output device="EMTDC" version="2010" date="2026/07/09" time="11:54:13.000000">
+    <Domain name="Time" unit="s" mult="0.0" skew="0.0">
+      <Sample rate="100.0" end="500" />
+    </Domain>
+    <List classid="Analog">
+      <Analog name="Main(0)\P1(0)\P3(0):WF38_PCC_P" index="0" id="1088235517:0" label="" dim="1" unit="MW" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF38_WTG_V" index="1" id="691111594:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF38_PCC_Q" index="2" id="1420144288:0" label="" dim="1" unit="MVAr" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF38_PCC_V" index="3" id="1236561410:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF33_PCC_P" index="4" id="1367501060:0" label="" dim="1" unit="MW" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF33_WTG_V" index="5" id="2024714968:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF33_PCC_Q" index="6" id="1224929118:0" label="" dim="1" unit="MVAr" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF33_PCC_V" index="7" id="9074595:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF35_PCC_P" index="8" id="481116597:0" label="" dim="1" unit="MW" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF35_WTG_V" index="9" id="347586797:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF35_PCC_Q" index="10" id="2103678964:0" label="" dim="1" unit="MVAr" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF35_PCC_V" index="11" id="254045112:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF35_BRK_STATE" index="12" id="888250557:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF33_BRK_STATE" index="13" id="1550459894:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0):WF38_BRK_STATE" index="14" id="1570577665:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Vst1" index="15" id="2136645807:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Vst2" index="18" id="998158008:0" label="" dim="3" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Vrms_pu" index="21" id="1251069593:0" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):I_trm" index="22" id="236270589:0" label="" dim="3" unit="" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Iabc" index="25" id="10134851:0" label="" dim="3" unit="" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Vrms_bus" index="28" id="25400871:0" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):wind torque" index="29" id="130158713:0" label="" dim="1" unit="" min="0" max="1.6" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):TurbStart" index="30" id="165884758:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):TM" index="31" id="1155797447:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):TE" index="32" id="193915475:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):BRK ord" index="33" id="1453905914:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Qg_pu" index="34" id="1950462825:0" label="" dim="1" unit="" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Pg_pu" index="35" id="1973272135:0" label="" dim="1" unit="" min="-0.8" max="0.8" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Dblk_VdcCtrl" index="36" id="484023928:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Dblk_Rotor" index="37" id="1509570496:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Qg_pu" index="38" id="602083064:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1):Pg_pu" index="39" id="146941207:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\Synchronization(1):V_Trf" index="40" id="1893471464:0" label="" dim="3" unit="kV" min="-200" max="200" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\Synchronization(1):V_Mach" index="43" id="654036818:0" label="" dim="3" unit="kV" min="-200" max="200" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\Synchronization(1):Vcom C" index="46" id="333102457:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\Synchronization(1):Vcom B" index="47" id="971433700:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\Synchronization(1):Synch_Com" index="48" id="397875211:0" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\Synchronization(1):VcomA" index="49" id="1224917453:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):Pitch" index="50" id="1240074579:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):P_aero" index="51" id="1365233294:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):Pwind_pu" index="52" id="1935259979:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):Cp_Pol" index="53" id="1495528138:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):windtorq" index="54" id="1935612001:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):lambda" index="55" id="1213208726:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):Wpu" index="56" id="904354932:0" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\WindTurbine_MechModel(1):Pitch_Det" index="57" id="127214332:0" label="" dim="1" unit="Deg" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1):Ecap_Det" index="58" id="517592891:0" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1):I_RS" index="59" id="120978033:0" label="" dim="3" unit="kA" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1):V_RS" index="62" id="849161602:0" label="" dim="3" unit="kV" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1):Iconv" index="65" id="136417811:0" label="" dim="3" unit="kA" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):V abc" index="68" id="1167475650:0" label="" dim="3" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):E_ord_pu" index="71" id="283429573:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Varef" index="72" id="931215908:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Vq_pu_Gsc" index="75" id="509595362:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Vd_pu_Gsc" index="76" id="1179130106:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Iq_pu_Gsc" index="77" id="249502556:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Id_pu_Gsc" index="78" id="2021134085:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Ed_pu_Gsc" index="79" id="1305259294:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Edc filtered" index="80" id="1896366184:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Iq_ord_pu" index="81" id="1758595852:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Eq_pu_Gsc" index="82" id="585307959:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Id_ord_pu" index="83" id="1954424368:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Q_ord" index="84" id="1922000123:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Qpu" index="85" id="348539369:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Grid_side_Controls(1):Edc_pu" index="86" id="1110651999:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Voltage_dip" index="87" id="1639121404:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Qg_pu" index="88" id="1408059791:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Vrms_bus" index="89" id="484162274:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Imax_pu" index="90" id="745377609:0" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Irotor" index="91" id="298178345:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Pg_pu" index="94" id="1599401751:0" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Vrms_bus" index="95" id="1355691588:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Pref_pu" index="96" id="2064163167:0" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):vdref_st" index="97" id="459944333:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):vqref_pu" index="98" id="343467305:0" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):vdref_pu" index="99" id="1189001866:0" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Iqr_pu" index="100" id="18601270:0" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Iqref_pu" index="101" id="1406886815:0" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Iqref_pu" index="102" id="1783804415:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Varef" index="103" id="1251140223:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Freq_PLL" index="106" id="1685706031:0" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):ImaxN_d_pu" index="107" id="185549824:0" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):slpangPLL" index="108" id="1292047658:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Phis PLL" index="109" id="287487434:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Vsd" index="110" id="856530322:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):V1d" index="111" id="677509644:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Qref_pu_" index="112" id="899340962:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Low_Cu_Manag" index="113" id="1224427449:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Idr_pu" index="114" id="791536889:0" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Idref_pu" index="115" id="1146191530:0" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Iqr_pu" index="116" id="308048089:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):V1q_pu" index="117" id="730878066:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):V1d_pu" index="118" id="1281354654:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Rotor_side_Controls(1):Imax_d_pu" index="119" id="1330465555:0" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):Crowbar current" index="120" id="2035745436:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):Iovercur" index="123" id="1621724216:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):Reset" index="124" id="415609663:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):S1" index="125" id="1035277964:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):Mono_out" index="126" id="711168889:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):V-Ecap" index="127" id="1687159872:0" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):Ecap" index="128" id="1697210858:0" label="" dim="1" unit="" min="-0.1" max="0.1" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Crowbar_prot(1):Imagn" index="129" id="1204277602:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\Chopper(1):BRK_CHOP" index="130" id="962321147:0" label="" dim="1" unit="" min="-0.5" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(2):Vr" index="131" id="1914083314:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(2):Era" index="134" id="2137197619:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(2):Ir" index="135" id="1413093197:0" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(2):Erb" index="138" id="96745382:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(2):Erc" index="139" id="1376830479:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(2):PinsR" index="140" id="1332849660:0" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(3):Vr" index="141" id="1914083314:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(3):Era" index="144" id="2137197619:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(3):Ir" index="145" id="1413093197:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(3):Erb" index="148" id="96745382:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(3):Erc" index="149" id="1376830479:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(1)\DFIG_Converters_Avg(1)\ConvBridge_Avg(3):PinsR" index="150" id="1332849660:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Vst1" index="151" id="2136645807:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Vst2" index="154" id="998158008:1" label="" dim="3" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Vrms_pu" index="157" id="1251069593:1" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):I_trm" index="158" id="236270589:1" label="" dim="3" unit="" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Iabc" index="161" id="10134851:1" label="" dim="3" unit="" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Vrms_bus" index="164" id="25400871:1" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):wind torque" index="165" id="130158713:1" label="" dim="1" unit="" min="0" max="1.6" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):TurbStart" index="166" id="165884758:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):TM" index="167" id="1155797447:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):TE" index="168" id="193915475:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):BRK ord" index="169" id="1453905914:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Qg_pu" index="170" id="1950462825:1" label="" dim="1" unit="" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Pg_pu" index="171" id="1973272135:1" label="" dim="1" unit="" min="-0.8" max="0.8" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Dblk_VdcCtrl" index="172" id="484023928:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Dblk_Rotor" index="173" id="1509570496:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Qg_pu" index="174" id="602083064:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0):Pg_pu" index="175" id="146941207:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\Synchronization(0):V_Trf" index="176" id="1893471464:1" label="" dim="3" unit="kV" min="-200" max="200" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\Synchronization(0):V_Mach" index="179" id="654036818:1" label="" dim="3" unit="kV" min="-200" max="200" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\Synchronization(0):Vcom C" index="182" id="333102457:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\Synchronization(0):Vcom B" index="183" id="971433700:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\Synchronization(0):Synch_Com" index="184" id="397875211:1" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\Synchronization(0):VcomA" index="185" id="1224917453:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):Pitch" index="186" id="1240074579:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):P_aero" index="187" id="1365233294:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):Pwind_pu" index="188" id="1935259979:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):Cp_Pol" index="189" id="1495528138:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):windtorq" index="190" id="1935612001:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):lambda" index="191" id="1213208726:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):Wpu" index="192" id="904354932:1" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\WindTurbine_MechModel(0):Pitch_Det" index="193" id="127214332:1" label="" dim="1" unit="Deg" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0):Ecap_Det" index="194" id="517592891:1" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0):I_RS" index="195" id="120978033:1" label="" dim="3" unit="kA" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0):V_RS" index="198" id="849161602:1" label="" dim="3" unit="kV" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0):Iconv" index="201" id="136417811:1" label="" dim="3" unit="kA" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):V abc" index="204" id="1167475650:1" label="" dim="3" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):E_ord_pu" index="207" id="283429573:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Varef" index="208" id="931215908:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Vq_pu_Gsc" index="211" id="509595362:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Vd_pu_Gsc" index="212" id="1179130106:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Iq_pu_Gsc" index="213" id="249502556:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Id_pu_Gsc" index="214" id="2021134085:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Ed_pu_Gsc" index="215" id="1305259294:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Edc filtered" index="216" id="1896366184:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Iq_ord_pu" index="217" id="1758595852:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Eq_pu_Gsc" index="218" id="585307959:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Id_ord_pu" index="219" id="1954424368:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Q_ord" index="220" id="1922000123:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Qpu" index="221" id="348539369:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Grid_side_Controls(0):Edc_pu" index="222" id="1110651999:1" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Voltage_dip" index="223" id="1639121404:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Qg_pu" index="224" id="1408059791:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Vrms_bus" index="225" id="484162274:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Imax_pu" index="226" id="745377609:1" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Irotor" index="227" id="298178345:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Pg_pu" index="230" id="1599401751:1" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Vrms_bus" index="231" id="1355691588:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Pref_pu" index="232" id="2064163167:1" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):vdref_st" index="233" id="459944333:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):vqref_pu" index="234" id="343467305:1" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):vdref_pu" index="235" id="1189001866:1" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Iqr_pu" index="236" id="18601270:1" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Iqref_pu" index="237" id="1406886815:1" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Iqref_pu" index="238" id="1783804415:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Varef" index="239" id="1251140223:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Freq_PLL" index="242" id="1685706031:1" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):ImaxN_d_pu" index="243" id="185549824:1" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):slpangPLL" index="244" id="1292047658:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Phis PLL" index="245" id="287487434:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Vsd" index="246" id="856530322:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):V1d" index="247" id="677509644:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Qref_pu_" index="248" id="899340962:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Low_Cu_Manag" index="249" id="1224427449:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Idr_pu" index="250" id="791536889:1" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Idref_pu" index="251" id="1146191530:1" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Iqr_pu" index="252" id="308048089:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):V1q_pu" index="253" id="730878066:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):V1d_pu" index="254" id="1281354654:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Rotor_side_Controls(0):Imax_d_pu" index="255" id="1330465555:1" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):Crowbar current" index="256" id="2035745436:1" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):Iovercur" index="259" id="1621724216:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):Reset" index="260" id="415609663:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):S1" index="261" id="1035277964:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):Mono_out" index="262" id="711168889:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):V-Ecap" index="263" id="1687159872:1" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):Ecap" index="264" id="1697210858:1" label="" dim="1" unit="" min="-0.1" max="0.1" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Crowbar_prot(0):Imagn" index="265" id="1204277602:1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\Chopper(0):BRK_CHOP" index="266" id="962321147:1" label="" dim="1" unit="" min="-0.5" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(0):Vr" index="267" id="1914083314:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(0):Era" index="270" id="2137197619:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(0):Ir" index="271" id="1413093197:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(0):Erb" index="274" id="96745382:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(0):Erc" index="275" id="1376830479:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(0):PinsR" index="276" id="1332849660:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(1):Vr" index="277" id="1914083314:3" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(1):Era" index="280" id="2137197619:3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(1):Ir" index="281" id="1413093197:3" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(1):Erb" index="284" id="96745382:3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(1):Erc" index="285" id="1376830479:3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(0)\DFIG_Converters_Avg(0)\ConvBridge_Avg(1):PinsR" index="286" id="1332849660:3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Vst1" index="287" id="2136645807:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Vst2" index="290" id="998158008:2" label="" dim="3" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Vrms_pu" index="293" id="1251069593:2" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):I_trm" index="294" id="236270589:2" label="" dim="3" unit="" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Iabc" index="297" id="10134851:2" label="" dim="3" unit="" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Vrms_bus" index="300" id="25400871:2" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):wind torque" index="301" id="130158713:2" label="" dim="1" unit="" min="0" max="1.6" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):TurbStart" index="302" id="165884758:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):TM" index="303" id="1155797447:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):TE" index="304" id="193915475:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):BRK ord" index="305" id="1453905914:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Qg_pu" index="306" id="1950462825:2" label="" dim="1" unit="" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Pg_pu" index="307" id="1973272135:2" label="" dim="1" unit="" min="-0.8" max="0.8" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Dblk_VdcCtrl" index="308" id="484023928:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Dblk_Rotor" index="309" id="1509570496:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Qg_pu" index="310" id="602083064:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2):Pg_pu" index="311" id="146941207:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\Synchronization(2):V_Trf" index="312" id="1893471464:2" label="" dim="3" unit="kV" min="-200" max="200" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\Synchronization(2):V_Mach" index="315" id="654036818:2" label="" dim="3" unit="kV" min="-200" max="200" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\Synchronization(2):Vcom C" index="318" id="333102457:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\Synchronization(2):Vcom B" index="319" id="971433700:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\Synchronization(2):Synch_Com" index="320" id="397875211:2" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\Synchronization(2):VcomA" index="321" id="1224917453:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):Pitch" index="322" id="1240074579:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):P_aero" index="323" id="1365233294:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):Pwind_pu" index="324" id="1935259979:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):Cp_Pol" index="325" id="1495528138:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):windtorq" index="326" id="1935612001:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):lambda" index="327" id="1213208726:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):Wpu" index="328" id="904354932:2" label="" dim="1" unit="kV" min="0.0" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\WindTurbine_MechModel(2):Pitch_Det" index="329" id="127214332:2" label="" dim="1" unit="Deg" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2):Ecap_Det" index="330" id="517592891:2" label="" dim="1" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2):I_RS" index="331" id="120978033:2" label="" dim="3" unit="kA" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2):V_RS" index="334" id="849161602:2" label="" dim="3" unit="kV" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2):Iconv" index="337" id="136417811:2" label="" dim="3" unit="kA" min="0.0" max="1.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):V abc" index="340" id="1167475650:2" label="" dim="3" unit="kV" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):E_ord_pu" index="343" id="283429573:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Varef" index="344" id="931215908:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Vq_pu_Gsc" index="347" id="509595362:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Vd_pu_Gsc" index="348" id="1179130106:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Iq_pu_Gsc" index="349" id="249502556:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Id_pu_Gsc" index="350" id="2021134085:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Ed_pu_Gsc" index="351" id="1305259294:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Edc filtered" index="352" id="1896366184:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Iq_ord_pu" index="353" id="1758595852:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Eq_pu_Gsc" index="354" id="585307959:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Id_ord_pu" index="355" id="1954424368:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Q_ord" index="356" id="1922000123:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Qpu" index="357" id="348539369:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Grid_side_Controls(2):Edc_pu" index="358" id="1110651999:2" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Voltage_dip" index="359" id="1639121404:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Qg_pu" index="360" id="1408059791:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Vrms_bus" index="361" id="484162274:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Imax_pu" index="362" id="745377609:2" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Irotor" index="363" id="298178345:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Pg_pu" index="366" id="1599401751:2" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Vrms_bus" index="367" id="1355691588:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Pref_pu" index="368" id="2064163167:2" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):vdref_st" index="369" id="459944333:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):vqref_pu" index="370" id="343467305:2" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):vdref_pu" index="371" id="1189001866:2" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Iqr_pu" index="372" id="18601270:2" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Iqref_pu" index="373" id="1406886815:2" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Iqref_pu" index="374" id="1783804415:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Varef" index="375" id="1251140223:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Freq_PLL" index="378" id="1685706031:2" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):ImaxN_d_pu" index="379" id="185549824:2" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):slpangPLL" index="380" id="1292047658:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Phis PLL" index="381" id="287487434:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Vsd" index="382" id="856530322:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):V1d" index="383" id="677509644:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Qref_pu_" index="384" id="899340962:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Low_Cu_Manag" index="385" id="1224427449:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Idr_pu" index="386" id="791536889:2" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Idref_pu" index="387" id="1146191530:2" label="" dim="1" unit="pu" min="-0.04" max="0.08" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Iqr_pu" index="388" id="308048089:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):V1q_pu" index="389" id="730878066:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):V1d_pu" index="390" id="1281354654:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Rotor_side_Controls(2):Imax_d_pu" index="391" id="1330465555:2" label="" dim="1" unit="" min="0" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):Crowbar current" index="392" id="2035745436:2" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):Iovercur" index="395" id="1621724216:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):Reset" index="396" id="415609663:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):S1" index="397" id="1035277964:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):Mono_out" index="398" id="711168889:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):V-Ecap" index="399" id="1687159872:2" label="" dim="1" unit="" min="-0.2" max="1.2" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):Ecap" index="400" id="1697210858:2" label="" dim="1" unit="" min="-0.1" max="0.1" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Crowbar_prot(2):Imagn" index="401" id="1204277602:2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\Chopper(2):BRK_CHOP" index="402" id="962321147:2" label="" dim="1" unit="" min="-0.5" max="1.5" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(4):Vr" index="403" id="1914083314:4" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(4):Era" index="406" id="2137197619:4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(4):Ir" index="407" id="1413093197:4" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(4):Erb" index="410" id="96745382:4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(4):Erc" index="411" id="1376830479:4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(4):PinsR" index="412" id="1332849660:4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(5):Vr" index="413" id="1914083314:5" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(5):Era" index="416" id="2137197619:5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(5):Ir" index="417" id="1413093197:5" label="" dim="3" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(5):Erb" index="420" id="96745382:5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(5):Erc" index="421" id="1376830479:5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <Analog name="Main(0)\P1(0)\P3(0)\Type3_WTG_Avg(2)\DFIG_Converters_Avg(2)\ConvBridge_Avg(5):PinsR" index="422" id="1332849660:5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+    </List>
+    <List classid="Digital" />
+  </Output>
+</Meta>
