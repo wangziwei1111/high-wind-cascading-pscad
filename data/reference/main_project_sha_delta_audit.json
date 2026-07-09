@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "execution_status": "main_project_sha_delta_audit_complete",
+  "baseline_status": "pass",
+  "raw_byte_identity_status": "fail",
+  "xml_parse_status": "pass",
+  "component_inventory_status": "pass",
+  "connectivity_equivalence_status": "pass",
+  "critical_scope_status": "pass",
+  "output_channel_integrity_status": "pass",
+  "functional_equivalence_status": "supported",
+  "main_project_integrity_status": "main_project_nonfunctional_metadata_difference",
+  "trial_resumption_eligibility": "eligible_for_separate_task",
+  "baseline": {
+    "path": "C:\\pscad_work\\backups\\ibr_trial_local_breaker_boundary_20260629_204521\\3IBR.pscx",
+    "sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+    "size_bytes": 3489935,
+    "modified_time": "2026-06-29T20:08:34.450181"
+  },
+  "current_main": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "size_bytes": 3489955,
+    "modified_time": "2026-06-29T20:51:07.924124"
+  },
+  "previous_observed_sha": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+  "current_sha_matches_previous_observation": true,
+  "trial": {
+    "trial_exists": true,
+    "trial_sha256": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15",
+    "trial_size_bytes": 3491815,
+    "trial_modified_time": "2026-06-29T20:51:27.391579",
+    "trial_xml_parse_status": "pass",
+    "trial_breaker_boundary_status": "not_constructed",
+    "trial_has_BRK_IBR2_TRIAL": false,
+    "trial_has_IBR2_TRIAL_BRK_CMD": false,
+    "trial_has_IBR2_TRIAL_BRK_STATE": false,
+    "trial_has_IBR2_TRIAL_BRK_OPEN_BOOL": false,
+    "trial_has_IBR2_TRIAL_SOURCE_AVAILABLE": false
+  },
+  "p3f_auxiliary_evidence": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\P3.f",
+    "sha256": "A5FC7668B2C257BF948F52AC3661C8C8CB28C243B5A9D96A9035241964873B67",
+    "size_bytes": 163934,
+    "modified_time": "2026-06-29T20:08:36.937901",
+    "use_boundary": "auxiliary evidence only; not regenerated and not proof of current main project equivalence"
+  },
+  "inventory_counts": {
+    "baseline": {
+      "component_count": 2349,
+      "wire_count": 1533,
+      "output_channel_count": 203,
+      "page_count": 20,
+      "definition_count": 51,
+      "critical_object_count": 632
+    },
+    "current": {
+      "component_count": 2349,
+      "wire_count": 1533,
+      "output_channel_count": 203,
+      "page_count": 20,
+      "definition_count": 51,
+      "critical_object_count": 632
+    },
+    "count_delta_keys": []
+  },
+  "difference_counts": {
+    "raw_xml_difference_count": 181,
+    "nonfunctional_metadata_or_display_change": 181,
+    "functional_control_or_network_change": 0,
+    "test_parameter_change": 0,
+    "output_channel_change": 0,
+    "unclassified_difference": 0
+  },
+  "output_channel_delta_keys": [],
+  "functional_or_unclassified_differences": [],
+  "nonfunctional_difference_examples": [
+    {
+      "path": "/project/[paramlist 0 name=Settings]/[param 22 name=revisor param=revisor]",
+      "kind": "attr",
+      "field": "value",
+      "baseline": "24186, 1782734914",
+      "current": "24186, 1782737467",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`revisor` records PSCAD save/revision metadata."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 0 id=1907181818 name=Station classid=StationDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734140",
+      "current": "1782734916",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 1 id=1957993466 name=G_39_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734141",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 3 id=1873958631 name=G_37_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734140",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 4 id=248800626 name=G_38_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734140",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 5 id=543694031 name=G_31_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734141",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 6 id=465665610 name=G_32_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734141",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 7 id=2096243536 name=G_33_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734141",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 8 id=416916709 name=G_34_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734140",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 9 id=437664173 name=G_35_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734141",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 10 id=804390380 name=G_36_0_1_DYR classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734141",
+      "current": "1782734917",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 11 id=1970432053 name=P2 classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734140",
+      "current": "1782734916",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]",
+      "kind": "attr",
+      "field": "date",
+      "baseline": "1782734140",
+      "current": "1782734916",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`date` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 153 id=4848 name=ETRAN:Electranix_Load defn=ETRAN:Electranix_Load classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "110",
+      "current": "120",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 159 id=949980879 name=3IBR:G_38_0_1_DYR defn=3IBR:G_38_0_1_DYR classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "120",
+      "current": "110",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 245 id=4896 name=master:voltmetergnd defn=master:voltmetergnd classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "360",
+      "current": "370",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 278 id=4917 name=ETRAN:Electranix_Load defn=ETRAN:Electranix_Load classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "490",
+      "current": "500",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 282 id=4919 name=ETRAN:Electranix_Load defn=ETRAN:Electranix_Load classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "500",
+      "current": "490",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 375 id=4963 name=master:voltmetergnd defn=master:voltmetergnd classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "370",
+      "current": "360",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 445 id=2115405417 name=master:pgb defn=master:pgb classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2180",
+      "current": "2280",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 457 id=814604080 name=master:pgb defn=master:pgb classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2170",
+      "current": "2270",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 469 id=518740083 name=master:pgb defn=master:pgb classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2160",
+      "current": "2260",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 488 id=202853855 defn=master:breaker3 classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2190",
+      "current": "2290",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 512 id=1154924168 name=master:datamerge defn=master:datamerge classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2040",
+      "current": "2140",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 537 id=2117531585 name=master:datamerge defn=master:datamerge classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1670",
+      "current": "1700",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 548 id=467612379 name=master:datamerge defn=master:datamerge classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1680",
+      "current": "1710",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 598 id=1562726451 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1930",
+      "current": "2030",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 599 id=1149810961 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1630",
+      "current": "1660",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 600 id=34039164 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1620",
+      "current": "1650",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 605 id=1619272825 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1640",
+      "current": "1670",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 606 id=1264704691 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1650",
+      "current": "1680",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 607 id=676307009 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1990",
+      "current": "2090",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 612 id=2032703404 name=master:compare defn=master:compare classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1300",
+      "current": "1310",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 614 id=1936247239 defn=master:unity classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1610",
+      "current": "1640",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 616 id=1903427114 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1470",
+      "current": "1480",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 619 id=5973097 defn=master:gain classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1460",
+      "current": "1470",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 625 id=203486352 defn=master:div classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1290",
+      "current": "1300",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 628 id=1605290937 defn=master:div classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1280",
+      "current": "1290",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 632 id=1990510816 defn=master:compare classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1320",
+      "current": "1330",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 731 id=2479722 name=master:pgb defn=master:pgb classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1890",
+      "current": "1990",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 734 id=1025846643 name=master:pgb defn=master:pgb classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1880",
+      "current": "1980",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 773 id=220982143 name=master:pgb defn=master:pgb classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "790",
+      "current": "800",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 785 id=1700980851 defn=master:breaker3 classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2090",
+      "current": "2190",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 792 id=1220231535 name=3IBR:IBR_AVM_2_1_1 defn=3IBR:IBR_AVM_2_1_1 classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1950",
+      "current": "2050",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 793 id=202861579 name=3IBR:IBR_AVM_2_1_1 defn=3IBR:IBR_AVM_2_1_1 classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1870",
+      "current": "1970",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 794 id=547246124 name=3IBR:REPC_A_1 defn=3IBR:REPC_A_1 classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1550",
+      "current": "1570",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 805 id=2147003001 name=Type3WTG_Lib:Type3_WTG_Avg defn=Type3WTG_Lib:Type3_WTG_Avg classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "2080",
+      "current": "2180",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 810 id=808965454 defn=master:ratelimit classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1270",
+      "current": "1280",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 816 id=1776838349 defn=master:compare classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1250",
+      "current": "1260",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    },
+    {
+      "path": "/project/[definitions 2]/[Definition 12 id=99382095 name=P3 classid=UserCmpDefn]/[schematic 4 classid=UserCanvas]/[User 819 id=521858026 defn=master:breaker3 classid=UserCmp]",
+      "kind": "attr",
+      "field": "z",
+      "baseline": "1500",
+      "current": "1510",
+      "classification": "nonfunctional_metadata_or_display_change",
+      "reason": "`z` is a PSCAD definition timestamp or visual stacking/display-order field."
+    }
+  ],
+  "baseline_candidates": [
+    {
+      "path": "C:\\pscad_work\\backups\\ibr_trial_local_breaker_boundary_20260629_204521\\3IBR.pscx",
+      "sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+      "size_bytes": 3489935,
+      "modified_time": "2026-06-29T20:08:34.450181"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\pnnl_39_3ibr_pscad46_strip5_PSCAD_before_type3_dfig_20260623_090422\\3IBR.pscx",
+      "sha256": "3ECEDF4660E70A060286951AD9F697752203E112BA169F199C0182814928467A",
+      "size_bytes": 3381517,
+      "modified_time": "2026-06-22T21:47:47.558902"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\PSCAD_before_type3_electrical_20260623_095119\\3IBR.pscx",
+      "sha256": "09AD7728E722C5F23B4F9B005ECF23F4251A31CAD75CA9E43B95DDC4DE77271D",
+      "size_bytes": 3379256,
+      "modified_time": "2026-06-23T09:44:03.744873"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\PSCAD_before_type3_nofault_baseline_20260623_201625\\3IBR.pscx",
+      "sha256": "97CB58FCBE6503D97CB8D5685EDB70E968ED6BEDFF87DC8FC4B8A95052E749C5",
+      "size_bytes": 3349494,
+      "modified_time": "2026-06-23T17:26:33.430028"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\two_real_source_cascade_collector_20260629_202809\\3IBR.pscx",
+      "sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+      "size_bytes": 3489935,
+      "modified_time": "2026-06-29T20:08:34.450181"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_dfig_duration_sweep_20260626_134153\\3IBR.pscx",
+      "sha256": "994A6319BB531C7AE8376C86C2520DAAC8289550B056B18E017F87447A19A015",
+      "size_bytes": 3361394,
+      "modified_time": "2026-06-24T22:16:05.360410"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_dfig_sweep_20260624_202223\\3IBR.pscx",
+      "sha256": "D1696AFECA142BB2701D7BCA81F654FC046A81CB03BA71DFD0A684D11702CD54",
+      "size_bytes": 3357840,
+      "modified_time": "2026-06-24T15:43:02.546688"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_brk_command_20260628_201729\\3IBR.pscx",
+      "sha256": "00C72FAAE357F113DC26C486180A7AA374AACA81BC698B87D9FAB3D706AF1DF9",
+      "size_bytes": 3410469,
+      "modified_time": "2026-06-28T19:45:08.944020"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_cascade_event_bus_20260629_192247\\3IBR.pscx",
+      "sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+      "size_bytes": 3460443,
+      "modified_time": "2026-06-29T11:33:01.216002"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_closed_loop_coverage_20260628_220356\\3IBR.pscx",
+      "sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+      "size_bytes": 3421312,
+      "modified_time": "2026-06-28T21:20:54.319771"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_final_brk_cmd_recheck_20260628_213352\\3IBR.pscx",
+      "sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+      "size_bytes": 3421312,
+      "modified_time": "2026-06-28T21:20:54.319771"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_full_impl_20260626_191254\\3IBR.pscx",
+      "sha256": "9432E1DC41B1C0979C2B2A4506D5269420A776247880C4036646AEA1A4912319",
+      "size_bytes": 3371503,
+      "modified_time": "2026-06-26T18:47:38.813454"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_fulltask_20260625_182527\\pnnl_39_3ibr_pscad46_strip5\\PSCAD - \u526f\u672c\\3IBR.pscx",
+      "sha256": "543C5FCECF0CCF60A12248D34B85F3571D5BA8324CFD0353B85CF0BA3ADD2385",
+      "size_bytes": 3156582,
+      "modified_time": "2026-06-22T09:03:39.904865"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_fulltask_20260625_182527\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+      "sha256": "994A6319BB531C7AE8376C86C2520DAAC8289550B056B18E017F87447A19A015",
+      "size_bytes": 3361394,
+      "modified_time": "2026-06-24T22:16:05.360410"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_monitoring_continue_20260627_195326\\3IBR.pscx",
+      "sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+      "size_bytes": 3383600,
+      "modified_time": "2026-06-27T12:01:51.684017"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_monitoring_full_20260627_121401\\3IBR.pscx",
+      "sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+      "size_bytes": 3383600,
+      "modified_time": "2026-06-27T12:01:51.684017"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_monitoring_full_stage_edit_20260627_121604\\3IBR.pscx",
+      "sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+      "size_bytes": 3383600,
+      "modified_time": "2026-06-27T12:01:51.684017"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_protection_state_interface_20260629_103244\\3IBR.pscx",
+      "sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+      "size_bytes": 3421306,
+      "modified_time": "2026-06-29T09:46:47.827143"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_trip_latch_manual_20260628_171834\\3IBR.pscx",
+      "sha256": "17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B",
+      "size_bytes": 3397146,
+      "modified_time": "2026-06-28T16:45:29.910110"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_trip_request_manual_matrix_20260628_111429\\3IBR.pscx",
+      "sha256": "EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D",
+      "size_bytes": 3397493,
+      "modified_time": "2026-06-27T22:17:37.124369"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_trip_request_manual_validation_20260628_104759\\3IBR.pscx",
+      "sha256": "EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D",
+      "size_bytes": 3397493,
+      "modified_time": "2026-06-27T22:17:37.124369"
+    },
+    {
+      "path": "C:\\pscad_work\\backups\\type3_lvrt_vsmin_latch_20260627_104203\\3IBR.pscx",
+      "sha256": "1E90C83FFEF2AD02DC1D8594E2E7D0C1CB494E703BE50DA4189E10FA93B43874",
+      "size_bytes": 3381117,
+      "modified_time": "2026-06-27T10:35:01.146384"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pnnl-enhanced-ieee39\\Enhanced IEEE 39-Bus System_3IBRs\\PSCAD\\3IBR.pscx",
+      "sha256": "164C4DE7765CE351BE56ED109EECDCF76479AC67FC307BA4AD8D5A368BCACADF",
+      "size_bytes": 3224852,
+      "modified_time": "2026-06-21T21:06:59.591564"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pnnl-enhanced-ieee39\\Enhanced IEEE 39-Bus System_3IBRs_WORKING\\PSCAD\\3IBR.pscx",
+      "sha256": "164C4DE7765CE351BE56ED109EECDCF76479AC67FC307BA4AD8D5A368BCACADF",
+      "size_bytes": 3224852,
+      "modified_time": "2026-06-21T21:06:59.591564"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260623\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "97CB58FCBE6503D97CB8D5685EDB70E968ED6BEDFF87DC8FC4B8A95052E749C5",
+      "size_bytes": 3349494,
+      "modified_time": "2026-06-23T17:26:33.430028"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260626_lvrt_monitoring_fallback\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "9432E1DC41B1C0979C2B2A4506D5269420A776247880C4036646AEA1A4912319",
+      "size_bytes": 3371503,
+      "modified_time": "2026-06-26T18:47:38.813454"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260626_lvrt_scaffold\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "9432E1DC41B1C0979C2B2A4506D5269420A776247880C4036646AEA1A4912319",
+      "size_bytes": 3371503,
+      "modified_time": "2026-06-26T18:47:38.813454"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260627_lvrt_monitoring_full\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D",
+      "size_bytes": 3397493,
+      "modified_time": "2026-06-27T22:17:37.124369"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260627_lvrt_trip_latch_monitoring\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "EEC7883194B1C57CFF4CB89524CAFEC0FA00A9C3B9414D893CCA605C0217939D",
+      "size_bytes": 3397493,
+      "modified_time": "2026-06-27T22:17:37.124369"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260627_lvrt_vsmin_mem\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "02F3B8FCB5A53286886447C2EA1D0EA1C2E4F7AA0B42CC4FA694D2C5BD884202",
+      "size_bytes": 3383600,
+      "modified_time": "2026-06-27T12:01:51.684017"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260628_lvrt_brk_command_state_validated\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+      "size_bytes": 3421312,
+      "modified_time": "2026-06-28T21:20:54.319771"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260628_lvrt_trip_latch_minimal_failed\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "A5E371C4F02CBEDF1C5E861A1C217D148106D3A5FFBC3858E0EB2BFF5B89E17F",
+      "size_bytes": 3406097,
+      "modified_time": "2026-06-28T17:51:20.097877"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260628_lvrt_trip_latch_minimal_validated\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "00C72FAAE357F113DC26C486180A7AA374AACA81BC698B87D9FAB3D706AF1DF9",
+      "size_bytes": 3410469,
+      "modified_time": "2026-06-28T19:45:08.944020"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260628_lvrt_trip_request_manual_validated\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "17AEB3DE4C7BBAD5D69DF94AD07BF6681FEF193A70228B57DCBBE0E0E5A1A38B",
+      "size_bytes": 3397146,
+      "modified_time": "2026-06-28T16:45:29.910110"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260629_lvrt_cascade_event_bus_static\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB",
+      "size_bytes": 3489935,
+      "modified_time": "2026-06-29T20:08:34.450181"
+    },
+    {
+      "path": "C:\\Users\\24186\\Documents\\\u52a8\u6001\u6a21\u578b\\external\\pscad_snapshot_20260629_lvrt_protection_state_interface_static\\pnnl_39_3ibr_pscad46_strip5_PSCAD\\3IBR.pscx",
+      "sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C",
+      "size_bytes": 3460443,
+      "modified_time": "2026-06-29T11:33:01.216002"
+    }
+  ],
+  "claim_boundary": {
+    "pscad_started": false,
+    "build_performed": false,
+    "run_performed": false,
+    "main_project_modified": false,
+    "trial_project_modified": false,
+    "breaker_construction_resumed": false,
+    "second_source_event_packet_created": false,
+    "dual_source_collector_created": false
+  },
+  "audit_file_sha_stability": {
+    "current_main_start_sha": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "current_main_end_sha": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+    "trial_start_sha": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15",
+    "trial_end_sha": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15"
+  }
+}

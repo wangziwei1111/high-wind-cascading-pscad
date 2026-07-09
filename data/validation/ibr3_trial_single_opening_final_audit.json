@@ -1,0 +1,49 @@
+{
+  "execution_status": "completed_pass_with_pscad_post_restore_metadata_drift",
+  "main_sha_final": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_pre_run": "469103EF282C97CF7735D0E4BB8665A6D57FA453A6AA7F5BA86B5770951CDE92",
+  "trial_sha_during_run": "B9F8CCE9B6C43F57644DF4693D0D651815FB6DBCC2706F9D48A0882DEA705E42",
+  "trial_sha_post_restore": "C03DAA211B591923F533554C9951503096677BCF52547D13A10C4B431E69A349",
+  "output_channel_count": 253,
+  "checks": {
+    "main_project_integrity_status": "pass",
+    "trial_pre_run_integrity_status": "pass",
+    "trial_post_restore_integrity_status": "pass",
+    "trial_post_restore_exact_sha_status": "metadata_drift",
+    "build_before_run_status": "pass",
+    "post_restore_build_status": "pass",
+    "run_completion_status": "pass",
+    "output_parser_status": "pass",
+    "dynamic_run_status": "pass",
+    "ibr2_test_isolation_status": "pass",
+    "ibr3_stimulus_request_status": "pass",
+    "ibr3_breaker_command_status": "pass",
+    "ibr3_actual_open_status": "pass",
+    "ibr3_state_adapter_dynamic_status": "pass",
+    "ibr3_event_packet_dynamic_status": "pass",
+    "three_source_collector_dynamic_status": "pass",
+    "three_event_chronology_dynamic_status": "pass",
+    "output_channel_count_status": "pass",
+    "ibr3_open_time_status": "pass",
+    "ibr3_cause_code_static_status": "pass",
+    "control_path_isolation_status": "pass",
+    "matlab_status": "not_added",
+    "autoreclose_status": "not_added",
+    "fourth_source_status": "not_added",
+    "virtual_source_status": "not_added",
+    "cascade_propagation_status": "unavailable",
+    "multi_source_causality_status": "unavailable",
+    "system_stability_status": "unavailable"
+  },
+  "dynamic_claim_boundary": {
+    "cascade_propagation_status": "unavailable",
+    "multi_source_causality_status": "unavailable",
+    "system_stability_status": "unavailable",
+    "matlab_coupling_status": "unavailable"
+  },
+  "notes": [
+    "The final PSCAD project is restored to default-disabled IBR3 test stimulus (IBR3 test-enable Constant value 0).",
+    "The final trial SHA differs from the pre-run SHA because PSCAD rewrote project metadata/date and display values during Save/Build; the audit treats this as metadata_drift and separately verifies the protected control/interface values.",
+    "The restore Build overwrote/removed the raw PGB Output Channel files, so Git stores parsed summaries only and does not commit raw .out/.inf artifacts."
+  ]
+}

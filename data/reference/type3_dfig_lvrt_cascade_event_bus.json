@@ -1,0 +1,404 @@
+{
+  "active_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB"
+  },
+  "build": {
+    "source": "user-confirmed Builds; exact final warning/message counts not supplied",
+    "stage_a": {
+      "errors": 0,
+      "messages": null,
+      "warnings": null
+    },
+    "stage_b": {
+      "errors": 0,
+      "messages": null,
+      "warnings": null
+    },
+    "stage_c": {
+      "errors": 0,
+      "messages": null,
+      "warnings": null
+    }
+  },
+  "checks": [
+    {
+      "check": "event_valid_maps_trip_confirmed",
+      "evidence": "DFIG_LVRT_CASCADE_EVENT_VALID\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_TRIP_CONFIRMED",
+      "status": "pass"
+    },
+    {
+      "check": "event_cause_maps_cause_code",
+      "evidence": "DFIG_LVRT_CAS_CAUSE_CODE\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_TRIP_CAUSE_CODE",
+      "status": "pass"
+    },
+    {
+      "check": "event_brk_open_maps_brk_open_bool",
+      "evidence": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN\\s*=\\s*1\\.0\\s*\\*\\s*REAL\\(DFIG_LVRT_BRK_OPEN_BOOL\\)",
+      "status": "pass"
+    },
+    {
+      "check": "source_available_maps_cascade_available",
+      "evidence": "DFIG_LVRT_CAS_SRC_AVAIL\\s*=\\s*1\\.0\\s*\\*\\s*REAL\\(DFIG_LVRT_CASCADE_AVAILABLE\\)",
+      "status": "pass"
+    },
+    {
+      "check": "first_event_time_maps_time_mem",
+      "evidence": "DFIG_LVRT_CAS_FIRST_TIME_S\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CAS_TIME_MEM",
+      "status": "pass"
+    },
+    {
+      "check": "time_unset_comparator_uses_mem_less_than_zero",
+      "evidence": "EMTDC_X2COMP\\(0,0,0\\.0,DFIG_LVRT_CAS_TIME_MEM,1\\.0,0\\.0,0\\.0,RVD2_1\\)",
+      "status": "pass"
+    },
+    {
+      "check": "time_capture_enable_formula",
+      "evidence": "DFIG_LVRT_CAS_TIME_CAP\\s*=\\s*DFIG_LVRT_CASCADE_EVENT_VALID\\s*\\*\\s*REAL\\(DFIG_LVRT_CAS_TIME_UNSET\\)",
+      "status": "pass"
+    },
+    {
+      "check": "time_selector_captures_time",
+      "evidence": "IF \\(NINT\\(DFIG_LVRT_CAS_TIME_CAP\\) \\.EQ\\. RTCI\\(NRTCI\\)\\) THEN\\s*DFIG_LVRT_CAS_TIME_NEXT\\s*=\\s*RT_29\\s*ELSE\\s*DFIG_LVRT_CAS_TIME_NEXT\\s*=\\s*DFIG_LVRT_CAS_TIME_MEM",
+      "status": "pass"
+    },
+    {
+      "check": "time_mem_initial_minus_one",
+      "evidence": "IF \\(TIMEZERO\\) DFIG_LVRT_CAS_TIME_MEM = -1\\.0",
+      "status": "pass"
+    },
+    {
+      "check": "collector_any_trip_maps_event_valid",
+      "evidence": "CASCADE_MONITOR_ANY_TRIP\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CASCADE_EVENT_VALID",
+      "status": "pass"
+    },
+    {
+      "check": "collector_any_brk_open_maps_event_brk_open",
+      "evidence": "CASCADE_MONITOR_ANY_BRK_OPEN\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+      "status": "pass"
+    },
+    {
+      "check": "collector_available_count_maps_source_available",
+      "evidence": "CASCADE_MONITOR_AVAIL_SRC_COUNT\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CAS_SRC_AVAIL",
+      "status": "pass"
+    },
+    {
+      "check": "collector_first_time_maps_source_first_time",
+      "evidence": "CASCADE_MONITOR_FIRST_TIME_S\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CAS_FIRST_TIME_S",
+      "status": "pass"
+    },
+    {
+      "check": "collector_cause_code_maps_source_cause_code",
+      "evidence": "CASCADE_MONITOR_CAUSE_CODE_DFIG1\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_CAS_CAUSE_CODE",
+      "status": "pass"
+    },
+    {
+      "check": "final_command_composition_preserved",
+      "evidence": "RT_23\\s*=\\s*\\+\\s*DFIG_LVRT_EXISTING_BRK_CMD_BOOL\\s*\\+\\s*DFIG_LVRT_TRIP_LATCH_BOOL",
+      "status": "pass"
+    },
+    {
+      "check": "final_command_limiter_preserved",
+      "evidence": "DFIG_LVRT_FINAL_BRK_CMD\\s*=\\s*LIMIT\\(0\\.0,\\s*1\\.0,\\s*RT_23\\)",
+      "status": "pass"
+    },
+    {
+      "check": "breaker_sole_command_preserved",
+      "evidence": "BRK_DFIG\\s*=\\s*1\\.0\\s*\\*\\s*DFIG_LVRT_FINAL_BRK_CMD",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_CASCADE_EVENT_VALID",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_CASCADE_EVENT_VALID\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"810673841\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"3.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"2111023746\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_CASCADE_EVENT_BRK_OPEN\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"288637322\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_CASCADE_SOURCE_AVAILABLE",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"DFIG_LVRT_CASCADE_SOURCE_AVAILABLE\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"537095251\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"10.2\", \"Min\": \"-1.2\", \"Name\": \"DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"s\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"2133635045\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:CASCADE_MONITOR_ANY_TRIP",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"CASCADE_MONITOR_ANY_TRIP\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1682633210\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:CASCADE_MONITOR_ANY_BRK_OPEN",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"CASCADE_MONITOR_ANY_BRK_OPEN\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"1448433561\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"1.2\", \"Min\": \"0\", \"Name\": \"CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"568013308\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:CASCADE_MONITOR_FIRST_EVENT_TIME_S",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"10.2\", \"Min\": \"-1.2\", \"Name\": \"CASCADE_MONITOR_FIRST_EVENT_TIME_S\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"s\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"935760742\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "output_channel:CASCADE_MONITOR_CAUSE_CODE_DFIG1",
+      "evidence": "{\"Display\": \"1\", \"Group\": \"\", \"Max\": \"3.2\", \"Min\": \"0\", \"Name\": \"CASCADE_MONITOR_CAUSE_CODE_DFIG1\", \"Pol\": \"0\", \"Scale\": \"1.0\", \"Units\": \"\", \"UseSignalName\": \"0\", \"enab\": \"1\", \"id\": \"453162503\", \"mrun\": \"1\"}",
+      "status": "pass"
+    },
+    {
+      "check": "preexisting_protected_component_parameters_unchanged",
+      "evidence": "[]",
+      "status": "pass"
+    },
+    {
+      "check": "first_event_time_not_continuous_time",
+      "evidence": "DFIG_LVRT_CAS_FIRST_TIME_S must map to DFIG_LVRT_CAS_TIME_MEM, not RT_29/TIME",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": {
+    "dynamic_behavior_validated_in_this_task": false,
+    "matlab_coupling_added": false,
+    "multi_machine_cascade_validated": false,
+    "physical_field_breaker_validated": false,
+    "static_structure_verified": true,
+    "synthetic_multi_source_created": false
+  },
+  "collector_internal_signals": {
+    "CASCADE_MONITOR_ANY_BRK_OPEN": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+    "CASCADE_MONITOR_ANY_TRIP": "DFIG_LVRT_CASCADE_EVENT_VALID",
+    "CASCADE_MONITOR_AVAIL_SRC_COUNT": "DFIG_LVRT_CAS_SRC_AVAIL",
+    "CASCADE_MONITOR_CAUSE_CODE_DFIG1": "DFIG_LVRT_CAS_CAUSE_CODE",
+    "CASCADE_MONITOR_FIRST_TIME_S": "DFIG_LVRT_CAS_FIRST_TIME_S"
+  },
+  "control_path_isolation_status": "pass",
+  "dynamic_behavior_note": "No PSCAD Run or EMTDC execution was performed for this static cascade-event bus task.",
+  "dynamic_behavior_status": "unavailable",
+  "execution_status": "cascade_event_bus_static_audit_complete",
+  "failed_checks": [],
+  "future_dynamic_expectations": {
+    "C1_no_fault": {
+      "ANY_BRK_OPEN": 0,
+      "ANY_TRIP": 0,
+      "AVAILABLE_SOURCE_COUNT": 1,
+      "CAUSE_CODE_DFIG1": 0,
+      "COLLECTOR_FIRST_EVENT_TIME_S": -1,
+      "EVENT_BRK_OPEN": 0,
+      "EVENT_CAUSE_CODE": 0,
+      "EVENT_VALID": 0,
+      "FIRST_EVENT_TIME_S": -1,
+      "SOURCE_AVAILABLE": 1
+    },
+    "C2_ride_through": {
+      "ANY_BRK_OPEN": 0,
+      "ANY_TRIP": 0,
+      "AVAILABLE_SOURCE_COUNT": 1,
+      "CAUSE_CODE_DFIG1": 0,
+      "COLLECTOR_FIRST_EVENT_TIME_S": -1,
+      "EVENT_BRK_OPEN": 0,
+      "EVENT_CAUSE_CODE": 0,
+      "EVENT_VALID": 0,
+      "FIRST_EVENT_TIME_S": -1,
+      "SOURCE_AVAILABLE": 1
+    },
+    "C3_duration_trip": {
+      "ANY_BRK_OPEN": 1,
+      "ANY_TRIP": 1,
+      "AVAILABLE_SOURCE_COUNT": 0,
+      "CAUSE_CODE_DFIG1": 1,
+      "COLLECTOR_FIRST_EVENT_TIME_S": "approximately 3.04",
+      "EVENT_BRK_OPEN": 1,
+      "EVENT_CAUSE_CODE": 1,
+      "EVENT_VALID": 1,
+      "FIRST_EVENT_TIME_S": "approximately 3.04",
+      "SOURCE_AVAILABLE": 0
+    },
+    "R5_immediate_trip": {
+      "ANY_BRK_OPEN": 1,
+      "ANY_TRIP": 1,
+      "AVAILABLE_SOURCE_COUNT": 0,
+      "CAUSE_CODE_DFIG1": 2,
+      "COLLECTOR_FIRST_EVENT_TIME_S": "approximately 2.02",
+      "EVENT_BRK_OPEN": 1,
+      "EVENT_CAUSE_CODE": 2,
+      "EVENT_VALID": 1,
+      "FIRST_EVENT_TIME_S": "approximately 2.02",
+      "SOURCE_AVAILABLE": 0
+    }
+  },
+  "generated_fortran": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.gf46\\P3.f",
+    "sha256": "A5FC7668B2C257BF948F52AC3661C8C8CB28C243B5A9D96A9035241964873B67"
+  },
+  "multi_source_behavior_note": "Only the real current Type-3 DFIG source was connected; no second source or synthetic source was constructed.",
+  "multi_source_behavior_status": "unavailable",
+  "output_channel_status": "pass",
+  "output_channels": {
+    "CASCADE_MONITOR_ANY_BRK_OPEN": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "CASCADE_MONITOR_ANY_BRK_OPEN",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1448433561",
+      "mrun": "1"
+    },
+    "CASCADE_MONITOR_ANY_TRIP": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "CASCADE_MONITOR_ANY_TRIP",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "1682633210",
+      "mrun": "1"
+    },
+    "CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "CASCADE_MONITOR_AVAILABLE_SOURCE_COUNT",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "568013308",
+      "mrun": "1"
+    },
+    "CASCADE_MONITOR_CAUSE_CODE_DFIG1": {
+      "Display": "1",
+      "Group": "",
+      "Max": "3.2",
+      "Min": "0",
+      "Name": "CASCADE_MONITOR_CAUSE_CODE_DFIG1",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "453162503",
+      "mrun": "1"
+    },
+    "CASCADE_MONITOR_FIRST_EVENT_TIME_S": {
+      "Display": "1",
+      "Group": "",
+      "Max": "10.2",
+      "Min": "-1.2",
+      "Name": "CASCADE_MONITOR_FIRST_EVENT_TIME_S",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "s",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "935760742",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "288637322",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE": {
+      "Display": "1",
+      "Group": "",
+      "Max": "3.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "2111023746",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_CASCADE_EVENT_VALID": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_CASCADE_EVENT_VALID",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "810673841",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S": {
+      "Display": "1",
+      "Group": "",
+      "Max": "10.2",
+      "Min": "-1.2",
+      "Name": "DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "s",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "2133635045",
+      "mrun": "1"
+    },
+    "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE": {
+      "Display": "1",
+      "Group": "",
+      "Max": "1.2",
+      "Min": "0",
+      "Name": "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE",
+      "Pol": "0",
+      "Scale": "1.0",
+      "Units": "",
+      "UseSignalName": "0",
+      "enab": "1",
+      "id": "537095251",
+      "mrun": "1"
+    }
+  },
+  "protected_component_differences": [],
+  "source_id": "TYPE3_DFIG_1",
+  "source_packet_internal_signals": {
+    "DFIG_LVRT_CASCADE_EVENT_BRK_OPEN": "DFIG_LVRT_BRK_OPEN_BOOL",
+    "DFIG_LVRT_CASCADE_EVENT_VALID": "DFIG_LVRT_TRIP_CONFIRMED",
+    "DFIG_LVRT_CAS_CAUSE_CODE": "DFIG_LVRT_TRIP_CAUSE_CODE",
+    "DFIG_LVRT_CAS_FIRST_TIME_S": "DFIG_LVRT_CAS_TIME_MEM",
+    "DFIG_LVRT_CAS_SRC_AVAIL": "DFIG_LVRT_CASCADE_AVAILABLE"
+  },
+  "structure_status": "pass",
+  "task_start_baseline": {
+    "path": "C:\\pscad_work\\backups\\type3_lvrt_cascade_event_bus_20260629_192247\\3IBR.pscx",
+    "sha256": "891DE753AE9C76AF3F7196278C80AAEC324BDB40EED84F552AAE1F2950E4836C"
+  }
+}

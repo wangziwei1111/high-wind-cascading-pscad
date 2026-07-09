@@ -2,11 +2,11 @@ function tests = testProtectionLogic
 tests = functiontests(localfunctions);
 end
 
-function testSlightOverloadDoesNotTripImmediately(testCase)
+function testBelowPickupDoesNotStartTimer(testCase)
 state = struct();
 [trip, state] = cfm.OverloadProtection(1.05, 0.1, true, struct(), state);
 verifyFalse(testCase, trip);
-verifyGreaterThan(testCase, state.timer_s, 0);
+verifyEqual(testCase, state.timer_s, 0);
 end
 
 function testSevereOverloadTripsEarlier(testCase)
@@ -33,12 +33,11 @@ end
 
 function testLvrtDeepDipTripsAfterTimeout(testCase)
 state = struct();
-cmd = "hold_connected";
-for k = 1:7
-    [cmd, state] = cfm.LVRTProtection(0.1, 0.1, true, struct(), state);
-end
+[cmd, state] = cfm.LVRTProtection(0.1, 0.1, true, struct(), state);
 verifyEqual(testCase, cmd, "disconnect_wind_farm");
 verifyTrue(testCase, state.tripped);
+[cmd, state] = cfm.LVRTProtection(0.1, 0.1, true, struct(), state);
+verifyEqual(testCase, cmd, "already_disconnected");
 end
 
 function testUflsStagesOnlyActOnce(testCase)

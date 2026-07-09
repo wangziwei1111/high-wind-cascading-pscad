@@ -1,0 +1,6 @@
+metric,default_disabled,ibr2_only,ibr3_only,three_source_controlled
+evented source count,1.0,2.0,2.0,3.0
+timed event source count,1.0,2.0,2.0,3.0
+second event time,-1.0,4.000005,5.0,4.000005
+third event time,-1.0,-1.0,-1.0,5.0
+order class code,1.0,2.0,2.0,4.0

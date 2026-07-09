@@ -1,0 +1,38 @@
+{
+  "execution_status": "completed_pass",
+  "main_sha_final": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_pre_run": "C03DAA211B591923F533554C9951503096677BCF52547D13A10C4B431E69A349",
+  "trial_sha_post_run": "C03DAA211B591923F533554C9951503096677BCF52547D13A10C4B431E69A349",
+  "pscad_metadata_or_display_drift": false,
+  "output_channel_count": 253,
+  "checks": {
+    "main_project_integrity_status": "pass",
+    "trial_default_disabled_integrity_status": "pass",
+    "ibr2_test_disabled_static_status": "pass",
+    "ibr3_test_disabled_static_status": "pass",
+    "ibr3_open_time_static_status": "pass",
+    "ibr3_cause_code_static_status": "pass",
+    "output_channel_count_status": "pass",
+    "dynamic_baseline_status": "pass",
+    "stimulus_specific_contrast_status": "pass",
+    "control_feedback_status": "not_found",
+    "matlab_status": "not_added",
+    "autoreclose_status": "not_added",
+    "fourth_source_status": "not_added",
+    "virtual_source_status": "not_added",
+    "cascade_propagation_status": "unavailable",
+    "physical_causality_direction_status": "unavailable",
+    "system_stability_status": "unavailable",
+    "protection_coordination_status": "unavailable",
+    "matlab_coupling_status": "unavailable"
+  },
+  "dynamic_baseline_status": "pass",
+  "stimulus_specific_contrast_status": "pass",
+  "claim_boundary": "This run only establishes the default-disabled IBR3 trial stimulus baseline for the fixed trial model and default scenario. It does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability.",
+  "notes": [
+    "This audit is read-only and did not Build or Run PSCAD.",
+    "The default-disabled run produced parseable PGB output files.",
+    "IBR3 default-disabled controls/events stayed absent; the prior enabled run recorded the IBR3 local opening at 5.0 s.",
+    "This paired contrast is stimulus-specific for the fixed trial configuration only."
+  ]
+}

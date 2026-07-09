@@ -1,0 +1,26 @@
+{
+  "execution_status": "stage10c_read_only_audit_corrected_RON_candidate_quantified",
+  "compiled_network_comparison_status": "local_N29_E28_and_breaker_graph_reconstructed_DFIG_PCC_end_to_end_partial",
+  "local_admittance_comparison_status": "E_28_29_positive_sequence_and_RON_quantified_full_N29_to_DFIG_Y_unavailable",
+  "pre_fault_initial_state_comparison_status": "material_E_28_29_prefault_flow_difference_correlated_with_unique_PAPER_closed_state_candidate",
+  "fault_voltage_transfer_comparison_status": "material_VIBR_difference_confirmed_N29_voltage_unobservable",
+  "difference_class": "B_intended_PAPER_OVL1_closed_state_difference_quantified_but_not_proven_causal",
+  "specific_difference_id": "D01",
+  "specific_difference_description": "PAPER_OVL1 breaker RON=0.001 ohm is the only scoped compiled closed-state addition. With E_28_29_1 RXB specified per metre and length 0.001 m, RON equals about 60.0% of line R and 5.54% of |Z|, increasing |Z| about 0.663%.",
+  "evidence_strength": "high for quantity, uniqueness within scoped physical diffs, and pre-fault flow correlation; insufficient to prove sole causality for meshed-network flow and DFIG fault-voltage changes",
+  "model_change_allowed": false,
+  "allowed_minimal_change_scope": null,
+  "forbidden_change_scope": [
+    "fault",
+    "LVRT",
+    "BRK_DFIG",
+    "RON without separate numerical/causal authorization",
+    "E_28_29_1 capacity/threshold/delay/relay/breaker topology",
+    "wiring",
+    "timed or synthetic events"
+  ],
+  "whether_build_or_run_is_justified_next": false,
+  "recommended_next_step": "Obtain PSCAD breaker minimum-RON/numerical-stability evidence and an offline compiled-network sensitivity or equivalent calculation showing whether reducing only PAPER RON can restore Stage4 closed-state behavior while preserving switching. Do not edit or Run yet.",
+  "paper_sequence_implication": "Stage9 remains a validated line-first-trip protection subchain, not a DFIG-before-line-trip paper-like chain.",
+  "claim_boundary": "No PNNL thermal-rating, protection-setting, coordination, second-trip, natural-cascade, or strict-paper-reproduction claim."
+}

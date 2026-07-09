@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "execution_status": "trial_local_breaker_boundary_static_build_verified",
+  "selected_source_id": "IBR2_TRIAL",
+  "selected_candidate": "IBR_AVM_2_1_1_1",
+  "detail_json": "data/reference/ibr2_trial_local_breaker_boundary.json",
+  "report": "docs/IBR2_TRIAL_LOCAL_BREAKER_BOUNDARY.md",
+  "main_project_integrity_status": "pass",
+  "local_breaker_boundary_status": "pass",
+  "no_parallel_bypass_status": "pass",
+  "breaker_state_semantics_status": "pass",
+  "output_channel_status": "pass",
+  "control_path_isolation_status": "pass",
+  "dynamic_behavior_status": "unavailable",
+  "second_source_event_status": "not_constructed",
+  "dual_source_collector_status": "not_constructed",
+  "pscad_run_performed": false
+}

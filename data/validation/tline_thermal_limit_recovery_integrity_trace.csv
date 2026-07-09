@@ -1,0 +1,6 @@
+check,status,details
+main_project_integrity_status,pass,
+trial_project_integrity_status,pass,
+forbidden_pscad_file_git_changes,pass,
+full_network_protection_rating_coverage_status,fallback_no_protection_grade_rating_coverage,
+shadow_relay_modeling_readiness,blocked,

@@ -1,0 +1,128 @@
+{
+  "generated_at_local": "2026-07-03T22:54:05+08:00",
+  "source": "data/reference/paper_reproduction_evidence_registry.csv",
+  "ocr_used": false,
+  "network_used": false,
+  "evidence": [
+    {
+      "paper_event_name": "Line flow redistributes after outages; an inverse-time overload action opens a line, anchored at 1.1 times limit with 5 s delay.",
+      "paper_page": "11 (PDF 19)",
+      "paper_section": "2.3.1 线路过负荷保护",
+      "paper_figure_or_table": "Eq. 2-6, 2-7",
+      "direct_text_excerpt_short": "线路负载率达到1.1倍承载极限时，过负荷保护延时5s",
+      "mechanism_type": "line overload protection",
+      "trigger_condition_if_explicit": "line_loading_inverse_time",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E003"
+    },
+    {
+      "paper_event_name": "Conventional units use 47.5/51.5 Hz frequency limits with 10 s delay and 0.8/1.3 p.u. voltage limits with 2 s delay.",
+      "paper_page": "12 (PDF 20)",
+      "paper_section": "2.3.3 常规机组保护",
+      "paper_figure_or_table": "none",
+      "direct_text_excerpt_short": "低频保护定值为47.5Hz，过频保护定值为51.5Hz",
+      "mechanism_type": "conventional-generator protection",
+      "trigger_condition_if_explicit": "generator_frequency_voltage_trip",
+      "time_information_if_explicit": "Thresholds and delays are direct text.",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E005"
+    },
+    {
+      "paper_event_name": "UFLS is three-stage at 49.0/48.8/48.5 Hz with 0.8/0.5/0.2 s delays and 25/40/55 percent shedding; UVLS is 0.8 p.u., 1 s, 25 percent.",
+      "paper_page": "12-13 (PDF 20-21)",
+      "paper_section": "2.3.4 低频低压减载措施",
+      "paper_figure_or_table": "none",
+      "direct_text_excerpt_short": "设置三段低频减载措施动作定值",
+      "mechanism_type": "under-frequency load shedding",
+      "trigger_condition_if_explicit": "UFLS_UVLS",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E006"
+    },
+    {
+      "paper_event_name": "Temporary-overvoltage protection uses a 1.3 p.u. threshold and opens the related line without intentional delay.",
+      "paper_page": "13 (PDF 21)",
+      "paper_section": "2.3.5 暂态过电压措施",
+      "paper_figure_or_table": "none",
+      "direct_text_excerpt_short": "过电压阈值为1.3p.u.，在满足动作条件后无延时",
+      "mechanism_type": "temporary-overvoltage protection",
+      "trigger_condition_if_explicit": "TOV_line_trip",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E007"
+    },
+    {
+      "paper_event_name": "At 0.50 s a 2 s three-phase fault near bus 29 is followed by wind trip, UFLS, sequential overloaded-line openings, further wind trip, and generator protection.",
+      "paper_page": "16-17 (PDF 24-25)",
+      "paper_section": "2.5 典型故障仿真",
+      "paper_figure_or_table": "Table 2-2",
+      "direct_text_excerpt_short": "母线29近区发生三相短路故障，故障持续时间2.0s",
+      "mechanism_type": "initial fault type",
+      "trigger_condition_if_explicit": "paper_threshold_not_explicit",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E010"
+    },
+    {
+      "paper_event_name": "The overload-dominant sequence starts with a short circuit, then overloaded line trip(s), topology degradation, source/load actions, islanding and generator loss.",
+      "paper_page": "21 (PDF 29)",
+      "paper_section": "3.3.1.1 过载主导型连锁故障",
+      "paper_figure_or_table": "Fig. 3-3",
+      "direct_text_excerpt_short": "线路L1过载切除，多线路相继切除",
+      "mechanism_type": "scenario comparison dimensions",
+      "trigger_condition_if_explicit": "paper_threshold_not_explicit",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E011"
+    },
+    {
+      "paper_event_name": "The off-grid-dominant sequence starts with a short circuit, wind trip and power loss, then state/flow redistribution, line trips, load shedding and generator loss.",
+      "paper_page": "21-22 (PDF 29-30)",
+      "paper_section": "3.3.1.2 脱网主导型连锁故障",
+      "paper_figure_or_table": "Fig. 3-4",
+      "direct_text_excerpt_short": "风机脱网，大量功率损失，电网状态偏移，潮流大幅转移",
+      "mechanism_type": "wind-farm / DFIG model",
+      "trigger_condition_if_explicit": "paper_threshold_not_explicit",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E012"
+    },
+    {
+      "paper_event_name": "Evaluation uses line-trip count, wind power lost, load shed, and voltage/frequency severity.",
+      "paper_page": "22-23 (PDF 30-31)",
+      "paper_section": "3.3.2.1 故障严重度指标",
+      "paper_figure_or_table": "Eq. 3-1 to 3-5",
+      "direct_text_excerpt_short": "定义切线数量、风机脱网功率与减载指标",
+      "mechanism_type": "evaluation outputs",
+      "trigger_condition_if_explicit": "paper_threshold_not_explicit",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E013"
+    },
+    {
+      "paper_event_name": "UVLS uses a 0.8 p.u. threshold, 1.0 s delay and 25 percent load shedding.",
+      "paper_page": "13 (PDF 21)",
+      "paper_section": "2.3.4 低频低压减载措施",
+      "paper_figure_or_table": "none",
+      "direct_text_excerpt_short": "低压减载措施电压定值为0.8p.u.",
+      "mechanism_type": "under-voltage load shedding",
+      "trigger_condition_if_explicit": "UVLS",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E019"
+    },
+    {
+      "paper_event_name": "The paper models a DFIG wind turbine and uses wind-farm off-grid behavior as the first protection action in an off-grid-dominant chain.",
+      "paper_page": "14-15, 21-22 (PDF 22-23, 29-30)",
+      "paper_section": "2.4.2, 3.3.1.2",
+      "paper_figure_or_table": "Fig. 2-6; Fig. 3-4",
+      "direct_text_excerpt_short": "风机脱网为主导的连锁故障",
+      "mechanism_type": "wind-farm / DFIG model",
+      "trigger_condition_if_explicit": "paper_threshold_not_explicit",
+      "time_information_if_explicit": "paper_time_not_explicit",
+      "confidence": "high_registry_direct_text",
+      "evidence_id": "E021"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "audit_name": "paper_aligned_fault_scenario_preflight",
+  "generated_at_local": "2026-07-03T00:43:26",
+  "execution_status": "pass",
+  "main_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "trial_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",
+  "gates": {
+    "main_file_exists": true,
+    "trial_file_exists": true,
+    "main_sha_matches_expected": true,
+    "trial_sha_matches_full_network_tline_baseline": true,
+    "evidence_rows_present": true,
+    "evidence_page_section_anchor_present": true,
+    "single_existing_fault_component": true,
+    "n29_structural_mapping_available": true,
+    "output_channel_count_448": true,
+    "full_network_tline_audit_pass": true,
+    "current_trial_duration_is_editable_pre_gui": true
+  },
+  "errors": [],
+  "current_project_settings": {
+    "time_duration": "5",
+    "time_step": "5",
+    "sample_step": "10000"
+  },
+  "current_trial_defaults_trace": {
+    "label_traces": {
+      "IBR2_TEST_ENABLE": [
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR2_TEST_ENABLE"
+        },
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR2_TEST_ENABLE"
+        }
+      ],
+      "IBR3_TEST_ENABLE": [
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR3_TEST_ENABLE"
+        },
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR3_TEST_ENABLE"
+        }
+      ],
+      "IBR2_TEST_OPEN_TIME_S": [
+        {
+          "tag": "param",
+          "name": "X",
+          "value": "IBR2_TEST_OPEN_TIME_S"
+        },
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR2_TEST_OPEN_TIME_S"
+        }
+      ],
+      "IBR3_TEST_OPEN_TIME_S": [
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR3_TEST_OPEN_TIME_S"
+        },
+        {
+          "tag": "param",
+          "name": "Name",
+          "value": "IBR3_TEST_OPEN_TIME_S"
+        }
+      ]
+    },
+    "open_stimulus_instances": [
+      {
+        "user": {
+          "classid": "UserCmp",
+          "name": "3IBR_DFIG1_TRIAL:ONE_SHOT_BREAKER_OPEN_STIMULUS",
+          "id": "720222925",
+          "x": "486",
+          "y": "450",
+          "w": "112",
+          "h": "82",
+          "z": "510",
+          "orient": "0",
+          "defn": "3IBR_DFIG1_TRIAL:ONE_SHOT_BREAKER_OPEN_STIMULUS",
+          "link": "-1",
+          "q": "4"
+        },
+        "params": {
+          "Name": "MODTEST_ONE_SHOT_STIMULUS",
+          "OPEN_TIME_S": "4.0"
+        }
+      },
+      {
+        "user": {
+          "classid": "UserCmp",
+          "name": "3IBR_DFIG1_TRIAL:ONE_SHOT_BREAKER_OPEN_STIMULUS",
+          "id": "432065151",
+          "x": "810",
+          "y": "1800",
+          "w": "112",
+          "h": "82",
+          "z": "3300",
+          "orient": "0",
+          "defn": "3IBR_DFIG1_TRIAL:ONE_SHOT_BREAKER_OPEN_STIMULUS",
+          "link": "-1",
+          "q": "4"
+        },
+        "params": {
+          "Name": "IBR3_TRIAL__OPEN_STIMULUS",
+          "OPEN_TIME_S": "5"
+        }
+      }
+    ]
+  },
+  "fault_component_summary": {
+    "fault_component_count": 1,
+    "fault_components": [
+      {
+        "id": "413214904",
+        "defn": "master:tfaultn",
+        "definition_path": "project[3IBR_DFIG1_TRIAL]/definitions[]/Definition[P3]/schematic[]/User[413214904]",
+        "x": "774",
+        "y": "1080",
+        "w": "76",
+        "h": "56",
+        "params": {
+          "TF": "2.0",
+          "DF": "0.15"
+        }
+      }
+    ],
+    "existing_fault_component_status": "pass"
+  },
+  "target_mapping_summary": {
+    "n29_label_count": 1,
+    "n29_labels": [
+      {
+        "param_path": "project[3IBR_DFIG1_TRIAL]/definitions[]/Definition[P3]/schematic[]/User[master:nodelabel]/paramlist[]/param[Name]",
+        "user": {
+          "classid": "UserCmp",
+          "name": "master:nodelabel",
+          "defn": "master:nodelabel",
+          "id": "4836",
+          "x": "3312",
+          "y": "162",
+          "w": "24",
+          "h": "21",
+          "z": "1",
+          "orient": "2",
+          "link": "-1",
+          "q": "4",
+          "disable": "false"
+        }
+      }
+    ],
+    "n29_adjacent_tlines": [
+      {
+        "tline": null,
+        "network_branch_id": "E_26_29_1",
+        "tline_instance_name": "E_26_29_1",
+        "terminal_a_node": "N26",
+        "terminal_b_node": "N29",
+        "component_id": "2124836834",
+        "inclusion_status": "included",
+        "paper_evidence_id": "E003;E012"
+      },
+      {
+        "tline": null,
+        "network_branch_id": "E_28_29_1",
+        "tline_instance_name": "E_28_29_1",
+        "terminal_a_node": "N28",
+        "terminal_b_node": "N29",
+        "component_id": "2062315490",
+        "inclusion_status": "included",
+        "paper_evidence_id": "E003;E012"
+      }
+    ],
+    "mapping_status": "structurally_aligned_adaptation"
+  },
+  "channel_baseline_summary": {
+    "xml_output_channel_count": 448,
+    "duplicate_names": {
+      "DFIG_IFLT_A_KA": 2,
+      "Iq": 3
+    },
+    "status": "pass"
+  },
+  "next_action": "manual_gui_static_configuration_and_build_only"
+}

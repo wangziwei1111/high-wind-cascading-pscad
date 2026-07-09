@@ -1,0 +1,152 @@
+{
+  "paper_source_status": "available_primary_paper_source",
+  "design_status": "blocked_before_shadow_relay_due_to_zero_unspecified_raw_rate_fields",
+  "controlled_existing_sequence_classification": "controlled interface-validation sequence",
+  "controlled_existing_sequence_prohibited_classifications": [
+    "paper cascade chain",
+    "natural cascade",
+    "causal propagation"
+  ],
+  "selected_candidate_chain_id": "MC01",
+  "candidates": [
+    {
+      "candidate_chain_id": "MC01",
+      "paper_evidence_id": "E003;E010;E012",
+      "initial_disturbance": "paper-aligned three-phase fault at a traceable network bus",
+      "first_required_observability": "PCC voltage plus source V/P/Q and actual DFIG breaker state",
+      "first_protection_candidate": "existing DFIG LVRT/local trip path after paper-criterion gap is documented",
+      "network_propagation_link": "source power loss and branch P/Q/I/100-MVA-normalized apparent-power response redistribution",
+      "second_protection_candidate": "future line-overload shadow relay; no breaker connection",
+      "required_measurements": [
+        "target-line P",
+        "target-line Q",
+        "target-line I",
+        "target-line loading ratio",
+        "line breaker state",
+        "PCC voltage",
+        "frequency"
+      ],
+      "required_existing_components": [
+        "fault source",
+        "DFIG LVRT",
+        "BRK_DFIG",
+        "event packet",
+        "collector",
+        "chronology",
+        "source V/P/Q"
+      ],
+      "missing_components": [
+        "line loading limits",
+        "line breaker observability",
+        "overload shadow relay",
+        "verified per-line continuous thermal ratings"
+      ],
+      "minimum_model_change": "First add monitor-only target-line P/Q/I/loading outputs; do not add relay or actuation in that stage.",
+      "future_run_count_before_claim": "minimum 2 after staged implementation: one observability baseline and one later shadow-relay evaluation; more required before any natural-cascade claim",
+      "claim_boundary": "Raw branch P/Q/I and normalized S/model-MVA response are available; verified thermal loading, overload relay, line trip, or natural cascade behavior has not been validated.",
+      "rejection_reason_if_not_feasible": "Reject if the target branch and its electrical measurements cannot be unambiguously mapped.",
+      "implemented_prerequisites": [
+        "full-network raw TLine P/Q/I monitor-only observability",
+        "one parsed 20 s N29 fault raw TLine P/Q/I response run",
+        "offline apparent-power loading-ratio reconstruction for all 31 current-model TLines"
+      ]
+    },
+    {
+      "candidate_chain_id": "MC02",
+      "paper_evidence_id": "E003;E011",
+      "initial_disturbance": "short fault followed by recovery-stage line loading increase",
+      "first_required_observability": "target-line loading and breaker state",
+      "first_protection_candidate": "future line-overload shadow relay",
+      "network_propagation_link": "line opening to subsequent redistribution",
+      "second_protection_candidate": "future source/load shadow protection",
+      "required_measurements": [
+        "line P/Q/I/loading",
+        "line breaker states",
+        "bus V/f"
+      ],
+      "required_existing_components": [
+        "fault source",
+        "network model"
+      ],
+      "missing_components": [
+        "shadow relay",
+        "transmission-line actuation boundary",
+        "verified per-line continuous thermal ratings"
+      ],
+      "minimum_model_change": "Same first step as MC01: branch observability only.",
+      "future_run_count_before_claim": "at least 2 staged runs after implementation",
+      "claim_boundary": "Raw branch P/Q/I and normalized S/model-MVA response are available; verified thermal loading, overload relay, line trip, or natural cascade behavior has not been validated.",
+      "rejection_reason_if_not_feasible": "Less immediately reusable than MC01 because the current audited first protection is source-side DFIG LVRT.",
+      "implemented_prerequisites": [
+        "full-network raw TLine P/Q/I monitor-only observability",
+        "one parsed 20 s N29 fault raw TLine P/Q/I response run",
+        "offline apparent-power loading-ratio reconstruction for all 31 current-model TLines"
+      ]
+    }
+  ],
+  "next_stage": "rating-source acquisition only; no shadow relay until per-line continuous thermal limits are recovered",
+  "why_this_stage_matches_the_paper": "E003, E010 and E012 place branch-flow redistribution and overload between the first source event and later protection actions.",
+  "why_other_stages_are_deferred": "Loading-ratio observations exist, but relay criteria, thermal time behavior, line actuation boundaries and causal validation are still missing.",
+  "primary_paper_evidence_supporting_order": [
+    "E003",
+    "E010",
+    "E012"
+  ],
+  "stage2_branch_observability_preflight": {
+    "execution_status": "branch_raw_measurements_static_fallback",
+    "real_branch_traceability_status": "pass",
+    "branch_measurement_semantics_status": "fail",
+    "selected_branch_count": 0,
+    "reason": "Real TLine candidates were found, but none exposes an existing P/Q/I signal path and this stage forbids adding measurement elements.",
+    "next_stage_remains": "branch observability only",
+    "required_scope_change": "Explicitly authorize minimal inline meters or establish an authoritative native TLine measurement interface; still no module, relay, breaker command, or in-model loading calculation."
+  },
+  "branch_observability_stage2_status": "full_network_raw_tline_pqi_static_observability_implemented",
+  "stage2_full_network_tline_measurement_evidence": "data/validation/full_network_tline_measurement_final_audit.json",
+  "paper_aligned_20s_fault_static_configuration": {
+    "execution_status": "implemented_static_build_only",
+    "fault_target_mapping": "structurally_aligned_P3_N29_adaptation",
+    "fault_start_s": 0.5,
+    "fault_duration_s": 2.0,
+    "fault_clear_s": 2.5,
+    "simulation_duration_s": 20.0,
+    "final_audit": "data/validation/paper_aligned_fault_scenario_final_audit.json",
+    "dynamic_status": "not_run_not_validated",
+    "claim_boundary": "Initial disturbance is statically configured; natural cascade propagation remains unvalidated."
+  },
+  "paper_aligned_20s_dynamic_run": {
+    "execution_status": "pass",
+    "final_audit": "data/validation/paper_aligned_20s_dynamic_run_final_audit.json",
+    "time_axis": "0.0_to_20.0_s_2001_samples",
+    "full_network_tline_raw_signal_count": 186,
+    "dfig_event_status": "observed",
+    "ibr2_default_disabled_status": "not_triggered",
+    "ibr3_default_disabled_status": "not_triggered",
+    "claim_boundary": "raw TLine P/Q/I response observation only; no overload, relay, line trip, causality, natural cascade, or strict reproduction claim"
+  },
+  "tline_rating_loading_audit": {
+    "execution_status": "pass",
+    "rating_coverage_status": "pass_full_rating_coverage",
+    "qualified_line_count": 31,
+    "qualified_rating_type": "apparent_power_total_mva_from_generated_tli",
+    "line_loading_ratio_status": "observed_for_qualified_lines_only",
+    "line_overload_status": "not_validated_no_relay_or_thermal_time_model",
+    "recommended_candidate_line": "E_28_29_1",
+    "e_16_19_1_rank_under_current_model": 9,
+    "final_audit": "data/validation/tline_rating_loading_final_audit.json",
+    "claim_boundary": "offline loading-ratio reconstruction only; no relay, line trip, thermal overload proof, natural cascade, or strict reproduction claim"
+  },
+  "tline_rating_semantic_stage5b": {
+    "semantic_classification": "uniform_model_value_or_default_parameter",
+    "shadow_relay_modeling_readiness": "blocked",
+    "highest_normalized_apparent_power_response_line": "E_28_29_1"
+  },
+  "tline_thermal_limit_recovery": {
+    "coverage_status": "fallback_no_protection_grade_rating_coverage",
+    "shadow_relay_modeling_readiness": "blocked"
+  },
+  "stage7_paper_calibrated_first_trip_status": "paper_calibrated_first_trip_parser_fallback",
+  "stage7_selected_line": "E_28_29_1",
+  "stage7_boundary": "This stage documents a trial-only paper-calibrated equivalent protection attempt. It does not represent PNNL real continuous thermal capacity or true protection-setting validation.",
+  "strict_reproduction_status": "not_achieved"
+}

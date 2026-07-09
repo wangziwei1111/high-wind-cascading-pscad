@@ -1,0 +1,146 @@
+{
+  "audit_name": "stage13_post_second_trip_state_audit",
+  "generated_at_local": "2026-07-03T22:56:06+08:00",
+  "execution_status": "stage13_post_second_trip_state_classified",
+  "windows": {
+    "W0_pre_fault": [
+      0.0,
+      0.49
+    ],
+    "W1_fault": [
+      0.5,
+      2.5
+    ],
+    "W2_dfig_to_first_line": [
+      2.51,
+      7.53
+    ],
+    "W3_first_to_second_line": [
+      7.54,
+      12.6
+    ],
+    "W4_post_second_line": [
+      12.61,
+      20.0
+    ]
+  },
+  "stage12_event_times": {
+    "fault_start": 0.5,
+    "fault_clear": 2.5,
+    "dfig_actual_breaker_open": 2.44,
+    "dfig_event_valid": 2.44,
+    "dfig_source_availability_lost": 2.44,
+    "paper_ovl1_pickup": 2.53,
+    "paper_ovl1_timer_done": 7.53,
+    "paper_ovl1_actual_open": 7.53,
+    "paper_ovl2_pickup": 7.6,
+    "paper_ovl2_timer_done": 12.6,
+    "paper_ovl2_trip_request": 12.6,
+    "paper_ovl2_breaker_command": 12.6,
+    "paper_ovl2_actual_open": 12.6
+  },
+  "top_tline_risk_candidates": [
+    {
+      "network_branch_id": "E_9_39_1",
+      "W3_mean": 3.3974463907694683,
+      "W3_max": 6.7814266201641535,
+      "W3_min": 0.7820376584941121,
+      "W4_mean": 8.567773796007911,
+      "W4_max": 13.244099516863434,
+      "W4_min": 0.49925192173933935,
+      "W4_minus_W3_mean": 5.170327405238442,
+      "longest_W4_high_stress_start_s": 13.08,
+      "longest_W4_high_stress_end_s": 13.71,
+      "longest_W4_high_stress_duration_s": 0.6300000000000008,
+      "relationship_to_E_26_29_1_open": "after_second_trip_window",
+      "classification": "third_line_candidate_requires_longer_run",
+      "claim_boundary": "raw P/Q-derived response only; no real loading or thermal overload claim",
+      "risk_rank": 1
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "W3_mean": 4.979942308686908,
+      "W3_max": 9.889586925216976,
+      "W3_min": 1.5357297077482157,
+      "W4_mean": 8.495893759650986,
+      "W4_max": 12.50955968197466,
+      "W4_min": 0.18059647591847944,
+      "W4_minus_W3_mean": 3.515951450964078,
+      "longest_W4_high_stress_start_s": 13.27,
+      "longest_W4_high_stress_end_s": 13.65,
+      "longest_W4_high_stress_duration_s": 0.3800000000000008,
+      "relationship_to_E_26_29_1_open": "after_second_trip_window",
+      "classification": "third_line_candidate_requires_longer_run",
+      "claim_boundary": "raw P/Q-derived response only; no real loading or thermal overload claim",
+      "risk_rank": 2
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "W3_mean": 3.3589205435998934,
+      "W3_max": 6.750484606945924,
+      "W3_min": 0.28125257073787613,
+      "W4_mean": 6.778892373068761,
+      "W4_max": 10.581797743512556,
+      "W4_min": 0.3019510915391371,
+      "W4_minus_W3_mean": 3.4199718294688672,
+      "longest_W4_high_stress_start_s": 13.09,
+      "longest_W4_high_stress_end_s": 13.51,
+      "longest_W4_high_stress_duration_s": 0.41999999999999993,
+      "relationship_to_E_26_29_1_open": "after_second_trip_window",
+      "classification": "third_line_candidate_requires_longer_run",
+      "claim_boundary": "raw P/Q-derived response only; no real loading or thermal overload claim",
+      "risk_rank": 3
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "W3_mean": 1.2364020165729674,
+      "W3_max": 2.6020429354172734,
+      "W3_min": 0.4984591626769819,
+      "W4_mean": 3.6276207672765683,
+      "W4_max": 5.469972303756588,
+      "W4_min": 0.23690005270437176,
+      "W4_minus_W3_mean": 2.391218750703601,
+      "longest_W4_high_stress_start_s": 12.81,
+      "longest_W4_high_stress_end_s": 13.44,
+      "longest_W4_high_stress_duration_s": 0.629999999999999,
+      "relationship_to_E_26_29_1_open": "after_second_trip_window",
+      "classification": "third_line_candidate_requires_longer_run",
+      "claim_boundary": "raw P/Q-derived response only; no real loading or thermal overload claim",
+      "risk_rank": 4
+    },
+    {
+      "network_branch_id": "E_1_2_1",
+      "W3_mean": 4.872981518810234,
+      "W3_max": 10.310742089727011,
+      "W3_min": 0.9421204533678806,
+      "W4_mean": 7.210660218652787,
+      "W4_max": 11.939651516053914,
+      "W4_min": 0.18059647591847944,
+      "W4_minus_W3_mean": 2.337678699842553,
+      "longest_W4_high_stress_start_s": 19.79,
+      "longest_W4_high_stress_end_s": 19.87,
+      "longest_W4_high_stress_duration_s": 0.08000000000000185,
+      "relationship_to_E_26_29_1_open": "after_second_trip_window",
+      "classification": "third_line_candidate_requires_longer_run",
+      "claim_boundary": "raw P/Q-derived response only; no real loading or thermal overload claim",
+      "risk_rank": 5
+    }
+  ],
+  "frequency_status": "frequency_risk_not_observed",
+  "voltage_summary": {
+    "channel_count": 17,
+    "network_wide_channel_count": 0,
+    "overall": "local_voltage_response_only"
+  },
+  "source_status": {
+    "DFIG_actual_disconnect": "directly_observed",
+    "other_wind_farm_disconnect": "not_observed",
+    "synchronous_generator_disconnect": "not_observable",
+    "conventional_generator_protection_action": "not_observable",
+    "system_active_power_deficit": "not_observable",
+    "system_reactive_power_deficit": "not_observable",
+    "claim_boundary": "Only DFIG disconnect is directly observed; line raw S changes are not source-trip evidence."
+  },
+  "topology_partition_status": "connected_after_second_trip",
+  "paper_chain_waiver_accepted": true
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-02",
+  "scenario_name": "CONTROLLED_DFIG_IBR2_IBR3_ELECTRICAL_RESPONSE",
+  "execution_status": "three_source_electrical_response_completed_and_restored",
+  "approved_run_count": 1,
+  "electrical_response_observability_status": "pass",
+  "controlled_three_event_order_status": "pass",
+  "event_times_s": {
+    "DFIG": 2.01603,
+    "IBR2_TRIAL": 4.000005,
+    "IBR3_TRIAL": 4.5
+  },
+  "cause_codes": {
+    "DFIG": 2,
+    "IBR2_TRIAL": 4,
+    "IBR3_TRIAL": 5
+  },
+  "channel_count": 262,
+  "electrical_channel_count": 9,
+  "event_channel_combinations": 27,
+  "event_window_coverage_status": "pass",
+  "final_defaults": {
+    "IBR2_TEST_ENABLE": 0,
+    "IBR3_TEST_ENABLE": 0,
+    "IBR2_TEST_OPEN_TIME_S": 4.0,
+    "IBR3_OPEN_TIME_S": 5.0
+  },
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "report": "docs/THREE_SOURCE_ELECTRICAL_RESPONSE_DYNAMIC_RUN.md",
+  "summary": "One approved controlled Run produced parseable V/P/Q traces for all three real sources and complete windows around three explicitly configured event times; the trial defaults were then restored and rebuilt without another Run.",
+  "claim_boundary": "Recorded electrical trajectory metrics only; no natural cascade propagation, physical causality, system stability, protection coordination, voltage-support performance, MATLAB coupling, or general applicability is validated."
+}

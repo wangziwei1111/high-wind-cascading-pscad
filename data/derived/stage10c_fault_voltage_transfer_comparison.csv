@@ -1,0 +1,3 @@
+run,fault_start_s,fault_clear_s,N29_voltage_status,VIBR1_2_min,VIBR1_2_mean,VIBR1_2_below_0p9_cumulative_s,PIBR1_2_mean,QIBR1_2_mean,DFIG_duration_trigger_s,DFIG_breaker_open_s,DFIG_availability_lost_s
+stage4,0.5,2.5,runtime_unavailable,0.85254967423946,0.8639348132370043,1.99,151.14705227843325,-16.567846449657086,2.43,2.43,2.43
+stage9,0.5,2.5,runtime_unavailable,0.91051071893218,0.9400020004365336,0,157.88412054274127,56.18691653381278,,,

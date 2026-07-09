@@ -1,0 +1,6 @@
+{
+  "audit_name": "stage15_output_minimum_audit",
+  "status": "pass",
+  "new_output_channel_count": 15,
+  "unique": true
+}

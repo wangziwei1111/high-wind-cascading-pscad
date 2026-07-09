@@ -1,0 +1,17 @@
+direction,port,meaning
+input,IN_EVENT_VALID_A,A event-valid flag
+input,IN_FIRST_EVENT_TIME_A_S,A first-event time in seconds
+input,IN_EVENT_VALID_B,B event-valid flag
+input,IN_FIRST_EVENT_TIME_B_S,B first-event time in seconds
+input,IN_EVENT_VALID_C,C event-valid flag
+input,IN_FIRST_EVENT_TIME_C_S,C first-event time in seconds
+output,OUT_EVENTED_OBJECT_COUNT,raw event-valid count
+output,OUT_TIMED_EVENT_OBJECT_COUNT,count of event-valid sources with nonnegative first-event time
+output,OUT_FIRST_EVENT_TIME_S,first ordered event time
+output,OUT_SECOND_EVENT_TIME_S,second ordered event time
+output,OUT_THIRD_EVENT_TIME_S,third ordered event time
+output,OUT_FIRST_TO_SECOND_GAP_S,second minus first time or -1
+output,OUT_SECOND_TO_THIRD_GAP_S,third minus second time or -1
+output,OUT_FIRST_EVENT_SOURCE_CODE,earliest source code
+output,OUT_EVENT_ORDER_CLASS_CODE,event ordering class
+output,OUT_CHRONOLOGY_CONSISTENT,static interface consistency flag

@@ -1,0 +1,11 @@
+field,static_rule,default_expected
+any_event_valid,"LIMIT(0,1,A.valid+B.valid+C.valid)",0
+any_breaker_open,"LIMIT(0,1,A.open+B.open+C.open)",0
+available_source_count,A.available+B.available+C.available,3
+evented_source_count,A.valid+B.valid+C.valid,0
+first_event_time_s,minimum valid nonnegative time or -1,-1
+first_event_source_code,0 none 1 A 2 B 3 C 4 tie,0
+cause_code_a,independent passthrough,0
+cause_code_b,independent passthrough,0
+cause_code_c,independent passthrough,0
+dynamic_behavior,not tested,unavailable

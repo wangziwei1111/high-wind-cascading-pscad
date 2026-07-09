@@ -1,0 +1,1246 @@
+{
+  "schema_version": 1,
+  "trial_project_status": "not_created",
+  "ibr_branch_mapping_status": "pass",
+  "selected_source": {
+    "candidate_id": "IBR_AVM_2_1_1_1",
+    "source_id": "IBR2_TRIAL",
+    "display_name": "IBR_AVM_2_1_1_1 existing IBR branch",
+    "page_path": "3IBR:Main(0):P1(0):P3(0)",
+    "ibr_component_id": "1220231535",
+    "ibr_component_z": "1950",
+    "p_q_v_signals": [
+      "VIBR2",
+      "PIBR2",
+      "QIBR2"
+    ],
+    "nearby_components": [
+      {
+        "id": "130884332",
+        "definition": "master:datalabel",
+        "name": "IPGFL",
+        "x": "846",
+        "y": "1206",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "133399289",
+        "definition": "master:logic_mult",
+        "name": "master:logic_mult",
+        "x": "864",
+        "y": "1206",
+        "z": "1440",
+        "orient": "0"
+      },
+      {
+        "id": "1472638760",
+        "definition": "master:datalabel",
+        "name": "Vflagg",
+        "x": "936",
+        "y": "1206",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1028174381",
+        "definition": "master:datalabel",
+        "name": "Ref_a",
+        "x": "990",
+        "y": "1206",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "536716880",
+        "definition": "master:datalabel",
+        "name": "Iibr",
+        "x": "1080",
+        "y": "1206",
+        "z": "1",
+        "orient": "6"
+      },
+      {
+        "id": "1974922025",
+        "definition": "master:logic_mult",
+        "name": "master:logic_mult",
+        "x": "1116",
+        "y": "1206",
+        "z": "690",
+        "orient": "0"
+      },
+      {
+        "id": "854495268",
+        "definition": "master:datalabel",
+        "name": "Qflagg",
+        "x": "1188",
+        "y": "1206",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1750712376",
+        "definition": "master:datalabel",
+        "name": "DFIG_LVRT_TRIP_LATCH",
+        "x": "1224",
+        "y": "1206",
+        "z": "1",
+        "orient": "0"
+      },
+      {
+        "id": "2105433584",
+        "definition": "master:datalabel",
+        "name": "Qflag",
+        "x": "756",
+        "y": "1224",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1765462440",
+        "definition": "master:inv",
+        "name": "master:inv",
+        "x": "792",
+        "y": "1224",
+        "z": "670",
+        "orient": "0"
+      },
+      {
+        "id": "1325295295",
+        "definition": "master:datalabel",
+        "name": "IQGFL",
+        "x": "846",
+        "y": "1224",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1170734627",
+        "definition": "master:abcdq0",
+        "name": "master:abcdq0",
+        "x": "936",
+        "y": "1224",
+        "z": "980",
+        "orient": "0"
+      },
+      {
+        "id": "1963454761",
+        "definition": "master:datalabel",
+        "name": "Ref_b",
+        "x": "990",
+        "y": "1224",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "2102076466",
+        "definition": "master:datalabel",
+        "name": "PF_flag",
+        "x": "1008",
+        "y": "1224",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "906135996",
+        "definition": "master:const",
+        "name": "master:const",
+        "x": "1242",
+        "y": "1224",
+        "z": "550",
+        "orient": "0"
+      },
+      {
+        "id": "1033008218",
+        "definition": "master:const",
+        "name": "master:const",
+        "x": "864",
+        "y": "1242",
+        "z": "690",
+        "orient": "0"
+      },
+      {
+        "id": "795603845",
+        "definition": "master:datalabel",
+        "name": "Ref_c",
+        "x": "990",
+        "y": "1242",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1402564227",
+        "definition": "master:datatap",
+        "name": "master:datatap",
+        "x": "1152",
+        "y": "1242",
+        "z": "710",
+        "orient": "7"
+      },
+      {
+        "id": "1232472600",
+        "definition": "master:gain",
+        "name": "master:gain",
+        "x": "1170",
+        "y": "1242",
+        "z": "560",
+        "orient": "0"
+      },
+      {
+        "id": "1143880435",
+        "definition": "master:div",
+        "name": "master:div",
+        "x": "1188",
+        "y": "1242",
+        "z": "1030",
+        "orient": "0"
+      },
+      {
+        "id": "2025602951",
+        "definition": "master:pgb",
+        "name": "DFIG_LVRT_TRIP_LATCH",
+        "x": "1224",
+        "y": "1242",
+        "z": "570",
+        "orient": "0"
+      },
+      {
+        "id": "1791574139",
+        "definition": "master:datalabel",
+        "name": "Iaa",
+        "x": "1242",
+        "y": "1242",
+        "z": "1",
+        "orient": "6"
+      },
+      {
+        "id": "1395067852",
+        "definition": "master:annotation",
+        "name": "master:annotation",
+        "x": "702",
+        "y": "1260",
+        "z": "1",
+        "orient": "0"
+      },
+      {
+        "id": "258059394",
+        "definition": "master:datalabel",
+        "name": "DFIG_LVRT_TRIP_LATCH_MEM",
+        "x": "1224",
+        "y": "1260",
+        "z": "1",
+        "orient": "0"
+      },
+      {
+        "id": "1938218123",
+        "definition": "master:datalabel",
+        "name": "IPGFL",
+        "x": "720",
+        "y": "1278",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "326276139",
+        "definition": "master:datalabel",
+        "name": "Volt_dip",
+        "x": "936",
+        "y": "1278",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "294350396",
+        "definition": "master:datalabel",
+        "name": "Inputs2",
+        "x": "990",
+        "y": "1278",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1484191995",
+        "definition": "master:inv",
+        "name": "master:inv",
+        "x": "1026",
+        "y": "1278",
+        "z": "1390",
+        "orient": "0"
+      },
+      {
+        "id": "1624805265",
+        "definition": "master:datalabel",
+        "name": "Flags2",
+        "x": "1044",
+        "y": "1278",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1592394910",
+        "definition": "master:datalabel",
+        "name": "INV_Ibase_pk",
+        "x": "1188",
+        "y": "1278",
+        "z": "1",
+        "orient": "4"
+      },
+      {
+        "id": "995256784",
+        "definition": "master:datalabel",
+        "name": "Vflag",
+        "x": "936",
+        "y": "1296",
+        "z": "1",
+        "orient": "6"
+      },
+      {
+        "id": "195274536",
+        "definition": "master:logic_mult",
+        "name": "master:logic_mult",
+        "x": "1116",
+        "y": "1296",
+        "z": "1400",
+        "orient": "0"
+      },
+      {
+        "id": "1004759129",
+        "definition": "master:datalabel",
+        "name": "PQVdipflag",
+        "x": "1188",
+        "y": "1296",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1505823658",
+        "definition": "master:pgb",
+        "name": "PQVdipflag",
+        "x": "1224",
+        "y": "1296",
+        "z": "1430",
+        "orient": "0"
+      },
+      {
+        "id": "751641054",
+        "definition": "master:datalabel",
+        "name": "PQflag",
+        "x": "936",
+        "y": "1314",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "43639850",
+        "definition": "master:inv",
+        "name": "master:inv",
+        "x": "954",
+        "y": "1314",
+        "z": "750",
+        "orient": "0"
+      },
+      {
+        "id": "915240918",
+        "definition": "master:logic_mult",
+        "name": "master:logic_mult",
+        "x": "1044",
+        "y": "1314",
+        "z": "760",
+        "orient": "0"
+      },
+      {
+        "id": "907835102",
+        "definition": "master:datalabel",
+        "name": "DFIG_LVRT_TRIP_REQUEST_ARMED",
+        "x": "1152",
+        "y": "1314",
+        "z": "1",
+        "orient": "0"
+      },
+      {
+        "id": "1752563448",
+        "definition": "master:compare",
+        "name": "master:compare",
+        "x": "1224",
+        "y": "1314",
+        "z": "1940",
+        "orient": "0"
+      },
+      {
+        "id": "1363511832",
+        "definition": "master:datalabel",
+        "name": "DFIG_LVRT_TRIP_REQUEST_BOOL",
+        "x": "1296",
+        "y": "1314",
+        "z": "1",
+        "orient": "0"
+      },
+      {
+        "id": "24850255",
+        "definition": "master:inductor",
+        "name": "master:inductor",
+        "x": "720",
+        "y": "1332",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "797238293",
+        "definition": "master:multimeter",
+        "name": "master:multimeter",
+        "x": "792",
+        "y": "1332",
+        "z": "580",
+        "orient": "4"
+      },
+      {
+        "id": "275469438",
+        "definition": "ETRAN:Electranix_xfmr_2w",
+        "name": "E_2_30_1",
+        "x": "864",
+        "y": "1332",
+        "z": "1",
+        "orient": "4"
+      },
+      {
+        "id": "1322876499",
+        "definition": "master:datalabel",
+        "name": "Qflag",
+        "x": "936",
+        "y": "1332",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1433370859",
+        "definition": "master:multimeter",
+        "name": "master:multimeter",
+        "x": "936",
+        "y": "1332",
+        "z": "590",
+        "orient": "4"
+      },
+      {
+        "id": "1220231535",
+        "definition": "3IBR:IBR_AVM_2_1_1",
+        "name": "3IBR:IBR_AVM_2_1_1",
+        "x": "990",
+        "y": "1332",
+        "z": "1950",
+        "orient": "0"
+      },
+      {
+        "id": "2067486031",
+        "definition": "master:datatap",
+        "name": "master:datatap",
+        "x": "1152",
+        "y": "1368",
+        "z": "720",
+        "orient": "7"
+      },
+      {
+        "id": "1337132183",
+        "definition": "master:div",
+        "name": "master:div",
+        "x": "1188",
+        "y": "1368",
+        "z": "1010",
+        "orient": "0"
+      },
+      {
+        "id": "571077874",
+        "definition": "master:datalabel",
+        "name": "Ibb",
+        "x": "1242",
+        "y": "1368",
+        "z": "1",
+        "orient": "6"
+      },
+      {
+        "id": "188357177",
+        "definition": "master:datalabel",
+        "name": "IQGFL",
+        "x": "720",
+        "y": "1386",
+        "z": "1",
+        "orient": "2"
+      },
+      {
+        "id": "1521303018",
+        "definition": "master:datalabel",
+        "name": "INV_Ibase_pk",
+        "x": "1188",
+        "y": "1404",
+        "z": "1",
+        "orient": "4"
+      },
+      {
+        "id": "7124198",
+        "definition": "master:compare",
+        "name": "master:compare",
+        "x": "1242",
+        "y": "1404",
+        "z": "640",
+        "orient": "0"
+      },
+      {
+        "id": "664638244",
+        "definition": "master:datalabel",
+        "name": "DFIG_LVRT_NOT_TRIP_LATCH",
+        "x": "1314",
+        "y": "1404",
+        "z": "1",
+        "orient": "0"
+      }
+    ],
+    "recommended_insertion_point": "Trial project only: insert a series 3-phase breaker on the IBR2_TRIAL local branch between the 0.6 kV side of transformer E_2_30_1 (component id 275469438) and the low-voltage multimeter that exports VIBR2, PIBR2, QIBR2 (component id 1433370859).",
+    "breaker_name": "BRK_IBR2_TRIAL",
+    "new_signals": [
+      "IBR2_TRIAL_BRK_CMD",
+      "IBR2_TRIAL_BRK_STATE",
+      "IBR2_TRIAL_BRK_OPEN_BOOL",
+      "IBR2_TRIAL_SOURCE_AVAILABLE"
+    ],
+    "evidence": [
+      "IBR_AVM_2_1_1 component id=1220231535 z=1950 y=1332.",
+      "Low-voltage multimeter id=1433370859 exports VIBR2, PIBR2, QIBR2.",
+      "High-voltage branch has multimeter id=797238293, transformer id=275469438, and inductor id=24850255.",
+      "wire id=1498608480 class=WireOrthogonal x=684 y=1332 w=46 h=352 vertices=[('0', '0'), ('-36', '0'), ('-36', '-342')]",
+      "wire id=1898380610 class=WireOrthogonal x=720 y=1332 w=64 h=10 vertices=[('0', '0'), ('54', '0')]",
+      "wire id=1523241445 class=WireOrthogonal x=936 y=1278 w=100 h=10 vertices=[('0', '0'), ('90', '0')]",
+      "wire id=1662656377 class=WireOrthogonal x=990 y=1314 w=46 h=10 vertices=[('0', '0'), ('36', '0')]",
+      "wire id=1470218696 class=WireOrthogonal x=936 y=1296 w=82 h=10 vertices=[('0', '0'), ('72', '0')]",
+      "wire id=1422683866 class=WireOrthogonal x=936 y=1332 w=82 h=10 vertices=[('0', '0'), ('72', '0')]",
+      "wire id=474932588 class=WireOrthogonal x=936 y=1314 w=28 h=10 vertices=[('0', '0'), ('18', '0')]",
+      "wire id=1988406828 class=WireOrthogonal x=684 y=1386 w=46 h=10 vertices=[('0', '0'), ('36', '0')]",
+      "wire id=561753461 class=WireOrthogonal x=684 y=1278 w=46 h=10 vertices=[('0', '0'), ('36', '0')]",
+      "wire id=1498063997 class=WireOrthogonal x=666 y=1386 w=28 h=10 vertices=[('0', '0'), ('18', '0')]",
+      "wire id=1029501766 class=WireOrthogonal x=666 y=1278 w=28 h=10 vertices=[('0', '0'), ('18', '0')]"
+    ],
+    "decision": "selected",
+    "electrical_branch_traceable": "pass",
+    "safe_series_insertion_point": "pass",
+    "not_shared_bus_or_system_switch": "pass",
+    "no_parallel_bypass_after_insertion": "pass",
+    "P_or_Q_or_V_observable": "pass",
+    "separate_from_TYPE3_DFIG_1": "pass",
+    "trial_only_scope_possible": "pass"
+  },
+  "main_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "9A4D8B4594CDEAC3085E34BE64A6A52DA0CB626FE91E37240D0C8CE74F6D33DB"
+  },
+  "trial_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "sha256": null
+  },
+  "previous_inventory_status": "no_qualified_candidate",
+  "qualification_fields": [
+    "electrical_branch_traceable",
+    "safe_series_insertion_point",
+    "not_shared_bus_or_system_switch",
+    "no_parallel_bypass_after_insertion",
+    "P_or_Q_or_V_observable",
+    "separate_from_TYPE3_DFIG_1",
+    "trial_only_scope_possible"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "IBR_AVM_2_1_1_1",
+      "source_id": "IBR2_TRIAL",
+      "display_name": "IBR_AVM_2_1_1_1 existing IBR branch",
+      "page_path": "3IBR:Main(0):P1(0):P3(0)",
+      "ibr_component_id": "1220231535",
+      "ibr_component_z": "1950",
+      "p_q_v_signals": [
+        "VIBR2",
+        "PIBR2",
+        "QIBR2"
+      ],
+      "nearby_components": [
+        {
+          "id": "130884332",
+          "definition": "master:datalabel",
+          "name": "IPGFL",
+          "x": "846",
+          "y": "1206",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "133399289",
+          "definition": "master:logic_mult",
+          "name": "master:logic_mult",
+          "x": "864",
+          "y": "1206",
+          "z": "1440",
+          "orient": "0"
+        },
+        {
+          "id": "1472638760",
+          "definition": "master:datalabel",
+          "name": "Vflagg",
+          "x": "936",
+          "y": "1206",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1028174381",
+          "definition": "master:datalabel",
+          "name": "Ref_a",
+          "x": "990",
+          "y": "1206",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "536716880",
+          "definition": "master:datalabel",
+          "name": "Iibr",
+          "x": "1080",
+          "y": "1206",
+          "z": "1",
+          "orient": "6"
+        },
+        {
+          "id": "1974922025",
+          "definition": "master:logic_mult",
+          "name": "master:logic_mult",
+          "x": "1116",
+          "y": "1206",
+          "z": "690",
+          "orient": "0"
+        },
+        {
+          "id": "854495268",
+          "definition": "master:datalabel",
+          "name": "Qflagg",
+          "x": "1188",
+          "y": "1206",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1750712376",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_TRIP_LATCH",
+          "x": "1224",
+          "y": "1206",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "2105433584",
+          "definition": "master:datalabel",
+          "name": "Qflag",
+          "x": "756",
+          "y": "1224",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1765462440",
+          "definition": "master:inv",
+          "name": "master:inv",
+          "x": "792",
+          "y": "1224",
+          "z": "670",
+          "orient": "0"
+        },
+        {
+          "id": "1325295295",
+          "definition": "master:datalabel",
+          "name": "IQGFL",
+          "x": "846",
+          "y": "1224",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1170734627",
+          "definition": "master:abcdq0",
+          "name": "master:abcdq0",
+          "x": "936",
+          "y": "1224",
+          "z": "980",
+          "orient": "0"
+        },
+        {
+          "id": "1963454761",
+          "definition": "master:datalabel",
+          "name": "Ref_b",
+          "x": "990",
+          "y": "1224",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "2102076466",
+          "definition": "master:datalabel",
+          "name": "PF_flag",
+          "x": "1008",
+          "y": "1224",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "906135996",
+          "definition": "master:const",
+          "name": "master:const",
+          "x": "1242",
+          "y": "1224",
+          "z": "550",
+          "orient": "0"
+        },
+        {
+          "id": "1033008218",
+          "definition": "master:const",
+          "name": "master:const",
+          "x": "864",
+          "y": "1242",
+          "z": "690",
+          "orient": "0"
+        },
+        {
+          "id": "795603845",
+          "definition": "master:datalabel",
+          "name": "Ref_c",
+          "x": "990",
+          "y": "1242",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1402564227",
+          "definition": "master:datatap",
+          "name": "master:datatap",
+          "x": "1152",
+          "y": "1242",
+          "z": "710",
+          "orient": "7"
+        },
+        {
+          "id": "1232472600",
+          "definition": "master:gain",
+          "name": "master:gain",
+          "x": "1170",
+          "y": "1242",
+          "z": "560",
+          "orient": "0"
+        },
+        {
+          "id": "1143880435",
+          "definition": "master:div",
+          "name": "master:div",
+          "x": "1188",
+          "y": "1242",
+          "z": "1030",
+          "orient": "0"
+        },
+        {
+          "id": "2025602951",
+          "definition": "master:pgb",
+          "name": "DFIG_LVRT_TRIP_LATCH",
+          "x": "1224",
+          "y": "1242",
+          "z": "570",
+          "orient": "0"
+        },
+        {
+          "id": "1791574139",
+          "definition": "master:datalabel",
+          "name": "Iaa",
+          "x": "1242",
+          "y": "1242",
+          "z": "1",
+          "orient": "6"
+        },
+        {
+          "id": "1395067852",
+          "definition": "master:annotation",
+          "name": "master:annotation",
+          "x": "702",
+          "y": "1260",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "258059394",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_TRIP_LATCH_MEM",
+          "x": "1224",
+          "y": "1260",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "1938218123",
+          "definition": "master:datalabel",
+          "name": "IPGFL",
+          "x": "720",
+          "y": "1278",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "326276139",
+          "definition": "master:datalabel",
+          "name": "Volt_dip",
+          "x": "936",
+          "y": "1278",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "294350396",
+          "definition": "master:datalabel",
+          "name": "Inputs2",
+          "x": "990",
+          "y": "1278",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1484191995",
+          "definition": "master:inv",
+          "name": "master:inv",
+          "x": "1026",
+          "y": "1278",
+          "z": "1390",
+          "orient": "0"
+        },
+        {
+          "id": "1624805265",
+          "definition": "master:datalabel",
+          "name": "Flags2",
+          "x": "1044",
+          "y": "1278",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1592394910",
+          "definition": "master:datalabel",
+          "name": "INV_Ibase_pk",
+          "x": "1188",
+          "y": "1278",
+          "z": "1",
+          "orient": "4"
+        },
+        {
+          "id": "995256784",
+          "definition": "master:datalabel",
+          "name": "Vflag",
+          "x": "936",
+          "y": "1296",
+          "z": "1",
+          "orient": "6"
+        },
+        {
+          "id": "195274536",
+          "definition": "master:logic_mult",
+          "name": "master:logic_mult",
+          "x": "1116",
+          "y": "1296",
+          "z": "1400",
+          "orient": "0"
+        },
+        {
+          "id": "1004759129",
+          "definition": "master:datalabel",
+          "name": "PQVdipflag",
+          "x": "1188",
+          "y": "1296",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1505823658",
+          "definition": "master:pgb",
+          "name": "PQVdipflag",
+          "x": "1224",
+          "y": "1296",
+          "z": "1430",
+          "orient": "0"
+        },
+        {
+          "id": "751641054",
+          "definition": "master:datalabel",
+          "name": "PQflag",
+          "x": "936",
+          "y": "1314",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "43639850",
+          "definition": "master:inv",
+          "name": "master:inv",
+          "x": "954",
+          "y": "1314",
+          "z": "750",
+          "orient": "0"
+        },
+        {
+          "id": "915240918",
+          "definition": "master:logic_mult",
+          "name": "master:logic_mult",
+          "x": "1044",
+          "y": "1314",
+          "z": "760",
+          "orient": "0"
+        },
+        {
+          "id": "907835102",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_TRIP_REQUEST_ARMED",
+          "x": "1152",
+          "y": "1314",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "1752563448",
+          "definition": "master:compare",
+          "name": "master:compare",
+          "x": "1224",
+          "y": "1314",
+          "z": "1940",
+          "orient": "0"
+        },
+        {
+          "id": "1363511832",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_TRIP_REQUEST_BOOL",
+          "x": "1296",
+          "y": "1314",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "24850255",
+          "definition": "master:inductor",
+          "name": "master:inductor",
+          "x": "720",
+          "y": "1332",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "797238293",
+          "definition": "master:multimeter",
+          "name": "master:multimeter",
+          "x": "792",
+          "y": "1332",
+          "z": "580",
+          "orient": "4"
+        },
+        {
+          "id": "275469438",
+          "definition": "ETRAN:Electranix_xfmr_2w",
+          "name": "E_2_30_1",
+          "x": "864",
+          "y": "1332",
+          "z": "1",
+          "orient": "4"
+        },
+        {
+          "id": "1322876499",
+          "definition": "master:datalabel",
+          "name": "Qflag",
+          "x": "936",
+          "y": "1332",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1433370859",
+          "definition": "master:multimeter",
+          "name": "master:multimeter",
+          "x": "936",
+          "y": "1332",
+          "z": "590",
+          "orient": "4"
+        },
+        {
+          "id": "1220231535",
+          "definition": "3IBR:IBR_AVM_2_1_1",
+          "name": "3IBR:IBR_AVM_2_1_1",
+          "x": "990",
+          "y": "1332",
+          "z": "1950",
+          "orient": "0"
+        },
+        {
+          "id": "2067486031",
+          "definition": "master:datatap",
+          "name": "master:datatap",
+          "x": "1152",
+          "y": "1368",
+          "z": "720",
+          "orient": "7"
+        },
+        {
+          "id": "1337132183",
+          "definition": "master:div",
+          "name": "master:div",
+          "x": "1188",
+          "y": "1368",
+          "z": "1010",
+          "orient": "0"
+        },
+        {
+          "id": "571077874",
+          "definition": "master:datalabel",
+          "name": "Ibb",
+          "x": "1242",
+          "y": "1368",
+          "z": "1",
+          "orient": "6"
+        },
+        {
+          "id": "188357177",
+          "definition": "master:datalabel",
+          "name": "IQGFL",
+          "x": "720",
+          "y": "1386",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1521303018",
+          "definition": "master:datalabel",
+          "name": "INV_Ibase_pk",
+          "x": "1188",
+          "y": "1404",
+          "z": "1",
+          "orient": "4"
+        },
+        {
+          "id": "7124198",
+          "definition": "master:compare",
+          "name": "master:compare",
+          "x": "1242",
+          "y": "1404",
+          "z": "640",
+          "orient": "0"
+        },
+        {
+          "id": "664638244",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_NOT_TRIP_LATCH",
+          "x": "1314",
+          "y": "1404",
+          "z": "1",
+          "orient": "0"
+        }
+      ],
+      "recommended_insertion_point": "Trial project only: insert a series 3-phase breaker on the IBR2_TRIAL local branch between the 0.6 kV side of transformer E_2_30_1 (component id 275469438) and the low-voltage multimeter that exports VIBR2, PIBR2, QIBR2 (component id 1433370859).",
+      "breaker_name": "BRK_IBR2_TRIAL",
+      "new_signals": [
+        "IBR2_TRIAL_BRK_CMD",
+        "IBR2_TRIAL_BRK_STATE",
+        "IBR2_TRIAL_BRK_OPEN_BOOL",
+        "IBR2_TRIAL_SOURCE_AVAILABLE"
+      ],
+      "evidence": [
+        "IBR_AVM_2_1_1 component id=1220231535 z=1950 y=1332.",
+        "Low-voltage multimeter id=1433370859 exports VIBR2, PIBR2, QIBR2.",
+        "High-voltage branch has multimeter id=797238293, transformer id=275469438, and inductor id=24850255.",
+        "wire id=1498608480 class=WireOrthogonal x=684 y=1332 w=46 h=352 vertices=[('0', '0'), ('-36', '0'), ('-36', '-342')]",
+        "wire id=1898380610 class=WireOrthogonal x=720 y=1332 w=64 h=10 vertices=[('0', '0'), ('54', '0')]",
+        "wire id=1523241445 class=WireOrthogonal x=936 y=1278 w=100 h=10 vertices=[('0', '0'), ('90', '0')]",
+        "wire id=1662656377 class=WireOrthogonal x=990 y=1314 w=46 h=10 vertices=[('0', '0'), ('36', '0')]",
+        "wire id=1470218696 class=WireOrthogonal x=936 y=1296 w=82 h=10 vertices=[('0', '0'), ('72', '0')]",
+        "wire id=1422683866 class=WireOrthogonal x=936 y=1332 w=82 h=10 vertices=[('0', '0'), ('72', '0')]",
+        "wire id=474932588 class=WireOrthogonal x=936 y=1314 w=28 h=10 vertices=[('0', '0'), ('18', '0')]",
+        "wire id=1988406828 class=WireOrthogonal x=684 y=1386 w=46 h=10 vertices=[('0', '0'), ('36', '0')]",
+        "wire id=561753461 class=WireOrthogonal x=684 y=1278 w=46 h=10 vertices=[('0', '0'), ('36', '0')]",
+        "wire id=1498063997 class=WireOrthogonal x=666 y=1386 w=28 h=10 vertices=[('0', '0'), ('18', '0')]",
+        "wire id=1029501766 class=WireOrthogonal x=666 y=1278 w=28 h=10 vertices=[('0', '0'), ('18', '0')]"
+      ],
+      "decision": "selected",
+      "electrical_branch_traceable": "pass",
+      "safe_series_insertion_point": "pass",
+      "not_shared_bus_or_system_switch": "pass",
+      "no_parallel_bypass_after_insertion": "pass",
+      "P_or_Q_or_V_observable": "pass",
+      "separate_from_TYPE3_DFIG_1": "pass",
+      "trial_only_scope_possible": "pass",
+      "qualified": true,
+      "pass_count": 7
+    },
+    {
+      "candidate_id": "IBR_AVM_2_1_1_2",
+      "source_id": "IBR3_TRIAL",
+      "display_name": "IBR_AVM_2_1_1_2 existing IBR branch",
+      "page_path": "3IBR:Main(0):P1(0):P3(0)",
+      "ibr_component_id": "202861579",
+      "ibr_component_z": "1870",
+      "p_q_v_signals": [
+        "VIBR3",
+        "PIBR3",
+        "QIBR3"
+      ],
+      "nearby_components": [
+        {
+          "id": "1480106380",
+          "definition": "master:datalabel",
+          "name": "INV_Ibase_pk",
+          "x": "1188",
+          "y": "1530",
+          "z": "1",
+          "orient": "4"
+        },
+        {
+          "id": "1478771468",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_CLEAR_BASE",
+          "x": "1206",
+          "y": "1530",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "2073469666",
+          "definition": "master:annotation",
+          "name": "master:annotation",
+          "x": "702",
+          "y": "1584",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "14460297",
+          "definition": "master:datalabel",
+          "name": "Inputs3",
+          "x": "990",
+          "y": "1602",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "798451072",
+          "definition": "master:datalabel",
+          "name": "Flags3",
+          "x": "1044",
+          "y": "1602",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1468401530",
+          "definition": "master:time-sig",
+          "name": "master:time-sig",
+          "x": "1152",
+          "y": "1638",
+          "z": "800",
+          "orient": "0"
+        },
+        {
+          "id": "413274393",
+          "definition": "master:compare",
+          "name": "master:compare",
+          "x": "1260",
+          "y": "1638",
+          "z": "820",
+          "orient": "0"
+        },
+        {
+          "id": "1031081065",
+          "definition": "master:datalabel",
+          "name": "DFIG_LVRT_ARMED",
+          "x": "1314",
+          "y": "1638",
+          "z": "1",
+          "orient": "0"
+        },
+        {
+          "id": "1109457673",
+          "definition": "master:inductor",
+          "name": "master:inductor",
+          "x": "720",
+          "y": "1656",
+          "z": "1",
+          "orient": "2"
+        },
+        {
+          "id": "1370481906",
+          "definition": "master:multimeter",
+          "name": "master:multimeter",
+          "x": "792",
+          "y": "1656",
+          "z": "760",
+          "orient": "4"
+        },
+        {
+          "id": "1076244314",
+          "definition": "ETRAN:Electranix_xfmr_2w",
+          "name": "E_2_30_1",
+          "x": "864",
+          "y": "1656",
+          "z": "1",
+          "orient": "4"
+        },
+        {
+          "id": "31436320",
+          "definition": "master:multimeter",
+          "name": "master:multimeter",
+          "x": "936",
+          "y": "1656",
+          "z": "780",
+          "orient": "4"
+        },
+        {
+          "id": "202861579",
+          "definition": "3IBR:IBR_AVM_2_1_1",
+          "name": "3IBR:IBR_AVM_2_1_1",
+          "x": "990",
+          "y": "1656",
+          "z": "1870",
+          "orient": "0"
+        }
+      ],
+      "recommended_insertion_point": "Trial project only: insert a series 3-phase breaker on the IBR3_TRIAL local branch between the 0.6 kV side of transformer E_2_30_1 (component id 1076244314) and the low-voltage multimeter that exports VIBR3, PIBR3, QIBR3 (component id 31436320).",
+      "breaker_name": "BRK_IBR3_TRIAL",
+      "new_signals": [
+        "IBR3_TRIAL_BRK_CMD",
+        "IBR3_TRIAL_BRK_STATE",
+        "IBR3_TRIAL_BRK_OPEN_BOOL",
+        "IBR3_TRIAL_SOURCE_AVAILABLE"
+      ],
+      "evidence": [
+        "IBR_AVM_2_1_1 component id=202861579 z=1870 y=1656.",
+        "Low-voltage multimeter id=31436320 exports VIBR3, PIBR3, QIBR3.",
+        "High-voltage branch has multimeter id=1370481906, transformer id=1076244314, and inductor id=1109457673.",
+        "wire id=751376585 class=WireOrthogonal x=720 y=1656 w=64 h=10 vertices=[('0', '0'), ('54', '0')]"
+      ],
+      "decision": "qualified_not_selected",
+      "electrical_branch_traceable": "pass",
+      "safe_series_insertion_point": "pass",
+      "not_shared_bus_or_system_switch": "pass",
+      "no_parallel_bypass_after_insertion": "pass",
+      "P_or_Q_or_V_observable": "pass",
+      "separate_from_TYPE3_DFIG_1": "pass",
+      "trial_only_scope_possible": "pass",
+      "qualified": true,
+      "pass_count": 7
+    }
+  ],
+  "breaker_semantics_reference": {
+    "reference_breaker": "BRK_DFIG",
+    "component_definition": "master:breaker3",
+    "command_semantics": "Generated P3.f uses NINT(1.0 - BRK_DFIG); current proven closed command is 0.0 and open command is 1.0.",
+    "state_semantics": "BRK_DFIG exports DFIG_BRK_STATE; existing project converts actual open state with threshold 0.5.",
+    "trial_closed_command_value": 0.0,
+    "trial_open_state_comparator": "state > 0.5 -> OPEN_BOOL = 1; state <= 0.5 -> OPEN_BOOL = 0",
+    "source_available_formula": "SOURCE_AVAILABLE = NOT BRK_OPEN_BOOL"
+  },
+  "claim_boundary": {
+    "main_project_modified": false,
+    "pscad_run_performed": false,
+    "event_packet_constructed": false,
+    "dual_source_collector_constructed": false
+  }
+}

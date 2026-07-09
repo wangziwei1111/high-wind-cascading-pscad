@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "audit_time": "2026-07-02T18:05:49+08:00",
+  "operation": "three_source_electrical_observability_preflight",
+  "read_only": true,
+  "pscad_build_performed": false,
+  "pscad_run_performed": false,
+  "missing_paths": [],
+  "main_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "expected_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+  },
+  "trial_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "sha256": "8D064E343455A8D2CDF30B0EF80E658961FE4CAC958825DE861F44595DCD99CB",
+    "version": "4.6.2"
+  },
+  "existing_output_channel_count": 253,
+  "expected_existing_output_channel_count": 253,
+  "expected_final_output_channel_count_after_manual_add": 262,
+  "preexisting_requested_new_channels": [],
+  "source_a_voltage_signal": "VIBR1_2",
+  "source_a_active_power_signal": "PIBR1_2",
+  "source_a_reactive_power_signal": "QIBR1_2",
+  "source_b_voltage_signal": "VIBR2",
+  "source_b_active_power_signal": "PIBR2",
+  "source_b_reactive_power_signal": "QIBR2",
+  "source_c_voltage_signal": "VIBR3",
+  "source_c_active_power_signal": "PIBR3",
+  "source_c_reactive_power_signal": "QIBR3",
+  "source_resolution": {
+    "A_DFIG": {
+      "source_id": "DFIG_LVRT",
+      "voltage_signal": "VIBR1_2",
+      "active_power_signal": "PIBR1_2",
+      "reactive_power_signal": "QIBR1_2",
+      "unit_evidence": "Existing PSCAD Output Channel units are blank; existing min/max are -2.0 to 2.0 with scale 1.0.",
+      "source_resolution_evidence": "DFIG LVRT logic uses VIBR1_2 for DFIG_LVRT_VSMIN_CAND; task priority names source A as VIBR1_2/PIBR1_2/QIBR1_2.",
+      "existing_output_channel_rows": {
+        "VIBR1_2": {
+          "id": "2013283288",
+          "x": "5688",
+          "y": "4788",
+          "name": "VIBR1_2",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        },
+        "PIBR1_2": {
+          "id": "862805808",
+          "x": "5796",
+          "y": "4788",
+          "name": "PIBR1_2",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        },
+        "QIBR1_2": {
+          "id": "1043010314",
+          "x": "5886",
+          "y": "4788",
+          "name": "QIBR1_2",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        }
+      },
+      "resolution_status": "pass"
+    },
+    "B_IBR2": {
+      "source_id": "IBR2_TRIAL",
+      "voltage_signal": "VIBR2",
+      "active_power_signal": "PIBR2",
+      "reactive_power_signal": "QIBR2",
+      "unit_evidence": "Existing PSCAD Output Channel units are blank; existing min/max are -2.0 to 2.0 with scale 1.0.",
+      "source_resolution_evidence": "IBR2 local-breaker boundary record maps IBR2_TRIAL observables to VIBR2/PIBR2/QIBR2.",
+      "existing_output_channel_rows": {
+        "VIBR2": {
+          "id": "352110449",
+          "x": "5382",
+          "y": "4824",
+          "name": "VIBR2",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        },
+        "PIBR2": {
+          "id": "2037625487",
+          "x": "5490",
+          "y": "4824",
+          "name": "PIBR2",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        },
+        "QIBR2": {
+          "id": "1403705382",
+          "x": "5580",
+          "y": "4824",
+          "name": "QIBR2",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        }
+      },
+      "resolution_status": "pass"
+    },
+    "C_IBR3": {
+      "source_id": "IBR3_TRIAL",
+      "voltage_signal": "VIBR3",
+      "active_power_signal": "PIBR3",
+      "reactive_power_signal": "QIBR3",
+      "unit_evidence": "Existing PSCAD Output Channel units are blank; existing min/max are -2.0 to 2.0 with scale 1.0.",
+      "source_resolution_evidence": "IBR3 real-source deployment record maps IBR3_TRIAL observables to VIBR3/PIBR3/QIBR3.",
+      "existing_output_channel_rows": {
+        "VIBR3": {
+          "id": "617389359",
+          "x": "5382",
+          "y": "4860",
+          "name": "VIBR3",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        },
+        "PIBR3": {
+          "id": "2479722",
+          "x": "5490",
+          "y": "4860",
+          "name": "PIBR3",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        },
+        "QIBR3": {
+          "id": "1025846643",
+          "x": "5580",
+          "y": "4860",
+          "name": "QIBR3",
+          "units": "",
+          "scale": "1.0",
+          "min": "-2.0",
+          "max": "2.0",
+          "transfer_data": "1",
+          "display": "1",
+          "multiple_run_save": "0",
+          "use_signal_name": "1"
+        }
+      },
+      "resolution_status": "pass"
+    }
+  },
+  "new_output_channel_plan": {
+    "CASCADE3_ELEC_DFIG_V": {
+      "source": "A_DFIG",
+      "field": "voltage",
+      "connect_to": "VIBR1_2"
+    },
+    "CASCADE3_ELEC_DFIG_P": {
+      "source": "A_DFIG",
+      "field": "active_power",
+      "connect_to": "PIBR1_2"
+    },
+    "CASCADE3_ELEC_DFIG_Q": {
+      "source": "A_DFIG",
+      "field": "reactive_power",
+      "connect_to": "QIBR1_2"
+    },
+    "CASCADE3_ELEC_IBR2_V": {
+      "source": "B_IBR2",
+      "field": "voltage",
+      "connect_to": "VIBR2"
+    },
+    "CASCADE3_ELEC_IBR2_P": {
+      "source": "B_IBR2",
+      "field": "active_power",
+      "connect_to": "PIBR2"
+    },
+    "CASCADE3_ELEC_IBR2_Q": {
+      "source": "B_IBR2",
+      "field": "reactive_power",
+      "connect_to": "QIBR2"
+    },
+    "CASCADE3_ELEC_IBR3_V": {
+      "source": "C_IBR3",
+      "field": "voltage",
+      "connect_to": "VIBR3"
+    },
+    "CASCADE3_ELEC_IBR3_P": {
+      "source": "C_IBR3",
+      "field": "active_power",
+      "connect_to": "PIBR3"
+    },
+    "CASCADE3_ELEC_IBR3_Q": {
+      "source": "C_IBR3",
+      "field": "reactive_power",
+      "connect_to": "QIBR3"
+    }
+  },
+  "recommended_output_channel_parameters": {
+    "Scale": "1.0",
+    "Units": "",
+    "Min": "-2.0",
+    "Max": "2.0",
+    "Transfer Data": "Yes",
+    "Multiple Run Save": "No",
+    "Use Signal Name as Title": "No"
+  },
+  "recommended_axis_ranges": {
+    "voltage": {
+      "min": -2.0,
+      "max": 2.0
+    },
+    "active_power": {
+      "min": -2.0,
+      "max": 2.0
+    },
+    "reactive_power": {
+      "min": -2.0,
+      "max": 2.0
+    }
+  },
+  "reference_evidence": {
+    "ibr2_local_breaker_boundary": {
+      "schema_version": 1,
+      "execution_status": "trial_local_breaker_boundary_static_build_verified",
+      "main_project": {
+        "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+        "start_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906",
+        "end_sha256": "97AE9A99E199734510352DACBDE6120BBC411356C244C3DEA0ED8B01AB2B7906"
+      },
+      "trial_project": {
+        "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+        "start_sha256": "62A9202F708402A850F6810797C852A54CD7D627D77B691749C4C6512CAEEF15",
+        "end_sha256": "FB29872FCA8BCF92E5450C5944A312C1E6F018F87B5B499FEAF0E6B16C8A4A1E",
+        "independent_from_main": true
+      },
+      "target": {
+        "source_id": "IBR2_TRIAL",
+        "component": "IBR_AVM_2_1_1_1",
+        "observables": {
+          "VIBR2": true,
+          "PIBR2": true,
+          "QIBR2": true
+        }
+      },
+      "boundary": {
+        "breaker": "BRK_IBR2_TRIAL",
+        "component_id": "1612913074",
+        "network_mapping": "IBR2/NT_8 phases -> BRK_IBR2_TRIAL -> NT_16 phases/E_2_30_1 0.6 kV side",
+        "command_initial_value": 0.0,
+        "actual_state_values": {
+          "closed": 0,
+          "open": 2
+        },
+        "open_bool_formula": "IBR2_TRIAL_BRK_STATE >= 0.5",
+        "source_available_formula": "NOT IBR2_TRIAL_BRK_OPEN_BOOL"
+      },
+      "output_channels": {
+        "IBR2_TRIAL_BRK_CMD": {
+          "count": 1,
+          "transfer_data": "1",
+          "multiple_run_save": "1",
+          "scale": "1.0",
+          "min": "0",
+          "max": "1.2",
+          "pass": true
+        },
+        "IBR2_TRIAL_BRK_STATE": {
+          "count": 1,
+          "transfer_data": "1",
+          "multiple_run_save": "1",
+          "scale": "1.0",
+          "min": "0",
+          "max": "2.2",
+          "pass": true
+        },
+        "IBR2_TRIAL_BRK_OPEN_BOOL": {
+          "count": 1,
+          "transfer_data": "1",
+          "multiple_run_save": "1",
+          "scale": "1.0",
+          "min": "0",
+          "max": "1.2",
+          "pass": true
+        },
+        "IBR2_TRIAL_SOURCE_AVAILABLE": {
+          "count": 1,
+          "transfer_data": "1",
+          "multiple_run_save": "1",
+          "scale": "1.0",
+          "min": "0",
+          "max": "1.2",
+          "pass": true
+        }
+      },
+      "build_evidence": {
+        "p3_fortran_exists": true,
+        "executable_exists": true,
+        "errors": 0,
+        "warnings": "not_reported",
+        "messages": "not_reported"
+      },
+      "statuses": {
+        "main_project_integrity_status": "pass",
+        "trial_project_status": "pass",
+        "ibr2_branch_mapping_status": "pass",
+        "local_breaker_boundary_status": "pass",
+        "no_parallel_bypass_status": "pass",
+        "breaker_state_semantics_status": "pass",
+        "output_channel_status": "pass",
+        "control_path_isolation_status": "pass",
+        "dynamic_behavior_status": "unavailable",
+        "second_source_event_status": "constructed_static_build_verified",
+        "dual_source_collector_status": "constructed_static_build_verified"
+      },
+      "claim_boundary": {
+        "pscad_run_performed": false,
+        "dynamic_disconnection_validated": false,
+        "second_source_event_packet_created": true,
+        "dual_source_collector_created": true,
+        "cascade_propagation_validated": false,
+        "matlab_used": false
+      },
+      "trial_dual_source_extension": {
+        "event_packet_json": "data/reference/ibr2_trial_second_source_event_packet.json",
+        "collector_json": "data/reference/ibr2_trial_dual_source_cascade_collector.json",
+        "dynamic_behavior_status": "unavailable"
+      },
+      "trial_opening_stimulus_extension": {
+        "record": "data/reference/ibr2_trial_one_shot_opening_stimulus.json",
+        "default_test_enable": 0.0,
+        "default_breaker_command": 0.0,
+        "boundary_preservation_status": "pass",
+        "dynamic_behavior_status": "unavailable",
+        "pscad_run_performed": false
+      }
+    },
+    "ibr3_real_source_deployment": {
+      "execution_status": "ibr3_real_source_three_source_collector_static_pass",
+      "audit_time": "2026-07-01T00:00:00+08:00",
+      "pscad_version": "4.6.2",
+      "source": {
+        "source_id": "IBR3_TRIAL",
+        "candidate_component": "IBR_AVM_2_1_1_2",
+        "component_id": 202861579,
+        "observables": [
+          "VIBR3",
+          "PIBR3",
+          "QIBR3"
+        ],
+        "page": "3IBR_DFIG1_TRIAL:Main(0):P1(0):P3(0)"
+      },
+      "breaker": {
+        "name": "BRK_IBR3_TRIAL",
+        "component_id": 1365979927,
+        "type": "master:breaker3",
+        "command": "IBR3_TRIAL_BRK_CMD",
+        "command_semantics": {
+          "0": "closed",
+          "1": "open"
+        },
+        "state": "IBR3_TRIAL_BRK_STATE",
+        "open_threshold": 0.5,
+        "series_location": "between transformer E_2_30_1 0.6 kV side and the VIBR3/PIBR3/QIBR3 multimeter",
+        "parallel_bypass_found": false
+      },
+      "instances": {
+        "stimulus": {
+          "name": "IBR3_TRIAL__OPEN_STIMULUS",
+          "open_time_s": 5.0,
+          "test_enable_default": 0.0
+        },
+        "state_adapter": {
+          "name": "IBR3_TRIAL__BREAKER_STATE_ADAPTER",
+          "open_threshold": 0.5
+        },
+        "event_packet": {
+          "name": "IBR3_TRIAL__EVENT_PACKET",
+          "cause_code": 5.0,
+          "event_latch_initial": 0.0,
+          "first_time_initial": -1.0
+        },
+        "collector": {
+          "name": "CASCADE3_TRIAL__EVENT_COLLECTOR",
+          "type": "THREE_SOURCE_EVENT_COLLECTOR"
+        }
+      },
+      "projects": {
+        "main_start_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+        "main_final_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+        "trial_start_sha256": "D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314",
+        "trial_final_sha256": "CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E"
+      },
+      "build": {
+        "final_errors": 0,
+        "performed_by_user": true,
+        "run_performed": false
+      },
+      "output_channels": {
+        "before": 224,
+        "added": 21,
+        "final": 245,
+        "existing_preserved": true
+      },
+      "static_status": {
+        "main_project_integrity": "pass",
+        "local_breaker_boundary": "pass",
+        "no_parallel_bypass": "pass",
+        "module_scope_isolation": "pass",
+        "control_path_isolation": "pass",
+        "output_channels": "pass"
+      },
+      "dynamic_behavior_status": "unavailable",
+      "third_source_dynamic_behavior_status": "unavailable",
+      "three_source_dynamic_behavior_status": "unavailable",
+      "cascade_propagation_status": "unavailable",
+      "matlab_status": "not_added",
+      "last_dynamic_validation": {
+        "date": "2026-07-02",
+        "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+        "dynamic_run_status": "pass",
+        "summary": "One approved trial-only PSCAD Run temporarily enabled IBR3_TRIAL__OPEN_STIMULUS, observed the IBR3 local-opening chain at 5.0 s, parsed collector/chronology monitor outputs, and restored IBR3 test enable to 0.",
+        "report": "docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+        "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+      },
+      "last_default_disabled_baseline_validation": {
+        "date": "2026-07-02",
+        "scenario_name": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE",
+        "dynamic_baseline_status": "pass",
+        "stimulus_specific_contrast_status": "pass",
+        "summary": "One approved default-disabled PSCAD Run kept IBR2 and IBR3 trial test stimuli at 0; IBR3 open request, command, actual open, and event packet stayed absent. Compared with the prior enabled-stimulus run, this supports a stimulus-specific contrast for the fixed trial configuration only.",
+        "report": "docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md",
+        "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+      }
+    }
+  },
+  "statuses": {
+    "main_project_integrity_status": "pass",
+    "trial_project_preflight_status": "pass",
+    "existing_output_channel_baseline_status": "pass",
+    "source_a_vpq_resolution_status": "pass",
+    "source_b_vpq_resolution_status": "pass",
+    "source_c_vpq_resolution_status": "pass",
+    "new_channel_absence_status": "pass",
+    "monitor_only_scope_status": "pass",
+    "three_source_electrical_observability_ready_status": "pass"
+  },
+  "claim_boundary": {
+    "adds_only_monitor_output_channels": true,
+    "control_feedback_added": false,
+    "event_logic_added": false,
+    "build_or_run_performed_by_script": false,
+    "dynamic_electrical_response_validated": false
+  }
+}

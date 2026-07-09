@@ -1,0 +1,39 @@
+{
+  "execution_status": "stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9",
+  "stage4_dfig_status": "physical_trip_and_matching_event_packet_at_2p43s",
+  "stage9_dfig_status": "physical_no_trip_and_event_packet_correctly_inactive_before_line_open_at_7p51s",
+  "root_cause_class": "B_actual_no_trip_due_verified_lvrt_input_difference",
+  "root_cause_evidence": {
+    "class": "B_actual_no_trip_due_verified_lvrt_input_difference",
+    "stage4_fault_window_VIBR1_2_min": 0.85254967423946,
+    "stage9_fault_window_VIBR1_2_min": 0.91051071893218,
+    "unchanged_duration_threshold": 0.9,
+    "stage4_duration_trigger_s": 2.43,
+    "stage9_duration_trigger_s": null,
+    "reason": "Stage 4 VIBR1_2 entered the V<0.9 region and accumulated the duration timer; Stage 9 stayed above 0.9 throughout the fault window, so the unchanged physical trip chain did not operate."
+  },
+  "paper_order_status": "not_aligned_dfig_absent_before_first_line_trip",
+  "whether_model_change_is_required": true,
+  "whether_only_output_observability_change_is_required": false,
+  "whether_no_model_change_is_required": false,
+  "minimal_next_change_scope": "fault_to_dfig_interface_alignment",
+  "forbidden_changes": [
+    "synthetic event packet",
+    "fixed-time DFIG trip",
+    "fixed-time line trip",
+    "manual breaker pulse",
+    "capacity/threshold/delay change without new evidence"
+  ],
+  "recommended_next_run_duration_s": 9.0,
+  "recommended_next_run_end_reason": "Expected first-line open remains about 7.51 s; 9.0 s supplies 1.49 s of post-open observation and meets the >=1.0 s rule without reverting to 20 s.",
+  "expected_event_order_before_run": [
+    "N29 three-phase fault",
+    "physical DFIG LVRT/source-unavailable event",
+    "power-flow redistribution",
+    "flow-driven E_28_29_1 threshold and 5 s timer",
+    "actual E_28_29_1 open",
+    ">=1.0 s post-open response"
+  ],
+  "confidence_level": "high_for_signal_level_no_trip_mechanism; medium_for_exact_upstream_network_cause_until_static_interface_alignment_is completed",
+  "claim_boundary": "Stage 9 validates only the flow-driven E_28_29_1 protection subchain. Until a physical DFIG event precedes the first line trip, it is not a complete paper-style accident-chain reproduction."
+}

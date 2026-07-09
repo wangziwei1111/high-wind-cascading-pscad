@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "audit_time": "2026-07-02T18:16:16+08:00",
+  "operation": "three_source_electrical_observability_final_static_audit",
+  "main_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "expected_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+  },
+  "trial_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "sha256": "05B4D817B615B2FCAA38587B47E5885CF589022DE8ADB51C2014AA8032034B34"
+  },
+  "output_channels": {
+    "expected_before": 253,
+    "added": 9,
+    "expected_final": 262,
+    "actual_final": 262
+  },
+  "generated_fortran": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+    "npgb_values": [
+      115,
+      115
+    ],
+    "expected_npgb": 115,
+    "exe_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.exe",
+    "p3f_last_write_time": "2026-07-02T18:13:43",
+    "exe_last_write_time": "2026-07-02T18:14:09"
+  },
+  "new_channel_details": {
+    "CASCADE3_ELEC_DFIG_V": {
+      "expected_signal": "VIBR1_2",
+      "xml": {
+        "id": "341215590",
+        "x": "5292",
+        "y": "4122",
+        "name": "CASCADE3_ELEC_DFIG_V",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663318"
+      },
+      "fortran_assignment": "VIBR1_2",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_DFIG_P": {
+      "expected_signal": "PIBR1_2",
+      "xml": {
+        "id": "259576720",
+        "x": "5508",
+        "y": "4122",
+        "name": "CASCADE3_ELEC_DFIG_P",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663320"
+      },
+      "fortran_assignment": "PIBR1_2",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_DFIG_Q": {
+      "expected_signal": "QIBR1_2",
+      "xml": {
+        "id": "1673326269",
+        "x": "5688",
+        "y": "4122",
+        "name": "CASCADE3_ELEC_DFIG_Q",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663322"
+      },
+      "fortran_assignment": "QIBR1_2",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_IBR2_V": {
+      "expected_signal": "VIBR2",
+      "xml": {
+        "id": "135761766",
+        "x": "5166",
+        "y": "4122",
+        "name": "CASCADE3_ELEC_IBR2_V",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663319"
+      },
+      "fortran_assignment": "VIBR2",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_IBR2_P": {
+      "expected_signal": "PIBR2",
+      "xml": {
+        "id": "1901789474",
+        "x": "5040",
+        "y": "4122",
+        "name": "CASCADE3_ELEC_IBR2_P",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663321"
+      },
+      "fortran_assignment": "PIBR2",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_IBR2_Q": {
+      "expected_signal": "QIBR2",
+      "xml": {
+        "id": "17446706",
+        "x": "5058",
+        "y": "3996",
+        "name": "CASCADE3_ELEC_IBR2_Q",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663323"
+      },
+      "fortran_assignment": "QIBR2",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_IBR3_V": {
+      "expected_signal": "VIBR3",
+      "xml": {
+        "id": "1324708704",
+        "x": "5310",
+        "y": "3996",
+        "name": "CASCADE3_ELEC_IBR3_V",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663332"
+      },
+      "fortran_assignment": "VIBR3",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_IBR3_P": {
+      "expected_signal": "PIBR3",
+      "xml": {
+        "id": "1936644910",
+        "x": "5544",
+        "y": "3978",
+        "name": "CASCADE3_ELEC_IBR3_P",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663331"
+      },
+      "fortran_assignment": "PIBR3",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    },
+    "CASCADE3_ELEC_IBR3_Q": {
+      "expected_signal": "QIBR3",
+      "xml": {
+        "id": "1021145018",
+        "x": "5760",
+        "y": "3978",
+        "name": "CASCADE3_ELEC_IBR3_Q",
+        "scale": "1.0",
+        "units": "",
+        "min": "-2.0",
+        "max": "2.0",
+        "transfer_data": "1",
+        "display": "1",
+        "multiple_run_save": "0",
+        "use_signal_name": "0",
+        "gaddress": "100663330"
+      },
+      "fortran_assignment": "QIBR3",
+      "parameter_status": "pass",
+      "mapping_status": "pass"
+    }
+  },
+  "snapshot": "C:\\Users\\24186\\Documents\\动态模型\\external\\pscad_snapshot_20260702_three_source_electrical_observability_static\\3IBR_DFIG1_TRIAL.pscx",
+  "statuses": {
+    "main_project_integrity_status": "pass",
+    "trial_xml_parse_status": "pass",
+    "final_output_channel_count_status": "pass",
+    "new_output_channel_presence_status": "pass",
+    "new_output_channel_parameter_status": "pass",
+    "new_output_channel_fortran_mapping_status": "pass",
+    "generated_fortran_npgb_status": "pass",
+    "build_artifact_refresh_status": "pass",
+    "monitor_only_scope_status": "pass",
+    "pscad_run_status": "not_performed",
+    "three_source_electrical_observability_static_build_status": "pass"
+  },
+  "claim_boundary": {
+    "pscad_build_verified": true,
+    "pscad_run_performed": false,
+    "dynamic_electrical_response_validated": false,
+    "event_logic_added": false,
+    "control_feedback_added": false,
+    "monitor_only_vpq_outputs_added": true
+  }
+}

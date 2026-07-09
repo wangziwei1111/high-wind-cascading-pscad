@@ -1,0 +1,4 @@
+logical_id,bus,pscad_breaker_name,trip_cmd_index,pcc_voltage_signal,active_power_signal,online_feedback_signal,notes
+wind_33,33,BR_WF33,1,WF33_PCC_VPU,WF33_P_MW,WF33_ONLINE,"Actual PSCAD milestone signals are WF33_PCC_V, WF33_PCC_P, WF33_BRK_STATE; trip-shell GUI still needs command input wiring."
+wind_35,35,BR_WF35,2,WF35_PCC_VPU,WF35_P_MW,WF35_ONLINE,"Actual PSCAD milestone signals are WF35_PCC_V, WF35_PCC_P, WF35_BRK_STATE; trip-shell GUI still needs command input wiring."
+wind_38,38,BR_WF38,3,WF38_PCC_VPU,WF38_P_MW,WF38_ONLINE,"Actual PSCAD milestone signals are WF38_PCC_V, WF38_PCC_P, WF38_BRK_STATE; trip-shell GUI still needs command input wiring."

@@ -1,0 +1,7 @@
+metric,enabled_run,default_disabled_baseline,contrast
+IBR3 test enable,1.0,0.0,enabled=1 vs disabled=0
+IBR3 open request time,5.0,,present at 5.0 s vs absent
+IBR3 actual open time,5.0,,present at 5.0 s vs absent
+IBR3 event valid time,5.0,,present at 5.0 s vs absent
+IBR3 cause code,5.0,0.0,cause 5 vs cause 0
+CASCADE3 second event time,5.0,-1.0,5.0 s vs unset -1

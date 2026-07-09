@@ -1,0 +1,25 @@
+{
+  "manifest_name": "stage11_20s_50us_configuration_manifest",
+  "generated_at_local": "2026-07-03T21:12:42+08:00",
+  "stage10d_reference_trial_sha256": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+  "current_trial_sha256": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+  "current_P3_dta_sha256": "E123A935C40CC605A3F6A33BFF34422A187EE84EE7DD5CA9546B0F3D1B8C3158",
+  "solution_time_step_s": 5e-05,
+  "solution_time_step_us": 50,
+  "plot_step_s": 0.01,
+  "run_duration_current_s": 3.0,
+  "run_duration_target_s": 20.0,
+  "configuration_change_origin": "user_preexisting_before_stage11",
+  "numerical_mode": "fast_step_50us",
+  "reference_numerical_mode": "stage10d_5us",
+  "reference_numerical_mode_evidence_note": "The task declares Stage 10D as 5 us, but the retained Stage-10D trial SHA itself stores time_step=50 us. Therefore 5 us equivalence is a historical claim boundary, not proven by that artifact.",
+  "fault_start_s": 0.5,
+  "fault_clear_s": 2.5,
+  "pre_fault_window_s": [
+    0.0,
+    0.49
+  ],
+  "xml_output_channel_count": 461,
+  "output_channel_count_interpretation": "448 pre-PAPER channels plus 13 PAPER_OVL1 channels = 461 current channels",
+  "claim_boundary": "50us results are a separate numerical configuration; event-order consistency must be checked before claiming paper-like dynamic behavior."
+}

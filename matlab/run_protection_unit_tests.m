@@ -3,8 +3,9 @@ function results = run_protection_unit_tests()
 root = fileparts(mfilename('fullpath'));
 addpath(root);
 addpath(fullfile(root, 'tests'));
-results = runtests('testProtectionLogic');
+results = [runtests('testProtectionLogic'), runtests('testPscadCascadeStep'), ...
+    runtests('testCommandDispatcher'), runtests('testWindVRTTripShell'), ...
+    runtests('testOfflineFeedbackReplay')];
 disp(table(results));
 assertSuccess(results);
 end
-

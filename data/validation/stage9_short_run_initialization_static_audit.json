@@ -1,0 +1,244 @@
+{
+  "audit_name": "stage9_short_run_initialization_static_audit",
+  "generated_at_local": "2026-07-03T17:22:49",
+  "execution_status": "stage9_short_run_static_root_cause_confirmed",
+  "integrity": {
+    "git_head": "db5fcb4abbe6eaa0e53a20224541756ae7a2d8ef",
+    "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_sha": "1AA180E4B8C784B3BAE14453261672783B21B87EA157C56DB26649F98E78992F",
+    "main_sha_expected": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_sha_expected": "1AA180E4B8C784B3BAE14453261672783B21B87EA157C56DB26649F98E78992F"
+  },
+  "unique_root_cause": "Timer component 2132554116 has both VOn (top, component 2118574082) and VOff (bottom, component 522397627) connected to 1.0. PSCAD defines O=TIMER3(TS,TD,F,FSet,VOff,VOn); therefore O is 1 before completion as well as after completion. O drives latch S, so latch Q, TRIP_REQUEST and BRK_CMD assert at t=0 even while ABOVE_THRESHOLD is 0.",
+  "master_timer_definition_evidence": {
+    "ports": {
+      "F": "input, active when F < FSet",
+      "VOn": "top input",
+      "VOff": "bottom input",
+      "O": "single right output"
+    },
+    "fortran_template": "$O = TIMER3($TS, $TD, $F, $FSet, $VOff, $VOn)",
+    "official_semantics_present": true,
+    "definition_line": 66608,
+    "fortran_template_line": 66653
+  },
+  "current_components": {
+    "timer": {
+      "component_id": 2132554116,
+      "definition": "master:timer",
+      "trigger_threshold": "0.5",
+      "delay_until_on": "5.0 [s]",
+      "duration_on": "100 [s]"
+    },
+    "timer_von": {
+      "component_id": 2118574082,
+      "value": "1.0",
+      "port": "VOn/top"
+    },
+    "timer_voff": {
+      "component_id": 522397627,
+      "value": "1.0",
+      "port": "VOff/bottom"
+    },
+    "latch": {
+      "component_id": 897892378,
+      "mode": "2",
+      "type": "1",
+      "q_initial": "0",
+      "interpolation": "0"
+    },
+    "latch_reset": {
+      "component_id": 801784199,
+      "value": "0",
+      "port": "R"
+    },
+    "run_duration_s": 20.0,
+    "emt_time_step_us": 5.0,
+    "plot_step_us": 10000.0
+  },
+  "generated_code_checks": {
+    "above_times_enable": true,
+    "active_low_timer_input": true,
+    "timer_call": true,
+    "timer_von_equals_one": true,
+    "timer_voff_equals_one": true,
+    "timer_output_to_latch_set": true,
+    "zero_to_latch_reset": true,
+    "latch_cfg_simple_rs_q0": true,
+    "latch_q_to_trip_request": true,
+    "timer_output_to_timer_state": true,
+    "breaker_only_uses_trip_command": true
+  },
+  "generated_code_line_evidence": {
+    "above_times_enable": 250,
+    "active_low_timer_input": 253,
+    "timer_call": 257,
+    "timer_output_to_latch_set": 260,
+    "latch_reset": 261,
+    "trip_request_from_q": 310,
+    "latch_configuration": 595,
+    "breaker_command_pole_1": 3638
+  },
+  "neighboring_one_shot_and_event_packet_checks": {
+    "one_shot_generated_file_exists": true,
+    "event_packet_generated_file_exists": true,
+    "one_shot_does_not_reference_paper_breaker_command": true,
+    "event_packet_does_not_reference_paper_breaker_command": true,
+    "p3_dta_exists": true,
+    "p3_map_exists": false,
+    "project_map_exists": true
+  },
+  "stage8_t0_runtime": {
+    "PAPER_OVL1_S_A_PU": 0.0,
+    "PAPER_OVL1_S_B_PU": 0.0,
+    "PAPER_OVL1_S_MAX_PU": 0.0,
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU": 7.87288399,
+    "PAPER_OVL1_LOADING_INDEX_EQ": 0.0,
+    "PAPER_OVL1_ABOVE_THRESHOLD": 0.0,
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE": 1.0,
+    "PAPER_OVL1_TRIP_REQUEST": 1.0,
+    "PAPER_OVL1_BRK_CMD": 1.0,
+    "PAPER_OVL1_BRK_STATE": 2.0,
+    "PAPER_OVL1_TRIP_EVENT_VALID": 1.0,
+    "PAPER_OVL1_FIRST_TRIP_TIME_S": -1.0,
+    "PAPER_OVL1_RELAY_ENABLE": 1.0
+  },
+  "stage8_runtime_classification": "stage8_pre_fault_false_trip",
+  "stage8_channel_mapping": {
+    "PAPER_OVL1_S_A_PU": {
+      "pgb_index": 183,
+      "out_file": "3IBR_DFIG1_TRIAL_19.out",
+      "data_column_after_time": 3
+    },
+    "PAPER_OVL1_S_B_PU": {
+      "pgb_index": 179,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 9
+    },
+    "PAPER_OVL1_S_MAX_PU": {
+      "pgb_index": 177,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 7
+    },
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU": {
+      "pgb_index": 173,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 3
+    },
+    "PAPER_OVL1_LOADING_INDEX_EQ": {
+      "pgb_index": 170,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 10
+    },
+    "PAPER_OVL1_ABOVE_THRESHOLD": {
+      "pgb_index": 168,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 8
+    },
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE": {
+      "pgb_index": 166,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 6
+    },
+    "PAPER_OVL1_TRIP_REQUEST": {
+      "pgb_index": 181,
+      "out_file": "3IBR_DFIG1_TRIAL_19.out",
+      "data_column_after_time": 1
+    },
+    "PAPER_OVL1_BRK_CMD": {
+      "pgb_index": 178,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 8
+    },
+    "PAPER_OVL1_BRK_STATE": {
+      "pgb_index": 174,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 4
+    },
+    "PAPER_OVL1_TRIP_EVENT_VALID": {
+      "pgb_index": 172,
+      "out_file": "3IBR_DFIG1_TRIAL_18.out",
+      "data_column_after_time": 2
+    },
+    "PAPER_OVL1_FIRST_TRIP_TIME_S": {
+      "pgb_index": 169,
+      "out_file": "3IBR_DFIG1_TRIAL_17.out",
+      "data_column_after_time": 9
+    },
+    "PAPER_OVL1_RELAY_ENABLE": {
+      "pgb_index": 92,
+      "out_file": "3IBR_DFIG1_TRIAL_10.out",
+      "data_column_after_time": 2
+    }
+  },
+  "stage8_generated_pgb_mapping": {
+    "PAPER_OVL1_S_A_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_S_A_PU;"
+    },
+    "PAPER_OVL1_S_B_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_S_B_PU;"
+    },
+    "PAPER_OVL1_S_MAX_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_S_MAX_PU;"
+    },
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU;"
+    },
+    "PAPER_OVL1_LOADING_INDEX_EQ": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_LOADING_INDEX_EQ;"
+    },
+    "PAPER_OVL1_ABOVE_THRESHOLD": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_ABOVE_THRESHOLD;"
+    },
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_TIMER_OR_CURVE_STATE;"
+    },
+    "PAPER_OVL1_TRIP_REQUEST": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;"
+    },
+    "PAPER_OVL1_BRK_CMD": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;"
+    },
+    "PAPER_OVL1_BRK_STATE": {
+      "pgb_offset": null,
+      "runtime_expressions": "REAL(PAPER_OVL1_BRK_STATE);"
+    },
+    "PAPER_OVL1_TRIP_EVENT_VALID": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;"
+    },
+    "PAPER_OVL1_FIRST_TRIP_TIME_S": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_FIRST_TRIP_TIME_S;"
+    },
+    "PAPER_OVL1_RELAY_ENABLE": {
+      "pgb_offset": null,
+      "runtime_expressions": "PAPER_OVL1_RELAY_ENABLE;"
+    }
+  },
+  "channel_mapping_preserved_before_repair": true,
+  "no_time_fault_dfig_or_one_shot_breaker_bypass": true,
+  "minimal_gui_repair": {
+    "change": "Set only component 522397627, the 1.0 Constant directly connected to Timer VOff/bottom, to 0.0.",
+    "wires_to_disconnect": 0,
+    "wires_to_add": 0,
+    "preserve": [
+      "Timer O -> latch S",
+      "0.0 constant 801784199 -> latch R",
+      "latch Q -> TRIP_REQ",
+      "VOn/top constant 2118574082 = 1.0",
+      "F = 1.0 - ABOVE_TH",
+      "QInit = Low [0]"
+    ],
+    "duration_change": "Set trial Duration of Run from 20.0 s to 9.0 s; keep time step 5 us and plot step 10000 us."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "manifest_name": "paper_calibrated_first_trip_run_manifest",
+  "generated_at_local": "2026-07-03T15:24:50",
+  "execution_status": "paper_calibrated_first_trip_parser_fallback",
+  "selected_line": "E_28_29_1",
+  "effective_capacity_pu": 7.872883989661206,
+  "threshold_multiplier": 1.1,
+  "protection_curve_type": "paper-inspired definite-time fallback",
+  "definite_delay_s": 5.0,
+  "main_sha_start": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "main_sha_after_user_stage": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_start": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "trial_sha_after_user_stage": "C8F6139E34FE6FBEA298B948C225333ECA277D0A0D920EF5C4C8AA2B8121D611",
+  "gf46_dir": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+  "runtime_pgb_output_detection": {
+    "status": "runtime_pgb_outputs_missing",
+    "inf_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.inf",
+    "inf_exists": false,
+    "prefixed_out_file_count": 0,
+    "available_line_constant_out_count": 31,
+    "reason": "The run directory contains updated TLine Line Constants .out files, but no PSCAD Output Channel .inf or 3IBR_DFIG1_TRIAL_NN.out files for PGB waveform parsing."
+  },
+  "generated_code_chain_checks": {
+    "relay_subroutine_generated": true,
+    "relay_inputs_from_selected_tline_pq": true,
+    "breaker_generated": true,
+    "breaker_uses_relay_command": true,
+    "breaker_state_signal_generated": true
+  },
+  "paper_pgb_channel_count_in_generated_code": 26,
+  "required_paper_channel_count": 13,
+  "all_required_paper_channels_present_in_generated_code": false,
+  "raw_runtime_artifacts_not_committed": true
+}

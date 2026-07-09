@@ -1,0 +1,11 @@
+{
+  "artifact": "protection_grade_tline_loading_ratio_fallback",
+  "generated_at_local": "2026-07-03T13:35:37",
+  "protection_grade_loading_ratio_status": "not_generated_no_qualified_continuous_thermal_limits",
+  "reason": "All 31 current TLines map exactly to the PNNL 3IBR RAW branch table, but each current-network branch has RATE1..RATE12 = 0.0, so no continuous thermal/normal rating is available.",
+  "coverage_status": "fallback_no_protection_grade_rating_coverage",
+  "no_metrics_files_generated": [
+    "data/derived/protection_grade_tline_loading_ratio_metrics.csv",
+    "data/derived/protection_grade_tline_loading_candidate_ranking.csv"
+  ]
+}

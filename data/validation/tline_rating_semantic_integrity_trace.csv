@@ -1,0 +1,6 @@
+check,status,details
+main_project_integrity_status,pass,
+trial_project_integrity_status,pass,
+forbidden_pscad_file_git_changes,pass,
+semantic_classification,uniform_model_value_or_default_parameter,
+shadow_relay_modeling_readiness,blocked,

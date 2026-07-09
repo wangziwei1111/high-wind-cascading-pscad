@@ -1,0 +1,117 @@
+{
+  "audit_name": "full_network_tline_measurement_final_audit",
+  "execution_status": "pass",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",
+  "inventory_tline_count": 31,
+  "xml_output_channel_count": 448,
+  "existing_output_channel_count": 262,
+  "new_tline_output_channel_count": 186,
+  "meter_candidate_count": 62,
+  "duplicate_output_channel_names_inherited_or_existing": {
+    "DFIG_IFLT_A_KA": 2,
+    "Iq": 3
+  },
+  "generated_map_pgbs": "624",
+  "main_project_integrity_status": "pass",
+  "trial_project_integrity_status": "pass",
+  "existing_output_channel_preservation_status": "pass",
+  "full_network_tline_inventory_status": "pass",
+  "full_network_double_end_coverage_status": "pass",
+  "parallel_tline_independent_coverage_status": "pass",
+  "native_measurement_component_semantics_status": "pass",
+  "electrical_non_intrusiveness_status": "pass",
+  "measurement_control_isolation_status": "pass",
+  "new_branch_output_presence_status": "pass",
+  "new_branch_output_fortran_mapping_status": "pass",
+  "final_output_channel_count_status": "pass",
+  "no_in_model_loading_ratio_status": "pass",
+  "no_in_model_protection_logic_status": "pass",
+  "build_status": "user_build_completed_static_audit_passed",
+  "run_status": "not_performed",
+  "paper_alignment_update_status": "pending_or_external_to_this_audit",
+  "natural_cascade_research_readiness_status": "branch_observability_ready_no_cascade_claim",
+  "power_flow_redistribution_status": "unavailable",
+  "line_loading_ratio_status": "unavailable",
+  "line_overload_status": "unavailable",
+  "line_protection_status": "unavailable",
+  "branch_trip_status": "unavailable",
+  "natural_cascade_propagation_status": "unavailable",
+  "physical_causality_direction_status": "unavailable",
+  "system_stability_status": "unavailable",
+  "protection_coordination_status": "unavailable",
+  "voltage_support_performance_status": "unavailable",
+  "matlab_status": "not_added",
+  "gates": [
+    {
+      "gate": "main_project_integrity",
+      "passed": true,
+      "detail": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+    },
+    {
+      "gate": "inventory_count",
+      "passed": true,
+      "detail": 31
+    },
+    {
+      "gate": "xml_total_output_channel_count",
+      "passed": true,
+      "detail": 448
+    },
+    {
+      "gate": "new_tline_output_channel_count",
+      "passed": true,
+      "detail": 186
+    },
+    {
+      "gate": "existing_output_channels_preserved",
+      "passed": true,
+      "detail": {
+        "current_existing_count": 262,
+        "baseline_existing_count": 262,
+        "current_fingerprint": "9E8CF48567846B024B59E914C5F4E89103990121D6E8F3CDD06FAE22B15F804A",
+        "baseline_fingerprint": "9E8CF48567846B024B59E914C5F4E89103990121D6E8F3CDD06FAE22B15F804A"
+      }
+    },
+    {
+      "gate": "all_new_channel_names_present_once",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "gate": "all_new_datalabels_present",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "gate": "all_lines_have_two_meter_signal_bindings",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "gate": "meter_candidate_count",
+      "passed": true,
+      "detail": 62
+    },
+    {
+      "gate": "new_meter_parameters",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "gate": "generated_p3_and_map_bindings",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "gate": "no_generated_name_contention_or_dimension_mismatch",
+      "passed": true,
+      "detail": {}
+    }
+  ],
+  "notes": [
+    "PGBS in the generated map is larger than XML channel count because vector channels expand.",
+    "Duplicate legacy Output Channel names are preserved and are not introduced by the TLine measurement layer.",
+    "This audit is read-only with respect to PSCAD project and generated build files."
+  ]
+}

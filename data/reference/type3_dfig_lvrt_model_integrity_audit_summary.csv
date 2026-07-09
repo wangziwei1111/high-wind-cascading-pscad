@@ -1,0 +1,129 @@
+category,object_type,object_key,field,before,after,reason
+nonfunctional_metadata_or_display_change,project,project,parameter:revisor,"24186, 1782652854","24186, 1782697607",project revision/description metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_13_14_1:1226290901,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_14_15_1:1268246004,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_15_16_1:1855234595,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_16_17_1:1691657307,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_16_19_1:1567979376,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_16_21_1:94947983,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_16_24_1:925620323,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_17_18_1:292929691,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_17_27_1:891863633,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_1_2_1:918512717,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_1_39_1:299766081,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_21_22_1:2005893177,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_22_23_1:1782830709,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_23_24_1:1928481624,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_25_26_1:675891296,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_26_27_1:1146950725,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_26_28_1:1452225633,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_26_29_1:849456383,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_28_29_1:1201000566,attribute:date,1782651657,1782695975,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_2_25_1:1717732818,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_2_3_1:1149345105,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_3_18_1:1266788443,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_3_4_1:1179828083,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_4_14_1:563005147,attribute:date,1782651658,1782695977,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_4_5_1:456105455,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_5_8_1:1036950295,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_6_11_1:34535717,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_6_7_1:366741533,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_7_8_1:491908181,attribute:date,1782651656,1782695973,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_8_9_1:906627897,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,RowDefn:E_9_39_1:182316705,attribute:date,1782651659,1782695979,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,StationDefn:Station:1907181818,attribute:date,1782651634,1782695951,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:CurrentLimit_1_2_1_1:415888003,attribute:date,1782651636,1782695953,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_31_0_1_DYR:543694031,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_32_0_1_DYR:465665610,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_33_0_1_DYR:2096243536,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_34_0_1_DYR:416916709,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_35_0_1_DYR:437664173,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_36_0_1_DYR:804390380,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_37_0_1_DYR:1873958631,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_38_0_1_DYR:248800626,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:G_39_0_1_DYR:1957993466,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:IBR_AVM_2_1_1:772335225,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:Main:1222146573,attribute:date,1782651634,1782695951,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:P1:274950715,attribute:date,1782651634,1782695951,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:P2:1970432053,attribute:date,1782651634,1782695951,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:P3:99382095,attribute:date,1782651634,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:REEC_A_1_2_1_1:1768776414,attribute:date,1782651636,1782695953,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:REGC_A_1_2_1_1:1376856178,attribute:date,1782651636,1782695953,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,definition,UserCmpDefn:REPC_A_1:1539350585,attribute:date,1782651635,1782695952,definition revision/view metadata changed
+nonfunctional_metadata_or_display_change,User,P3/User/1025846643,attribute:z,1440,1450,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1090750652,attribute:z,1680,1690,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1154924168,attribute:z,1600,1610,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1220231535,attribute:z,1510,1520,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1377154997,attribute:z,1670,1680,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1430029174,attribute:z,1570,1580,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1430717756,attribute:z,1560,1570,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1445655642,attribute:z,1420,1430,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1514932,attribute:z,1700,1710,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1562726451,attribute:z,1490,1500,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1700980851,attribute:z,1650,1660,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1752563448,attribute:z,1500,1510,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/1757271943,attribute:z,1480,1490,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/2018870442,attribute:z,1540,1550,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/202853855,attribute:z,1750,1760,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/202861579,attribute:z,1430,1440,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/2115405417,attribute:z,1740,1750,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/2147003001,attribute:z,1640,1650,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/229635092,attribute:z,-1,1420,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/2479722,attribute:z,1450,1460,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/268680300,attribute:z,1690,1700,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/269523901,attribute:z,1520,1530,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/432621999,attribute:z,1610,1620,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4841,parameter:Pdisplay,328.5,328,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4841,parameter:Qdisplay,2.448,2.445,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4842,parameter:Pdisplay,508.9,507.6,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4842,parameter:Qdisplay,187.2,186.8,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4843,parameter:Pdisplay,529.8,526.4,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4843,parameter:Qdisplay,178.6,177.5,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4844,parameter:Pdisplay,237.4,236.3,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4844,parameter:Qdisplay,85.3,84.89,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4845,parameter:Pdisplay,326.1,323.5,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4845,parameter:Qdisplay,155.9,154.6,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4846,parameter:Pdisplay,335.8,332.4,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4846,parameter:Qdisplay,32.92,32.59,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4847,parameter:Pdisplay,285.8,287.3,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4847,parameter:Qdisplay,76.78,77.2,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4848,parameter:Pdisplay,141.2,143,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4848,parameter:Qdisplay,17.26,17.49,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4849,parameter:Pdisplay,207.7,212.6,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4849,parameter:Qdisplay,27.82,28.48,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4850,parameter:Pdisplay,285,292.7,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4850,parameter:Qdisplay,27.03,27.77,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4867,parameter:Pdisplay,228.7,232.1,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4867,parameter:Qdisplay,48.19,48.9,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4876,parameter:Pdisplay,161.1,160.6,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4876,parameter:Qdisplay,30.58,30.49,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4892,parameter:Pdisplay,640.4,625.3,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4892,parameter:Qdisplay,105,102.6,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4917,parameter:Pdisplay,279.2,275.9,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4917,parameter:Qdisplay,117.1,115.8,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4918,parameter:Pdisplay,251.4,247.5,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4918,parameter:Qdisplay,85.9,84.61,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4919,parameter:Pdisplay,314.5,311,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4919,parameter:Qdisplay,-93.92,-93.08,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4934,parameter:Pdisplay,7.629,7.603,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4934,parameter:Qdisplay,89.48,89.43,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4944,parameter:Pdisplay,9.36,9.449,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4944,parameter:Qdisplay,4.679,4.724,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4956,parameter:Pdisplay,1101,1054,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/4956,parameter:Qdisplay,249.3,238.7,"display, layout, description, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/510286702,attribute:z,1630,1640,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/518740083,attribute:z,1720,1730,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/521858026,parameter:P,0.001757,0.0002239,saved breaker P/Q run-display value changed; circuit and command parameters are compared separately
+nonfunctional_metadata_or_display_change,User,P3/User/521858026,parameter:Q,-0.0001204,4.183e-005,saved breaker P/Q run-display value changed; circuit and command parameters are compared separately
+nonfunctional_metadata_or_display_change,User,P3/User/52204636,attribute:z,1710,1720,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/617389359,attribute:z,1460,1470,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/624732065,attribute:z,1770,1780,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/660219171,attribute:z,1660,1670,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/676307009,attribute:z,1550,1560,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/690965932,attribute:z,1470,1480,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/779069803,attribute:z,1760,1770,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/814604080,attribute:z,1730,1740,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/855700634,attribute:z,1620,1630,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/932997196,attribute:z,1530,1540,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/943129517,attribute:z,1580,1590,"display stacking, layout, or revision metadata changed"
+nonfunctional_metadata_or_display_change,User,P3/User/98290045,attribute:z,1590,1600,"display stacking, layout, or revision metadata changed"

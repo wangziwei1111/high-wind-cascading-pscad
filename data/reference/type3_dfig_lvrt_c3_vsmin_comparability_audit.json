@@ -1,0 +1,168 @@
+{
+  "classification": {
+    "command_state_chain_status": "pass",
+    "decision_window_VSMIN_status": "pass",
+    "full_run_historical_reference_status": "fail",
+    "legacy_C3_acceptance_status": "fail",
+    "legacy_C3_failed_check": "VSMIN_MEM_minimum_matches_reference",
+    "legacy_C3_full_run_VSMIN_MEM_minimum": 0.3301161303713,
+    "legacy_reference": 0.379649,
+    "legacy_tolerance": 0.02,
+    "post_breaker_network_response_status": "pass",
+    "reference_comparability_status": "needs_explanation"
+  },
+  "command_state_chain_evidence": {
+    "first_high_s": {
+      "DFIG_BRK_STATE": 3.04,
+      "DFIG_LVRT_DURATION_EXCEEDED": 3.04,
+      "DFIG_LVRT_FINAL_BRK_CMD": 3.04,
+      "DFIG_LVRT_TRIP_LATCH": 3.04,
+      "DFIG_LVRT_TRIP_REQUEST": 3.04
+    },
+    "hold_pass": true,
+    "ordering_pass": true
+  },
+  "comparisons": {
+    "decision_window_like_for_like_comparison": {
+      "absolute_difference": 0.0,
+      "current_VSMIN_MEM_minimum": 0.40784436868089,
+      "historical_VSMIN_MEM_minimum": 0.40784436868089,
+      "status": "pass",
+      "tolerance": 0.02
+    },
+    "full_run_like_for_like_comparison": {
+      "absolute_difference": 0.04939239670833001,
+      "current_VSMIN_MEM_minimum": 0.3301161303713,
+      "historical_VSMIN_MEM_minimum": 0.37950852707963,
+      "status": "fail",
+      "topology_note": "The numeric windows are aligned, but topology is not equivalent after the current breaker opens."
+    },
+    "post_breaker_window_comparison": {
+      "reason": "The historical R4 version has no equivalent breaker-open event.",
+      "status": "not_applicable"
+    }
+  },
+  "conclusion": "The duration command-and-state chain passes. The legacy full-run VSMIN reference check remains failed. Breaker opening changes topology, so current post-breaker and historical no-breaker full-run minima are not strictly interchangeable.",
+  "current_archive": "C:\\pscad_work\\lvrt_closed_loop_coverage\\20260628_220356\\C3_R4_duration_trip_breaker",
+  "current_run": {
+    "missing_signals": [],
+    "signal_pgb_indices": {
+      "DFIG_BRK_STATE": 29,
+      "DFIG_LVRT_DURATION_EXCEEDED": 26,
+      "DFIG_LVRT_FINAL_BRK_CMD": 17,
+      "DFIG_LVRT_LOWV": 33,
+      "DFIG_LVRT_TALLOW_S": 30,
+      "DFIG_LVRT_TIMER_S": 35,
+      "DFIG_LVRT_TRIP_LATCH": 3,
+      "DFIG_LVRT_TRIP_REQUEST": 23,
+      "DFIG_LVRT_VSMIN_MEM": 2,
+      "VIBR1_2": 4
+    },
+    "simulation_end_s": 8.0,
+    "status": "available"
+  },
+  "current_windows": {
+    "BRK_STATE_first_open_s": 3.04,
+    "LOWV_first_s": 2.01,
+    "TRIP_REQUEST_first_s": 3.04,
+    "VSMIN_MEM_full_run_minimum": 0.3301161303713,
+    "VSMIN_MEM_full_run_minimum_time_s": 3.26,
+    "decision_window": {
+      "TALLOW_at_last_sample_before_trip_request": 1.0332657239352,
+      "TALLOW_sample_time_s": 3.03,
+      "TIMER_S_at_last_sample_before_trip_request": 1.0264125000025,
+      "TIMER_S_sample_time_s": 3.03,
+      "VIBR1_2_minimum": 0.40784436868089,
+      "VIBR1_2_minimum_time_s": 3.03,
+      "VSMIN_MEM_minimum": 0.40784436868089,
+      "VSMIN_MEM_minimum_time_s": 3.03,
+      "definition": "[LOWV_first_s, TRIP_REQUEST_first_s)"
+    },
+    "fault_clear_neighborhood": {
+      "VSMIN_MEM_minimum": 0.3301161303713,
+      "VSMIN_MEM_minimum_time_s": 3.26,
+      "definition": "[3.20 s, 3.32 s]"
+    },
+    "full_event_window": {
+      "VSMIN_MEM_minimum": 0.3301161303713,
+      "VSMIN_MEM_minimum_time_s": 3.26,
+      "definition": "[LOWV_first_s, simulation_end_s]"
+    },
+    "full_run_minimum_occurs_after_breaker_open": true,
+    "post_breaker_window": {
+      "VIBR1_2_minimum": 0.33022509231603,
+      "VIBR1_2_minimum_time_s": 3.25,
+      "VSMIN_MEM_minimum": 0.3301161303713,
+      "VSMIN_MEM_minimum_time_s": 3.26,
+      "definition": "[BRK_STATE_first_open_s, simulation_end_s]"
+    },
+    "simulation_end_s": 8.0,
+    "status": "available",
+    "transition_window": {
+      "causality_note": "A shared output sample cannot resolve strict PSCAD internal-substep causality; it verifies discrete-output ordering and consistency only.",
+      "definition": "same_sample",
+      "sample_time_s": 3.04,
+      "values": {
+        "DFIG_BRK_STATE": 2.0,
+        "DFIG_LVRT_FINAL_BRK_CMD": 1.0,
+        "DFIG_LVRT_TRIP_LATCH": 1.0,
+        "DFIG_LVRT_TRIP_REQUEST": 1.0,
+        "DFIG_LVRT_VSMIN_MEM": 0.39576861791652,
+        "VIBR1_2": 0.39576861791652
+      }
+    }
+  },
+  "execution_status": "type3_lvrt_c3_vsmin_comparability_audit_complete",
+  "historical_archive": "C:\\pscad_work\\lvrt_trip_request_matrix\\20260628_111429\\R4_r0p10_d1p25_8s",
+  "historical_run": {
+    "breaker_open_equivalent_present": false,
+    "missing_signals": [],
+    "signal_pgb_indices": {
+      "DFIG_BRK_STATE": 25,
+      "DFIG_LVRT_DURATION_EXCEEDED": 22,
+      "DFIG_LVRT_LOWV": 29,
+      "DFIG_LVRT_TALLOW_S": 26,
+      "DFIG_LVRT_TIMER_S": 31,
+      "DFIG_LVRT_TRIP_REQUEST": 19,
+      "DFIG_LVRT_VSMIN_MEM": 2,
+      "VIBR1_2": 3
+    },
+    "simulation_end_s": 8.0,
+    "status": "available"
+  },
+  "historical_windows": {
+    "LOWV_first_s": 2.01,
+    "TRIP_REQUEST_first_s": 3.04,
+    "VSMIN_MEM_full_run_minimum": 0.37950852707963,
+    "VSMIN_MEM_full_run_minimum_time_s": 3.26,
+    "decision_window": {
+      "TALLOW_at_last_sample_before_trip_request": 1.0332657239352,
+      "TALLOW_sample_time_s": 3.03,
+      "TIMER_S_at_last_sample_before_trip_request": 1.0264175000025,
+      "TIMER_S_sample_time_s": 3.03,
+      "VIBR1_2_minimum": 0.40784436868089,
+      "VIBR1_2_minimum_time_s": 3.03,
+      "VSMIN_MEM_minimum": 0.40784436868089,
+      "VSMIN_MEM_minimum_time_s": 3.03,
+      "definition": "[LOWV_first_s, TRIP_REQUEST_first_s)"
+    },
+    "full_event_window": {
+      "VSMIN_MEM_minimum": 0.37950852707963,
+      "VSMIN_MEM_minimum_time_s": 3.26,
+      "definition": "[LOWV_first_s, simulation_end_s]"
+    },
+    "simulation_end_s": 8.0,
+    "status": "available",
+    "transition_window": {
+      "breaker_event": "not_applicable",
+      "definition": "same_sample_historical_equivalent_event",
+      "sample_time_s": 3.04,
+      "values": {
+        "DFIG_LVRT_TRIP_REQUEST": 1.0,
+        "DFIG_LVRT_VSMIN_MEM": 0.40631786140601,
+        "VIBR1_2": 0.40631786140601
+      }
+    }
+  },
+  "overall_closed_loop_coverage": "partial"
+}

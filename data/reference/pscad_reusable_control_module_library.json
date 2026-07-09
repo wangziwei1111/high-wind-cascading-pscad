@@ -1,0 +1,81 @@
+{
+  "execution_status": "pscad_reusable_control_module_library_static_build_verified",
+  "audit_time": "2026-07-01T00:00:00+08:00",
+  "pscad_version": "4.6.2",
+  "projects": {
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_start_sha256": "EFE2FA9D537653C34C13C0223C2E48EE15A77788EAE35A1CC173364AA52D2959",
+    "trial_final_sha256": "D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314"
+  },
+  "hierarchy_pages": [
+    "CASCADE_CONTROL_MODULE_LIBRARY",
+    "MODULE_TEMPLATE_TEST_HARNESS"
+  ],
+  "modules": {
+    "MONITORED_OBJECT_EVENT_PACKET": {
+      "definition_id": 1952944928,
+      "inputs": ["IN_OBJECT_OPEN_BOOL", "IN_OBJECT_AVAILABLE", "IN_ARMED", "IN_TIME"],
+      "parameters": {"CAUSE_CODE_VALUE": 4.0, "EVENT_LATCH_INITIAL": 0.0, "FIRST_TIME_INITIAL": -1.0},
+      "outputs": ["OUT_EVENT_VALID", "OUT_CAUSE_CODE", "OUT_OBJECT_OPEN", "OUT_OBJECT_AVAILABLE", "OUT_FIRST_EVENT_TIME_S"],
+      "test_instance": "MODTEST_OBJECT_EVENT_PACKET",
+      "test_inputs": [0.0, 1.0, 0.0, 0.0],
+      "expected_outputs": [0.0, 0.0, 0.0, 1.0, -1.0]
+    },
+    "ONE_SHOT_BREAKER_OPEN_STIMULUS": {
+      "definition_id": 1933129646,
+      "inputs": ["IN_TEST_ENABLE", "IN_ARMED", "IN_TIME"],
+      "parameters": {"OPEN_TIME_S": 4.0},
+      "outputs": ["OUT_TIME_REACHED", "OUT_OPEN_REQUEST", "OUT_BREAKER_COMMAND"],
+      "test_instance": "MODTEST_ONE_SHOT_STIMULUS",
+      "test_inputs": [0.0, 0.0, 0.0],
+      "expected_outputs": [0.0, 0.0, 0.0]
+    },
+    "TWO_EVENT_CHRONOLOGY_MONITOR": {
+      "definition_id": 678331259,
+      "inputs": ["IN_EVENT_VALID_A", "IN_FIRST_EVENT_TIME_A_S", "IN_EVENT_VALID_B", "IN_FIRST_EVENT_TIME_B_S"],
+      "parameters": {},
+      "outputs": ["OUT_EVENTED_OBJECT_COUNT", "OUT_BOTH_EVENTS_RECORDED", "OUT_FIRST_EVENT_TIME_S", "OUT_SECOND_EVENT_TIME_S", "OUT_EVENT_TIME_GAP_S", "OUT_FIRST_EVENT_SOURCE_CODE", "OUT_EVENT_SEQUENCE_CODE", "OUT_CHRONOLOGY_CONSISTENT"],
+      "test_instance": "MODTEST_TWO_EVENT_CHRONOLOGY",
+      "test_inputs": [0.0, -1.0, 0.0, -1.0],
+      "expected_outputs": [0.0, 0.0, -1.0, -1.0, -1.0, 0.0, 0.0, 1.0]
+    }
+  },
+  "build": {"errors": 0, "warnings": null, "run_performed": false},
+  "preservation": {
+    "main_project_unchanged": true,
+    "existing_ibr2_and_dfig_logic_unchanged": true,
+    "output_channel_count": 224,
+    "automatic_reclosing_added": false,
+    "matlab_added": false,
+    "third_source_added": false,
+    "virtual_source_added": false
+  },
+  "static_audit": "analysis/pscad_tools/audit_pscad_reusable_control_module_library.py",
+  "dynamic_behavior_status": "unavailable",
+  "phase2_addendum": {
+    "execution_status": "ibr3_real_source_three_source_collector_static_pass",
+    "modules_added": ["BREAKER_STATE_ADAPTER", "THREE_SOURCE_EVENT_COLLECTOR"],
+    "test_instances": ["MODTEST_BREAKER_STATE_ADAPTER", "MODTEST_THREE_SOURCE_EVENT_COLLECTOR"],
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_final_sha256": "CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E",
+    "output_channel_count": 245,
+    "build_errors": 0,
+    "run_performed": false
+  },
+  "phase3_addendum": {
+    "execution_status": "three_event_chronology_static_pass",
+    "modules_added": ["THREE_EVENT_CHRONOLOGY_MONITOR"],
+    "test_instances": [
+      "MODTEST_THREE_EVENT_CHRONOLOGY_NONE",
+      "MODTEST_THREE_EVENT_CHRONOLOGY_TWO_STRICT",
+      "MODTEST_THREE_EVENT_CHRONOLOGY_THREE_TIE"
+    ],
+    "production_instance": "CASCADE3_TRIAL__CHRONOLOGY_MONITOR",
+    "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_final_sha256": "469103EF282C97CF7735D0E4BB8665A6D57FA453A6AA7F5BA86B5770951CDE92",
+    "output_channel_count": 253,
+    "build_errors": 0,
+    "run_performed": false,
+    "dynamic_behavior_status": "unavailable"
+  }
+}

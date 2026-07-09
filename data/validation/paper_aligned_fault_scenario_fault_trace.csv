@@ -1,0 +1,17 @@
+source,component_id,defn,x,y,TF,DF,fault_start_s,fault_duration_s,fault_clear_s,status,line,evidence
+pscx,413214904,master:tfaultn,3276,72,0.5,2,0.5,2.0,2.5,observed,,
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,369,46    0     RS         1.0                            // 1   N29(1)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,370,46    0     RS         1.0                            // 1   N29(1)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,371,46    0     RS         1.0                            // 1   N29(1)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,372,47    0     RS         1.0                            // 1   N29(2)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,373,47    0     RS         1.0                            // 1   N29(2)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,374,47    0     RS         1.0                            // 1   N29(2)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,375,48    0     RS         1.0                            // 1   N29(3)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,376,48    0     RS         1.0                            // 1   N29(3)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,377,48    0     RS         1.0                            // 1   N29(3)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,384,46    0     RS   1000000.0                            // 1   N29(1)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,385,47    0     RS   1000000.0                            // 1   N29(2)      GND
+gf46/P3.dta,,,,,,,,,,N29_to_GND_branch_observed,386,48    0     RS   1000000.0                            // 1   N29(3)      GND
+gf46/P3.f,,,,,,,,,,fault_timing_or_execution_observed,1327,IF ( TIME .GE. 0.5 ) IT_1 = 1
+gf46/P3.f,,,,,,,,,,fault_timing_or_execution_observed,1328,IF ( TIME .GE. (0.5+2.0) ) IT_1 = 0
+gf46/P3.f,,,,,,,,,,fault_timing_or_execution_observed,2650,"CALL E3PHFLT1_EXE(SS(1), (IBRCH(1)+13), (IBRCH(1)+14), (IBRCH(1)+1&"

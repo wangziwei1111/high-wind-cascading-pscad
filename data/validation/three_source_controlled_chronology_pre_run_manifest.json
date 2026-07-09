@@ -1,0 +1,56 @@
+{
+  "manifest_id": "THREE_SOURCE_CONTROLLED_CHRONOLOGY_PRE_RUN_MANIFEST_20260702_171208",
+  "scenario_name": "THREE_SOURCE_CONTROLLED_CHRONOLOGY_DEFAULT_SCENARIO",
+  "created_at_local": "2026-07-02T17:12:08+08:00",
+  "main_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "trial_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "backup_directory": "C:\\pscad_work\\backups\\three_source_controlled_chronology_run_20260702_171208",
+  "main_sha_before": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_before": "B6BBC137FA11C421EC5419BBD0661B2924285BD70A1E2026F47F8DF958FD271B",
+  "backup_main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "backup_trial_sha": "B6BBC137FA11C421EC5419BBD0661B2924285BD70A1E2026F47F8DF958FD271B",
+  "allowed_manual_changes": [
+    {
+      "signal": "IBR2_TEST_ENABLE",
+      "output_channel": "IBR2_TRIAL_TEST_ENABLE",
+      "constant_id": "1778759091",
+      "page_context": "P3 IBR2_TRIAL one-shot opening stimulus area",
+      "x": 252.0,
+      "y": 3042.0,
+      "old_value": "0",
+      "run_value": "1",
+      "restore_value": "0"
+    },
+    {
+      "signal": "IBR3_TEST_ENABLE",
+      "output_channel": "IBR3_TRIAL_TEST_ENABLE",
+      "constant_id": "444774384",
+      "page_context": "P3 IBR3_TRIAL one-shot opening stimulus area",
+      "x": 720.0,
+      "y": 1782.0,
+      "old_value": "0",
+      "run_value": "1",
+      "restore_value": "0"
+    }
+  ],
+  "confirmed_static_values": {
+    "IBR2_TRIAL_TEST_OPEN_TIME_S": 4.0,
+    "IBR2_SOURCE_B_CAUSE_CODE": 4,
+    "IBR3_TRIAL_TEST_OPEN_TIME_S": 5.0,
+    "IBR3_SOURCE_C_CAUSE_CODE": 5,
+    "output_channel_count": 253,
+    "simulation_timestep_s": 0.000005,
+    "channel_plot_step_s": 0.01
+  },
+  "forbidden_changes": [
+    "3IBR.pscx",
+    "DFIG LVRT",
+    "fault or system run settings",
+    "IBR2 or IBR3 original controllers",
+    "breaker physical boundaries",
+    "event packet, collector, chronology monitor, or module definitions",
+    "Output Channels",
+    "MATLAB, autoreclose, fourth source, or virtual source"
+  ],
+  "claim_boundary": "This planned run validates only a controlled timing-interface scenario: existing DFIG event plus independently scheduled IBR2_TRIAL and IBR3_TRIAL local-opening stimuli. It is not natural cascade propagation or physical causality validation."
+}

@@ -1,0 +1,65 @@
+run,signal,runtime_status,pgb,units_as_recorded,initial,final,first_ge_0p5_s,static_or_generated_code_evidence
+stage4,VIBR1_2,readable,111,,7.9015918286441e-05,1.0580683959262,0.07,runtime channel
+stage9,VIBR1_2,readable,112,,7.9015918286441e-05,1.0041831110752,0.07,runtime channel
+stage4,PIBR1_2,readable,113,,-6.1758973797331e-06,-0.00062803929427338,0.68,runtime channel
+stage9,PIBR1_2,readable,114,,-6.1758973797331e-06,199.22973033477,0.69,runtime channel
+stage4,QIBR1_2,readable,114,,-9.1591328086474e-21,0.00015627300701316,0.03,runtime channel
+stage9,QIBR1_2,readable,115,,-9.1591328086474e-21,-54.196080057128,0.03,runtime channel
+stage4,DFIG_LVRT_LOWV,readable,221,logic,1.0,0.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_LOWV,readable,234,logic,1.0,0.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_IMMTRIP,readable,222,logic,1.0,0.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_IMMTRIP,readable,235,logic,1.0,0.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_TIMER_S,readable,226,s,0.0,4.5753349999114,1.02,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_TIMER_S,readable,239,s,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_DURATION_EXCEEDED,readable,182,logic,0.0,0.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_DURATION_EXCEEDED,readable,195,logic,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_TRIP_REQUEST,readable,193,,0.0,0.0,0.01,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_TRIP_REQUEST,readable,206,,0.0,0.0,0.01,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_TRIP_LATCH,readable,219,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_TRIP_LATCH,readable,232,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_FINAL_BRK_CMD,readable,151,logic,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_FINAL_BRK_CMD,readable,152,logic,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_FINAL_CMD_BOOL,readable,154,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_FINAL_CMD_BOOL,readable,155,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_BRK_OPEN_BOOL,readable,150,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_BRK_OPEN_BOOL,readable,151,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_TRIP_CONFIRMED,readable,158,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_TRIP_CONFIRMED,readable,159,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_CASCADE_EVENT_VALID,readable,157,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_CASCADE_EVENT_VALID,readable,158,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE,readable,128,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_CASCADE_EVENT_CAUSE_CODE,readable,129,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_CASCADE_EVENT_BRK_OPEN,readable,144,,0.0,1.0,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_CASCADE_EVENT_BRK_OPEN,readable,145,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_CASCADE_SOURCE_AVAILABLE,readable,152,,1.0,0.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_CASCADE_SOURCE_AVAILABLE,readable,153,,1.0,1.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_CASCADE_AVAILABLE,readable,149,,1.0,0.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_CASCADE_AVAILABLE,readable,150,,1.0,1.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S,readable,96,s,0.0,2.42521,2.43,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_CASCADE_FIRST_EVENT_TIME_S,readable,97,s,0.0,-1.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_EXISTING_BRK_CMD,readable,163,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_EXISTING_BRK_CMD,readable,164,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL,readable,155,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_ORIGINAL_CMD_OPEN_BOOL,readable,156,,0.0,0.0,,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,DFIG_LVRT_TALLOW_S,readable,170,s,0.625,1.594011781272,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage9,DFIG_LVRT_TALLOW_S,readable,182,s,0.625,2.0,0.0,"runtime channel plus unchanged LVRT chain; V<0.9 duration comparator, timer, trip latch, final breaker command"
+stage4,E_28_29_1_A_P,readable,243,,0.0,-3.6630437994494,2.81,runtime channel
+stage9,E_28_29_1_A_P,readable,256,,0.0,0.00013228526407926,2.85,runtime channel
+stage4,E_28_29_1_A_Q,readable,239,,0.0,-13.579169150918,0.51,runtime channel
+stage9,E_28_29_1_A_Q,readable,252,,0.0,-0.2713604632552,0.51,runtime channel
+stage4,E_28_29_1_B_P,readable,242,,-2.8387772292467e-28,-3.7540238222437,2.81,runtime channel
+stage9,E_28_29_1_B_P,readable,255,,-2.6957308501233e-27,0.00010226552286769,2.85,runtime channel
+stage4,E_28_29_1_B_Q,readable,238,,-5.5186322624168e-60,-13.779448474406,,runtime channel
+stage9,E_28_29_1_B_Q,readable,251,,-3.7085208803441e-56,-0.0019303076269387,,runtime channel
+stage4,PAPER_OVL1_S_MAX_PU,runtime_unavailable,,,,,,runtime channel
+stage9,PAPER_OVL1_S_MAX_PU,readable,177,pu,0.0,0.27136075460684,0.05,runtime channel
+stage4,PAPER_OVL1_LOADING_INDEX_EQ,runtime_unavailable,,,,,,runtime channel
+stage9,PAPER_OVL1_LOADING_INDEX_EQ,readable,170,pu,0.0,0.034467770000361,0.11,runtime channel
+stage4,PAPER_OVL1_ABOVE_THRESHOLD,runtime_unavailable,,,,,,runtime channel
+stage9,PAPER_OVL1_ABOVE_THRESHOLD,readable,168,,0.0,0.0,2.51,runtime channel
+stage4,PAPER_OVL1_TIMER_OR_CURVE_STATE,runtime_unavailable,,,,,,runtime channel
+stage9,PAPER_OVL1_TIMER_OR_CURVE_STATE,readable,166,,0.0,1.0,7.51,runtime channel
+stage4,PAPER_OVL1_TRIP_REQUEST,runtime_unavailable,,,,,,runtime channel
+stage9,PAPER_OVL1_TRIP_REQUEST,readable,181,,0.0,1.0,7.51,runtime channel
+stage4,PAPER_OVL1_BRK_STATE,runtime_unavailable,,,,,,runtime channel
+stage9,PAPER_OVL1_BRK_STATE,readable,174,,0.0,2.0,7.51,runtime channel

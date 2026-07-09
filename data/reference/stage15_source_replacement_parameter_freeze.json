@@ -1,0 +1,55 @@
+{
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "sources": [
+    {
+      "source_id": "bus30",
+      "target_identity": "synchronous_generator",
+      "target_bus": 30,
+      "definition_or_template": "G_30_0_1_DYR",
+      "initial_P": 250.0,
+      "initial_Q": 146.456,
+      "status": "planned_active",
+      "parallel_source_allowed": false
+    },
+    {
+      "source_id": "WF33",
+      "target_identity": "paper_wind_farm_type3_dfig_proxy",
+      "target_bus": 33,
+      "definition_or_template": "G_33_0_1_DYR",
+      "initial_P": 632.0,
+      "initial_Q": 123.3861,
+      "status": "planned_active",
+      "parallel_source_allowed": false
+    },
+    {
+      "source_id": "WF35",
+      "target_identity": "paper_wind_farm_type3_dfig_proxy",
+      "target_bus": 35,
+      "definition_or_template": "G_35_0_1_DYR",
+      "initial_P": 650.0,
+      "initial_Q": 225.0912,
+      "status": "planned_active",
+      "parallel_source_allowed": false
+    },
+    {
+      "source_id": "WF38",
+      "target_identity": "paper_wind_farm_type3_dfig_proxy",
+      "target_bus": 38,
+      "definition_or_template": "G_38_0_1_DYR",
+      "initial_P": 830.0,
+      "initial_Q": 41.0678,
+      "status": "planned_active",
+      "parallel_source_allowed": false
+    },
+    {
+      "source_id": "legacy_bus30_DFIG_IBR_paths",
+      "target_identity": "disabled_or_removed",
+      "target_bus": 30,
+      "definition_or_template": "IBR_AVM / Type3_WTG legacy paths",
+      "initial_P": "",
+      "initial_Q": "",
+      "status": "must_not_remain_active",
+      "parallel_source_allowed": false
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "audit_name": "single_tline_measurement_cell_audit",
+  "target_tline": "E_16_19_1",
+  "execution_status": "pass",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360",
+  "xml_output_channel_count": 448,
+  "new_channel_count": 6,
+  "generated_map_pgbs": "624",
+  "gates": [
+    {
+      "gate": "main_project_integrity",
+      "passed": true,
+      "detail": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+    },
+    {
+      "gate": "trial_changed_from_preflight_baseline",
+      "passed": true,
+      "detail": {
+        "baseline": "1F747F067339547ECCFD03AD41A1B56ABE3DDC6D627AD1F085B37BFA9532DD95",
+        "current": "A9DC610D20C61022CDE2F2D73612C12499FB7E5D29C43562BA08D9D89EADF360"
+      }
+    },
+    {
+      "gate": "xml_output_channel_count",
+      "passed": true,
+      "detail": {
+        "baseline": 262,
+        "current": 448,
+        "expected_single_delta": 6,
+        "expected_full_network_delta": 186
+      }
+    },
+    {
+      "gate": "existing_output_channels_preserved",
+      "passed": true,
+      "detail": {
+        "baseline_fingerprint": "9E8CF48567846B024B59E914C5F4E89103990121D6E8F3CDD06FAE22B15F804A",
+        "current_existing_fingerprint": "9E8CF48567846B024B59E914C5F4E89103990121D6E8F3CDD06FAE22B15F804A",
+        "current_existing_count": 262
+      }
+    },
+    {
+      "gate": "six_new_output_channels_exact",
+      "passed": true,
+      "detail": [
+        "E_16_19_1_A_I",
+        "E_16_19_1_A_P",
+        "E_16_19_1_A_Q",
+        "E_16_19_1_B_I",
+        "E_16_19_1_B_P",
+        "E_16_19_1_B_Q"
+      ]
+    },
+    {
+      "gate": "six_matching_data_labels_present",
+      "passed": true,
+      "detail": {
+        "E_16_19_1_A_P": 1,
+        "E_16_19_1_A_Q": 1,
+        "E_16_19_1_A_I": 1,
+        "E_16_19_1_B_P": 1,
+        "E_16_19_1_B_Q": 1,
+        "E_16_19_1_B_I": 1
+      }
+    },
+    {
+      "gate": "two_native_multimeters_exact",
+      "passed": true,
+      "detail": [
+        "M1619A",
+        "M1619B"
+      ]
+    },
+    {
+      "gate": "no_extra_target_prefixed_channels",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "gate": "generated_fortran_pgb_bindings_present",
+      "passed": true,
+      "detail": {
+        "E_16_19_1_A_P": [
+          {
+            "line": 6698,
+            "pgb_offset": 56,
+            "rhs": "E_16_19_1_A_P"
+          }
+        ],
+        "E_16_19_1_A_Q": [
+          {
+            "line": 6780,
+            "pgb_offset": 58,
+            "rhs": "E_16_19_1_A_Q"
+          }
+        ],
+        "E_16_19_1_A_I": [
+          {
+            "line": 6800,
+            "pgb_offset": 61,
+            "rhs": "E_16_19_1_A_I"
+          }
+        ],
+        "E_16_19_1_B_P": [
+          {
+            "line": 6721,
+            "pgb_offset": 57,
+            "rhs": "E_16_19_1_B_P"
+          }
+        ],
+        "E_16_19_1_B_Q": [
+          {
+            "line": 6788,
+            "pgb_offset": 59,
+            "rhs": "E_16_19_1_B_Q"
+          }
+        ],
+        "E_16_19_1_B_I": [
+          {
+            "line": 6812,
+            "pgb_offset": 63,
+            "rhs": "E_16_19_1_B_I"
+          }
+        ]
+      }
+    },
+    {
+      "gate": "generated_fortran_meter_semantics_present",
+      "passed": true,
+      "detail": {
+        "M1619A": {
+          "comment_present": true,
+          "p_assignment": true,
+          "q_assignment": true,
+          "i_assignment": true
+        },
+        "M1619B": {
+          "comment_present": true,
+          "p_assignment": true,
+          "q_assignment": true,
+          "i_assignment": true
+        },
+        "uses_pqirms_functions": true
+      }
+    },
+    {
+      "gate": "generated_map_contains_six_channel_descriptions",
+      "passed": true,
+      "detail": {
+        "E_16_19_1_A_P": true,
+        "E_16_19_1_A_Q": true,
+        "E_16_19_1_A_I": true,
+        "E_16_19_1_B_P": true,
+        "E_16_19_1_B_Q": true,
+        "E_16_19_1_B_I": true
+      }
+    },
+    {
+      "gate": "trial_test_defaults_still_disabled",
+      "passed": true,
+      "detail": {
+        "IBR2_TEST_ENABLE": [
+          "0"
+        ],
+        "IBR2_TEST_OPEN_TIME_S": [
+          "4"
+        ],
+        "IBR3_TEST_OPEN_TIME_S": [
+          "5"
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Generated map PGBS may exceed XML Output Channel component count because vector channels expand.",
+    "M1619B unused Vrms/Ph parameter text is ignored because MeasV=0 and MeasPh=0; audit only requires P/Q/Crms.",
+    "No PSCAD GUI, Build, Run, or model file writes were performed by this script."
+  ]
+}

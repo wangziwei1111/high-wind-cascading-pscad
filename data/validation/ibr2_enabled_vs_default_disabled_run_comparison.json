@@ -1,0 +1,44 @@
+{
+  "ibr2_enabled_vs_default_disabled_status": "pass",
+  "baseline_run_id": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_RUN_20260702_151518",
+  "ibr2_enabled_run_id": "IBR2_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_154655",
+  "comparison_rows": [
+    {
+      "metric": "IBR2 test enable",
+      "baseline": 0.0,
+      "ibr2_enabled": 1.0,
+      "contrast": "baseline source-B cause 0 vs enabled test enable 1"
+    },
+    {
+      "metric": "IBR2 open request time",
+      "baseline": "unavailable_in_baseline_summary",
+      "ibr2_enabled": 4.0,
+      "contrast": "baseline detail unavailable/absent vs 4.0 s"
+    },
+    {
+      "metric": "IBR2 actual open time",
+      "baseline": "unavailable_in_baseline_summary",
+      "ibr2_enabled": 4.0,
+      "contrast": "baseline detail unavailable/absent vs 4.0 s"
+    },
+    {
+      "metric": "IBR2 event valid time",
+      "baseline": "unavailable_in_baseline_summary",
+      "ibr2_enabled": 4.01,
+      "contrast": "baseline detail unavailable/absent vs 4.0 s"
+    },
+    {
+      "metric": "IBR2 cause code",
+      "baseline": 0.0,
+      "ibr2_enabled": 4.0,
+      "contrast": "0 vs 4"
+    },
+    {
+      "metric": "CASCADE3 second event time",
+      "baseline": -1.0,
+      "ibr2_enabled": 4.000005,
+      "contrast": "-1 vs 4.0 s"
+    }
+  ],
+  "claim_boundary": "This run only validates the IBR2_TRIAL source-B trial-only local-opening path in the fixed trial model. It is not a natural DFIG-to-IBR2 cascade validation and does not validate physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+}

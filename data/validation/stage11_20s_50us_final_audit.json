@@ -1,0 +1,83 @@
+{
+  "audit_name": "stage11_20s_50us_final_audit",
+  "generated_at_local": "2026-07-03T21:13:20+08:00",
+  "execution_status": "pass",
+  "stage11_result_class": "stage11_20s_50us_paper_order_first_trip_pass",
+  "integrity_trace": [
+    {
+      "check": "runtime_duration_20s",
+      "status": "pass",
+      "value": 20.0
+    },
+    {
+      "check": "plot_step_0p01s",
+      "status": "pass",
+      "value": 0.01
+    },
+    {
+      "check": "required_channels_readable",
+      "status": "pass",
+      "value": true
+    },
+    {
+      "check": "pre_fault_dfig_healthy",
+      "status": "pass",
+      "value": {
+        "status": "healthy",
+        "checks": {
+          "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH_max": 0.0,
+          "DFIG_LVRT_FINAL_BRK_CMD_max": 0.0,
+          "DFIG_BRK_STATE_max": 0.0,
+          "DFIG_LVRT_CASCADE_EVENT_VALID_max": 0.0,
+          "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE_min": 1.0
+        }
+      }
+    },
+    {
+      "check": "dfig_after_fault_before_line_trip",
+      "status": "pass",
+      "value": {
+        "dfig": 2.44,
+        "line": 7.53
+      }
+    },
+    {
+      "check": "timer_delay_about_5s",
+      "status": "pass",
+      "value": 5.0
+    },
+    {
+      "check": "final_class_allowed",
+      "status": "pass",
+      "value": "stage11_20s_50us_paper_order_first_trip_pass"
+    }
+  ],
+  "event_times_s": {
+    "fault_start": 0.5,
+    "fault_clear": 2.5,
+    "dfig_duration_latch": 2.44,
+    "dfig_final_breaker_command": 2.44,
+    "dfig_trip_confirmed": 2.44,
+    "dfig_actual_breaker_open": 2.44,
+    "dfig_cascade_event_valid": 2.44,
+    "dfig_source_available_lost": 2.44,
+    "paper_threshold_crossing": 2.53,
+    "paper_above_threshold": 2.53,
+    "paper_timer_done": 7.53,
+    "paper_trip_request": 7.53,
+    "paper_breaker_command": 7.53,
+    "paper_actual_breaker_open": 7.53,
+    "paper_trip_event_valid": 7.53
+  },
+  "pre_fault_health": {
+    "status": "healthy",
+    "checks": {
+      "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH_max": 0.0,
+      "DFIG_LVRT_FINAL_BRK_CMD_max": 0.0,
+      "DFIG_BRK_STATE_max": 0.0,
+      "DFIG_LVRT_CASCADE_EVENT_VALID_max": 0.0,
+      "DFIG_LVRT_CASCADE_SOURCE_AVAILABLE_min": 1.0
+    }
+  },
+  "claim_boundary": "fault_to_dfig_to_line_overload_to_5s_line_trip_observed"
+}

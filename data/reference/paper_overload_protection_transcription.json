@@ -1,0 +1,14 @@
+{
+  "source": "data/reference/paper_reproduction_evidence_registry.csv",
+  "paper_evidence_id": "E003",
+  "paper_section": "2.3.1 线路过负荷保护",
+  "paper_page": "11 (PDF 19)",
+  "paper_figure_or_table": "Eq. 2-6, 2-7",
+  "registered_statement": "Line flow redistributes after outages; an inverse-time overload action opens a line, anchored at 1.1 times limit with 5 s delay.",
+  "registered_short_quote": "线路负载率达到1.1倍承载极限时，过负荷保护延时5s",
+  "equation_recovery_status": "semantic_constraints_recovered_but_exact_inverse_time_equations_not_unambiguously_reconstructed",
+  "implemented_curve_type": "paper-inspired definite-time fallback",
+  "threshold_multiplier": 1.1,
+  "definite_delay_s": 5.0,
+  "claim_boundary": "This is a paper-constrained equivalent protection parameterization. It is not a transcription of a fully recovered inverse-time equation and is not a PNNL physical thermal rating."
+}

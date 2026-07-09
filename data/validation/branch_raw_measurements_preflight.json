@@ -1,0 +1,1240 @@
+{
+  "execution_status": "branch_raw_measurements_static_fallback",
+  "main_project_integrity_status": "pass",
+  "trial_project_preflight_status": "pass",
+  "existing_output_channel_preservation_status": "pass",
+  "paper_branch_observability_evidence_status": "pass",
+  "real_branch_traceability_status": "pass",
+  "branch_measurement_semantics_status": "fail",
+  "minimum_two_branch_selection_status": "fail",
+  "monitor_only_scope_status": "pass",
+  "main_sha_before": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_before": "1F747F067339547ECCFD03AD41A1B56ABE3DDC6D627AD1F085B37BFA9532DD95",
+  "existing_output_channel_count": 262,
+  "existing_output_channel_fingerprint": "AFB5CCE9082972DF2C95ABF7C5431A07975EEB57A4A12CB89E5F17AFABC0C13D",
+  "generated_artifact_fingerprint_before": [
+    {
+      "name": "BREAKER_STATE_ADAPTER.f",
+      "size": 10592,
+      "mtime_ns": 1782994615530672900,
+      "sha256": "B5AFA8DEE9E16AC2E5EC6B90D9CD29FBF7E3FC9457E879C3AC9CA2F155B199CA"
+    },
+    {
+      "name": "CASCADE_CONTROL_MODULE_LIBRARY.f",
+      "size": 8534,
+      "mtime_ns": 1782994615409073800,
+      "sha256": "6E673ABE8677319461250EE8329F5C81BBB9C6C0CF6AD3E1C062F840E777DFC8"
+    },
+    {
+      "name": "Chopper.f",
+      "size": 12219,
+      "mtime_ns": 1782994619951466200,
+      "sha256": "64F57C3C1D09142F4DBE9C6631D62FE5DBAE4F80618B1D5E4E98FA68C8B8F691"
+    },
+    {
+      "name": "ConvBridge_Avg.f",
+      "size": 26356,
+      "mtime_ns": 1782994620049993200,
+      "sha256": "462D99B9A31B29475469FBBAED8840DE6994EE35843718AC44CE64D015C46E28"
+    },
+    {
+      "name": "Crowbar_prot.f",
+      "size": 21654,
+      "mtime_ns": 1782994619866443800,
+      "sha256": "3B2A543049C085E0B054B7DF89485C78024767BB8468858A657FBBC2555D1B73"
+    },
+    {
+      "name": "CurrentLimit_1_2_1_1.f",
+      "size": 14114,
+      "mtime_ns": 1782994618639245300,
+      "sha256": "D4A4460D778808B914F25B10978F9714715231FD8BD68A2E93EC3698A4196EE2"
+    },
+    {
+      "name": "DFIG_Converters_Avg.f",
+      "size": 42212,
+      "mtime_ns": 1782994619171742400,
+      "sha256": "37F357DE57F5408C023C9253F3F0FB3A7BBBA26916B4333880B4BAF48BA81323"
+    },
+    {
+      "name": "Filter.f",
+      "size": 17223,
+      "mtime_ns": 1782994619276496100,
+      "sha256": "64163C1033FAD7228BA3D00105FFCB5C209F65242E54D737BEB59FF1A1422826"
+    },
+    {
+      "name": "G_31_0_1_DYR.f",
+      "size": 21496,
+      "mtime_ns": 1782994617489964400,
+      "sha256": "229B6215F4DA8C8F3F629201066AE70AE1148E1B9BAD1086DF3A08017FA4ABFB"
+    },
+    {
+      "name": "G_32_0_1_DYR.f",
+      "size": 21510,
+      "mtime_ns": 1782994617378082300,
+      "sha256": "5AD3B54A9B6487317581E2DD12376CCBD154986C08227B00846242CBD554D049"
+    },
+    {
+      "name": "G_33_0_1_DYR.f",
+      "size": 21510,
+      "mtime_ns": 1782994617602034200,
+      "sha256": "AF55051F428906A166B8EC837DE62192A7D2A46ED8F77233749B3822D572A32B"
+    },
+    {
+      "name": "G_34_0_1_DYR.f",
+      "size": 21504,
+      "mtime_ns": 1782994617266865700,
+      "sha256": "58D0D5AA79CF9B9E06D986769A8E54981C1534D31AF1E2B9F803C11DC3DFAFD2"
+    },
+    {
+      "name": "G_35_0_1_DYR.f",
+      "size": 21510,
+      "mtime_ns": 1782994617943401600,
+      "sha256": "CB91440177433C31B5643A26D834CFAC782BBB1B7E143D07F3E4D1CD34F3F7C7"
+    },
+    {
+      "name": "G_36_0_1_DYR.f",
+      "size": 21508,
+      "mtime_ns": 1782994617837268900,
+      "sha256": "C52117A89399A338566FCB669292F1F67BF650F2CD4AD64543E46DB5E330CE9A"
+    },
+    {
+      "name": "G_37_0_1_DYR.f",
+      "size": 21508,
+      "mtime_ns": 1782994617110423400,
+      "sha256": "9CE7A49B5912CE39BD3EDB680A9F9AAEDA1705C78983A9324B9480C4BFF20AA5"
+    },
+    {
+      "name": "G_38_0_1_DYR.f",
+      "size": 21508,
+      "mtime_ns": 1782994616958209800,
+      "sha256": "0E18C476FAF069EBDC026F79C743FC780017E59E2DF90EEEDA32DD28183EF0FF"
+    },
+    {
+      "name": "G_39_0_1_DYR.f",
+      "size": 21519,
+      "mtime_ns": 1782994617714259200,
+      "sha256": "C8ADD46CCB73DC765B52F92FEE3FEAC73B2D9289604297DB2DD8DC34702E4E58"
+    },
+    {
+      "name": "Grid_side_Controls.f",
+      "size": 39184,
+      "mtime_ns": 1782994619439877000,
+      "sha256": "56EF9B0CCDE4A54061C4E28E41886566B6AE6573B9673B51F6F46FF11F4AF90F"
+    },
+    {
+      "name": "IBR_AVM_2_1_1.f",
+      "size": 58789,
+      "mtime_ns": 1782994618338211800,
+      "sha256": "CC75C38488D7F0833598FCE5E6008765EA93B4F3AD10FD10A5E37463F66D0023"
+    },
+    {
+      "name": "Main.f",
+      "size": 12164,
+      "mtime_ns": 1782994615372831300,
+      "sha256": "76A978A1AED8F06D65DCA647E75A12BC4CC927A4A53ED95F1D624BA02FEECB1C"
+    },
+    {
+      "name": "MODULE_TEMPLATE_TEST_HARNESS.f",
+      "size": 37889,
+      "mtime_ns": 1782994615471103900,
+      "sha256": "F921AB3790731F2EBA279E7BEDBF73AF1AC820ACA0F9E937DF421851FB781CDD"
+    },
+    {
+      "name": "MONITORED_OBJECT_EVENT_PACKET.f",
+      "size": 14916,
+      "mtime_ns": 1782994616094359200,
+      "sha256": "525B55EC1B15FE23B230EF0B3188FBA7269C94F342B52530F2C8AEEB233326F4"
+    },
+    {
+      "name": "ONE_SHOT_BREAKER_OPEN_STIMULUS.f",
+      "size": 11452,
+      "mtime_ns": 1782994615832572900,
+      "sha256": "D00DFCE2FF0A9532D76E5545E1804B59435D25E907BE194BAAD39D066557D5C6"
+    },
+    {
+      "name": "P1.f",
+      "size": 9975,
+      "mtime_ns": 1782994616187068100,
+      "sha256": "C40049423AFE4BE90B27CC957CA4F5C45388283EF85AD1FA505711228358020F"
+    },
+    {
+      "name": "P2.f",
+      "size": 8348,
+      "mtime_ns": 1782994616262292700,
+      "sha256": "28FCB091BCF1A9223355DD44B131BEC9D68880C7A946092DA33557888DF4B5AF"
+    },
+    {
+      "name": "P3.f",
+      "size": 231842,
+      "mtime_ns": 1782994616770949200,
+      "sha256": "B7EB30E2C046002B5375C167E5C4EEC39B41290A5195EF169722F31EE2396A22"
+    },
+    {
+      "name": "PI_AntiWindUp.f",
+      "size": 13300,
+      "mtime_ns": 1782994619755293900,
+      "sha256": "DD899C5E40F80674769BD4234700D6D753A180FEFEA5AD9D20E62CD02F51EAE4"
+    },
+    {
+      "name": "PI_AntiWindUp_2.f",
+      "size": 13313,
+      "mtime_ns": 1782994619053323900,
+      "sha256": "D0B29E885BF78DA8BB0BDBF9E935D85EA340230172956D2313E73512404E6156"
+    },
+    {
+      "name": "REEC_A_1_2_1_1.f",
+      "size": 56585,
+      "mtime_ns": 1782994618544017900,
+      "sha256": "8D5778A7C8DF2DA447CA8914A579FFB9566B1330BE0A12488DE02CE389E336D7"
+    },
+    {
+      "name": "REGC_A_1_2_1_1.f",
+      "size": 21208,
+      "mtime_ns": 1782994618714739200,
+      "sha256": "475685ACC10DD5DDA689015451E25F07118E6C7E9985AD41053E6D8F574767C8"
+    },
+    {
+      "name": "REPC_A_1.f",
+      "size": 32801,
+      "mtime_ns": 1782994618087763700,
+      "sha256": "3EA6B43666BCA74409467B47B32670AC0EEE400EE9737BBDD84773D306919968"
+    },
+    {
+      "name": "Rotor_side_Controls.f",
+      "size": 50926,
+      "mtime_ns": 1782994619630090100,
+      "sha256": "E9FE7D1D07931D5BF047EA72AFA2713758782F8324F1C08F7386E6062CEE8D4B"
+    },
+    {
+      "name": "Station.f",
+      "size": 9227,
+      "mtime_ns": 1782994615251030300,
+      "sha256": "D696A4279DFA5A08CAFE7D8B07B1969BAE5B881F901B4710E0531C834CD684C5"
+    },
+    {
+      "name": "Synchronization.f",
+      "size": 15730,
+      "mtime_ns": 1782994618894036100,
+      "sha256": "12DBA950359D60E7275B848227979FA790EEADBDD16A09A3017A5330C7E8F95A"
+    },
+    {
+      "name": "THREE_EVENT_CHRONOLOGY_MONITOR.f",
+      "size": 37735,
+      "mtime_ns": 1782994615632260500,
+      "sha256": "E3E15233C429758A33A453AE1805DD802CF7518C45587CA03A83325CFCB41BBB"
+    },
+    {
+      "name": "THREE_SOURCE_EVENT_COLLECTOR.f",
+      "size": 26438,
+      "mtime_ns": 1782994615966590200,
+      "sha256": "E93A4623427D2DFCDD3563EFC40E55D1929A16E4D1E5171F77FCA70F51AA57FF"
+    },
+    {
+      "name": "TWO_EVENT_CHRONOLOGY_MONITOR.f",
+      "size": 21781,
+      "mtime_ns": 1782994615747322300,
+      "sha256": "E6210DC5F0355C2F0459304E756FA22FA7DF6775DEF1E9D037FA451AEA19E099"
+    },
+    {
+      "name": "Type3_WTG_Avg.f",
+      "size": 47804,
+      "mtime_ns": 1782994618821336100,
+      "sha256": "BE374E47B745879F08B797EF5E7D9BB991E81DA0C7AB3D3886D90C5210E11314"
+    },
+    {
+      "name": "WindTurbine_MechModel.f",
+      "size": 27971,
+      "mtime_ns": 1782994618979314000,
+      "sha256": "953DEB563D80C405C38FFF24651138D3A1E33A7C168541CC30210405B11E43E1"
+    },
+    {
+      "name": "BREAKER_STATE_ADAPTER.dta",
+      "size": 483,
+      "mtime_ns": 1782994615531797400,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "CASCADE_CONTROL_MODULE_LIBRARY.dta",
+      "size": 483,
+      "mtime_ns": 1782994615410147600,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Chopper.dta",
+      "size": 1087,
+      "mtime_ns": 1782994619952901700,
+      "sha256": "DC858533C7EEEBEC04A77C266AFCAC80D4F16C047A4DE156E475934B14EE48CE"
+    },
+    {
+      "name": "ConvBridge_Avg.dta",
+      "size": 2939,
+      "mtime_ns": 1782994620053222700,
+      "sha256": "732D4D0FB27FFB7F5A5DEECA92239BF5C8FD4A146FA5ED7C976CE25774F1E3C9"
+    },
+    {
+      "name": "Crowbar_prot.dta",
+      "size": 2558,
+      "mtime_ns": 1782994619868661200,
+      "sha256": "B46C4333D19F161DC98AABB670295DFF4ECBE83F0EFA6056910B276DC08BD297"
+    },
+    {
+      "name": "CurrentLimit_1_2_1_1.dta",
+      "size": 483,
+      "mtime_ns": 1782994618640368200,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "DFIG_Converters_Avg.dta",
+      "size": 2524,
+      "mtime_ns": 1782994619176837700,
+      "sha256": "040CF7AB546332FB25B2728AADDAD58C8178071F84FF3F11172007DABE23651B"
+    },
+    {
+      "name": "Filter.dta",
+      "size": 2274,
+      "mtime_ns": 1782994619278348400,
+      "sha256": "50B6C0AEC6231EAC2EE23F5BA47A2265A0BE51E0B21ADE42DF1714B712631081"
+    },
+    {
+      "name": "G_31_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617493280900,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_32_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617380082500,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_33_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617605388900,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_34_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617271130500,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_35_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617946161700,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_36_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617841644100,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_37_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617113114600,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_38_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994616960356600,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_39_0_1_DYR.dta",
+      "size": 1098,
+      "mtime_ns": 1782994617716956200,
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "Grid_side_Controls.dta",
+      "size": 483,
+      "mtime_ns": 1782994619446510100,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "IBR_AVM_2_1_1.dta",
+      "size": 5619,
+      "mtime_ns": 1782994618346908500,
+      "sha256": "AD230305CDE7E40EC4E065D60DA12DDF5C1548985FE32DE6BBCB682DBE22FC08"
+    },
+    {
+      "name": "Main.dta",
+      "size": 483,
+      "mtime_ns": 1782994615373359000,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "MODULE_TEMPLATE_TEST_HARNESS.dta",
+      "size": 483,
+      "mtime_ns": 1782994615474362900,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "MONITORED_OBJECT_EVENT_PACKET.dta",
+      "size": 483,
+      "mtime_ns": 1782994616095738100,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "ONE_SHOT_BREAKER_OPEN_STIMULUS.dta",
+      "size": 483,
+      "mtime_ns": 1782994615833977700,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "P1.dta",
+      "size": 483,
+      "mtime_ns": 1782994616188183200,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "P2.dta",
+      "size": 483,
+      "mtime_ns": 1782994616263245500,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "P3.dta",
+      "size": 37497,
+      "mtime_ns": 1782994616800989000,
+      "sha256": "35590B30F47F4957E4FACFD72F2280AD3E63170C7FA24D67159A956FC63232B1"
+    },
+    {
+      "name": "PI_AntiWindUp.dta",
+      "size": 483,
+      "mtime_ns": 1782994619757445500,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "PI_AntiWindUp_2.dta",
+      "size": 483,
+      "mtime_ns": 1782994619055442900,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "REEC_A_1_2_1_1.dta",
+      "size": 631,
+      "mtime_ns": 1782994618548943200,
+      "sha256": "53A5427BB120DB492A6A1DD089EDAE688484407FAEB4990DF38C7CC010C5193B"
+    },
+    {
+      "name": "REGC_A_1_2_1_1.dta",
+      "size": 557,
+      "mtime_ns": 1782994618717176500,
+      "sha256": "D5B3F1E50288FB0027D94CBAF0707E873B01B4FE36FB43C975B0768F98195B96"
+    },
+    {
+      "name": "REPC_A_1.dta",
+      "size": 483,
+      "mtime_ns": 1782994618091552600,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Rotor_side_Controls.dta",
+      "size": 557,
+      "mtime_ns": 1782994619641001000,
+      "sha256": "56300D69AABA135FD10B99FABE2C5F74010F42F989BB761DFB239238BB3AD8D3"
+    },
+    {
+      "name": "Station.dta",
+      "size": 483,
+      "mtime_ns": 1782994615251621600,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Synchronization.dta",
+      "size": 483,
+      "mtime_ns": 1782994618896577400,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "THREE_EVENT_CHRONOLOGY_MONITOR.dta",
+      "size": 483,
+      "mtime_ns": 1782994615638434800,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "THREE_SOURCE_EVENT_COLLECTOR.dta",
+      "size": 483,
+      "mtime_ns": 1782994615969477900,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "TWO_EVENT_CHRONOLOGY_MONITOR.dta",
+      "size": 483,
+      "mtime_ns": 1782994615749916500,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Type3_WTG_Avg.dta",
+      "size": 6129,
+      "mtime_ns": 1782994618825716200,
+      "sha256": "DB71B0ABFA18CCFD6665C84E8FB13C12A3C213B442C683100BA843460B7376F9"
+    },
+    {
+      "name": "WindTurbine_MechModel.dta",
+      "size": 483,
+      "mtime_ns": 1782994618982077400,
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "E_13_14_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650055539400,
+      "sha256": "0691E875B261DE5E9AA53B86C00DADA43C1123D83605F5CB79300CF861C1D8C9"
+    },
+    {
+      "name": "E_14_15_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650066615700,
+      "sha256": "49CFAC2A51685135A8ACFC180817EB8F4188F8E32B304A6DD2E8E9D8C8DFCDD4"
+    },
+    {
+      "name": "E_15_16_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650070754600,
+      "sha256": "3E952B6B812618E4FF3EF84203B66F55C98A5B143417512FCD31A1FCE0E69946"
+    },
+    {
+      "name": "E_16_17_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650079011800,
+      "sha256": "CCAFAA1BE0B4E8BF5D27ABB1D3A2ED5A94F9241064C05C3672535A107DEE64DD"
+    },
+    {
+      "name": "E_16_19_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651272155900,
+      "sha256": "89F78CFB8BD38E2D7F57059D0533E04FEC2B782BC39B3B06CFA8DA282F549C00"
+    },
+    {
+      "name": "E_16_21_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651279501800,
+      "sha256": "E7A8B6EF3EAD1F530C35F7244FE4C1869ABA70201C2900BCC75BACF94EB744FD"
+    },
+    {
+      "name": "E_16_24_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652253857900,
+      "sha256": "F707D13EF203870DB881C6AA16FEF445FC0FB720A32F77D6795B52B36027CE68"
+    },
+    {
+      "name": "E_17_18_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651255230200,
+      "sha256": "9BB7F7F4E6FB47DE6CFBA900F5112FAF97BA27928EC449A1C8B08FAA46225C2F"
+    },
+    {
+      "name": "E_17_27_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650087568500,
+      "sha256": "52A08515EA41B6F0B2356CE2A095B645ABE0A948B64A61EA96DBE3887BC6A99E"
+    },
+    {
+      "name": "E_1_2_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649061008800,
+      "sha256": "6FE35A9FC2D75314BE0BFC68F4DA79FCBB7A22EDC6C2B5DCF2F97008386A82F5"
+    },
+    {
+      "name": "E_1_39_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652276863600,
+      "sha256": "7367C6EF166187BC638D07B224EB6EE0331A54C91DE5FFE28EB1985E73C55AC0"
+    },
+    {
+      "name": "E_21_22_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652232496000,
+      "sha256": "FD5F554ED7DF866907013C97706E6B16E8603AB73E267B13B05371366DDDACDC"
+    },
+    {
+      "name": "E_22_23_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652240694100,
+      "sha256": "14CF46DD5E3A15CE9ED03132AB55D95FB66C33C31F155AFD61D960160CB901C5"
+    },
+    {
+      "name": "E_23_24_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652248510300,
+      "sha256": "E2636F008AD01C6C7FEE7189F2AD7113D1B267200DAA2CF2D3A1B70808B87E08"
+    },
+    {
+      "name": "E_25_26_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651236652900,
+      "sha256": "6D03FD39026A581D0F096FA931DD6543BD29E872D0E88789B87EE1EDC9FF7704"
+    },
+    {
+      "name": "E_26_27_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650098141100,
+      "sha256": "866A26DD84720AC601633A83559C4A6D3EB51EB897F8E8967606E619C291BB23"
+    },
+    {
+      "name": "E_26_28_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650105499200,
+      "sha256": "C60CDF54C2B8D8851D0D3394032F409794CEAD01C904B4B6EAF6A8F4ACDC97EB"
+    },
+    {
+      "name": "E_26_29_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651219290600,
+      "sha256": "6A590AF56A7AE30C348B03827463E80D47CA7D54C62A9882C7BE18C1105088E1"
+    },
+    {
+      "name": "E_28_29_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994650112383500,
+      "sha256": "A7ED765F59EB84E85455315BB51357AE984FD5308280612B5C826C708A5972CB"
+    },
+    {
+      "name": "E_2_25_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651246002500,
+      "sha256": "CBE45509A7C6126A6C75CFBF86F2BDA4F0800C2674C1D1C3D07D32ECF9E82E88"
+    },
+    {
+      "name": "E_2_3_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649067069600,
+      "sha256": "256EA2DAF74B57A6A4EF364136461408264C8609783CAB784FA56428D54E8507"
+    },
+    {
+      "name": "E_3_18_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651262453800,
+      "sha256": "8795333DD679E97C6D4B4C0915FE99571AF130B101B6AE906DF08F1B6D7798A9"
+    },
+    {
+      "name": "E_3_4_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649073265300,
+      "sha256": "DA43736B0C430C5636EFDE732F79D52D0B3EED0D946E68B2D7BA4332D8E281A2"
+    },
+    {
+      "name": "E_4_14_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994651229300200,
+      "sha256": "219EE241518DB8F251DD979157A943C20307ECFC85C2DD92CA9D2CE652D07E2A"
+    },
+    {
+      "name": "E_4_5_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649079811000,
+      "sha256": "F47B563C35A4C9ECC82F3EC71FE4F029C63313FC281A3774661F8810F43C384F"
+    },
+    {
+      "name": "E_5_8_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649088294300,
+      "sha256": "656DAF9AC87248A2DA27F9D8CF5AD0400FF0DAB63D40821E19DA50DC89FAD06E"
+    },
+    {
+      "name": "E_6_11_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649112225600,
+      "sha256": "492A76841A5F80DA015D20E995479E4D6DD0DF64C8D6EA40305428E0CAB36F68"
+    },
+    {
+      "name": "E_6_7_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649105486600,
+      "sha256": "8CE904B64F5ED375D4513C0FD667056330A9A181B7C41AE5EFCE857BA2B84BA5"
+    },
+    {
+      "name": "E_7_8_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994649097375800,
+      "sha256": "77240D6DCE9D551D76D0FFC6630AF08E51EEC63FFCF742A6B1254A741BFCFA42"
+    },
+    {
+      "name": "E_8_9_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652262998300,
+      "sha256": "61C8E619E4D8A250778C4C5B3EFE8670D5A8AF3EA357D1B21CF171522B586909"
+    },
+    {
+      "name": "E_9_39_1.out",
+      "size": 6400,
+      "mtime_ns": 1782994652267337200,
+      "sha256": "10482008DF0557060782BB87C43A30FBD94C47B622A2FCD42ED8F7EDFD06B32E"
+    },
+    {
+      "name": "3IBR_DFIG1_TRIAL.exe",
+      "size": 6819464,
+      "mtime_ns": 1782994648869598100,
+      "sha256": "57D5BE4A33C57DE7CDFB70D1C9592B9D829BE93662DF6A32C047C79106B7C0E5"
+    }
+  ],
+  "default_values": {
+    "ibr2_enable": "0",
+    "ibr2_open_time_s": "4",
+    "ibr3_enable": "0",
+    "ibr3_open_time_s": "5"
+  },
+  "forbidden_feature_scan": {
+    "matlab_interface": false,
+    "automatic_reclose": false,
+    "fourth_source": false,
+    "virtual_source": false,
+    "line_overload_relay": false
+  },
+  "existing_p3_multimeters_and_ammeters": [
+    {
+      "id": "2115019413",
+      "x": "2466",
+      "y": "216",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "0",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "2",
+        "S": "100.0 [MVA]",
+        "BaseV": "345.0 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.0 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "VolI": "",
+        "VolILL": "",
+        "CurI": "",
+        "P": "PL16",
+        "Q": "",
+        "Vrms": "V16",
+        "Crms": "",
+        "Ph": "AngL16",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0"
+      }
+    },
+    {
+      "id": "1001330448",
+      "x": "558",
+      "y": "990",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "1",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "0",
+        "S": "1 [MVA]",
+        "BaseV": "22 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.02 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "CurI": "",
+        "VolI": "",
+        "P": "P30",
+        "Q": "Q30",
+        "Vrms": "V30",
+        "Crms": "",
+        "Ph": "",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0",
+        "VolILL": ""
+      }
+    },
+    {
+      "id": "1433370859",
+      "x": "972",
+      "y": "1332",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "1",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "0",
+        "S": "1.0 [MVA]",
+        "BaseV": "0.6 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.01667 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "CurI": "",
+        "VolI": "",
+        "P": "PIBR2",
+        "Q": "QIBR2",
+        "Vrms": "VIBR2",
+        "Crms": "",
+        "Ph": "",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0",
+        "VolILL": ""
+      }
+    },
+    {
+      "id": "31436320",
+      "x": "1008",
+      "y": "1656",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "1",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "0",
+        "S": "1.0 [MVA]",
+        "BaseV": "0.6 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.01667 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "CurI": "",
+        "VolI": "",
+        "P": "PIBR3",
+        "Q": "QIBR3",
+        "Vrms": "VIBR3",
+        "Crms": "",
+        "Ph": "",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0",
+        "VolILL": ""
+      }
+    },
+    {
+      "id": "1263266056",
+      "x": "774",
+      "y": "990",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "1",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "0",
+        "S": "1.0 [MVA]",
+        "BaseV": "22 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.01 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "CurI": "",
+        "VolI": "",
+        "P": "PIBR1_2",
+        "Q": "QIBR1_2",
+        "Vrms": "VIBR1_2",
+        "Crms": "",
+        "Ph": "",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0",
+        "VolILL": ""
+      }
+    },
+    {
+      "id": "797238293",
+      "x": "756",
+      "y": "1332",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "1",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "0",
+        "S": "1.0 [MVA]",
+        "BaseV": "22 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.01 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "CurI": "",
+        "VolI": "",
+        "P": "PIBR2_2",
+        "Q": "QIBR2_2",
+        "Vrms": "VIBR2_2",
+        "Crms": "",
+        "Ph": "",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0",
+        "VolILL": ""
+      }
+    },
+    {
+      "id": "1370481906",
+      "x": "792",
+      "y": "1656",
+      "definition": "master:multimeter",
+      "parameters": {
+        "MeasV": "0",
+        "MeasI": "0",
+        "MeasP": "1",
+        "MeasQ": "1",
+        "RMS": "2",
+        "IRMS": "0",
+        "MeasPh": "0",
+        "S": "1.0 [MVA]",
+        "BaseV": "22 [kV]",
+        "BaseA": "1.0 [kA]",
+        "TS": "0.01 [s]",
+        "Freq": "60.0 [Hz]",
+        "Name": "",
+        "Dis": "0",
+        "CurI": "",
+        "VolI": "",
+        "P": "PIBR3_2",
+        "Q": "QIBR3_2",
+        "Vrms": "VIBR3_2",
+        "Crms": "",
+        "Ph": "",
+        "hide1": "0",
+        "hide2": "0",
+        "Pd": "0.0",
+        "Qd": "0.0",
+        "Vd": "0.0",
+        "VolILL": ""
+      }
+    }
+  ],
+  "candidate_line_definition_trace": {
+    "E_2_3_1": {
+      "classid": "RowDefn",
+      "ports": [],
+      "internal_users": [
+        {
+          "definition": "master:Line_Berg_Options",
+          "parameters": {
+            "BDamp": "0",
+            "Interp1": "1",
+            "F1": "2000",
+            "TZ": "0.005",
+            "TP": "0.005",
+            "Inflen": "0"
+          }
+        },
+        {
+          "definition": "master:Line_ManualYZ",
+          "parameters": {
+            "NCond": "3",
+            "PU": "3",
+            "LONGLN": "1",
+            "VR2": "345",
+            "MVA2": "100",
+            "RPUP2": "0.0013",
+            "XLPUP2": "0.0151",
+            "BPUP2": "0.2572",
+            "Estim": "1",
+            "REst": "10.15",
+            "ZEst": "1.915",
+            "TEst": "1.36",
+            "VR": "230",
+            "MVA": "100",
+            "RPUP": "6.76e-8",
+            "XLPUP": "9.6e-7",
+            "XCPUP": "5.78e5",
+            "RPUZ": "6.86e-7",
+            "XLPUZ": "2.5e-6",
+            "XCPUZ": "8.14e5",
+            "RPUZM": "5.35e-7",
+            "XLPUZM": "6.37e-7",
+            "XCPUZM": "5.4e7",
+            "RP": "3.576e-5",
+            "XLP": "5.078e-4",
+            "XCP": "305.8",
+            "RZ": "3.63e-4",
+            "XLZ": "1.323e-3",
+            "XCZ": "430.6",
+            "RZM": "2.83e-4",
+            "XLZM": "3.37e-4",
+            "XCZM": "28560.0",
+            "RTP": "3.576e-5",
+            "TTP": "3.4185e-9",
+            "ZTP": "394.06",
+            "RTZ": "3.63e-4",
+            "TTZ": "4.65e-9",
+            "ZTZ": "754.77",
+            "RTZM": "2.83e-4",
+            "TTZM": "0.288e-9",
+            "ZTZM": "3102.4",
+            "RPUZ2": "6.86e-7",
+            "XLPUZ2": "2.5e-6",
+            "BPUZ2": "1.23e-6",
+            "RPUZM2": "5.35e-7",
+            "XLPUZM2": "6.37e-7",
+            "BPUZM2": "1.85e-8",
+            "fname": "inputYZ.txt",
+            "path": "0",
+            "dformat": "0",
+            "fname2": "inputYZ.txt",
+            "path2": "0"
+          }
+        }
+      ]
+    },
+    "E_1_2_1": {
+      "classid": "RowDefn",
+      "ports": [],
+      "internal_users": [
+        {
+          "definition": "master:Line_Berg_Options",
+          "parameters": {
+            "BDamp": "0",
+            "Interp1": "1",
+            "F1": "2000",
+            "TZ": "0.005",
+            "TP": "0.005",
+            "Inflen": "0"
+          }
+        },
+        {
+          "definition": "master:Line_ManualYZ",
+          "parameters": {
+            "NCond": "3",
+            "PU": "3",
+            "LONGLN": "1",
+            "VR2": "345",
+            "MVA2": "100",
+            "RPUP2": "0.0035",
+            "XLPUP2": "0.0411",
+            "BPUP2": "0.6987",
+            "Estim": "1",
+            "REst": "10.15",
+            "ZEst": "1.915",
+            "TEst": "1.36",
+            "VR": "230",
+            "MVA": "100",
+            "RPUP": "6.76e-8",
+            "XLPUP": "9.6e-7",
+            "XCPUP": "5.78e5",
+            "RPUZ": "6.86e-7",
+            "XLPUZ": "2.5e-6",
+            "XCPUZ": "8.14e5",
+            "RPUZM": "5.35e-7",
+            "XLPUZM": "6.37e-7",
+            "XCPUZM": "5.4e7",
+            "RP": "3.576e-5",
+            "XLP": "5.078e-4",
+            "XCP": "305.8",
+            "RZ": "3.63e-4",
+            "XLZ": "1.323e-3",
+            "XCZ": "430.6",
+            "RZM": "2.83e-4",
+            "XLZM": "3.37e-4",
+            "XCZM": "28560.0",
+            "RTP": "3.576e-5",
+            "TTP": "3.4185e-9",
+            "ZTP": "394.06",
+            "RTZ": "3.63e-4",
+            "TTZ": "4.65e-9",
+            "ZTZ": "754.77",
+            "RTZM": "2.83e-4",
+            "TTZM": "0.288e-9",
+            "ZTZM": "3102.4",
+            "RPUZ2": "6.86e-7",
+            "XLPUZ2": "2.5e-6",
+            "BPUZ2": "1.23e-6",
+            "RPUZM2": "5.35e-7",
+            "XLPUZM2": "6.37e-7",
+            "BPUZM2": "1.85e-8",
+            "fname": "inputYZ.txt",
+            "path": "0",
+            "dformat": "0",
+            "fname2": "inputYZ.txt",
+            "path2": "0"
+          }
+        }
+      ]
+    },
+    "E_2_25_1": {
+      "classid": "RowDefn",
+      "ports": [],
+      "internal_users": [
+        {
+          "definition": "master:Line_Berg_Options",
+          "parameters": {
+            "BDamp": "0",
+            "Interp1": "1",
+            "F1": "2000",
+            "TZ": "0.005",
+            "TP": "0.005",
+            "Inflen": "0"
+          }
+        },
+        {
+          "definition": "master:Line_ManualYZ",
+          "parameters": {
+            "NCond": "3",
+            "PU": "3",
+            "LONGLN": "1",
+            "VR2": "345",
+            "MVA2": "100",
+            "RPUP2": "0.007",
+            "XLPUP2": "0.0086",
+            "BPUP2": "0.146",
+            "Estim": "1",
+            "REst": "10.15",
+            "ZEst": "1.915",
+            "TEst": "1.36",
+            "VR": "230",
+            "MVA": "100",
+            "RPUP": "6.76e-8",
+            "XLPUP": "9.6e-7",
+            "XCPUP": "5.78e5",
+            "RPUZ": "6.86e-7",
+            "XLPUZ": "2.5e-6",
+            "XCPUZ": "8.14e5",
+            "RPUZM": "5.35e-7",
+            "XLPUZM": "6.37e-7",
+            "XCPUZM": "5.4e7",
+            "RP": "3.576e-5",
+            "XLP": "5.078e-4",
+            "XCP": "305.8",
+            "RZ": "3.63e-4",
+            "XLZ": "1.323e-3",
+            "XCZ": "430.6",
+            "RZM": "2.83e-4",
+            "XLZM": "3.37e-4",
+            "XCZM": "28560.0",
+            "RTP": "3.576e-5",
+            "TTP": "3.4185e-9",
+            "ZTP": "394.06",
+            "RTZ": "3.63e-4",
+            "TTZ": "4.65e-9",
+            "ZTZ": "754.77",
+            "RTZM": "2.83e-4",
+            "TTZM": "0.288e-9",
+            "ZTZM": "3102.4",
+            "RPUZ2": "6.86e-7",
+            "XLPUZ2": "2.5e-6",
+            "BPUZ2": "1.23e-6",
+            "RPUZM2": "5.35e-7",
+            "XLPUZM2": "6.37e-7",
+            "BPUZM2": "1.85e-8",
+            "fname": "inputYZ.txt",
+            "path": "0",
+            "dformat": "0",
+            "fname2": "inputYZ.txt",
+            "path2": "0"
+          }
+        }
+      ]
+    },
+    "E_16_19_1": {
+      "classid": "RowDefn",
+      "ports": [],
+      "internal_users": [
+        {
+          "definition": "master:Line_Berg_Options",
+          "parameters": {
+            "BDamp": "0",
+            "Interp1": "1",
+            "F1": "2000",
+            "TZ": "0.005",
+            "TP": "0.005",
+            "Inflen": "0"
+          }
+        },
+        {
+          "definition": "master:Line_ManualYZ",
+          "parameters": {
+            "NCond": "3",
+            "PU": "3",
+            "LONGLN": "1",
+            "VR2": "345",
+            "MVA2": "100",
+            "RPUP2": "0.0016",
+            "XLPUP2": "0.0195",
+            "BPUP2": "0.304",
+            "Estim": "1",
+            "REst": "10.15",
+            "ZEst": "1.915",
+            "TEst": "1.36",
+            "VR": "230",
+            "MVA": "100",
+            "RPUP": "6.76e-8",
+            "XLPUP": "9.6e-7",
+            "XCPUP": "5.78e5",
+            "RPUZ": "6.86e-7",
+            "XLPUZ": "2.5e-6",
+            "XCPUZ": "8.14e5",
+            "RPUZM": "5.35e-7",
+            "XLPUZM": "6.37e-7",
+            "XCPUZM": "5.4e7",
+            "RP": "3.576e-5",
+            "XLP": "5.078e-4",
+            "XCP": "305.8",
+            "RZ": "3.63e-4",
+            "XLZ": "1.323e-3",
+            "XCZ": "430.6",
+            "RZM": "2.83e-4",
+            "XLZM": "3.37e-4",
+            "XCZM": "28560.0",
+            "RTP": "3.576e-5",
+            "TTP": "3.4185e-9",
+            "ZTP": "394.06",
+            "RTZ": "3.63e-4",
+            "TTZ": "4.65e-9",
+            "ZTZ": "754.77",
+            "RTZM": "2.83e-4",
+            "TTZM": "0.288e-9",
+            "ZTZM": "3102.4",
+            "RPUZ2": "6.86e-7",
+            "XLPUZ2": "2.5e-6",
+            "BPUZ2": "1.23e-6",
+            "RPUZM2": "5.35e-7",
+            "XLPUZM2": "6.37e-7",
+            "BPUZM2": "1.85e-8",
+            "fname": "inputYZ.txt",
+            "path": "0",
+            "dformat": "0",
+            "fname2": "inputYZ.txt",
+            "path2": "0"
+          }
+        }
+      ]
+    }
+  },
+  "eligible_branch_count": 0,
+  "gui_stage_authorized": false,
+  "build_authorized": false,
+  "run_authorized": false,
+  "claim_boundary": "Candidate real branches were traced, but no raw branch observability layer was added. Power-flow redistribution, loading ratio, overload, protection, trip, and cascade behavior remain unavailable."
+}

@@ -1,0 +1,7 @@
+{
+  "decision_name": "stage12_paper_event_order_proxy_decision",
+  "generated_at_local": "2026-07-03T21:27:40+08:00",
+  "paper_target_status": "paper_event_order_proxy",
+  "reason": "No exact paper branch-to-current-PSCAD-line identity is defensibly recovered; selection is based on paper-like event order and Stage-11 raw response.",
+  "selected_tline_id": "E_26_29_1"
+}

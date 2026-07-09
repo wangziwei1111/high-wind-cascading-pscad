@@ -1,0 +1,7 @@
+command_field,size,pscad_action,feedback_field,notes
+line_trip_cmd,46,open BR_LINE_k_FROM and BR_LINE_k_TO,line_online,one command controls both line-end breakers
+wind_disconnect_cmd,3,open BR_WIND_33 BR_WIND_35 or BR_WIND_38,wind_online,one command per wind farm
+gen_trip_cmd,10,open BR_GEN_30 through BR_GEN_39,gen_online,one command per generator outlet breaker
+load_shed_cmd,19,open staged load breakers according to load_shed_fraction,load_online,stages implement cumulative 25 40 55 percent shedding
+load_shed_fraction,19,select cumulative load-shed stage,load_online,not a direct breaker by itself
+tov_line_trip_cmd,46,open mapped line breakers,line_online,TOV judgement belongs to MATLAB

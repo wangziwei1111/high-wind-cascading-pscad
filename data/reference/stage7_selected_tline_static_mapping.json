@@ -1,0 +1,12 @@
+{
+  "selected_network_branch_id": "E_28_29_1",
+  "terminal_a_node": "N28",
+  "terminal_b_node": "N29",
+  "gui_insertion_boundary": "Insert BRK_PAPER_OVL1_TRIAL in series with the real TLine E_28_29_1 on one electrical side without changing the TLine R/X/B, length, end nodes, or the existing A/B multimeters.",
+  "preserve_meter_order": [
+    "Keep the existing terminal-A P/Q/I measurement source feeding the selected line A-side labels.",
+    "Keep the existing terminal-B P/Q/I measurement source feeding the selected line B-side labels.",
+    "Do not add a third TLine measurement component."
+  ],
+  "no_bypass_check_text": "After insertion, visually confirm that there is no parallel wire or branch around BRK_PAPER_OVL1_TRIAL; all current through the selected real TLine boundary must pass through this breaker."
+}

@@ -1,0 +1,6 @@
+source_id,target_identity,target_bus,definition_or_template,initial_P,initial_Q,status,parallel_source_allowed
+bus30,synchronous_generator,30,G_30_0_1_DYR,250.0,146.456,planned_active,False
+WF33,paper_wind_farm_type3_dfig_proxy,33,G_33_0_1_DYR,632.0,123.3861,planned_active,False
+WF35,paper_wind_farm_type3_dfig_proxy,35,G_35_0_1_DYR,650.0,225.0912,planned_active,False
+WF38,paper_wind_farm_type3_dfig_proxy,38,G_38_0_1_DYR,830.0,41.0678,planned_active,False
+legacy_bus30_DFIG_IBR_paths,disabled_or_removed,30,IBR_AVM / Type3_WTG legacy paths,,,must_not_remain_active,False

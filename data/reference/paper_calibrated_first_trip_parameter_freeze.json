@@ -1,0 +1,180 @@
+{
+  "selected_network_branch_id": "E_28_29_1",
+  "selection_reason": "Selected by fixed score over all 31 current TLines: direct N29 fault relation first, then paper-aligned post-clear persistent flow and parameter robustness. The selected line has no pre-fault false trip and remains robust under +/-2% effective-capacity perturbation.",
+  "paper_relation": "paper-constrained adapted-network first-trip candidate",
+  "effective_capacity_pu": 7.872883989661206,
+  "paper_calibrated_effective_capacity_pu_on_100MVA_base": 7.872883989661206,
+  "effective_capacity_equivalent_on_100MVA_base": 7.872883989661206,
+  "threshold_multiplier": 1.1,
+  "absolute_s_threshold_pu_on_100MVA_base": 8.660172388627327,
+  "protection_curve_type": "paper-inspired definite-time fallback",
+  "definite_delay_s_or_exact_paper_curve_parameters": {
+    "definite_delay_s": 5.0,
+    "exact_inverse_time_equation_status": "semantic_constraints_recovered_but_exact_inverse_time_equations_not_unambiguously_reconstructed"
+  },
+  "expected_threshold_crossing_window": 2.53,
+  "expected_trip_window": 7.529999999999999,
+  "pre_fault_margin": 5.098871413586389,
+  "robustness_summary": {
+    "minus_2_percent": true,
+    "plus_2_percent": true,
+    "minus_5_percent": true,
+    "plus_5_percent": true,
+    "candidate_effective_capacity_band_lower": 3.2375463409463068,
+    "candidate_effective_capacity_band_upper": 12.690992249352501
+  },
+  "all_rejected_candidates": [
+    {
+      "network_branch_id": "E_1_2_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_1_39_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_2_3_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_2_25_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_3_4_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_3_18_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_4_5_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_4_14_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_5_8_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_6_7_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_6_11_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_7_8_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_8_9_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_9_39_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_13_14_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_14_15_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_15_16_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_16_17_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_16_19_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_16_21_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_16_24_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_17_18_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_17_27_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_21_22_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_22_23_1",
+      "status": "rejected",
+      "reason": "no_capacity_band_satisfies_prefault_no_trip_and_5s_postclear_continuous_overthreshold_with_2pct_robustness"
+    },
+    {
+      "network_branch_id": "E_23_24_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_25_26_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_26_27_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_26_28_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    },
+    {
+      "network_branch_id": "E_26_29_1",
+      "status": "not_selected",
+      "reason": "eligible_but_lower_fixed_selection_score_or_less_direct_N29_fault_relation"
+    }
+  ],
+  "modeling_claim_boundary": "effective_capacity_pu is a calibrated equivalent parameter for paper-mechanism reproduction; it is not a PNNL original continuous thermal rating, not a true protection setting, and not a real thermal limit.",
+  "parameter_freeze_timestamp": "2026-07-03T14:04:47"
+}

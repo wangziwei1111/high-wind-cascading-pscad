@@ -1,0 +1,25 @@
+{
+  "audit_name": "stage15_bus30_sync_recovery_map",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "status": "recoverable_by_same_class_instance_template",
+  "definition_source_project": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "definition_name": "G_30_0_1_DYR",
+  "definition_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "template_policy": "Copy an existing G_xx_0_1_DYR synchronous-generator instance shell only as a PSCAD placement/port template; bind the copied instance to G_30_0_1_DYR and keep G30 parameters from its own definition.",
+  "prohibited": [
+    "Do not rename DFIG/IBR as a synchronous generator.",
+    "Do not keep bus30 DFIG/IBR in parallel.",
+    "Do not use arbitrary P/Q; use the G_30_0_1_DYR definition.",
+    "Do not create an ideal voltage source substitute."
+  ],
+  "parameters": {
+    "Name": "",
+    "P_MW": 250.0,
+    "Q_MVAR": 146.456,
+    "Volts_pu": 1.0475,
+    "Phase_deg": -3.3392,
+    "Type": "0"
+  },
+  "compiled_endpoint": "to be verified after new trial Build by stage15 pre-run gate",
+  "source_limitation": "Current PSCAD canvas has G_30_0_1_DYR definition but no live G30 instance; user explicitly authorized same-class synchronous-generator copy/paste restoration."
+}

@@ -1,0 +1,18 @@
+{
+  "execution_status": "branch_raw_measurements_static_fallback",
+  "selected_branch_count": 0,
+  "selected_branches": [],
+  "candidate_branch_count": 4,
+  "planned_new_output_channel_count": 0,
+  "planned_final_output_channel_count": 262,
+  "gui_stage_authorized": false,
+  "blocking_reason": "At least two real TLine branches are traceable, but none exposes an existing, semantically confirmed P/Q/I measurement path. Adding meters or calculations is prohibited by this stage's inline-first/no-new-element boundary.",
+  "excluded_false_measurement": "PL16 is the P output of a multimeter on load branch E_16_0_1; it is not E_16_19_1 transmission-line power and has no Q/I outputs enabled.",
+  "future_safe_resolution": "A future task must explicitly authorize inline branch meters (not a Page Module) or identify an authoritative native TLine measurement interface before Output Channels can be added.",
+  "no_in_model_loading_ratio": true,
+  "future_offline_formula_only": [
+    "abs(I_measured)/I_limit",
+    "sqrt(P_measured^2+Q_measured^2)/S_limit"
+  ],
+  "claim_boundary": "Candidate real branches were traced, but no raw branch observability layer was added. Power-flow redistribution, loading ratio, overload, protection, trip, and cascade behavior remain unavailable."
+}

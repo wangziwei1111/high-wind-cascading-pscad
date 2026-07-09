@@ -1,0 +1,74 @@
+{
+  "audit_name": "stage10_dfig_event_consistency_final_audit",
+  "generated_at_local": "2026-07-03T18:28:12",
+  "execution_status": "stage10_read_only_audit_complete_dfig_actual_no_trip_in_stage9",
+  "analysis_mode": "zero_build_zero_run_zero_gui_read_only",
+  "branch": "codex/lvrt-trip-request-progress",
+  "stage4_runtime": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage7_before_paper_calibrated_first_trip\\PSCAD",
+    "sample_count": 2001,
+    "time_start_s": 0.0,
+    "time_end_s": 20.0,
+    "plot_step_s": 0.01,
+    "trial_sha_expected": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+    "trial_sha_preserved_model": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+    "sha_match": true
+  },
+  "stage9_runtime": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+    "sample_count": 901,
+    "time_start_s": 0.0,
+    "time_end_s": 9.0,
+    "plot_step_s": 0.01,
+    "trial_sha_expected": "F2A3C1012D8261805C03F688CCC2E8BFBCE68A80D1ACC352CAFA666B149744A0",
+    "trial_sha_current_model": "F2A3C1012D8261805C03F688CCC2E8BFBCE68A80D1ACC352CAFA666B149744A0",
+    "sha_match": true
+  },
+  "fault_static_comparison": {
+    "fault_bus": "N29",
+    "fault_type": "three_phase_to_ground",
+    "fault_start_s": 0.5,
+    "fault_clear_s": 2.5,
+    "fault_component_parameters": "verified identical: Ctype=0, OpCur=0, Grnd=1, CLVL=0, RON=0.01 ohm, ROFF=1e6 ohm, phases A/B/C/G enabled",
+    "run_duration_difference": "20.0 s versus 9.0 s cannot alter the already-computed 0-9 s causal response",
+    "emt_step": "unchanged by the Stage-9 duration-only setting",
+    "plot_step_s": 0.01
+  },
+  "dfig_static_comparison": {
+    "fault_and_DFIG_LVRT_configuration": "no relevant parameter difference found",
+    "low_voltage_threshold": 0.9,
+    "immediate_threshold": 0.2,
+    "breaker_identity": "BRK_DFIG",
+    "relevant_physical_difference": "Stage 9 contains the Stage-7 PAPER line breaker/relay boundary on E_28_29_1; Stage 4 predates it"
+  },
+  "stage4_dfig_status": {
+    "physical_breaker_open_s": 2.43,
+    "source_availability_lost_s": 2.43,
+    "event_valid_s": 2.43,
+    "event_cause_code": 1.0,
+    "first_event_time_s": 2.42521,
+    "interpretation": "physical DFIG disconnect and matching duration-LVRT event packet"
+  },
+  "stage9_dfig_status": {
+    "physical_breaker_open_s": null,
+    "source_availability_lost_s": null,
+    "event_valid_s": null,
+    "event_cause_code": 0.0,
+    "first_event_time_s": null,
+    "all_required_channels_present": true,
+    "interpretation": "actual no-trip; not a missing channel, parser, or event-packet mapping failure"
+  },
+  "verified_signal_level_root_cause": {
+    "class": "B_actual_no_trip_due_verified_lvrt_input_difference",
+    "stage4_fault_window_VIBR1_2_min": 0.85254967423946,
+    "stage9_fault_window_VIBR1_2_min": 0.91051071893218,
+    "unchanged_duration_threshold": 0.9,
+    "stage4_duration_trigger_s": 2.43,
+    "stage9_duration_trigger_s": null,
+    "reason": "Stage 4 VIBR1_2 entered the V<0.9 region and accumulated the duration timer; Stage 9 stayed above 0.9 throughout the fault window, so the unchanged physical trip chain did not operate."
+  },
+  "sequence_class": "dfig_not_observed_before_first_trip",
+  "stage9_first_line_actual_open_s": 7.51,
+  "paper_order_aligned": false,
+  "claim_boundary": "Stage 9 validates only the flow-driven E_28_29_1 protection subchain. Until a physical DFIG event precedes the first line trip, it is not a complete paper-style accident-chain reproduction."
+}

@@ -1,0 +1,215 @@
+{
+  "manifest_name": "stage8_output_observability_baseline_manifest",
+  "created_at_local": "2026-07-03T15:38:13",
+  "git_head_start": "31e886e715f59846019e86ff8ade5d7b7ebdf27d",
+  "main_sha_start": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_start": "C8F6139E34FE6FBEA298B948C225333ECA277D0A0D920EF5C4C8AA2B8121D611",
+  "stage7_freeze_commit": "247d41f2444c47d13a4b88997c2ebf6c8a8f34b0",
+  "stage7_result_commit": "31e886e715f59846019e86ff8ade5d7b7ebdf27d",
+  "selected_line": "E_28_29_1",
+  "effective_capacity_pu": 7.872883989661206,
+  "threshold_multiplier": 1.1,
+  "protection_curve_type": "paper-inspired definite-time fallback",
+  "definite_delay_s": 5.0,
+  "existing_stage7_audit_path": "data/validation/paper_calibrated_first_trip_final_audit.json",
+  "existing_stage7_run_manifest_path": "data/derived/paper_calibrated_first_trip_run_manifest.json",
+  "existing_stage7_relay_trace_path": "data/derived/paper_calibrated_first_trip_relay_trace.csv",
+  "existing_stage7_static_mapping_path": "data/reference/stage7_selected_tline_static_mapping.json",
+  "trial_project_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "trial_gf46_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+  "expected_runtime_inf_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.inf",
+  "expected_runtime_out_prefix": "3IBR_DFIG1_TRIAL",
+  "existing_output_channel_count": 446,
+  "existing_paper_channel_logical_names": [
+    "PAPER_OVL1_S_A_PU",
+    "PAPER_OVL1_S_B_PU",
+    "PAPER_OVL1_S_MAX_PU",
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+    "PAPER_OVL1_LOADING_INDEX_EQ",
+    "PAPER_OVL1_ABOVE_THRESHOLD",
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+    "PAPER_OVL1_TRIP_REQUEST",
+    "PAPER_OVL1_BRK_CMD",
+    "PAPER_OVL1_BRK_STATE",
+    "PAPER_OVL1_TRIP_EVENT_VALID",
+    "PAPER_OVL1_FIRST_TRIP_TIME_S",
+    "PAPER_OVL1_RELAY_ENABLE"
+  ],
+  "existing_paper_channel_titles": [
+    "PAPER_OVL1_S_A_PU",
+    "PAPER_OVL1_S_B_PU",
+    "PAPER_OVL1_S_MAX_PU",
+    "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+    "PAPER_OVL1_LOADING_INDEX_EQ",
+    "PAPER_OVL1_RELAY_ENABLE",
+    "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+    "PAPER_OVL1_TRIP_REQUEST",
+    "PAPER_OVL1_BRK_CMD",
+    "PAPER_OVL1_BRK_STATE",
+    "PAPER_OVL1_TRIP_EVENT_VALID",
+    "PAPER_OVL1_FIRST_TRIP_TIME_S",
+    "PAPER_OVL1_RELAY_ENABLE"
+  ],
+  "backup_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage8_before_output_observability_repair",
+  "backup_manifest": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage8_before_output_observability_repair\\backup_manifest.json",
+  "backup_file_count": 252,
+  "trial_sha_before_repair": "C8F6139E34FE6FBEA298B948C225333ECA277D0A0D920EF5C4C8AA2B8121D611",
+  "p3_f_paper_entries": [
+    {
+      "title": "PAPER_OVL1_RELAY_ENABLE",
+      "p3_f_line": 2443,
+      "pgb_offset": 92,
+      "runtime_expression": "PAPER_OVL1_RELAY_ENABLE"
+    },
+    {
+      "title": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "p3_f_line": 3901,
+      "pgb_offset": 166,
+      "runtime_expression": "PAPER_OVL1_TIMER_OR_CURVE_STATE"
+    },
+    {
+      "title": "PAPER_OVL1_RELAY_ENABLE",
+      "p3_f_line": 3909,
+      "pgb_offset": 168,
+      "runtime_expression": "PAPER_OVL1_ABOVE_THRESHOLD"
+    },
+    {
+      "title": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "p3_f_line": 3913,
+      "pgb_offset": 169,
+      "runtime_expression": "PAPER_OVL1_FIRST_TRIP_TIME_S"
+    },
+    {
+      "title": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "p3_f_line": 3917,
+      "pgb_offset": 170,
+      "runtime_expression": "PAPER_OVL1_LOADING_INDEX_EQ"
+    },
+    {
+      "title": "PAPER_OVL1_TRIP_EVENT_VALID",
+      "p3_f_line": 3925,
+      "pgb_offset": 172,
+      "runtime_expression": "PAPER_OVL1_BRK_CMD"
+    },
+    {
+      "title": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "p3_f_line": 3929,
+      "pgb_offset": 173,
+      "runtime_expression": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU"
+    },
+    {
+      "title": "PAPER_OVL1_BRK_STATE",
+      "p3_f_line": 3944,
+      "pgb_offset": 174,
+      "runtime_expression": "REAL(PAPER_OVL1_BRK_STATE)"
+    },
+    {
+      "title": "PAPER_OVL1_S_MAX_PU",
+      "p3_f_line": 3956,
+      "pgb_offset": 177,
+      "runtime_expression": "PAPER_OVL1_S_MAX_PU"
+    },
+    {
+      "title": "PAPER_OVL1_BRK_CMD",
+      "p3_f_line": 3960,
+      "pgb_offset": 178,
+      "runtime_expression": "PAPER_OVL1_BRK_CMD"
+    },
+    {
+      "title": "PAPER_OVL1_S_B_PU",
+      "p3_f_line": 3964,
+      "pgb_offset": 179,
+      "runtime_expression": "PAPER_OVL1_S_B_PU"
+    },
+    {
+      "title": "PAPER_OVL1_TRIP_REQUEST",
+      "p3_f_line": 3972,
+      "pgb_offset": 181,
+      "runtime_expression": "PAPER_OVL1_BRK_CMD"
+    },
+    {
+      "title": "PAPER_OVL1_S_A_PU",
+      "p3_f_line": 3980,
+      "pgb_offset": 183,
+      "runtime_expression": "PAPER_OVL1_S_A_PU"
+    },
+    {
+      "title": "PAPER_OVL1_RELAY_ENABLE",
+      "p3_f_line": 8785,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "p3_f_line": 9378,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_RELAY_ENABLE",
+      "p3_f_line": 9382,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "p3_f_line": 9384,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "p3_f_line": 9386,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_TRIP_EVENT_VALID",
+      "p3_f_line": 9390,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "p3_f_line": 9392,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_BRK_STATE",
+      "p3_f_line": 9398,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_S_MAX_PU",
+      "p3_f_line": 9404,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_BRK_CMD",
+      "p3_f_line": 9406,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_S_B_PU",
+      "p3_f_line": 9408,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_TRIP_REQUEST",
+      "p3_f_line": 9412,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    },
+    {
+      "title": "PAPER_OVL1_S_A_PU",
+      "p3_f_line": 9416,
+      "pgb_offset": null,
+      "runtime_expression": ""
+    }
+  ]
+}

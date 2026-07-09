@@ -1,0 +1,9 @@
+field,value
+module,THREE_EVENT_CHRONOLOGY_MONITOR
+input_count,6
+output_count,10
+harness_instance_count,3
+monitor_only,true
+build_errors,0
+run_performed,false
+dynamic_behavior_status,unavailable

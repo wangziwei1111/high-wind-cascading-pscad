@@ -1,0 +1,5 @@
+event_source,event_valid_observed,event_cause_code,breaker_open_observed,source_available_observed,first_event_time_s,first_transition_time_s,configured_or_observed_status
+DFIG,1.0,1.0,1.0,0.0,,2.43,observed
+IBR2,0.0,0.0,0.0,1.0,-1.0,,not_observed
+IBR3,0.0,0.0,0.0,1.0,-1.0,,not_observed
+CASCADE3_MONITOR,1.0,,1.0,,2.42521,2.43,observed

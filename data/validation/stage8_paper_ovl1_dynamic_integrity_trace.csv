@@ -1,0 +1,10 @@
+check,status,evidence
+runtime .inf exists,pass,C:\pscad_work\pnnl_39_3ibr_pscad46_strip5\PSCAD\3IBR_DFIG1_TRIAL.gf46\3IBR_DFIG1_TRIAL.inf
+runtime .out exists,pass,64
+13 canonical channels readable,pass,13/13
+time axis 0-20 s,pass,0.0..20.0
+pre-fault false trip absent,fail,"trip=0.0, fault=0.5"
+threshold before timer,fail,"threshold=None, timer=0.0"
+relay-breaker causal order,fail,"trip=0.0, cmd=0.0, open=0.0"
+main project unchanged,pass,CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB
+second run avoided,pass,single Stage-8 run only

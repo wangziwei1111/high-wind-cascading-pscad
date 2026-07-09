@@ -1,0 +1,22 @@
+signal_name,direction,size,source_layer,target_layer,notes
+bus_voltage_pu,pscad_to_matlab,39,Clean PSCAD Plant,MATLAB Protection Kernel,bus RMS voltage
+bus_frequency_Hz,pscad_to_matlab,39,Clean PSCAD Plant,MATLAB Protection Kernel,bus frequency
+line_current_A,pscad_to_matlab,46,Clean PSCAD Plant,MATLAB Protection Kernel,line current
+line_power_MW,pscad_to_matlab,46,Clean PSCAD Plant,MATLAB Protection Kernel,line active power
+line_loading_pu,pscad_to_matlab,46,PSCAD Interface Shell,MATLAB Protection Kernel,loading ratio after unit conversion
+line_online,pscad_to_matlab,46,PSCAD Interface Shell,MATLAB Protection Kernel,actual status feedback
+wind_pcc_voltage_pu,pscad_to_matlab,3,Clean PSCAD Plant,MATLAB Protection Kernel,wind PCC voltage
+wind_power_MW,pscad_to_matlab,3,Clean PSCAD Plant,MATLAB Protection Kernel,wind power
+wind_online,pscad_to_matlab,3,PSCAD Interface Shell,MATLAB Protection Kernel,actual wind breaker feedback
+gen_voltage_pu,pscad_to_matlab,10,Clean PSCAD Plant,MATLAB Protection Kernel,generator voltage
+gen_frequency_Hz,pscad_to_matlab,10,Clean PSCAD Plant,MATLAB Protection Kernel,generator frequency
+gen_online,pscad_to_matlab,10,PSCAD Interface Shell,MATLAB Protection Kernel,actual generator breaker feedback
+load_voltage_pu,pscad_to_matlab,19,Clean PSCAD Plant,MATLAB Protection Kernel,load-bus voltage
+load_frequency_Hz,pscad_to_matlab,19,Clean PSCAD Plant,MATLAB Protection Kernel,load-bus frequency
+load_online,pscad_to_matlab,19,PSCAD Interface Shell,MATLAB Protection Kernel,actual load-stage feedback
+line_trip_cmd,matlab_to_pscad,46,MATLAB Protection Kernel,PSCAD Interface Shell,line trip commands
+wind_disconnect_cmd,matlab_to_pscad,3,MATLAB Protection Kernel,PSCAD Interface Shell,wind outlet trip commands
+gen_trip_cmd,matlab_to_pscad,10,MATLAB Protection Kernel,PSCAD Interface Shell,generator trip commands
+load_shed_cmd,matlab_to_pscad,19,MATLAB Protection Kernel,PSCAD Interface Shell,load shedding commands
+load_shed_fraction,matlab_to_pscad,19,MATLAB Protection Kernel,PSCAD Interface Shell,cumulative load shed fraction
+tov_line_trip_cmd,matlab_to_pscad,46,MATLAB Protection Kernel,PSCAD Interface Shell,TOV-related line trip commands

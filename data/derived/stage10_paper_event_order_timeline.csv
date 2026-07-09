@@ -1,0 +1,11 @@
+event,stage4_time_s,stage4_status,stage9_time_s,stage9_status
+fault_start,0.5,observed,0.5,observed
+fault_clear,2.5,observed,2.5,observed
+DFIG_physical_breaker_transition,2.43,observed,,not_observed_or_not_applicable
+DFIG_source_availability_transition,2.43,observed,,not_observed_or_not_applicable
+DFIG_event_valid_transition,2.43,observed,,not_observed_or_not_applicable
+DFIG_first_event_timestamp,2.42521,observed,,not_observed_or_not_applicable
+E_28_29_1_first_threshold_crossing,,not_available_or_not_applicable,2.51,observed
+E_28_29_1_timer_start,,not_available_or_not_applicable,2.51,observed
+E_28_29_1_trip_request,,not_available_or_not_applicable,7.51,observed
+E_28_29_1_actual_breaker_open,,not_available_or_not_applicable,7.51,observed

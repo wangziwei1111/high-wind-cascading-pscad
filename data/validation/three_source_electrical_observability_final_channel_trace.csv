@@ -1,0 +1,10 @@
+new_output_channel,expected_signal,fortran_assignment,mapping_status,parameter_status
+CASCADE3_ELEC_DFIG_V,VIBR1_2,VIBR1_2,pass,pass
+CASCADE3_ELEC_DFIG_P,PIBR1_2,PIBR1_2,pass,pass
+CASCADE3_ELEC_DFIG_Q,QIBR1_2,QIBR1_2,pass,pass
+CASCADE3_ELEC_IBR2_V,VIBR2,VIBR2,pass,pass
+CASCADE3_ELEC_IBR2_P,PIBR2,PIBR2,pass,pass
+CASCADE3_ELEC_IBR2_Q,QIBR2,QIBR2,pass,pass
+CASCADE3_ELEC_IBR3_V,VIBR3,VIBR3,pass,pass
+CASCADE3_ELEC_IBR3_P,PIBR3,PIBR3,pass,pass
+CASCADE3_ELEC_IBR3_Q,QIBR3,QIBR3,pass,pass

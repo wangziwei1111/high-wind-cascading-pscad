@@ -1,0 +1,111 @@
+{
+  "audit_name": "stage10d_n29_endpoint_repair_and_dfig_trip_validation",
+  "generated_at_local": "2026-07-03T20:40:42+08:00",
+  "execution_status": "pass",
+  "root_cause": "E_26_29_1 B terminal compiled to isolated bus 19 instead of the N29 bus after the PAPER breaker insertion/layout change.",
+  "repair": "Placed an electrical Node Label named N29 on the E_26_29_1 B-side conductor; this is not a control Data Label.",
+  "compiled_topology": {
+    "pre_repair_E_26_29_1": [
+      {
+        "side": "A",
+        "compiled_bus": 17,
+        "phase_nodes": [
+          342,
+          343,
+          344
+        ]
+      },
+      {
+        "side": "B",
+        "compiled_bus": 19,
+        "phase_nodes": [
+          345,
+          346,
+          347
+        ]
+      }
+    ],
+    "post_repair_E_26_29_1": [
+      {
+        "side": "A",
+        "compiled_bus": 17,
+        "phase_nodes": [
+          339,
+          340,
+          341
+        ]
+      },
+      {
+        "side": "B",
+        "compiled_bus": 1,
+        "phase_nodes": [
+          342,
+          343,
+          344
+        ]
+      }
+    ],
+    "post_repair_E_28_29_1": [
+      {
+        "side": "A",
+        "compiled_bus": 18,
+        "phase_nodes": [
+          345,
+          346,
+          347
+        ]
+      },
+      {
+        "side": "B",
+        "compiled_bus": 1,
+        "phase_nodes": [
+          348,
+          349,
+          350
+        ]
+      }
+    ],
+    "paper_breaker_bypassed": false
+  },
+  "runtime": {
+    "duration_s": 3.0,
+    "sample_interval_s": 0.01,
+    "DFIG_voltage_pre_fault_mean_1_to_2_s": 0.865537512362194,
+    "DFIG_voltage_fault_window_min_2_to_2p5_s": 0.85649501214371,
+    "DFIG_voltage_fault_window_min_time_s": 2.44,
+    "event_timeline": [
+      {
+        "signal": "DFIG_LVRT_TRIP_CAUSE_DURATION_LATCH",
+        "first_assertion_after_1p5_s": 2.44,
+        "value_at_3_s": 1.0
+      },
+      {
+        "signal": "DFIG_LVRT_FINAL_BRK_CMD",
+        "first_assertion_after_1p5_s": 2.44,
+        "value_at_3_s": 1.0
+      },
+      {
+        "signal": "DFIG_LVRT_TRIP_CONFIRMED",
+        "first_assertion_after_1p5_s": 2.44,
+        "value_at_3_s": 1.0
+      },
+      {
+        "signal": "DFIG_BRK_STATE",
+        "first_assertion_after_1p5_s": 2.44,
+        "value_at_3_s": 2.0
+      }
+    ],
+    "stage4_reference_trip_time_s": 2.43,
+    "alignment_delta_s": 0.01
+  },
+  "claim_boundary": "The repair restores the compiled N29 endpoint and DFIG disconnection. The LVRT timer was already accumulating before 2.0 s, so this run does not prove that the 2.0 s fault alone caused the trip.",
+  "future_build_gate": "After any breaker insertion, endpoint move, or node-label edit, inspect generated P3.dta and require every affected TLine terminal to retain its intended compiled bus before authorizing a Run.",
+  "artifact_hashes": {
+    "trial_pscx_sha256": "C7C9E2D1B4DED92B8609116448D10201C88A18E12B3B86C41DAB36ADE8EC0E17",
+    "P3_dta_sha256": "E123A935C40CC605A3F6A33BFF34422A187EE84EE7DD5CA9546B0F3D1B8C3158",
+    "runtime_inf_sha256": "204C69013CAA034AF42206CED30D9629B60C4A77ABF68D65A02F93B1EF809756",
+    "pre_repair_P3_dta_sha256": "27795AB14C60CBE5DB4401C34D8979723AEE81B3F352C2BDB1396C3C21ABFB92"
+  },
+  "raw_model_and_runtime_files_committed": false,
+  "raw_artifact_policy": "Third-party PSCAD model and generated runtime files remain outside Git under the repository ignore policy; hashes, topology evidence, and derived validation are committed."
+}

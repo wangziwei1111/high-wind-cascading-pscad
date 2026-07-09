@@ -1,0 +1,6 @@
+item,status,detail
+structure_status,pass,single-source event packet and collector formulas
+control_path_isolation_status,pass,protected LVRT and BRK_DFIG path unchanged
+output_channel_status,pass,ten required cascade channels
+dynamic_behavior_status,unavailable,no new PSCAD Run
+multi_source_behavior_status,unavailable,no second or synthetic source constructed

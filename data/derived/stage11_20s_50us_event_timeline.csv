@@ -1,0 +1,8 @@
+order,event,time_s,source,status
+1,actual_fault_start,0.5,static_fault_configuration,frozen
+2,actual_fault_clear,2.5,static_fault_configuration,frozen
+3,DFIG_LVRT_physical_trip_and_breaker_open,2.44,DFIG_BRK_STATE,observed
+4,DFIG_source_available_lost,2.44,DFIG_LVRT_CASCADE_SOURCE_AVAILABLE,observed
+5,E_28_29_1_loading_index_exceeds_1p1,2.53,PAPER_OVL1_LOADING_INDEX_EQ,observed
+6,PAPER_OVL1_5s_timer_done,7.53,PAPER_OVL1_TIMER_OR_CURVE_STATE,observed
+7,PAPER_OVL1_trip_request_and_breaker_open,7.53,PAPER_OVL1_BRK_STATE,observed

@@ -1,0 +1,17 @@
+{
+  "audit_name": "stage15_clean_baseline_selection",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "selected_baseline_path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\_backups\\stage7_before_paper_calibrated_first_trip\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "selected_baseline_trial_sha": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "selection_reason": "Stage7 backup is the latest clean local trial with full-network TLine measurement preparation and no active PAPER_OVL1/PAPER_OVL2 relay.",
+  "why_not_stage12_or_stage13_trial": "Legacy Stage12/13 trial contains PAPER_OVL1/PAPER_OVL2, one-shot stimuli and legacy bus30 source/protection paths, so it is retained only as legacy_bus30_source_layout_protection_experiment.",
+  "existing_tline_observability_count": 31,
+  "existing_output_channel_count": "full-network TLine P/Q/I layer expected from Stage7 lineage; exact new trial count deferred to pre-run gate",
+  "active_PAPER_OVL1_count": 0,
+  "active_PAPER_OVL2_count": 0,
+  "bus30_source_state": "G_30_0_1_DYR definition present; no active instance in current canvas; restore by copying a same-class synchronous-generator instance shell and binding it to G_30_0_1_DYR, per user clarification.",
+  "bus33_source_state": "active synchronous generator G_33_0_1_DYR in baseline; to be replaced by WF33",
+  "bus35_source_state": "active synchronous generator G_35_0_1_DYR in baseline; to be replaced by WF35",
+  "bus38_source_state": "active synchronous generator G_38_0_1_DYR in baseline; to be replaced by WF38",
+  "baseline_go_no_go": "GO"
+}

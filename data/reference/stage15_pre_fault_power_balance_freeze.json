@@ -1,0 +1,43 @@
+{
+  "audit_name": "stage15_pre_fault_power_balance_freeze",
+  "generated_at_local": "2026-07-04T15:08:33+08:00",
+  "policy": "per_bus_replacement_equivalence",
+  "paper_interpretation_status": "paper_text_ambiguous__power_balance_preserving_proxy",
+  "total_original_replaced_P_MW": 2112.0,
+  "total_paper_reported_wind_P_MW": 2132.0,
+  "noted_difference_MW": 20.0,
+  "decision": "Use original per-bus P/Q to preserve pre-fault power balance; record paper WF38 850 MW as reported target evidence but do not inject unexplained +20 MW.",
+  "sources": {
+    "bus30": {
+      "definition": "G_30_0_1_DYR",
+      "P": 250.0,
+      "Q": 146.456,
+      "V": 1.0475,
+      "name": "Wang_30"
+    },
+    "WF33": {
+      "target_bus": 33,
+      "definition": "G_33_0_1_DYR",
+      "P": 632.0,
+      "Q": 123.3861,
+      "V": 0.9972,
+      "name": "Wang_33"
+    },
+    "WF35": {
+      "target_bus": 35,
+      "definition": "G_35_0_1_DYR",
+      "P": 650.0,
+      "Q": 225.0912,
+      "V": 1.0493,
+      "name": "Wang_35"
+    },
+    "WF38": {
+      "target_bus": 38,
+      "definition": "G_38_0_1_DYR",
+      "P": 830.0,
+      "Q": 41.0678,
+      "V": 1.0265,
+      "name": "Wang_38"
+    }
+  }
+}

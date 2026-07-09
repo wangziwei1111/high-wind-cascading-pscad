@@ -1,0 +1,1212 @@
+{
+  "active": {
+    "modified_time_ns": 1782697607827143500,
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+    "size_bytes": 3421306
+  },
+  "active_exact_match": true,
+  "audit_scope_note": "The audit compares raw bytes, parseable XML structure, component inventory/type/title/page, wire vertices, direct component parameters, Output Channels, critical objects, and metadata/display fields. Unknown differences remain unclassified by design.",
+  "backup": {
+    "modified_time_ns": 1782652854319770900,
+    "path": "C:\\pscad_work\\backups\\type3_lvrt_closed_loop_coverage_20260628_220356\\3IBR.pscx",
+    "sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+    "size_bytes": 3421312
+  },
+  "backup_exact_match": true,
+  "critical_object_scan": {
+    "active_matching_object_count": 83,
+    "backup_matching_object_count": 83,
+    "matching_object_keys_added": [],
+    "matching_object_keys_removed": []
+  },
+  "difference_count": 128,
+  "difference_counts_by_category": {
+    "functional_control_or_network_change": 0,
+    "nonfunctional_metadata_or_display_change": 128,
+    "test_parameter_change": 0,
+    "unclassified_difference": 0
+  },
+  "differences": [
+    {
+      "after": "24186, 1782697607",
+      "before": "24186, 1782652854",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:revisor",
+      "object_key": "project",
+      "object_type": "project",
+      "reason": "project revision/description metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_13_14_1:1226290901",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_14_15_1:1268246004",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_15_16_1:1855234595",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_16_17_1:1691657307",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_16_19_1:1567979376",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_16_21_1:94947983",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_16_24_1:925620323",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_17_18_1:292929691",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_17_27_1:891863633",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_1_2_1:918512717",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_1_39_1:299766081",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_21_22_1:2005893177",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_22_23_1:1782830709",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_23_24_1:1928481624",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_25_26_1:675891296",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_26_27_1:1146950725",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_26_28_1:1452225633",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_26_29_1:849456383",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695975",
+      "before": "1782651657",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_28_29_1:1201000566",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_2_25_1:1717732818",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_2_3_1:1149345105",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_3_18_1:1266788443",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_3_4_1:1179828083",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695977",
+      "before": "1782651658",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_4_14_1:563005147",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_4_5_1:456105455",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_5_8_1:1036950295",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_6_11_1:34535717",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_6_7_1:366741533",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695973",
+      "before": "1782651656",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_7_8_1:491908181",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_8_9_1:906627897",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695979",
+      "before": "1782651659",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "RowDefn:E_9_39_1:182316705",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695951",
+      "before": "1782651634",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "StationDefn:Station:1907181818",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695953",
+      "before": "1782651636",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:CurrentLimit_1_2_1_1:415888003",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_31_0_1_DYR:543694031",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_32_0_1_DYR:465665610",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_33_0_1_DYR:2096243536",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_34_0_1_DYR:416916709",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_35_0_1_DYR:437664173",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_36_0_1_DYR:804390380",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_37_0_1_DYR:1873958631",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_38_0_1_DYR:248800626",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:G_39_0_1_DYR:1957993466",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:IBR_AVM_2_1_1:772335225",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695951",
+      "before": "1782651634",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:Main:1222146573",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695951",
+      "before": "1782651634",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:P1:274950715",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695951",
+      "before": "1782651634",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:P2:1970432053",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651634",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:P3:99382095",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695953",
+      "before": "1782651636",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:REEC_A_1_2_1_1:1768776414",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695953",
+      "before": "1782651636",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:REGC_A_1_2_1_1:1376856178",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1782695952",
+      "before": "1782651635",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:date",
+      "object_key": "UserCmpDefn:REPC_A_1:1539350585",
+      "object_type": "definition",
+      "reason": "definition revision/view metadata changed"
+    },
+    {
+      "after": "1450",
+      "before": "1440",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1025846643",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1690",
+      "before": "1680",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1090750652",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1610",
+      "before": "1600",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1154924168",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1520",
+      "before": "1510",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1220231535",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1680",
+      "before": "1670",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1377154997",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1580",
+      "before": "1570",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1430029174",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1570",
+      "before": "1560",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1430717756",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1430",
+      "before": "1420",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1445655642",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1710",
+      "before": "1700",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1514932",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1500",
+      "before": "1490",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1562726451",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1660",
+      "before": "1650",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1700980851",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1510",
+      "before": "1500",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1752563448",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1490",
+      "before": "1480",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/1757271943",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1550",
+      "before": "1540",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/2018870442",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1760",
+      "before": "1750",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/202853855",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1440",
+      "before": "1430",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/202861579",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1750",
+      "before": "1740",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/2115405417",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1650",
+      "before": "1640",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/2147003001",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1420",
+      "before": "-1",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/229635092",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1460",
+      "before": "1450",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/2479722",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1700",
+      "before": "1690",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/268680300",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1530",
+      "before": "1520",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/269523901",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1620",
+      "before": "1610",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/432621999",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "328",
+      "before": "328.5",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4841",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "2.445",
+      "before": "2.448",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4841",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "507.6",
+      "before": "508.9",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4842",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "186.8",
+      "before": "187.2",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4842",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "526.4",
+      "before": "529.8",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4843",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "177.5",
+      "before": "178.6",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4843",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "236.3",
+      "before": "237.4",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4844",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "84.89",
+      "before": "85.3",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4844",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "323.5",
+      "before": "326.1",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4845",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "154.6",
+      "before": "155.9",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4845",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "332.4",
+      "before": "335.8",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4846",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "32.59",
+      "before": "32.92",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4846",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "287.3",
+      "before": "285.8",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4847",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "77.2",
+      "before": "76.78",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4847",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "143",
+      "before": "141.2",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4848",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "17.49",
+      "before": "17.26",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4848",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "212.6",
+      "before": "207.7",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4849",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "28.48",
+      "before": "27.82",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4849",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "292.7",
+      "before": "285",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4850",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "27.77",
+      "before": "27.03",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4850",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "232.1",
+      "before": "228.7",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4867",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "48.9",
+      "before": "48.19",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4867",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "160.6",
+      "before": "161.1",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4876",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "30.49",
+      "before": "30.58",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4876",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "625.3",
+      "before": "640.4",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4892",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "102.6",
+      "before": "105",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4892",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "275.9",
+      "before": "279.2",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4917",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "115.8",
+      "before": "117.1",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4917",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "247.5",
+      "before": "251.4",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4918",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "84.61",
+      "before": "85.9",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4918",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "311",
+      "before": "314.5",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4919",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "-93.08",
+      "before": "-93.92",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4919",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "7.603",
+      "before": "7.629",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4934",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "89.43",
+      "before": "89.48",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4934",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "9.449",
+      "before": "9.36",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4944",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "4.724",
+      "before": "4.679",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4944",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "1054",
+      "before": "1101",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Pdisplay",
+      "object_key": "P3/User/4956",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "238.7",
+      "before": "249.3",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Qdisplay",
+      "object_key": "P3/User/4956",
+      "object_type": "User",
+      "reason": "display, layout, description, or revision metadata changed"
+    },
+    {
+      "after": "1640",
+      "before": "1630",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/510286702",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1730",
+      "before": "1720",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/518740083",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "0.0002239",
+      "before": "0.001757",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:P",
+      "object_key": "P3/User/521858026",
+      "object_type": "User",
+      "reason": "saved breaker P/Q run-display value changed; circuit and command parameters are compared separately"
+    },
+    {
+      "after": "4.183e-005",
+      "before": "-0.0001204",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "parameter:Q",
+      "object_key": "P3/User/521858026",
+      "object_type": "User",
+      "reason": "saved breaker P/Q run-display value changed; circuit and command parameters are compared separately"
+    },
+    {
+      "after": "1720",
+      "before": "1710",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/52204636",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1470",
+      "before": "1460",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/617389359",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1780",
+      "before": "1770",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/624732065",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1670",
+      "before": "1660",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/660219171",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1560",
+      "before": "1550",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/676307009",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1480",
+      "before": "1470",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/690965932",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1770",
+      "before": "1760",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/779069803",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1740",
+      "before": "1730",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/814604080",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1630",
+      "before": "1620",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/855700634",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1540",
+      "before": "1530",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/932997196",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1590",
+      "before": "1580",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/943129517",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    },
+    {
+      "after": "1600",
+      "before": "1590",
+      "category": "nonfunctional_metadata_or_display_change",
+      "field": "attribute:z",
+      "object_key": "P3/User/98290045",
+      "object_type": "User",
+      "reason": "display stacking, layout, or revision metadata changed"
+    }
+  ],
+  "execution_status": "type3_lvrt_model_integrity_audit_complete",
+  "expected_active_sha256": "0FB0F7E3927C1E5863F0692F6223DCF8152987BAE99AB83134DF1955C2713F17",
+  "expected_backup_sha256": "DA4518483523C1BCAFF2A74AAC356B29B53F9642A8E9D7E9E44FCDA2E96F90E6",
+  "functional_equivalence": "proven_for_audited_structure_and_parameters",
+  "inventory": {
+    "active_component_count": 4583,
+    "active_duplicate_component_keys": [],
+    "active_output_channel_count": 185,
+    "active_wire_count": 1437,
+    "backup_component_count": 4583,
+    "backup_duplicate_component_keys": [],
+    "backup_output_channel_count": 185,
+    "backup_wire_count": 1437
+  },
+  "master_gain_65646757": {
+    "active_presence_count": 0,
+    "backup_presence_count": 0,
+    "conclusion": "absent_from_exact_task_start_backup_and_current_active_project"
+  },
+  "model_integrity_status": "model_integrity_nonfunctional_metadata_difference",
+  "output_channel_comparison": {
+    "titles_added": [],
+    "titles_removed": [],
+    "titles_with_parameter_changes": []
+  },
+  "raw_files_equal": false,
+  "xml_parse_error": null,
+  "xml_parse_status": "pass"
+}

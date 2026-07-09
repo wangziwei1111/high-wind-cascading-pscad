@@ -1,0 +1,46 @@
+{
+  "n29_label_count": 1,
+  "n29_labels": [
+    {
+      "param_path": "project[3IBR_DFIG1_TRIAL]/definitions[]/Definition[P3]/schematic[]/User[master:nodelabel]/paramlist[]/param[Name]",
+      "user": {
+        "classid": "UserCmp",
+        "name": "master:nodelabel",
+        "defn": "master:nodelabel",
+        "id": "4836",
+        "x": "3312",
+        "y": "162",
+        "w": "24",
+        "h": "21",
+        "z": "1",
+        "orient": "2",
+        "link": "-1",
+        "q": "4",
+        "disable": "false"
+      }
+    }
+  ],
+  "n29_adjacent_tlines": [
+    {
+      "tline": null,
+      "network_branch_id": "E_26_29_1",
+      "tline_instance_name": "E_26_29_1",
+      "terminal_a_node": "N26",
+      "terminal_b_node": "N29",
+      "component_id": "2124836834",
+      "inclusion_status": "included",
+      "paper_evidence_id": "E003;E012"
+    },
+    {
+      "tline": null,
+      "network_branch_id": "E_28_29_1",
+      "tline_instance_name": "E_28_29_1",
+      "terminal_a_node": "N28",
+      "terminal_b_node": "N29",
+      "component_id": "2062315490",
+      "inclusion_status": "included",
+      "paper_evidence_id": "E003;E012"
+    }
+  ],
+  "mapping_status": "structurally_aligned_adaptation"
+}

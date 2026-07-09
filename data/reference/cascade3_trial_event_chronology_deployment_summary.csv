@@ -1,0 +1,12 @@
+field,value
+execution_status,three_event_chronology_static_pass
+production_instance,CASCADE3_TRIAL__CHRONOLOGY_MONITOR
+module,THREE_EVENT_CHRONOLOGY_MONITOR
+page,P3
+source_A,TYPE3_DFIG_1
+source_B,IBR2_TRIAL
+source_C,IBR3_TRIAL
+new_output_channels,8
+output_channel_count,253
+build_errors,0
+run_performed,false

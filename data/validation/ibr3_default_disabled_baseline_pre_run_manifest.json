@@ -1,0 +1,46 @@
+{
+  "task": "IBR3_TRIAL default-disabled baseline dynamic validation",
+  "manifest_created_at": "2026-07-02T14:58:34.3601467+08:00",
+  "manual_run_expected": true,
+  "model_edit_allowed": false,
+  "required_default_disabled_state": {
+    "ibr2_test_enable": 0,
+    "ibr3_test_enable": 0,
+    "ibr3_open_time_s": 5.0,
+    "ibr3_event_packet_cause_code": 5
+  },
+  "protected_main_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+  },
+  "trial_project_pre_run": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "sha256": "C03DAA211B591923F533554C9951503096677BCF52547D13A10C4B431E69A349",
+    "output_channel_count": 253,
+    "simulation_timestep_s": 0.000005,
+    "channel_plot_step_s": 0.01
+  },
+  "previous_enabled_run": {
+    "summary": "data/validation/ibr3_trial_single_opening_run_summary.json",
+    "audit": "data/validation/ibr3_trial_single_opening_final_audit.json",
+    "run_id": "IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_RUN_20260702_114837",
+    "ibr3_test_enable": 1,
+    "ibr3_open_request_time_s": 5.0,
+    "ibr3_actual_open_time_s": 5.0,
+    "ibr3_event_valid_time_s": 5.0,
+    "cascade3_first_event_time_s": 2.01603,
+    "cascade3_second_event_time_s": 5.0
+  },
+  "backup": {
+    "directory": "C:\\pscad_work\\backups\\ibr3_default_disabled_baseline_run_20260702_145834",
+    "contains": [
+      "3IBR.pscx",
+      "3IBR_DFIG1_TRIAL.pscx"
+    ]
+  },
+  "result_capture": {
+    "result_directory": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+    "parser_anchor_time": "2026-07-02T14:58:34.3601467+08:00",
+    "strategy": "After the manual default-disabled Run, parse 3IBR_DFIG1_TRIAL.inf plus 3IBR_DFIG1_TRIAL_NN.out files; PSCAD writes 10 PGB channels per .out file with column 0 as time."
+  }
+}

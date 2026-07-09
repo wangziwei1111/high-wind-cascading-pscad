@@ -1,0 +1,58 @@
+{
+  "task": "IBR3_TRIAL single controlled opening dynamic validation",
+  "manifest_created_at": "2026-07-02T11:31:19.2452878+08:00",
+  "manual_run_expected": true,
+  "allowed_manual_change_before_run": {
+    "component": "master:const",
+    "id": "444774384",
+    "page_context": "P3",
+    "x": 720,
+    "y": 1782,
+    "old_value": "0",
+    "new_value": "1",
+    "purpose": "Temporarily enable only IBR3_TRIAL__OPEN_STIMULUS for exactly one PSCAD Run"
+  },
+  "required_restore_after_parse": {
+    "component": "master:const",
+    "id": "444774384",
+    "page_context": "P3",
+    "x": 720,
+    "y": 1782,
+    "restore_value": "0",
+    "required_post_restore_action": "Save and Build, no second Run"
+  },
+  "protected_main_project": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+    "sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+  },
+  "trial_project_pre_run": {
+    "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+    "sha256": "469103EF282C97CF7735D0E4BB8665A6D57FA453A6AA7F5BA86B5770951CDE92",
+    "output_channel_count": 253,
+    "simulation_duration_s": 5.0,
+    "simulation_timestep_s": 0.000005,
+    "plot_sample_step_s": 0.01
+  },
+  "isolation_checks": {
+    "ibr2_test_enable_constant": {
+      "id": "1778759091",
+      "value": "0",
+      "x": 252,
+      "y": 3042
+    },
+    "ibr3_open_time_s": 5.0,
+    "ibr3_event_packet_cause_code": 5
+  },
+  "backup": {
+    "directory": "C:\\pscad_work\\backups\\ibr3_single_opening_dynamic_run_20260702_113119",
+    "contains": [
+      "3IBR.pscx",
+      "3IBR_DFIG1_TRIAL.pscx"
+    ]
+  },
+  "result_capture": {
+    "result_directory": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+    "parser_anchor_time": "2026-07-02T11:31:19.2452878+08:00",
+    "strategy": "After the manual Run, parse files in the result directory whose LastWriteTime is newer than this manifest timestamp; prefer PSCAD Output Channel mapping files if emitted."
+  }
+}

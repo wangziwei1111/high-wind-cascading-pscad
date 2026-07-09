@@ -1,0 +1,11 @@
+{
+  "audit_name": "stage15_generator_bus_mapping_audit",
+  "status": "pass",
+  "row_count": 3,
+  "required_windfarms": [
+    "WF33",
+    "WF35",
+    "WF38"
+  ],
+  "mapping_file": "C:\\Users\\24186\\Documents\\动态模型\\data\\reference\\stage15_wf33_35_38_replacement_map.csv"
+}

@@ -1,0 +1,27 @@
+{
+  "decision": "no_defensible_electrical_difference_found",
+  "root_cause": "not_resolved_no_permitted_fault_to_dfig_interface_difference",
+  "single_allowed_electrical_change": null,
+  "why_blocked": "XML geometry suggested a gap, but generated P3.dta disproves an electrical disconnection. No single non-intended interface difference remains that can be corrected without unsupported parameter/topology changes.",
+  "project_setting_change": null,
+  "build_then_stop": false,
+  "run_authorized": false,
+  "next_evidence_required": [
+    "Stage-4 versus Stage-9 compiled nodal/admittance comparison around N29/DFIG PCC including breaker closed conductance",
+    "initial-condition/power-flow state comparison before 0.5 s",
+    "proof of a specific non-intended external DFIG PCC interface difference before any model edit"
+  ],
+  "frozen_items": [
+    "fault parameters",
+    "DFIG LVRT 0.9/0.2 and delay",
+    "BRK_DFIG",
+    "event packet",
+    "E_28_29_1 capacity 7.872883989661206",
+    "threshold 1.1",
+    "delay 5.0 s",
+    "PAPER relay and breaker parameters",
+    "TLine parameters",
+    "Output Channels",
+    "plot step"
+  ]
+}

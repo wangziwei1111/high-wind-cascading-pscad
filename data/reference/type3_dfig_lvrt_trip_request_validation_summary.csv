@@ -1,0 +1,3 @@
+scenario_id,stage,status,errors,warnings,messages,notes
+stage_a_build,current_trip_request_monitoring,pass,0,8,12,"Build passes after removing floating TRIP_LATCH placeholder; TALLOW/DURATION/TRIP_REQUEST audit passed."
+stage_b_run,current_trip_request_monitoring,fail,5,1,11,"EMTDC runtime abnormal termination; five-scenario validation unavailable."

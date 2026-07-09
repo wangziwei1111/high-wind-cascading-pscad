@@ -1,0 +1,194 @@
+{
+  "audit_name": "stage12_pre_run_gate",
+  "generated_at_local": "2026-07-03T22:12:30+08:00",
+  "execution_status": "stage12_pre_run_gate_pass",
+  "selected_tline_id": "E_26_29_1",
+  "main_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha256": "74EB2656E6F65106F519F1F1D85492CBF6960008588835F219D8F88B27C483CE",
+  "P3_dta_sha256": "1D9666092ACA638FDC79B66E0F56569A3507EFAAE196A73364DBC2A307753441",
+  "P3_map_sha256": "7D3846574739FF7429BDFA462ABE7692FE85FBD04B739062428D35DCD2546F73",
+  "inf_sha256": null,
+  "gates": [
+    {
+      "gate": "build_artifacts_exist",
+      "passed": true,
+      "detail": {
+        "P3.dta": true,
+        "P3.f": true,
+        "runtime_inf_optional_pre_run": false,
+        "map": true
+      }
+    },
+    {
+      "gate": "main_sha_unchanged",
+      "passed": true,
+      "detail": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB"
+    },
+    {
+      "gate": "solution_time_step_50us",
+      "passed": true,
+      "detail": "50"
+    },
+    {
+      "gate": "plot_step_0p01s",
+      "passed": true,
+      "detail": "10000"
+    },
+    {
+      "gate": "run_duration_20s",
+      "passed": true,
+      "detail": "20"
+    },
+    {
+      "gate": "n29_fault_unchanged",
+      "passed": true,
+      "detail": {
+        "TF": "0.5",
+        "DF": "2"
+      }
+    },
+    {
+      "gate": "dfig_lvrt_chain_present",
+      "passed": true,
+      "detail": "DFIG LVRT tokens"
+    },
+    {
+      "gate": "E_28_29_endpoint_still_bus_1",
+      "passed": true,
+      "detail": [
+        {
+          "side": "A",
+          "compiled_bus": 18,
+          "phase_nodes": [
+            348,
+            349,
+            350
+          ]
+        },
+        {
+          "side": "B",
+          "compiled_bus": 1,
+          "phase_nodes": [
+            351,
+            352,
+            353
+          ]
+        }
+      ]
+    },
+    {
+      "gate": "E_26_29_N29_endpoint_still_bus_1",
+      "passed": true,
+      "detail": [
+        {
+          "side": "A",
+          "compiled_bus": 17,
+          "phase_nodes": [
+            339,
+            340,
+            341
+          ]
+        },
+        {
+          "side": "B",
+          "compiled_bus": 1,
+          "phase_nodes": [
+            342,
+            343,
+            344
+          ]
+        }
+      ]
+    },
+    {
+      "gate": "selected_tline_endpoints_preserved",
+      "passed": true,
+      "detail": {
+        "before": [
+          {
+            "side": "A",
+            "compiled_bus": 17,
+            "phase_nodes": [
+              339,
+              340,
+              341
+            ]
+          },
+          {
+            "side": "B",
+            "compiled_bus": 1,
+            "phase_nodes": [
+              342,
+              343,
+              344
+            ]
+          }
+        ],
+        "after": [
+          {
+            "side": "A",
+            "compiled_bus": 17,
+            "phase_nodes": [
+              339,
+              340,
+              341
+            ]
+          },
+          {
+            "side": "B",
+            "compiled_bus": 1,
+            "phase_nodes": [
+              342,
+              343,
+              344
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gate": "PAPER_OVL2_breaker_present",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "gate": "PAPER_OVL2_command_only_and_no_forbidden_driver",
+      "passed": true,
+      "detail": {
+        "compiled_endpoint_buses_preserved": true,
+        "no_isolated_bus": true,
+        "breaker_present": true,
+        "breaker_command_only": true,
+        "forbidden_driver_hits": [],
+        "passed": true
+      }
+    },
+    {
+      "gate": "existing_stage11_channels_preserved",
+      "passed": true,
+      "detail": "key existing XML Output Channels"
+    },
+    {
+      "gate": "PAPER_OVL2_channels_unique_registered",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "gate": "PAPER_CHAIN_model_monitor_waived_offline_parser_required",
+      "passed": true,
+      "detail": {
+        "waiver": "PAPER_CHAIN_MODEL_MONITOR_WAIVED",
+        "reason": "User approved replacing the in-model PAPER_CHAIN chronology monitor with mandatory offline chronology parsing after the single Run. This monitor is observational only and does not participate in breaker control.",
+        "offline_parser_required": true
+      }
+    }
+  ],
+  "failed_gates": [],
+  "waivers": [
+    {
+      "waiver": "PAPER_CHAIN_MODEL_MONITOR_WAIVED",
+      "reason": "User approved replacing the in-model PAPER_CHAIN chronology monitor with mandatory offline chronology parsing after the single Run. This monitor is observational only and does not participate in breaker control.",
+      "offline_parser_required": true
+    }
+  ]
+}

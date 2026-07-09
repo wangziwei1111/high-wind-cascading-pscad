@@ -1,0 +1,427 @@
+{
+  "stage": "stage9",
+  "source": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.dta",
+  "scope": "N29/N28/E_28_29_1 and inserted-breaker local compiled nodes; DFIG PCC exact node not recoverable by name from available DTA",
+  "nodes": [
+    {
+      "index": 46,
+      "name": "N29(1)",
+      "evidence_line": 58
+    },
+    {
+      "index": 47,
+      "name": "N29(2)",
+      "evidence_line": 59
+    },
+    {
+      "index": 48,
+      "name": "N29(3)",
+      "evidence_line": 60
+    },
+    {
+      "index": 70,
+      "name": "N26(1)",
+      "evidence_line": 82
+    },
+    {
+      "index": 71,
+      "name": "N26(2)",
+      "evidence_line": 83
+    },
+    {
+      "index": 72,
+      "name": "N26(3)",
+      "evidence_line": 84
+    },
+    {
+      "index": 73,
+      "name": "N28(1)",
+      "evidence_line": 85
+    },
+    {
+      "index": 74,
+      "name": "N28(2)",
+      "evidence_line": 86
+    },
+    {
+      "index": 75,
+      "name": "N28(3)",
+      "evidence_line": 87
+    },
+    {
+      "index": 76,
+      "name": "NT_6(1)",
+      "evidence_line": 88
+    },
+    {
+      "index": 77,
+      "name": "NT_6(2)",
+      "evidence_line": 89
+    },
+    {
+      "index": 78,
+      "name": "NT_6(3)",
+      "evidence_line": 90
+    },
+    {
+      "index": 339,
+      "name": "NT_79(1)",
+      "evidence_line": 351
+    },
+    {
+      "index": 340,
+      "name": "NT_79(2)",
+      "evidence_line": 352
+    },
+    {
+      "index": 341,
+      "name": "NT_79(3)",
+      "evidence_line": 353
+    },
+    {
+      "index": 342,
+      "name": "NT_80(1)",
+      "evidence_line": 354
+    },
+    {
+      "index": 343,
+      "name": "NT_80(2)",
+      "evidence_line": 355
+    },
+    {
+      "index": 344,
+      "name": "NT_80(3)",
+      "evidence_line": 356
+    },
+    {
+      "index": 345,
+      "name": "NT_81(1)",
+      "evidence_line": 357
+    },
+    {
+      "index": 346,
+      "name": "NT_81(2)",
+      "evidence_line": 358
+    },
+    {
+      "index": 347,
+      "name": "NT_81(3)",
+      "evidence_line": 359
+    },
+    {
+      "index": 348,
+      "name": "NT_82(1)",
+      "evidence_line": 360
+    },
+    {
+      "index": 349,
+      "name": "NT_82(2)",
+      "evidence_line": 361
+    },
+    {
+      "index": 350,
+      "name": "NT_82(3)",
+      "evidence_line": 362
+    },
+    {
+      "index": 351,
+      "name": "NT_83(1)",
+      "evidence_line": 363
+    },
+    {
+      "index": 352,
+      "name": "NT_83(2)",
+      "evidence_line": 364
+    },
+    {
+      "index": 353,
+      "name": "NT_83(3)",
+      "evidence_line": 365
+    },
+    {
+      "index": 354,
+      "name": "NT_84(1)",
+      "evidence_line": 366
+    },
+    {
+      "index": 355,
+      "name": "NT_84(2)",
+      "evidence_line": 367
+    },
+    {
+      "index": 356,
+      "name": "NT_84(3)",
+      "evidence_line": 368
+    }
+  ],
+  "branches": [
+    {
+      "from_node": 48,
+      "to_node": 356,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(3) NT_84(3)",
+      "evidence_line": 375
+    },
+    {
+      "from_node": 46,
+      "to_node": 47,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(1)   N29(2)",
+      "evidence_line": 376
+    },
+    {
+      "from_node": 47,
+      "to_node": 48,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(2)   N29(3)",
+      "evidence_line": 377
+    },
+    {
+      "from_node": 48,
+      "to_node": 46,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(3)   N29(1)",
+      "evidence_line": 378
+    },
+    {
+      "from_node": 46,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(1)      GND",
+      "evidence_line": 379
+    },
+    {
+      "from_node": 47,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(2)      GND",
+      "evidence_line": 380
+    },
+    {
+      "from_node": 48,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(3)      GND",
+      "evidence_line": 381
+    },
+    {
+      "from_node": 351,
+      "to_node": 354,
+      "stamp": "A",
+      "value": null,
+      "comment": "1 NT_83(1) NT_84(1)",
+      "evidence_line": 382
+    },
+    {
+      "from_node": 352,
+      "to_node": 355,
+      "stamp": "A",
+      "value": null,
+      "comment": "1 NT_83(2) NT_84(2)",
+      "evidence_line": 383
+    },
+    {
+      "from_node": 353,
+      "to_node": 356,
+      "stamp": "A",
+      "value": null,
+      "comment": "1 NT_83(3) NT_84(3)",
+      "evidence_line": 384
+    },
+    {
+      "from_node": 46,
+      "to_node": 354,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(1) NT_84(1)",
+      "evidence_line": 385
+    },
+    {
+      "from_node": 47,
+      "to_node": 355,
+      "stamp": "RS",
+      "value": 1000000.0,
+      "comment": "1   N29(2) NT_84(2)",
+      "evidence_line": 386
+    },
+    {
+      "from_node": 70,
+      "to_node": 342,
+      "stamp": "A",
+      "value": null,
+      "comment": "17   N26(1) NT_80(1)",
+      "evidence_line": 714
+    },
+    {
+      "from_node": 71,
+      "to_node": 343,
+      "stamp": "A",
+      "value": null,
+      "comment": "17   N26(2) NT_80(2)",
+      "evidence_line": 715
+    },
+    {
+      "from_node": 72,
+      "to_node": 344,
+      "stamp": "A",
+      "value": null,
+      "comment": "17   N26(3) NT_80(3)",
+      "evidence_line": 716
+    },
+    {
+      "from_node": 73,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(1)      GND",
+      "evidence_line": 717
+    },
+    {
+      "from_node": 73,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(1)      GND",
+      "evidence_line": 718
+    },
+    {
+      "from_node": 73,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(1)      GND",
+      "evidence_line": 719
+    },
+    {
+      "from_node": 74,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(2)      GND",
+      "evidence_line": 720
+    },
+    {
+      "from_node": 74,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(2)      GND",
+      "evidence_line": 721
+    },
+    {
+      "from_node": 74,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(2)      GND",
+      "evidence_line": 722
+    },
+    {
+      "from_node": 75,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(3)      GND",
+      "evidence_line": 723
+    },
+    {
+      "from_node": 75,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(3)      GND",
+      "evidence_line": 724
+    },
+    {
+      "from_node": 75,
+      "to_node": 0,
+      "stamp": "RS",
+      "value": 1.0,
+      "comment": "18   N28(3)      GND",
+      "evidence_line": 725
+    },
+    {
+      "from_node": 339,
+      "to_node": 73,
+      "stamp": "A",
+      "value": null,
+      "comment": "18 NT_79(1)   N28(1)",
+      "evidence_line": 726
+    },
+    {
+      "from_node": 340,
+      "to_node": 74,
+      "stamp": "A",
+      "value": null,
+      "comment": "18 NT_79(2)   N28(2)",
+      "evidence_line": 727
+    },
+    {
+      "from_node": 341,
+      "to_node": 75,
+      "stamp": "A",
+      "value": null,
+      "comment": "18 NT_79(3)   N28(3)",
+      "evidence_line": 728
+    },
+    {
+      "from_node": 73,
+      "to_node": 348,
+      "stamp": "A",
+      "value": null,
+      "comment": "18   N28(1) NT_82(1)",
+      "evidence_line": 729
+    },
+    {
+      "from_node": 74,
+      "to_node": 349,
+      "stamp": "A",
+      "value": null,
+      "comment": "18   N28(2) NT_82(2)",
+      "evidence_line": 730
+    },
+    {
+      "from_node": 75,
+      "to_node": 350,
+      "stamp": "A",
+      "value": null,
+      "comment": "18   N28(3) NT_82(3)",
+      "evidence_line": 731
+    },
+    {
+      "from_node": 345,
+      "to_node": 76,
+      "stamp": "A",
+      "value": null,
+      "comment": "19 NT_81(1)  NT_6(1)",
+      "evidence_line": 741
+    },
+    {
+      "from_node": 346,
+      "to_node": 77,
+      "stamp": "A",
+      "value": null,
+      "comment": "19 NT_81(2)  NT_6(2)",
+      "evidence_line": 742
+    },
+    {
+      "from_node": 347,
+      "to_node": 78,
+      "stamp": "A",
+      "value": null,
+      "comment": "19 NT_81(3)  NT_6(3)",
+      "evidence_line": 743
+    }
+  ],
+  "generated_code_evidence": {
+    "BRK_DFIG": "EMTDC_BREAKER1 RON=0.001 ROFF=1e6, identical Stage4/Stage9, component id 521858026",
+    "PAPER_OVL1": "Stage9 only; EMTDC_BREAKER1 RON=0.001 ROFF=1e6, component id 1559497398"
+  }
+}

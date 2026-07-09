@@ -1,0 +1,290 @@
+{
+  "audit_name": "stage8_pre_run_output_gate",
+  "generated_at_local": "2026-07-03T15:44:35",
+  "execution_status": "pre_run_gate_pass",
+  "git_head": "b25d6cddd42e8bad9bd0673118fda28f831d1cac",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_after_gui_repair_and_build": "1AA180E4B8C784B3BAE14453261672783B21B87EA157C56DB26649F98E78992F",
+  "frozen_selected_line": "E_28_29_1",
+  "frozen_effective_capacity_pu": 7.872883989661206,
+  "frozen_threshold_multiplier": 1.1,
+  "frozen_delay_s": 5.0,
+  "gates": {
+    "git_head_contains_stage7_start": true,
+    "main_project_sha_unchanged": true,
+    "p3_f_exists_after_build": true,
+    "project_map_exists_after_build": true,
+    "p3_dta_exists_after_build": true,
+    "all_13_xml_titles_unique": true,
+    "all_13_generated_pgb_titles_present": true,
+    "above_threshold_component_repaired": true,
+    "relay_enable_component_preserved": true,
+    "paper_ovl1_frozen_line_present": true,
+    "breaker_command_present": true
+  },
+  "canonical_output_gate": [
+    {
+      "canonical_title": "PAPER_OVL1_S_A_PU",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_S_A_PU",
+      "runtime_expressions": "PAPER_OVL1_S_A_PU;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_S_B_PU",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_S_B_PU",
+      "runtime_expressions": "PAPER_OVL1_S_B_PU;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_S_MAX_PU",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_S_MAX_PU",
+      "runtime_expressions": "PAPER_OVL1_S_MAX_PU;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "runtime_expressions": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "runtime_expressions": "PAPER_OVL1_LOADING_INDEX_EQ;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "runtime_expressions": "PAPER_OVL1_ABOVE_THRESHOLD;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "runtime_expressions": "PAPER_OVL1_TIMER_OR_CURVE_STATE;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_TRIP_REQUEST",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_BRK_CMD",
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_BRK_CMD",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_BRK_CMD",
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_BRK_STATE",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_BRK_STATE",
+      "runtime_expressions": "REAL(PAPER_OVL1_BRK_STATE);",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_TRIP_EVENT_VALID",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_BRK_CMD",
+      "runtime_expressions": "PAPER_OVL1_BRK_CMD;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "runtime_expressions": "PAPER_OVL1_FIRST_TRIP_TIME_S;",
+      "status": "pass"
+    },
+    {
+      "canonical_title": "PAPER_OVL1_RELAY_ENABLE",
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "source_labels": "PAPER_OVL1_RELAY_ENABLE",
+      "runtime_expressions": "PAPER_OVL1_RELAY_ENABLE;",
+      "status": "pass"
+    }
+  ],
+  "component_trace": [
+    {
+      "output_channel_component_id": 276503031,
+      "output_channel_title": "PAPER_OVL1_S_A_PU",
+      "source_label_left_of_channel": "PAPER_OVL1_S_A_PU",
+      "x": 2916,
+      "y": 1800,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_S_A_PU",
+      "p3_f_line": 3980,
+      "pgb_offset": 183
+    },
+    {
+      "output_channel_component_id": 583951920,
+      "output_channel_title": "PAPER_OVL1_TRIP_REQUEST",
+      "source_label_left_of_channel": "PAPER_OVL1_BRK_CMD",
+      "x": 3168,
+      "y": 1800,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_BRK_CMD",
+      "p3_f_line": 3972,
+      "pgb_offset": 181
+    },
+    {
+      "output_channel_component_id": 559449024,
+      "output_channel_title": "PAPER_OVL1_S_B_PU",
+      "source_label_left_of_channel": "PAPER_OVL1_S_B_PU",
+      "x": 2916,
+      "y": 1836,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_S_B_PU",
+      "p3_f_line": 3964,
+      "pgb_offset": 179
+    },
+    {
+      "output_channel_component_id": 2020374361,
+      "output_channel_title": "PAPER_OVL1_BRK_CMD",
+      "source_label_left_of_channel": "PAPER_OVL1_BRK_CMD",
+      "x": 3168,
+      "y": 1836,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_BRK_CMD",
+      "p3_f_line": 3960,
+      "pgb_offset": 178
+    },
+    {
+      "output_channel_component_id": 1942972843,
+      "output_channel_title": "PAPER_OVL1_S_MAX_PU",
+      "source_label_left_of_channel": "PAPER_OVL1_S_MAX_PU",
+      "x": 2916,
+      "y": 1872,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_S_MAX_PU",
+      "p3_f_line": 3956,
+      "pgb_offset": 177
+    },
+    {
+      "output_channel_component_id": 1795345233,
+      "output_channel_title": "PAPER_OVL1_BRK_STATE",
+      "source_label_left_of_channel": "PAPER_OVL1_BRK_STATE",
+      "x": 3168,
+      "y": 1872,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "REAL(PAPER_OVL1_BRK_STATE)",
+      "p3_f_line": 3944,
+      "pgb_offset": 174
+    },
+    {
+      "output_channel_component_id": 648704178,
+      "output_channel_title": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "source_label_left_of_channel": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "x": 2916,
+      "y": 1908,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_EFFECTIVE_CAPACITY_PU",
+      "p3_f_line": 3929,
+      "pgb_offset": 173
+    },
+    {
+      "output_channel_component_id": 361356124,
+      "output_channel_title": "PAPER_OVL1_TRIP_EVENT_VALID",
+      "source_label_left_of_channel": "PAPER_OVL1_BRK_CMD",
+      "x": 3168,
+      "y": 1908,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_BRK_CMD",
+      "p3_f_line": 3925,
+      "pgb_offset": 172
+    },
+    {
+      "output_channel_component_id": 881595112,
+      "output_channel_title": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "source_label_left_of_channel": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "x": 2916,
+      "y": 1944,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_LOADING_INDEX_EQ",
+      "p3_f_line": 3917,
+      "pgb_offset": 170
+    },
+    {
+      "output_channel_component_id": 978165500,
+      "output_channel_title": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "source_label_left_of_channel": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "x": 3168,
+      "y": 1944,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_FIRST_TRIP_TIME_S",
+      "p3_f_line": 3913,
+      "pgb_offset": 169
+    },
+    {
+      "output_channel_component_id": 518433536,
+      "output_channel_title": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "source_label_left_of_channel": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "x": 2916,
+      "y": 1980,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_ABOVE_THRESHOLD",
+      "p3_f_line": 3909,
+      "pgb_offset": 168
+    },
+    {
+      "output_channel_component_id": 865554842,
+      "output_channel_title": "PAPER_OVL1_RELAY_ENABLE",
+      "source_label_left_of_channel": "PAPER_OVL1_RELAY_ENABLE",
+      "x": 3168,
+      "y": 1980,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_RELAY_ENABLE",
+      "p3_f_line": 2443,
+      "pgb_offset": 92
+    },
+    {
+      "output_channel_component_id": 892667363,
+      "output_channel_title": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "source_label_left_of_channel": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "x": 2916,
+      "y": 2016,
+      "xml_title_count": 1,
+      "p3_f_title_count": 2,
+      "p3_f_runtime_expression": "PAPER_OVL1_TIMER_OR_CURVE_STATE",
+      "p3_f_line": 3901,
+      "pgb_offset": 166
+    }
+  ],
+  "run_authorization": "RUN_ALLOWED_ONCE"
+}

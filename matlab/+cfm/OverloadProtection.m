@@ -8,7 +8,7 @@ arguments
     state struct = struct()
 end
 settings = cfm.defaultStruct(settings, struct( ...
-    'pickup', 1.0, 'anchorRatio', 1.1, 'anchorDelay_s', 5.0, ...
+    'pickup', 1.1, 'anchorRatio', 1.1, 'anchorDelay_s', 5.0, ...
     'curveExponent', 1.0, 'instantaneousRatio', 2.0, 'ids', []));
 n = numel(loadRatio);
 if ~isfield(state, 'timer_s'), state.timer_s = zeros(n,1); end
@@ -21,7 +21,7 @@ for k = 1:n
         state.timer_s(k) = 0;
         continue
     end
-    if loadRatio(k) <= settings.pickup
+    if loadRatio(k) < settings.pickup
         state.timer_s(k) = 0;
         continue
     end
@@ -29,7 +29,9 @@ for k = 1:n
     if loadRatio(k) >= settings.instantaneousRatio
         delay = 0;
     else
-        delay = settings.anchorDelay_s * ((settings.anchorRatio - settings.pickup) / max(loadRatio(k) - settings.pickup, eps)) ^ settings.curveExponent;
+        margin = max(loadRatio(k) - settings.pickup, eps);
+        referenceMargin = max(settings.anchorRatio - settings.pickup, 0.01);
+        delay = settings.anchorDelay_s * (referenceMargin / margin) ^ settings.curveExponent;
     end
     if state.timer_s(k) >= delay
         trip(k) = true;
@@ -38,4 +40,3 @@ for k = 1:n
     end
 end
 end
-

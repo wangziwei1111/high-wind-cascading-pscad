@@ -1,0 +1,37 @@
+{
+  "registry_path": "data/reference/paper_reproduction_evidence_registry.csv",
+  "gates": {
+    "E009": {
+      "present": true,
+      "has_section": true,
+      "has_pages": true,
+      "has_anchor": true,
+      "claim": "Generators at buses 33, 35 and 38 are replaced by equal-output wind farms; 85 bus-fault/line-outage initial conditions are run for 20 s.",
+      "quote_or_paraphrase": "33、35、38母线上火电机组由相同出力的风电场模型所替代"
+    },
+    "E010": {
+      "present": true,
+      "has_section": true,
+      "has_pages": true,
+      "has_anchor": true,
+      "claim": "At 0.50 s a 2 s three-phase fault near bus 29 is followed by wind trip, UFLS, sequential overloaded-line openings, further wind trip, and generator protection.",
+      "quote_or_paraphrase": "母线29近区发生三相短路故障，故障持续时间2.0s"
+    },
+    "E017": {
+      "present": true,
+      "has_section": true,
+      "has_pages": true,
+      "has_anchor": true,
+      "claim": "The baseline initial fault is located near bus 29.",
+      "quote_or_paraphrase": "母线29近区发生三相短路故障"
+    },
+    "E018": {
+      "present": true,
+      "has_section": true,
+      "has_pages": true,
+      "has_anchor": true,
+      "claim": "The baseline fault begins at 0.50 s and lasts 2.0 s.",
+      "quote_or_paraphrase": "故障持续时间2.0s"
+    }
+  }
+}

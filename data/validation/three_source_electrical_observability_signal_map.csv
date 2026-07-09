@@ -1,0 +1,10 @@
+source_key,source_id,metric,new_output_channel,connect_to_existing_signal,units,scale,min,max,transfer_data,multiple_run_save,use_signal_name_as_title,scope
+A_DFIG,DFIG_LVRT,voltage,CASCADE3_ELEC_DFIG_V,VIBR1_2,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+A_DFIG,DFIG_LVRT,active_power,CASCADE3_ELEC_DFIG_P,PIBR1_2,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+A_DFIG,DFIG_LVRT,reactive_power,CASCADE3_ELEC_DFIG_Q,QIBR1_2,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+B_IBR2,IBR2_TRIAL,voltage,CASCADE3_ELEC_IBR2_V,VIBR2,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+B_IBR2,IBR2_TRIAL,active_power,CASCADE3_ELEC_IBR2_P,PIBR2,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+B_IBR2,IBR2_TRIAL,reactive_power,CASCADE3_ELEC_IBR2_Q,QIBR2,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+C_IBR3,IBR3_TRIAL,voltage,CASCADE3_ELEC_IBR3_V,VIBR3,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+C_IBR3,IBR3_TRIAL,active_power,CASCADE3_ELEC_IBR3_P,PIBR3,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable
+C_IBR3,IBR3_TRIAL,reactive_power,CASCADE3_ELEC_IBR3_Q,QIBR3,,1.0,-2.0,2.0,Yes,No,No,monitor_only_existing_vpq_observable

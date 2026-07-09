@@ -1,0 +1,89 @@
+{
+  "audit_name": "stage10c_compiled_network_initial_state_final_audit",
+  "generated_at_local": "2026-07-03T18:59:33",
+  "execution_status": "stage10c_read_only_audit_corrected_RON_candidate_quantified",
+  "compiled_network_comparison_status": "local_N29_E28_and_breaker_graph_reconstructed_DFIG_PCC_end_to_end_partial",
+  "local_admittance_comparison_status": "E_28_29_positive_sequence_and_RON_quantified_full_N29_to_DFIG_Y_unavailable",
+  "pre_fault_initial_state_comparison_status": "material_E_28_29_prefault_flow_difference_correlated_with_unique_PAPER_closed_state_candidate",
+  "fault_voltage_transfer_comparison_status": "material_VIBR_difference_confirmed_N29_voltage_unobservable",
+  "difference_class": "B_intended_PAPER_OVL1_closed_state_difference_quantified_but_not_proven_causal",
+  "specific_difference_id": "D01",
+  "specific_difference_description": "PAPER_OVL1 breaker RON=0.001 ohm is the only scoped compiled closed-state addition. With E_28_29_1 RXB specified per metre and length 0.001 m, RON equals about 60.0% of line R and 5.54% of |Z|, increasing |Z| about 0.663%.",
+  "evidence_strength": "high for quantity, uniqueness within scoped physical diffs, and pre-fault flow correlation; insufficient to prove sole causality for meshed-network flow and DFIG fault-voltage changes",
+  "model_change_allowed": false,
+  "allowed_minimal_change_scope": null,
+  "forbidden_change_scope": [
+    "fault",
+    "LVRT",
+    "BRK_DFIG",
+    "RON without separate numerical/causal authorization",
+    "E_28_29_1 capacity/threshold/delay/relay/breaker topology",
+    "wiring",
+    "timed or synthetic events"
+  ],
+  "whether_build_or_run_is_justified_next": false,
+  "recommended_next_step": "Obtain PSCAD breaker minimum-RON/numerical-stability evidence and an offline compiled-network sensitivity or equivalent calculation showing whether reducing only PAPER RON can restore Stage4 closed-state behavior while preserving switching. Do not edit or Run yet.",
+  "paper_sequence_implication": "Stage9 remains a validated line-first-trip protection subchain, not a DFIG-before-line-trip paper-like chain.",
+  "claim_boundary": "No PNNL thermal-rating, protection-setting, coordination, second-trip, natural-cascade, or strict-paper-reproduction claim.",
+  "analysis_mode": "zero_GUI_zero_Build_zero_Run_zero_model_change",
+  "branch": "codex/lvrt-trip-request-progress",
+  "main_sha": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "stage4_trial_sha": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "stage9_trial_sha": "F2A3C1012D8261805C03F688CCC2E8BFBCE68A80D1ACC352CAFA666B149744A0",
+  "map_availability": {
+    "stage4_P3_map": false,
+    "stage9_P3_map": false
+  },
+  "RON_audit": {
+    "RON_ohm": 0.001,
+    "TLine_data_format": "RXB p.u./m",
+    "line_length_m": 0.001,
+    "E_28_29_R_pu_per_m": 0.0014,
+    "E_28_29_X_pu_per_m": 0.0151,
+    "Zbase_345kV_100MVA_ohm": 1190.25,
+    "line_R_ohm": 0.0016663499999999998,
+    "line_X_ohm": 0.017972775,
+    "line_magnitude_ohm": 0.018049857714761215,
+    "line_plus_RON_magnitude_ohm": 0.018169481652571297,
+    "RON_over_line_R": 0.6001140216641163,
+    "RON_over_line_magnitude": 0.05540209877567056,
+    "line_magnitude_relative_increase_with_RON": 0.006627417218488807,
+    "conclusion": "RON is 60.0% of reconstructed line R and 5.54% of line |Z|; it increases |Z| by about 0.663%. It is the only quantified closed-state initialization candidate and its direction is consistent with weaker N29 coupling, but available evidence does not prove it alone caused the 51%-52% flow shift or VIBR change."
+  },
+  "pre_fault_comparable_signal_count": 23,
+  "fault_transfer": [
+    {
+      "run": "stage4",
+      "fault_start_s": 0.5,
+      "fault_clear_s": 2.5,
+      "N29_voltage_status": "runtime_unavailable",
+      "VIBR1_2_min": 0.85254967423946,
+      "VIBR1_2_mean": 0.8639348132370043,
+      "VIBR1_2_below_0p9_cumulative_s": 1.99,
+      "PIBR1_2_mean": 151.14705227843325,
+      "QIBR1_2_mean": -16.567846449657086,
+      "DFIG_duration_trigger_s": 2.43,
+      "DFIG_breaker_open_s": 2.43,
+      "DFIG_availability_lost_s": 2.43
+    },
+    {
+      "run": "stage9",
+      "fault_start_s": 0.5,
+      "fault_clear_s": 2.5,
+      "N29_voltage_status": "runtime_unavailable",
+      "VIBR1_2_min": 0.91051071893218,
+      "VIBR1_2_mean": 0.9400020004365336,
+      "VIBR1_2_below_0p9_cumulative_s": 0,
+      "PIBR1_2_mean": 157.88412054274127,
+      "QIBR1_2_mean": 56.18691653381278,
+      "DFIG_duration_trigger_s": null,
+      "DFIG_breaker_open_s": null,
+      "DFIG_availability_lost_s": null
+    }
+  ],
+  "N29_runtime_voltage_status": "unavailable; DFIG PCC and adjacent branch signals only",
+  "paper_mechanism": {
+    "validated": "N29 fault -> real-flow E_28_29_1 relay -> 5 s timer -> physical line opening",
+    "not_validated": "N29 fault -> physical DFIG LVRT disconnect/source loss -> first line trip"
+  }
+}

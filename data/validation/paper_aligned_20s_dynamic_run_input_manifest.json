@@ -1,0 +1,2233 @@
+{
+  "manifest_name": "paper_aligned_20s_dynamic_run_input_manifest",
+  "generated_at_local": "2026-07-03T01:03:14",
+  "main_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR.pscx",
+  "trial_pscx": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.pscx",
+  "gf46_dir": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+  "main_sha_before_run": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+  "trial_sha_before_run": "F81959EA62211FF9C1536C8481B67675AFE4DDCC3C56E804D048731A4B88A300",
+  "run_output_directory": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46",
+  "expected_output_filename_pattern": [
+    "3IBR_DFIG1_TRIAL_*.out",
+    "3IBR_DFIG1_TRIAL.inf",
+    "3IBR_DFIG1_TRIAL.out",
+    "*.out",
+    "*.inf"
+  ],
+  "existing_output_file_inventory": [
+    {
+      "name": "E_13_14_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_13_14_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "0691E875B261DE5E9AA53B86C00DADA43C1123D83605F5CB79300CF861C1D8C9"
+    },
+    {
+      "name": "E_14_15_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_14_15_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "49CFAC2A51685135A8ACFC180817EB8F4188F8E32B304A6DD2E8E9D8C8DFCDD4"
+    },
+    {
+      "name": "E_15_16_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_15_16_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "3E952B6B812618E4FF3EF84203B66F55C98A5B143417512FCD31A1FCE0E69946"
+    },
+    {
+      "name": "E_16_17_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_17_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "CCAFAA1BE0B4E8BF5D27ABB1D3A2ED5A94F9241064C05C3672535A107DEE64DD"
+    },
+    {
+      "name": "E_16_19_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_19_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "89F78CFB8BD38E2D7F57059D0533E04FEC2B782BC39B3B06CFA8DA282F549C00"
+    },
+    {
+      "name": "E_16_21_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_21_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "E7A8B6EF3EAD1F530C35F7244FE4C1869ABA70201C2900BCC75BACF94EB744FD"
+    },
+    {
+      "name": "E_16_24_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_24_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "F707D13EF203870DB881C6AA16FEF445FC0FB720A32F77D6795B52B36027CE68"
+    },
+    {
+      "name": "E_17_18_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_18_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "9BB7F7F4E6FB47DE6CFBA900F5112FAF97BA27928EC449A1C8B08FAA46225C2F"
+    },
+    {
+      "name": "E_17_27_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_27_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "52A08515EA41B6F0B2356CE2A095B645ABE0A948B64A61EA96DBE3887BC6A99E"
+    },
+    {
+      "name": "E_1_2_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_2_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "6FE35A9FC2D75314BE0BFC68F4DA79FCBB7A22EDC6C2B5DCF2F97008386A82F5"
+    },
+    {
+      "name": "E_1_39_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_39_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "7367C6EF166187BC638D07B224EB6EE0331A54C91DE5FFE28EB1985E73C55AC0"
+    },
+    {
+      "name": "E_21_22_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_21_22_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "FD5F554ED7DF866907013C97706E6B16E8603AB73E267B13B05371366DDDACDC"
+    },
+    {
+      "name": "E_22_23_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_22_23_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "14CF46DD5E3A15CE9ED03132AB55D95FB66C33C31F155AFD61D960160CB901C5"
+    },
+    {
+      "name": "E_23_24_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_23_24_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "E2636F008AD01C6C7FEE7189F2AD7113D1B267200DAA2CF2D3A1B70808B87E08"
+    },
+    {
+      "name": "E_25_26_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_25_26_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "6D03FD39026A581D0F096FA931DD6543BD29E872D0E88789B87EE1EDC9FF7704"
+    },
+    {
+      "name": "E_26_27_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_27_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "866A26DD84720AC601633A83559C4A6D3EB51EB897F8E8967606E619C291BB23"
+    },
+    {
+      "name": "E_26_28_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_28_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "C60CDF54C2B8D8851D0D3394032F409794CEAD01C904B4B6EAF6A8F4ACDC97EB"
+    },
+    {
+      "name": "E_26_29_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_29_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "6A590AF56A7AE30C348B03827463E80D47CA7D54C62A9882C7BE18C1105088E1"
+    },
+    {
+      "name": "E_28_29_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_28_29_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "A7ED765F59EB84E85455315BB51357AE984FD5308280612B5C826C708A5972CB"
+    },
+    {
+      "name": "E_2_25_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_25_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "CBE45509A7C6126A6C75CFBF86F2BDA4F0800C2674C1D1C3D07D32ECF9E82E88"
+    },
+    {
+      "name": "E_2_3_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_3_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "256EA2DAF74B57A6A4EF364136461408264C8609783CAB784FA56428D54E8507"
+    },
+    {
+      "name": "E_3_18_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_18_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "8795333DD679E97C6D4B4C0915FE99571AF130B101B6AE906DF08F1B6D7798A9"
+    },
+    {
+      "name": "E_3_4_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_4_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "DA43736B0C430C5636EFDE732F79D52D0B3EED0D946E68B2D7BA4332D8E281A2"
+    },
+    {
+      "name": "E_4_14_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_14_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "219EE241518DB8F251DD979157A943C20307ECFC85C2DD92CA9D2CE652D07E2A"
+    },
+    {
+      "name": "E_4_5_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_5_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "F47B563C35A4C9ECC82F3EC71FE4F029C63313FC281A3774661F8810F43C384F"
+    },
+    {
+      "name": "E_5_8_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_5_8_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "656DAF9AC87248A2DA27F9D8CF5AD0400FF0DAB63D40821E19DA50DC89FAD06E"
+    },
+    {
+      "name": "E_6_11_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_11_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "492A76841A5F80DA015D20E995479E4D6DD0DF64C8D6EA40305428E0CAB36F68"
+    },
+    {
+      "name": "E_6_7_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_7_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "8CE904B64F5ED375D4513C0FD667056330A9A181B7C41AE5EFCE857BA2B84BA5"
+    },
+    {
+      "name": "E_7_8_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_7_8_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "77240D6DCE9D551D76D0FFC6630AF08E51EEC63FFCF742A6B1254A741BFCFA42"
+    },
+    {
+      "name": "E_8_9_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_8_9_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "61C8E619E4D8A250778C4C5B3EFE8670D5A8AF3EA357D1B21CF171522B586909"
+    },
+    {
+      "name": "E_9_39_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_9_39_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "10482008DF0557060782BB87C43A30FBD94C47B622A2FCD42ED8F7EDFD06B32E"
+    }
+  ],
+  "existing_generated_file_inventory": [
+    {
+      "name": "3IBR_DFIG1_TRIAL.exe",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.exe",
+      "suffix": ".exe",
+      "length": 6917768,
+      "mtime_local": "2026-07-03T00:48:51",
+      "sha256": "73F51E3170F385A04839697C83177EECC34FC675997F0A53FD39E61BCE716248"
+    },
+    {
+      "name": "3IBR_DFIG1_TRIAL.mak",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.mak",
+      "suffix": ".mak",
+      "length": 6070,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "675786538C35F74C66868DFC37453F74414E942C24D94159103208C99DD704DB"
+    },
+    {
+      "name": "3IBR_DFIG1_TRIAL.mak.bat",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.mak.bat",
+      "suffix": ".bat",
+      "length": 179,
+      "mtime_local": "2026-07-03T00:48:28",
+      "sha256": "FB9A5FD1C161455D74360C10DAD5FA7510CF79EFA8969C53D711DB82D575C535"
+    },
+    {
+      "name": "3IBR_DFIG1_TRIAL.map",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\3IBR_DFIG1_TRIAL.map",
+      "suffix": ".map",
+      "length": 77506,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "C34446EA1390196FE3FDC051F93B766097414211D45DAFC2D123D93D524F92F8"
+    },
+    {
+      "name": "BREAKER_STATE_ADAPTER.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\BREAKER_STATE_ADAPTER.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "BREAKER_STATE_ADAPTER.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\BREAKER_STATE_ADAPTER.f",
+      "suffix": ".f",
+      "length": 10592,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "B5AFA8DEE9E16AC2E5EC6B90D9CD29FBF7E3FC9457E879C3AC9CA2F155B199CA"
+    },
+    {
+      "name": "BREAKER_STATE_ADAPTER.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\BREAKER_STATE_ADAPTER.o",
+      "suffix": ".o",
+      "length": 4390,
+      "mtime_local": "2026-07-03T00:48:31",
+      "sha256": "79E303E37F9BCCF4F324DDB6B6694E828AC5A1D971D321C8C86D10598EB8786A"
+    },
+    {
+      "name": "CASCADE_CONTROL_MODULE_LIBRARY.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\CASCADE_CONTROL_MODULE_LIBRARY.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "CASCADE_CONTROL_MODULE_LIBRARY.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\CASCADE_CONTROL_MODULE_LIBRARY.f",
+      "suffix": ".f",
+      "length": 8534,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "6E673ABE8677319461250EE8329F5C81BBB9C6C0CF6AD3E1C062F840E777DFC8"
+    },
+    {
+      "name": "CASCADE_CONTROL_MODULE_LIBRARY.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\CASCADE_CONTROL_MODULE_LIBRARY.o",
+      "suffix": ".o",
+      "length": 3412,
+      "mtime_local": "2026-07-03T00:48:30",
+      "sha256": "376A238B8FBB97404B63B0E82A1DA3B5EE13F486A58B89BDCCCAA46201A43EDA"
+    },
+    {
+      "name": "Chopper.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Chopper.dta",
+      "suffix": ".dta",
+      "length": 1087,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "DC858533C7EEEBEC04A77C266AFCAC80D4F16C047A4DE156E475934B14EE48CE"
+    },
+    {
+      "name": "Chopper.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Chopper.f",
+      "suffix": ".f",
+      "length": 12219,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "64F57C3C1D09142F4DBE9C6631D62FE5DBAE4F80618B1D5E4E98FA68C8B8F691"
+    },
+    {
+      "name": "Chopper.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Chopper.o",
+      "suffix": ".o",
+      "length": 6321,
+      "mtime_local": "2026-07-03T00:48:51",
+      "sha256": "5A032084F75C7C1C2D37BD4272820A050EF1ED20AD48BD7ACBBBC2C278B3C9B6"
+    },
+    {
+      "name": "ConvBridge_Avg.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\ConvBridge_Avg.dta",
+      "suffix": ".dta",
+      "length": 2939,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "732D4D0FB27FFB7F5A5DEECA92239BF5C8FD4A146FA5ED7C976CE25774F1E3C9"
+    },
+    {
+      "name": "ConvBridge_Avg.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\ConvBridge_Avg.f",
+      "suffix": ".f",
+      "length": 26356,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "462D99B9A31B29475469FBBAED8840DE6994EE35843718AC44CE64D015C46E28"
+    },
+    {
+      "name": "ConvBridge_Avg.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\ConvBridge_Avg.o",
+      "suffix": ".o",
+      "length": 20883,
+      "mtime_local": "2026-07-03T00:48:51",
+      "sha256": "92C1E1DF7F84D5961D61865F51C8533BCFE787E32CE3BF50D2BF7863B9603844"
+    },
+    {
+      "name": "Crowbar_prot.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Crowbar_prot.dta",
+      "suffix": ".dta",
+      "length": 2558,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "B46C4333D19F161DC98AABB670295DFF4ECBE83F0EFA6056910B276DC08BD297"
+    },
+    {
+      "name": "Crowbar_prot.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Crowbar_prot.f",
+      "suffix": ".f",
+      "length": 21654,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "3B2A543049C085E0B054B7DF89485C78024767BB8468858A657FBBC2555D1B73"
+    },
+    {
+      "name": "Crowbar_prot.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Crowbar_prot.o",
+      "suffix": ".o",
+      "length": 13562,
+      "mtime_local": "2026-07-03T00:48:50",
+      "sha256": "8B936BF1F80C263C5D6D8E0BCF229D7346794B53DE93B4C7E820E2DA2780E08A"
+    },
+    {
+      "name": "CurrentLimit_1_2_1_1.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\CurrentLimit_1_2_1_1.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "CurrentLimit_1_2_1_1.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\CurrentLimit_1_2_1_1.f",
+      "suffix": ".f",
+      "length": 14114,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "D4A4460D778808B914F25B10978F9714715231FD8BD68A2E93EC3698A4196EE2"
+    },
+    {
+      "name": "CurrentLimit_1_2_1_1.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\CurrentLimit_1_2_1_1.o",
+      "suffix": ".o",
+      "length": 7667,
+      "mtime_local": "2026-07-03T00:48:43",
+      "sha256": "75D73B9282FB8A2F335A959123D60E006864C9E869CCE374D3679B878B2921FA"
+    },
+    {
+      "name": "DFIG_Converters_Avg.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\DFIG_Converters_Avg.dta",
+      "suffix": ".dta",
+      "length": 2524,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "040CF7AB546332FB25B2728AADDAD58C8178071F84FF3F11172007DABE23651B"
+    },
+    {
+      "name": "DFIG_Converters_Avg.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\DFIG_Converters_Avg.f",
+      "suffix": ".f",
+      "length": 42212,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "37F357DE57F5408C023C9253F3F0FB3A7BBBA26916B4333880B4BAF48BA81323"
+    },
+    {
+      "name": "DFIG_Converters_Avg.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\DFIG_Converters_Avg.o",
+      "suffix": ".o",
+      "length": 30432,
+      "mtime_local": "2026-07-03T00:48:47",
+      "sha256": "71A6F02939885D1D0D447E7A4F64560ABB5179468A10F3F91CFC99B2D14805EF"
+    },
+    {
+      "name": "E_13_14_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_13_14_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "DCE4260BF06B544E8B4339ED0BE71D30465BC206188F24BD345714D6E2551D0A"
+    },
+    {
+      "name": "E_13_14_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_13_14_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "0691E875B261DE5E9AA53B86C00DADA43C1123D83605F5CB79300CF861C1D8C9"
+    },
+    {
+      "name": "E_13_14_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_13_14_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "54A214444F56D79D9B93E91B86A0B812E0F6BA47D5814387D8B06555853459B1"
+    },
+    {
+      "name": "E_13_14_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_13_14_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "7E33E1F20592BF4F6CC79B2AFF89FFFC4785515CFC142EAB2A18431A84ECF76A"
+    },
+    {
+      "name": "E_14_15_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_14_15_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "EBF5087896B849A3CCC13E50285FB84A28D156F3D74492DE18E52D46002A095B"
+    },
+    {
+      "name": "E_14_15_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_14_15_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "49CFAC2A51685135A8ACFC180817EB8F4188F8E32B304A6DD2E8E9D8C8DFCDD4"
+    },
+    {
+      "name": "E_14_15_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_14_15_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "ECB2F9902D78D9FAE3464CE41314972D67C581B74A21B2EFF856974A7E322253"
+    },
+    {
+      "name": "E_14_15_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_14_15_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "89C667DCBD645DEFCBB0A13540FCE915663969AFBE1107B448C9E1D636D31722"
+    },
+    {
+      "name": "E_15_16_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_15_16_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "7C85EB00E4214B16A90B52F042F79D06E80B464B015A7988292B279226382D1C"
+    },
+    {
+      "name": "E_15_16_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_15_16_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "3E952B6B812618E4FF3EF84203B66F55C98A5B143417512FCD31A1FCE0E69946"
+    },
+    {
+      "name": "E_15_16_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_15_16_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "46D0A4C40462140BC7686EDCDE26582E0E36922576A020837E6B2ABEAB5D914D"
+    },
+    {
+      "name": "E_15_16_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_15_16_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "8F3100F865C2BA86AD19A30787E22DC88CB1E8B319180061F482AA5518EFDE63"
+    },
+    {
+      "name": "E_16_17_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_17_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "5A49AC6AAE6FED6BA9F8B843C06A60F5E1A7D15E8430AD0F81F4E765A8DF951B"
+    },
+    {
+      "name": "E_16_17_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_17_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "CCAFAA1BE0B4E8BF5D27ABB1D3A2ED5A94F9241064C05C3672535A107DEE64DD"
+    },
+    {
+      "name": "E_16_17_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_17_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "CC17522C51FAA017EE8774DD880ADB7812B396519B79FB6D4B0C21F4B4298C6D"
+    },
+    {
+      "name": "E_16_17_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_17_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "3E9D2BF679CC15AB8F0EA456579C7BFF5FCE3D760BFE538D81CFD1781C575295"
+    },
+    {
+      "name": "E_16_19_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_19_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "7AA2B95EF9D34295C724F8C71492EB995397FF6B41DDFD2FA03C14A4E13968FB"
+    },
+    {
+      "name": "E_16_19_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_19_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "89F78CFB8BD38E2D7F57059D0533E04FEC2B782BC39B3B06CFA8DA282F549C00"
+    },
+    {
+      "name": "E_16_19_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_19_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "5D88A48865B71C59DDDA6201DA47069584902C0AF44B8C5E5FD96363FCB2898C"
+    },
+    {
+      "name": "E_16_19_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_19_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "7A3DB9605F3C7C848BFD3CADAC52D89FCD04741264C2A5DE4F60E4613B25788F"
+    },
+    {
+      "name": "E_16_21_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_21_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "71841EB36DA65197F6BCD7C0581B0237FB7E3C41E4396E8956DE8BF14A6D995A"
+    },
+    {
+      "name": "E_16_21_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_21_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "E7A8B6EF3EAD1F530C35F7244FE4C1869ABA70201C2900BCC75BACF94EB744FD"
+    },
+    {
+      "name": "E_16_21_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_21_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "4782D06D3AFD189746522D194C67245ECD12B11646CBCFC47D0186D51547C8E4"
+    },
+    {
+      "name": "E_16_21_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_21_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "24805CFD7D25D137A231332BB27481F6116CD6E103A35108B2EE80DC2BCBC78A"
+    },
+    {
+      "name": "E_16_24_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_24_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "E36DF485268D1A03E4C266D99067145800E7D2541694A93FED46A7FC55568CD4"
+    },
+    {
+      "name": "E_16_24_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_24_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "F707D13EF203870DB881C6AA16FEF445FC0FB720A32F77D6795B52B36027CE68"
+    },
+    {
+      "name": "E_16_24_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_24_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "56CB817FCB2EF3A9FFF6869FF457B7B124A39C3EE78A13C191B21C8E6CE7FCA9"
+    },
+    {
+      "name": "E_16_24_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_16_24_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "09635C36DDC695A0D1CA7A23E70F3B2FEC64196BD922099A39147A569E94F242"
+    },
+    {
+      "name": "E_17_18_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_18_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "E1C5981A5D02B03AB9B802AAEED0164CE251DD1D264AA4B92E2A83B76518B5F1"
+    },
+    {
+      "name": "E_17_18_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_18_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "9BB7F7F4E6FB47DE6CFBA900F5112FAF97BA27928EC449A1C8B08FAA46225C2F"
+    },
+    {
+      "name": "E_17_18_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_18_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "EA48AF7C4D63C392EEF64F5B2D4E6243861F55EA57B5D6CC288F3891597CD4B7"
+    },
+    {
+      "name": "E_17_18_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_18_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "C227F942AFCD6C6B75765B40AFD798041A12F732C9E8464D7B1B72AF2554B331"
+    },
+    {
+      "name": "E_17_27_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_27_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "6B8700198EFF25C676BCF02CAB9227464FE609667364B47CDB25C7024951CDA1"
+    },
+    {
+      "name": "E_17_27_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_27_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "52A08515EA41B6F0B2356CE2A095B645ABE0A948B64A61EA96DBE3887BC6A99E"
+    },
+    {
+      "name": "E_17_27_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_27_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "71E6D780F199F1E2D9E2A247460FAC0DE67EB2FBC0BAA38B4B4CA7B7D9C52F00"
+    },
+    {
+      "name": "E_17_27_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_17_27_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "18CFE1CD0A62EE1BE292CB75B967AAB2B9ED97E8970199CCAFCDA9E1902E444E"
+    },
+    {
+      "name": "E_1_2_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_2_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "9DC578085B0983BA785EB5496B5694D0C09BE45993C890AA5C5DC43AE4A1913C"
+    },
+    {
+      "name": "E_1_2_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_2_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "6FE35A9FC2D75314BE0BFC68F4DA79FCBB7A22EDC6C2B5DCF2F97008386A82F5"
+    },
+    {
+      "name": "E_1_2_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_2_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "ECD586C20729674F2328202A162A40C288D86286C3737EADB18C7ED65927E020"
+    },
+    {
+      "name": "E_1_2_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_2_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "AB0DF7F4996131FD14411CEC6635D45EDED40BCD8B4A4C07F521FE4F0A0F2016"
+    },
+    {
+      "name": "E_1_39_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_39_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "0F5FEDE1A48DCF128388719CB8D25984284F2AFC76321DEBE58DFE96D226669A"
+    },
+    {
+      "name": "E_1_39_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_39_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "7367C6EF166187BC638D07B224EB6EE0331A54C91DE5FFE28EB1985E73C55AC0"
+    },
+    {
+      "name": "E_1_39_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_39_1.tli",
+      "suffix": ".tli",
+      "length": 871,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "1BB9EB8B796E6758F844AA503C7EDC0104943CA2BB4C29C9890EA6B930523287"
+    },
+    {
+      "name": "E_1_39_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_1_39_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "3BFB5A166C41660A7467B5EB9A689950A4F4EAD709EFBF4220A8C42D7766B3E9"
+    },
+    {
+      "name": "E_21_22_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_21_22_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "F9C15DD1867EE45B2106741643BC0DFD1E75D1058974601B3538847B7182162E"
+    },
+    {
+      "name": "E_21_22_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_21_22_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "FD5F554ED7DF866907013C97706E6B16E8603AB73E267B13B05371366DDDACDC"
+    },
+    {
+      "name": "E_21_22_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_21_22_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "DA5A1EFCD9C345D7EF5CEE083A4DAADBF636947DD89F612F41CCA1515FA12DA5"
+    },
+    {
+      "name": "E_21_22_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_21_22_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "8F6F720CD34552E7D59A3B812A304F60DB709A262D17D4372732074DFE353A6F"
+    },
+    {
+      "name": "E_22_23_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_22_23_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "990CCAC2FF5E0F1BF140BD6BBC206F1A69C1E464B1ED428A616D5DA829FCFC03"
+    },
+    {
+      "name": "E_22_23_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_22_23_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "14CF46DD5E3A15CE9ED03132AB55D95FB66C33C31F155AFD61D960160CB901C5"
+    },
+    {
+      "name": "E_22_23_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_22_23_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "2BA8ADE3CC1F74BAD4102C3DFDF3E5774F14220D9A7F852DCDC1141D314C7AF6"
+    },
+    {
+      "name": "E_22_23_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_22_23_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "9859E48A374035FA44AF6D050BFEB4C115D06DD79C0DC0B93BC3C0040DAB0CA3"
+    },
+    {
+      "name": "E_23_24_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_23_24_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "9CB1F3FAF7259466BED5601F3F939692CB93BC6E57ED0DE635ED193D7713CF4D"
+    },
+    {
+      "name": "E_23_24_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_23_24_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "E2636F008AD01C6C7FEE7189F2AD7113D1B267200DAA2CF2D3A1B70808B87E08"
+    },
+    {
+      "name": "E_23_24_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_23_24_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "445F21EBF067FE981C5B8D2F5F949FCAAC5A152587A3BB045B2A415F99A4B4FF"
+    },
+    {
+      "name": "E_23_24_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_23_24_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "DD216F3A9B4A6E0DCE8B8D07AC98E74EBF516883A8E1F6585712CAA25B68C760"
+    },
+    {
+      "name": "E_25_26_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_25_26_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "FB7C5F7D535C02DBCB4F37A29099EB2C98F4653016166A8CB6FB2E5393C5AB37"
+    },
+    {
+      "name": "E_25_26_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_25_26_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "6D03FD39026A581D0F096FA931DD6543BD29E872D0E88789B87EE1EDC9FF7704"
+    },
+    {
+      "name": "E_25_26_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_25_26_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "27EF4CB5559DA76EE34F78794754C90B59FB5644D05B6D1792CFA7FCFED9A3C4"
+    },
+    {
+      "name": "E_25_26_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_25_26_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "0C5B33BABACEA9F78B9DD1E1254B4F71CBEB6FB8314501911B826249B4CD2771"
+    },
+    {
+      "name": "E_26_27_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_27_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "45EF725C1F733D10F49AE2FB0D39C6229D67E1341CCA310B802F695FAA869A4D"
+    },
+    {
+      "name": "E_26_27_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_27_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "866A26DD84720AC601633A83559C4A6D3EB51EB897F8E8967606E619C291BB23"
+    },
+    {
+      "name": "E_26_27_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_27_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "2CEACD715BEC4EC00614474E7A9DBD2705A8417AE1C212CE0988EFD69115C27E"
+    },
+    {
+      "name": "E_26_27_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_27_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "019C3264D299AA0B067B056EEA9C4D52E1D49A41392F799330DC6A00C8263BAE"
+    },
+    {
+      "name": "E_26_28_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_28_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "3210213C0832164652ACADEEB83FBFFDB78E9E2809B04A75EF016864B0EBDBF3"
+    },
+    {
+      "name": "E_26_28_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_28_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "C60CDF54C2B8D8851D0D3394032F409794CEAD01C904B4B6EAF6A8F4ACDC97EB"
+    },
+    {
+      "name": "E_26_28_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_28_1.tli",
+      "suffix": ".tli",
+      "length": 876,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "8D22546C2C4745E2502F8C3524B8D599D938D30BC7C580A4D5755228CEF4B6F4"
+    },
+    {
+      "name": "E_26_28_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_28_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "E1ECC68EB2857C9613207706D970735C623662246B482E800C3DA0627E7A1D94"
+    },
+    {
+      "name": "E_26_29_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_29_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "D350A42EC8049F3853E4EAF4FA85DC2F6CF6FF824316A4B49F39A2BF925A2023"
+    },
+    {
+      "name": "E_26_29_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_29_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "6A590AF56A7AE30C348B03827463E80D47CA7D54C62A9882C7BE18C1105088E1"
+    },
+    {
+      "name": "E_26_29_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_29_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "67F96B9D389B12CC02F6F51773A162102FC8899B7CDA9108E2D2D9B102ACAB24"
+    },
+    {
+      "name": "E_26_29_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_26_29_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "97C594464857CF5CFFBF64AF283388CAAD0F1C123AFE5851F44FDCE19D2A74DA"
+    },
+    {
+      "name": "E_28_29_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_28_29_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "30C00211942CD9026085E3D0F971E99A3DF491FE417EF3C63B0A4D68FF1FE764"
+    },
+    {
+      "name": "E_28_29_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_28_29_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "A7ED765F59EB84E85455315BB51357AE984FD5308280612B5C826C708A5972CB"
+    },
+    {
+      "name": "E_28_29_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_28_29_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "30D819BE174B572FA46A34B79C2916F7F688D5910D79F6848D954E72A373FA38"
+    },
+    {
+      "name": "E_28_29_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_28_29_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "07274498DAE3A23D6F4C944936CD8ADCF982D8A4FC2237432800259E797DF134"
+    },
+    {
+      "name": "E_2_25_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_25_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "EA8F39C8FF09AA2365ED251A7FEBC2454AB10FA614338C81C3518D2E3248B036"
+    },
+    {
+      "name": "E_2_25_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_25_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "CBE45509A7C6126A6C75CFBF86F2BDA4F0800C2674C1D1C3D07D32ECF9E82E88"
+    },
+    {
+      "name": "E_2_25_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_25_1.tli",
+      "suffix": ".tli",
+      "length": 873,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "05AE7C0D7F07F44B00C336C7716686BDB2D5E019D9D4D7481EA87FBEEC4ED285"
+    },
+    {
+      "name": "E_2_25_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_25_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "31204A1261F86E2E3AD5936693FBDFF7610B928746DE908B286ECFCE4C3E47D6"
+    },
+    {
+      "name": "E_2_3_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_3_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "25649181B29D3C33CE78CB0BFA084603EADA21D655CCF5B5D17A6469EAC76A6D"
+    },
+    {
+      "name": "E_2_3_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_3_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "256EA2DAF74B57A6A4EF364136461408264C8609783CAB784FA56428D54E8507"
+    },
+    {
+      "name": "E_2_3_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_3_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "A8558A6D8D459E0507D3DAD98AD06900E3E1E2FBF278467C1998857F6E046CFA"
+    },
+    {
+      "name": "E_2_3_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_2_3_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "6816FDCCC34DB8A0B0AFA7CEDFD00EAE20A49E0123D53242CF7E9528D9EE49BC"
+    },
+    {
+      "name": "E_3_18_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_18_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "EAAD0FFA7935CC77442E3AEAE6B52E9F3E8EC723679DA05935EE27B5AC064EEB"
+    },
+    {
+      "name": "E_3_18_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_18_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "8795333DD679E97C6D4B4C0915FE99571AF130B101B6AE906DF08F1B6D7798A9"
+    },
+    {
+      "name": "E_3_18_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_18_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "8F8533502DFD868FE9F08EB71A4F9865831471A01B76CF7B522D3C7630402BD6"
+    },
+    {
+      "name": "E_3_18_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_18_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "EDBE954E1ACAE86C51260CB65046AB895CAA4CAA03127AC5CA85E30C1EB130DF"
+    },
+    {
+      "name": "E_3_4_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_4_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "FE5C0C7EA27F380E7F558D618049C0C3518BB170E59FF93E6450A0E74AFFF8CA"
+    },
+    {
+      "name": "E_3_4_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_4_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "DA43736B0C430C5636EFDE732F79D52D0B3EED0D946E68B2D7BA4332D8E281A2"
+    },
+    {
+      "name": "E_3_4_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_4_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "1908363553E3510B3D9574D8AAB3E7D69A40331182711CC1657858765580B62B"
+    },
+    {
+      "name": "E_3_4_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_3_4_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "ABE68782A6395F9D9196A3AF3FA56B6BB5AEA25BCA81DD496065ADA58E59C316"
+    },
+    {
+      "name": "E_4_14_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_14_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "2814F23F88D9C0ECFAA6A97C7B718D319D0A5C47A702F814010DA1CD440E08D8"
+    },
+    {
+      "name": "E_4_14_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_14_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "219EE241518DB8F251DD979157A943C20307ECFC85C2DD92CA9D2CE652D07E2A"
+    },
+    {
+      "name": "E_4_14_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_14_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "BF21EA82C9E0FEED6699C99200CA473F16711DE92B9BDCC0BEE60239D782F03C"
+    },
+    {
+      "name": "E_4_14_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_14_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:54",
+      "sha256": "797482692AEF1A79A73515A42B8F5762A3B5FC9DD3B45683C5C7849193D4FCE3"
+    },
+    {
+      "name": "E_4_5_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_5_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "B10AE810E271995558E407C61535FAD3FAEFAD8A60ACC0B8A61D6261F2FB8AC3"
+    },
+    {
+      "name": "E_4_5_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_5_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "F47B563C35A4C9ECC82F3EC71FE4F029C63313FC281A3774661F8810F43C384F"
+    },
+    {
+      "name": "E_4_5_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_5_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "DC4A5CB8E57B87E636CD5A89B3963AD1B86E83D0CE748A4CC34C2F520FDF99FA"
+    },
+    {
+      "name": "E_4_5_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_4_5_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "BE1EC696A8AD6CCCEE5699F26C8937EED5CED2EED8A8CEB221C8F44224B7D632"
+    },
+    {
+      "name": "E_5_8_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_5_8_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "DCC8504671A77C63363A49324DA090F3DFD24EF64E828E64A847A6546E8A198E"
+    },
+    {
+      "name": "E_5_8_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_5_8_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "656DAF9AC87248A2DA27F9D8CF5AD0400FF0DAB63D40821E19DA50DC89FAD06E"
+    },
+    {
+      "name": "E_5_8_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_5_8_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "94DF109A5BCDEAF478A6EF6753B7D5567D49CF2AFE41276CFD20158290BFA81A"
+    },
+    {
+      "name": "E_5_8_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_5_8_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "7898DA4866A15E8331961F6B39385E9F6AA498C16B56900D2869FEB8E16671BE"
+    },
+    {
+      "name": "E_6_11_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_11_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "93F23B22F9883586A1BF448B1E415E8BD5EFA730D58362F3FE2F855640DC0523"
+    },
+    {
+      "name": "E_6_11_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_11_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "492A76841A5F80DA015D20E995479E4D6DD0DF64C8D6EA40305428E0CAB36F68"
+    },
+    {
+      "name": "E_6_11_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_11_1.tli",
+      "suffix": ".tli",
+      "length": 875,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "6D1E045ED4FDC80DC8B3A58CD30E17CC8C1FCE58CD7E659B279808A3F30E1607"
+    },
+    {
+      "name": "E_6_11_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_11_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "7CF9E6DC4B46EC99181873D9F7731178CE6B63445927BFFF284C6A723EA8A913"
+    },
+    {
+      "name": "E_6_7_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_7_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:53",
+      "sha256": "631D5729B32BA6DB6ADDFABDF35EA4F11C0C669C16F7B4402A99D0FB83B42CD7"
+    },
+    {
+      "name": "E_6_7_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_7_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "8CE904B64F5ED375D4513C0FD667056330A9A181B7C41AE5EFCE857BA2B84BA5"
+    },
+    {
+      "name": "E_6_7_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_7_1.tli",
+      "suffix": ".tli",
+      "length": 873,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "C0AC086D75509F5586925B4BD4D0F63455A5C45FF1B0711449EA3714D0DBE08F"
+    },
+    {
+      "name": "E_6_7_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_6_7_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:52",
+      "sha256": "6A0D085D4253F421D128E42C598B12960F6E032333919F06F341C014CE466E5F"
+    },
+    {
+      "name": "E_7_8_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_7_8_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "FD612397B389EC79C955ECBF221554CCF8879AD559A7D92FC19E2D5841AEEB10"
+    },
+    {
+      "name": "E_7_8_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_7_8_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "77240D6DCE9D551D76D0FFC6630AF08E51EEC63FFCF742A6B1254A741BFCFA42"
+    },
+    {
+      "name": "E_7_8_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_7_8_1.tli",
+      "suffix": ".tli",
+      "length": 873,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "58C286CC7073D5F0D480F3F3D2C7550522FE4F78DF5B719DA1A3EA2C1FC15A79"
+    },
+    {
+      "name": "E_7_8_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_7_8_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "86916BB205D91C9720FB136DD9D86B7712AB67F26C65E651253E811A36FD2264"
+    },
+    {
+      "name": "E_8_9_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_8_9_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "8E0D9DA5DF5D694010F003B0C29CFE2B4121F00B115244F413A85606FD43277A"
+    },
+    {
+      "name": "E_8_9_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_8_9_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "61C8E619E4D8A250778C4C5B3EFE8670D5A8AF3EA357D1B21CF171522B586909"
+    },
+    {
+      "name": "E_8_9_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_8_9_1.tli",
+      "suffix": ".tli",
+      "length": 874,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "CF45B145E6DC21CF47C0CFA9D9CEF7EC647525415F54051D998D6E6C2D190EDB"
+    },
+    {
+      "name": "E_8_9_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_8_9_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "4C15302E3831DFC8DA05BE2AD7FE91D72B60550958649BE6C061F3604AA4F151"
+    },
+    {
+      "name": "E_9_39_1.log",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_9_39_1.log",
+      "suffix": ".log",
+      "length": 443,
+      "mtime_local": "2026-07-03T00:48:57",
+      "sha256": "6299A1F05967666C751F927CB9120485173510348AF7FA464B5F74A966BECD76"
+    },
+    {
+      "name": "E_9_39_1.out",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_9_39_1.out",
+      "suffix": ".out",
+      "length": 6400,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "10482008DF0557060782BB87C43A30FBD94C47B622A2FCD42ED8F7EDFD06B32E"
+    },
+    {
+      "name": "E_9_39_1.tli",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_9_39_1.tli",
+      "suffix": ".tli",
+      "length": 870,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "9DBBC3ACBCB580567526FEACE71C8FF9D0BE33086192F484D604E7CE86897211"
+    },
+    {
+      "name": "E_9_39_1.tlo",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\E_9_39_1.tlo",
+      "suffix": ".tlo",
+      "length": 907,
+      "mtime_local": "2026-07-03T00:48:56",
+      "sha256": "B1696F1DED757B222834A8B705E31D4C1E737E15A57A27E0E0F5E7049D99F88A"
+    },
+    {
+      "name": "Filter.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Filter.dta",
+      "suffix": ".dta",
+      "length": 2274,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "50B6C0AEC6231EAC2EE23F5BA47A2265A0BE51E0B21ADE42DF1714B712631081"
+    },
+    {
+      "name": "Filter.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Filter.f",
+      "suffix": ".f",
+      "length": 17223,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "64163C1033FAD7228BA3D00105FFCB5C209F65242E54D737BEB59FF1A1422826"
+    },
+    {
+      "name": "Filter.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Filter.o",
+      "suffix": ".o",
+      "length": 11064,
+      "mtime_local": "2026-07-03T00:48:48",
+      "sha256": "51A972649780E7C3C8E4A3EFF81627B1B5AD0B40E8218B649B4165F9E1C478FA"
+    },
+    {
+      "name": "G_31_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_31_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_31_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_31_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21496,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "229B6215F4DA8C8F3F629201066AE70AE1148E1B9BAD1086DF3A08017FA4ABFB"
+    },
+    {
+      "name": "G_31_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_31_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14500,
+      "mtime_local": "2026-07-03T00:48:39",
+      "sha256": "30D87E4D0B4D4EDF3FDBC7E186F7EB4AD9E3B9E6B9D2BC06B5C074FAAC029C31"
+    },
+    {
+      "name": "G_32_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_32_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_32_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_32_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21510,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "5AD3B54A9B6487317581E2DD12376CCBD154986C08227B00846242CBD554D049"
+    },
+    {
+      "name": "G_32_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_32_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:38",
+      "sha256": "BBFF97997A1AD2D210D64F9C60A24D3C7EB01A876ACA2A1C349BAE61FF8A9BDB"
+    },
+    {
+      "name": "G_33_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_33_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_33_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_33_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21510,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "AF55051F428906A166B8EC837DE62192A7D2A46ED8F77233749B3822D572A32B"
+    },
+    {
+      "name": "G_33_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_33_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:39",
+      "sha256": "6E79F8B519DD89B2AD4A2BF3398C7C19B92702A11C4A595D1D31BB5E71F9E487"
+    },
+    {
+      "name": "G_34_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_34_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_34_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_34_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21504,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "58D0D5AA79CF9B9E06D986769A8E54981C1534D31AF1E2B9F803C11DC3DFAFD2"
+    },
+    {
+      "name": "G_34_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_34_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:37",
+      "sha256": "368CE887F05A1A95202D2D47D407A1A693D77A33E7623136DCF03522502701C9"
+    },
+    {
+      "name": "G_35_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_35_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_35_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_35_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21510,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "CB91440177433C31B5643A26D834CFAC782BBB1B7E143D07F3E4D1CD34F3F7C7"
+    },
+    {
+      "name": "G_35_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_35_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:41",
+      "sha256": "5A8A4F741FCCA994DA994DC0C4EDFE27B5C164ACA062E8DF4A5D0454F3F4CD36"
+    },
+    {
+      "name": "G_36_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_36_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_36_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_36_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21508,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "C52117A89399A338566FCB669292F1F67BF650F2CD4AD64543E46DB5E330CE9A"
+    },
+    {
+      "name": "G_36_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_36_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:40",
+      "sha256": "4E8EC43803AADDCA21A8F0FD34818CCD47E20F08546220418148C5337EA85F54"
+    },
+    {
+      "name": "G_37_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_37_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_37_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_37_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21508,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "9CE7A49B5912CE39BD3EDB680A9F9AAEDA1705C78983A9324B9480C4BFF20AA5"
+    },
+    {
+      "name": "G_37_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_37_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:37",
+      "sha256": "F5496229F8537D789140ABACE6F687697E9F220581AB53F225A70A7255FF5791"
+    },
+    {
+      "name": "G_38_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_38_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_38_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_38_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21508,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "0E18C476FAF069EBDC026F79C743FC780017E59E2DF90EEEDA32DD28183EF0FF"
+    },
+    {
+      "name": "G_38_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_38_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14516,
+      "mtime_local": "2026-07-03T00:48:36",
+      "sha256": "85912C012944464C6531B5340DFEBE9C21A362D64CB56878E1E354926F4EAA1A"
+    },
+    {
+      "name": "G_39_0_1_DYR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_39_0_1_DYR.dta",
+      "suffix": ".dta",
+      "length": 1098,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "F61D096D2A220A7BBF9EFD8923179A8299B9FE85128EB745950993E715B40673"
+    },
+    {
+      "name": "G_39_0_1_DYR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_39_0_1_DYR.f",
+      "suffix": ".f",
+      "length": 21519,
+      "mtime_local": "2026-07-03T00:48:24",
+      "sha256": "C8ADD46CCB73DC765B52F92FEE3FEAC73B2D9289604297DB2DD8DC34702E4E58"
+    },
+    {
+      "name": "G_39_0_1_DYR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\G_39_0_1_DYR.o",
+      "suffix": ".o",
+      "length": 14508,
+      "mtime_local": "2026-07-03T00:48:40",
+      "sha256": "EC55BB56C7A5A18E053469AE1ED7E569C0A8787D36443A56D7D7514C3F9B06CB"
+    },
+    {
+      "name": "Grid_side_Controls.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Grid_side_Controls.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Grid_side_Controls.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Grid_side_Controls.f",
+      "suffix": ".f",
+      "length": 39184,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "56EF9B0CCDE4A54061C4E28E41886566B6AE6573B9673B51F6F46FF11F4AF90F"
+    },
+    {
+      "name": "Grid_side_Controls.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Grid_side_Controls.o",
+      "suffix": ".o",
+      "length": 28532,
+      "mtime_local": "2026-07-03T00:48:48",
+      "sha256": "576CF4AB43703BF03B58AB3FBE0ADCB52B253BAA4AC37EC6D709D8BD4A8EB94D"
+    },
+    {
+      "name": "IBR_AVM_2_1_1.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\IBR_AVM_2_1_1.dta",
+      "suffix": ".dta",
+      "length": 5619,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "AD230305CDE7E40EC4E065D60DA12DDF5C1548985FE32DE6BBCB682DBE22FC08"
+    },
+    {
+      "name": "IBR_AVM_2_1_1.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\IBR_AVM_2_1_1.f",
+      "suffix": ".f",
+      "length": 58789,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "CC75C38488D7F0833598FCE5E6008765EA93B4F3AD10FD10A5E37463F66D0023"
+    },
+    {
+      "name": "IBR_AVM_2_1_1.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\IBR_AVM_2_1_1.o",
+      "suffix": ".o",
+      "length": 51251,
+      "mtime_local": "2026-07-03T00:48:42",
+      "sha256": "7008E845AFC2BF52F33BADAF90D882791B83ED37D77AEEC90F6011458F130093"
+    },
+    {
+      "name": "Main.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Main.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Main.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Main.f",
+      "suffix": ".f",
+      "length": 12164,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "76A978A1AED8F06D65DCA647E75A12BC4CC927A4A53ED95F1D624BA02FEECB1C"
+    },
+    {
+      "name": "Main.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Main.o",
+      "suffix": ".o",
+      "length": 5158,
+      "mtime_local": "2026-07-03T00:48:29",
+      "sha256": "65F150E5D517CA5FA8206B7481F91EE7713007C1425D075610D4EC9759F481A4"
+    },
+    {
+      "name": "MODULE_TEMPLATE_TEST_HARNESS.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\MODULE_TEMPLATE_TEST_HARNESS.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "MODULE_TEMPLATE_TEST_HARNESS.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\MODULE_TEMPLATE_TEST_HARNESS.f",
+      "suffix": ".f",
+      "length": 37889,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "F921AB3790731F2EBA279E7BEDBF73AF1AC820ACA0F9E937DF421851FB781CDD"
+    },
+    {
+      "name": "MODULE_TEMPLATE_TEST_HARNESS.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\MODULE_TEMPLATE_TEST_HARNESS.o",
+      "suffix": ".o",
+      "length": 27380,
+      "mtime_local": "2026-07-03T00:48:30",
+      "sha256": "13416BEB00CD7D8489AD114F327FEC661B438BA419A5D88B1C7221D8EE850501"
+    },
+    {
+      "name": "MONITORED_OBJECT_EVENT_PACKET.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\MONITORED_OBJECT_EVENT_PACKET.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "MONITORED_OBJECT_EVENT_PACKET.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\MONITORED_OBJECT_EVENT_PACKET.f",
+      "suffix": ".f",
+      "length": 14916,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "525B55EC1B15FE23B230EF0B3188FBA7269C94F342B52530F2C8AEEB233326F4"
+    },
+    {
+      "name": "MONITORED_OBJECT_EVENT_PACKET.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\MONITORED_OBJECT_EVENT_PACKET.o",
+      "suffix": ".o",
+      "length": 7279,
+      "mtime_local": "2026-07-03T00:48:34",
+      "sha256": "8580C2EF2E2AC258327077D391782FF49C43992EF6A89C82B231AAEEA9499CB7"
+    },
+    {
+      "name": "ONE_SHOT_BREAKER_OPEN_STIMULUS.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\ONE_SHOT_BREAKER_OPEN_STIMULUS.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "ONE_SHOT_BREAKER_OPEN_STIMULUS.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\ONE_SHOT_BREAKER_OPEN_STIMULUS.f",
+      "suffix": ".f",
+      "length": 11452,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "D00DFCE2FF0A9532D76E5545E1804B59435D25E907BE194BAAD39D066557D5C6"
+    },
+    {
+      "name": "ONE_SHOT_BREAKER_OPEN_STIMULUS.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\ONE_SHOT_BREAKER_OPEN_STIMULUS.o",
+      "suffix": ".o",
+      "length": 4687,
+      "mtime_local": "2026-07-03T00:48:32",
+      "sha256": "8C8DD25A4EF99E747C66247C7D37C7E815F44C1FC2AFB20D02AF3031C6440088"
+    },
+    {
+      "name": "P1.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P1.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "P1.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P1.f",
+      "suffix": ".f",
+      "length": 9975,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "C40049423AFE4BE90B27CC957CA4F5C45388283EF85AD1FA505711228358020F"
+    },
+    {
+      "name": "P1.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P1.o",
+      "suffix": ".o",
+      "length": 3779,
+      "mtime_local": "2026-07-03T00:48:34",
+      "sha256": "224DB5DDEDD81A854B053D124BA269651C7310A84A041F8F318772D1D84D432F"
+    },
+    {
+      "name": "P2.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P2.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "P2.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P2.f",
+      "suffix": ".f",
+      "length": 8348,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "28FCB091BCF1A9223355DD44B131BEC9D68880C7A946092DA33557888DF4B5AF"
+    },
+    {
+      "name": "P2.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P2.o",
+      "suffix": ".o",
+      "length": 3119,
+      "mtime_local": "2026-07-03T00:48:35",
+      "sha256": "8FD3EDD21E938EA9255D4C5E8E057E46AE79F6B522E7BE5B7D7B78AFA74A8CE5"
+    },
+    {
+      "name": "P3.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.dta",
+      "suffix": ".dta",
+      "length": 59319,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "AFE29002EBFA856EFF988C16D3C48E5A872AA2D7E4F26225585FCE30E114E180"
+    },
+    {
+      "name": "P3.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.f",
+      "suffix": ".f",
+      "length": 357919,
+      "mtime_local": "2026-07-03T00:48:23",
+      "sha256": "D5A6ACB14D28AF8227DA066E153844385F76EF497F59C68AEA778C1BBA510220"
+    },
+    {
+      "name": "P3.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\P3.o",
+      "suffix": ".o",
+      "length": 364558,
+      "mtime_local": "2026-07-03T00:48:36",
+      "sha256": "0542B11C3977A8CBBAD550532F1E184ED45BCAA4789F13750738E7B55DEEC248"
+    },
+    {
+      "name": "PI_AntiWindUp.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\PI_AntiWindUp.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "PI_AntiWindUp.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\PI_AntiWindUp.f",
+      "suffix": ".f",
+      "length": 13300,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "DD899C5E40F80674769BD4234700D6D753A180FEFEA5AD9D20E62CD02F51EAE4"
+    },
+    {
+      "name": "PI_AntiWindUp.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\PI_AntiWindUp.o",
+      "suffix": ".o",
+      "length": 6944,
+      "mtime_local": "2026-07-03T00:48:49",
+      "sha256": "EA45BB5C2D76D8D79D41242011E11D8131D4A4E4AE88A3C43057C9D34C9DBF35"
+    },
+    {
+      "name": "PI_AntiWindUp_2.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\PI_AntiWindUp_2.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "PI_AntiWindUp_2.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\PI_AntiWindUp_2.f",
+      "suffix": ".f",
+      "length": 13313,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "D0B29E885BF78DA8BB0BDBF9E935D85EA340230172956D2313E73512404E6156"
+    },
+    {
+      "name": "PI_AntiWindUp_2.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\PI_AntiWindUp_2.o",
+      "suffix": ".o",
+      "length": 6952,
+      "mtime_local": "2026-07-03T00:48:46",
+      "sha256": "5943E88A1A0537D500BDB9492451BF7661AAB22F79CC724A5792079C11FDCF27"
+    },
+    {
+      "name": "REEC_A_1_2_1_1.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REEC_A_1_2_1_1.dta",
+      "suffix": ".dta",
+      "length": 631,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "53A5427BB120DB492A6A1DD089EDAE688484407FAEB4990DF38C7CC010C5193B"
+    },
+    {
+      "name": "REEC_A_1_2_1_1.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REEC_A_1_2_1_1.f",
+      "suffix": ".f",
+      "length": 56585,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "8D5778A7C8DF2DA447CA8914A579FFB9566B1330BE0A12488DE02CE389E336D7"
+    },
+    {
+      "name": "REEC_A_1_2_1_1.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REEC_A_1_2_1_1.o",
+      "suffix": ".o",
+      "length": 44333,
+      "mtime_local": "2026-07-03T00:48:43",
+      "sha256": "01531FEA922654D4C52D3717E6DF5016028C3CB229019773486D4E358C765F9A"
+    },
+    {
+      "name": "REGC_A_1_2_1_1.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REGC_A_1_2_1_1.dta",
+      "suffix": ".dta",
+      "length": 557,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "D5B3F1E50288FB0027D94CBAF0707E873B01B4FE36FB43C975B0768F98195B96"
+    },
+    {
+      "name": "REGC_A_1_2_1_1.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REGC_A_1_2_1_1.f",
+      "suffix": ".f",
+      "length": 21208,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "475685ACC10DD5DDA689015451E25F07118E6C7E9985AD41053E6D8F574767C8"
+    },
+    {
+      "name": "REGC_A_1_2_1_1.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REGC_A_1_2_1_1.o",
+      "suffix": ".o",
+      "length": 13767,
+      "mtime_local": "2026-07-03T00:48:44",
+      "sha256": "89D296B0B0AC31FCE65639535504EA6FFFD9629E3EF40D074E64F4CB5AA1D3C6"
+    },
+    {
+      "name": "REPC_A_1.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REPC_A_1.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "REPC_A_1.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REPC_A_1.f",
+      "suffix": ".f",
+      "length": 32801,
+      "mtime_local": "2026-07-03T00:48:25",
+      "sha256": "3EA6B43666BCA74409467B47B32670AC0EEE400EE9737BBDD84773D306919968"
+    },
+    {
+      "name": "REPC_A_1.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\REPC_A_1.o",
+      "suffix": ".o",
+      "length": 24158,
+      "mtime_local": "2026-07-03T00:48:42",
+      "sha256": "DFCA4FE26CE85F7E7352362D9BC9D22B8E4A975E682BC3C3CEC267C2664477FD"
+    },
+    {
+      "name": "Rotor_side_Controls.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Rotor_side_Controls.dta",
+      "suffix": ".dta",
+      "length": 557,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "56300D69AABA135FD10B99FABE2C5F74010F42F989BB761DFB239238BB3AD8D3"
+    },
+    {
+      "name": "Rotor_side_Controls.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Rotor_side_Controls.f",
+      "suffix": ".f",
+      "length": 50926,
+      "mtime_local": "2026-07-03T00:48:27",
+      "sha256": "E9FE7D1D07931D5BF047EA72AFA2713758782F8324F1C08F7386E6062CEE8D4B"
+    },
+    {
+      "name": "Rotor_side_Controls.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Rotor_side_Controls.o",
+      "suffix": ".o",
+      "length": 36449,
+      "mtime_local": "2026-07-03T00:48:49",
+      "sha256": "0186A73B0BD16C37CA8514FD3955F31598E0DF1FAB254EE5D06F94EDF52F6C85"
+    },
+    {
+      "name": "Station.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Station.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Station.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Station.f",
+      "suffix": ".f",
+      "length": 9227,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "D696A4279DFA5A08CAFE7D8B07B1969BAE5B881F901B4710E0531C834CD684C5"
+    },
+    {
+      "name": "Station.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Station.o",
+      "suffix": ".o",
+      "length": 3411,
+      "mtime_local": "2026-07-03T00:48:28",
+      "sha256": "B71009C624334815156D9D4ECE99CB8F3BD7624BF55F40A481A6E70D955B1BA3"
+    },
+    {
+      "name": "Synchronization.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Synchronization.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "Synchronization.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Synchronization.f",
+      "suffix": ".f",
+      "length": 15730,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "12DBA950359D60E7275B848227979FA790EEADBDD16A09A3017A5330C7E8F95A"
+    },
+    {
+      "name": "Synchronization.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Synchronization.o",
+      "suffix": ".o",
+      "length": 8126,
+      "mtime_local": "2026-07-03T00:48:45",
+      "sha256": "6111591A6DE679CCA7E88EB63788917017AE08519D605CC4913B7C515AC96B41"
+    },
+    {
+      "name": "THREE_EVENT_CHRONOLOGY_MONITOR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\THREE_EVENT_CHRONOLOGY_MONITOR.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "THREE_EVENT_CHRONOLOGY_MONITOR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\THREE_EVENT_CHRONOLOGY_MONITOR.f",
+      "suffix": ".f",
+      "length": 37735,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "E3E15233C429758A33A453AE1805DD802CF7518C45587CA03A83325CFCB41BBB"
+    },
+    {
+      "name": "THREE_EVENT_CHRONOLOGY_MONITOR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\THREE_EVENT_CHRONOLOGY_MONITOR.o",
+      "suffix": ".o",
+      "length": 27582,
+      "mtime_local": "2026-07-03T00:48:31",
+      "sha256": "5639AD87404CE103E1493F431590D972A347EBBAE574D8E93355C530A3132201"
+    },
+    {
+      "name": "THREE_SOURCE_EVENT_COLLECTOR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\THREE_SOURCE_EVENT_COLLECTOR.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "THREE_SOURCE_EVENT_COLLECTOR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\THREE_SOURCE_EVENT_COLLECTOR.f",
+      "suffix": ".f",
+      "length": 26438,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "E93A4623427D2DFCDD3563EFC40E55D1929A16E4D1E5171F77FCA70F51AA57FF"
+    },
+    {
+      "name": "THREE_SOURCE_EVENT_COLLECTOR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\THREE_SOURCE_EVENT_COLLECTOR.o",
+      "suffix": ".o",
+      "length": 14758,
+      "mtime_local": "2026-07-03T00:48:33",
+      "sha256": "441837D39B2665F1F4CA663C9810FBB3737E415D2A3BBECE4E1D4E4F34399772"
+    },
+    {
+      "name": "TWO_EVENT_CHRONOLOGY_MONITOR.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\TWO_EVENT_CHRONOLOGY_MONITOR.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "TWO_EVENT_CHRONOLOGY_MONITOR.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\TWO_EVENT_CHRONOLOGY_MONITOR.f",
+      "suffix": ".f",
+      "length": 21781,
+      "mtime_local": "2026-07-03T00:48:22",
+      "sha256": "E6210DC5F0355C2F0459304E756FA22FA7DF6775DEF1E9D037FA451AEA19E099"
+    },
+    {
+      "name": "TWO_EVENT_CHRONOLOGY_MONITOR.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\TWO_EVENT_CHRONOLOGY_MONITOR.o",
+      "suffix": ".o",
+      "length": 12598,
+      "mtime_local": "2026-07-03T00:48:32",
+      "sha256": "FE0007707768A0757928F373E2453B8C84E0E544BD340AC0249900E5E7B9D766"
+    },
+    {
+      "name": "Type3_WTG_Avg.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Type3_WTG_Avg.dta",
+      "suffix": ".dta",
+      "length": 6129,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "DB71B0ABFA18CCFD6665C84E8FB13C12A3C213B442C683100BA843460B7376F9"
+    },
+    {
+      "name": "Type3_WTG_Avg.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Type3_WTG_Avg.f",
+      "suffix": ".f",
+      "length": 47804,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "BE374E47B745879F08B797EF5E7D9BB991E81DA0C7AB3D3886D90C5210E11314"
+    },
+    {
+      "name": "Type3_WTG_Avg.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\Type3_WTG_Avg.o",
+      "suffix": ".o",
+      "length": 44061,
+      "mtime_local": "2026-07-03T00:48:45",
+      "sha256": "782387E5A2C12CB2A906C40B107BA5A55F19748F83DC6462811C620CC63792B1"
+    },
+    {
+      "name": "WindTurbine_MechModel.dta",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\WindTurbine_MechModel.dta",
+      "suffix": ".dta",
+      "length": 483,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "401B3DC1D5100B4620F4A47D1ECE0A9BE0CD1BDCB34EABB69F4294B803945605"
+    },
+    {
+      "name": "WindTurbine_MechModel.f",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\WindTurbine_MechModel.f",
+      "suffix": ".f",
+      "length": 27971,
+      "mtime_local": "2026-07-03T00:48:26",
+      "sha256": "953DEB563D80C405C38FFF24651138D3A1E33A7C168541CC30210405B11E43E1"
+    },
+    {
+      "name": "WindTurbine_MechModel.o",
+      "path": "C:\\pscad_work\\pnnl_39_3ibr_pscad46_strip5\\PSCAD\\3IBR_DFIG1_TRIAL.gf46\\WindTurbine_MechModel.o",
+      "suffix": ".o",
+      "length": 19661,
+      "mtime_local": "2026-07-03T00:48:46",
+      "sha256": "281FB47DA64A40BFFAEAC78B14A479585786040A62453781C9C46A19B501570C"
+    }
+  ],
+  "run_start_time_placeholder": null,
+  "single_permitted_run_status": "pending_user_gui_run",
+  "model_editing_allowed": false,
+  "build_allowed": false
+}

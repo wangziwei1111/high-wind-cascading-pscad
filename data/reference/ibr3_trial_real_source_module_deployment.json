@@ -1,0 +1,98 @@
+{
+  "execution_status": "ibr3_real_source_three_source_collector_static_pass",
+  "audit_time": "2026-07-01T00:00:00+08:00",
+  "pscad_version": "4.6.2",
+  "source": {
+    "source_id": "IBR3_TRIAL",
+    "candidate_component": "IBR_AVM_2_1_1_2",
+    "component_id": 202861579,
+    "observables": [
+      "VIBR3",
+      "PIBR3",
+      "QIBR3"
+    ],
+    "page": "3IBR_DFIG1_TRIAL:Main(0):P1(0):P3(0)"
+  },
+  "breaker": {
+    "name": "BRK_IBR3_TRIAL",
+    "component_id": 1365979927,
+    "type": "master:breaker3",
+    "command": "IBR3_TRIAL_BRK_CMD",
+    "command_semantics": {
+      "0": "closed",
+      "1": "open"
+    },
+    "state": "IBR3_TRIAL_BRK_STATE",
+    "open_threshold": 0.5,
+    "series_location": "between transformer E_2_30_1 0.6 kV side and the VIBR3/PIBR3/QIBR3 multimeter",
+    "parallel_bypass_found": false
+  },
+  "instances": {
+    "stimulus": {
+      "name": "IBR3_TRIAL__OPEN_STIMULUS",
+      "open_time_s": 5.0,
+      "test_enable_default": 0.0
+    },
+    "state_adapter": {
+      "name": "IBR3_TRIAL__BREAKER_STATE_ADAPTER",
+      "open_threshold": 0.5
+    },
+    "event_packet": {
+      "name": "IBR3_TRIAL__EVENT_PACKET",
+      "cause_code": 5.0,
+      "event_latch_initial": 0.0,
+      "first_time_initial": -1.0
+    },
+    "collector": {
+      "name": "CASCADE3_TRIAL__EVENT_COLLECTOR",
+      "type": "THREE_SOURCE_EVENT_COLLECTOR"
+    }
+  },
+  "projects": {
+    "main_start_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "main_final_sha256": "CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB",
+    "trial_start_sha256": "D56430173617DCCD16C9C9DDF3787EF7D9ADDD606EB4C9F5B8419BC290476314",
+    "trial_final_sha256": "CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E"
+  },
+  "build": {
+    "final_errors": 0,
+    "performed_by_user": true,
+    "run_performed": false
+  },
+  "output_channels": {
+    "before": 224,
+    "added": 21,
+    "final": 245,
+    "existing_preserved": true
+  },
+  "static_status": {
+    "main_project_integrity": "pass",
+    "local_breaker_boundary": "pass",
+    "no_parallel_bypass": "pass",
+    "module_scope_isolation": "pass",
+    "control_path_isolation": "pass",
+    "output_channels": "pass"
+  },
+  "dynamic_behavior_status": "unavailable",
+  "third_source_dynamic_behavior_status": "unavailable",
+  "three_source_dynamic_behavior_status": "unavailable",
+  "cascade_propagation_status": "unavailable",
+  "matlab_status": "not_added",
+  "last_dynamic_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_SINGLE_OPENING_DEFAULT_SCENARIO",
+    "dynamic_run_status": "pass",
+    "summary": "One approved trial-only PSCAD Run temporarily enabled IBR3_TRIAL__OPEN_STIMULUS, observed the IBR3 local-opening chain at 5.0 s, parsed collector/chronology monitor outputs, and restored IBR3 test enable to 0.",
+    "report": "docs/IBR3_TRIAL_SINGLE_OPENING_DYNAMIC_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  },
+  "last_default_disabled_baseline_validation": {
+    "date": "2026-07-02",
+    "scenario_name": "IBR3_TRIAL_DEFAULT_DISABLED_BASELINE",
+    "dynamic_baseline_status": "pass",
+    "stimulus_specific_contrast_status": "pass",
+    "summary": "One approved default-disabled PSCAD Run kept IBR2 and IBR3 trial test stimuli at 0; IBR3 open request, command, actual open, and event packet stayed absent. Compared with the prior enabled-stimulus run, this supports a stimulus-specific contrast for the fixed trial configuration only.",
+    "report": "docs/IBR3_TRIAL_DEFAULT_DISABLED_BASELINE_VALIDATION.md",
+    "claim_boundary": "Does not validate cascade propagation, physical causality direction, system stability, protection coordination, MATLAB coupling, or general applicability."
+  }
+}

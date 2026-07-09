@@ -1,0 +1,12 @@
+item,status,value,note
+main_project_integrity,pass,CBA120BB167CB7FA6C4A1AE4471268850AB61761EC1877EB7B87015627FE9DAB,byte-identical
+trial_project,pass,CDFBBAA3A987B67E3B3BC3294E9993AB06AA3F77BED90AF111B6B35A55B0C99E,final static snapshot
+ibr3_candidate,pass,IBR_AVM_2_1_1_2,real distinct IBR branch
+ibr3_observables,pass,VIBR3|PIBR3|QIBR3,existing measurements
+local_breaker,pass,BRK_IBR3_TRIAL,unique series insertion
+parallel_bypass,pass,false,no local bypass found
+test_enable,pass,0,default disabled
+event_cause,pass,5,armed local breaker open with unclassified root cause
+output_channels,pass,245,21 added and 224 preserved
+dynamic_behavior,unavailable,,no PSCAD Run
+cascade_propagation,unavailable,,not validated
